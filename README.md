@@ -1,3 +1,8 @@
+# Setup
+Please run `setup_clean.sh` in bash before working with this repository, this only needs to be run once after you clone the repo.
+
+If you are not usina UNIX based shell (i.e. Windows) please run `git config --local include.path ../.gitconfig` in the root directory of the repo.
+
 # Releases
 Only tagged releases of this repository will contain generated code.
 
