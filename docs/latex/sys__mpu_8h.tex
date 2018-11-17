@@ -1,0 +1,1141 @@
+\hypertarget{sys__mpu_8h}{}\section{include/sys\+\_\+mpu.h File Reference}
+\label{sys__mpu_8h}\index{include/sys\+\_\+mpu.\+h@{include/sys\+\_\+mpu.\+h}}
+
+
+System Mpu Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_ae487a8524b8675e7737989f57f281bef}{mpu\+R\+E\+G\+I\+O\+N1}}~0U
+\begin{DoxyCompactList}\small\item\em Mpu region 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a6aebc92753fe8dc0be82760225ac3a4d}{mpu\+R\+E\+G\+I\+O\+N2}}~1U
+\begin{DoxyCompactList}\small\item\em Mpu region 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a30bce64de2254c1619581608ba864871}{mpu\+R\+E\+G\+I\+O\+N3}}~2U
+\begin{DoxyCompactList}\small\item\em Mpu region 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a3b3fffadc7da6ddea050adda6f0c6aff}{mpu\+R\+E\+G\+I\+O\+N4}}~3U
+\begin{DoxyCompactList}\small\item\em Mpu region 4. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_aec4cf75674460e1544790564fa554c5f}{mpu\+R\+E\+G\+I\+O\+N5}}~4U
+\begin{DoxyCompactList}\small\item\em Mpu region 5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a990382ed040acc67eb25acd58745f484}{mpu\+R\+E\+G\+I\+O\+N6}}~5U
+\begin{DoxyCompactList}\small\item\em Mpu region 6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_af87d96ed10ce1f7e15c66e170dcee3b0}{mpu\+R\+E\+G\+I\+O\+N7}}~6U
+\begin{DoxyCompactList}\small\item\em Mpu region 7. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a27b01196ef507d5f1b08a35fdf4b2a81}{mpu\+R\+E\+G\+I\+O\+N8}}~7U
+\begin{DoxyCompactList}\small\item\em Mpu region 8. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a3366fc0ac6d70b855846af62d3081615}{mpu\+R\+E\+G\+I\+O\+N9}}~8U
+\begin{DoxyCompactList}\small\item\em Mpu region 9. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_ac4acf00008345be203c22de39eb318e4}{mpu\+R\+E\+G\+I\+O\+N10}}~9U
+\begin{DoxyCompactList}\small\item\em Mpu region 10. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a341ae6a9dca1d89fed506146b657b156}{mpu\+R\+E\+G\+I\+O\+N11}}~10U
+\begin{DoxyCompactList}\small\item\em Mpu region 11. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_aaf187d8a145dd8e242c146f07110ea6b}{mpu\+R\+E\+G\+I\+O\+N12}}~11U
+\begin{DoxyCompactList}\small\item\em Mpu region 12. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a10d163c6e17f3a731f832619c45c4e21}{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE}}~1U
+\begin{DoxyCompactList}\small\item\em Enable M\+PU Region. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a8f3509ccd43f6fb77fdf21972b7178fd}{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE}}~0U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Region. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_aad5ad89c121ce29e0563da1d5ad40987}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N0\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x100U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a9c13db596344ac3d03e7d88ecd4bd314}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N1\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x200U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_abede723a2471835d5ba77c480109b5e1}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N2\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x400U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a78610867ca7c9bf87fb13c254f98aec6}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x800U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a83c60ef544c5116a862e8f0e69e32812}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x1000U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region4. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a6c411ae7d7b6ed8765aca43d43968d41}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N5\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x2000U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_ab80841d0ea6060cffc409108e77faba1}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N6\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x4000U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__mpu_8h_a7ed0d4212e4b1786edf341fdd041f30e}{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N7\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x8000U
+\begin{DoxyCompactList}\small\item\em Disable M\+PU Sub Region7. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1}{mpu\+Region\+Access\+Permission}} \{ \newline
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a71e95209eb51fb81f4927a18473f2909}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}} = 0x0000U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac15737631230d90adad78dcca58efa2c}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}} = 0x0100U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ab7c85e13c15d24467af3afbebbd684ce}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC}} = 0x0200U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a91fd34e957618201088c688afb3d00e1}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC}} = 0x0300U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a3e0ff189c9ad2209d5cb8d3d5d0a62a6}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}} = 0x0500U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a2b1de33fa510eebcf6666e03efdb2c0b}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC}} = 0x0600U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a1b35504ed735fbf54d0e4afeb9b6bfef}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}} = 0x1000U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a584df8003c15606f764443835eb2d1cc}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}} = 0x1100U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac22d5d1562c769cdf9c3c45843bbf71e}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC}} = 0x1200U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1aa927f1a59e947bffd1d57bb3f80fdb3f}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC}} = 0x1300U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a49aadad40effee8eaee1888f1bc7523f}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}} = 0x1500U, 
+\mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a305af04657ce93614d5a46caa08a32fa}{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC}} = 0x1600U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for mpu region access permissions. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8b}{mpu\+Region\+Type}} \{ \newline
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba75e3267a32fe3501c40c94ac50a8c2c9}{M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE}} = 0x0000U, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bac6e42873d58112e0abd4ab0397fb16f0}{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE}} = 0x0001U, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7921579107082753ba64548e87e87ad7}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}} = 0x0002U, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bad5d6638a6327d870dcd6dfcf0b568145}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}} = 0x0003U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7c42c90fef7810c72cef488b990bb9bf}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED}} = 0x0006U, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8a5a2af77f1ad1f3982acc7b2a7e80a6}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED}} = 0x0007U, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8babaa855fd1da96245d804127acc41dba5}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}} = 0x0008U, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae05741684610308e3cf310999e795b55}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}} = 0x000\+BU, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8ebd1c0896986829e7f86b4e1c457f9e}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED}} = 0x000\+CU, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba423e4290786b71c2d673e4487b871623}{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED}} = 0x000\+FU, 
+\mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae40bb13881cc30b7e04a269fd9ba24bf}{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE}} = 0x0010U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for mpu region type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4}{mpu\+Region\+Size}} \{ \newline
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a511bdec14ca044d611d6266f1da9be03}{M\+P\+U\+\_\+32\+\_\+\+B\+Y\+T\+ES}} = 0x04U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6cabcd3028837bca0686309233fc4062}{M\+P\+U\+\_\+64\+\_\+\+B\+Y\+T\+ES}} = 0x05U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a3f28d2cab418caa9addd762a03cc0209}{M\+P\+U\+\_\+128\+\_\+\+B\+Y\+T\+ES}} = 0x06U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a5741c515eb713b91a7f4e09154c1b23c}{M\+P\+U\+\_\+256\+\_\+\+B\+Y\+T\+ES}} = 0x07U $<$$<$ 1U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4adcde7e97e1c8093cbf6a26a1834b6663}{M\+P\+U\+\_\+512\+\_\+\+B\+Y\+T\+ES}} = 0x08U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2a9856e8cf40c119428add4de22e8970}{M\+P\+U\+\_\+1\+\_\+\+KB}} = 0x09U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a42919bc91a214dd63552616552098f2d}{M\+P\+U\+\_\+2\+\_\+\+KB}} = 0x0\+AU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a1884443aeecaa5bff6f589443cb62b00}{M\+P\+U\+\_\+4\+\_\+\+KB}} = 0x0\+BU $<$$<$ 1U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a8f2e51364d3a181259ba1731c3601906}{M\+P\+U\+\_\+8\+\_\+\+KB}} = 0x0\+CU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4265e557e9bd002bb79629bd69aae2b4}{M\+P\+U\+\_\+16\+\_\+\+KB}} = 0x0\+DU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9411decee1237234aeff9062286754d8}{M\+P\+U\+\_\+32\+\_\+\+KB}} = 0x0\+EU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2575c3986bf2e1c69e92b44ebe90ef4b}{M\+P\+U\+\_\+64\+\_\+\+KB}} = 0x0\+FU $<$$<$ 1U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a7a1af8d2d342198c1d155180ea170488}{M\+P\+U\+\_\+128\+\_\+\+KB}} = 0x10U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af92f964f34cf751a8e3ab76f52806493}{M\+P\+U\+\_\+256\+\_\+\+KB}} = 0x11U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac028564148ca16cd5276acc9cd9a390e}{M\+P\+U\+\_\+512\+\_\+\+KB}} = 0x12U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac951ba0deb2bd03348bb493c70cb83ae}{M\+P\+U\+\_\+1\+\_\+\+MB}} = 0x13U $<$$<$ 1U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac144c184849a059e4c9d6ab692881a91}{M\+P\+U\+\_\+2\+\_\+\+MB}} = 0x14U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afe6dce0c17183b519dc9eb08c7c22459}{M\+P\+U\+\_\+4\+\_\+\+MB}} = 0x15U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9457427fed2d2c10f4d1408adaf908d2}{M\+P\+U\+\_\+8\+\_\+\+MB}} = 0x16U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9dc2f9ac0f12154955d8093d4b5d77d2}{M\+P\+U\+\_\+16\+\_\+\+MB}} = 0x17U $<$$<$ 1U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af8be5b9bd577cc8607aff78769685c0c}{M\+P\+U\+\_\+32\+\_\+\+MB}} = 0x18U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6ae7f4af9979b45c94d0d59c304b1df9}{M\+P\+U\+\_\+64\+\_\+\+MB}} = 0x19U $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afa7427fc1374ab74cd22d9ea1f184b50}{M\+P\+U\+\_\+128\+\_\+\+MB}} = 0x1\+AU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a77ca089f1e110dc21ea74855d06637f8}{M\+P\+U\+\_\+256\+\_\+\+MB}} = 0x1\+BU $<$$<$ 1U, 
+\newline
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a71cec1908856a245bc9a81b6b135b325}{M\+P\+U\+\_\+512\+\_\+\+MB}} = 0x1\+CU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a59e46ac854d372e07c939bcc0c2ed74a}{M\+P\+U\+\_\+1\+\_\+\+GB}} = 0x1\+DU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4bf756d2ecca8d786f2f4fad0cc12d5e}{M\+P\+U\+\_\+2\+\_\+\+GB}} = 0x1\+EU $<$$<$ 1U, 
+\mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a40ed26c764171cdd33e1adde7c91e566}{M\+P\+U\+\_\+4\+\_\+\+GB}} = 0x1\+FU $<$$<$ 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for mpu region type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sys__mpu_8h_ad42abaa287200c0d7fc438183d4dc067}{\+\_\+mpu\+Init\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Mpu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_a91e265587c5b3f02c6dcc26a2fb5f039}{\+\_\+mpu\+Enable\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Enable Mpu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_a4d7807ff7486e23a51df3552456576be}{\+\_\+mpu\+Disable\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Disable Mpu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_a936e7f2dbacf897764a944ae5628f37a}{\+\_\+mpu\+Enable\+Background\+Region\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Enable Mpu background region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_a91443afa543409ea431ea1eee9495e90}{\+\_\+mpu\+Disable\+Background\+Region\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Disable Mpu background region. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__mpu_8h_a6f6dac8bbfa2be7b821a2f8ab91ff762}{\+\_\+mpu\+Get\+Number\+Of\+Regions\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns number of implemented Mpu regions. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__mpu_8h_ac93c96b5bd3f442be1878e6b21c330cd}{\+\_\+mpu\+Are\+Regions\+Separate\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the type of the implemented mpu regions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_a6a44e5a9214462b0699d751b195ab316}{\+\_\+mpu\+Set\+Region\+\_\+}} (uint32 region)
+\begin{DoxyCompactList}\small\item\em Set mpu region number. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__mpu_8h_a4d1d228e9dd9ed2711eed08a19526100}{\+\_\+mpu\+Get\+Region\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the currently selected mpu region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_a65d7cb9705012268a9d7629251ba9eef}{\+\_\+mpu\+Set\+Region\+Base\+Address\+\_\+}} (uint32 address)
+\begin{DoxyCompactList}\small\item\em Set base address of currently selected mpu region. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__mpu_8h_abfa1605a8db4dad08a4cf777d3af72e4}{\+\_\+mpu\+Get\+Region\+Base\+Address\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns base address of currently selected mpu region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_af323aa1f063c246fb495b0f51b618402}{\+\_\+mpu\+Set\+Region\+Type\+And\+Permission\+\_\+}} (uint32 type, uint32 permission)
+\begin{DoxyCompactList}\small\item\em Set type of currently selected mpu region. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__mpu_8h_a59d1991e0db734a6241b0b77b3140cb2}{\+\_\+mpu\+Get\+Region\+Type\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the type of currently selected mpu region. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__mpu_8h_a7626d1502f5f76ec334129313efabbdb}{\+\_\+mpu\+Get\+Region\+Permission\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns permission of currently selected mpu region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__mpu_8h_a137d553610ae3aa8ced6e8aeadd80574}{\+\_\+mpu\+Set\+Region\+Size\+Register\+\_\+}} (uint32 value)
+\begin{DoxyCompactList}\small\item\em Set mpu region size register value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System Mpu Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Mpu Interface Functions
+\end{DoxyItemize}which are relevant for the memory protection unit driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sys__mpu_8h_ae487a8524b8675e7737989f57f281bef}\label{sys__mpu_8h_ae487a8524b8675e7737989f57f281bef}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N1@{mpu\+R\+E\+G\+I\+O\+N1}}
+\index{mpu\+R\+E\+G\+I\+O\+N1@{mpu\+R\+E\+G\+I\+O\+N1}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N1}{mpuREGION1}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N1~0U}
+
+
+
+Mpu region 1. 
+
+Alias for Mpu region 1 
+
+Definition at line 64 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_ac4acf00008345be203c22de39eb318e4}\label{sys__mpu_8h_ac4acf00008345be203c22de39eb318e4}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N10@{mpu\+R\+E\+G\+I\+O\+N10}}
+\index{mpu\+R\+E\+G\+I\+O\+N10@{mpu\+R\+E\+G\+I\+O\+N10}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N10}{mpuREGION10}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N10~9U}
+
+
+
+Mpu region 10. 
+
+Alias for Mpu region 10 
+
+Definition at line 127 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a341ae6a9dca1d89fed506146b657b156}\label{sys__mpu_8h_a341ae6a9dca1d89fed506146b657b156}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N11@{mpu\+R\+E\+G\+I\+O\+N11}}
+\index{mpu\+R\+E\+G\+I\+O\+N11@{mpu\+R\+E\+G\+I\+O\+N11}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N11}{mpuREGION11}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N11~10U}
+
+
+
+Mpu region 11. 
+
+Alias for Mpu region 11 
+
+Definition at line 134 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_aaf187d8a145dd8e242c146f07110ea6b}\label{sys__mpu_8h_aaf187d8a145dd8e242c146f07110ea6b}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N12@{mpu\+R\+E\+G\+I\+O\+N12}}
+\index{mpu\+R\+E\+G\+I\+O\+N12@{mpu\+R\+E\+G\+I\+O\+N12}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N12}{mpuREGION12}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N12~11U}
+
+
+
+Mpu region 12. 
+
+Alias for Mpu region 12 
+
+Definition at line 141 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a6aebc92753fe8dc0be82760225ac3a4d}\label{sys__mpu_8h_a6aebc92753fe8dc0be82760225ac3a4d}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N2@{mpu\+R\+E\+G\+I\+O\+N2}}
+\index{mpu\+R\+E\+G\+I\+O\+N2@{mpu\+R\+E\+G\+I\+O\+N2}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N2}{mpuREGION2}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N2~1U}
+
+
+
+Mpu region 2. 
+
+Alias for Mpu region 1 
+
+Definition at line 71 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a30bce64de2254c1619581608ba864871}\label{sys__mpu_8h_a30bce64de2254c1619581608ba864871}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N3@{mpu\+R\+E\+G\+I\+O\+N3}}
+\index{mpu\+R\+E\+G\+I\+O\+N3@{mpu\+R\+E\+G\+I\+O\+N3}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N3}{mpuREGION3}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N3~2U}
+
+
+
+Mpu region 3. 
+
+Alias for Mpu region 3 
+
+Definition at line 78 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a3b3fffadc7da6ddea050adda6f0c6aff}\label{sys__mpu_8h_a3b3fffadc7da6ddea050adda6f0c6aff}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N4@{mpu\+R\+E\+G\+I\+O\+N4}}
+\index{mpu\+R\+E\+G\+I\+O\+N4@{mpu\+R\+E\+G\+I\+O\+N4}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N4}{mpuREGION4}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N4~3U}
+
+
+
+Mpu region 4. 
+
+Alias for Mpu region 4 
+
+Definition at line 85 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_aec4cf75674460e1544790564fa554c5f}\label{sys__mpu_8h_aec4cf75674460e1544790564fa554c5f}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N5@{mpu\+R\+E\+G\+I\+O\+N5}}
+\index{mpu\+R\+E\+G\+I\+O\+N5@{mpu\+R\+E\+G\+I\+O\+N5}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N5}{mpuREGION5}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N5~4U}
+
+
+
+Mpu region 5. 
+
+Alias for Mpu region 5 
+
+Definition at line 92 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a990382ed040acc67eb25acd58745f484}\label{sys__mpu_8h_a990382ed040acc67eb25acd58745f484}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N6@{mpu\+R\+E\+G\+I\+O\+N6}}
+\index{mpu\+R\+E\+G\+I\+O\+N6@{mpu\+R\+E\+G\+I\+O\+N6}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N6}{mpuREGION6}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N6~5U}
+
+
+
+Mpu region 6. 
+
+Alias for Mpu region 6 
+
+Definition at line 99 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_af87d96ed10ce1f7e15c66e170dcee3b0}\label{sys__mpu_8h_af87d96ed10ce1f7e15c66e170dcee3b0}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N7@{mpu\+R\+E\+G\+I\+O\+N7}}
+\index{mpu\+R\+E\+G\+I\+O\+N7@{mpu\+R\+E\+G\+I\+O\+N7}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N7}{mpuREGION7}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N7~6U}
+
+
+
+Mpu region 7. 
+
+Alias for Mpu region 7 
+
+Definition at line 106 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a27b01196ef507d5f1b08a35fdf4b2a81}\label{sys__mpu_8h_a27b01196ef507d5f1b08a35fdf4b2a81}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N8@{mpu\+R\+E\+G\+I\+O\+N8}}
+\index{mpu\+R\+E\+G\+I\+O\+N8@{mpu\+R\+E\+G\+I\+O\+N8}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N8}{mpuREGION8}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N8~7U}
+
+
+
+Mpu region 8. 
+
+Alias for Mpu region 8 
+
+Definition at line 113 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a3366fc0ac6d70b855846af62d3081615}\label{sys__mpu_8h_a3366fc0ac6d70b855846af62d3081615}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N9@{mpu\+R\+E\+G\+I\+O\+N9}}
+\index{mpu\+R\+E\+G\+I\+O\+N9@{mpu\+R\+E\+G\+I\+O\+N9}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N9}{mpuREGION9}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N9~8U}
+
+
+
+Mpu region 9. 
+
+Alias for Mpu region 9 
+
+Definition at line 120 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a8f3509ccd43f6fb77fdf21972b7178fd}\label{sys__mpu_8h_a8f3509ccd43f6fb77fdf21972b7178fd}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuREGION\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+LE~0U}
+
+
+
+Disable M\+PU Region. 
+
+Alias for M\+PU region disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 159 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a10d163c6e17f3a731f832619c45c4e21}\label{sys__mpu_8h_a10d163c6e17f3a731f832619c45c4e21}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE@{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE}}
+\index{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE@{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE}{mpuREGION\_ENABLE}}
+{\footnotesize\ttfamily \#define mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE~1U}
+
+
+
+Enable M\+PU Region. 
+
+Alias for M\+PU region enable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 150 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_aad5ad89c121ce29e0563da1d5ad40987}\label{sys__mpu_8h_aad5ad89c121ce29e0563da1d5ad40987}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N0\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N0\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N0\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N0\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N0\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION0\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N0\+\_\+\+D\+I\+S\+A\+B\+LE~0x100U}
+
+
+
+Disable M\+PU Sub Region0. 
+
+Alias for M\+PU subregion0 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 168 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a9c13db596344ac3d03e7d88ecd4bd314}\label{sys__mpu_8h_a9c13db596344ac3d03e7d88ecd4bd314}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N1\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N1\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N1\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N1\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N1\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION1\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N1\+\_\+\+D\+I\+S\+A\+B\+LE~0x200U}
+
+
+
+Disable M\+PU Sub Region1. 
+
+Alias for M\+PU subregion1 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 177 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_abede723a2471835d5ba77c480109b5e1}\label{sys__mpu_8h_abede723a2471835d5ba77c480109b5e1}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N2\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N2\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N2\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N2\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N2\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION2\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N2\+\_\+\+D\+I\+S\+A\+B\+LE~0x400U}
+
+
+
+Disable M\+PU Sub Region2. 
+
+Alias for M\+PU subregion2 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 186 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a78610867ca7c9bf87fb13c254f98aec6}\label{sys__mpu_8h_a78610867ca7c9bf87fb13c254f98aec6}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION3\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE~0x800U}
+
+
+
+Disable M\+PU Sub Region3. 
+
+Alias for M\+PU subregion3 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 195 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a83c60ef544c5116a862e8f0e69e32812}\label{sys__mpu_8h_a83c60ef544c5116a862e8f0e69e32812}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION4\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE~0x1000U}
+
+
+
+Disable M\+PU Sub Region4. 
+
+Alias for M\+PU subregion4 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 204 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a6c411ae7d7b6ed8765aca43d43968d41}\label{sys__mpu_8h_a6c411ae7d7b6ed8765aca43d43968d41}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N5\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N5\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N5\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N5\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N5\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION5\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N5\+\_\+\+D\+I\+S\+A\+B\+LE~0x2000U}
+
+
+
+Disable M\+PU Sub Region5. 
+
+Alias for M\+PU subregion5 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 213 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_ab80841d0ea6060cffc409108e77faba1}\label{sys__mpu_8h_ab80841d0ea6060cffc409108e77faba1}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N6\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N6\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N6\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N6\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N6\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION6\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N6\+\_\+\+D\+I\+S\+A\+B\+LE~0x4000U}
+
+
+
+Disable M\+PU Sub Region6. 
+
+Alias for M\+PU subregion6 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 222 of file sys\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{sys__mpu_8h_a7ed0d4212e4b1786edf341fdd041f30e}\label{sys__mpu_8h_a7ed0d4212e4b1786edf341fdd041f30e}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N7\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N7\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N7\+\_\+\+D\+I\+S\+A\+B\+LE@{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N7\+\_\+\+D\+I\+S\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N7\+\_\+\+D\+I\+S\+A\+B\+LE}{mpuSUBREGION7\_DISABLE}}
+{\footnotesize\ttfamily \#define mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N7\+\_\+\+D\+I\+S\+A\+B\+LE~0x8000U}
+
+
+
+Disable M\+PU Sub Region7. 
+
+Alias for M\+PU subregion7 disable.
+
+\begin{DoxyNote}{Note}
+This should be used as the parameter of the A\+PI {\itshape mpu\+Set\+Region\+Size\+Register} 
+\end{DoxyNote}
+
+
+Definition at line 231 of file sys\+\_\+mpu.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+Region\+Access\+Permission@{mpu\+Region\+Access\+Permission}}
+\index{mpu\+Region\+Access\+Permission@{mpu\+Region\+Access\+Permission}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+Region\+Access\+Permission}{mpuRegionAccessPermission}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1}{mpu\+Region\+Access\+Permission}}}
+
+
+
+Alias names for mpu region access permissions. 
+
+This enumeration is used to provide alias names for the mpu region access permission\+:
+\begin{DoxyItemize}
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC no access in privileged mode, no access in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC read/write in privileged mode, no access in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC read/write in privileged mode, read only in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC read/write in privileged mode, read/write in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC read only in privileged mode, no access in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC read only in privileged mode, read only in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC no access in privileged mode, no access in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC read/write in privileged mode, no access in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC read/write in privileged mode, read only in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC read/write in privileged mode, read/write in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC read only in privileged mode, no access in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC read only in privileged mode, read only in user mode and no execution 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a71e95209eb51fb81f4927a18473f2909}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a71e95209eb51fb81f4927a18473f2909}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC&Alias no access in privileged mode, no access in user mode and execute \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac15737631230d90adad78dcca58efa2c}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac15737631230d90adad78dcca58efa2c}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC&Alias no read/write in privileged mode, no access in user mode and execute \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ab7c85e13c15d24467af3afbebbd684ce}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ab7c85e13c15d24467af3afbebbd684ce}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC&Alias no read/write in privileged mode, read only in user mode and execute \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a91fd34e957618201088c688afb3d00e1}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a91fd34e957618201088c688afb3d00e1}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC&Alias no read/write in privileged mode, read/write in user mode and execute \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a3e0ff189c9ad2209d5cb8d3d5d0a62a6}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a3e0ff189c9ad2209d5cb8d3d5d0a62a6}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC&Alias no read only in privileged mode, no access in user mode and execute \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a2b1de33fa510eebcf6666e03efdb2c0b}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a2b1de33fa510eebcf6666e03efdb2c0b}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC&Alias no read only in privileged mode, read only in user mode and execute \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a1b35504ed735fbf54d0e4afeb9b6bfef}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a1b35504ed735fbf54d0e4afeb9b6bfef}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC&Alias no access in privileged mode, no access in user mode and no execution \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a584df8003c15606f764443835eb2d1cc}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a584df8003c15606f764443835eb2d1cc}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC&Alias no read/write in privileged mode, no access in user mode and no execution \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac22d5d1562c769cdf9c3c45843bbf71e}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac22d5d1562c769cdf9c3c45843bbf71e}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC&Alias no read/write in privileged mode, read only in user mode and no execution \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1aa927f1a59e947bffd1d57bb3f80fdb3f}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1aa927f1a59e947bffd1d57bb3f80fdb3f}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC&Alias no read/write in privileged mode, read/write in user mode and no execution \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a49aadad40effee8eaee1888f1bc7523f}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a49aadad40effee8eaee1888f1bc7523f}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC&Alias no read only in privileged mode, no access in user mode and no execution \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC@{M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC}}}\mbox{\Hypertarget{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a305af04657ce93614d5a46caa08a32fa}\label{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a305af04657ce93614d5a46caa08a32fa}} 
+M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC&Alias no read only in privileged mode, read only in user mode and no execution \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 253 of file sys\+\_\+mpu.\+h.
+
+
+\begin{DoxyCode}
+254 \{
+255     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a71e95209eb51fb81f4927a18473f2909}{MPU\_PRIV\_NA\_USER\_NA\_EXEC}}   = 0x0000U, 
+256     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac15737631230d90adad78dcca58efa2c}{MPU\_PRIV\_RW\_USER\_NA\_EXEC}}   = 0x0100U, 
+257     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ab7c85e13c15d24467af3afbebbd684ce}{MPU\_PRIV\_RW\_USER\_RO\_EXEC}}   = 0x0200U, 
+258     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a91fd34e957618201088c688afb3d00e1}{MPU\_PRIV\_RW\_USER\_RW\_EXEC}}   = 0x0300U, 
+259     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a3e0ff189c9ad2209d5cb8d3d5d0a62a6}{MPU\_PRIV\_RO\_USER\_NA\_EXEC}}   = 0x0500U, 
+260     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a2b1de33fa510eebcf6666e03efdb2c0b}{MPU\_PRIV\_RO\_USER\_RO\_EXEC}}   = 0x0600U, 
+261     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a1b35504ed735fbf54d0e4afeb9b6bfef}{MPU\_PRIV\_NA\_USER\_NA\_NOEXEC}} = 0x1000U, 
+262     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a584df8003c15606f764443835eb2d1cc}{MPU\_PRIV\_RW\_USER\_NA\_NOEXEC}} = 0x1100U, 
+263     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1ac22d5d1562c769cdf9c3c45843bbf71e}{MPU\_PRIV\_RW\_USER\_RO\_NOEXEC}} = 0x1200U, 
+264     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1aa927f1a59e947bffd1d57bb3f80fdb3f}{MPU\_PRIV\_RW\_USER\_RW\_NOEXEC}} = 0x1300U, 
+265     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a49aadad40effee8eaee1888f1bc7523f}{MPU\_PRIV\_RO\_USER\_NA\_NOEXEC}} = 0x1500U, 
+266     \mbox{\hyperlink{sys__mpu_8h_a20a7c4f084cabff8fbb6aaeb4ee6ddc1a305af04657ce93614d5a46caa08a32fa}{MPU\_PRIV\_RO\_USER\_RO\_NOEXEC}} = 0x1600U  
+267 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+Region\+Size@{mpu\+Region\+Size}}
+\index{mpu\+Region\+Size@{mpu\+Region\+Size}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+Region\+Size}{mpuRegionSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4}{mpu\+Region\+Size}}}
+
+
+
+Alias names for mpu region type. 
+
+This enumeration is used to provide alias names for the mpu region type\+:
+\begin{DoxyItemize}
+\item M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE Memory type strongly ordered and sharable
+\item M\+P\+U\+\_\+32\+\_\+\+B\+Y\+T\+ES Memory size in bytes
+\item M\+P\+U\+\_\+64\+\_\+\+B\+Y\+T\+ES Memory size in bytes
+\item M\+P\+U\+\_\+128\+\_\+\+B\+Y\+T\+ES Memory size in bytes
+\item M\+P\+U\+\_\+256\+\_\+\+B\+Y\+T\+ES Memory size in bytes
+\item M\+P\+U\+\_\+512\+\_\+\+B\+Y\+T\+ES Memory size in bytes
+\item M\+P\+U\+\_\+1\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+2\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+4\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+8\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+16\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+32\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+64\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+128\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+256\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+512\+\_\+\+KB Memory size in kB
+\item M\+P\+U\+\_\+1\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+2\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+4\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+8\+\_\+\+M\+Bv Memory size in MB
+\item M\+P\+U\+\_\+16\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+32\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+64\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+128\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+256\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+512\+\_\+\+MB Memory size in MB
+\item M\+P\+U\+\_\+1\+\_\+\+GB Memory size in GB
+\item M\+P\+U\+\_\+2\+\_\+\+GB Memory size in GB
+\item M\+P\+U\+\_\+4\+\_\+\+GB Memory size in GB 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+32\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+32\+\_\+\+B\+Y\+T\+ES}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+32\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+32\+\_\+\+B\+Y\+T\+ES}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a511bdec14ca044d611d6266f1da9be03}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a511bdec14ca044d611d6266f1da9be03}} 
+M\+P\+U\+\_\+32\+\_\+\+B\+Y\+T\+ES&Memory size in bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+64\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+64\+\_\+\+B\+Y\+T\+ES}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+64\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+64\+\_\+\+B\+Y\+T\+ES}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6cabcd3028837bca0686309233fc4062}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6cabcd3028837bca0686309233fc4062}} 
+M\+P\+U\+\_\+64\+\_\+\+B\+Y\+T\+ES&Memory size in bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+128\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+128\+\_\+\+B\+Y\+T\+ES}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+128\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+128\+\_\+\+B\+Y\+T\+ES}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a3f28d2cab418caa9addd762a03cc0209}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a3f28d2cab418caa9addd762a03cc0209}} 
+M\+P\+U\+\_\+128\+\_\+\+B\+Y\+T\+ES&Memory size in bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+256\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+256\+\_\+\+B\+Y\+T\+ES}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+256\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+256\+\_\+\+B\+Y\+T\+ES}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a5741c515eb713b91a7f4e09154c1b23c}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a5741c515eb713b91a7f4e09154c1b23c}} 
+M\+P\+U\+\_\+256\+\_\+\+B\+Y\+T\+ES&Memory size in bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+512\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+512\+\_\+\+B\+Y\+T\+ES}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+512\+\_\+\+B\+Y\+T\+ES@{M\+P\+U\+\_\+512\+\_\+\+B\+Y\+T\+ES}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4adcde7e97e1c8093cbf6a26a1834b6663}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4adcde7e97e1c8093cbf6a26a1834b6663}} 
+M\+P\+U\+\_\+512\+\_\+\+B\+Y\+T\+ES&Memory size in bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+1\+\_\+\+KB@{M\+P\+U\+\_\+1\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+1\+\_\+\+KB@{M\+P\+U\+\_\+1\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2a9856e8cf40c119428add4de22e8970}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2a9856e8cf40c119428add4de22e8970}} 
+M\+P\+U\+\_\+1\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+2\+\_\+\+KB@{M\+P\+U\+\_\+2\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+2\+\_\+\+KB@{M\+P\+U\+\_\+2\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a42919bc91a214dd63552616552098f2d}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a42919bc91a214dd63552616552098f2d}} 
+M\+P\+U\+\_\+2\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+4\+\_\+\+KB@{M\+P\+U\+\_\+4\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+4\+\_\+\+KB@{M\+P\+U\+\_\+4\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a1884443aeecaa5bff6f589443cb62b00}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a1884443aeecaa5bff6f589443cb62b00}} 
+M\+P\+U\+\_\+4\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+8\+\_\+\+KB@{M\+P\+U\+\_\+8\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+8\+\_\+\+KB@{M\+P\+U\+\_\+8\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a8f2e51364d3a181259ba1731c3601906}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a8f2e51364d3a181259ba1731c3601906}} 
+M\+P\+U\+\_\+8\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+16\+\_\+\+KB@{M\+P\+U\+\_\+16\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+16\+\_\+\+KB@{M\+P\+U\+\_\+16\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4265e557e9bd002bb79629bd69aae2b4}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4265e557e9bd002bb79629bd69aae2b4}} 
+M\+P\+U\+\_\+16\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+32\+\_\+\+KB@{M\+P\+U\+\_\+32\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+32\+\_\+\+KB@{M\+P\+U\+\_\+32\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9411decee1237234aeff9062286754d8}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9411decee1237234aeff9062286754d8}} 
+M\+P\+U\+\_\+32\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+64\+\_\+\+KB@{M\+P\+U\+\_\+64\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+64\+\_\+\+KB@{M\+P\+U\+\_\+64\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2575c3986bf2e1c69e92b44ebe90ef4b}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2575c3986bf2e1c69e92b44ebe90ef4b}} 
+M\+P\+U\+\_\+64\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+128\+\_\+\+KB@{M\+P\+U\+\_\+128\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+128\+\_\+\+KB@{M\+P\+U\+\_\+128\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a7a1af8d2d342198c1d155180ea170488}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a7a1af8d2d342198c1d155180ea170488}} 
+M\+P\+U\+\_\+128\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+256\+\_\+\+KB@{M\+P\+U\+\_\+256\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+256\+\_\+\+KB@{M\+P\+U\+\_\+256\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af92f964f34cf751a8e3ab76f52806493}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af92f964f34cf751a8e3ab76f52806493}} 
+M\+P\+U\+\_\+256\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+512\+\_\+\+KB@{M\+P\+U\+\_\+512\+\_\+\+KB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+512\+\_\+\+KB@{M\+P\+U\+\_\+512\+\_\+\+KB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac028564148ca16cd5276acc9cd9a390e}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac028564148ca16cd5276acc9cd9a390e}} 
+M\+P\+U\+\_\+512\+\_\+\+KB&Memory size in kB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+1\+\_\+\+MB@{M\+P\+U\+\_\+1\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+1\+\_\+\+MB@{M\+P\+U\+\_\+1\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac951ba0deb2bd03348bb493c70cb83ae}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac951ba0deb2bd03348bb493c70cb83ae}} 
+M\+P\+U\+\_\+1\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+2\+\_\+\+MB@{M\+P\+U\+\_\+2\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+2\+\_\+\+MB@{M\+P\+U\+\_\+2\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac144c184849a059e4c9d6ab692881a91}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac144c184849a059e4c9d6ab692881a91}} 
+M\+P\+U\+\_\+2\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+4\+\_\+\+MB@{M\+P\+U\+\_\+4\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+4\+\_\+\+MB@{M\+P\+U\+\_\+4\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afe6dce0c17183b519dc9eb08c7c22459}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afe6dce0c17183b519dc9eb08c7c22459}} 
+M\+P\+U\+\_\+4\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+8\+\_\+\+MB@{M\+P\+U\+\_\+8\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+8\+\_\+\+MB@{M\+P\+U\+\_\+8\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9457427fed2d2c10f4d1408adaf908d2}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9457427fed2d2c10f4d1408adaf908d2}} 
+M\+P\+U\+\_\+8\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+16\+\_\+\+MB@{M\+P\+U\+\_\+16\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+16\+\_\+\+MB@{M\+P\+U\+\_\+16\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9dc2f9ac0f12154955d8093d4b5d77d2}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9dc2f9ac0f12154955d8093d4b5d77d2}} 
+M\+P\+U\+\_\+16\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+32\+\_\+\+MB@{M\+P\+U\+\_\+32\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+32\+\_\+\+MB@{M\+P\+U\+\_\+32\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af8be5b9bd577cc8607aff78769685c0c}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af8be5b9bd577cc8607aff78769685c0c}} 
+M\+P\+U\+\_\+32\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+64\+\_\+\+MB@{M\+P\+U\+\_\+64\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+64\+\_\+\+MB@{M\+P\+U\+\_\+64\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6ae7f4af9979b45c94d0d59c304b1df9}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6ae7f4af9979b45c94d0d59c304b1df9}} 
+M\+P\+U\+\_\+64\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+128\+\_\+\+MB@{M\+P\+U\+\_\+128\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+128\+\_\+\+MB@{M\+P\+U\+\_\+128\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afa7427fc1374ab74cd22d9ea1f184b50}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afa7427fc1374ab74cd22d9ea1f184b50}} 
+M\+P\+U\+\_\+128\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+256\+\_\+\+MB@{M\+P\+U\+\_\+256\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+256\+\_\+\+MB@{M\+P\+U\+\_\+256\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a77ca089f1e110dc21ea74855d06637f8}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a77ca089f1e110dc21ea74855d06637f8}} 
+M\+P\+U\+\_\+256\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+512\+\_\+\+MB@{M\+P\+U\+\_\+512\+\_\+\+MB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+512\+\_\+\+MB@{M\+P\+U\+\_\+512\+\_\+\+MB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a71cec1908856a245bc9a81b6b135b325}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a71cec1908856a245bc9a81b6b135b325}} 
+M\+P\+U\+\_\+512\+\_\+\+MB&Memory size in MB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+1\+\_\+\+GB@{M\+P\+U\+\_\+1\+\_\+\+GB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+1\+\_\+\+GB@{M\+P\+U\+\_\+1\+\_\+\+GB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a59e46ac854d372e07c939bcc0c2ed74a}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a59e46ac854d372e07c939bcc0c2ed74a}} 
+M\+P\+U\+\_\+1\+\_\+\+GB&Memory size in GB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+2\+\_\+\+GB@{M\+P\+U\+\_\+2\+\_\+\+GB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+2\+\_\+\+GB@{M\+P\+U\+\_\+2\+\_\+\+GB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4bf756d2ecca8d786f2f4fad0cc12d5e}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4bf756d2ecca8d786f2f4fad0cc12d5e}} 
+M\+P\+U\+\_\+2\+\_\+\+GB&Memory size in GB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+4\+\_\+\+GB@{M\+P\+U\+\_\+4\+\_\+\+GB}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+4\+\_\+\+GB@{M\+P\+U\+\_\+4\+\_\+\+GB}}}\mbox{\Hypertarget{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a40ed26c764171cdd33e1adde7c91e566}\label{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a40ed26c764171cdd33e1adde7c91e566}} 
+M\+P\+U\+\_\+4\+\_\+\+GB&Memory size in GB \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 334 of file sys\+\_\+mpu.\+h.
+
+
+\begin{DoxyCode}
+335 \{
+336     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a511bdec14ca044d611d6266f1da9be03}{MPU\_32\_BYTES}}  = 0x04U << 1U, 
+337     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6cabcd3028837bca0686309233fc4062}{MPU\_64\_BYTES}}  = 0x05U << 1U, 
+338     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a3f28d2cab418caa9addd762a03cc0209}{MPU\_128\_BYTES}} = 0x06U << 1U, 
+339     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a5741c515eb713b91a7f4e09154c1b23c}{MPU\_256\_BYTES}} = 0x07U << 1U, 
+340     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4adcde7e97e1c8093cbf6a26a1834b6663}{MPU\_512\_BYTES}} = 0x08U << 1U, 
+341     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2a9856e8cf40c119428add4de22e8970}{MPU\_1\_KB}}      = 0x09U << 1U, 
+342     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a42919bc91a214dd63552616552098f2d}{MPU\_2\_KB}}      = 0x0AU << 1U, 
+343     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a1884443aeecaa5bff6f589443cb62b00}{MPU\_4\_KB}}      = 0x0BU << 1U, 
+344     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a8f2e51364d3a181259ba1731c3601906}{MPU\_8\_KB}}      = 0x0CU << 1U, 
+345     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4265e557e9bd002bb79629bd69aae2b4}{MPU\_16\_KB}}     = 0x0DU << 1U, 
+346     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9411decee1237234aeff9062286754d8}{MPU\_32\_KB}}     = 0x0EU << 1U, 
+347     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a2575c3986bf2e1c69e92b44ebe90ef4b}{MPU\_64\_KB}}     = 0x0FU << 1U, 
+348     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a7a1af8d2d342198c1d155180ea170488}{MPU\_128\_KB}}    = 0x10U << 1U, 
+349     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af92f964f34cf751a8e3ab76f52806493}{MPU\_256\_KB}}    = 0x11U << 1U, 
+350     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac028564148ca16cd5276acc9cd9a390e}{MPU\_512\_KB}}    = 0x12U << 1U, 
+351     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac951ba0deb2bd03348bb493c70cb83ae}{MPU\_1\_MB}}      = 0x13U << 1U, 
+352     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4ac144c184849a059e4c9d6ab692881a91}{MPU\_2\_MB}}      = 0x14U << 1U, 
+353     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afe6dce0c17183b519dc9eb08c7c22459}{MPU\_4\_MB}}      = 0x15U << 1U, 
+354     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9457427fed2d2c10f4d1408adaf908d2}{MPU\_8\_MB}}      = 0x16U << 1U, 
+355     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a9dc2f9ac0f12154955d8093d4b5d77d2}{MPU\_16\_MB}}     = 0x17U << 1U, 
+356     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4af8be5b9bd577cc8607aff78769685c0c}{MPU\_32\_MB}}     = 0x18U << 1U, 
+357     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a6ae7f4af9979b45c94d0d59c304b1df9}{MPU\_64\_MB}}     = 0x19U << 1U, 
+358     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4afa7427fc1374ab74cd22d9ea1f184b50}{MPU\_128\_MB}}    = 0x1AU << 1U, 
+359     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a77ca089f1e110dc21ea74855d06637f8}{MPU\_256\_MB}}    = 0x1BU << 1U, 
+360     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a71cec1908856a245bc9a81b6b135b325}{MPU\_512\_MB}}    = 0x1CU << 1U, 
+361     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a59e46ac854d372e07c939bcc0c2ed74a}{MPU\_1\_GB}}      = 0x1DU << 1U, 
+362     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a4bf756d2ecca8d786f2f4fad0cc12d5e}{MPU\_2\_GB}}      = 0x1EU << 1U, 
+363     \mbox{\hyperlink{sys__mpu_8h_a219c6300cb2070b44e700beb5719dec4a40ed26c764171cdd33e1adde7c91e566}{MPU\_4\_GB}}      = 0x1FU << 1U  
+364 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8b}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8b}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!mpu\+Region\+Type@{mpu\+Region\+Type}}
+\index{mpu\+Region\+Type@{mpu\+Region\+Type}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{mpu\+Region\+Type}{mpuRegionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8b}{mpu\+Region\+Type}}}
+
+
+
+Alias names for mpu region type. 
+
+This enumeration is used to provide alias names for the mpu region type\+:
+\begin{DoxyItemize}
+\item M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE Memory type strongly ordered and sharable
+\item M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE Memory type device and sharable
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED Memory type normal outer and inner write-\/through, no write allocate and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED Memory type normal outer and inner write-\/through, no write allocate and shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED Memory type normal outer and inner write-\/back, no write allocate and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED Memory type normal outer and inner write-\/back, no write allocate and shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED Memory type normal outer and inner non-\/cachable and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED Memory type normal outer and inner non-\/cachable and shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED Memory type normal outer and inner write-\/back, write allocate and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED Memory type normal outer and inner write-\/back, write allocate and shared
+\item M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE Memory type device and non sharable 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE@{M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE@{M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba75e3267a32fe3501c40c94ac50a8c2c9}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba75e3267a32fe3501c40c94ac50a8c2c9}} 
+M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE&Memory type strongly ordered and sharable \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE@{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE@{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8bac6e42873d58112e0abd4ab0397fb16f0}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8bac6e42873d58112e0abd4ab0397fb16f0}} 
+M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE&Memory type device and sharable \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7921579107082753ba64548e87e87ad7}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7921579107082753ba64548e87e87ad7}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED&Memory type normal outer and inner write-\/through, no write allocate and non shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8bad5d6638a6327d870dcd6dfcf0b568145}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8bad5d6638a6327d870dcd6dfcf0b568145}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED&Memory type normal outer and inner write-\/back, no write allocate and non shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7c42c90fef7810c72cef488b990bb9bf}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7c42c90fef7810c72cef488b990bb9bf}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED&Memory type normal outer and inner write-\/through, no write allocate and shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8a5a2af77f1ad1f3982acc7b2a7e80a6}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8a5a2af77f1ad1f3982acc7b2a7e80a6}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED&Memory type normal outer and inner write-\/back, no write allocate and shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8babaa855fd1da96245d804127acc41dba5}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8babaa855fd1da96245d804127acc41dba5}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED&Memory type normal outer and inner non-\/cachable and non shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae05741684610308e3cf310999e795b55}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae05741684610308e3cf310999e795b55}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED&Memory type normal outer and inner write-\/back, write allocate and non shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8ebd1c0896986829e7f86b4e1c457f9e}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8ebd1c0896986829e7f86b4e1c457f9e}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED&Memory type normal outer and inner non-\/cachable and shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED@{M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba423e4290786b71c2d673e4487b871623}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba423e4290786b71c2d673e4487b871623}} 
+M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED&Memory type normal outer and inner write-\/back, write allocate and shared \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE@{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE@{M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE}}}\mbox{\Hypertarget{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae40bb13881cc30b7e04a269fd9ba24bf}\label{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae40bb13881cc30b7e04a269fd9ba24bf}} 
+M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE&Memory type device and non sharable \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 285 of file sys\+\_\+mpu.\+h.
+
+
+\begin{DoxyCode}
+286 \{
+287     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba75e3267a32fe3501c40c94ac50a8c2c9}{MPU\_STRONGLYORDERED\_SHAREABLE}} = 0x0000U, 
+288     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bac6e42873d58112e0abd4ab0397fb16f0}{MPU\_DEVICE\_SHAREABLE}}          = 0x0001U, 
+289     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7921579107082753ba64548e87e87ad7}{MPU\_NORMAL\_OIWTNOWA\_NONSHARED}} = 0x0002U, 
+290     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bad5d6638a6327d870dcd6dfcf0b568145}{MPU\_NORMAL\_OIWBNOWA\_NONSHARED}} = 0x0003U, 
+291     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba7c42c90fef7810c72cef488b990bb9bf}{MPU\_NORMAL\_OIWTNOWA\_SHARED}}    = 0x0006U, 
+292     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8a5a2af77f1ad1f3982acc7b2a7e80a6}{MPU\_NORMAL\_OIWBNOWA\_SHARED}}    = 0x0007U, 
+293     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8babaa855fd1da96245d804127acc41dba5}{MPU\_NORMAL\_OINC\_NONSHARED}}     = 0x0008U, 
+294     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae05741684610308e3cf310999e795b55}{MPU\_NORMAL\_OIWBWA\_NONSHARED}}   = 0x000BU, 
+295     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba8ebd1c0896986829e7f86b4e1c457f9e}{MPU\_NORMAL\_OINC\_SHARED}}        = 0x000CU, 
+296     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8ba423e4290786b71c2d673e4487b871623}{MPU\_NORMAL\_OIWBWA\_SHARED}}      = 0x000FU, 
+297     \mbox{\hyperlink{sys__mpu_8h_a256267cff71608918bfb07596904fe8bae40bb13881cc30b7e04a269fd9ba24bf}{MPU\_DEVICE\_NONSHAREABLE}}       = 0x0010U  
+298 \};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sys__mpu_8h_ac93c96b5bd3f442be1878e6b21c330cd}\label{sys__mpu_8h_ac93c96b5bd3f442be1878e6b21c330cd}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Are\+Regions\+Separate\+\_\+@{\+\_\+mpu\+Are\+Regions\+Separate\+\_\+}}
+\index{\+\_\+mpu\+Are\+Regions\+Separate\+\_\+@{\+\_\+mpu\+Are\+Regions\+Separate\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Are\+Regions\+Separate\+\_\+()}{\_mpuAreRegionsSeparate\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+mpu\+Are\+Regions\+Separate\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the type of the implemented mpu regions. 
+
+\begin{DoxyReturn}{Returns}
+Mpu type of regions
+\end{DoxyReturn}
+This function returns 0 when mpu regions are of type unified otherwise regions are of type separate. \mbox{\Hypertarget{sys__mpu_8h_a4d7807ff7486e23a51df3552456576be}\label{sys__mpu_8h_a4d7807ff7486e23a51df3552456576be}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Disable\+\_\+@{\+\_\+mpu\+Disable\+\_\+}}
+\index{\+\_\+mpu\+Disable\+\_\+@{\+\_\+mpu\+Disable\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Disable\+\_\+()}{\_mpuDisable\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Disable\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable Mpu. 
+
+This function disables memory protection unit. \mbox{\Hypertarget{sys__mpu_8h_a91443afa543409ea431ea1eee9495e90}\label{sys__mpu_8h_a91443afa543409ea431ea1eee9495e90}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Disable\+Background\+Region\+\_\+@{\+\_\+mpu\+Disable\+Background\+Region\+\_\+}}
+\index{\+\_\+mpu\+Disable\+Background\+Region\+\_\+@{\+\_\+mpu\+Disable\+Background\+Region\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Disable\+Background\+Region\+\_\+()}{\_mpuDisableBackgroundRegion\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Disable\+Background\+Region\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable Mpu background region. 
+
+This function disables background region of the memory protection unit. \mbox{\Hypertarget{sys__mpu_8h_a91e265587c5b3f02c6dcc26a2fb5f039}\label{sys__mpu_8h_a91e265587c5b3f02c6dcc26a2fb5f039}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Enable\+\_\+@{\+\_\+mpu\+Enable\+\_\+}}
+\index{\+\_\+mpu\+Enable\+\_\+@{\+\_\+mpu\+Enable\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Enable\+\_\+()}{\_mpuEnable\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Enable\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable Mpu. 
+
+This function enables memory protection unit. \mbox{\Hypertarget{sys__mpu_8h_a936e7f2dbacf897764a944ae5628f37a}\label{sys__mpu_8h_a936e7f2dbacf897764a944ae5628f37a}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Enable\+Background\+Region\+\_\+@{\+\_\+mpu\+Enable\+Background\+Region\+\_\+}}
+\index{\+\_\+mpu\+Enable\+Background\+Region\+\_\+@{\+\_\+mpu\+Enable\+Background\+Region\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Enable\+Background\+Region\+\_\+()}{\_mpuEnableBackgroundRegion\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Enable\+Background\+Region\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable Mpu background region. 
+
+This function enables background region of the memory protection unit. \mbox{\Hypertarget{sys__mpu_8h_a6f6dac8bbfa2be7b821a2f8ab91ff762}\label{sys__mpu_8h_a6f6dac8bbfa2be7b821a2f8ab91ff762}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Get\+Number\+Of\+Regions\+\_\+@{\+\_\+mpu\+Get\+Number\+Of\+Regions\+\_\+}}
+\index{\+\_\+mpu\+Get\+Number\+Of\+Regions\+\_\+@{\+\_\+mpu\+Get\+Number\+Of\+Regions\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Get\+Number\+Of\+Regions\+\_\+()}{\_mpuGetNumberOfRegions\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+mpu\+Get\+Number\+Of\+Regions\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns number of implemented Mpu regions. 
+
+\begin{DoxyReturn}{Returns}
+Number of implemented mpu regions
+\end{DoxyReturn}
+This function returns the number of implemented mpu regions. \mbox{\Hypertarget{sys__mpu_8h_a4d1d228e9dd9ed2711eed08a19526100}\label{sys__mpu_8h_a4d1d228e9dd9ed2711eed08a19526100}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Get\+Region\+\_\+@{\+\_\+mpu\+Get\+Region\+\_\+}}
+\index{\+\_\+mpu\+Get\+Region\+\_\+@{\+\_\+mpu\+Get\+Region\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Get\+Region\+\_\+()}{\_mpuGetRegion\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+mpu\+Get\+Region\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the currently selected mpu region. 
+
+\begin{DoxyReturn}{Returns}
+Mpu region number
+\end{DoxyReturn}
+This function returns currently selected mpu region number. \mbox{\Hypertarget{sys__mpu_8h_abfa1605a8db4dad08a4cf777d3af72e4}\label{sys__mpu_8h_abfa1605a8db4dad08a4cf777d3af72e4}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Get\+Region\+Base\+Address\+\_\+@{\+\_\+mpu\+Get\+Region\+Base\+Address\+\_\+}}
+\index{\+\_\+mpu\+Get\+Region\+Base\+Address\+\_\+@{\+\_\+mpu\+Get\+Region\+Base\+Address\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Get\+Region\+Base\+Address\+\_\+()}{\_mpuGetRegionBaseAddress\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+mpu\+Get\+Region\+Base\+Address\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns base address of currently selected mpu region. 
+
+\begin{DoxyReturn}{Returns}
+Current base address of selected mpu region
+\end{DoxyReturn}
+This function returns the base address of currently selected mpu region. \mbox{\Hypertarget{sys__mpu_8h_a7626d1502f5f76ec334129313efabbdb}\label{sys__mpu_8h_a7626d1502f5f76ec334129313efabbdb}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Get\+Region\+Permission\+\_\+@{\+\_\+mpu\+Get\+Region\+Permission\+\_\+}}
+\index{\+\_\+mpu\+Get\+Region\+Permission\+\_\+@{\+\_\+mpu\+Get\+Region\+Permission\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Get\+Region\+Permission\+\_\+()}{\_mpuGetRegionPermission\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+mpu\+Get\+Region\+Permission\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns permission of currently selected mpu region. 
+
+\begin{DoxyReturn}{Returns}
+Current type of selected mpu region
+\end{DoxyReturn}
+This function returns permission of currently selected mpu region. \mbox{\Hypertarget{sys__mpu_8h_a59d1991e0db734a6241b0b77b3140cb2}\label{sys__mpu_8h_a59d1991e0db734a6241b0b77b3140cb2}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Get\+Region\+Type\+\_\+@{\+\_\+mpu\+Get\+Region\+Type\+\_\+}}
+\index{\+\_\+mpu\+Get\+Region\+Type\+\_\+@{\+\_\+mpu\+Get\+Region\+Type\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Get\+Region\+Type\+\_\+()}{\_mpuGetRegionType\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+mpu\+Get\+Region\+Type\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the type of currently selected mpu region. 
+
+\begin{DoxyReturn}{Returns}
+Current type of selected mpu region
+\end{DoxyReturn}
+This function returns the type of currently selected mpu region. \mbox{\Hypertarget{sys__mpu_8h_ad42abaa287200c0d7fc438183d4dc067}\label{sys__mpu_8h_ad42abaa287200c0d7fc438183d4dc067}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Init\+\_\+@{\+\_\+mpu\+Init\+\_\+}}
+\index{\+\_\+mpu\+Init\+\_\+@{\+\_\+mpu\+Init\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Init\+\_\+()}{\_mpuInit\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Init\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Mpu. 
+
+This function initializes memory protection unit. \mbox{\Hypertarget{sys__mpu_8h_a6a44e5a9214462b0699d751b195ab316}\label{sys__mpu_8h_a6a44e5a9214462b0699d751b195ab316}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Set\+Region\+\_\+@{\+\_\+mpu\+Set\+Region\+\_\+}}
+\index{\+\_\+mpu\+Set\+Region\+\_\+@{\+\_\+mpu\+Set\+Region\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Set\+Region\+\_\+()}{\_mpuSetRegion\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Set\+Region\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{region }\end{DoxyParamCaption})}
+
+
+
+Set mpu region number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region} & Region number\+: mpu\+R\+E\+G\+I\+O\+N1..mpu\+R\+E\+G\+I\+O\+N12\\
+\hline
+\end{DoxyParams}
+This function selects one of the implemented mpu regions. \mbox{\Hypertarget{sys__mpu_8h_a65d7cb9705012268a9d7629251ba9eef}\label{sys__mpu_8h_a65d7cb9705012268a9d7629251ba9eef}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Set\+Region\+Base\+Address\+\_\+@{\+\_\+mpu\+Set\+Region\+Base\+Address\+\_\+}}
+\index{\+\_\+mpu\+Set\+Region\+Base\+Address\+\_\+@{\+\_\+mpu\+Set\+Region\+Base\+Address\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Set\+Region\+Base\+Address\+\_\+()}{\_mpuSetRegionBaseAddress\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Set\+Region\+Base\+Address\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{address }\end{DoxyParamCaption})}
+
+
+
+Set base address of currently selected mpu region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address} & Base address of the M\+PU region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The base address must always aligned with region size
+\end{DoxyNote}
+This function sets the base address of currently selected mpu region. \mbox{\Hypertarget{sys__mpu_8h_a137d553610ae3aa8ced6e8aeadd80574}\label{sys__mpu_8h_a137d553610ae3aa8ced6e8aeadd80574}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Set\+Region\+Size\+Register\+\_\+@{\+\_\+mpu\+Set\+Region\+Size\+Register\+\_\+}}
+\index{\+\_\+mpu\+Set\+Region\+Size\+Register\+\_\+@{\+\_\+mpu\+Set\+Region\+Size\+Register\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Set\+Region\+Size\+Register\+\_\+()}{\_mpuSetRegionSizeRegister\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Set\+Region\+Size\+Register\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{value }\end{DoxyParamCaption})}
+
+
+
+Set mpu region size register value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & Value to be written in the M\+PU Region Size and Enable register\\
+\hline
+\end{DoxyParams}
+This function sets mpu region size register value.
+
+Sample usuage\+: {\itshape mpu\+Set\+Region}(mpu\+R\+E\+G\+I\+O\+N5); {\itshape mpu\+Set\+Region\+Size\+Register}(mpu\+R\+E\+G\+I\+O\+N\+\_\+\+E\+N\+A\+B\+LE $\vert$ M\+P\+U\+\_\+16\+\_\+\+KB $\vert$ mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N3\+\_\+\+D\+I\+S\+A\+B\+LE $\vert$ mpu\+S\+U\+B\+R\+E\+G\+I\+O\+N4\+\_\+\+D\+I\+S\+A\+B\+LE); \mbox{\Hypertarget{sys__mpu_8h_af323aa1f063c246fb495b0f51b618402}\label{sys__mpu_8h_af323aa1f063c246fb495b0f51b618402}} 
+\index{sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}!\+\_\+mpu\+Set\+Region\+Type\+And\+Permission\+\_\+@{\+\_\+mpu\+Set\+Region\+Type\+And\+Permission\+\_\+}}
+\index{\+\_\+mpu\+Set\+Region\+Type\+And\+Permission\+\_\+@{\+\_\+mpu\+Set\+Region\+Type\+And\+Permission\+\_\+}!sys\+\_\+mpu.\+h@{sys\+\_\+mpu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+mpu\+Set\+Region\+Type\+And\+Permission\+\_\+()}{\_mpuSetRegionTypeAndPermission\_()}}
+{\footnotesize\ttfamily void \+\_\+mpu\+Set\+Region\+Type\+And\+Permission\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{type,  }\item[{uint32}]{permission }\end{DoxyParamCaption})}
+
+
+
+Set type of currently selected mpu region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & Region Type
+\begin{DoxyItemize}
+\item M\+P\+U\+\_\+\+S\+T\+R\+O\+N\+G\+L\+Y\+O\+R\+D\+E\+R\+E\+D\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE \+: Memory type strongly ordered and sharable
+\item M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+H\+A\+R\+E\+A\+B\+LE \+: Memory type device and sharable
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner write-\/through, no write allocate and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner write-\/back, no write allocate and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+T\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner write-\/through, no write allocate and shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+N\+O\+W\+A\+\_\+\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner write-\/back, no write allocate and shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner non-\/cachable and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+N\+O\+N\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner write-\/back, write allocate and non shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+N\+C\+\_\+\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner non-\/cachable and shared
+\item M\+P\+U\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+O\+I\+W\+B\+W\+A\+\_\+\+S\+H\+A\+R\+ED \+: Memory type normal outer and inner write-\/back, write allocate and shared
+\item M\+P\+U\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+N\+S\+H\+A\+R\+E\+A\+B\+LE \+: Memory type device and non sharable
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em permission} & Region Access permission
+\begin{DoxyItemize}
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC \+: Alias no access in privileged mode, no access in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC \+: Alias no read/write in privileged mode, no access in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC \+: Alias no read/write in privileged mode, read only in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+E\+X\+EC \+: Alias no read/write in privileged mode, read/write in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+E\+X\+EC \+: Alias no read only in privileged mode, no access in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+E\+X\+EC \+: Alias no read only in privileged mode, read only in user mode and execute
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+N\+A\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC \+: Alias no access in privileged mode, no access in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC \+: Alias no read/write in privileged mode, no access in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC \+: Alias no read/write in privileged mode, read only in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+W\+\_\+\+U\+S\+E\+R\+\_\+\+R\+W\+\_\+\+N\+O\+E\+X\+EC \+: Alias no read/write in privileged mode, read/write in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+N\+A\+\_\+\+N\+O\+E\+X\+EC \+: Alias no read only in privileged mode, no access in user mode and no execution
+\item M\+P\+U\+\_\+\+P\+R\+I\+V\+\_\+\+R\+O\+\_\+\+U\+S\+E\+R\+\_\+\+R\+O\+\_\+\+N\+O\+E\+X\+EC \+: Alias no read only in privileged mode, read only in user mode and no execution
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function sets the type of currently selected mpu region. 

@@ -1,0 +1,618 @@
+\hypertarget{adc_8h}{}\section{include/adc.h File Reference}
+\label{adc_8h}\index{include/adc.\+h@{include/adc.\+h}}
+
+
+A\+DC Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+adc.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structadcData}{adc\+Data}}
+\begin{DoxyCompactList}\small\item\em A\+DC Conversion data structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{adc_8h_a12866d2ec8229856d01bb434c0cc1a92}{adc\+G\+R\+O\+U\+P0}}~0U
+\begin{DoxyCompactList}\small\item\em Alias name for A\+DC event group. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{adc_8h_a69f8aa2dbe807c7f29b1f1fc65a0c0ff}{adc\+G\+R\+O\+U\+P1}}~1U
+\begin{DoxyCompactList}\small\item\em Alias name for A\+DC group 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{adc_8h_ae7f392675608a32077103beaa35faa6b}{adc\+G\+R\+O\+U\+P2}}~2U
+\begin{DoxyCompactList}\small\item\em Alias name for A\+DC group 2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{adc_8h_a15a7481afa59efa27305c6da96ad09b1}\label{adc_8h_a15a7481afa59efa27305c6da96ad09b1}} 
+\#define \mbox{\hyperlink{adc_8h_a15a7481afa59efa27305c6da96ad09b1}{A\+D\+C\+\_\+12\+\_\+\+B\+I\+T\+\_\+\+M\+O\+DE}}~0x80000000U
+\begin{DoxyCompactList}\small\item\em Alias name for A\+DC 12-\/bit mode of operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{adc_8h_a80e8ee4f0122bd0c8c01d9ee992c4182}\label{adc_8h_a80e8ee4f0122bd0c8c01d9ee992c4182}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+O\+P\+M\+O\+D\+E\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x81140001U
+\item 
+\mbox{\Hypertarget{adc_8h_a9b080dc92e8f741df5ddab7682cc3f86}\label{adc_8h_a9b080dc92e8f741df5ddab7682cc3f86}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+C\+L\+O\+C\+K\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(7\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_a8c48cb6349561f83e75f6a7b16aa899f}\label{adc_8h_a8c48cb6349561f83e75f6a7b16aa899f}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G0\+M\+O\+D\+E\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{A\+D\+C\+\_\+12\+\_\+\+B\+IT}} $\vert$ (uint32)0x00000000\+U $\vert$ (uint32)0x00000000\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_afc89c30a9d1255105e75a615e620863e}\label{adc_8h_afc89c30a9d1255105e75a615e620863e}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G1\+M\+O\+D\+E\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{A\+D\+C\+\_\+12\+\_\+\+B\+IT}} $\vert$ (uint32)0x00000000\+U $\vert$ (uint32)0x00000000\+U $\vert$ (uint32)0x00000000\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_a4311121afbc4914da1d0ccb0cb48dbcf}\label{adc_8h_a4311121afbc4914da1d0ccb0cb48dbcf}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G2\+M\+O\+D\+E\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{A\+D\+C\+\_\+12\+\_\+\+B\+IT}} $\vert$ (uint32)0x00000000\+U $\vert$ (uint32)0x00000000\+U $\vert$ (uint32)0x00000000\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_a0da7a3a8c1431b829ad694f7013fb75d}\label{adc_8h_a0da7a3a8c1431b829ad694f7013fb75d}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G0\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)0x00000000\+U $\vert$ (uint32)\+A\+D\+C1\+\_\+\+E\+V\+E\+N\+T)
+\item 
+\mbox{\Hypertarget{adc_8h_a0075413bfbf1d5f0c0219a21bad61df8}\label{adc_8h_a0075413bfbf1d5f0c0219a21bad61df8}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G1\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)0x00000000\+U $\vert$ (uint32)\+A\+D\+C1\+\_\+\+E\+V\+E\+N\+T)
+\item 
+\mbox{\Hypertarget{adc_8h_a014cab6616289dc03126628b9b9ed5ce}\label{adc_8h_a014cab6616289dc03126628b9b9ed5ce}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G2\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)0x00000000\+U $\vert$ (uint32)\+A\+D\+C1\+\_\+\+E\+V\+E\+N\+T)
+\item 
+\mbox{\Hypertarget{adc_8h_ad5915cdaea4d822b984cdf9be5f2026c}\label{adc_8h_ad5915cdaea4d822b984cdf9be5f2026c}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+B\+N\+D\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)8\+U $<$$<$ 16\+U)$\vert$(8\+U + 8\+U))
+\item 
+\mbox{\Hypertarget{adc_8h_aaa4ef2956993301fce1877285dd6e0d0}\label{adc_8h_aaa4ef2956993301fce1877285dd6e0d0}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+B\+N\+D\+E\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(2\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_a164b050a7f0f02a2cca6f53209a00506}\label{adc_8h_a164b050a7f0f02a2cca6f53209a00506}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G0\+S\+A\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(1\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_a7d4d756bea9786ea2fd01e3f0248f674}\label{adc_8h_a7d4d756bea9786ea2fd01e3f0248f674}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G1\+S\+A\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(1\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_a6db809e7c5d62df346e7b4e70c767651}\label{adc_8h_a6db809e7c5d62df346e7b4e70c767651}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G2\+S\+A\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(1\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_af700bd4a4f2503b8845c0871d504ff2f}\label{adc_8h_af700bd4a4f2503b8845c0871d504ff2f}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G0\+S\+A\+M\+P\+D\+I\+S\+E\+N\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0\+U $<$$<$ 8\+U) $\vert$ 0x00000000\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_ad1b634885736d303bb2c1facb1315d65}\label{adc_8h_ad1b634885736d303bb2c1facb1315d65}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G1\+S\+A\+M\+P\+D\+I\+S\+E\+N\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0\+U $<$$<$ 8\+U) $\vert$ 0x00000000\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_abc8b40ecd1e7ed3ee6667a6efc14e359}\label{adc_8h_abc8b40ecd1e7ed3ee6667a6efc14e359}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+G2\+S\+A\+M\+P\+D\+I\+S\+E\+N\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0\+U $<$$<$ 8\+U) $\vert$ 0x00000000\+U)
+\item 
+\mbox{\Hypertarget{adc_8h_a66001ec80b5ccd324b56a1def5e8e54a}\label{adc_8h_a66001ec80b5ccd324b56a1def5e8e54a}} 
+\#define {\bfseries A\+D\+C1\+\_\+\+P\+A\+R\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x00000005\+U)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}\label{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}} 
+typedef struct \mbox{\hyperlink{structadcData}{adc\+Data}} \mbox{\hyperlink{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}{adc\+Data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A\+DC Data Type Definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{adc_8h_ad856bdc174b85d22e77564dfefb368b0}\label{adc_8h_ad856bdc174b85d22e77564dfefb368b0}} 
+typedef struct \mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg}} {\bfseries adc\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bb}{adc\+Resolution}} \{ \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{A\+D\+C\+\_\+12\+\_\+\+B\+IT}} = 0x00000000U, 
+\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba097409074f53819bad64f920c7a521ba}{A\+D\+C\+\_\+10\+\_\+\+B\+IT}} = 0x00000100U, 
+\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba05decbe8cd62f785cc2daaa1251b344e}{A\+D\+C\+\_\+8\+\_\+\+B\+IT}} = 0x00000200U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for data resolution This enumeration is used to provide alias names for the data resolution\+: \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722e}{adc\+Fi\+Fo\+Status}} \{ \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722eabf6eef6a60cfbc6da9f31594d4946c27}{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+U\+LL}} = 0U, 
+\mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722eab0fd4d36ef5e4c75df9c0f6ce35c7125}{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+F\+U\+LL}} = 1U, 
+\mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722ea38a363af72c5debc1b1058ac49ab0719}{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+O\+V\+E\+R\+F\+L\+OW}} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for Fi\+Fo status This enumeration is used to provide alias names for the current Fi\+Fo states\+: \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315e}{adc\+Conversion\+Status}} \{ \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315ea3c9c35d330bba4d6bacbdf1ae29350a3}{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+I\+N\+I\+S\+H\+ED}} = 0U, 
+\mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315eae549f031eb0dbe0abbc3664e851c01c6}{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+F\+I\+N\+I\+S\+H\+ED}} = 8U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for conversion status This enumeration is used to provide alias names for the current conversion states\+: \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910c}{adc1\+Hw\+Trigger\+Source}} \{ \newline
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}{A\+D\+C1\+\_\+\+E\+V\+E\+NT}} = 0U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca349abb22eb187f433a7d568c3c899f0c}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+8}} = 1U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca27d6939dbe967300c24de3c3ab0b7138}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+10}} = 2U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5f3cbb6c32deb0bc1a60a1e8d09ea789}{A\+D\+C1\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0}} = 3U, 
+\newline
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca2126c6286b841948288a6e0896e424e2}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+12}} = 4U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca113e4c94d42e72be932631b608571e2d}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+14}} = 5U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cad0cdb9d82257f358833a720accf04fab}{A\+D\+C1\+\_\+\+G\+I\+O\+B0}} = 6U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca1fa62c81db430b042268abd499101ddb}{A\+D\+C1\+\_\+\+G\+I\+O\+B1}} = 7U, 
+\newline
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca46499d4e0bc3e962017b357250263967}{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+5}} = 1U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadf0e02a506dd5c3f24fcf84ba576ce9f}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+27}} = 2U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadeb7f1d523fb804d5f79bc209d706b1d}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+17}} = 4U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7cbb4fe40700b902192507eb7d402d54}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+19}} = 5U, 
+\newline
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5093538f524d672da30c69f6d17c27a0}{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+11}} = 6U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7aca617c0cc76ee3caacebf5c6c46c44}{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+13}} = 7U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca41bd99bdc2936d3b812b4e20ff86782c}{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+B}} = 1U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cabe0380e72fd8a976aee86ddf4c731de3}{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A1}} = 3U, 
+\newline
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cae4443578451456c7e5b0be07ceaf2258}{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+1}} = 5U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca9f27d0fc7eaa7aed9f1ab0f6e9cb58af}{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A2}} = 6U, 
+\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca8f8b64fb69016e87c11719f30dedd068}{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+AB}} = 7U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for hardware trigger source This enumeration is used to provide alias names for the hardware trigger sources\+: \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655c}{adc2\+Hw\+Trigger\+Source}} \{ \newline
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca922fa7db52576d601443ff457641a7e2}{A\+D\+C2\+\_\+\+E\+V\+E\+NT}} = 0U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cabded3213285a07e9ec6afb37559f191f}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+8}} = 1U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca7c51232786ee7404674d671f3b0bbc87}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+10}} = 2U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d01be827201a41cc9da6744600d2624}{A\+D\+C2\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0}} = 3U, 
+\newline
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae79b80cfcf347156fb5d72b36d77ae41}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+12}} = 4U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cad230491814ff02e4e0a75e92bdbc9234}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+14}} = 5U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca629ed36fa042e7cf73a2d437d4be27ed}{A\+D\+C2\+\_\+\+G\+I\+O\+B0}} = 6U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca6007cd7df1a7a6e4d652d2ca11b64d2e}{A\+D\+C2\+\_\+\+G\+I\+O\+B1}} = 7U, 
+\newline
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cab6c48c517e12efa257a3f220ca06fab3}{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+5}} = 1U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca587fc072359879c8999e9c2cccc1996a}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+27}} = 2U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae50a903fa50d4ec1561e22657f99a61c}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+17}} = 4U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca144225be9370760a7d62ceb71681e93f}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+19}} = 5U, 
+\newline
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2796977959457a77b4f09509dc13c8ca}{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+11}} = 6U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca64e3ab2ae24410d4da3e8d61b11e78e3}{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+13}} = 7U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cadc2565be00a1a7d75ead4b65c5b0adae}{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+B}} = 1U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cafb47956a78dc99871c398d35ccf624b5}{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A1}} = 3U, 
+\newline
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655caefaa2bd7994d12532233030038ad5bfa}{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+1}} = 5U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d87f0a57d4726f76c65626935c466ee}{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A2}} = 6U, 
+\mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca052ac3dcf9a0d42ab0496867e0d22dfe}{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+AB}} = 7U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for hardware trigger source This enumeration is used to provide alias names for the hardware trigger sources\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ADC_gafd645b17cf0581bcaa22c56011c775e4}{adc\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes A\+DC Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga92003078c6583152944796afdc7faf88}{adc\+Start\+Conversion}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Starts an A\+DC conversion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga33b0a3250de093a2227a3d2ca0c1998b}{adc\+Stop\+Conversion}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Stops an A\+DC conversion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga82f17f0f78bd4cfc96d00d520dcd0d58}{adc\+Reset\+Fi\+Fo}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Resets Fi\+Fo read and write pointer. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_gac756b9d0f3fc77b1ad5336442895d00f}{adc\+Get\+Data}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group, \mbox{\hyperlink{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}{adc\+Data\+\_\+t}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Gets converted a A\+DC values. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_gac6acf1ea1f92864df632f2aed46d7dd9}{adc\+Is\+Fifo\+Full}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Checks if Fi\+Fo buffer is full. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga8bad75e5bea34cb9eaec0ca8a3cb6dcb}{adc\+Is\+Conversion\+Complete}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Checks if Conversion is complete. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga986956885288c1d13a7e9917a900b7ec}{adc\+Enable\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Enable notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_gacbc69ac57562cbc2f607171801fb7138}{adc\+Disable\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Disable notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga6f24721d9ed4247b69f1f818585253f0}{adc\+Calibration}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Computes offset error using Calibration mode. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga6197438221bd189905b1a86a35272842}{adc\+Mid\+Point\+Calibration}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Computes offset error using Mid Point Calibration mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_gaa8ea6657a9cd07f73ec82876d014c203}{adc\+Set\+E\+V\+T\+Pin}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 value)
+\begin{DoxyCompactList}\small\item\em Set A\+D\+C\+E\+VT pin. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga0e44b7ecaee5bf23d1653da2ac80fe33}{adc\+Get\+E\+V\+T\+Pin}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Set A\+D\+C\+E\+VT pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga919d1c45d7b1bdab5eb226dddad5a428}{adc1\+Get\+Config\+Value}} (\mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void {\bfseries adc2\+Get\+Config\+Value} (\mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group__ADC_ga753cd0a8988b0b7b5044cfc3cfb3298d}{adc\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Group notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+DC Driver Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the A\+DC driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{adc_8h_a12866d2ec8229856d01bb434c0cc1a92}\label{adc_8h_a12866d2ec8229856d01bb434c0cc1a92}} 
+\index{adc.\+h@{adc.\+h}!adc\+G\+R\+O\+U\+P0@{adc\+G\+R\+O\+U\+P0}}
+\index{adc\+G\+R\+O\+U\+P0@{adc\+G\+R\+O\+U\+P0}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc\+G\+R\+O\+U\+P0}{adcGROUP0}}
+{\footnotesize\ttfamily \#define adc\+G\+R\+O\+U\+P0~0U}
+
+
+
+Alias name for A\+DC event group. 
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape group} 
+\end{DoxyNote}
+
+
+Definition at line 68 of file adc.\+h.
+
+\mbox{\Hypertarget{adc_8h_a69f8aa2dbe807c7f29b1f1fc65a0c0ff}\label{adc_8h_a69f8aa2dbe807c7f29b1f1fc65a0c0ff}} 
+\index{adc.\+h@{adc.\+h}!adc\+G\+R\+O\+U\+P1@{adc\+G\+R\+O\+U\+P1}}
+\index{adc\+G\+R\+O\+U\+P1@{adc\+G\+R\+O\+U\+P1}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc\+G\+R\+O\+U\+P1}{adcGROUP1}}
+{\footnotesize\ttfamily \#define adc\+G\+R\+O\+U\+P1~1U}
+
+
+
+Alias name for A\+DC group 1. 
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape group} 
+\end{DoxyNote}
+
+
+Definition at line 75 of file adc.\+h.
+
+\mbox{\Hypertarget{adc_8h_ae7f392675608a32077103beaa35faa6b}\label{adc_8h_ae7f392675608a32077103beaa35faa6b}} 
+\index{adc.\+h@{adc.\+h}!adc\+G\+R\+O\+U\+P2@{adc\+G\+R\+O\+U\+P2}}
+\index{adc\+G\+R\+O\+U\+P2@{adc\+G\+R\+O\+U\+P2}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc\+G\+R\+O\+U\+P2}{adcGROUP2}}
+{\footnotesize\ttfamily \#define adc\+G\+R\+O\+U\+P2~2U}
+
+
+
+Alias name for A\+DC group 2. 
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape group} 
+\end{DoxyNote}
+
+
+Definition at line 82 of file adc.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910c}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910c}} 
+\index{adc.\+h@{adc.\+h}!adc1\+Hw\+Trigger\+Source@{adc1\+Hw\+Trigger\+Source}}
+\index{adc1\+Hw\+Trigger\+Source@{adc1\+Hw\+Trigger\+Source}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc1\+Hw\+Trigger\+Source}{adc1HwTriggerSource}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910c}{adc1\+Hw\+Trigger\+Source}}}
+
+
+
+Alias names for hardware trigger source This enumeration is used to provide alias names for the hardware trigger sources\+: 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+E\+V\+E\+NT@{A\+D\+C1\+\_\+\+E\+V\+E\+NT}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+E\+V\+E\+NT@{A\+D\+C1\+\_\+\+E\+V\+E\+NT}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}} 
+A\+D\+C1\+\_\+\+E\+V\+E\+NT&Alias for event pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+8@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+8}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+8@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+8}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca349abb22eb187f433a7d568c3c899f0c}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca349abb22eb187f433a7d568c3c899f0c}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+8&Alias for H\+E\+T1 pin 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+10@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+10}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+10@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+10}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca27d6939dbe967300c24de3c3ab0b7138}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca27d6939dbe967300c24de3c3ab0b7138}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+10&Alias for H\+E\+T1 pin 10 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0@{A\+D\+C1\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0@{A\+D\+C1\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5f3cbb6c32deb0bc1a60a1e8d09ea789}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5f3cbb6c32deb0bc1a60a1e8d09ea789}} 
+A\+D\+C1\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0&Alias for R\+TI compare 0 match \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+12@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+12}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+12@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+12}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca2126c6286b841948288a6e0896e424e2}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca2126c6286b841948288a6e0896e424e2}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+12&Alias for H\+E\+T1 pin 12 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+14@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+14}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+14@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+14}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca113e4c94d42e72be932631b608571e2d}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca113e4c94d42e72be932631b608571e2d}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+14&Alias for H\+E\+T1 pin 14 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+G\+I\+O\+B0@{A\+D\+C1\+\_\+\+G\+I\+O\+B0}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+G\+I\+O\+B0@{A\+D\+C1\+\_\+\+G\+I\+O\+B0}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cad0cdb9d82257f358833a720accf04fab}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cad0cdb9d82257f358833a720accf04fab}} 
+A\+D\+C1\+\_\+\+G\+I\+O\+B0&Alias for G\+IO port b pin 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+G\+I\+O\+B1@{A\+D\+C1\+\_\+\+G\+I\+O\+B1}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+G\+I\+O\+B1@{A\+D\+C1\+\_\+\+G\+I\+O\+B1}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca1fa62c81db430b042268abd499101ddb}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca1fa62c81db430b042268abd499101ddb}} 
+A\+D\+C1\+\_\+\+G\+I\+O\+B1&Alias for G\+IO port b pin 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+5@{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+5}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+5@{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+5}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca46499d4e0bc3e962017b357250263967}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca46499d4e0bc3e962017b357250263967}} 
+A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+5&Alias for H\+E\+T2 pin 5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+27@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+27}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+27@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+27}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadf0e02a506dd5c3f24fcf84ba576ce9f}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadf0e02a506dd5c3f24fcf84ba576ce9f}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+27&Alias for H\+E\+T1 pin 27 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+17@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+17}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+17@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+17}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadeb7f1d523fb804d5f79bc209d706b1d}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadeb7f1d523fb804d5f79bc209d706b1d}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+17&Alias for H\+E\+T1 pin 17 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+19@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+19}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+19@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+19}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7cbb4fe40700b902192507eb7d402d54}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7cbb4fe40700b902192507eb7d402d54}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+19&Alias for H\+E\+T1 pin 19 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+11@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+11}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+11@{A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+11}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5093538f524d672da30c69f6d17c27a0}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5093538f524d672da30c69f6d17c27a0}} 
+A\+D\+C1\+\_\+\+H\+E\+T1\+\_\+11&Alias for H\+E\+T1 pin 11 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+13@{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+13}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+13@{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+13}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7aca617c0cc76ee3caacebf5c6c46c44}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7aca617c0cc76ee3caacebf5c6c46c44}} 
+A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+13&Alias for H\+E\+T2 pin 13 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+B@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+B}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+B@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+B}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca41bd99bdc2936d3b812b4e20ff86782c}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca41bd99bdc2936d3b812b4e20ff86782c}} 
+A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+B&Alias for B Signal E\+P\+WM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A1@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A1}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A1@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A1}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cabe0380e72fd8a976aee86ddf4c731de3}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cabe0380e72fd8a976aee86ddf4c731de3}} 
+A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A1&Alias for A1 Signal E\+P\+WM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+1@{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+1}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+1@{A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+1}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cae4443578451456c7e5b0be07ceaf2258}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cae4443578451456c7e5b0be07ceaf2258}} 
+A\+D\+C1\+\_\+\+H\+E\+T2\+\_\+1&Alias for H\+E\+T2 pin 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A2@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A2}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A2@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A2}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca9f27d0fc7eaa7aed9f1ab0f6e9cb58af}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca9f27d0fc7eaa7aed9f1ab0f6e9cb58af}} 
+A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+A2&Alias for A2 Signal E\+P\+WM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+AB@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+AB}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+AB@{A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+AB}}}\mbox{\Hypertarget{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca8f8b64fb69016e87c11719f30dedd068}\label{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca8f8b64fb69016e87c11719f30dedd068}} 
+A\+D\+C1\+\_\+\+E\+P\+W\+M\+\_\+\+AB&Alias for AB Signal E\+P\+WM \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 136 of file adc.\+h.
+
+
+\begin{DoxyCode}
+137 \{
+138     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}{ADC1\_EVENT}} = 0U,       
+139     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca349abb22eb187f433a7d568c3c899f0c}{ADC1\_HET1\_8}} = 1U,      
+140     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca27d6939dbe967300c24de3c3ab0b7138}{ADC1\_HET1\_10}} = 2U,     
+141     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5f3cbb6c32deb0bc1a60a1e8d09ea789}{ADC1\_RTI\_COMP0}} = 3U,   
+142     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca2126c6286b841948288a6e0896e424e2}{ADC1\_HET1\_12}} = 4U,     
+143     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca113e4c94d42e72be932631b608571e2d}{ADC1\_HET1\_14}} = 5U,     
+144     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cad0cdb9d82257f358833a720accf04fab}{ADC1\_GIOB0}} = 6U,       
+145     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca1fa62c81db430b042268abd499101ddb}{ADC1\_GIOB1}} = 7U,       
+146 
+147     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca46499d4e0bc3e962017b357250263967}{ADC1\_HET2\_5}} = 1U,      
+148     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadf0e02a506dd5c3f24fcf84ba576ce9f}{ADC1\_HET1\_27}} = 2U,     
+149     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cadeb7f1d523fb804d5f79bc209d706b1d}{ADC1\_HET1\_17}} = 4U,     
+150     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7cbb4fe40700b902192507eb7d402d54}{ADC1\_HET1\_19}} = 5U,     
+151     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca5093538f524d672da30c69f6d17c27a0}{ADC1\_HET1\_11}} = 6U,     
+152     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca7aca617c0cc76ee3caacebf5c6c46c44}{ADC1\_HET2\_13}} = 7U,     
+153 
+154     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca41bd99bdc2936d3b812b4e20ff86782c}{ADC1\_EPWM\_B}} = 1U,      
+155     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cabe0380e72fd8a976aee86ddf4c731de3}{ADC1\_EPWM\_A1}} = 3U,      
+156     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910cae4443578451456c7e5b0be07ceaf2258}{ADC1\_HET2\_1}} = 5U,      
+157     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca9f27d0fc7eaa7aed9f1ab0f6e9cb58af}{ADC1\_EPWM\_A2}} = 6U,     
+158     \mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910ca8f8b64fb69016e87c11719f30dedd068}{ADC1\_EPWM\_AB}} = 7U       
+159 
+160 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655c}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655c}} 
+\index{adc.\+h@{adc.\+h}!adc2\+Hw\+Trigger\+Source@{adc2\+Hw\+Trigger\+Source}}
+\index{adc2\+Hw\+Trigger\+Source@{adc2\+Hw\+Trigger\+Source}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc2\+Hw\+Trigger\+Source}{adc2HwTriggerSource}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655c}{adc2\+Hw\+Trigger\+Source}}}
+
+
+
+Alias names for hardware trigger source This enumeration is used to provide alias names for the hardware trigger sources\+: 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+E\+V\+E\+NT@{A\+D\+C2\+\_\+\+E\+V\+E\+NT}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+E\+V\+E\+NT@{A\+D\+C2\+\_\+\+E\+V\+E\+NT}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca922fa7db52576d601443ff457641a7e2}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca922fa7db52576d601443ff457641a7e2}} 
+A\+D\+C2\+\_\+\+E\+V\+E\+NT&Alias for event pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+8@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+8}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+8@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+8}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655cabded3213285a07e9ec6afb37559f191f}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655cabded3213285a07e9ec6afb37559f191f}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+8&Alias for H\+E\+T1 pin 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+10@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+10}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+10@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+10}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca7c51232786ee7404674d671f3b0bbc87}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca7c51232786ee7404674d671f3b0bbc87}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+10&Alias for H\+E\+T1 pin 10 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0@{A\+D\+C2\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0@{A\+D\+C2\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d01be827201a41cc9da6744600d2624}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d01be827201a41cc9da6744600d2624}} 
+A\+D\+C2\+\_\+\+R\+T\+I\+\_\+\+C\+O\+M\+P0&Alias for R\+TI compare 0 match \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+12@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+12}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+12@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+12}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae79b80cfcf347156fb5d72b36d77ae41}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae79b80cfcf347156fb5d72b36d77ae41}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+12&Alias for H\+E\+T1 pin 12 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+14@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+14}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+14@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+14}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655cad230491814ff02e4e0a75e92bdbc9234}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655cad230491814ff02e4e0a75e92bdbc9234}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+14&Alias for H\+E\+T1 pin 14 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+G\+I\+O\+B0@{A\+D\+C2\+\_\+\+G\+I\+O\+B0}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+G\+I\+O\+B0@{A\+D\+C2\+\_\+\+G\+I\+O\+B0}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca629ed36fa042e7cf73a2d437d4be27ed}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca629ed36fa042e7cf73a2d437d4be27ed}} 
+A\+D\+C2\+\_\+\+G\+I\+O\+B0&Alias for G\+IO port b pin 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+G\+I\+O\+B1@{A\+D\+C2\+\_\+\+G\+I\+O\+B1}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+G\+I\+O\+B1@{A\+D\+C2\+\_\+\+G\+I\+O\+B1}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca6007cd7df1a7a6e4d652d2ca11b64d2e}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca6007cd7df1a7a6e4d652d2ca11b64d2e}} 
+A\+D\+C2\+\_\+\+G\+I\+O\+B1&Alias for G\+IO port b pin 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+5@{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+5}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+5@{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+5}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655cab6c48c517e12efa257a3f220ca06fab3}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655cab6c48c517e12efa257a3f220ca06fab3}} 
+A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+5&Alias for H\+E\+T2 pin 5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+27@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+27}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+27@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+27}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca587fc072359879c8999e9c2cccc1996a}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca587fc072359879c8999e9c2cccc1996a}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+27&Alias for H\+E\+T1 pin 27 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+17@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+17}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+17@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+17}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae50a903fa50d4ec1561e22657f99a61c}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae50a903fa50d4ec1561e22657f99a61c}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+17&Alias for H\+E\+T1 pin 17 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+19@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+19}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+19@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+19}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca144225be9370760a7d62ceb71681e93f}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca144225be9370760a7d62ceb71681e93f}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+19&Alias for H\+E\+T1 pin 19 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+11@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+11}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+11@{A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+11}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2796977959457a77b4f09509dc13c8ca}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2796977959457a77b4f09509dc13c8ca}} 
+A\+D\+C2\+\_\+\+H\+E\+T1\+\_\+11&Alias for H\+E\+T1 pin 11 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+13@{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+13}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+13@{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+13}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca64e3ab2ae24410d4da3e8d61b11e78e3}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca64e3ab2ae24410d4da3e8d61b11e78e3}} 
+A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+13&Alias for H\+E\+T2 pin 13 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+B@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+B}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+B@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+B}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655cadc2565be00a1a7d75ead4b65c5b0adae}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655cadc2565be00a1a7d75ead4b65c5b0adae}} 
+A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+B&Alias for B Signal E\+P\+WM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A1@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A1}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A1@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A1}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655cafb47956a78dc99871c398d35ccf624b5}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655cafb47956a78dc99871c398d35ccf624b5}} 
+A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A1&Alias for A1 Signal E\+P\+WM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+1@{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+1}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+1@{A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+1}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655caefaa2bd7994d12532233030038ad5bfa}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655caefaa2bd7994d12532233030038ad5bfa}} 
+A\+D\+C2\+\_\+\+H\+E\+T2\+\_\+1&Alias for H\+E\+T2 pin 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A2@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A2}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A2@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A2}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d87f0a57d4726f76c65626935c466ee}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d87f0a57d4726f76c65626935c466ee}} 
+A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+A2&Alias for A2 Signal E\+P\+WM \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+AB@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+AB}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+AB@{A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+AB}}}\mbox{\Hypertarget{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca052ac3dcf9a0d42ab0496867e0d22dfe}\label{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca052ac3dcf9a0d42ab0496867e0d22dfe}} 
+A\+D\+C2\+\_\+\+E\+P\+W\+M\+\_\+\+AB&Alias for AB Signal E\+P\+WM \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 167 of file adc.\+h.
+
+
+\begin{DoxyCode}
+168 \{
+169     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca922fa7db52576d601443ff457641a7e2}{ADC2\_EVENT}} = 0U,       
+170     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cabded3213285a07e9ec6afb37559f191f}{ADC2\_HET1\_8}} = 1U,      
+171     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca7c51232786ee7404674d671f3b0bbc87}{ADC2\_HET1\_10}} = 2U,     
+172     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d01be827201a41cc9da6744600d2624}{ADC2\_RTI\_COMP0}} = 3U,   
+173     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae79b80cfcf347156fb5d72b36d77ae41}{ADC2\_HET1\_12}} = 4U,     
+174     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cad230491814ff02e4e0a75e92bdbc9234}{ADC2\_HET1\_14}} = 5U,     
+175     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca629ed36fa042e7cf73a2d437d4be27ed}{ADC2\_GIOB0}} = 6U,       
+176     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca6007cd7df1a7a6e4d652d2ca11b64d2e}{ADC2\_GIOB1}} = 7U,       
+177     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cab6c48c517e12efa257a3f220ca06fab3}{ADC2\_HET2\_5}} = 1U,      
+178     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca587fc072359879c8999e9c2cccc1996a}{ADC2\_HET1\_27}} = 2U,     
+179     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cae50a903fa50d4ec1561e22657f99a61c}{ADC2\_HET1\_17}} = 4U,     
+180     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca144225be9370760a7d62ceb71681e93f}{ADC2\_HET1\_19}} = 5U,     
+181     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2796977959457a77b4f09509dc13c8ca}{ADC2\_HET1\_11}} = 6U,     
+182     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca64e3ab2ae24410d4da3e8d61b11e78e3}{ADC2\_HET2\_13}} = 7U,     
+183     
+184     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cadc2565be00a1a7d75ead4b65c5b0adae}{ADC2\_EPWM\_B}} = 1U,      
+185     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655cafb47956a78dc99871c398d35ccf624b5}{ADC2\_EPWM\_A1}} = 3U,      
+186     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655caefaa2bd7994d12532233030038ad5bfa}{ADC2\_HET2\_1}} = 5U,      
+187     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca2d87f0a57d4726f76c65626935c466ee}{ADC2\_EPWM\_A2}} = 6U,     
+188     \mbox{\hyperlink{adc_8h_a51ca1e9625eb25f35d5021693d1a655ca052ac3dcf9a0d42ab0496867e0d22dfe}{ADC2\_EPWM\_AB}} = 7U       
+189 
+190 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315e}\label{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315e}} 
+\index{adc.\+h@{adc.\+h}!adc\+Conversion\+Status@{adc\+Conversion\+Status}}
+\index{adc\+Conversion\+Status@{adc\+Conversion\+Status}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc\+Conversion\+Status}{adcConversionStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315e}{adc\+Conversion\+Status}}}
+
+
+
+Alias names for conversion status This enumeration is used to provide alias names for the current conversion states\+: 
+
+
+\begin{DoxyItemize}
+\item Conversion is not finished
+\item Conversion is finished 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+I\+N\+I\+S\+H\+ED@{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+I\+N\+I\+S\+H\+ED}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+I\+N\+I\+S\+H\+ED@{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+I\+N\+I\+S\+H\+ED}}}\mbox{\Hypertarget{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315ea3c9c35d330bba4d6bacbdf1ae29350a3}\label{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315ea3c9c35d330bba4d6bacbdf1ae29350a3}} 
+A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+I\+N\+I\+S\+H\+ED&Alias for current conversion is not finished \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+F\+I\+N\+I\+S\+H\+ED@{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+F\+I\+N\+I\+S\+H\+ED}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+F\+I\+N\+I\+S\+H\+ED@{A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+F\+I\+N\+I\+S\+H\+ED}}}\mbox{\Hypertarget{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315eae549f031eb0dbe0abbc3664e851c01c6}\label{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315eae549f031eb0dbe0abbc3664e851c01c6}} 
+A\+D\+C\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+I\+S\+\_\+\+F\+I\+N\+I\+S\+H\+ED&Alias for current conversion is finished \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 125 of file adc.\+h.
+
+
+\begin{DoxyCode}
+126 \{
+127     \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315ea3c9c35d330bba4d6bacbdf1ae29350a3}{ADC\_CONVERSION\_IS\_NOT\_FINISHED}} = 0U, 
+128     \mbox{\hyperlink{adc_8h_a8cfd7a0a42a52e24e465f5660ab2315eae549f031eb0dbe0abbc3664e851c01c6}{ADC\_CONVERSION\_IS\_FINISHED}}     = 8U  
+129 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{adc_8h_a43f2379ff51a3570cde39e9ae825722e}\label{adc_8h_a43f2379ff51a3570cde39e9ae825722e}} 
+\index{adc.\+h@{adc.\+h}!adc\+Fi\+Fo\+Status@{adc\+Fi\+Fo\+Status}}
+\index{adc\+Fi\+Fo\+Status@{adc\+Fi\+Fo\+Status}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc\+Fi\+Fo\+Status}{adcFiFoStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722e}{adc\+Fi\+Fo\+Status}}}
+
+
+
+Alias names for Fi\+Fo status This enumeration is used to provide alias names for the current Fi\+Fo states\+: 
+
+
+\begin{DoxyItemize}
+\item Fi\+Fo is not full
+\item Fi\+Fo is full
+\item Fi\+Fo overflow occurred 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+U\+LL@{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+U\+LL}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+U\+LL@{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+U\+LL}}}\mbox{\Hypertarget{adc_8h_a43f2379ff51a3570cde39e9ae825722eabf6eef6a60cfbc6da9f31594d4946c27}\label{adc_8h_a43f2379ff51a3570cde39e9ae825722eabf6eef6a60cfbc6da9f31594d4946c27}} 
+A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+F\+U\+LL&Alias for Fi\+Fo is not full \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+F\+U\+LL@{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+F\+U\+LL}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+F\+U\+LL@{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+F\+U\+LL}}}\mbox{\Hypertarget{adc_8h_a43f2379ff51a3570cde39e9ae825722eab0fd4d36ef5e4c75df9c0f6ce35c7125}\label{adc_8h_a43f2379ff51a3570cde39e9ae825722eab0fd4d36ef5e4c75df9c0f6ce35c7125}} 
+A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+I\+S\+\_\+\+F\+U\+LL&Alias for Fi\+Fo is full \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+O\+V\+E\+R\+F\+L\+OW}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+O\+V\+E\+R\+F\+L\+OW@{A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+O\+V\+E\+R\+F\+L\+OW}}}\mbox{\Hypertarget{adc_8h_a43f2379ff51a3570cde39e9ae825722ea38a363af72c5debc1b1058ac49ab0719}\label{adc_8h_a43f2379ff51a3570cde39e9ae825722ea38a363af72c5debc1b1058ac49ab0719}} 
+A\+D\+C\+\_\+\+F\+I\+F\+O\+\_\+\+O\+V\+E\+R\+F\+L\+OW&Alias for Fi\+Fo overflow occurred \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 111 of file adc.\+h.
+
+
+\begin{DoxyCode}
+112 \{
+113     \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722eabf6eef6a60cfbc6da9f31594d4946c27}{ADC\_FIFO\_IS\_NOT\_FULL}} = 0U, 
+114     \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722eab0fd4d36ef5e4c75df9c0f6ce35c7125}{ADC\_FIFO\_IS\_FULL}}     = 1U, 
+115     \mbox{\hyperlink{adc_8h_a43f2379ff51a3570cde39e9ae825722ea38a363af72c5debc1b1058ac49ab0719}{ADC\_FIFO\_OVERFLOW}}    = 3U  
+116 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bb}\label{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bb}} 
+\index{adc.\+h@{adc.\+h}!adc\+Resolution@{adc\+Resolution}}
+\index{adc\+Resolution@{adc\+Resolution}!adc.\+h@{adc.\+h}}
+\subsubsection{\texorpdfstring{adc\+Resolution}{adcResolution}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bb}{adc\+Resolution}}}
+
+
+
+Alias names for data resolution This enumeration is used to provide alias names for the data resolution\+: 
+
+
+\begin{DoxyItemize}
+\item 12 bit resolution
+\item 10 bit resolution
+\item 8 bit resolution 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+12\+\_\+\+B\+IT@{A\+D\+C\+\_\+12\+\_\+\+B\+IT}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+12\+\_\+\+B\+IT@{A\+D\+C\+\_\+12\+\_\+\+B\+IT}}}\mbox{\Hypertarget{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}\label{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}} 
+A\+D\+C\+\_\+12\+\_\+\+B\+IT&Alias for 12 bit data resolution \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+10\+\_\+\+B\+IT@{A\+D\+C\+\_\+10\+\_\+\+B\+IT}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+10\+\_\+\+B\+IT@{A\+D\+C\+\_\+10\+\_\+\+B\+IT}}}\mbox{\Hypertarget{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba097409074f53819bad64f920c7a521ba}\label{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba097409074f53819bad64f920c7a521ba}} 
+A\+D\+C\+\_\+10\+\_\+\+B\+IT&Alias for 10 bit data resolution \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+8\+\_\+\+B\+IT@{A\+D\+C\+\_\+8\+\_\+\+B\+IT}!adc.\+h@{adc.\+h}}\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+8\+\_\+\+B\+IT@{A\+D\+C\+\_\+8\+\_\+\+B\+IT}}}\mbox{\Hypertarget{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba05decbe8cd62f785cc2daaa1251b344e}\label{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba05decbe8cd62f785cc2daaa1251b344e}} 
+A\+D\+C\+\_\+8\+\_\+\+B\+IT&Alias for 8 bit data resolution \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 96 of file adc.\+h.
+
+
+\begin{DoxyCode}
+97 \{
+98     \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{ADC\_12\_BIT}} = 0x00000000U, 
+99     \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba097409074f53819bad64f920c7a521ba}{ADC\_10\_BIT}} = 0x00000100U, 
+100     \mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bba05decbe8cd62f785cc2daaa1251b344e}{ADC\_8\_BIT}}  = 0x00000200U  
+101 \};
+\end{DoxyCode}

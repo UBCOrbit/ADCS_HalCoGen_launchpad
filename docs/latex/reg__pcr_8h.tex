@@ -1,0 +1,73 @@
+\hypertarget{reg__pcr_8h}{}\section{include/reg\+\_\+pcr.h File Reference}
+\label{reg__pcr_8h}\index{include/reg\+\_\+pcr.\+h@{include/reg\+\_\+pcr.\+h}}
+
+
+P\+CR Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpcrBase}{pcr\+Base}}
+\begin{DoxyCompactList}\small\item\em Pcr Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__pcr_8h_a3b6e651755dc3ae113426bea72cdf332}{pcr\+R\+EG}}~((\mbox{\hyperlink{reg__pcr_8h_ab12169449543dd20068eeac0f8175632}{pcr\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+E000\+U)
+\begin{DoxyCompactList}\small\item\em Pcr Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structpcrBase}{pcr\+Base}} \mbox{\hyperlink{reg__pcr_8h_ab12169449543dd20068eeac0f8175632}{pcr\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em P\+CR Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+CR Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__pcr_8h_a3b6e651755dc3ae113426bea72cdf332}\label{reg__pcr_8h_a3b6e651755dc3ae113426bea72cdf332}} 
+\index{reg\+\_\+pcr.\+h@{reg\+\_\+pcr.\+h}!pcr\+R\+EG@{pcr\+R\+EG}}
+\index{pcr\+R\+EG@{pcr\+R\+EG}!reg\+\_\+pcr.\+h@{reg\+\_\+pcr.\+h}}
+\subsubsection{\texorpdfstring{pcr\+R\+EG}{pcrREG}}
+{\footnotesize\ttfamily \#define pcr\+R\+EG~((\mbox{\hyperlink{reg__pcr_8h_ab12169449543dd20068eeac0f8175632}{pcr\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+E000\+U)}
+
+
+
+Pcr Register Frame Pointer. 
+
+This pointer is used by the system driver to access the Pcr registers. 
+
+Definition at line 107 of file reg\+\_\+pcr.\+h.
+
+
+
+Referenced by peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Prot\+\_\+\+Clr(), peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Prot\+\_\+\+Set(), peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Pwrdwn\+\_\+\+Clr(), peripheral\+\_\+\+Mem\+\_\+\+Frame\+\_\+\+Pwrdwn\+\_\+\+Set(), peripheral\+\_\+\+Memory\+\_\+\+Powerdown\+\_\+\+Clr(), peripheral\+\_\+\+Memory\+\_\+\+Powerdown\+\_\+\+Set(), peripheral\+\_\+\+Memory\+\_\+\+Powerdown\+\_\+\+Status(), peripheral\+\_\+\+Memory\+\_\+\+Protection\+\_\+\+Clr(), peripheral\+\_\+\+Memory\+\_\+\+Protection\+\_\+\+Set(), peripheral\+\_\+\+Memory\+\_\+\+Protection\+\_\+\+Status(), peripheral\+\_\+\+Powerdown\+\_\+\+Clr(), peripheral\+\_\+\+Powerdown\+\_\+\+Set(), peripheral\+\_\+\+Powerdown\+\_\+\+Status(), peripheral\+\_\+\+Protection\+\_\+\+Clr(), peripheral\+\_\+\+Protection\+\_\+\+Set(), peripheral\+\_\+\+Protection\+\_\+\+Status(), and periph\+Init().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__pcr_8h_ab12169449543dd20068eeac0f8175632}\label{reg__pcr_8h_ab12169449543dd20068eeac0f8175632}} 
+\index{reg\+\_\+pcr.\+h@{reg\+\_\+pcr.\+h}!pcr\+B\+A\+S\+E\+\_\+t@{pcr\+B\+A\+S\+E\+\_\+t}}
+\index{pcr\+B\+A\+S\+E\+\_\+t@{pcr\+B\+A\+S\+E\+\_\+t}!reg\+\_\+pcr.\+h@{reg\+\_\+pcr.\+h}}
+\subsubsection{\texorpdfstring{pcr\+B\+A\+S\+E\+\_\+t}{pcrBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__pcr_8h_ab12169449543dd20068eeac0f8175632}{pcr\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+P\+CR Register Frame Type Definition. 
+
+This type is used to access the P\+CR Registers. 

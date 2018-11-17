@@ -1,0 +1,286 @@
+\hypertarget{group__IOMM}{}\section{I\+O\+MM}
+\label{group__IOMM}\index{I\+O\+MM@{I\+O\+MM}}
+
+
+I/O Multiplexing and Control Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__IOMM_ga8fac89d371c9be80b507da3c31144423}{mux\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the P\+I\+N\+M\+UX Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__IOMM_gae1d5925bc43dd10efb0529ed8fea7e5d}{pinmux\+Get\+Config\+Value}} (\mbox{\hyperlink{structpinmux__config__reg}{pinmux\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I/O Multiplexing and Control Module. 
+
+The I\+O\+MM contains memory-\/mapped registers (M\+MR) that control device-\/specific multiplexed functions. The safety and diagnostic features of the I\+O\+MM are\+:
+\begin{DoxyItemize}
+\item Kicker mechanism to protect the M\+M\+Rs from accidental writes
+\item Master-\/id checker to only allow the C\+PU to write to the M\+M\+Rs
+\item Error indication for access violations
+\end{DoxyItemize}
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__pinmux_8h}{reg\+\_\+pinmux.\+h}}
+\item \mbox{\hyperlink{pinmux_8h}{pinmux.\+h}}
+\item \mbox{\hyperlink{pinmux_8c}{pinmux.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__IOMM_ga8fac89d371c9be80b507da3c31144423}\label{group__IOMM_ga8fac89d371c9be80b507da3c31144423}} 
+\index{I\+O\+MM@{I\+O\+MM}!mux\+Init@{mux\+Init}}
+\index{mux\+Init@{mux\+Init}!I\+O\+MM@{I\+O\+MM}}
+\subsubsection{\texorpdfstring{mux\+Init()}{muxInit()}}
+{\footnotesize\ttfamily void mux\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the P\+I\+N\+M\+UX Driver. 
+
+This function initializes the P\+I\+N\+M\+UX module and configures the selected pinmux settings as per the user selection in the G\+UI 
+
+Definition at line 159 of file pinmux.\+c.
+
+
+
+References kicker\+Reg, and pin\+Mux\+Reg.
+
+
+
+Referenced by system\+Init().
+
+
+\begin{DoxyCode}
+159                   \{
+160 
+161 \textcolor{comment}{/* USER CODE BEGIN (1) */}
+162 \textcolor{comment}{/* USER CODE END */}
+163 
+164     \textcolor{comment}{/* Enable Pin Muxing */}
+165     \mbox{\hyperlink{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}{kickerReg}}->KICKER0 = 0x83E70B13U;
+166     \mbox{\hyperlink{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}{kickerReg}}->KICKER1 = 0x95A4F1E0U;
+167     
+168 \textcolor{comment}{/* USER CODE BEGIN (2) */}
+169 \textcolor{comment}{/* USER CODE END */}
+170 
+171     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR0 =    PINMUX\_PIN\_1\_GIOB\_3 | PINMUX\_PIN\_2\_GIOA\_0 | PINMUX\_PIN\_3\_MIBSPI3NCS\_3 
+      | PINMUX\_PIN\_4\_MIBSPI3NCS\_2;
+172     
+173     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR1 =    PINMUX\_PIN\_5\_GIOA\_1 | PINMUX\_PIN\_6\_HET1\_11;
+174     
+175     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR2 =    PINMUX\_PIN\_9\_GIOA\_2 | PINMUX\_PIN\_14\_GIOA\_5;
+176     
+177     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR3 =    PINMUX\_PIN\_15\_HET1\_22 | PINMUX\_PIN\_16\_GIOA\_6;
+178     
+179     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR4 =    PINMUX\_PIN\_22\_GIOA\_7 | PINMUX\_PIN\_23\_HET1\_01 | PINMUX\_PIN\_24\_HET1\_03;
+180     
+181     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR5 =    PINMUX\_PIN\_25\_HET1\_0 | PINMUX\_PIN\_30\_HET1\_02 | PINMUX\_PIN\_31\_HET1\_05;
+182     
+183     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR6 =    PINMUX\_PIN\_33\_HET1\_07 | PINMUX\_PIN\_35\_HET1\_09;
+184     
+185     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR7 =    PINMUX\_PIN\_37\_MIBSPI3NCS\_1 | PINMUX\_PIN\_38\_HET1\_06;
+186     
+187     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR8 =    PINMUX\_PIN\_39\_HET1\_13 | PINMUX\_PIN\_40\_MIBSPI1NCS\_2 | 
+      PINMUX\_PIN\_41\_HET1\_15;
+188     
+189     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR9 = ((~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR9 >> 18U) & 0x00000001U ) << 18U) | 
+      PINMUX\_PIN\_54\_MIBSPI3NENA | PINMUX\_PIN\_55\_MIBSPI3NCS\_0;
+190     
+191     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR10 =   PINMUX\_PIN\_86\_AD1EVT;
+192     
+193     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR11 =   PINMUX\_PIN\_91\_HET1\_24;
+194     
+195     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR12 =   PINMUX\_PIN\_92\_HET1\_26 | PINMUX\_PIN\_96\_MIBSPI1NENA | 
+      PINMUX\_PIN\_97\_MIBSPI5NENA;
+196     
+197     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR13 =   PINMUX\_PIN\_98\_MIBSPI5SOMI\_0 | PINMUX\_PIN\_99\_MIBSPI5SIMO\_0 | 
+      PINMUX\_PIN\_100\_MIBSPI5CLK | PINMUX\_PIN\_105\_MIBSPI1NCS\_0;
+198     
+199     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR14 =   PINMUX\_PIN\_106\_HET1\_08 | PINMUX\_PIN\_107\_HET1\_28;
+200     
+201     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR15 =   0x01010101U;
+202     
+203     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR16 =   0x01010101U;
+204     
+205     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR17 =   PINMUX\_PIN\_118\_HET1\_10 | PINMUX\_PIN\_124\_HET1\_12;
+206     
+207     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR18 =   PINMUX\_PIN\_125\_HET1\_14 | PINMUX\_PIN\_126\_GIOB\_0;
+208     
+209     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR19 =   PINMUX\_PIN\_127\_HET1\_30;
+210     
+211     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR20 =   PINMUX\_PIN\_130\_MIBSPI1NCS\_1;
+212     
+213     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR21 =   PINMUX\_PIN\_133\_GIOB\_1;
+214     
+215     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR22 =   0x01010101U;
+216     
+217     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR23 =   ((~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR5 >> 1U) & 0x00000001U ) << 8U) | ((~(
+      \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR5 >> 9U) & 0x00000001U ) << 16U) | ((~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR5 >> 17U) & 0
+      x00000001U ) << 24U);
+218     
+219     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR24 =   ((~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR20 >> 17U) & 0x00000001U ) << 16U)  | ((
+      ~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR8 >> 9U) & 0x00000001U ) << 24U);
+220     
+221     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+222     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR25 =   ((~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR12 >> 17U) & 0x00000001U ) << 8U) | ((~(
+      \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR7 >> 9U) & 0x00000001U ) << 16U) | ((~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR0 >> 26U) & 0
+      x00000001U ) << 24U);
+223     
+224     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+225     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR26 =   ((~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR0 >> 18U) & 0x00000001U ) << 0U) | ((~(
+      \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR9 >> 10U) & 0x00000001U ) << 8U);
+226     
+227     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR27 =   PINMUX\_PIN\_32\_MIBSPI5NCS\_0;
+228         
+229     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR29 =   0x01010101U;
+230 
+231     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR30 = 0x01010100U;
+232 
+233     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR31 = 0x01010101U;
+234 
+235     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR32 = 0x00010101U;    
+236 
+237     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR33 =   PINMUX\_PIN\_36\_HET1\_04 | PINMUX\_PIN\_51\_MIBSPI3SOMI | 
+      PINMUX\_PIN\_52\_MIBSPI3SIMO | PINMUX\_PIN\_53\_MIBSPI3CLK;
+238 
+239     \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR34 =   PINMUX\_PIN\_139\_HET1\_16 | PINMUX\_PIN\_140\_HET1\_18 | 
+      PINMUX\_PIN\_141\_HET1\_20;
+240 
+241     
+242 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+243 \textcolor{comment}{/* USER CODE END */}
+244 
+245     PINMUX\_GATE\_EMIF\_CLK\_ENABLE(OFF);
+246     PINMUX\_GIOB\_DISABLE\_HET2\_ENABLE(OFF);
+247     PINMUX\_ALT\_ADC\_TRIGGER\_SELECT(1);
+248     
+249 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+250 \textcolor{comment}{/* USER CODE END */}
+251 
+252     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+253     PINMUX\_SET(0,1,GIOB\_3);
+254     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+255     PINMUX\_SET(0,2,GIOA\_0);
+256     PINMUX\_SET(1,5,GIOA\_1);
+257     PINMUX\_SET(3,15,HET1\_22);
+258     PINMUX\_SET(18,125,HET1\_14);
+259     PINMUX\_SET(18,126,GIOB\_0);
+260     PINMUX\_SET(21,133,GIOB\_1);
+261     
+262 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+263 \textcolor{comment}{/* USER CODE END */}
+264 
+265     PINMUX\_ETPWM1\_EQEPERR\_ENABLE(EQEPERR12);
+266     PINMUX\_ETPWM2\_EQEPERR\_ENABLE(EQEPERR12);
+267     PINMUX\_ETPWM3\_EQEPERR\_ENABLE(EQEPERR12);
+268     PINMUX\_ETPWM4\_EQEPERR\_ENABLE(EQEPERR12);
+269     PINMUX\_ETPWM5\_EQEPERR\_ENABLE(EQEPERR12);
+270     PINMUX\_ETPWM6\_EQEPERR\_ENABLE(EQEPERR12);
+271     PINMUX\_ETPWM7\_EQEPERR\_ENABLE(EQEPERR12);
+272     PINMUX\_ETPWM\_TIME\_BASE\_SYNC\_ENABLE(OFF);
+273     PINMUX\_ETPWM\_TZ1\_ENABLE(ASYNC);
+274     PINMUX\_ETPWM\_TZ2\_ENABLE(ASYNC);
+275     PINMUX\_ETPWM\_TZ3\_ENABLE(ASYNC);
+276     PINMUX\_ETPWM\_EPWM1SYNCI\_ENABLE(ASYNC);
+277 
+278 \textcolor{comment}{/* USER CODE BEGIN (6) */}
+279 \textcolor{comment}{/* USER CODE END */}
+280     
+281     \textcolor{comment}{/* Disable Pin Muxing */}
+282     \mbox{\hyperlink{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}{kickerReg}}->KICKER0 = 0x00000000U;
+283     \mbox{\hyperlink{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}{kickerReg}}->KICKER1 = 0x00000000U;
+284     
+285 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+286 \textcolor{comment}{/* USER CODE END */}
+287 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__IOMM_gae1d5925bc43dd10efb0529ed8fea7e5d}\label{group__IOMM_gae1d5925bc43dd10efb0529ed8fea7e5d}} 
+\index{I\+O\+MM@{I\+O\+MM}!pinmux\+Get\+Config\+Value@{pinmux\+Get\+Config\+Value}}
+\index{pinmux\+Get\+Config\+Value@{pinmux\+Get\+Config\+Value}!I\+O\+MM@{I\+O\+MM}}
+\subsubsection{\texorpdfstring{pinmux\+Get\+Config\+Value()}{pinmuxGetConfigValue()}}
+{\footnotesize\ttfamily void pinmux\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpinmux__config__reg}{pinmux\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 307 of file pinmux.\+c.
+
+
+\begin{DoxyCode}
+308 \{
+309     \textcolor{keywordflow}{if} (type == InitialValue)
+310     \{\textcolor{comment}{/* Do not pass Initial Value as parameter */}
+311     \}
+312     \textcolor{keywordflow}{else}
+313     \{
+314     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+315         config\_reg->CONFIG\_PINMMR0  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR0;
+316         config\_reg->CONFIG\_PINMMR1  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR1;
+317         config\_reg->CONFIG\_PINMMR2  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR2;
+318         config\_reg->CONFIG\_PINMMR3  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR3;
+319         config\_reg->CONFIG\_PINMMR4  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR4;
+320         config\_reg->CONFIG\_PINMMR5  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR5;
+321         config\_reg->CONFIG\_PINMMR6  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR6;
+322         config\_reg->CONFIG\_PINMMR7  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR7;
+323         config\_reg->CONFIG\_PINMMR8  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR8;
+324         config\_reg->CONFIG\_PINMMR9  = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR9;
+325         config\_reg->CONFIG\_PINMMR10 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR10;
+326         config\_reg->CONFIG\_PINMMR11 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR11;
+327         config\_reg->CONFIG\_PINMMR12 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR12;
+328         config\_reg->CONFIG\_PINMMR13 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR13;
+329         config\_reg->CONFIG\_PINMMR14 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR14;
+330         config\_reg->CONFIG\_PINMMR15 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR15;
+331         config\_reg->CONFIG\_PINMMR16 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR16;
+332         config\_reg->CONFIG\_PINMMR17 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR17;
+333         config\_reg->CONFIG\_PINMMR18 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR18;
+334         config\_reg->CONFIG\_PINMMR19 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR19;
+335         config\_reg->CONFIG\_PINMMR20 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR20;
+336         config\_reg->CONFIG\_PINMMR21 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR21;
+337         config\_reg->CONFIG\_PINMMR22 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR22;
+338         config\_reg->CONFIG\_PINMMR23 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR23;
+339         config\_reg->CONFIG\_PINMMR24 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR24;
+340         config\_reg->CONFIG\_PINMMR25 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR25;
+341         config\_reg->CONFIG\_PINMMR26 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR26;
+342         config\_reg->CONFIG\_PINMMR27 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR27;
+343         config\_reg->CONFIG\_PINMMR28 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR28;
+344         config\_reg->CONFIG\_PINMMR29 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR29;
+345         config\_reg->CONFIG\_PINMMR30 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR30;
+346         config\_reg->CONFIG\_PINMMR31 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR31;
+347         config\_reg->CONFIG\_PINMMR32 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR32;
+348         config\_reg->CONFIG\_PINMMR33 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR33;
+349         config\_reg->CONFIG\_PINMMR34 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR34;
+350         config\_reg->CONFIG\_PINMMR35 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR35;
+351         config\_reg->CONFIG\_PINMMR36 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR36;
+352         config\_reg->CONFIG\_PINMMR37 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR37;
+353         config\_reg->CONFIG\_PINMMR38 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR38;
+354         config\_reg->CONFIG\_PINMMR39 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR39;
+355         config\_reg->CONFIG\_PINMMR40 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR40;
+356         config\_reg->CONFIG\_PINMMR41 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR41;
+357         config\_reg->CONFIG\_PINMMR42 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR42;
+358         config\_reg->CONFIG\_PINMMR43 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR43;
+359         config\_reg->CONFIG\_PINMMR44 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR44;
+360         config\_reg->CONFIG\_PINMMR45 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR45;
+361         config\_reg->CONFIG\_PINMMR46 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR46;
+362         config\_reg->CONFIG\_PINMMR47 = \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pinMuxReg}}->PINMMR47;
+363     \}
+364 \}
+\end{DoxyCode}

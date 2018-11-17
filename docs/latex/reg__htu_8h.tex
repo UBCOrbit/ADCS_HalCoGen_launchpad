@@ -1,0 +1,65 @@
+\hypertarget{reg__htu_8h}{}\section{include/reg\+\_\+htu.h File Reference}
+\label{reg__htu_8h}\index{include/reg\+\_\+htu.\+h@{include/reg\+\_\+htu.\+h}}
+
+
+H\+TU Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhtuBase}{htu\+Base}}
+\begin{DoxyCompactList}\small\item\em H\+TU Base Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhtuRAMBASE__t}{htu\+R\+A\+M\+B\+A\+S\+E\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__htu_8h_ad04e3b6376c0feddac2198c178a9db1d}\label{reg__htu_8h_ad04e3b6376c0feddac2198c178a9db1d}} 
+\#define {\bfseries htu\+R\+E\+G1}~((\mbox{\hyperlink{reg__htu_8h_a94881227cdf9ac54ae81c366e143247c}{htu\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+A400\+U)
+\item 
+\mbox{\Hypertarget{reg__htu_8h_a4e0d00fc1ba0bbaa8a06f6614dc10b80}\label{reg__htu_8h_a4e0d00fc1ba0bbaa8a06f6614dc10b80}} 
+\#define {\bfseries htu\+R\+E\+G2}~((\mbox{\hyperlink{reg__htu_8h_a94881227cdf9ac54ae81c366e143247c}{htu\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+A500\+U)
+\item 
+\mbox{\Hypertarget{reg__htu_8h_aea796f4a70317eca4c98c9536de8406c}\label{reg__htu_8h_aea796f4a70317eca4c98c9536de8406c}} 
+\#define {\bfseries htu\+R\+A\+M1}~((\mbox{\hyperlink{structhtuRAMBASE__t}{htu\+R\+A\+M\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F4\+E0000\+U)
+\item 
+\mbox{\Hypertarget{reg__htu_8h_a9cb2e9322a5db5f03e62dc3e9e82598e}\label{reg__htu_8h_a9cb2e9322a5db5f03e62dc3e9e82598e}} 
+\#define {\bfseries htu\+R\+A\+M2}~((\mbox{\hyperlink{structhtuRAMBASE__t}{htu\+R\+A\+M\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F4\+C0000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structhtuBase}{htu\+Base}} \mbox{\hyperlink{reg__htu_8h_a94881227cdf9ac54ae81c366e143247c}{htu\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em H\+TU Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\+TU Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the H\+TU driver. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__htu_8h_a94881227cdf9ac54ae81c366e143247c}\label{reg__htu_8h_a94881227cdf9ac54ae81c366e143247c}} 
+\index{reg\+\_\+htu.\+h@{reg\+\_\+htu.\+h}!htu\+B\+A\+S\+E\+\_\+t@{htu\+B\+A\+S\+E\+\_\+t}}
+\index{htu\+B\+A\+S\+E\+\_\+t@{htu\+B\+A\+S\+E\+\_\+t}!reg\+\_\+htu.\+h@{reg\+\_\+htu.\+h}}
+\subsubsection{\texorpdfstring{htu\+B\+A\+S\+E\+\_\+t}{htuBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__htu_8h_a94881227cdf9ac54ae81c366e143247c}{htu\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+H\+TU Register Frame Type Definition. 
+
+This type is used to access the H\+TU Registers. 

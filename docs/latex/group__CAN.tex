@@ -1,0 +1,1803 @@
+\hypertarget{group__CAN}{}\section{C\+AN}
+\label{group__CAN}\index{C\+AN@{C\+AN}}
+
+
+Controller Area Network Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__CAN_ga2d3efc34f7704ab23c293aac2be47764}{can\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes C\+AN Driver. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga25acaa78fa2c30c393816a3f3e4b5f7c}{can\+Transmit}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Transmits a C\+AN message. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga1d9e0b086772f54b215f65962c704b82}{can\+Get\+Data}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, uint8 $\ast$const data)
+\begin{DoxyCompactList}\small\item\em Gets received a C\+AN message. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga15999e728cf76894d085e91d9e741099}{can\+Send\+Remote\+Frame}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Transmits a C\+AN Remote Frame. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga3d43bba504e28804aa96e0e2e00d68fa}{can\+Fill\+Message\+Object\+Data}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Fills the Message Object with the data but does not initiate transmission. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga90c2fd9d51bca56e652da71570099295}{can\+Is\+Tx\+Message\+Pending}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Gets Tx message box transmission status. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga5c0dda98d1341dbae341b4b6ea73a478}{can\+Is\+Rx\+Message\+Arrived}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Gets Rx message box reception status. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_gae353977bb29792a4297cb4ece4fd7e9c}{can\+Is\+Message\+Box\+Valid}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Checks if message box is valid. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga1c340f76d9eb647dbc6d01db099b0431}{can\+Get\+Last\+Error}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Gets last R\+X/\+T\+X-\/\+Error of C\+AN message traffic. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_gaf4802fe6abe62c1ca43e118438dd48c3}{can\+Get\+Error\+Level}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Gets error level of a C\+AN node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gac7704998743bb22648e947b29a544bae}{can\+Enable\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Enable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gaaf364da9e334318c980ff42a40b4b11d}{can\+Disable\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Disable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga0acd0f1c9a17f321a40754a93f2d8696}{can\+Enable\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Enable Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga7d16cc0c633d487a0c6ba6dd0d6aa15a}{can\+Disable\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Disable Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gae46d75070d42e6c074c7badf986fe98f}{can\+Enableloopback}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, \mbox{\hyperlink{can_8h_afe14b0f6de1003d9440f90e9df86918a}{canloop\+Back\+Type\+\_\+t}} Loopbacktype)
+\begin{DoxyCompactList}\small\item\em Disable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga965046b34f4e45c97de1d08c2ba73cb4}{can\+Disableloopback}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Disable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga2813ca316c5420f49c7045bac182fd01}{can\+Io\+Set\+Direction}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 Tx\+Dir, uint32 Rx\+Dir)
+\begin{DoxyCompactList}\small\item\em Set Port Direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga1f6f3bbe2bf26e51b6a3c01b7e5d6d4e}{can\+Io\+Set\+Port}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 Tx\+Value, uint32 Rx\+Value)
+\begin{DoxyCompactList}\small\item\em Write Port Value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_gabb2b7807d43b7208031e1a2f0974ee00}{can\+Io\+Tx\+Get\+Bit}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Read TX Bit. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga47e373a708ae421d26dc96f62d150492}{can\+Io\+Rx\+Get\+Bit}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Read RX Bit. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga15061ba9ad17a032d93d482a63e5093a}{can\+Get\+ID}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Gets the Message Box\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga6a2ea37d107b5e26bb3f7628ef2c7ee7}{can\+Update\+ID}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, uint32 msg\+Box\+Arbit\+Val)
+\begin{DoxyCompactList}\small\item\em Change C\+AN Message Box ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga7a14fa4c6067295ee692dbe3e5edff8d}{can1\+Get\+Config\+Value}} (\mbox{\hyperlink{structcan__config__reg}{can\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the C\+A\+N1 configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gab54b99b32b9402b55b845029f9118b77}{can\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gafb381df2cdfb4e84f43df0226a757002}{can\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gacac999ab73fd61efe4dfc10883ea287c}{can\+Message\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Message notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller Area Network Module. 
+
+The Controller Area Network is a high-\/integrity, serial, multi-\/master communication protocol for distributed real-\/time applications. This C\+AN module is implemented according to I\+SO 11898-\/1 and is suitable for industrial, automotive and general embedded communications
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__can_8h}{reg\+\_\+can.\+h}}
+\item \mbox{\hyperlink{can_8h}{can.\+h}}
+\item \mbox{\hyperlink{can_8c}{can.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__CAN_ga7a14fa4c6067295ee692dbe3e5edff8d}\label{group__CAN_ga7a14fa4c6067295ee692dbe3e5edff8d}} 
+\index{C\+AN@{C\+AN}!can1\+Get\+Config\+Value@{can1\+Get\+Config\+Value}}
+\index{can1\+Get\+Config\+Value@{can1\+Get\+Config\+Value}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can1\+Get\+Config\+Value()}{can1GetConfigValue()}}
+{\footnotesize\ttfamily void can1\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcan__config__reg}{can\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the C\+A\+N1 configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 1173 of file can.\+c.
+
+
+\begin{DoxyCode}
+1174 \{
+1175     \textcolor{keywordflow}{if} (type == InitialValue)
+1176     \{
+1177         config\_reg->CONFIG\_CTL     = CAN1\_CTL\_CONFIGVALUE;    
+1178         config\_reg->CONFIG\_ES      = CAN1\_ES\_CONFIGVALUE;     
+1179         config\_reg->CONFIG\_BTR     = CAN1\_BTR\_CONFIGVALUE;    
+1180         config\_reg->CONFIG\_TEST    = CAN1\_TEST\_CONFIGVALUE;   
+1181         config\_reg->CONFIG\_ABOTR   = CAN1\_ABOTR\_CONFIGVALUE;  
+1182         config\_reg->CONFIG\_INTMUX0 = CAN1\_INTMUX0\_CONFIGVALUE;
+1183         config\_reg->CONFIG\_INTMUX1 = CAN1\_INTMUX2\_CONFIGVALUE;
+1184         config\_reg->CONFIG\_INTMUX2 = CAN1\_INTMUX2\_CONFIGVALUE;
+1185         config\_reg->CONFIG\_INTMUX3 = CAN1\_INTMUX3\_CONFIGVALUE;
+1186         config\_reg->CONFIG\_TIOC    = CAN1\_TIOC\_CONFIGVALUE;   
+1187         config\_reg->CONFIG\_RIOC    = CAN1\_RIOC\_CONFIGVALUE;    
+1188     \}
+1189     \textcolor{keywordflow}{else}
+1190     \{
+1191     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+1192         config\_reg->CONFIG\_CTL     = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->CTL;   
+1193         config\_reg->CONFIG\_ES      = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->ES;     
+1194         config\_reg->CONFIG\_BTR     = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->BTR;    
+1195         config\_reg->CONFIG\_TEST    = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->TEST;   
+1196         config\_reg->CONFIG\_ABOTR   = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->ABOTR;  
+1197         config\_reg->CONFIG\_INTMUX0 = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->INTMUXx[0];
+1198         config\_reg->CONFIG\_INTMUX1 = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->INTMUXx[1];
+1199         config\_reg->CONFIG\_INTMUX2 = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->INTMUXx[2];
+1200         config\_reg->CONFIG\_INTMUX3 = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->INTMUXx[3];
+1201         config\_reg->CONFIG\_TIOC    = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->TIOC;
+1202         config\_reg->CONFIG\_RIOC    = \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->RIOC;   
+1203     \}
+1204 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gaaf364da9e334318c980ff42a40b4b11d}\label{group__CAN_gaaf364da9e334318c980ff42a40b4b11d}} 
+\index{C\+AN@{C\+AN}!can\+Disable\+Error\+Notification@{can\+Disable\+Error\+Notification}}
+\index{can\+Disable\+Error\+Notification@{can\+Disable\+Error\+Notification}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Disable\+Error\+Notification()}{canDisableErrorNotification()}}
+{\footnotesize\ttfamily void can\+Disable\+Error\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Disable error notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will disable the notification for the reaching the error levels warning, passive and bus off. \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+
+Definition at line 996 of file can.\+c.
+
+
+\begin{DoxyCode}
+997 \{
+998 \textcolor{comment}{/* USER CODE BEGIN (32) */}
+999 \textcolor{comment}{/* USER CODE END */}
+1000 
+1001     node->CTL &= ~(uint32)(8U);
+1002 
+1004 
+1005 \textcolor{comment}{/* USER CODE BEGIN (33) */}
+1006 \textcolor{comment}{/* USER CODE END */}
+1007 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga965046b34f4e45c97de1d08c2ba73cb4}\label{group__CAN_ga965046b34f4e45c97de1d08c2ba73cb4}} 
+\index{C\+AN@{C\+AN}!can\+Disableloopback@{can\+Disableloopback}}
+\index{can\+Disableloopback@{can\+Disableloopback}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Disableloopback()}{canDisableloopback()}}
+{\footnotesize\ttfamily void can\+Disableloopback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Disable error notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will disable can loopback mode \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+
+Definition at line 1049 of file can.\+c.
+
+
+\begin{DoxyCode}
+1050 \{
+1051 
+1052    
+1053     node->TEST &= ~(uint32)(0x00000118U);
+1054     
+1055     \textcolor{comment}{/* Exit Test Mode */}
+1056     node->CTL &= ~(uint32)((uint32)1U << 7U);
+1057     
+1059 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga7d16cc0c633d487a0c6ba6dd0d6aa15a}\label{group__CAN_ga7d16cc0c633d487a0c6ba6dd0d6aa15a}} 
+\index{C\+AN@{C\+AN}!can\+Disable\+Status\+Change\+Notification@{can\+Disable\+Status\+Change\+Notification}}
+\index{can\+Disable\+Status\+Change\+Notification@{can\+Disable\+Status\+Change\+Notification}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Disable\+Status\+Change\+Notification()}{canDisableStatusChangeNotification()}}
+{\footnotesize\ttfamily void can\+Disable\+Status\+Change\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Disable Status Change notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will disable the notification for the status change Rx\+OK, Tx\+OK, P\+DA, Wakeup\+Pnd Interrupt. \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+
+Definition at line 974 of file can.\+c.
+
+
+\begin{DoxyCode}
+975 \{
+976     node->CTL &= ~(uint32)(4U);
+977 
+979 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gac7704998743bb22648e947b29a544bae}\label{group__CAN_gac7704998743bb22648e947b29a544bae}} 
+\index{C\+AN@{C\+AN}!can\+Enable\+Error\+Notification@{can\+Enable\+Error\+Notification}}
+\index{can\+Enable\+Error\+Notification@{can\+Enable\+Error\+Notification}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Enable\+Error\+Notification()}{canEnableErrorNotification()}}
+{\footnotesize\ttfamily void can\+Enable\+Error\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Enable error notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will enable the notification for the reaching the error levels warning, passive and bus off. \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+
+Definition at line 925 of file can.\+c.
+
+
+\begin{DoxyCode}
+926 \{
+927 \textcolor{comment}{/* USER CODE BEGIN (28) */}
+928 \textcolor{comment}{/* USER CODE END */}
+929 
+930     node->CTL |= 8U;
+931 
+933 
+934 \textcolor{comment}{/* USER CODE BEGIN (29) */}
+935 \textcolor{comment}{/* USER CODE END */}
+936 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gae46d75070d42e6c074c7badf986fe98f}\label{group__CAN_gae46d75070d42e6c074c7badf986fe98f}} 
+\index{C\+AN@{C\+AN}!can\+Enableloopback@{can\+Enableloopback}}
+\index{can\+Enableloopback@{can\+Enableloopback}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Enableloopback()}{canEnableloopback()}}
+{\footnotesize\ttfamily void can\+Enableloopback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{\mbox{\hyperlink{can_8h_afe14b0f6de1003d9440f90e9df86918a}{canloop\+Back\+Type\+\_\+t}}}]{Loopbacktype }\end{DoxyParamCaption})}
+
+
+
+Disable error notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em Loopbacktype} & Type of Loopback\+:
+\begin{DoxyItemize}
+\item Internal\+\_\+\+Lbk\+: Internal Loop Back
+\item External\+\_\+\+Lbk\+: External Loop Back
+\item Internal\+\_\+\+Silent\+\_\+\+Lbk\+: Internal Loop Back with Silent mode.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will enable can loopback mode \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+
+Definition at line 1025 of file can.\+c.
+
+
+\begin{DoxyCode}
+1026 \{
+1027     \textcolor{comment}{/* Enter Test Mode */}
+1028     node->CTL |= (uint32)((uint32)1U << 7U);
+1029     
+1030     \textcolor{comment}{/* Configure Loopback */}
+1031     node->TEST |= (uint32)Loopbacktype;
+1032     
+1034 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga0acd0f1c9a17f321a40754a93f2d8696}\label{group__CAN_ga0acd0f1c9a17f321a40754a93f2d8696}} 
+\index{C\+AN@{C\+AN}!can\+Enable\+Status\+Change\+Notification@{can\+Enable\+Status\+Change\+Notification}}
+\index{can\+Enable\+Status\+Change\+Notification@{can\+Enable\+Status\+Change\+Notification}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Enable\+Status\+Change\+Notification()}{canEnableStatusChangeNotification()}}
+{\footnotesize\ttfamily void can\+Enable\+Status\+Change\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Enable Status Change notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will enable the notification for the status change Rx\+OK, Tx\+OK, P\+DA, Wakeup\+Pnd Interrupt. \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+
+Definition at line 953 of file can.\+c.
+
+
+\begin{DoxyCode}
+954 \{
+955 
+956     node->CTL |= 4U;
+957 
+959 
+960 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gab54b99b32b9402b55b845029f9118b77}\label{group__CAN_gab54b99b32b9402b55b845029f9118b77}} 
+\index{C\+AN@{C\+AN}!can\+Error\+Notification@{can\+Error\+Notification}}
+\index{can\+Error\+Notification@{can\+Error\+Notification}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Error\+Notification()}{canErrorNotification()}}
+{\footnotesize\ttfamily void can\+Error\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{notification }\end{DoxyParamCaption})}
+
+
+
+Error notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em notification} & Error notification code\+:
+\begin{DoxyItemize}
+\item can\+L\+E\+V\+E\+L\+\_\+\+P\+A\+S\+S\+I\+VE (0x20) \+: When R\+X-\/ or TX error counter are between 32 and 63 ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+W\+A\+R\+N\+I\+NG (0x40) \+: When R\+X-\/ or TX error counter are between 64 and 127 ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+B\+U\+S\+\_\+\+O\+FF (0x80) \+: When R\+X-\/ or TX error counter are between 128 and 255 ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+RR (0x100)\+: When R\+X-\/ or TX error counter are above 256
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function has to be provide by the user. 
+\end{DoxyNote}
+
+
+Definition at line 113 of file notification.\+c.
+
+
+\begin{DoxyCode}
+114 \{
+115 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+116 \textcolor{comment}{/* USER CODE BEGIN (13) */}
+117 \textcolor{comment}{/* USER CODE END */}
+118 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga3d43bba504e28804aa96e0e2e00d68fa}\label{group__CAN_ga3d43bba504e28804aa96e0e2e00d68fa}} 
+\index{C\+AN@{C\+AN}!can\+Fill\+Message\+Object\+Data@{can\+Fill\+Message\+Object\+Data}}
+\index{can\+Fill\+Message\+Object\+Data@{can\+Fill\+Message\+Object\+Data}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Fill\+Message\+Object\+Data()}{canFillMessageObjectData()}}
+{\footnotesize\ttfamily uint32 can\+Fill\+Message\+Object\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box,  }\item[{const uint8 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Fills the Message Object with the data but does not initiate transmission. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item 0\+: When the Fill up of the TX message box wasn\textquotesingle{}t successful ~\newline
+ -\/ 1\+: When the Fill up of the TX message box was successful
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function fills the Message Object with the data but does not initiate transmission. 
+\begin{DoxyItemize}
+\item Check for pending message\+:
+\begin{DoxyItemize}
+\item pending message, return 0
+\item no pending message, start new transmission
+\end{DoxyItemize}
+\item Wait until I\+F1 is ready for use ~\newline
+~\newline
+~\newline
+
+\item Configure I\+F1 for
+\begin{DoxyItemize}
+\item Message direction -\/ Write
+\item Data Update
+\end{DoxyItemize}
+\item Copy TX data into I\+F1 ~\newline
+
+\item Copy TX data into message box 
+\end{DoxyItemize}
+
+Definition at line 655 of file can.\+c.
+
+
+\begin{DoxyCode}
+656 \{
+657     uint32 i;
+658     uint32 success  = 0U;
+659     uint32 regIndex = (messageBox - 1U) >> 5U;
+660     uint32 bitIndex = 1U << ((messageBox - 1U) & 0x1FU);
+661     
+666     \textcolor{keywordflow}{if} ((node->TXRQx[regIndex] & bitIndex) != 0U)
+667     \{
+668         success = 0U;
+669     \}
+670     \textcolor{keywordflow}{else}
+671     \{
+673         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+674         \textcolor{keywordflow}{while} ((node->IF1STAT & 0x80U) ==0x80U)
+675         \{ 
+676         \} \textcolor{comment}{/* Wait */}
+677     
+682         node->IF1CMD = 0x83U;
+683         
+685         \textcolor{keywordflow}{for} (i = 0U; i < 8U; i++)
+686         \{
+687 \textcolor{preprocessor}{#if ((\_\_little\_endian\_\_ == 1) || (\_\_LITTLE\_ENDIAN\_\_ == 1))}
+688             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+689             node->IF1DATx[i] = *data;
+690             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+691             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+692             data++;
+693 \textcolor{preprocessor}{#else}
+694             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+695             node->IF1DATx[s\_canByteOrder[i]] = *data;
+696             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+697             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+698             data++;
+699 \textcolor{preprocessor}{#endif}
+700         \}
+701 
+703         \textcolor{comment}{/*SAFETYMCUSW 93 S MR: 6.1,6.2,10.1,10.2,10.3,10.4 <APPROVED> "LDRA Tool issue" */}
+704         node->IF1NO = (uint8) messageBox;
+705 
+706         success = 1U; 
+707     \}
+708     
+709     \textcolor{keywordflow}{return} success;
+710     
+711 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga1d9e0b086772f54b215f65962c704b82}\label{group__CAN_ga1d9e0b086772f54b215f65962c704b82}} 
+\index{C\+AN@{C\+AN}!can\+Get\+Data@{can\+Get\+Data}}
+\index{can\+Get\+Data@{can\+Get\+Data}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Get\+Data()}{canGetData()}}
+{\footnotesize\ttfamily uint32 can\+Get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box,  }\item[{uint8 $\ast$const}]{data }\end{DoxyParamCaption})}
+
+
+
+Gets received a C\+AN message. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt out}  & {\em data} & Pointer to store C\+AN RX data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item 0\+: When RX message box hasn\textquotesingle{}t received new data ~\newline
+ -\/ 1\+: When RX data are stored in the data buffer ~\newline
+ -\/ 3\+: When RX data are stored in the data buffer and a message was lost ~\newline
+ This function writes a C\+AN message into a C\+AN message box. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Check if new data have been arrived\+:
+\begin{DoxyItemize}
+\item no new data, return 0
+\item new data, get received message
+\end{DoxyItemize}
+\item Wait until I\+F2 is ready for use ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Configure I\+F2 for
+\begin{DoxyItemize}
+\item Message direction -\/ Read
+\item Data Read
+\item Clears New\+Dat bit in the message object.
+\end{DoxyItemize}
+\item Copy data into I\+F2 ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Wait until data are copied into I\+F2 ~\newline
+~\newline
+~\newline
+~\newline
+
+\item Get number of received bytes
+\item Value from 0x8 to 0xF equals length 8.
+\item Copy RX data into destination buffer ~\newline
+~\newline
+
+\item Check if data have been lost\+:
+\begin{DoxyItemize}
+\item no data lost, return 1
+\item data lost, return 3
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used.~\newline
+ The user is responsible to initialize the message box.
+\end{DoxyNote}
+
+
+Definition at line 368 of file can.\+c.
+
+
+\begin{DoxyCode}
+369 \{
+370     uint32       i;
+371     uint32       size;
+372     uint8 * pData    = data;
+373     uint32       success  = 0U;
+374     uint32       regIndex = (messageBox - 1U) >> 5U;
+375     uint32       bitIndex = 1U << ((messageBox - 1U) & 0x1FU);
+376 
+377 \textcolor{comment}{/* USER CODE BEGIN (10) */}
+378 \textcolor{comment}{/* USER CODE END */}
+379 
+384     \textcolor{keywordflow}{if} ((node->NWDATx[regIndex] & bitIndex) == 0U)
+385     \{
+386         success = 0U;
+387     \}
+388 
+389     \textcolor{keywordflow}{else}
+390     \{
+392         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+393         \textcolor{keywordflow}{while} ((node->IF2STAT & 0x80U) ==0x80U)
+394         \{ 
+395         \} \textcolor{comment}{/* Wait */}
+396     
+402         node->IF2CMD = 0x17U;
+403         
+405         \textcolor{comment}{/*SAFETYMCUSW 93 S MR: 6.1,6.2,10.1,10.2,10.3,10.4 <APPROVED> "LDRA Tool issue" */}
+406         node->IF2NO = (uint8) messageBox;
+407 
+409         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+410         \textcolor{keywordflow}{while} ((node->IF2STAT & 0x80U) ==0x80U)
+411         \{ 
+412         \} \textcolor{comment}{/* Wait */}
+413 
+417         size = node->IF2MCTL & 0xFU;
+418         \textcolor{keywordflow}{if}(size > 0x8U)
+419         \{
+420             size = 0x8U;
+421         \}
+422         
+424         \textcolor{keywordflow}{for} (i = 0U; i < size; i++)
+425         \{
+426 \textcolor{preprocessor}{#if ((\_\_little\_endian\_\_ == 1) || (\_\_LITTLE\_ENDIAN\_\_ == 1))}
+427             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+428             *pData = node->IF2DATx[i];
+429             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}        
+430             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+431             pData++;
+432 \textcolor{preprocessor}{#else}
+433             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+434             *pData = node->IF2DATx[s\_canByteOrder[i]];
+435             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+436             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+437             pData++;
+438 \textcolor{preprocessor}{#endif}
+439         \}
+440 
+441         success = 1U;
+442     \}
+447     \textcolor{keywordflow}{if} ((node->IF2MCTL & 0x4000U) == 0x4000U)
+448     \{
+449         success = 3U;
+450     \}
+451 
+455 
+456 \textcolor{comment}{/* USER CODE BEGIN (11) */}
+457 \textcolor{comment}{/* USER CODE END */}
+458 
+459     \textcolor{keywordflow}{return} success;
+460 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gaf4802fe6abe62c1ca43e118438dd48c3}\label{group__CAN_gaf4802fe6abe62c1ca43e118438dd48c3}} 
+\index{C\+AN@{C\+AN}!can\+Get\+Error\+Level@{can\+Get\+Error\+Level}}
+\index{can\+Get\+Error\+Level@{can\+Get\+Error\+Level}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Get\+Error\+Level()}{canGetErrorLevel()}}
+{\footnotesize\ttfamily uint32 can\+Get\+Error\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Gets error level of a C\+AN node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item can\+L\+E\+V\+E\+L\+\_\+\+A\+C\+T\+I\+VE (0x00)\+: When R\+X-\/ and TX error counters are below 96 ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+W\+A\+R\+N\+I\+NG (0x40)\+: When R\+X-\/ or TX error counter are between 96 and 127 ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+P\+A\+S\+S\+I\+VE (0x20)\+: When R\+X-\/ or TX error counter are between 128 and 255 ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+B\+U\+S\+\_\+\+O\+FF (0x80)\+: When R\+X-\/ or TX error counter are above 255 ~\newline
+ This function returns the current error level of a C\+AN node. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Get error level ~\newline
+ \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 892 of file can.\+c.
+
+
+\begin{DoxyCode}
+893 \{
+894     uint32 errorLevel;
+895 
+896 \textcolor{comment}{/* USER CODE BEGIN (25) */}
+897 \textcolor{comment}{/* USER CODE END */}
+898 
+900     errorLevel = node->ES & 0xE0U;
+901 
+903 
+904 \textcolor{comment}{/* USER CODE BEGIN (26) */}
+905 \textcolor{comment}{/* USER CODE END */}
+906 
+907     \textcolor{keywordflow}{return} errorLevel;
+908 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga15061ba9ad17a032d93d482a63e5093a}\label{group__CAN_ga15061ba9ad17a032d93d482a63e5093a}} 
+\index{C\+AN@{C\+AN}!can\+Get\+ID@{can\+Get\+ID}}
+\index{can\+Get\+ID@{can\+Get\+ID}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Get\+I\+D()}{canGetID()}}
+{\footnotesize\ttfamily uint32 can\+Get\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box }\end{DoxyParamCaption})}
+
+
+
+Gets the Message Box\textquotesingle{}s ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt out}  & {\em data} & Pointer to store C\+AN RX data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return the ID of the message box.
+\end{DoxyReturn}
+This function gets the identifier of a C\+AN message box. 
+\begin{DoxyItemize}
+\item Wait until I\+F2 is ready for use ~\newline
+~\newline
+~\newline
+
+\item Configure I\+F2 for
+\begin{DoxyItemize}
+\item Message direction -\/ Read
+\item Data Read
+\item Clears New\+Dat bit in the message object.
+\end{DoxyItemize}
+\item Copy message box number into I\+F2 ~\newline
+
+\item Wait until data are copied into I\+F2 
+\end{DoxyItemize}
+
+Definition at line 482 of file can.\+c.
+
+
+\begin{DoxyCode}
+483 \{
+484     uint32   msgBoxID  = 0U;
+485 
+486 
+488     \textcolor{keywordflow}{while} ((node->IF2STAT & 0x80U) ==0x80U)
+489     \{
+490     \} \textcolor{comment}{/* Wait */}
+491 
+497     node->IF2CMD = 0x20U;
+498 
+500     \textcolor{comment}{/*SAFETYMCUSW 93 S MR: 6.1,6.2,10.1,10.2,10.3,10.4 <APPROVED> "LDRA Tool issue" */}
+501     node->IF2NO = (uint8) messageBox;
+502 
+504     \textcolor{keywordflow}{while} ((node->IF2STAT & 0x80U) ==0x80U)
+505     \{
+506     \} \textcolor{comment}{/* Wait */}
+507 
+508     \textcolor{comment}{/* Read Message Box ID from Arbitration register. */}
+509     msgBoxID = (node->IF2ARB & 0x1FFFFFFFU);
+510 
+511     \textcolor{keywordflow}{return} msgBoxID;
+512 
+513 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga1c340f76d9eb647dbc6d01db099b0431}\label{group__CAN_ga1c340f76d9eb647dbc6d01db099b0431}} 
+\index{C\+AN@{C\+AN}!can\+Get\+Last\+Error@{can\+Get\+Last\+Error}}
+\index{can\+Get\+Last\+Error@{can\+Get\+Last\+Error}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Get\+Last\+Error()}{canGetLastError()}}
+{\footnotesize\ttfamily uint32 can\+Get\+Last\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Gets last R\+X/\+T\+X-\/\+Error of C\+AN message traffic. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item can\+E\+R\+R\+O\+R\+\_\+\+OK (0)\+: When no C\+AN error occurred ~\newline
+ -\/ can\+E\+R\+R\+O\+R\+\_\+\+S\+T\+U\+FF (1)\+: When a stuff error occurred on RX message ~\newline
+ -\/ can\+E\+R\+R\+O\+R\+\_\+\+F\+O\+R\+M\+AT (2)\+: When a form/format error occurred on RX message ~\newline
+ -\/ can\+E\+R\+R\+O\+R\+\_\+\+A\+C\+K\+N\+O\+W\+L\+E\+D\+GE (3)\+: When a TX message wasn\textquotesingle{}t acknowledged ~\newline
+ -\/ can\+E\+R\+R\+O\+R\+\_\+\+B\+I\+T1 (4)\+: When a TX message monitored dominant level where recessive is expected ~\newline
+ -\/ can\+E\+R\+R\+O\+R\+\_\+\+B\+I\+T0 (5)\+: When a TX message monitored recessive level where dominant is expected ~\newline
+ -\/ can\+E\+R\+R\+O\+R\+\_\+\+C\+RC (6)\+: When a RX message has wrong C\+RC value ~\newline
+ -\/ can\+E\+R\+R\+O\+R\+\_\+\+NO (7)\+: When no error occurred since last call of this function ~\newline
+ This function returns the last occurred error code of an RX or TX message, since the last call of this function. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Get last error code ~\newline
+ \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 853 of file can.\+c.
+
+
+\begin{DoxyCode}
+854 \{
+855     uint32 errorCode;
+856 
+857 \textcolor{comment}{/* USER CODE BEGIN (22) */}
+858 \textcolor{comment}{/* USER CODE END */}
+859 
+861     errorCode = node->ES & 7U;
+862 
+864 
+865 \textcolor{comment}{/* USER CODE BEGIN (23) */}
+866 \textcolor{comment}{/* USER CODE END */}
+867 
+868     \textcolor{keywordflow}{return} errorCode;
+869 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga2d3efc34f7704ab23c293aac2be47764}\label{group__CAN_ga2d3efc34f7704ab23c293aac2be47764}} 
+\index{C\+AN@{C\+AN}!can\+Init@{can\+Init}}
+\index{can\+Init@{can\+Init}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Init()}{canInit()}}
+{\footnotesize\ttfamily void can\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes C\+AN Driver. 
+
+This function initializes the C\+AN driver. {\bfseries Initialize} {\bfseries C\+A\+N1\+:} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item Setup control register
+\begin{DoxyItemize}
+\item Disable automatic wakeup on bus activity
+\item Local power down mode disabled
+\item Disable D\+MA request lines
+\item Enable global Interrupt Line 0 and 1
+\item Disable debug mode
+\item Release from software reset
+\item Enable/\+Disable parity or E\+CC
+\item Enable/\+Disable auto bus on timer
+\item Setup message completion before entering debug state
+\item Setup normal operation mode
+\item Request write access to the configuration registers
+\item Setup automatic retransmission of messages
+\item Disable error interrupts
+\item Disable status interrupts
+\item Enter initialization mode
+\end{DoxyItemize}
+\item Clear all pending error flags and reset current status ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Assign interrupt level for messages ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup auto bus on timer period ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup I\+F1 for data transmission
+\begin{DoxyItemize}
+\item Wait until I\+F1 is ready for use
+\item Set I\+F1 control byte
+\end{DoxyItemize}
+\item Setup I\+F2 for reading data
+\begin{DoxyItemize}
+\item Wait until I\+F1 is ready for use
+\item Set I\+F1 control byte
+\end{DoxyItemize}
+\item Setup bit timing
+\begin{DoxyItemize}
+\item Setup baud rate prescaler extension
+\item Setup T\+Seg2
+\item Setup T\+Seg1
+\item Setup sample jump width
+\item Setup baud rate prescaler
+\end{DoxyItemize}
+\item C\+A\+N1 Port output values ~\newline
+~\newline
+
+\item Leave configuration and initialization mode ~\newline
+ \begin{DoxyNote}{Note}
+This function has to be called before the driver can be used.~\newline
+ This function has to be executed in privileged mode.~\newline
+ 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 84 of file can.\+c.
+
+
+
+References can\+R\+E\+G1.
+
+
+\begin{DoxyCode}
+85 \{
+86 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+87 \textcolor{comment}{/* USER CODE END */}
+89 
+107     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->CTL = (uint32)0x00000000U 
+108                  | (uint32)0x00000000U 
+109                  | (uint32)((uint32)0x00000005U  << 10U)
+110                  | (uint32)0x00020043U;
+111 
+113     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->ES |= 0xFFFFFFFFU;
+114 
+116     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->INTMUXx[0U] = (uint32)0x00000000U
+117                          | (uint32)0x00000000U
+118                          | (uint32)0x00000000U
+119                          | (uint32)0x00000000U
+120                          | (uint32)0x00000000U
+121                          | (uint32)0x00000000U
+122                          | (uint32)0x00000000U
+123                          | (uint32)0x00000000U
+124                          | (uint32)0x00000000U
+125                          | (uint32)0x00000000U
+126                          | (uint32)0x00000000U
+127                          | (uint32)0x00000000U
+128                          | (uint32)0x00000000U
+129                          | (uint32)0x00000000U
+130                          | (uint32)0x00000000U
+131                          | (uint32)0x00000000U
+132                          | (uint32)0x00000000U
+133                          | (uint32)0x00000000U
+134                          | (uint32)0x00000000U
+135                          | (uint32)0x00000000U
+136                          | (uint32)0x00000000U
+137                          | (uint32)0x00000000U
+138                          | (uint32)0x00000000U
+139                          | (uint32)0x00000000U
+140                          | (uint32)0x00000000U
+141                          | (uint32)0x00000000U
+142                          | (uint32)0x00000000U
+143                          | (uint32)0x00000000U
+144                          | (uint32)0x00000000U
+145                          | (uint32)0x00000000U
+146                          | (uint32)0x00000000U
+147                          | (uint32)0x00000000U;
+148 
+149     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->INTMUXx[1U] = (uint32)0x00000000U
+150                          | (uint32)0x00000000U
+151                          | (uint32)0x00000000U
+152                          | (uint32)0x00000000U
+153                          | (uint32)0x00000000U
+154                          | (uint32)0x00000000U
+155                          | (uint32)0x00000000U
+156                          | (uint32)0x00000000U
+157                          | (uint32)0x00000000U
+158                          | (uint32)0x00000000U
+159                          | (uint32)0x00000000U
+160                          | (uint32)0x00000000U
+161                          | (uint32)0x00000000U
+162                          | (uint32)0x00000000U
+163                          | (uint32)0x00000000U
+164                          | (uint32)0x00000000U
+165                          | (uint32)0x00000000U
+166                          | (uint32)0x00000000U
+167                          | (uint32)0x00000000U
+168                          | (uint32)0x00000000U
+169                          | (uint32)0x00000000U
+170                          | (uint32)0x00000000U
+171                          | (uint32)0x00000000U
+172                          | (uint32)0x00000000U
+173                          | (uint32)0x00000000U
+174                          | (uint32)0x00000000U
+175                          | (uint32)0x00000000U
+176                          | (uint32)0x00000000U
+177                          | (uint32)0x00000000U
+178                          | (uint32)0x00000000U
+179                          | (uint32)0x00000000U
+180                          | (uint32)0x00000000U;
+181 
+183     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->ABOTR = (uint32)0U;
+184 
+189     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+190     \textcolor{keywordflow}{while} ((\mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->IF1STAT & 0x80U) ==0x80U)
+191     \{ 
+192     \} \textcolor{comment}{/* Wait */}
+193     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->IF1CMD  = 0x87U;
+194 
+199     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+200     \textcolor{keywordflow}{while} ((\mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->IF2STAT & 0x80U) ==0x80U)
+201     \{ 
+202     \} \textcolor{comment}{/* Wait */}
+203     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->IF2CMD = 0x17U;
+204 
+212     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->BTR = (uint32)((uint32)0U << 16U) |
+213                    (uint32)((uint32)(2U - 1U) << 12U) |
+214                    (uint32)((uint32)((3U + 2U) - 1U) << 8U) |
+215                    (uint32)((uint32)(2U - 1U) << 6U) |
+216                    (uint32)19U;
+217 
+218 
+220     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->TIOC =  (uint32)((uint32)1U  << 18U )
+221                    | (uint32)((uint32)0U  << 17U )
+222                    | (uint32)((uint32)0U  << 16U )                
+223                    | (uint32)((uint32)1U  << 3U )  
+224                    | (uint32)((uint32)1U  << 2U )    
+225                    | (uint32)((uint32)1U << 1U );
+226                    
+227     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->RIOC =  (uint32)((uint32)1U  << 18U )    
+228                    | (uint32)((uint32)0U  << 17U )  
+229                    | (uint32)((uint32)0U  << 16U )   
+230                    | (uint32)((uint32)1U  << 3U )  
+231                    | (uint32)((uint32)0U  << 2U )
+232                    | (uint32)((uint32)0U <<1U );        
+233 
+235     \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{canREG1}}->CTL &= ~(uint32)(0x00000041U);
+236 
+237 
+238 
+239 
+243 
+244 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+245 \textcolor{comment}{/* USER CODE END */}
+246 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga47e373a708ae421d26dc96f62d150492}\label{group__CAN_ga47e373a708ae421d26dc96f62d150492}} 
+\index{C\+AN@{C\+AN}!can\+Io\+Rx\+Get\+Bit@{can\+Io\+Rx\+Get\+Bit}}
+\index{can\+Io\+Rx\+Get\+Bit@{can\+Io\+Rx\+Get\+Bit}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Io\+Rx\+Get\+Bit()}{canIoRxGetBit()}}
+{\footnotesize\ttfamily uint32 can\+Io\+Rx\+Get\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Read RX Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Reads a the current value from the RX pin of the given C\+AN port 
+
+Definition at line 1146 of file can.\+c.
+
+
+\begin{DoxyCode}
+1147 \{
+1148 \textcolor{comment}{/* USER CODE BEGIN (39) */}
+1149 \textcolor{comment}{/* USER CODE END */}
+1150 
+1151     \textcolor{keywordflow}{return} (node->RIOC & 1U);
+1152 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga2813ca316c5420f49c7045bac182fd01}\label{group__CAN_ga2813ca316c5420f49c7045bac182fd01}} 
+\index{C\+AN@{C\+AN}!can\+Io\+Set\+Direction@{can\+Io\+Set\+Direction}}
+\index{can\+Io\+Set\+Direction@{can\+Io\+Set\+Direction}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Io\+Set\+Direction()}{canIoSetDirection()}}
+{\footnotesize\ttfamily void can\+Io\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{Tx\+Dir,  }\item[{uint32}]{Rx\+Dir }\end{DoxyParamCaption})}
+
+
+
+Set Port Direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em Tx\+Dir} & -\/ TX Pin direction \\
+\hline
+\mbox{\tt in}  & {\em Rx\+Dir} & -\/ RX Pin direction\\
+\hline
+\end{DoxyParams}
+Set the direction of C\+AN pins at runtime when configured as IO pins. 
+
+Definition at line 1076 of file can.\+c.
+
+
+\begin{DoxyCode}
+1077 \{
+1078 \textcolor{comment}{/* USER CODE BEGIN (34) */}
+1079 \textcolor{comment}{/* USER CODE END */}
+1080 
+1081     node->TIOC = ((node->TIOC & 0xFFFFFFFBU) | (TxDir << 2U));
+1082     node->RIOC = ((node->RIOC & 0xFFFFFFFBU) | (RxDir << 2U));    
+1083 
+1084 \textcolor{comment}{/* USER CODE BEGIN (35) */}
+1085 \textcolor{comment}{/* USER CODE END */}
+1086 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga1f6f3bbe2bf26e51b6a3c01b7e5d6d4e}\label{group__CAN_ga1f6f3bbe2bf26e51b6a3c01b7e5d6d4e}} 
+\index{C\+AN@{C\+AN}!can\+Io\+Set\+Port@{can\+Io\+Set\+Port}}
+\index{can\+Io\+Set\+Port@{can\+Io\+Set\+Port}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Io\+Set\+Port()}{canIoSetPort()}}
+{\footnotesize\ttfamily void can\+Io\+Set\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{Tx\+Value,  }\item[{uint32}]{Rx\+Value }\end{DoxyParamCaption})}
+
+
+
+Write Port Value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em Tx\+Value} & -\/ TX Pin value 0 or 1 \\
+\hline
+\mbox{\tt in}  & {\em Rx\+Value} & -\/ RX Pin value 0 or 1\\
+\hline
+\end{DoxyParams}
+Writes a value to TX and RX pin of a given C\+AN module when configured as IO pins. 
+
+Definition at line 1102 of file can.\+c.
+
+
+\begin{DoxyCode}
+1103 \{
+1104 \textcolor{comment}{/* USER CODE BEGIN (36) */}
+1105 \textcolor{comment}{/* USER CODE END */}
+1106 
+1107     node->TIOC = ((node->TIOC & 0xFFFFFFFDU) | (TxValue << 1U));
+1108     node->RIOC = ((node->RIOC & 0xFFFFFFFDU) | (RxValue << 1U));
+1109 
+1110 \textcolor{comment}{/* USER CODE BEGIN (37) */}
+1111 \textcolor{comment}{/* USER CODE END */}
+1112 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gabb2b7807d43b7208031e1a2f0974ee00}\label{group__CAN_gabb2b7807d43b7208031e1a2f0974ee00}} 
+\index{C\+AN@{C\+AN}!can\+Io\+Tx\+Get\+Bit@{can\+Io\+Tx\+Get\+Bit}}
+\index{can\+Io\+Tx\+Get\+Bit@{can\+Io\+Tx\+Get\+Bit}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Io\+Tx\+Get\+Bit()}{canIoTxGetBit()}}
+{\footnotesize\ttfamily uint32 can\+Io\+Tx\+Get\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Read TX Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Reads a the current value from the TX pin of the given C\+AN port 
+
+Definition at line 1126 of file can.\+c.
+
+
+\begin{DoxyCode}
+1127 \{
+1128 \textcolor{comment}{/* USER CODE BEGIN (38) */}
+1129 \textcolor{comment}{/* USER CODE END */}
+1130 
+1131     \textcolor{keywordflow}{return} (node->TIOC & 1U);
+1132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gae353977bb29792a4297cb4ece4fd7e9c}\label{group__CAN_gae353977bb29792a4297cb4ece4fd7e9c}} 
+\index{C\+AN@{C\+AN}!can\+Is\+Message\+Box\+Valid@{can\+Is\+Message\+Box\+Valid}}
+\index{can\+Is\+Message\+Box\+Valid@{can\+Is\+Message\+Box\+Valid}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Is\+Message\+Box\+Valid()}{canIsMessageBoxValid()}}
+{\footnotesize\ttfamily uint32 can\+Is\+Message\+Box\+Valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box }\end{DoxyParamCaption})}
+
+
+
+Checks if message box is valid. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return the new data flag
+\end{DoxyReturn}
+Checks to see if the message box is valid for operation, returns 0 is flag not set otherwise will return the validation flag itself. 
+\begin{DoxyItemize}
+\item Read Tx request register 
+\end{DoxyItemize}
+
+Definition at line 809 of file can.\+c.
+
+
+\begin{DoxyCode}
+810 \{
+811     uint32 flag;
+812     uint32 regIndex = (messageBox - 1U) >> 5U;
+813     uint32 bitIndex = 1U << ((messageBox - 1U) & 0x1FU);
+814 
+815 \textcolor{comment}{/* USER CODE BEGIN (19) */}
+816 \textcolor{comment}{/* USER CODE END */}
+817 
+819     flag = node->MSGVALx[regIndex] & bitIndex;
+820 
+821 \textcolor{comment}{/* USER CODE BEGIN (20) */}
+822 \textcolor{comment}{/* USER CODE END */}
+823 
+824     \textcolor{keywordflow}{return} flag;
+825 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga5c0dda98d1341dbae341b4b6ea73a478}\label{group__CAN_ga5c0dda98d1341dbae341b4b6ea73a478}} 
+\index{C\+AN@{C\+AN}!can\+Is\+Rx\+Message\+Arrived@{can\+Is\+Rx\+Message\+Arrived}}
+\index{can\+Is\+Rx\+Message\+Arrived@{can\+Is\+Rx\+Message\+Arrived}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Is\+Rx\+Message\+Arrived()}{canIsRxMessageArrived()}}
+{\footnotesize\ttfamily uint32 can\+Is\+Rx\+Message\+Arrived (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box }\end{DoxyParamCaption})}
+
+
+
+Gets Rx message box reception status. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return the new data flag
+\end{DoxyReturn}
+Checks to see if the Rx message box has pending Rx data, returns 0 is flag not set otherwise will return the Tx request flag itself. 
+\begin{DoxyItemize}
+\item Read Tx request register 
+\end{DoxyItemize}
+
+Definition at line 770 of file can.\+c.
+
+
+\begin{DoxyCode}
+771 \{
+772     uint32 flag;
+773     uint32 regIndex = (messageBox - 1U) >> 5U;
+774     uint32 bitIndex = 1U << ((messageBox - 1U) & 0x1FU);
+775 
+776 \textcolor{comment}{/* USER CODE BEGIN (16) */}
+777 \textcolor{comment}{/* USER CODE END */}
+778 
+780     flag = node->NWDATx[regIndex] & bitIndex;
+781 
+782 \textcolor{comment}{/* USER CODE BEGIN (17) */}
+783 \textcolor{comment}{/* USER CODE END */}
+784 
+785     \textcolor{keywordflow}{return} flag;
+786 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga90c2fd9d51bca56e652da71570099295}\label{group__CAN_ga90c2fd9d51bca56e652da71570099295}} 
+\index{C\+AN@{C\+AN}!can\+Is\+Tx\+Message\+Pending@{can\+Is\+Tx\+Message\+Pending}}
+\index{can\+Is\+Tx\+Message\+Pending@{can\+Is\+Tx\+Message\+Pending}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Is\+Tx\+Message\+Pending()}{canIsTxMessagePending()}}
+{\footnotesize\ttfamily uint32 can\+Is\+Tx\+Message\+Pending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box }\end{DoxyParamCaption})}
+
+
+
+Gets Tx message box transmission status. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return the tx request flag
+\end{DoxyReturn}
+Checks to see if the Tx message box has a pending Tx request, returns 0 is flag not set otherwise will return the Tx request flag itself. 
+\begin{DoxyItemize}
+\item Read Tx request register 
+\end{DoxyItemize}
+
+Definition at line 731 of file can.\+c.
+
+
+\begin{DoxyCode}
+732 \{
+733     uint32 flag;
+734     uint32 regIndex = (messageBox - 1U) >> 5U;
+735     uint32 bitIndex = 1U << ((messageBox - 1U) & 0x1FU);
+736 
+737 \textcolor{comment}{/* USER CODE BEGIN (13) */}
+738 \textcolor{comment}{/* USER CODE END */}
+739 
+741     flag = node->TXRQx[regIndex] & bitIndex;
+742 
+743 \textcolor{comment}{/* USER CODE BEGIN (14) */}
+744 \textcolor{comment}{/* USER CODE END */}
+745 
+746     \textcolor{keywordflow}{return} flag;
+747 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gacac999ab73fd61efe4dfc10883ea287c}\label{group__CAN_gacac999ab73fd61efe4dfc10883ea287c}} 
+\index{C\+AN@{C\+AN}!can\+Message\+Notification@{can\+Message\+Notification}}
+\index{can\+Message\+Notification@{can\+Message\+Notification}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Message\+Notification()}{canMessageNotification()}}
+{\footnotesize\ttfamily void can\+Message\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box }\end{DoxyParamCaption})}
+
+
+
+Message notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function has to be provide by the user. 
+\end{DoxyNote}
+
+
+Definition at line 129 of file notification.\+c.
+
+
+\begin{DoxyCode}
+130 \{
+131 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+132 \textcolor{comment}{/* USER CODE BEGIN (15) */}
+133 \textcolor{comment}{/* USER CODE END */}
+134 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga15999e728cf76894d085e91d9e741099}\label{group__CAN_ga15999e728cf76894d085e91d9e741099}} 
+\index{C\+AN@{C\+AN}!can\+Send\+Remote\+Frame@{can\+Send\+Remote\+Frame}}
+\index{can\+Send\+Remote\+Frame@{can\+Send\+Remote\+Frame}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Send\+Remote\+Frame()}{canSendRemoteFrame()}}
+{\footnotesize\ttfamily uint32 can\+Send\+Remote\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box }\end{DoxyParamCaption})}
+
+
+
+Transmits a C\+AN Remote Frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to C\+AN TX data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item 0\+: When the setup of Send Remote Frame from message box wasn\textquotesingle{}t successful ~\newline
+ -\/ 1\+: When the setup of Send Remote Frame from message box was successful
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function triggers Remote Frame Transmission from C\+AN message box. Note \+: Enable R\+TR must be set in the Message x Configuration in the G\+UI( x\+: 1 -\/ 64) 
+\begin{DoxyItemize}
+\item Check for pending message\+:
+\begin{DoxyItemize}
+\item pending message, return 0
+\item no pending message, start new transmission
+\end{DoxyItemize}
+\item Wait until I\+F1 is ready for use ~\newline
+~\newline
+~\newline
+
+\item Request Transmission by setting Tx\+Rqst in message box ~\newline
+~\newline
+
+\item Trigger Remote Frame Transmit from message box ~\newline
+ \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used.~\newline
+ The user is responsible to initialize the message box.
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 596 of file can.\+c.
+
+
+\begin{DoxyCode}
+597 \{
+598 
+599     uint32 success  = 0U;
+600     uint32 regIndex = (messageBox - 1U) >> 5U;
+601     uint32 bitIndex = 1U << ((messageBox - 1U) & 0x1FU);
+602 
+607     \textcolor{keywordflow}{if} ((node->TXRQx[regIndex] & bitIndex) != 0U)
+608     \{
+609         success = 0U;
+610     \}
+611 
+612     \textcolor{keywordflow}{else}
+613     \{
+615         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+616         \textcolor{keywordflow}{while} ((node->IF1STAT & 0x80U) ==0x80U)
+617         \{
+618         \} \textcolor{comment}{/* Wait */}
+619 
+621         node->IF1CMD  = (uint8) 0x84U;
+622 
+624         \textcolor{comment}{/*SAFETYMCUSW 93 S MR: 6.1,6.2,10.1,10.2,10.3,10.4 <APPROVED> "LDRA Tool issue" */}
+625         node->IF1NO = (uint8) messageBox;
+626 
+627         success = 1U;
+628     \}
+632     \textcolor{keywordflow}{return} success;
+633 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_gafb381df2cdfb4e84f43df0226a757002}\label{group__CAN_gafb381df2cdfb4e84f43df0226a757002}} 
+\index{C\+AN@{C\+AN}!can\+Status\+Change\+Notification@{can\+Status\+Change\+Notification}}
+\index{can\+Status\+Change\+Notification@{can\+Status\+Change\+Notification}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Status\+Change\+Notification()}{canStatusChangeNotification()}}
+{\footnotesize\ttfamily void can\+Status\+Change\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{notification }\end{DoxyParamCaption})}
+
+
+
+Status Change notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em notification} & Status change notification code\+:
+\begin{DoxyItemize}
+\item can\+L\+E\+V\+E\+L\+\_\+\+Tx\+OK (0x08) \+: When successful transmission ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+Rx\+OK (0x10) \+: When successful reception ~\newline
+ -\/ can\+L\+E\+V\+E\+L\+\_\+\+Wake\+Up\+Pnd (0x200)\+: When successful Wake\+Up to system initiated
+\item can\+L\+E\+V\+E\+L\+\_\+\+P\+DA (0x400)\+: When successful low power mode entrance
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function has to be provide by the user. 
+\end{DoxyNote}
+
+
+Definition at line 121 of file notification.\+c.
+
+
+\begin{DoxyCode}
+122 \{
+123 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+124 \textcolor{comment}{/* USER CODE BEGIN (14) */}
+125 \textcolor{comment}{/* USER CODE END */}
+126 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga25acaa78fa2c30c393816a3f3e4b5f7c}\label{group__CAN_ga25acaa78fa2c30c393816a3f3e4b5f7c}} 
+\index{C\+AN@{C\+AN}!can\+Transmit@{can\+Transmit}}
+\index{can\+Transmit@{can\+Transmit}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Transmit()}{canTransmit()}}
+{\footnotesize\ttfamily uint32 can\+Transmit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box,  }\item[{const uint8 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Transmits a C\+AN message. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to C\+AN TX data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item 0\+: When the setup of the TX message box wasn\textquotesingle{}t successful ~\newline
+ -\/ 1\+: When the setup of the TX message box was successful
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function writes a C\+AN message into a C\+AN message box. This function is not reentrant. However, if a C\+AN interrupt occurs, the values of the IF registers are backup up and restored at the end of the I\+SR, since these are a shared resource. 
+\begin{DoxyItemize}
+\item Check for pending message\+:
+\begin{DoxyItemize}
+\item pending message, return 0
+\item no pending message, start new transmission
+\end{DoxyItemize}
+\item Wait until I\+F1 is ready for use ~\newline
+~\newline
+~\newline
+~\newline
+
+\item Configure I\+F1 for
+\begin{DoxyItemize}
+\item Message direction -\/ Write
+\item Data Update
+\item Start Transmission
+\end{DoxyItemize}
+\item Copy TX data into I\+F1 ~\newline
+~\newline
+
+\item Copy TX data into message box ~\newline
+ \begin{DoxyNote}{Note}
+The function can\+Init has to be called before this function can be used.~\newline
+ The user is responsible to initialize the message box.
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 274 of file can.\+c.
+
+
+\begin{DoxyCode}
+275 \{
+276     uint32 i;
+277     uint32 success  = 0U;
+278     uint32 regIndex = (messageBox - 1U) >> 5U;
+279     uint32 bitIndex = 1U << ((messageBox - 1U) & 0x1FU);
+280 
+281 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+282 \textcolor{comment}{/* USER CODE END */}
+283 
+284 
+289     \textcolor{keywordflow}{if} ((node->TXRQx[regIndex] & bitIndex) != 0U)
+290     \{
+291         success = 0U;
+292     \}
+293 
+294     \textcolor{keywordflow}{else}
+295     \{
+297     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+298     \textcolor{keywordflow}{while} ((node->IF1STAT & 0x80U) ==0x80U)
+299     \{ 
+300     \} \textcolor{comment}{/* Wait */}
+301     
+307     node->IF1CMD = 0x87U;
+308     
+310     \textcolor{keywordflow}{for} (i = 0U; i < 8U; i++)
+311     \{
+312 \textcolor{preprocessor}{#if ((\_\_little\_endian\_\_ == 1) || (\_\_LITTLE\_ENDIAN\_\_ == 1))}
+313         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+314         node->IF1DATx[i] = *data;
+315         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+316         \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+317         data++;
+318 \textcolor{preprocessor}{#else}
+319         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+320         node->IF1DATx[s\_canByteOrder[i]] = *data;
+321         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+322         \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+323         data++;
+324 \textcolor{preprocessor}{#endif}
+325     \}
+326 
+328     \textcolor{comment}{/*SAFETYMCUSW 93 S MR: 6.1,6.2,10.1,10.2,10.3,10.4 <APPROVED> "LDRA Tool issue" */}
+329     node->IF1NO = (uint8) messageBox;
+330 
+331     success = 1U; 
+332     \}
+336 
+337 \textcolor{comment}{/* USER CODE BEGIN (8) */}
+338 \textcolor{comment}{/* USER CODE END */}
+339 
+340     \textcolor{keywordflow}{return} success;
+341 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__CAN_ga6a2ea37d107b5e26bb3f7628ef2c7ee7}\label{group__CAN_ga6a2ea37d107b5e26bb3f7628ef2c7ee7}} 
+\index{C\+AN@{C\+AN}!can\+Update\+ID@{can\+Update\+ID}}
+\index{can\+Update\+ID@{can\+Update\+ID}!C\+AN@{C\+AN}}
+\subsubsection{\texorpdfstring{can\+Update\+I\+D()}{canUpdateID()}}
+{\footnotesize\ttfamily uint32 can\+Update\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint32}]{message\+Box,  }\item[{uint32}]{msg\+Box\+Arbit\+Val }\end{DoxyParamCaption})}
+
+
+
+Change C\+AN Message Box ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & Pointer to C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+R\+E\+G1\+: C\+A\+N1 node pointer
+\item can\+R\+E\+G2\+: C\+A\+N2 node pointer
+\item can\+R\+E\+G3\+: C\+A\+N3 node pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em message\+Box} & Message box number of C\+AN node\+:
+\begin{DoxyItemize}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X1\+: C\+AN message box 1
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+Xn\+: C\+AN message box n \mbox{[}n\+: 1-\/64\mbox{]}
+\item can\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+X64\+: C\+AN message box 64 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em msg\+Box\+Arbit\+Val} & (32 bit value)\+: Bit 31 -\/ Not used. Bit 30 -\/ 0 -\/ The 11-\/bit (\char`\"{}standard\char`\"{}) identifier is used for this message object. 1 -\/ The 29-\/bit (\char`\"{}extended\char`\"{}) identifier is used for this message object. Bit 29 -\/ 0 -\/ Direction = Receive 1 -\/ Direction = Transmit Bit 28\+:0 -\/ Message Identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+This function changes the Identifier and other arbitration parameters of a C\+AN Message Box. 
+\begin{DoxyItemize}
+\item Wait until I\+F2 is ready for use ~\newline
+~\newline
+~\newline
+
+\item Configure I\+F2 for
+\begin{DoxyItemize}
+\item Message direction -\/ Read
+\item Data Read
+\item Clears New\+Dat bit in the message object.
+\end{DoxyItemize}
+\item Update message box number. ~\newline
+
+\item Wait until data are copied into I\+F2 
+\end{DoxyItemize}
+
+Definition at line 541 of file can.\+c.
+
+
+\begin{DoxyCode}
+542 \{
+543 
+545     \textcolor{keywordflow}{while} ((node->IF2STAT & 0x80U) ==0x80U)
+546     \{
+547     \} \textcolor{comment}{/* Wait */}
+548 
+554     node->IF2CMD = 0xA0U;
+555     \textcolor{comment}{/* Copy passed value into the arbitration register. */}
+556     node->IF2ARB &= 0x80000000U;
+557     node->IF2ARB |= (msgBoxArbitVal & 0x7FFFFFFFU);
+558 
+560     \textcolor{comment}{/*SAFETYMCUSW 93 S MR: 6.1,6.2,10.1,10.2,10.3,10.4 <APPROVED> "LDRA Tool issue" */}
+561     node->IF2NO = (uint8) messageBox;
+562 
+564     \textcolor{keywordflow}{while} ((node->IF2STAT & 0x80U) ==0x80U)
+565     \{
+566     \} \textcolor{comment}{/* Wait */}
+567 
+568 \}
+\end{DoxyCode}

@@ -1,0 +1,25 @@
+var structwcap__format =
+[
+    [ "__pad0__", "structwcap__format.html#a1880af42f5964f28d706ee77b2c8032b", null ],
+    [ "__pad1__", "structwcap__format.html#ac79cadaa47268c80dc608a6527ecf658", null ],
+    [ "__pad2__", "structwcap__format.html#a572cbfceb4bb977924ec4bdf6e710a4b", null ],
+    [ "__pad3__", "structwcap__format.html#ac0136e1d7cb4158de4a194576aef7a13", null ],
+    [ "__pad4__", "structwcap__format.html#a83e681259e30bda51bfd1759712206dd", null ],
+    [ "__pad5__", "structwcap__format.html#adbb694dd583ce0679501691e5a2fde8a", null ],
+    [ "ab_register_select", "structwcap__format.html#a32cb84c26bf3b639a19bdf52d7f63003", null ],
+    [ "auto_read_clear", "structwcap__format.html#aef812d1e1b74afb76ae7651a3b2bb14b", null ],
+    [ "brk", "structwcap__format.html#a7fd38f065ee1e2ce8df8940a30a903e3", null ],
+    [ "capture_condition", "structwcap__format.html#aac65097503dfd1899dc8c0a787d1147d", null ],
+    [ "cond_addr", "structwcap__format.html#a82fb87c7eb3b7b51c0f366d30e813a4e", null ],
+    [ "data", "structwcap__format.html#a0d65d34c0b2c74e85e32813250a19cc3", null ],
+    [ "hr_data", "structwcap__format.html#a1458837fe4fccf0126924b820ac93910", null ],
+    [ "hr_lr", "structwcap__format.html#a0ff4674cdcf3c4443b64729f948a4a3a", null ],
+    [ "interrupt_enable", "structwcap__format.html#a627375e9379313f6c1ea41485d9d3b1b", null ],
+    [ "next_program_address", "structwcap__format.html#a4f837f04ec916fdefcbf969158844832", null ],
+    [ "op_code", "structwcap__format.html#ace9c61087c6d7dac44358fa689c888a4", null ],
+    [ "pin_select", "structwcap__format.html#a0c5c4d9bf854fc84644150ba27ded960", null ],
+    [ "previous_bit", "structwcap__format.html#a3610fc322c144d4684a228ee3ed7dc80", null ],
+    [ "reqnum", "structwcap__format.html#aa89df4662d7b5dcfa09098d547aedd61", null ],
+    [ "request", "structwcap__format.html#a04d99fea54bd8ca9192ce18eba7abd66", null ],
+    [ "t_register_select", "structwcap__format.html#a49597e132295415f331062656a72c4ab", null ]
+];

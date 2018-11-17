@@ -1,0 +1,461 @@
+\hypertarget{lin_8h}{}\section{include/lin.h File Reference}
+\label{lin_8h}\index{include/lin.\+h@{include/lin.\+h}}
+
+
+L\+IN Driver Definition File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+lin.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlin__config__reg}{lin\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lin_8h_a13edf7cbd7ee0169e182ba336b24d22e}{L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT}}~0x00000001U
+\begin{DoxyCompactList}\small\item\em Alias for break detect interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a8fa90bd2a6847ebe37ba4f81fffca7b1}{L\+I\+N\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+I\+NT}}~0x00000002U
+\begin{DoxyCompactList}\small\item\em Alias for wakeup interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_adff548ef6fa61288188da5e607e70c39}{L\+I\+N\+\_\+\+T\+O\+\_\+\+I\+NT}}~0x00000010U
+\begin{DoxyCompactList}\small\item\em Alias for time out interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a061f07bb170bbcd578258daa2c9bae45}{L\+I\+N\+\_\+\+T\+O\+A\+W\+U\+S\+\_\+\+I\+NT}}~0x00000040U
+\begin{DoxyCompactList}\small\item\em Alias for time out after wakeup signal interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a10e353bf9f0eaa61019e0981962716be}{L\+I\+N\+\_\+\+T\+O\+A3\+W\+U\+S\+\_\+\+I\+NT}}~0x00000080U
+\begin{DoxyCompactList}\small\item\em Alias for time out after 3 wakeup signals interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a3dfa2cad0ec36c599de2db8dab46d78f}{L\+I\+N\+\_\+\+T\+X\+\_\+\+R\+E\+A\+DY}}~0x00000100U
+\begin{DoxyCompactList}\small\item\em Alias for transmit buffer ready flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_aa3d6ce8499ca63b9891713a4048ca412}{L\+I\+N\+\_\+\+R\+X\+\_\+\+I\+NT}}~0x00000200U
+\begin{DoxyCompactList}\small\item\em Alias for receive buffer ready interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a7cce69bd51b1e2363701b05afa6e83da}{L\+I\+N\+\_\+\+I\+D\+\_\+\+I\+NT}}~0x00002000U
+\begin{DoxyCompactList}\small\item\em Alias for received matching identifier interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a924e1c58d524ede1d33b6f3adc2e2643}{L\+I\+N\+\_\+\+P\+E\+\_\+\+I\+NT}}~0x01000000U
+\begin{DoxyCompactList}\small\item\em Alias for parity error interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_af8a417898e4a436f23b9bc0d177de968}{L\+I\+N\+\_\+\+O\+E\+\_\+\+I\+NT}}~0x02000000U
+\begin{DoxyCompactList}\small\item\em Alias for overrun error interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a4d5bbc035efa99e04ff3af79b75ac6d6}{L\+I\+N\+\_\+\+F\+E\+\_\+\+I\+NT}}~0x04000000U
+\begin{DoxyCompactList}\small\item\em Alias for framing error interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_af3520aa7c740961921f3ae1f5b72cf2d}{L\+I\+N\+\_\+\+N\+R\+E\+\_\+\+I\+NT}}~0x08000000U
+\begin{DoxyCompactList}\small\item\em Alias for no response error interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a05b9402efa0cbf87f308f491df83c0da}{L\+I\+N\+\_\+\+I\+S\+F\+E\+\_\+\+I\+NT}}~0x10000000U
+\begin{DoxyCompactList}\small\item\em Alias for inconsistent sync field error interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a8c12fd6432de6ef12a7aa9277d7cd7ea}{L\+I\+N\+\_\+\+C\+E\+\_\+\+I\+NT}}~0x20000000U
+\begin{DoxyCompactList}\small\item\em Alias for checksum error interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_abb71b7ed43dae75bb36996141ca21bb9}{L\+I\+N\+\_\+\+P\+B\+E\+\_\+\+I\+NT}}~0x40000000U
+\begin{DoxyCompactList}\small\item\em Alias for physical bus error interrupt flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lin_8h_a0aea72af47afd13d6b70db4d354cc064}{L\+I\+N\+\_\+\+B\+E\+\_\+\+I\+NT}}~0x80000000U
+\begin{DoxyCompactList}\small\item\em Alias for bit error interrupt flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{lin_8h_ab22ab38c2f909066b09ed02c8310dc61}\label{lin_8h_ab22ab38c2f909066b09ed02c8310dc61}} 
+\#define {\bfseries L\+I\+N\+\_\+\+G\+C\+R0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000001U
+\item 
+\#define {\bfseries L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{lin_8h_abc54c3c81e6423e029af49d225c63558}\label{lin_8h_abc54c3c81e6423e029af49d225c63558}} 
+\#define {\bfseries L\+I\+N\+\_\+\+G\+C\+R2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\#define {\bfseries L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{lin_8h_ae1b3c601736dd0bba3d8f3dcfcede9fa}\label{lin_8h_ae1b3c601736dd0bba3d8f3dcfcede9fa}} 
+\#define {\bfseries L\+I\+N\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)(8\+U -\/ 1\+U) $<$$<$ 16\+U))
+\item 
+\mbox{\Hypertarget{lin_8h_a69e2ad655248eb805d7141da3f2a09ae}\label{lin_8h_a69e2ad655248eb805d7141da3f2a09ae}} 
+\#define {\bfseries L\+I\+N\+\_\+\+B\+R\+S\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(249\+U)
+\item 
+\mbox{\Hypertarget{lin_8h_aac98e9ad23433e30eec2af452b1ee1dc}\label{lin_8h_aac98e9ad23433e30eec2af452b1ee1dc}} 
+\#define {\bfseries L\+I\+N\+\_\+\+C\+O\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)(1\+U -\/ 1\+U) $<$$<$ 8\+U) $\vert$ (13\+U -\/ 13\+U))
+\item 
+\mbox{\Hypertarget{lin_8h_aa0b6e941ab9ecb751e169266ef824d00}\label{lin_8h_aa0b6e941ab9ecb751e169266ef824d00}} 
+\#define {\bfseries L\+I\+N\+\_\+\+M\+A\+S\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0x\+F\+F\+U $<$$<$ 16\+U) $\vert$ 0x\+F\+F\+U)
+\item 
+\mbox{\Hypertarget{lin_8h_ac6c453511b2c87862125b87d01e45543}\label{lin_8h_ac6c453511b2c87862125b87d01e45543}} 
+\#define {\bfseries L\+I\+N\+\_\+\+M\+B\+R\+S\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(3600\+U)
+\item 
+\mbox{\Hypertarget{lin_8h_af15affc4e4f2b69b28c62dc45ba2962a}\label{lin_8h_af15affc4e4f2b69b28c62dc45ba2962a}} 
+\#define {\bfseries L\+I\+N\+\_\+\+F\+U\+N\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(4\+U $\vert$ 2\+U $\vert$ 0\+U)
+\item 
+\mbox{\Hypertarget{lin_8h_af6d01fab01bab5483f9779a54fa6f2e2}\label{lin_8h_af6d01fab01bab5483f9779a54fa6f2e2}} 
+\#define {\bfseries L\+I\+N\+\_\+\+D\+I\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0\+U $\vert$ 0\+U $\vert$ 0\+U)
+\item 
+\mbox{\Hypertarget{lin_8h_aee0ad6746d145a14690ec35bdc2ead60}\label{lin_8h_aee0ad6746d145a14690ec35bdc2ead60}} 
+\#define {\bfseries L\+I\+N\+\_\+\+O\+D\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0\+U $\vert$ 0\+U $\vert$ 0\+U)
+\item 
+\mbox{\Hypertarget{lin_8h_ac9ad0e021bd01503a7f60146fe3f2081}\label{lin_8h_ac9ad0e021bd01503a7f60146fe3f2081}} 
+\#define {\bfseries L\+I\+N\+\_\+\+P\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0\+U $\vert$ 0\+U $\vert$ 0\+U)
+\item 
+\mbox{\Hypertarget{lin_8h_a7252860f93c4ae20fb93a3b1f495addd}\label{lin_8h_a7252860f93c4ae20fb93a3b1f495addd}} 
+\#define {\bfseries L\+I\+N\+\_\+\+P\+S\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(4\+U $\vert$ 2\+U $\vert$ 1\+U)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{lin_8h_a17cbe9fdce638bdaa05d9e41a29e86b8}\label{lin_8h_a17cbe9fdce638bdaa05d9e41a29e86b8}} 
+typedef struct \mbox{\hyperlink{structlin__config__reg}{lin\+\_\+config\+\_\+reg}} {\bfseries lin\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{lin_8h_a31e60ad58b48ca62fd16aea8cc904067}\label{lin_8h_a31e60ad58b48ca62fd16aea8cc904067}} 
+enum {\bfseries lin\+Pin\+Select} \{ {\bfseries P\+I\+N\+\_\+\+L\+I\+N\+\_\+\+TX} = 4U, 
+{\bfseries P\+I\+N\+\_\+\+L\+I\+N\+\_\+\+RX} = 2U
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries lin\+Init} (void)
+\item 
+void {\bfseries lin\+Set\+Functional} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint32 port)
+\item 
+void {\bfseries lin\+Send\+Header} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint8 identifier)
+\item 
+void {\bfseries lin\+Send\+Wakup\+Signal} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+void {\bfseries lin\+Enter\+Sleep} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+void {\bfseries lin\+Software\+Reset} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+uint32 {\bfseries lin\+Is\+Tx\+Ready} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+void {\bfseries lin\+Set\+Length} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint32 length)
+\item 
+void {\bfseries lin\+Send} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint8 $\ast$data)
+\item 
+uint32 {\bfseries lin\+Is\+Rx\+Ready} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+uint32 {\bfseries lin\+Tx\+Rx\+Error} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+uint32 {\bfseries lin\+Get\+Identifier} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+void {\bfseries lin\+Get\+Data} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint8 $\ast$const data)
+\item 
+void {\bfseries lin\+Enable\+Notification} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint32 flags)
+\item 
+void {\bfseries lin\+Disable\+Notification} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint32 flags)
+\item 
+void {\bfseries lin\+Enable\+Loopback} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\item 
+void {\bfseries lin\+Disable\+Loopback} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+void {\bfseries lin\+Get\+Config\+Value} (\mbox{\hyperlink{structlin__config__reg}{lin\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+uint32 {\bfseries lin\+Get\+Status\+Flag} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin)
+\item 
+void {\bfseries lin\+Clear\+Status\+Flag} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint32 flags)
+\item 
+void \mbox{\hyperlink{group__LIN_gaa4341c36b53d2de417bf6063e61eb00e}{lin\+Notification}} (\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$lin, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+IN Driver Definition File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lin_8h_a0aea72af47afd13d6b70db4d354cc064}\label{lin_8h_a0aea72af47afd13d6b70db4d354cc064}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+B\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+B\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+B\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+B\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+B\+E\+\_\+\+I\+NT}{LIN\_BE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+B\+E\+\_\+\+I\+NT~0x80000000U}
+
+
+
+Alias for bit error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 184 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a13edf7cbd7ee0169e182ba336b24d22e}\label{lin_8h_a13edf7cbd7ee0169e182ba336b24d22e}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT}{LIN\_BREAK\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT~0x00000001U}
+
+
+
+Alias for break detect interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 64 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a8c12fd6432de6ef12a7aa9277d7cd7ea}\label{lin_8h_a8c12fd6432de6ef12a7aa9277d7cd7ea}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+C\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+C\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+C\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+C\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+C\+E\+\_\+\+I\+NT}{LIN\_CE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+C\+E\+\_\+\+I\+NT~0x20000000U}
+
+
+
+Alias for checksum error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 168 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a4d5bbc035efa99e04ff3af79b75ac6d6}\label{lin_8h_a4d5bbc035efa99e04ff3af79b75ac6d6}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+F\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+F\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+F\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+F\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+F\+E\+\_\+\+I\+NT}{LIN\_FE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+F\+E\+\_\+\+I\+NT~0x04000000U}
+
+
+
+Alias for framing error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 144 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a6f666565af1d446b4e71c198d9d972ea}\label{lin_8h_a6f666565af1d446b4e71c198d9d972ea}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{LIN\_GCR1\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(0x03000CE0U \(\backslash\)
+                                 | (uint32)((uint32)1U << 12U) \(\backslash\)
+                                 | (uint32)((uint32)0U << 2U))
+\end{DoxyCode}
+
+
+Definition at line 226 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a7cce69bd51b1e2363701b05afa6e83da}\label{lin_8h_a7cce69bd51b1e2363701b05afa6e83da}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+I\+D\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+I\+D\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+I\+D\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+I\+D\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+I\+D\+\_\+\+I\+NT}{LIN\_ID\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+I\+D\+\_\+\+I\+NT~0x00002000U}
+
+
+
+Alias for received matching identifier interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 120 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a05b9402efa0cbf87f308f491df83c0da}\label{lin_8h_a05b9402efa0cbf87f308f491df83c0da}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+I\+S\+F\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+I\+S\+F\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+I\+S\+F\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+I\+S\+F\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+I\+S\+F\+E\+\_\+\+I\+NT}{LIN\_ISFE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+I\+S\+F\+E\+\_\+\+I\+NT~0x10000000U}
+
+
+
+Alias for inconsistent sync field error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 160 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_af3520aa7c740961921f3ae1f5b72cf2d}\label{lin_8h_af3520aa7c740961921f3ae1f5b72cf2d}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+N\+R\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+N\+R\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+N\+R\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+N\+R\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+N\+R\+E\+\_\+\+I\+NT}{LIN\_NRE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+N\+R\+E\+\_\+\+I\+NT~0x08000000U}
+
+
+
+Alias for no response error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 152 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_af8a417898e4a436f23b9bc0d177de968}\label{lin_8h_af8a417898e4a436f23b9bc0d177de968}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+O\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+O\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+O\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+O\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+O\+E\+\_\+\+I\+NT}{LIN\_OE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+O\+E\+\_\+\+I\+NT~0x02000000U}
+
+
+
+Alias for overrun error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 136 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_abb71b7ed43dae75bb36996141ca21bb9}\label{lin_8h_abb71b7ed43dae75bb36996141ca21bb9}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+P\+B\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+P\+B\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+P\+B\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+P\+B\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+P\+B\+E\+\_\+\+I\+NT}{LIN\_PBE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+P\+B\+E\+\_\+\+I\+NT~0x40000000U}
+
+
+
+Alias for physical bus error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 176 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a924e1c58d524ede1d33b6f3adc2e2643}\label{lin_8h_a924e1c58d524ede1d33b6f3adc2e2643}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+P\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+P\+E\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+P\+E\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+P\+E\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+P\+E\+\_\+\+I\+NT}{LIN\_PE\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+P\+E\+\_\+\+I\+NT~0x01000000U}
+
+
+
+Alias for parity error interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 128 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_aa3d6ce8499ca63b9891713a4048ca412}\label{lin_8h_aa3d6ce8499ca63b9891713a4048ca412}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+R\+X\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+R\+X\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+R\+X\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+R\+X\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+R\+X\+\_\+\+I\+NT}{LIN\_RX\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+R\+X\+\_\+\+I\+NT~0x00000200U}
+
+
+
+Alias for receive buffer ready interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 112 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_aa4b6d0ae85e36670f5fb9f661cdc920d}\label{lin_8h_aa4b6d0ae85e36670f5fb9f661cdc920d}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{LIN\_SETINT\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U)
+\end{DoxyCode}
+
+
+Definition at line 247 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a888a842f44307fc51a375fd08b9edd9e}\label{lin_8h_a888a842f44307fc51a375fd08b9edd9e}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{LIN\_SETINTLVL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U \(\backslash\)
+                                  | 0x00000000U)
+\end{DoxyCode}
+
+
+Definition at line 230 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_adff548ef6fa61288188da5e607e70c39}\label{lin_8h_adff548ef6fa61288188da5e607e70c39}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+T\+O\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+T\+O\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+T\+O\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+T\+O\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+T\+O\+\_\+\+I\+NT}{LIN\_TO\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+T\+O\+\_\+\+I\+NT~0x00000010U}
+
+
+
+Alias for time out interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 80 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a10e353bf9f0eaa61019e0981962716be}\label{lin_8h_a10e353bf9f0eaa61019e0981962716be}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+T\+O\+A3\+W\+U\+S\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+T\+O\+A3\+W\+U\+S\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+T\+O\+A3\+W\+U\+S\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+T\+O\+A3\+W\+U\+S\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+T\+O\+A3\+W\+U\+S\+\_\+\+I\+NT}{LIN\_TOA3WUS\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+T\+O\+A3\+W\+U\+S\+\_\+\+I\+NT~0x00000080U}
+
+
+
+Alias for time out after 3 wakeup signals interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 96 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a061f07bb170bbcd578258daa2c9bae45}\label{lin_8h_a061f07bb170bbcd578258daa2c9bae45}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+T\+O\+A\+W\+U\+S\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+T\+O\+A\+W\+U\+S\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+T\+O\+A\+W\+U\+S\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+T\+O\+A\+W\+U\+S\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+T\+O\+A\+W\+U\+S\+\_\+\+I\+NT}{LIN\_TOAWUS\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+T\+O\+A\+W\+U\+S\+\_\+\+I\+NT~0x00000040U}
+
+
+
+Alias for time out after wakeup signal interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 88 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a3dfa2cad0ec36c599de2db8dab46d78f}\label{lin_8h_a3dfa2cad0ec36c599de2db8dab46d78f}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+T\+X\+\_\+\+R\+E\+A\+DY@{L\+I\+N\+\_\+\+T\+X\+\_\+\+R\+E\+A\+DY}}
+\index{L\+I\+N\+\_\+\+T\+X\+\_\+\+R\+E\+A\+DY@{L\+I\+N\+\_\+\+T\+X\+\_\+\+R\+E\+A\+DY}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+T\+X\+\_\+\+R\+E\+A\+DY}{LIN\_TX\_READY}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+T\+X\+\_\+\+R\+E\+A\+DY~0x00000100U}
+
+
+
+Alias for transmit buffer ready flag. 
+
+Used with lin\+Is\+Tx\+Ready. 
+
+Definition at line 104 of file lin.\+h.
+
+\mbox{\Hypertarget{lin_8h_a8fa90bd2a6847ebe37ba4f81fffca7b1}\label{lin_8h_a8fa90bd2a6847ebe37ba4f81fffca7b1}} 
+\index{lin.\+h@{lin.\+h}!L\+I\+N\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+I\+NT}}
+\index{L\+I\+N\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+I\+NT@{L\+I\+N\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+I\+NT}!lin.\+h@{lin.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+I\+NT}{LIN\_WAKEUP\_INT}}
+{\footnotesize\ttfamily \#define L\+I\+N\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+I\+NT~0x00000002U}
+
+
+
+Alias for wakeup interrupt flag. 
+
+Used with lin\+Enable\+Notification, lin\+Disable\+Notification. 
+
+Definition at line 72 of file lin.\+h.
+

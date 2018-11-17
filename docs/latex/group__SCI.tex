@@ -1,0 +1,988 @@
+\hypertarget{group__SCI}{}\section{S\+CI}
+\label{group__SCI}\index{S\+CI@{S\+CI}}
+
+
+Serial Communication Interface Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__SCI_gae8a1d6b7274ed1af263d57fab032096a}{sci\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+CI Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga2bf2ae4e9ca71949190dd967b406b931}{sci\+Set\+Functional}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 port)
+\begin{DoxyCompactList}\small\item\em Change functional behavior of pins at runtime. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga35d4f604e2151ca596b1e0fcca6f5606}{sci\+Set\+Baudrate}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 baud)
+\begin{DoxyCompactList}\small\item\em Change baudrate at runtime. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gaafd91cc5c28a92fa211e96e06b3fc34c}{sci\+Is\+Tx\+Ready}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Tx buffer empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga8803e9ddc05ea93c80a768d0fc0eab16}{sci\+Send\+Byte}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint8 byte)
+\begin{DoxyCompactList}\small\item\em Send Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga0a24e75961adf4102892d78e9620c042}{sci\+Send}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Send Data. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_ga030ca3a9ad5bf48a7215be9d4078ad49}{sci\+Is\+Rx\+Ready}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Rx buffer full. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gabb100a9163984ca6c9a69133b8eba657}{sci\+Is\+Idle\+Detected}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Idle Period is Detected. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_ga36cb42a55bca0fe4e76f3b994fb6dfc4}{sci\+Rx\+Error}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Return Rx Error flags. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gaec2932431dfdcdef7c3aba3da9cf4fe7}{sci\+Receive\+Byte}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Receive Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga2452fb07e6ad52632e100fed774f9087}{sci\+Receive}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Receive Data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gad14ca1b90c313254407d318eceaa1f46}{sci\+Enable\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Enable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga9f1a39a5272682dbd101ddcbbbdc8193}{sci\+Disable\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Disable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga36302e2a67c26b3557c66ccb267c1760}{sci\+Enable\+Loopback}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gae6568eda24f29b1b31bd09a5f665b5f8}{sci\+Disable\+Loopback}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga695b0bd0cb87fd2a0542f784fc94aa06}{sci\+Enter\+Reset\+State}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Enter reset state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__SCI_ga3ec6735d45ea69caf0abe5919f04d538}\label{group__SCI_ga3ec6735d45ea69caf0abe5919f04d538}} 
+void {\bfseries sci\+Exit\+Reset\+State} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\item 
+void \mbox{\hyperlink{group__SCI_ga2418574fe9c3d642db1f134926ac6934}{scilin\+Get\+Config\+Value}} (\mbox{\hyperlink{structsci__config__reg}{sci\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the S\+C\+I\+L\+IN ( S\+C\+I2) configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gac25800424a38ab1b3b0960f6b7cc4bc8}{sci\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Serial Communication Interface Module. 
+
+The S\+CI module is a universal asynchronous receiver-\/transmitter that implements the standard nonreturn to zero format. The S\+CI can be used to communicate, for example, through an R\+S-\/232 port or over a K-\/line.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__sci_8h}{reg\+\_\+sci.\+h}}
+\item \mbox{\hyperlink{sci_8h}{sci.\+h}}
+\item \mbox{\hyperlink{sci_8c}{sci.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__SCI_gae6568eda24f29b1b31bd09a5f665b5f8}\label{group__SCI_gae6568eda24f29b1b31bd09a5f665b5f8}} 
+\index{S\+CI@{S\+CI}!sci\+Disable\+Loopback@{sci\+Disable\+Loopback}}
+\index{sci\+Disable\+Loopback@{sci\+Disable\+Loopback}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Disable\+Loopback()}{sciDisableLoopback()}}
+{\footnotesize\ttfamily void sci\+Disable\+Loopback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci }\end{DoxyParamCaption})}
+
+
+
+Enable Loopback mode for self test. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address\\
+\hline
+\end{DoxyParams}
+This function disable the Loopback mode. 
+
+Definition at line 522 of file sci.\+c.
+
+
+\begin{DoxyCode}
+523 \{
+524 \textcolor{comment}{/* USER CODE BEGIN (21) */}
+525 \textcolor{comment}{/* USER CODE END */}
+526     
+527     \textcolor{comment}{/* Disable Loopback Mode */}
+528     sci->IODFTCTRL = 0x00000500U;
+529     
+530 \textcolor{comment}{/* USER CODE BEGIN (22) */}
+531 \textcolor{comment}{/* USER CODE END */}
+532 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga9f1a39a5272682dbd101ddcbbbdc8193}\label{group__SCI_ga9f1a39a5272682dbd101ddcbbbdc8193}} 
+\index{S\+CI@{S\+CI}!sci\+Disable\+Notification@{sci\+Disable\+Notification}}
+\index{sci\+Disable\+Notification@{sci\+Disable\+Notification}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Disable\+Notification()}{sciDisableNotification()}}
+{\footnotesize\ttfamily sci\+Disable\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Disable interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Interrupts to be disabled, can be ored value of\+: S\+C\+I\+\_\+\+F\+E\+\_\+\+I\+NT -\/ framing error, S\+C\+I\+\_\+\+O\+E\+\_\+\+I\+NT -\/ overrun error, S\+C\+I\+\_\+\+P\+E\+\_\+\+I\+NT -\/ parity error, S\+C\+I\+\_\+\+R\+X\+\_\+\+I\+NT -\/ receive buffer ready, S\+C\+I\+\_\+\+T\+X\+\_\+\+I\+NT -\/ transmit buffer ready, S\+C\+I\+\_\+\+W\+A\+K\+E\+\_\+\+I\+NT -\/ wakeup, S\+C\+I\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT -\/ break detect \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 579 of file sci.\+c.
+
+
+
+References sci\+R\+EG.
+
+
+\begin{DoxyCode}
+580 \{
+581     uint32 index = (sci == \mbox{\hyperlink{reg__sci_8h_acdc43faa5b34a7b497da4941e225e3ad}{sciREG}}) ? 0U : 1U;
+582 
+583 \textcolor{comment}{/* USER CODE BEGIN (25) */}
+584 \textcolor{comment}{/* USER CODE END */}
+585 
+586     g\_sciTransfer\_t[index].mode &= (uint32)(~(flags & (uint32)SCI\_TX\_INT));
+587     sci->CLEARINT                = (flags & (uint32)(~(uint32)(SCI\_TX\_INT)));
+588 
+589 \textcolor{comment}{/* USER CODE BEGIN (26) */}
+590 \textcolor{comment}{/* USER CODE END */}
+591 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga36302e2a67c26b3557c66ccb267c1760}\label{group__SCI_ga36302e2a67c26b3557c66ccb267c1760}} 
+\index{S\+CI@{S\+CI}!sci\+Enable\+Loopback@{sci\+Enable\+Loopback}}
+\index{sci\+Enable\+Loopback@{sci\+Enable\+Loopback}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Enable\+Loopback()}{sciEnableLoopback()}}
+{\footnotesize\ttfamily void sci\+Enable\+Loopback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{\mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}}}]{Loopbacktype }\end{DoxyParamCaption})}
+
+
+
+Enable Loopback mode for self test. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em Loopbacktype} & -\/ Digital or Analog\\
+\hline
+\end{DoxyParams}
+This function enables the Loopback mode for self test. 
+
+Definition at line 497 of file sci.\+c.
+
+
+\begin{DoxyCode}
+498 \{
+499 \textcolor{comment}{/* USER CODE BEGIN (19) */}
+500 \textcolor{comment}{/* USER CODE END */}
+501     
+502     \textcolor{comment}{/* Clear Loopback incase enabled already */}
+503     sci->IODFTCTRL = 0U;
+504     
+505     \textcolor{comment}{/* Enable Loopback either in Analog or Digital Mode */}
+506     sci->IODFTCTRL = (uint32)0x00000A00U
+507                    | (uint32)((uint32)Loopbacktype << 1U);
+508     
+509 \textcolor{comment}{/* USER CODE BEGIN (20) */}
+510 \textcolor{comment}{/* USER CODE END */}
+511 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_gad14ca1b90c313254407d318eceaa1f46}\label{group__SCI_gad14ca1b90c313254407d318eceaa1f46}} 
+\index{S\+CI@{S\+CI}!sci\+Enable\+Notification@{sci\+Enable\+Notification}}
+\index{sci\+Enable\+Notification@{sci\+Enable\+Notification}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Enable\+Notification()}{sciEnableNotification()}}
+{\footnotesize\ttfamily sci\+Enable\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Enable interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Interrupts to be enabled, can be ored value of\+: S\+C\+I\+\_\+\+F\+E\+\_\+\+I\+NT -\/ framing error, S\+C\+I\+\_\+\+O\+E\+\_\+\+I\+NT -\/ overrun error, S\+C\+I\+\_\+\+P\+E\+\_\+\+I\+NT -\/ parity error, S\+C\+I\+\_\+\+R\+X\+\_\+\+I\+NT -\/ receive buffer ready, S\+C\+I\+\_\+\+T\+X\+\_\+\+I\+NT -\/ transmit buffer ready, S\+C\+I\+\_\+\+W\+A\+K\+E\+\_\+\+I\+NT -\/ wakeup, S\+C\+I\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT -\/ break detect \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 549 of file sci.\+c.
+
+
+
+References sci\+R\+EG.
+
+
+\begin{DoxyCode}
+550 \{
+551     uint32 index = (sci == \mbox{\hyperlink{reg__sci_8h_acdc43faa5b34a7b497da4941e225e3ad}{sciREG}}) ? 0U : 1U;
+552 
+553 \textcolor{comment}{/* USER CODE BEGIN (23) */}
+554 \textcolor{comment}{/* USER CODE END */}
+555 
+556     g\_sciTransfer\_t[index].mode |= (flags & (uint32)SCI\_TX\_INT);
+557     sci->SETINT                = (flags & (uint32)(~(uint32)(SCI\_TX\_INT)));
+558 
+559 \textcolor{comment}{/* USER CODE BEGIN (24) */}
+560 \textcolor{comment}{/* USER CODE END */}
+561 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga695b0bd0cb87fd2a0542f784fc94aa06}\label{group__SCI_ga695b0bd0cb87fd2a0542f784fc94aa06}} 
+\index{S\+CI@{S\+CI}!sci\+Enter\+Reset\+State@{sci\+Enter\+Reset\+State}}
+\index{sci\+Enter\+Reset\+State@{sci\+Enter\+Reset\+State}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Enter\+Reset\+State()}{sciEnterResetState()}}
+{\footnotesize\ttfamily sci\+Enter\+Reset\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci }\end{DoxyParamCaption})}
+
+
+
+Enter reset state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The S\+CI should only be configured while in reset state 
+\end{DoxyNote}
+
+
+Definition at line 601 of file sci.\+c.
+
+
+\begin{DoxyCode}
+602 \{
+603     sci->GCR1 &= 0xFFFFFF7FU;
+604 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_gae8a1d6b7274ed1af263d57fab032096a}\label{group__SCI_gae8a1d6b7274ed1af263d57fab032096a}} 
+\index{S\+CI@{S\+CI}!sci\+Init@{sci\+Init}}
+\index{sci\+Init@{sci\+Init}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Init()}{sciInit()}}
+{\footnotesize\ttfamily void sci\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the S\+CI Driver. 
+
+This function initializes the S\+CI module. {\bfseries initialize} {\bfseries S\+C\+I\+L\+IN} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item bring S\+CI out of reset ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Disable all interrupts ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item global control 1 ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set baudrate ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item transmission length ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set S\+CI pins functional mode ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set S\+CI pins default output value ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set S\+CI pins output direction ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set S\+CI pins open drain enable ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set S\+CI pins pullup/pulldown enable ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set S\+CI pins pullup/pulldown select ~\newline
+~\newline
+~\newline
+~\newline
+
+\item set interrupt level ~\newline
+~\newline
+~\newline
+
+\item set interrupt enable ~\newline
+~\newline
+
+\item initialize global transfer variables ~\newline
+
+\item Finaly start S\+C\+I\+L\+IN 
+\end{DoxyItemize}
+
+Definition at line 74 of file sci.\+c.
+
+
+
+References scilin\+R\+EG.
+
+
+\begin{DoxyCode}
+75 \{
+76 \textcolor{comment}{/* USER CODE BEGIN (2) */}
+77 \textcolor{comment}{/* USER CODE END */}
+78 
+79 
+81 
+83     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->GCR0 = 0U;
+84     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->GCR0 = 1U;
+85 
+87     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->CLEARINT    = 0xFFFFFFFFU;
+88     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->CLEARINTLVL = 0xFFFFFFFFU;
+89 
+91     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->GCR1 = (uint32)((uint32)1U << 25U)  \textcolor{comment}{/* enable transmit */}
+92                     | (uint32)((uint32)1U << 24U)  \textcolor{comment}{/* enable receive */}
+93                     | (uint32)((uint32)1U << 5U)   \textcolor{comment}{/* internal clock (device has no clock pin) */}
+94                     | (uint32)((uint32)(2U-1U) << 4U)  \textcolor{comment}{/* number of stop bits */}
+95                     | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* even parity, otherwise odd */}
+96                     | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* enable parity */}
+97                     | (uint32)((uint32)1U << 1U);  \textcolor{comment}{/* asynchronous timing mode */}
+98                     
+100     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->BRS = 520U;  \textcolor{comment}{/* baudrate */}
+101 
+103     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->FORMAT = 8U - 1U;  \textcolor{comment}{/* length */}
+104 
+106     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO0 = (uint32)((uint32)1U << 2U)  \textcolor{comment}{/* tx pin */}
+107                     | (uint32)((uint32)1U << 1U); \textcolor{comment}{/* rx pin */}
+108 
+109 
+111     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO3 = (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* tx pin */}
+112                     | (uint32)((uint32)0U << 1U); \textcolor{comment}{/* rx pin */}
+113 
+114 
+116     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO1 = (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* tx pin */}
+117                     | (uint32)((uint32)0U << 1U); \textcolor{comment}{/* rx pin */}
+118 
+119 
+121     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO6 = (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* tx pin */}
+122                     | (uint32)((uint32)0U << 1U); \textcolor{comment}{/* rx pin */}
+123 
+124 
+126     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO7 = (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* tx pin */}
+127                     | (uint32)((uint32)0U << 1U); \textcolor{comment}{/* rx pin */}
+128 
+129 
+131     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO8 = (uint32)((uint32)1U << 2U)  \textcolor{comment}{/* tx pin */}
+132                     | (uint32)((uint32)1U << 1U); \textcolor{comment}{/* rx pin */}
+133 
+134 
+136     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->SETINTLVL = (uint32)((uint32)0U << 26U)  \textcolor{comment}{/* Framing error */}
+137                          | (uint32)((uint32)0U << 25U)  \textcolor{comment}{/* Overrun error */}
+138                          | (uint32)((uint32)0U << 24U)  \textcolor{comment}{/* Parity error */}
+139                          | (uint32)((uint32)0U << 9U)  \textcolor{comment}{/* Receive */}
+140                          | (uint32)((uint32)0U << 8U)  \textcolor{comment}{/* Transmit */}
+141                          | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Wakeup */}
+142                          | (uint32)((uint32)0U);  \textcolor{comment}{/* Break detect */}
+143 
+145     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->SETINT = (uint32)((uint32)0U << 26U)  \textcolor{comment}{/* Framing error */}
+146                       | (uint32)((uint32)0U << 25U)  \textcolor{comment}{/* Overrun error */}
+147                       | (uint32)((uint32)0U << 24U)  \textcolor{comment}{/* Parity error */}
+148                       | (uint32)((uint32)0U << 9U)  \textcolor{comment}{/* Receive */}
+149                       | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Wakeup */}
+150                       | (uint32)((uint32)0U);  \textcolor{comment}{/* Break detect */}
+151 
+153     g\_sciTransfer\_t[1U].mode   = (uint32)0U << 8U;
+154     g\_sciTransfer\_t[1U].tx\_length = 0U;
+155     g\_sciTransfer\_t[1U].rx\_length = 0U;
+156 
+158     \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->GCR1 |= 0x80U;
+159 
+160 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+161 \textcolor{comment}{/* USER CODE END */}
+162 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_gabb100a9163984ca6c9a69133b8eba657}\label{group__SCI_gabb100a9163984ca6c9a69133b8eba657}} 
+\index{S\+CI@{S\+CI}!sci\+Is\+Idle\+Detected@{sci\+Is\+Idle\+Detected}}
+\index{sci\+Is\+Idle\+Detected@{sci\+Is\+Idle\+Detected}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Is\+Idle\+Detected()}{sciIsIdleDetected()}}
+{\footnotesize\ttfamily uint32 sci\+Is\+Idle\+Detected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci }\end{DoxyParamCaption})}
+
+
+
+Check if Idle Period is Detected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Idle flag
+\end{DoxyReturn}
+Checks to see if the S\+CI Idle flag is set, returns 0 if idle period has been detected and S\+CI is ready to receive, otherwise returns the Idle flag itself. 
+
+Definition at line 371 of file sci.\+c.
+
+
+\begin{DoxyCode}
+372 \{
+373 \textcolor{comment}{/* USER CODE BEGIN (14) */}
+374 \textcolor{comment}{/* USER CODE END */}
+375 
+376     \textcolor{keywordflow}{return} sci->FLR & (uint32)\mbox{\hyperlink{sci_8h_a5de218ffb0fa4e61fd665367767055bb}{SCI\_IDLE}};
+377 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga030ca3a9ad5bf48a7215be9d4078ad49}\label{group__SCI_ga030ca3a9ad5bf48a7215be9d4078ad49}} 
+\index{S\+CI@{S\+CI}!sci\+Is\+Rx\+Ready@{sci\+Is\+Rx\+Ready}}
+\index{sci\+Is\+Rx\+Ready@{sci\+Is\+Rx\+Ready}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Is\+Rx\+Ready()}{sciIsRxReady()}}
+{\footnotesize\ttfamily uint32 sci\+Is\+Rx\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci }\end{DoxyParamCaption})}
+
+
+
+Check if Rx buffer full. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Rx ready flag
+\end{DoxyReturn}
+Checks to see if the Rx buffer full flag is set, returns 0 is flags not set otherwise will return the Rx flag itself. 
+
+Definition at line 351 of file sci.\+c.
+
+
+\begin{DoxyCode}
+352 \{
+353 \textcolor{comment}{/* USER CODE BEGIN (13) */}
+354 \textcolor{comment}{/* USER CODE END */}
+355 
+356     \textcolor{keywordflow}{return} sci->FLR & (uint32)SCI\_RX\_INT;
+357 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_gaafd91cc5c28a92fa211e96e06b3fc34c}\label{group__SCI_gaafd91cc5c28a92fa211e96e06b3fc34c}} 
+\index{S\+CI@{S\+CI}!sci\+Is\+Tx\+Ready@{sci\+Is\+Tx\+Ready}}
+\index{sci\+Is\+Tx\+Ready@{sci\+Is\+Tx\+Ready}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Is\+Tx\+Ready()}{sciIsTxReady()}}
+{\footnotesize\ttfamily uint32 sci\+Is\+Tx\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci }\end{DoxyParamCaption})}
+
+
+
+Check if Tx buffer empty. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The TX ready flag
+\end{DoxyReturn}
+Checks to see if the Tx buffer ready flag is set, returns 0 is flags not set otherwise will return the Tx flag itself. 
+
+Definition at line 231 of file sci.\+c.
+
+
+\begin{DoxyCode}
+232 \{
+233 \textcolor{comment}{/* USER CODE BEGIN (8) */}
+234 \textcolor{comment}{/* USER CODE END */}
+235 
+236     \textcolor{keywordflow}{return} sci->FLR & (uint32)SCI\_TX\_INT;
+237 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga2418574fe9c3d642db1f134926ac6934}\label{group__SCI_ga2418574fe9c3d642db1f134926ac6934}} 
+\index{S\+CI@{S\+CI}!scilin\+Get\+Config\+Value@{scilin\+Get\+Config\+Value}}
+\index{scilin\+Get\+Config\+Value@{scilin\+Get\+Config\+Value}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{scilin\+Get\+Config\+Value()}{scilinGetConfigValue()}}
+{\footnotesize\ttfamily void scilin\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsci__config__reg}{sci\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the S\+C\+I\+L\+IN ( S\+C\+I2) configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 638 of file sci.\+c.
+
+
+\begin{DoxyCode}
+639 \{
+640     \textcolor{keywordflow}{if} (type == InitialValue)
+641     \{
+642         config\_reg->CONFIG\_GCR0      = SCILIN\_GCR0\_CONFIGVALUE;
+643         config\_reg->CONFIG\_GCR1      = SCILIN\_GCR1\_CONFIGVALUE;
+644         config\_reg->CONFIG\_SETINT    = SCILIN\_SETINT\_CONFIGVALUE;
+645         config\_reg->CONFIG\_SETINTLVL = SCILIN\_SETINTLVL\_CONFIGVALUE;
+646         config\_reg->CONFIG\_FORMAT    = SCILIN\_FORMAT\_CONFIGVALUE;
+647         config\_reg->CONFIG\_BRS       = SCILIN\_BRS\_CONFIGVALUE;
+648         config\_reg->CONFIG\_PIO0      = SCILIN\_PIO0\_CONFIGVALUE;
+649         config\_reg->CONFIG\_PIO1      = SCILIN\_PIO1\_CONFIGVALUE;
+650         config\_reg->CONFIG\_PIO6      = SCILIN\_PIO6\_CONFIGVALUE;
+651         config\_reg->CONFIG\_PIO7      = SCILIN\_PIO7\_CONFIGVALUE;
+652         config\_reg->CONFIG\_PIO8      = SCILIN\_PIO8\_CONFIGVALUE; 
+653     \}
+654     \textcolor{keywordflow}{else}
+655     \{
+656     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+657         config\_reg->CONFIG\_GCR0      = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->GCR0;
+658         config\_reg->CONFIG\_GCR1      = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->GCR1; 
+659         config\_reg->CONFIG\_SETINT    = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->SETINT; 
+660         config\_reg->CONFIG\_SETINTLVL = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->SETINTLVL; 
+661         config\_reg->CONFIG\_FORMAT    = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->FORMAT; 
+662         config\_reg->CONFIG\_BRS       = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->BRS; 
+663         config\_reg->CONFIG\_PIO0      = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO0; 
+664         config\_reg->CONFIG\_PIO1      = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO1; 
+665         config\_reg->CONFIG\_PIO6      = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO6; 
+666         config\_reg->CONFIG\_PIO7      = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO7;     
+667         config\_reg->CONFIG\_PIO8      = \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilinREG}}->PIO8; 
+668     \}
+669 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_gac25800424a38ab1b3b0960f6b7cc4bc8}\label{group__SCI_gac25800424a38ab1b3b0960f6b7cc4bc8}} 
+\index{S\+CI@{S\+CI}!sci\+Notification@{sci\+Notification}}
+\index{sci\+Notification@{sci\+Notification}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Notification()}{sciNotification()}}
+{\footnotesize\ttfamily void sci\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ copy of error interrupt flags\\
+\hline
+\end{DoxyParams}
+This is a callback that is provided by the application and is called upon an interrupt. The parameter passed to the callback is a copy of the interrupt flag register. 
+
+Definition at line 160 of file notification.\+c.
+
+
+\begin{DoxyCode}
+161 \{
+162 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+163 \textcolor{comment}{/* USER CODE BEGIN (29) */}
+164 \textcolor{comment}{/* USER CODE END */}
+165 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga2452fb07e6ad52632e100fed774f9087}\label{group__SCI_ga2452fb07e6ad52632e100fed774f9087}} 
+\index{S\+CI@{S\+CI}!sci\+Receive@{sci\+Receive}}
+\index{sci\+Receive@{sci\+Receive}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Receive()}{sciReceive()}}
+{\footnotesize\ttfamily void sci\+Receive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint32}]{length,  }\item[{uint8 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Receive Data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em length} & -\/ number of data words to transfer \\
+\hline
+\mbox{\tt in}  & {\em data} & -\/ pointer to data buffer to receive data\\
+\hline
+\end{DoxyParams}
+Receive a block of \textquotesingle{}length\textquotesingle{} bytes long and place it into the data buffer pointed to by \textquotesingle{}data\textquotesingle{}. If interrupts have been enabled the data is received using interrupt mode, otherwise polling mode is used. In interrupt mode receive is setup and the routine returns immediately, sci\+Receive must not be called again until the transfer is complete, when the sci\+Notification callback will be called. In polling mode, sci\+Receive will not return until the transfer is complete. 
+
+Definition at line 450 of file sci.\+c.
+
+
+\begin{DoxyCode}
+451 \{
+452 \textcolor{comment}{/* USER CODE BEGIN (17) */}
+453 \textcolor{comment}{/* USER CODE END */}
+454 
+455     \textcolor{keywordflow}{if} ((sci->SETINT & (uint32)SCI\_RX\_INT) == (uint32)SCI\_RX\_INT)
+456     \{
+457         \textcolor{comment}{/* we are in interrupt mode */}
+458         uint32 index = (sci == \mbox{\hyperlink{reg__sci_8h_acdc43faa5b34a7b497da4941e225e3ad}{sciREG}}) ? 0U : 1U;
+459         
+460         \textcolor{comment}{/* clear error flags */}
+461         sci->FLR = ((uint32) SCI\_FE\_INT | (uint32) SCI\_OE\_INT | (uint32) SCI\_PE\_INT);
+462 
+463         g\_sciTransfer\_t[index].rx\_length = length;
+464         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+465         g\_sciTransfer\_t[index].rx\_data   = data;
+466     \}
+467     \textcolor{keywordflow}{else}
+468     \{   
+469         \textcolor{keywordflow}{while} (length > 0U)
+470         \{
+471             \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check
+       for execution sequence" */}
+472             \textcolor{keywordflow}{while} ((sci->FLR & (uint32)SCI\_RX\_INT) == 0U) 
+473             \{ 
+474             \} \textcolor{comment}{/* Wait */}
+475             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+476             *data = (uint8)(sci->RD & 0x000000FFU);
+477             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+478             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+479             data++;
+480             length--;
+481         \}
+482     \}
+483 \textcolor{comment}{/* USER CODE BEGIN (18) */}
+484 \textcolor{comment}{/* USER CODE END */}
+485 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_gaec2932431dfdcdef7c3aba3da9cf4fe7}\label{group__SCI_gaec2932431dfdcdef7c3aba3da9cf4fe7}} 
+\index{S\+CI@{S\+CI}!sci\+Receive\+Byte@{sci\+Receive\+Byte}}
+\index{sci\+Receive\+Byte@{sci\+Receive\+Byte}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Receive\+Byte()}{sciReceiveByte()}}
+{\footnotesize\ttfamily uint32 sci\+Receive\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci }\end{DoxyParamCaption})}
+
+
+
+Receive Byte. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Received byte
+\end{DoxyReturn}
+Receives a single byte in polling mode. If there is not a byte in the receive buffer the routine will wait until one is received. Use sci\+Is\+Rx\+Ready to check to see if the buffer is full to avoid waiting. 
+
+Definition at line 418 of file sci.\+c.
+
+
+\begin{DoxyCode}
+419 \{
+420 \textcolor{comment}{/* USER CODE BEGIN (16) */}
+421 \textcolor{comment}{/* USER CODE END */}
+422 
+423     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+424     \textcolor{keywordflow}{while} ((sci->FLR & (uint32)SCI\_RX\_INT) == 0U) 
+425     \{ 
+426     \} \textcolor{comment}{/* Wait */}
+427 
+428     \textcolor{keywordflow}{return} (sci->RD & (uint32)0x000000FFU);
+429 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga36cb42a55bca0fe4e76f3b994fb6dfc4}\label{group__SCI_ga36cb42a55bca0fe4e76f3b994fb6dfc4}} 
+\index{S\+CI@{S\+CI}!sci\+Rx\+Error@{sci\+Rx\+Error}}
+\index{sci\+Rx\+Error@{sci\+Rx\+Error}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Rx\+Error()}{sciRxError()}}
+{\footnotesize\ttfamily uint32 sci\+Rx\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci }\end{DoxyParamCaption})}
+
+
+
+Return Rx Error flags. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Rx error flags
+\end{DoxyReturn}
+Returns the Rx framing, overrun and parity errors flags, also clears the error flags before returning. 
+
+Definition at line 392 of file sci.\+c.
+
+
+\begin{DoxyCode}
+393 \{
+394     uint32 status = (sci->FLR & ((uint32)SCI\_FE\_INT | (uint32)SCI\_OE\_INT |(uint32)SCI\_PE\_INT));
+395 
+396 \textcolor{comment}{/* USER CODE BEGIN (15) */}
+397 \textcolor{comment}{/* USER CODE END */}
+398 
+399     sci->FLR = ((uint32)SCI\_FE\_INT | (uint32)SCI\_OE\_INT | (uint32)SCI\_PE\_INT);
+400     \textcolor{keywordflow}{return} status;
+401 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga0a24e75961adf4102892d78e9620c042}\label{group__SCI_ga0a24e75961adf4102892d78e9620c042}} 
+\index{S\+CI@{S\+CI}!sci\+Send@{sci\+Send}}
+\index{sci\+Send@{sci\+Send}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Send()}{sciSend()}}
+{\footnotesize\ttfamily void sci\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint32}]{length,  }\item[{uint8 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Send Data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em length} & -\/ number of data words to transfer \\
+\hline
+\mbox{\tt in}  & {\em data} & -\/ pointer to data to send\\
+\hline
+\end{DoxyParams}
+Send a block of data pointed to by \textquotesingle{}data\textquotesingle{} and \textquotesingle{}length\textquotesingle{} bytes long. If interrupts have been enabled the data is sent using interrupt mode, otherwise polling mode is used. In interrupt mode transmission of the first byte is started and the routine returns immediately, sci\+Send must not be called again until the transfer is complete, when the sci\+Notification callback will be called. In polling mode, sci\+Send will not return until the transfer is complete.
+
+\begin{DoxyNote}{Note}
+if data word is less than 8 bits, then the data must be left aligned in the data byte. 
+\end{DoxyNote}
+
+
+Definition at line 290 of file sci.\+c.
+
+
+
+References sci\+R\+EG.
+
+
+\begin{DoxyCode}
+291 \{
+292     uint32 index = (sci == \mbox{\hyperlink{reg__sci_8h_acdc43faa5b34a7b497da4941e225e3ad}{sciREG}}) ? 0U : 1U;
+293     uint8 txdata;
+294     
+295 \textcolor{comment}{/* USER CODE BEGIN (11) */}
+296 \textcolor{comment}{/* USER CODE END */}
+297 \textcolor{comment}{/*SAFETYMCUSW 139 S MR:13.7 <APPROVED> "Mode variable is configured in sciEnableNotification()" */}
+298     \textcolor{keywordflow}{if} ((g\_sciTransfer\_t[index].mode & (uint32)SCI\_TX\_INT) != 0U)
+299     \{
+300         \textcolor{comment}{/* we are in interrupt mode */}
+301         
+302         g\_sciTransfer\_t[index].tx\_length = length;
+303         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+304         g\_sciTransfer\_t[index].tx\_data   = data;
+305 
+306         \textcolor{comment}{/* start transmit by sending first byte */}        
+307         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+308         txdata = *g\_sciTransfer\_t[index].tx\_data;
+309         sci->TD     = (uint32)(txdata);
+310         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+311         \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+312         g\_sciTransfer\_t[index].tx\_data++;
+313         sci->SETINT = (uint32)SCI\_TX\_INT;
+314     \}
+315     \textcolor{keywordflow}{else}
+316     \{
+317         \textcolor{comment}{/* send the data */}
+318         \textcolor{keywordflow}{while} (length > 0U)
+319         \{
+320             \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check
+       for execution sequence" */}
+321             \textcolor{keywordflow}{while} ((sci->FLR & (uint32)SCI\_TX\_INT) == 0U)
+322             \{ 
+323             \} \textcolor{comment}{/* Wait */}
+324             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+325             txdata = *data;
+326             sci->TD = (uint32)(txdata);
+327             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+328             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+329             data++;
+330             length--;
+331         \}
+332     \}
+333 
+334 \textcolor{comment}{/* USER CODE BEGIN (12) */}
+335 \textcolor{comment}{/* USER CODE END */}
+336 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga8803e9ddc05ea93c80a768d0fc0eab16}\label{group__SCI_ga8803e9ddc05ea93c80a768d0fc0eab16}} 
+\index{S\+CI@{S\+CI}!sci\+Send\+Byte@{sci\+Send\+Byte}}
+\index{sci\+Send\+Byte@{sci\+Send\+Byte}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Send\+Byte()}{sciSendByte()}}
+{\footnotesize\ttfamily void sci\+Send\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint8}]{byte }\end{DoxyParamCaption})}
+
+
+
+Send Byte. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em byte} & -\/ byte to transfer\\
+\hline
+\end{DoxyParams}
+Sends a single byte in polling mode, will wait in the routine until the transmit buffer is empty before sending the byte. Use sci\+Is\+Tx\+Ready to check for Tx buffer empty before calling sci\+Send\+Byte to avoid waiting. 
+
+Definition at line 253 of file sci.\+c.
+
+
+\begin{DoxyCode}
+254 \{
+255 \textcolor{comment}{/* USER CODE BEGIN (9) */}
+256 \textcolor{comment}{/* USER CODE END */}
+257 
+258     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+259     \textcolor{keywordflow}{while} ((sci->FLR & (uint32)SCI\_TX\_INT) == 0U) 
+260     \{ 
+261     \} \textcolor{comment}{/* Wait */}
+262     sci->TD = byte;
+263 
+264 \textcolor{comment}{/* USER CODE BEGIN (10) */}
+265 \textcolor{comment}{/* USER CODE END */}
+266 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga35d4f604e2151ca596b1e0fcca6f5606}\label{group__SCI_ga35d4f604e2151ca596b1e0fcca6f5606}} 
+\index{S\+CI@{S\+CI}!sci\+Set\+Baudrate@{sci\+Set\+Baudrate}}
+\index{sci\+Set\+Baudrate@{sci\+Set\+Baudrate}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Set\+Baudrate()}{sciSetBaudrate()}}
+{\footnotesize\ttfamily void sci\+Set\+Baudrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint32}]{baud }\end{DoxyParamCaption})}
+
+
+
+Change baudrate at runtime. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em baud} & -\/ baudrate in Hz\\
+\hline
+\end{DoxyParams}
+Change the S\+CI baudrate at runtime. 
+
+Definition at line 199 of file sci.\+c.
+
+
+\begin{DoxyCode}
+200 \{
+201     float64 vclk = 80.000 * 1000000.0;
+202     uint32 f = ((sci->GCR1 & 2U) == 2U) ? 16U : 1U;
+203     uint32 temp;
+204     float64 temp2;
+205 \textcolor{comment}{/* USER CODE BEGIN (6) */}
+206 \textcolor{comment}{/* USER CODE END */}
+207 
+208     \textcolor{comment}{/*SAFETYMCUSW 96 S MR:6.1 <APPROVED> "Calculations including int and float cannot be avoided" */}
+209     temp = (f*(baud));
+210     temp2 = ((vclk)/((float64)temp))-1U;
+211     temp2 = floor(temp2 + 0.5);        \textcolor{comment}{/* Rounding-off to the closest integer */}
+212     sci->BRS = (uint32)((uint32)temp2 & 0x00FFFFFFU);
+213 
+214 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+215 \textcolor{comment}{/* USER CODE END */}
+216 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__SCI_ga2bf2ae4e9ca71949190dd967b406b931}\label{group__SCI_ga2bf2ae4e9ca71949190dd967b406b931}} 
+\index{S\+CI@{S\+CI}!sci\+Set\+Functional@{sci\+Set\+Functional}}
+\index{sci\+Set\+Functional@{sci\+Set\+Functional}!S\+CI@{S\+CI}}
+\subsubsection{\texorpdfstring{sci\+Set\+Functional()}{sciSetFunctional()}}
+{\footnotesize\ttfamily void sci\+Set\+Functional (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$}]{sci,  }\item[{uint32}]{port }\end{DoxyParamCaption})}
+
+
+
+Change functional behavior of pins at runtime. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sci} & -\/ sci module base address \\
+\hline
+\mbox{\tt in}  & {\em port} & -\/ Value to write to P\+I\+O0 register\\
+\hline
+\end{DoxyParams}
+Change the value of the P\+C\+P\+I\+O0 register at runtime, this allows to dynamically change the functionality of the S\+CI pins between functional and G\+IO mode. 
+
+Definition at line 177 of file sci.\+c.
+
+
+\begin{DoxyCode}
+178 \{
+179 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+180 \textcolor{comment}{/* USER CODE END */}
+181 
+182     sci->PIO0 = port;
+183 
+184 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+185 \textcolor{comment}{/* USER CODE END */}
+186 \}
+\end{DoxyCode}

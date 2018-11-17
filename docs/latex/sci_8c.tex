@@ -1,0 +1,65 @@
+\hypertarget{sci_8c}{}\section{source/sci.c File Reference}
+\label{sci_8c}\index{source/sci.\+c@{source/sci.\+c}}
+
+
+S\+CI Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}sci.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+vim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries g\+\_\+sci\+Transfer}
+\begin{DoxyCompactList}\small\item\em Interrupt mode globals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__SCI_gae8a1d6b7274ed1af263d57fab032096a}{sci\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+CI Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga2bf2ae4e9ca71949190dd967b406b931}{sci\+Set\+Functional}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 port)
+\begin{DoxyCompactList}\small\item\em Change functional behavior of pins at runtime. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga35d4f604e2151ca596b1e0fcca6f5606}{sci\+Set\+Baudrate}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 baud)
+\begin{DoxyCompactList}\small\item\em Change baudrate at runtime. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gaafd91cc5c28a92fa211e96e06b3fc34c}{sci\+Is\+Tx\+Ready}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Tx buffer empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga8803e9ddc05ea93c80a768d0fc0eab16}{sci\+Send\+Byte}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint8 byte)
+\begin{DoxyCompactList}\small\item\em Send Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga0a24e75961adf4102892d78e9620c042}{sci\+Send}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Send Data. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_ga030ca3a9ad5bf48a7215be9d4078ad49}{sci\+Is\+Rx\+Ready}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Rx buffer full. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gabb100a9163984ca6c9a69133b8eba657}{sci\+Is\+Idle\+Detected}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Idle Period is Detected. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_ga36cb42a55bca0fe4e76f3b994fb6dfc4}{sci\+Rx\+Error}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Return Rx Error flags. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gaec2932431dfdcdef7c3aba3da9cf4fe7}{sci\+Receive\+Byte}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Receive Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga2452fb07e6ad52632e100fed774f9087}{sci\+Receive}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Receive Data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga36302e2a67c26b3557c66ccb267c1760}{sci\+Enable\+Loopback}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gae6568eda24f29b1b31bd09a5f665b5f8}{sci\+Disable\+Loopback}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gad14ca1b90c313254407d318eceaa1f46}{sci\+Enable\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Enable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga9f1a39a5272682dbd101ddcbbbdc8193}{sci\+Disable\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Disable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga695b0bd0cb87fd2a0542f784fc94aa06}{sci\+Enter\+Reset\+State}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Enter reset state. \end{DoxyCompactList}\item 
+void {\bfseries sci\+Exit\+Reset\+State} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\item 
+void \mbox{\hyperlink{group__SCI_ga2418574fe9c3d642db1f134926ac6934}{scilin\+Get\+Config\+Value}} (\mbox{\hyperlink{structsci__config__reg}{sci\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the S\+C\+I\+L\+IN ( S\+C\+I2) configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+CI Driver Implementation File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}

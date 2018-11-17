@@ -1,0 +1,27 @@
+var structecmp__format =
+[
+    [ "__pad0__", "structecmp__format.html#ab7ec107226dee4cbc3e44ce430f55f7e", null ],
+    [ "__pad1__", "structecmp__format.html#a1e6e44a80b7d3c0b63eb8e090c2b1f05", null ],
+    [ "__pad2__", "structecmp__format.html#a93705ef431410534a5dda38ef3e54267", null ],
+    [ "__pad3__", "structecmp__format.html#a59eca67fc8549f187c833df97dc2b2ad", null ],
+    [ "__pad4__", "structecmp__format.html#a576f32a4b371aee6d2a402ee473bfb94", null ],
+    [ "ab_register_select", "structecmp__format.html#ac23dc635003464a9df1f9f13057df3b5", null ],
+    [ "angle_compare", "structecmp__format.html#ae9a333f0b719d075362e248a83c5a252", null ],
+    [ "auto_read_clear", "structecmp__format.html#a86079505c9e4bb0b845906288eede7a0", null ],
+    [ "brk", "structecmp__format.html#a265c501c3639c05975fcd3d88cdb0cbf", null ],
+    [ "cond_addr", "structecmp__format.html#a8501f2fcaae9943240dc77ae682f76c0", null ],
+    [ "data", "structecmp__format.html#a23a09a402e0918b104d542388ff8bfbe", null ],
+    [ "en_pin_action", "structecmp__format.html#acaf0f63e06d665755a61ed2cb0f978c8", null ],
+    [ "hr_data", "structecmp__format.html#aa1a983aa97e63b8324ebe83e2739cf5c", null ],
+    [ "hr_lr", "structecmp__format.html#af214d7000633ac7515cc332b5dedd093", null ],
+    [ "interrupt_enable", "structecmp__format.html#a45cb694474c096f7a7620c767efbbfc1", null ],
+    [ "next_program_address", "structecmp__format.html#ab815f2a36184b54ffaa3d58a04bf5fc1", null ],
+    [ "op_code", "structecmp__format.html#adb4fe2ed88cc4b9c664a4feb16a27521", null ],
+    [ "opposite_action", "structecmp__format.html#ab07eb53768008c44d2606f915f249f52", null ],
+    [ "pin_action", "structecmp__format.html#a6c75993a06ecb23aaf463d7206bd87da", null ],
+    [ "pin_select", "structecmp__format.html#a1096d477bacd744aab1faba41bc8d4ef", null ],
+    [ "reqnum", "structecmp__format.html#a749bcc7b830119e45dd1707687088db1", null ],
+    [ "request", "structecmp__format.html#aebd1d18b29fbdde923ae6f0a75cb19e9", null ],
+    [ "sub_opcode", "structecmp__format.html#a107b873c722cb3fdd83c5e60b70912da", null ],
+    [ "t_register_select", "structecmp__format.html#a10f98ec17b0974ffa9f639bbb22632a3", null ]
+];

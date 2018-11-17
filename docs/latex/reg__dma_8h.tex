@@ -1,0 +1,60 @@
+\hypertarget{reg__dma_8h}{}\section{include/reg\+\_\+dma.h File Reference}
+\label{reg__dma_8h}\index{include/reg\+\_\+dma.\+h@{include/reg\+\_\+dma.\+h}}
+
+
+D\+MA Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdmaBase}{dma\+Base}}
+\begin{DoxyCompactList}\small\item\em D\+MA Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dma\+R\+EG}}~((\mbox{\hyperlink{structdmaBASE__t}{dma\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F000\+U)
+\begin{DoxyCompactList}\small\item\em D\+M\+A1 Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__dma_8h_a0de3c1774844ad1868ac2e4196d71aa4}\label{reg__dma_8h_a0de3c1774844ad1868ac2e4196d71aa4}} 
+typedef volatile struct \mbox{\hyperlink{structdmaBase}{dma\+Base}} {\bfseries dma\+B\+A\+S\+E\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+MA Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the D\+MA driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}\label{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}} 
+\index{reg\+\_\+dma.\+h@{reg\+\_\+dma.\+h}!dma\+R\+EG@{dma\+R\+EG}}
+\index{dma\+R\+EG@{dma\+R\+EG}!reg\+\_\+dma.\+h@{reg\+\_\+dma.\+h}}
+\subsubsection{\texorpdfstring{dma\+R\+EG}{dmaREG}}
+{\footnotesize\ttfamily \#define dma\+R\+EG~((\mbox{\hyperlink{structdmaBASE__t}{dma\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F000\+U)}
+
+
+
+D\+M\+A1 Register Frame Pointer. 
+
+This pointer is used by the D\+MA driver to access the D\+MA module registers. 
+
+Definition at line 176 of file reg\+\_\+dma.\+h.
+
+
+
+Referenced by dma\+Define\+Region(), dma\+Disable(), dma\+Disable\+Interrupt(), dma\+Disable\+Parity\+Check(), dma\+Disable\+Region(), dma\+Enable(), dma\+Enable\+Interrupt(), dma\+Enable\+Parity\+Check(), dma\+Enable\+Region(), dma\+Get\+Req(), dma\+Req\+Assign(), dma\+Set\+Ch\+Enable(), and dma\+Set\+Priority().
+

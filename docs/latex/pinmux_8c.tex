@@ -1,0 +1,83 @@
+\hypertarget{pinmux_8c}{}\section{source/pinmux.c File Reference}
+\label{pinmux_8c}\index{source/pinmux.\+c@{source/pinmux.\+c}}
+
+
+P\+I\+N\+M\+UX Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}pinmux.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pinmux_8c_a0659e17801bb265827b9c452d635e86c}\label{pinmux_8c_a0659e17801bb265827b9c452d635e86c}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+S\+ET}(R\+EG,  P\+I\+N\+N\+UM,  M\+UX)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+MR\#\#R\+EG = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+MR\#\#R\+EG \& P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\#\#P\+I\+N\+N\+UM\#\#\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\#\#P\+I\+N\+N\+UM\#\#\+\_\+\#\#M\+UX))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a7750681db79c13e721d759c396b47ced}\label{pinmux_8c_a7750681db79c13e721d759c396b47ced}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+G\+A\+T\+E\+\_\+\+E\+M\+I\+F\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}(state)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R29 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R29 \& P\+I\+N\+M\+U\+X\+\_\+\+G\+A\+T\+E\+\_\+\+E\+M\+I\+F\+\_\+\+C\+L\+K\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+G\+A\+T\+E\+\_\+\+E\+M\+I\+F\+\_\+\+C\+L\+K\+\_\+\#\#state))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a9e6c5c26c0f1a0d5f9e12f59136e9e02}\label{pinmux_8c_a9e6c5c26c0f1a0d5f9e12f59136e9e02}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+G\+I\+O\+B\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+H\+E\+T2\+\_\+\+E\+N\+A\+B\+LE}(state)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R29 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R29 \& P\+I\+N\+M\+U\+X\+\_\+\+G\+I\+O\+B\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+H\+E\+T2\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+G\+I\+O\+B\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+H\+E\+T2\+\_\+\#\#state))
+\item 
+\mbox{\Hypertarget{pinmux_8c_ac320cac5f9d3df53fc90620f52e7aebe}\label{pinmux_8c_ac320cac5f9d3df53fc90620f52e7aebe}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+A\+L\+T\+\_\+\+A\+D\+C\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+S\+E\+L\+E\+CT}(num)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R30 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R30 \& P\+I\+N\+M\+U\+X\+\_\+\+A\+L\+T\+\_\+\+A\+D\+C\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+A\+L\+T\+\_\+\+A\+D\+C\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\#\#num))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a1e9245608b0453c97b3f0ce936853294}\label{pinmux_8c_a1e9245608b0453c97b3f0ce936853294}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+S\+E\+L\+E\+CT}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R29 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R29 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_accd2864cbbc76fb33862720f6f07c3cd}\label{pinmux_8c_accd2864cbbc76fb33862720f6f07c3cd}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M1\+\_\+\+E\+Q\+E\+P\+E\+R\+R\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M1\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M1\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a4dbd1c8aa30d321d92b009f4084519a5}\label{pinmux_8c_a4dbd1c8aa30d321d92b009f4084519a5}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M2\+\_\+\+E\+Q\+E\+P\+E\+R\+R\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M2\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M2\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a61dd078c616edd5334308659908c533d}\label{pinmux_8c_a61dd078c616edd5334308659908c533d}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M3\+\_\+\+E\+Q\+E\+P\+E\+R\+R\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M3\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M3\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_ae1e601d8727face05eac6de94117d580}\label{pinmux_8c_ae1e601d8727face05eac6de94117d580}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M4\+\_\+\+E\+Q\+E\+P\+E\+R\+R\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R41 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M4\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M4\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a608d3feccad5b450a77b5d24262ccdbb}\label{pinmux_8c_a608d3feccad5b450a77b5d24262ccdbb}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M5\+\_\+\+E\+Q\+E\+P\+E\+R\+R\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R42 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R42 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M5\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M5\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a2f5e42f485cf5940db1486a1da38cb08}\label{pinmux_8c_a2f5e42f485cf5940db1486a1da38cb08}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M6\+\_\+\+E\+Q\+E\+P\+E\+R\+R\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R42 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R42 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M6\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M6\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a751927a2da4d316160aa9964a6bd4d00}\label{pinmux_8c_a751927a2da4d316160aa9964a6bd4d00}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M7\+\_\+\+E\+Q\+E\+P\+E\+R\+R\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R42 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R42 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M7\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M7\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a8eabba6b44d39550312c7309016c7fc2}\label{pinmux_8c_a8eabba6b44d39550312c7309016c7fc2}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+Z1\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R46 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R46 \& P\+I\+N\+M\+U\+X\+\_\+\+T\+Z1\+\_\+\+S\+H\+I\+FT) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+T\+Z1\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a892ce38f8d49f8f753acbfb4eefe1c8b}\label{pinmux_8c_a892ce38f8d49f8f753acbfb4eefe1c8b}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+Z2\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R46 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R46 \& P\+I\+N\+M\+U\+X\+\_\+\+T\+Z2\+\_\+\+S\+H\+I\+FT) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+T\+Z2\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a7d278006569e9a6031216f2bcc119102}\label{pinmux_8c_a7d278006569e9a6031216f2bcc119102}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+Z3\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R47 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R47 \& P\+I\+N\+M\+U\+X\+\_\+\+T\+Z3\+\_\+\+S\+H\+I\+FT) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+T\+Z3\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a9bd18ed5f912619835aa4dbd51b153dc}\label{pinmux_8c_a9bd18ed5f912619835aa4dbd51b153dc}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+E\+P\+W\+M1\+S\+Y\+N\+C\+I\+\_\+\+E\+N\+A\+B\+LE}(interface)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R47 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R47 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+P\+W\+M1\+S\+Y\+N\+C\+I\+\_\+\+S\+H\+I\+FT) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+P\+W\+M1\+S\+Y\+N\+C\+I\+\_\+\#\#interface))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a970860e07f158f12fc790dfae366f0b5}\label{pinmux_8c_a970860e07f158f12fc790dfae366f0b5}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+N\+A\+B\+LE}(state)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R36 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R36 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+S\+Y\+N\+C\+\_\+\#\#state))
+\item 
+\mbox{\Hypertarget{pinmux_8c_a1ed33af778c9cc8a3fe1a2963d8bd4dc}\label{pinmux_8c_a1ed33af778c9cc8a3fe1a2963d8bd4dc}} 
+\#define {\bfseries P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+B\+C\+L\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+N\+A\+B\+LE}(state)~(\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R37 = (\mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}-\/$>$P\+I\+N\+M\+M\+R37 \& P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+B\+C\+L\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+A\+SK) $\vert$ (P\+I\+N\+M\+U\+X\+\_\+\+E\+T\+P\+W\+M\+\_\+\+T\+B\+C\+L\+K\+\_\+\+S\+Y\+N\+C\+\_\+\#\#state))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__IOMM_ga8fac89d371c9be80b507da3c31144423}{mux\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the P\+I\+N\+M\+UX Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__IOMM_gae1d5925bc43dd10efb0529ed8fea7e5d}{pinmux\+Get\+Config\+Value}} (\mbox{\hyperlink{structpinmux__config__reg}{pinmux\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+I\+N\+M\+UX Driver Implementation File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}

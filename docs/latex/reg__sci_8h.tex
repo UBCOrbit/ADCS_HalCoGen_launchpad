@@ -1,0 +1,127 @@
+\hypertarget{reg__sci_8h}{}\section{include/reg\+\_\+sci.h File Reference}
+\label{reg__sci_8h}\index{include/reg\+\_\+sci.\+h@{include/reg\+\_\+sci.\+h}}
+
+
+S\+CI Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsciBase}{sci\+Base}}
+\begin{DoxyCompactList}\small\item\em S\+CI Base Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__sci_8h_acdc43faa5b34a7b497da4941e225e3ad}{sci\+R\+EG}}~((\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E500\+U)
+\begin{DoxyCompactList}\small\item\em Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__sci_8h_ae2369bc560d565eda2c84b3c949607bf}{sci\+P\+O\+RT}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E540\+U)
+\begin{DoxyCompactList}\small\item\em S\+CI G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}{scilin\+R\+EG}}~((\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E400\+U)
+\begin{DoxyCompactList}\small\item\em S\+C\+I\+L\+IN (L\+IN -\/ Compatibility Mode) Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__sci_8h_a51bbf8e6fb276b45f9218beab9e38152}{scilin\+P\+O\+RT}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E440\+U)
+\begin{DoxyCompactList}\small\item\em S\+C\+I\+L\+IN (L\+IN -\/ Compatibility Mode) Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structsciBase}{sci\+Base}} \mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+CI Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+CI Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the S\+CI driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__sci_8h_a51bbf8e6fb276b45f9218beab9e38152}\label{reg__sci_8h_a51bbf8e6fb276b45f9218beab9e38152}} 
+\index{reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}!scilin\+P\+O\+RT@{scilin\+P\+O\+RT}}
+\index{scilin\+P\+O\+RT@{scilin\+P\+O\+RT}!reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}}
+\subsubsection{\texorpdfstring{scilin\+P\+O\+RT}{scilinPORT}}
+{\footnotesize\ttfamily \#define scilin\+P\+O\+RT~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E440\+U)}
+
+
+
+S\+C\+I\+L\+IN (L\+IN -\/ Compatibility Mode) Register Frame Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of L\+IN (use the G\+IO drivers to access the port pins). 
+
+Definition at line 133 of file reg\+\_\+sci.\+h.
+
+\mbox{\Hypertarget{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}\label{reg__sci_8h_a389eea3394ad09b70e9d400b120186b4}} 
+\index{reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}!scilin\+R\+EG@{scilin\+R\+EG}}
+\index{scilin\+R\+EG@{scilin\+R\+EG}!reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}}
+\subsubsection{\texorpdfstring{scilin\+R\+EG}{scilinREG}}
+{\footnotesize\ttfamily \#define scilin\+R\+EG~((\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E400\+U)}
+
+
+
+S\+C\+I\+L\+IN (L\+IN -\/ Compatibility Mode) Register Frame Pointer. 
+
+This pointer is used by the S\+CI driver to access the sci module registers. 
+
+Definition at line 124 of file reg\+\_\+sci.\+h.
+
+
+
+Referenced by sci\+Init().
+
+\mbox{\Hypertarget{reg__sci_8h_ae2369bc560d565eda2c84b3c949607bf}\label{reg__sci_8h_ae2369bc560d565eda2c84b3c949607bf}} 
+\index{reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}!sci\+P\+O\+RT@{sci\+P\+O\+RT}}
+\index{sci\+P\+O\+RT@{sci\+P\+O\+RT}!reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}}
+\subsubsection{\texorpdfstring{sci\+P\+O\+RT}{sciPORT}}
+{\footnotesize\ttfamily \#define sci\+P\+O\+RT~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E540\+U)}
+
+
+
+S\+CI G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of S\+CI (use the G\+IO drivers to access the port pins). 
+
+Definition at line 116 of file reg\+\_\+sci.\+h.
+
+\mbox{\Hypertarget{reg__sci_8h_acdc43faa5b34a7b497da4941e225e3ad}\label{reg__sci_8h_acdc43faa5b34a7b497da4941e225e3ad}} 
+\index{reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}!sci\+R\+EG@{sci\+R\+EG}}
+\index{sci\+R\+EG@{sci\+R\+EG}!reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}}
+\subsubsection{\texorpdfstring{sci\+R\+EG}{sciREG}}
+{\footnotesize\ttfamily \#define sci\+R\+EG~((\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E500\+U)}
+
+
+
+Register Frame Pointer. 
+
+This pointer is used by the S\+CI driver to access the sci module registers. 
+
+Definition at line 107 of file reg\+\_\+sci.\+h.
+
+
+
+Referenced by sci\+Disable\+Notification(), sci\+Enable\+Notification(), and sci\+Send().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}\label{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}} 
+\index{reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}!sci\+B\+A\+S\+E\+\_\+t@{sci\+B\+A\+S\+E\+\_\+t}}
+\index{sci\+B\+A\+S\+E\+\_\+t@{sci\+B\+A\+S\+E\+\_\+t}!reg\+\_\+sci.\+h@{reg\+\_\+sci.\+h}}
+\subsubsection{\texorpdfstring{sci\+B\+A\+S\+E\+\_\+t}{sciBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+S\+CI Register Frame Type Definition. 
+
+This type is used to access the S\+CI Registers. 

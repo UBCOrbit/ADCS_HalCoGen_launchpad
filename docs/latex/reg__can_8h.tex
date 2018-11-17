@@ -1,0 +1,234 @@
+\hypertarget{reg__can_8h}{}\section{include/reg\+\_\+can.h File Reference}
+\label{reg__can_8h}\index{include/reg\+\_\+can.\+h@{include/reg\+\_\+can.\+h}}
+
+
+C\+AN Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcanBase}{can\+Base}}
+\begin{DoxyCompactList}\small\item\em C\+AN Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}{can\+R\+E\+G1}}~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D\+C00\+U)
+\begin{DoxyCompactList}\small\item\em C\+A\+N1 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_a6c499bb0c4a06d96ec7d4264e8e943f8}{can\+R\+E\+G2}}~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D\+E00\+U)
+\begin{DoxyCompactList}\small\item\em C\+A\+N2 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_abf99eb1b78d010fcafc7570446168e94}{can\+R\+E\+G3}}~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E000\+U)
+\begin{DoxyCompactList}\small\item\em C\+A\+N3 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_abafb9e8112c19ec9e8e3ac56cbeef409}{can\+R\+A\+M1}}~($\ast$(volatile uint32 $\ast$)0x\+F\+F1\+E0000\+U)
+\begin{DoxyCompactList}\small\item\em C\+A\+N1 Mailbox R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_a715cfdf91b3cca750214e1c9c9a5b6e2}{can\+R\+A\+M2}}~($\ast$(volatile uint32 $\ast$)0x\+F\+F1\+C0000\+U)
+\begin{DoxyCompactList}\small\item\em C\+A\+N2 Mailbox R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_a16cd5c97c1260a2305d259ed783d1bdc}{can\+R\+A\+M3}}~($\ast$(volatile uint32 $\ast$)0x\+F\+F1\+A0000\+U)
+\begin{DoxyCompactList}\small\item\em C\+A\+N3 Mailbox R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_ae6b205060d2fe86acdadc40de178493c}{can\+P\+A\+R\+R\+A\+M1}}~($\ast$(volatile uint32 $\ast$)(0x\+F\+F1\+E0000\+U + 0x10\+U))
+\begin{DoxyCompactList}\small\item\em C\+A\+N1 Mailbox Parity R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_a371c9079cb797249148aeee08bdcd3f8}{can\+P\+A\+R\+R\+A\+M2}}~($\ast$(volatile uint32 $\ast$)(0x\+F\+F1\+C0000\+U + 0x10\+U))
+\begin{DoxyCompactList}\small\item\em C\+A\+N2 Mailbox Parity R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__can_8h_aa74f6edb7ce3f3c37e6a23c965437c43}{can\+P\+A\+R\+R\+A\+M3}}~($\ast$(volatile uint32 $\ast$)(0x\+F\+F1\+A0000\+U + 0x10\+U))
+\begin{DoxyCompactList}\small\item\em C\+A\+N3 Mailbox Parity R\+AM Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structcanBase}{can\+Base}} \mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em C\+AN Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+AN Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the C\+AN driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__can_8h_ae6b205060d2fe86acdadc40de178493c}\label{reg__can_8h_ae6b205060d2fe86acdadc40de178493c}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+P\+A\+R\+R\+A\+M1@{can\+P\+A\+R\+R\+A\+M1}}
+\index{can\+P\+A\+R\+R\+A\+M1@{can\+P\+A\+R\+R\+A\+M1}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+P\+A\+R\+R\+A\+M1}{canPARRAM1}}
+{\footnotesize\ttfamily \#define can\+P\+A\+R\+R\+A\+M1~($\ast$(volatile uint32 $\ast$)(0x\+F\+F1\+E0000\+U + 0x10\+U))}
+
+
+
+C\+A\+N1 Mailbox Parity R\+AM Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N1 Parity R\+AM for testing R\+AM parity error detect logic. 
+
+Definition at line 186 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can1\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__can_8h_a371c9079cb797249148aeee08bdcd3f8}\label{reg__can_8h_a371c9079cb797249148aeee08bdcd3f8}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+P\+A\+R\+R\+A\+M2@{can\+P\+A\+R\+R\+A\+M2}}
+\index{can\+P\+A\+R\+R\+A\+M2@{can\+P\+A\+R\+R\+A\+M2}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+P\+A\+R\+R\+A\+M2}{canPARRAM2}}
+{\footnotesize\ttfamily \#define can\+P\+A\+R\+R\+A\+M2~($\ast$(volatile uint32 $\ast$)(0x\+F\+F1\+C0000\+U + 0x10\+U))}
+
+
+
+C\+A\+N2 Mailbox Parity R\+AM Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N2 Parity R\+AM for testing R\+AM parity error detect logic. 
+
+Definition at line 194 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can2\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__can_8h_aa74f6edb7ce3f3c37e6a23c965437c43}\label{reg__can_8h_aa74f6edb7ce3f3c37e6a23c965437c43}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+P\+A\+R\+R\+A\+M3@{can\+P\+A\+R\+R\+A\+M3}}
+\index{can\+P\+A\+R\+R\+A\+M3@{can\+P\+A\+R\+R\+A\+M3}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+P\+A\+R\+R\+A\+M3}{canPARRAM3}}
+{\footnotesize\ttfamily \#define can\+P\+A\+R\+R\+A\+M3~($\ast$(volatile uint32 $\ast$)(0x\+F\+F1\+A0000\+U + 0x10\+U))}
+
+
+
+C\+A\+N3 Mailbox Parity R\+AM Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N3 Parity R\+AM for testing R\+AM parity error detect logic. 
+
+Definition at line 202 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can3\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__can_8h_abafb9e8112c19ec9e8e3ac56cbeef409}\label{reg__can_8h_abafb9e8112c19ec9e8e3ac56cbeef409}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+R\+A\+M1@{can\+R\+A\+M1}}
+\index{can\+R\+A\+M1@{can\+R\+A\+M1}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+R\+A\+M1}{canRAM1}}
+{\footnotesize\ttfamily \#define can\+R\+A\+M1~($\ast$(volatile uint32 $\ast$)0x\+F\+F1\+E0000\+U)}
+
+
+
+C\+A\+N1 Mailbox R\+AM Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N1 R\+AM. 
+
+Definition at line 164 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can1\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__can_8h_a715cfdf91b3cca750214e1c9c9a5b6e2}\label{reg__can_8h_a715cfdf91b3cca750214e1c9c9a5b6e2}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+R\+A\+M2@{can\+R\+A\+M2}}
+\index{can\+R\+A\+M2@{can\+R\+A\+M2}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+R\+A\+M2}{canRAM2}}
+{\footnotesize\ttfamily \#define can\+R\+A\+M2~($\ast$(volatile uint32 $\ast$)0x\+F\+F1\+C0000\+U)}
+
+
+
+C\+A\+N2 Mailbox R\+AM Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N2 R\+AM. 
+
+Definition at line 171 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can2\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__can_8h_a16cd5c97c1260a2305d259ed783d1bdc}\label{reg__can_8h_a16cd5c97c1260a2305d259ed783d1bdc}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+R\+A\+M3@{can\+R\+A\+M3}}
+\index{can\+R\+A\+M3@{can\+R\+A\+M3}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+R\+A\+M3}{canRAM3}}
+{\footnotesize\ttfamily \#define can\+R\+A\+M3~($\ast$(volatile uint32 $\ast$)0x\+F\+F1\+A0000\+U)}
+
+
+
+C\+A\+N3 Mailbox R\+AM Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N3 R\+AM. 
+
+Definition at line 178 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can3\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}\label{reg__can_8h_a7a0d043070590fc91cfa3c0e39379b19}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+R\+E\+G1@{can\+R\+E\+G1}}
+\index{can\+R\+E\+G1@{can\+R\+E\+G1}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+R\+E\+G1}{canREG1}}
+{\footnotesize\ttfamily \#define can\+R\+E\+G1~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D\+C00\+U)}
+
+
+
+C\+A\+N1 Register Frame Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N1 registers. 
+
+Definition at line 143 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can1\+Parity\+Check(), and can\+Init().
+
+\mbox{\Hypertarget{reg__can_8h_a6c499bb0c4a06d96ec7d4264e8e943f8}\label{reg__can_8h_a6c499bb0c4a06d96ec7d4264e8e943f8}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+R\+E\+G2@{can\+R\+E\+G2}}
+\index{can\+R\+E\+G2@{can\+R\+E\+G2}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+R\+E\+G2}{canREG2}}
+{\footnotesize\ttfamily \#define can\+R\+E\+G2~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D\+E00\+U)}
+
+
+
+C\+A\+N2 Register Frame Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N2 registers. 
+
+Definition at line 150 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can2\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__can_8h_abf99eb1b78d010fcafc7570446168e94}\label{reg__can_8h_abf99eb1b78d010fcafc7570446168e94}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+R\+E\+G3@{can\+R\+E\+G3}}
+\index{can\+R\+E\+G3@{can\+R\+E\+G3}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+R\+E\+G3}{canREG3}}
+{\footnotesize\ttfamily \#define can\+R\+E\+G3~((\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E000\+U)}
+
+
+
+C\+A\+N3 Register Frame Pointer. 
+
+This pointer is used by the C\+AN driver to access the C\+A\+N3 registers. 
+
+Definition at line 157 of file reg\+\_\+can.\+h.
+
+
+
+Referenced by can3\+Parity\+Check().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__can_8h_a54ace0879c28a425474845a63d662c05}\label{reg__can_8h_a54ace0879c28a425474845a63d662c05}} 
+\index{reg\+\_\+can.\+h@{reg\+\_\+can.\+h}!can\+B\+A\+S\+E\+\_\+t@{can\+B\+A\+S\+E\+\_\+t}}
+\index{can\+B\+A\+S\+E\+\_\+t@{can\+B\+A\+S\+E\+\_\+t}!reg\+\_\+can.\+h@{reg\+\_\+can.\+h}}
+\subsubsection{\texorpdfstring{can\+B\+A\+S\+E\+\_\+t}{canBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+C\+AN Register Frame Type Definition. 
+
+This type is used to access the C\+AN Registers. 

@@ -1,0 +1,199 @@
+\hypertarget{reg__het_8h}{}\section{include/reg\+\_\+het.h File Reference}
+\label{reg__het_8h}\index{include/reg\+\_\+het.\+h@{include/reg\+\_\+het.\+h}}
+
+
+H\+ET Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhetBase}{het\+Base}}
+\begin{DoxyCompactList}\small\item\em H\+ET Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhetInstructionBase}{het\+Instruction\+Base}}
+\begin{DoxyCompactList}\small\item\em H\+ET Instruction Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structhet1RamBase}{het1\+Ram\+Base}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__het_8h_a1fb756f91c591fa0957b44eb250396bf}{het\+R\+E\+G1}}~((\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B800\+U)
+\begin{DoxyCompactList}\small\item\em H\+ET Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__het_8h_a0507173424fc65ce46e9ebf620e7dc80}{het\+P\+O\+R\+T1}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B84\+C\+U)
+\begin{DoxyCompactList}\small\item\em H\+ET G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__het_8h_a47dbf1307cd13ba18806c05e9189eba4}{het\+R\+A\+M1}}~((\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F460000\+U)
+\begin{DoxyCompactList}\small\item\em N\+H\+E\+T1 R\+AM Pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{reg__het_8h_a831d4ef81d07013f8e8478702ab8e42c}\label{reg__het_8h_a831d4ef81d07013f8e8478702ab8e42c}} 
+\#define {\bfseries N\+H\+E\+T1\+R\+A\+M\+P\+A\+R\+L\+OC}~($\ast$(volatile uint32 $\ast$)0x\+F\+F462000\+U)
+\item 
+\mbox{\Hypertarget{reg__het_8h_a6aae1483595041407c136119bdf439dd}\label{reg__het_8h_a6aae1483595041407c136119bdf439dd}} 
+\#define {\bfseries N\+H\+E\+T1\+R\+A\+M\+L\+OC}~($\ast$(volatile uint32 $\ast$)0x\+F\+F460000\+U)
+\item 
+\#define \mbox{\hyperlink{reg__het_8h_aafb44d44d36dc6bc8bbec6acb4f252ca}{het\+R\+E\+G2}}~((\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B900\+U)
+\begin{DoxyCompactList}\small\item\em H\+E\+T2 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__het_8h_a5769e43b62dc5cb307e573488baa6879}{het\+P\+O\+R\+T2}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B94\+C\+U)
+\begin{DoxyCompactList}\small\item\em H\+E\+T2 G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__het_8h_ae99c148ccaf5a4f8e47808aafb67568e}{het\+R\+A\+M2}}~((\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F440000\+U)
+\begin{DoxyCompactList}\small\item\em N\+H\+E\+T1 R\+AM Pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{reg__het_8h_a3948b19330e898646e76e33508d649ce}\label{reg__het_8h_a3948b19330e898646e76e33508d649ce}} 
+\#define {\bfseries N\+H\+E\+T2\+R\+A\+M\+P\+A\+R\+L\+OC}~($\ast$(volatile uint32 $\ast$)0x\+F\+F442000\+U)
+\item 
+\mbox{\Hypertarget{reg__het_8h_adcb36533d9899a81f930f29b373ca5a9}\label{reg__het_8h_adcb36533d9899a81f930f29b373ca5a9}} 
+\#define {\bfseries N\+H\+E\+T2\+R\+A\+M\+L\+OC}~($\ast$(volatile uint32 $\ast$)0x\+F\+F440000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structhetBase}{het\+Base}} \mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em H\+ET Register Frame Type Definition. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structhetInstructionBase}{het\+Instruction\+Base}} \mbox{\hyperlink{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}{het\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em H\+ET Instruction Type Definition. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structhet1RamBase}{het1\+Ram\+Base}} \mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em H\+ET R\+AM Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\+ET Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the H\+ET driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__het_8h_a0507173424fc65ce46e9ebf620e7dc80}\label{reg__het_8h_a0507173424fc65ce46e9ebf620e7dc80}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+P\+O\+R\+T1@{het\+P\+O\+R\+T1}}
+\index{het\+P\+O\+R\+T1@{het\+P\+O\+R\+T1}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+P\+O\+R\+T1}{hetPORT1}}
+{\footnotesize\ttfamily \#define het\+P\+O\+R\+T1~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B84\+C\+U)}
+
+
+
+H\+ET G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of H\+E\+T1 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 162 of file reg\+\_\+het.\+h.
+
+\mbox{\Hypertarget{reg__het_8h_a5769e43b62dc5cb307e573488baa6879}\label{reg__het_8h_a5769e43b62dc5cb307e573488baa6879}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+P\+O\+R\+T2@{het\+P\+O\+R\+T2}}
+\index{het\+P\+O\+R\+T2@{het\+P\+O\+R\+T2}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+P\+O\+R\+T2}{hetPORT2}}
+{\footnotesize\ttfamily \#define het\+P\+O\+R\+T2~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B94\+C\+U)}
+
+
+
+H\+E\+T2 G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of H\+E\+T2 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 187 of file reg\+\_\+het.\+h.
+
+\mbox{\Hypertarget{reg__het_8h_a47dbf1307cd13ba18806c05e9189eba4}\label{reg__het_8h_a47dbf1307cd13ba18806c05e9189eba4}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+R\+A\+M1@{het\+R\+A\+M1}}
+\index{het\+R\+A\+M1@{het\+R\+A\+M1}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+R\+A\+M1}{hetRAM1}}
+{\footnotesize\ttfamily \#define het\+R\+A\+M1~((\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F460000\+U)}
+
+
+
+N\+H\+E\+T1 R\+AM Pointer. 
+
+This pointer is used by the H\+ET driver to access the N\+H\+E\+T1 memory. 
+
+Definition at line 169 of file reg\+\_\+het.\+h.
+
+\mbox{\Hypertarget{reg__het_8h_ae99c148ccaf5a4f8e47808aafb67568e}\label{reg__het_8h_ae99c148ccaf5a4f8e47808aafb67568e}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+R\+A\+M2@{het\+R\+A\+M2}}
+\index{het\+R\+A\+M2@{het\+R\+A\+M2}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+R\+A\+M2}{hetRAM2}}
+{\footnotesize\ttfamily \#define het\+R\+A\+M2~((\mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F440000\+U)}
+
+
+
+N\+H\+E\+T1 R\+AM Pointer. 
+
+This pointer is used by the H\+ET driver to access the N\+H\+E\+T2 memory. 
+
+Definition at line 194 of file reg\+\_\+het.\+h.
+
+\mbox{\Hypertarget{reg__het_8h_a1fb756f91c591fa0957b44eb250396bf}\label{reg__het_8h_a1fb756f91c591fa0957b44eb250396bf}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+R\+E\+G1@{het\+R\+E\+G1}}
+\index{het\+R\+E\+G1@{het\+R\+E\+G1}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+R\+E\+G1}{hetREG1}}
+{\footnotesize\ttfamily \#define het\+R\+E\+G1~((\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B800\+U)}
+
+
+
+H\+ET Register Frame Pointer. 
+
+This pointer is used by the H\+ET driver to access the het module registers. 
+
+Definition at line 153 of file reg\+\_\+het.\+h.
+
+
+
+Referenced by het1\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__het_8h_aafb44d44d36dc6bc8bbec6acb4f252ca}\label{reg__het_8h_aafb44d44d36dc6bc8bbec6acb4f252ca}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+R\+E\+G2@{het\+R\+E\+G2}}
+\index{het\+R\+E\+G2@{het\+R\+E\+G2}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+R\+E\+G2}{hetREG2}}
+{\footnotesize\ttfamily \#define het\+R\+E\+G2~((\mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+B900\+U)}
+
+
+
+H\+E\+T2 Register Frame Pointer. 
+
+This pointer is used by the H\+ET driver to access the het module registers. 
+
+Definition at line 179 of file reg\+\_\+het.\+h.
+
+
+
+Referenced by het2\+Parity\+Check().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}\label{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+B\+A\+S\+E\+\_\+t@{het\+B\+A\+S\+E\+\_\+t}}
+\index{het\+B\+A\+S\+E\+\_\+t@{het\+B\+A\+S\+E\+\_\+t}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+B\+A\+S\+E\+\_\+t}{hetBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__het_8h_ad33493e7f48cca3db8ffa5c71289ba1a}{het\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+H\+ET Register Frame Type Definition. 
+
+This type is used to access the H\+ET Registers. \mbox{\Hypertarget{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}\label{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+t@{het\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+t}}
+\index{het\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+t@{het\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+t}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+t}{hetINSTRUCTION\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__het_8h_a51adb6af5a27a385e04c8750e3645738}{het\+I\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+t}}}
+
+
+
+H\+ET Instruction Type Definition. 
+
+This type is used to access a H\+ET Instruction. \mbox{\Hypertarget{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}\label{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}} 
+\index{reg\+\_\+het.\+h@{reg\+\_\+het.\+h}!het\+R\+A\+M\+B\+A\+S\+E\+\_\+t@{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}}
+\index{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t@{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}!reg\+\_\+het.\+h@{reg\+\_\+het.\+h}}
+\subsubsection{\texorpdfstring{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}{hetRAMBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__het_8h_aff6a3de4d5a894a32134243e0d87bb32}{het\+R\+A\+M\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+H\+ET R\+AM Type Definition. 
+
+This type is used to access the H\+ET R\+AM. 

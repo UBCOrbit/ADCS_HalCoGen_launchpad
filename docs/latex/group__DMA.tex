@@ -1,0 +1,656 @@
+\hypertarget{group__DMA}{}\section{D\+MA}
+\label{group__DMA}\index{D\+MA@{D\+MA}}
+
+
+Direct Memory Access Controller.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__DMA_ga075cb5440673bd8e8a85d24c1c724a84}{dma\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em enables D\+MA module \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_gab24991421023d51480c1187f9cd24df7}{dma\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em disables D\+MA module \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__DMA_gad610e819df740800ae29b9b85c8920a9}\label{group__DMA_gad610e819df740800ae29b9b85c8920a9}} 
+void {\bfseries dma\+Set\+Ctrl\+Packet} (uint32 channel, \mbox{\hyperlink{structg__dmaCTRL}{g\+\_\+dma\+C\+T\+RL}} g\+\_\+dma\+C\+T\+R\+L\+P\+KT)
+\item 
+void \mbox{\hyperlink{group__DMA_ga4d2728f13e513154152332fdeab27135}{dma\+Set\+Ch\+Enable}} (uint32 channel, uint32 type)
+\begin{DoxyCompactList}\small\item\em Enable channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga9faf7aff978b3725f8554831af92f49e}{dma\+Req\+Assign}} (uint32 channel, uint32 reqline)
+\begin{DoxyCompactList}\small\item\em Assign D\+MA request lines to channels. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__DMA_ga0fd24f134d8c414943021de657a37a86}{dma\+Get\+Req}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Gets the request line number mapped to the selected channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_gafb14fbff92909515493f828a2073e32e}{dma\+Set\+Priority}} (uint32 channel, dma\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Assign Priority to the channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga55e0af7aeb95a528b05aec15001a6db6}{dma\+Enable\+Interrupt}} (uint32 channel, dma\+Interrupt\+\_\+t inttype)
+\begin{DoxyCompactList}\small\item\em Enable selected interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga615b558e379e8a29221fc6be771d7c4e}{dma\+Disable\+Interrupt}} (uint32 channel, dma\+Interrupt\+\_\+t inttype)
+\begin{DoxyCompactList}\small\item\em Disable selected interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_gaca7cb872ee27f6e977d50a01cbf6c6c0}{dma\+Define\+Region}} (dma\+R\+E\+G\+I\+O\+N\+\_\+t region, uint32 start\+\_\+add, uint32 end\+\_\+add)
+\begin{DoxyCompactList}\small\item\em Configure start and end address of the region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_gac3b7143e56e44b8e34ec350878e5f6df}{dma\+Enable\+Region}} (dma\+R\+E\+G\+I\+O\+N\+\_\+t region, dma\+Region\+Access\+\_\+t access, boolean intenable)
+\begin{DoxyCompactList}\small\item\em Enable the selected region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga70ded995f289b44465e9421bacacad8e}{dma\+Disable\+Region}} (dma\+R\+E\+G\+I\+O\+N\+\_\+t region)
+\begin{DoxyCompactList}\small\item\em Disable the selected region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga4a1f74ec4b9f535082c2a54bdf9d6302}{dma\+Enable\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Enable Parity Check. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga279651ad85ea8c9c8d0370f1d14e230b}{dma\+Disable\+Parity\+Check}} (void)
+\begin{DoxyCompactList}\small\item\em Disable Parity Check. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga3f704ab3357cb4a16b83a98dc405a4dc}{dma\+Get\+Config\+Value}} (\mbox{\hyperlink{structdma__config__reg}{dma\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga27a1d2fda92f10191a0c54ed6227c22e}{dma\+Group\+A\+Notification}} (dma\+Interrupt\+\_\+t inttype, uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Direct Memory Access Controller. 
+
+The D\+MA controller is used to transfer data between two locations in the memory map in the background of C\+PU operations. Typically, the D\+MA is used to\+:
+\begin{DoxyItemize}
+\item Transfer blocks of data between external and internal data memories
+\item Restructure portions of internal data memory
+\item Continually service a peripheral
+\item Page program sections to internal program memory
+\end{DoxyItemize}
+
+Related files\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__dma_8h}{reg\+\_\+dma.\+h}}
+\item \mbox{\hyperlink{sys__dma_8h_source}{sys\+\_\+dma.\+h}}
+\item \mbox{\hyperlink{sys__dma_8c_source}{sys\+\_\+dma.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__DMA_gaca7cb872ee27f6e977d50a01cbf6c6c0}\label{group__DMA_gaca7cb872ee27f6e977d50a01cbf6c6c0}} 
+\index{D\+MA@{D\+MA}!dma\+Define\+Region@{dma\+Define\+Region}}
+\index{dma\+Define\+Region@{dma\+Define\+Region}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Define\+Region()}{dmaDefineRegion()}}
+{\footnotesize\ttfamily void dma\+Define\+Region (\begin{DoxyParamCaption}\item[{dma\+R\+E\+G\+I\+O\+N\+\_\+t}]{region,  }\item[{uint32}]{start\+\_\+add,  }\item[{uint32}]{end\+\_\+add }\end{DoxyParamCaption})}
+
+
+
+Configure start and end address of the region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region} & Memory Region
+\begin{DoxyItemize}
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N0
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N1
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N2
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N3 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em start\+\_\+add} & Start address of the the region \\
+\hline
+\mbox{\tt in}  & {\em end\+\_\+add} & End address of the region\\
+\hline
+\end{DoxyParams}
+This function configure start and end address of the selected region 
+
+Definition at line 306 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+307 \{
+308     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPR[region].STARTADD = start\_add;
+309     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPR[region].ENDADD = end\_add;
+310 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_gab24991421023d51480c1187f9cd24df7}\label{group__DMA_gab24991421023d51480c1187f9cd24df7}} 
+\index{D\+MA@{D\+MA}!dma\+Disable@{dma\+Disable}}
+\index{dma\+Disable@{dma\+Disable}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Disable()}{dmaDisable()}}
+{\footnotesize\ttfamily void dma\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+disables D\+MA module 
+
+This function disables D\+MA module 
+
+Definition at line 69 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{comment}{/* Wait until DMA's external bus has completed data transfer */}
+72     \textcolor{comment}{/*SAFETYMCUSW 134 S MR: 12.2 <APPROVED> "Tool issue" */}
+73     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Hardware status bit read check" */}
+74     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->GCTRL & DMA\_GCTRL\_BUSBUSY) != 0U)
+75     \{
+76     \} \textcolor{comment}{/* Wait */}
+77     \textcolor{comment}{/* Disable DMA module */}
+78     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->GCTRL = 0U;
+79 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga615b558e379e8a29221fc6be771d7c4e}\label{group__DMA_ga615b558e379e8a29221fc6be771d7c4e}} 
+\index{D\+MA@{D\+MA}!dma\+Disable\+Interrupt@{dma\+Disable\+Interrupt}}
+\index{dma\+Disable\+Interrupt@{dma\+Disable\+Interrupt}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Disable\+Interrupt()}{dmaDisableInterrupt()}}
+{\footnotesize\ttfamily void dma\+Disable\+Interrupt (\begin{DoxyParamCaption}\item[{uint32}]{channel,  }\item[{dma\+Interrupt\+\_\+t}]{inttype }\end{DoxyParamCaption})}
+
+
+
+Disable selected interrupt. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & D\+MA channel \\
+\hline
+\mbox{\tt in}  & {\em inttype} & Interrupt to be disabled
+\begin{DoxyItemize}
+\item F\+TC\+: Frame Transfer Complete Interrupt will be disabled for the selected channel
+\item L\+FS\+: Last Frame Transfer Started Interrupt will be disabled for the selected channel
+\item H\+BC\+: First Half Of Block Complete Interrupt will be disabled for the selected channel
+\item B\+TC\+: Block transfer complete Interrupt will be disabled for the selected channel
+\item B\+ER\+: Bus Error Interrupt will be disabled for the selected channel
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function disables the selected interrupt for the selected channel 
+
+Definition at line 272 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+273 \{
+274     \textcolor{keywordflow}{switch} (inttype)
+275     \{
+276     \textcolor{keywordflow}{case} FTC:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->FTCINTENAR = (uint32)1U << channel;
+277                 \textcolor{keywordflow}{break};
+278     \textcolor{keywordflow}{case} LFS:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->LFSINTENAR = (uint32)1U << channel;
+279                 \textcolor{keywordflow}{break};
+280     \textcolor{keywordflow}{case} HBC:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->HBCINTENAR = (uint32)1U << channel;
+281                 \textcolor{keywordflow}{break};
+282     \textcolor{keywordflow}{case} BTC:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->BTCINTENAR = (uint32)1U << channel;
+283                 \textcolor{keywordflow}{break};
+284     default :
+285                 \textcolor{keywordflow}{break};
+286     \}
+287 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga279651ad85ea8c9c8d0370f1d14e230b}\label{group__DMA_ga279651ad85ea8c9c8d0370f1d14e230b}} 
+\index{D\+MA@{D\+MA}!dma\+Disable\+Parity\+Check@{dma\+Disable\+Parity\+Check}}
+\index{dma\+Disable\+Parity\+Check@{dma\+Disable\+Parity\+Check}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Disable\+Parity\+Check()}{dmaDisableParityCheck()}}
+{\footnotesize\ttfamily void dma\+Disable\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable Parity Check. 
+
+This function disables parity check 
+
+Definition at line 397 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+398 \{
+399     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAPCR = 0x5U;
+400 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga70ded995f289b44465e9421bacacad8e}\label{group__DMA_ga70ded995f289b44465e9421bacacad8e}} 
+\index{D\+MA@{D\+MA}!dma\+Disable\+Region@{dma\+Disable\+Region}}
+\index{dma\+Disable\+Region@{dma\+Disable\+Region}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Disable\+Region()}{dmaDisableRegion()}}
+{\footnotesize\ttfamily void dma\+Disable\+Region (\begin{DoxyParamCaption}\item[{dma\+R\+E\+G\+I\+O\+N\+\_\+t}]{region }\end{DoxyParamCaption})}
+
+
+
+Disable the selected region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region} & Memory Region
+\begin{DoxyItemize}
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N0
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N1
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N2
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N3
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function disables the selected region(no address checking done). 
+
+Definition at line 367 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+368 \{
+369     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPCTRL &= ~(uint32)((uint32)1U << ((uint32)region*8U));
+370 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga075cb5440673bd8e8a85d24c1c724a84}\label{group__DMA_ga075cb5440673bd8e8a85d24c1c724a84}} 
+\index{D\+MA@{D\+MA}!dma\+Enable@{dma\+Enable}}
+\index{dma\+Enable@{dma\+Enable}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Enable()}{dmaEnable()}}
+{\footnotesize\ttfamily void dma\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+enables D\+MA module 
+
+This function brings D\+MA out of reset 
+
+Definition at line 55 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+56 \{
+57   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->GCTRL  = 0x00010000U; \textcolor{comment}{/* enable dma      */}
+58   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->GCTRL |= 0x00000300U; \textcolor{comment}{/* stop at suspend */}
+59 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga55e0af7aeb95a528b05aec15001a6db6}\label{group__DMA_ga55e0af7aeb95a528b05aec15001a6db6}} 
+\index{D\+MA@{D\+MA}!dma\+Enable\+Interrupt@{dma\+Enable\+Interrupt}}
+\index{dma\+Enable\+Interrupt@{dma\+Enable\+Interrupt}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Enable\+Interrupt()}{dmaEnableInterrupt()}}
+{\footnotesize\ttfamily void dma\+Enable\+Interrupt (\begin{DoxyParamCaption}\item[{uint32}]{channel,  }\item[{dma\+Interrupt\+\_\+t}]{inttype }\end{DoxyParamCaption})}
+
+
+
+Enable selected interrupt. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & D\+MA channel \\
+\hline
+\mbox{\tt in}  & {\em inttype} & Interrupt to be enabled
+\begin{DoxyItemize}
+\item F\+TC\+: Frame Transfer Complete Interrupt will be disabled for the selected channel
+\item L\+FS\+: Last Frame Transfer Started Interrupt will be disabled for the selected channel
+\item H\+BC\+: First Half Of Block Complete Interrupt will be disabled for the selected channel
+\item B\+TC\+: Block transfer complete Interrupt will be disabled for the selected channel
+\item B\+ER\+: Bus Error Interrupt will be disabled for the selected channel
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function enables the selected interrupt for the selected channel 
+
+Definition at line 236 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+237 \{
+238     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->GCHIENAS = (uint32)1U << channel;
+239 
+240     \textcolor{keywordflow}{switch} (inttype)
+241     \{
+242     \textcolor{keywordflow}{case} FTC:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->FTCINTENAS = (uint32)1U << channel;
+243                 \textcolor{keywordflow}{break};
+244     \textcolor{keywordflow}{case} LFS:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->LFSINTENAS = (uint32)1U << channel;
+245                 \textcolor{keywordflow}{break};
+246     \textcolor{keywordflow}{case} HBC:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->HBCINTENAS = (uint32)1U << channel;
+247                 \textcolor{keywordflow}{break};
+248     \textcolor{keywordflow}{case} BTC:   \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->BTCINTENAS = (uint32)1U << channel;
+249                 \textcolor{keywordflow}{break};
+250     default :
+251                 \textcolor{keywordflow}{break};
+252     \}
+253 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga4a1f74ec4b9f535082c2a54bdf9d6302}\label{group__DMA_ga4a1f74ec4b9f535082c2a54bdf9d6302}} 
+\index{D\+MA@{D\+MA}!dma\+Enable\+Parity\+Check@{dma\+Enable\+Parity\+Check}}
+\index{dma\+Enable\+Parity\+Check@{dma\+Enable\+Parity\+Check}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Enable\+Parity\+Check()}{dmaEnableParityCheck()}}
+{\footnotesize\ttfamily void dma\+Enable\+Parity\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable Parity Check. 
+
+This function enables parity check 
+
+Definition at line 382 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+383 \{
+384     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAPCR = 0xAU;
+385 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_gac3b7143e56e44b8e34ec350878e5f6df}\label{group__DMA_gac3b7143e56e44b8e34ec350878e5f6df}} 
+\index{D\+MA@{D\+MA}!dma\+Enable\+Region@{dma\+Enable\+Region}}
+\index{dma\+Enable\+Region@{dma\+Enable\+Region}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Enable\+Region()}{dmaEnableRegion()}}
+{\footnotesize\ttfamily void dma\+Enable\+Region (\begin{DoxyParamCaption}\item[{dma\+R\+E\+G\+I\+O\+N\+\_\+t}]{region,  }\item[{dma\+Region\+Access\+\_\+t}]{access,  }\item[{boolean}]{intenable }\end{DoxyParamCaption})}
+
+
+
+Enable the selected region. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em region} & Memory Region
+\begin{DoxyItemize}
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N0
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N1
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N2
+\item D\+M\+A\+\_\+\+R\+E\+G\+I\+O\+N3 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em access} & Access permission of the selected region
+\begin{DoxyItemize}
+\item F\+U\+L\+L\+A\+C\+C\+E\+SS
+\item R\+E\+A\+D\+O\+N\+LY
+\item W\+R\+I\+T\+E\+O\+N\+LY
+\item N\+O\+A\+C\+C\+E\+SS 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em intenable} & Interrupt to be enabled or not
+\begin{DoxyItemize}
+\item I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE \+: Enable interrupt for the selected region
+\item I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE\+: Disable interrupt for the selected region
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function enables the selected region with selected access permission with or without interrupt enable 
+
+Definition at line 335 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+336 \{
+337     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPCTRL &= ~(uint32)((uint32)0xFFU << (region*8U));
+338 
+339     \textcolor{comment}{/* Enable the region */}
+340     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPCTRL |= (uint32)1U << (region*8U);
+341 
+342     \textcolor{comment}{/* Set access permission for the region */}
+343     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPCTRL |= (uint32)access << ((region*8U) + 1U);
+344 
+345     \textcolor{keywordflow}{if}(intenable)
+346     \{
+347         \textcolor{comment}{/* Enable interrupt */}
+348         \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPCTRL |= (uint32)1U << ((region*8U) + 3U);
+349     \}
+350 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga3f704ab3357cb4a16b83a98dc405a4dc}\label{group__DMA_ga3f704ab3357cb4a16b83a98dc405a4dc}} 
+\index{D\+MA@{D\+MA}!dma\+Get\+Config\+Value@{dma\+Get\+Config\+Value}}
+\index{dma\+Get\+Config\+Value@{dma\+Get\+Config\+Value}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Get\+Config\+Value()}{dmaGetConfigValue()}}
+{\footnotesize\ttfamily void dma\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdma__config__reg}{dma\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 420 of file sys\+\_\+dma.\+c.
+
+
+\begin{DoxyCode}
+421 \{
+422     \textcolor{keywordflow}{if} (type == InitialValue)
+423     \{\textcolor{comment}{/* Do not pass Initial value as parameter as there is no DMA initialization API */}
+424     \}
+425     \textcolor{keywordflow}{else}
+426     \{
+427         config\_reg->CONFIG\_CHPRIOS     = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->CHPRIOS;
+428         config\_reg->CONFIG\_GCHIENAS    = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->GCHIENAS;
+429         config\_reg->CONFIG\_DREQASI[0U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[0U];
+430         config\_reg->CONFIG\_DREQASI[1U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[1U];
+431         config\_reg->CONFIG\_DREQASI[2U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[2U];
+432         config\_reg->CONFIG\_DREQASI[3U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[3U];
+433         config\_reg->CONFIG\_DREQASI[4U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[4U];
+434         config\_reg->CONFIG\_DREQASI[5U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[5U];
+435         config\_reg->CONFIG\_DREQASI[6U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[6U];
+436         config\_reg->CONFIG\_DREQASI[7U] = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[7U];
+437         config\_reg->CONFIG\_FTCINTENAS  = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->FTCINTENAS;
+438         config\_reg->CONFIG\_LFSINTENAS  = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->LFSINTENAS;
+439         config\_reg->CONFIG\_HBCINTENAS  = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->HBCINTENAS;
+440         config\_reg->CONFIG\_BTCINTENAS  = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->BTCINTENAS;
+441         config\_reg->CONFIG\_DMAPCR      = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAPCR;
+442         config\_reg->CONFIG\_DMAMPCTRL   = \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DMAMPCTRL;
+443     \}
+444 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga0fd24f134d8c414943021de657a37a86}\label{group__DMA_ga0fd24f134d8c414943021de657a37a86}} 
+\index{D\+MA@{D\+MA}!dma\+Get\+Req@{dma\+Get\+Req}}
+\index{dma\+Get\+Req@{dma\+Get\+Req}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Get\+Req()}{dmaGetReq()}}
+{\footnotesize\ttfamily uint32 dma\+Get\+Req (\begin{DoxyParamCaption}\item[{uint32}]{channel }\end{DoxyParamCaption})}
+
+
+
+Gets the request line number mapped to the selected channel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & D\+MA channel\\
+\hline
+\end{DoxyParams}
+This function returns the request line number mapped to the selected channel 
+
+Definition at line 116 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+117 \{
+118     \textcolor{keyword}{register} uint32 i=0U,j=0U;
+119 
+120     i = channel >> 2U;              \textcolor{comment}{/* Find the register to configure */}
+121     j = channel - (i << 2U);        \textcolor{comment}{/* Find the offset of the type    */}
+122     j = 3U - j;                     \textcolor{comment}{/* reverse the byte order         */}
+123     j = j << 3U;                    \textcolor{comment}{/* find the bit location          */}
+124     \textcolor{keywordflow}{return} ((\mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[i] >> j) & 0xFFU);
+125 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga27a1d2fda92f10191a0c54ed6227c22e}\label{group__DMA_ga27a1d2fda92f10191a0c54ed6227c22e}} 
+\index{D\+MA@{D\+MA}!dma\+Group\+A\+Notification@{dma\+Group\+A\+Notification}}
+\index{dma\+Group\+A\+Notification@{dma\+Group\+A\+Notification}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Group\+A\+Notification()}{dmaGroupANotification()}}
+{\footnotesize\ttfamily void dma\+Group\+A\+Notification (\begin{DoxyParamCaption}\item[{dma\+Interrupt\+\_\+t}]{inttype,  }\item[{uint32}]{channel }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inttype} & Interrupt type
+\begin{DoxyItemize}
+\item F\+TC
+\item L\+FS
+\item H\+BC
+\item B\+TC 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em channel} & channel number 0..15 This is a callback that is provided by the application and is called apon an interrupt. The parameter passed to the callback is a copy of the interrupt flag register. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 188 of file notification.\+c.
+
+
+\begin{DoxyCode}
+189 \{
+190 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+191 \textcolor{comment}{/* USER CODE BEGIN (54) */}
+192 \textcolor{comment}{/* USER CODE END */}
+193 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga9faf7aff978b3725f8554831af92f49e}\label{group__DMA_ga9faf7aff978b3725f8554831af92f49e}} 
+\index{D\+MA@{D\+MA}!dma\+Req\+Assign@{dma\+Req\+Assign}}
+\index{dma\+Req\+Assign@{dma\+Req\+Assign}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Req\+Assign()}{dmaReqAssign()}}
+{\footnotesize\ttfamily void dma\+Req\+Assign (\begin{DoxyParamCaption}\item[{uint32}]{channel,  }\item[{uint32}]{reqline }\end{DoxyParamCaption})}
+
+
+
+Assign D\+MA request lines to channels. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & D\+MA channel \\
+\hline
+\mbox{\tt in}  & {\em reqline} & D\+MA request line\\
+\hline
+\end{DoxyParams}
+This function assigns D\+MA request lines to channels 
+
+Definition at line 92 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+93 \{
+94     \textcolor{keyword}{register} uint32 i=0U,j=0U;
+95 
+96     i = channel >> 2U;              \textcolor{comment}{/* Find the register to configure */}
+97     j = channel - (i << 2U);        \textcolor{comment}{/* Find the offset of the type    */}
+98     j = 3U - j;                     \textcolor{comment}{/* reverse the byte order         */}
+99     j = j << 3U;                    \textcolor{comment}{/* find the bit location          */}
+100 
+101     \textcolor{comment}{/* mapping channel 'i' to request line 'j' */}
+102     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[i] &= ~(uint32)((uint32)0xFFU << j);
+103     \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->DREQASI[i] |= (reqline << j);
+104 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_ga4d2728f13e513154152332fdeab27135}\label{group__DMA_ga4d2728f13e513154152332fdeab27135}} 
+\index{D\+MA@{D\+MA}!dma\+Set\+Ch\+Enable@{dma\+Set\+Ch\+Enable}}
+\index{dma\+Set\+Ch\+Enable@{dma\+Set\+Ch\+Enable}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Set\+Ch\+Enable()}{dmaSetChEnable()}}
+{\footnotesize\ttfamily void dma\+Set\+Ch\+Enable (\begin{DoxyParamCaption}\item[{uint32}]{channel,  }\item[{uint32}]{type }\end{DoxyParamCaption})}
+
+
+
+Enable channel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & D\+MA channel \\
+\hline
+\mbox{\tt in}  & {\em type} & Type of triggering
+\begin{DoxyItemize}
+\item D\+M\+A\+\_\+\+HW\+: Enables the selected D\+MA channel for hardware triggering
+\item D\+M\+A\+\_\+\+SW\+: Enables the selected D\+MA channel for software triggering
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function enables the D\+MA channel for hardware or software triggering 
+
+Definition at line 178 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+179 \{
+180     \textcolor{keywordflow}{if}(type == (uint32)DMA\_HW)
+181     \{
+182      \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->HWCHENAS = (uint32)1U << channel;
+183     \}
+184     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == (uint32)DMA\_SW)
+185     \{
+186      \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->SWCHENAS = (uint32)1U << channel;
+187     \}
+188     \textcolor{keywordflow}{else}
+189     \{
+190     \textcolor{comment}{/* Empty  */}
+191     \}
+192 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__DMA_gafb14fbff92909515493f828a2073e32e}\label{group__DMA_gafb14fbff92909515493f828a2073e32e}} 
+\index{D\+MA@{D\+MA}!dma\+Set\+Priority@{dma\+Set\+Priority}}
+\index{dma\+Set\+Priority@{dma\+Set\+Priority}!D\+MA@{D\+MA}}
+\subsubsection{\texorpdfstring{dma\+Set\+Priority()}{dmaSetPriority()}}
+{\footnotesize\ttfamily void dma\+Set\+Priority (\begin{DoxyParamCaption}\item[{uint32}]{channel,  }\item[{dma\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+t}]{priority }\end{DoxyParamCaption})}
+
+
+
+Assign Priority to the channel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & D\+MA channel \\
+\hline
+\mbox{\tt in}  & {\em priority} & Priority queue to which channel needs to be assigned
+\begin{DoxyItemize}
+\item L\+O\+W\+P\+R\+I\+O\+R\+I\+TY \+: The selected channel will be assigned to low priority queue
+\item H\+I\+G\+H\+P\+R\+I\+O\+R\+I\+TY\+: The selected channel will be assigned to high priority queue
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function assigns the selected priority to the selected channel 
+
+Definition at line 208 of file sys\+\_\+dma.\+c.
+
+
+
+References dma\+R\+EG.
+
+
+\begin{DoxyCode}
+209 \{
+210     \textcolor{keywordflow}{if} (priority == LOWPRIORITY)
+211     \{
+212         \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->CHPRIOR = (uint32)1U << channel;
+213     \}
+214     \textcolor{keywordflow}{else}
+215     \{
+216         \mbox{\hyperlink{reg__dma_8h_aae27308852f460efc99fcbf6eb47ea86}{dmaREG}}->CHPRIOS = (uint32)1U << channel;
+217     \}
+218 \}
+\end{DoxyCode}

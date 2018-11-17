@@ -1,0 +1,128 @@
+\hypertarget{notification_8c}{}\section{source/notification.c File Reference}
+\label{notification_8c}\index{source/notification.\+c@{source/notification.\+c}}
+
+
+User Notification Definition File.  
+
+
+{\ttfamily \#include \char`\"{}esm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+selftest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}can.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sci.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+dma.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ESM_ga47f1650e27c094120e414ad3332ea311}{esm\+Group1\+Notification}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga7d5d25716f0d945f9d5ae0e6ae387d67}{esm\+Group2\+Notification}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{notification_8c_a01f1d76b843e64acb8bb464d79b9cd45}{memory\+Port0\+Test\+Fail\+Notification}} (uint32 group\+Select, uint32 data\+Select, uint32 address, uint32 data)
+\begin{DoxyCompactList}\small\item\em Memory Port 0 test fail notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{notification_8c_a27770bcd3ed64bdd085157a5c99a3502}{memory\+Port1\+Test\+Fail\+Notification}} (uint32 group\+Select, uint32 data\+Select, uint32 address, uint32 data)
+\begin{DoxyCompactList}\small\item\em Memory Port 1 test fail notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga753cd0a8988b0b7b5044cfc3cfb3298d}{adc\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Group notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gab54b99b32b9402b55b845029f9118b77}{can\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gafb381df2cdfb4e84f43df0226a757002}{can\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 notification)
+\begin{DoxyCompactList}\small\item\em Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gacac999ab73fd61efe4dfc10883ea287c}{can\+Message\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Message notification. \end{DoxyCompactList}\item 
+void {\bfseries gio\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+void \mbox{\hyperlink{group__I2C_ga5ecfeeec39ad8a6788eade4f0c89eb62}{i2c\+Notification}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gac25800424a38ab1b3b0960f6b7cc4bc8}{sci\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__DMA_ga27a1d2fda92f10191a0c54ed6227c22e}{dma\+Group\+A\+Notification}} (dma\+Interrupt\+\_\+t inttype, uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+User Notification Definition File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file defines empty notification routines to avoid linker errors, Driver expects user to define the notification. The user needs to either remove this file and use their custom notification function or place their code sequence in this file between the provided U\+S\+ER C\+O\+DE B\+E\+G\+IN and U\+S\+ER C\+O\+DE E\+ND. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{notification_8c_a01f1d76b843e64acb8bb464d79b9cd45}\label{notification_8c_a01f1d76b843e64acb8bb464d79b9cd45}} 
+\index{notification.\+c@{notification.\+c}!memory\+Port0\+Test\+Fail\+Notification@{memory\+Port0\+Test\+Fail\+Notification}}
+\index{memory\+Port0\+Test\+Fail\+Notification@{memory\+Port0\+Test\+Fail\+Notification}!notification.\+c@{notification.\+c}}
+\subsubsection{\texorpdfstring{memory\+Port0\+Test\+Fail\+Notification()}{memoryPort0TestFailNotification()}}
+{\footnotesize\ttfamily void memory\+Port0\+Test\+Fail\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{group\+Select,  }\item[{uint32}]{data\+Select,  }\item[{uint32}]{address,  }\item[{uint32}]{data }\end{DoxyParamCaption})}
+
+
+
+Memory Port 0 test fail notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em group\+Select} & Failing Ram group select\+: \\
+\hline
+\mbox{\tt in}  & {\em data\+Select} & Failing Ram data select\+: \\
+\hline
+\mbox{\tt in}  & {\em address} & Failing Ram offset\+: \\
+\hline
+\mbox{\tt in}  & {\em data} & Failing data at address\+:\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function has to be provide by the user. 
+\end{DoxyNote}
+
+
+Definition at line 83 of file notification.\+c.
+
+
+\begin{DoxyCode}
+84 \{
+85 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+86 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+87 \textcolor{comment}{/* USER CODE END */}
+88 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{notification_8c_a27770bcd3ed64bdd085157a5c99a3502}\label{notification_8c_a27770bcd3ed64bdd085157a5c99a3502}} 
+\index{notification.\+c@{notification.\+c}!memory\+Port1\+Test\+Fail\+Notification@{memory\+Port1\+Test\+Fail\+Notification}}
+\index{memory\+Port1\+Test\+Fail\+Notification@{memory\+Port1\+Test\+Fail\+Notification}!notification.\+c@{notification.\+c}}
+\subsubsection{\texorpdfstring{memory\+Port1\+Test\+Fail\+Notification()}{memoryPort1TestFailNotification()}}
+{\footnotesize\ttfamily void memory\+Port1\+Test\+Fail\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{group\+Select,  }\item[{uint32}]{data\+Select,  }\item[{uint32}]{address,  }\item[{uint32}]{data }\end{DoxyParamCaption})}
+
+
+
+Memory Port 1 test fail notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em group\+Select} & Failing Ram group select\+: \\
+\hline
+\mbox{\tt in}  & {\em data\+Select} & Failing Ram data select\+: \\
+\hline
+\mbox{\tt in}  & {\em address} & Failing Ram offset\+: \\
+\hline
+\mbox{\tt in}  & {\em data} & Failing data at address\+:\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function has to be provide by the user. 
+\end{DoxyNote}
+
+
+Definition at line 93 of file notification.\+c.
+
+
+\begin{DoxyCode}
+94 \{
+95 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+96 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+97 \textcolor{comment}{/* USER CODE END */}
+98 \}
+\end{DoxyCode}

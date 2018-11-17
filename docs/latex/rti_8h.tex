@@ -1,0 +1,431 @@
+\hypertarget{rti_8h}{}\section{include/rti.h File Reference}
+\label{rti_8h}\index{include/rti.\+h@{include/rti.\+h}}
+
+
+R\+TI Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+rti.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrti__config__reg}{rti\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rti_8h_ad68588140c74345c4f8ce3d8042039cd}{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K0}}~0U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI counter block 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_a066c8d7b11e4029b294a4ee272006b03}{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K1}}~1U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI counter block 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_aaf619897db8e24afb49bf314c8dd61b3}{rti\+C\+O\+M\+P\+A\+R\+E0}}~0U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_a7976393f55288dd04f8412461dc5cc05}{rti\+C\+O\+M\+P\+A\+R\+E1}}~1U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_aea62d83a6c4882559889bd975593ff3f}{rti\+C\+O\+M\+P\+A\+R\+E2}}~2U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_a3c8ee5402eeb519df883e23b0711c3c8}{rti\+C\+O\+M\+P\+A\+R\+E3}}~3U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_a3c241bcbc1d8869cf4d1ddba20657b51}{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E0}}~1U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 0 notification. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_a60490fb50308dc32f0174a7fde82886e}{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E1}}~2U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 1 notification. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_aa25b395f751e77c0a6d609ba189fc593}{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E2}}~4U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 2 notification. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_a1690ed0d81eb55eaa2fb80cc6b5fe64d}{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E3}}~8U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI compare 3 notification. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_ac935fdf509d05666ca96311b1217b4a7}{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+B\+A\+SE}}~0x10000U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI timebase notification. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_a0cc84220c7ab63c22c7d0514c5a06c94}{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R0}}~0x20000U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI counter block 0 overflow notification. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rti_8h_af3cf3526ba834e2949a1a1398e9a7412}{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R1}}~0x40000U
+\begin{DoxyCompactList}\small\item\em Alias name for R\+TI counter block 1 overflow notification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rti_8h_af1a7e61922dc9304d5147b116e1cb130}\label{rti_8h_af1a7e61922dc9304d5147b116e1cb130}} 
+\#define {\bfseries R\+T\+I\+\_\+\+G\+C\+T\+R\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0x0\+U $<$$<$ 16\+U) $\vert$ 0x00000000\+U)
+\item 
+\mbox{\Hypertarget{rti_8h_a5b34e662e92b243b19c15526dc7ee431}\label{rti_8h_a5b34e662e92b243b19c15526dc7ee431}} 
+\#define {\bfseries R\+T\+I\+\_\+\+T\+B\+C\+T\+R\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{rti_8h_a140c6157eb9094e24eb0ad3ad5a2ef72}\label{rti_8h_a140c6157eb9094e24eb0ad3ad5a2ef72}} 
+\#define {\bfseries R\+T\+I\+\_\+\+C\+A\+P\+C\+T\+R\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0\+U $\vert$ 0\+U)
+\item 
+\mbox{\Hypertarget{rti_8h_a4045f07a0909520fa94823b7d1a58323}\label{rti_8h_a4045f07a0909520fa94823b7d1a58323}} 
+\#define {\bfseries R\+T\+I\+\_\+\+C\+O\+M\+P\+C\+T\+R\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x00001000\+U $\vert$ 0x00000100\+U $\vert$ 0x00000000\+U $\vert$ 0x00000000\+U)
+\item 
+\mbox{\Hypertarget{rti_8h_a52504d8af69b6f656d1df4f11b8939da}\label{rti_8h_a52504d8af69b6f656d1df4f11b8939da}} 
+\#define {\bfseries R\+T\+I\+\_\+\+U\+D\+C\+P0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~10000U
+\item 
+\mbox{\Hypertarget{rti_8h_a1030d63f2f9d024080c1c2382a8a9d56}\label{rti_8h_a1030d63f2f9d024080c1c2382a8a9d56}} 
+\#define {\bfseries R\+T\+I\+\_\+\+U\+D\+C\+P1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50000U
+\item 
+\mbox{\Hypertarget{rti_8h_aff4496e47a933b1570b0387b5fcb201f}\label{rti_8h_aff4496e47a933b1570b0387b5fcb201f}} 
+\#define {\bfseries R\+T\+I\+\_\+\+U\+D\+C\+P2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~80000U
+\item 
+\mbox{\Hypertarget{rti_8h_a8555e6cd79393396beb089deab7a558c}\label{rti_8h_a8555e6cd79393396beb089deab7a558c}} 
+\#define {\bfseries R\+T\+I\+\_\+\+U\+D\+C\+P3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~100000U
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rti_8h_a48b3e127deebf92ead06d8f7d23c645f}\label{rti_8h_a48b3e127deebf92ead06d8f7d23c645f}} 
+typedef enum \mbox{\hyperlink{rti_8h_ace82f7b543a55555427f8051e887ef94}{dwd\+Violation\+Tag}} {\bfseries dwd\+Violation\+\_\+t}
+\item 
+\mbox{\Hypertarget{rti_8h_ac929df27699b519cf9b3da83bc43dd9d}\label{rti_8h_ac929df27699b519cf9b3da83bc43dd9d}} 
+typedef enum \mbox{\hyperlink{rti_8h_a993959b0dee1f99924509cb6d77e87a7}{dwd\+Reset\+Status\+Tag}} {\bfseries dwd\+Reset\+Status\+\_\+t}
+\item 
+\mbox{\Hypertarget{rti_8h_ab43923b3818c9602e2bc718cdab7f938}\label{rti_8h_ab43923b3818c9602e2bc718cdab7f938}} 
+typedef enum \mbox{\hyperlink{rti_8h_a0ae93153b87182d770552f32ae72e5ce}{dwwd\+Reaction\+Tag}} {\bfseries dwwd\+Reaction\+\_\+t}
+\item 
+\mbox{\Hypertarget{rti_8h_ae25d682547b047f3157fd27792a7098c}\label{rti_8h_ae25d682547b047f3157fd27792a7098c}} 
+typedef enum \mbox{\hyperlink{rti_8h_a05936d3a21abea30570fb554291e18d8}{dwwd\+Window\+Size\+Tag}} {\bfseries dwwd\+Window\+Size\+\_\+t}
+\item 
+\mbox{\Hypertarget{rti_8h_a118bdfc3b3e7b5b050f94e74c35423c1}\label{rti_8h_a118bdfc3b3e7b5b050f94e74c35423c1}} 
+typedef struct \mbox{\hyperlink{structrti__config__reg}{rti\+\_\+config\+\_\+reg}} {\bfseries rti\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rti_8h_ace82f7b543a55555427f8051e887ef94}\label{rti_8h_ace82f7b543a55555427f8051e887ef94}} 
+enum \mbox{\hyperlink{rti_8h_ace82f7b543a55555427f8051e887ef94}{dwd\+Violation\+Tag}} \{ \newline
+{\bfseries No\+Time\+\_\+\+Violation} = 0U, 
+{\bfseries Time\+\_\+\+Window\+\_\+\+Violation} = 1U, 
+{\bfseries End\+Time\+\_\+\+Window\+\_\+\+Violation} = 2U, 
+{\bfseries Start\+Time\+\_\+\+Window\+\_\+\+Violation} = 3U, 
+\newline
+{\bfseries Key\+\_\+\+Seq\+\_\+\+Violation} = 4U
+ \}
+\begin{DoxyCompactList}\small\item\em D\+WD Violations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rti_8h_a993959b0dee1f99924509cb6d77e87a7}\label{rti_8h_a993959b0dee1f99924509cb6d77e87a7}} 
+enum \mbox{\hyperlink{rti_8h_a993959b0dee1f99924509cb6d77e87a7}{dwd\+Reset\+Status\+Tag}} \{ {\bfseries No\+\_\+\+Reset\+\_\+\+Generated} = 0U, 
+{\bfseries Reset\+\_\+\+Generated} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em D\+WD Reset status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rti_8h_a0ae93153b87182d770552f32ae72e5ce}\label{rti_8h_a0ae93153b87182d770552f32ae72e5ce}} 
+enum \mbox{\hyperlink{rti_8h_a0ae93153b87182d770552f32ae72e5ce}{dwwd\+Reaction\+Tag}} \{ {\bfseries Generate\+\_\+\+Reset} = 0x00000005U, 
+{\bfseries Generate\+\_\+\+N\+MI} = 0x0000000\+AU
+ \}
+\begin{DoxyCompactList}\small\item\em D\+W\+WD Reaction on vioaltion. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rti_8h_a05936d3a21abea30570fb554291e18d8}\label{rti_8h_a05936d3a21abea30570fb554291e18d8}} 
+enum \mbox{\hyperlink{rti_8h_a05936d3a21abea30570fb554291e18d8}{dwwd\+Window\+Size\+Tag}} \{ \newline
+{\bfseries Size\+\_\+100\+\_\+\+Percent} = 0x00000005U, 
+{\bfseries Size\+\_\+50\+\_\+\+Percent} = 0x00000050U, 
+{\bfseries Size\+\_\+25\+\_\+\+Percent} = 0x00000500U, 
+{\bfseries Size\+\_\+12\+\_\+5\+\_\+\+Percent} = 0x00005000U, 
+\newline
+{\bfseries Size\+\_\+6\+\_\+25\+\_\+\+Percent} = 0x00050000U, 
+{\bfseries Size\+\_\+3\+\_\+125\+\_\+\+Percent} = 0x00500000U
+ \}
+\begin{DoxyCompactList}\small\item\em D\+W\+WD Window size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries rti\+Init} (void)
+\item 
+void {\bfseries rti\+Start\+Counter} (uint32 counter)
+\item 
+void {\bfseries rti\+Stop\+Counter} (uint32 counter)
+\item 
+uint32 {\bfseries rti\+Reset\+Counter} (uint32 counter)
+\item 
+void {\bfseries rti\+Set\+Period} (uint32 compare, uint32 period)
+\item 
+uint32 {\bfseries rti\+Get\+Period} (uint32 compare)
+\item 
+uint32 {\bfseries rti\+Get\+Current\+Tick} (uint32 compare)
+\item 
+void {\bfseries rti\+Enable\+Notification} (uint32 notification)
+\item 
+void {\bfseries rti\+Disable\+Notification} (uint32 notification)
+\item 
+void {\bfseries dwd\+Init} (uint16 dwd\+Preload)
+\item 
+void {\bfseries dwwd\+Init} (dwwd\+Reaction\+\_\+t Reaction, uint16 dwd\+Preload, dwwd\+Window\+Size\+\_\+t Window\+\_\+\+Size)
+\item 
+uint32 {\bfseries dwwd\+Get\+Current\+Down\+Counter} (void)
+\item 
+void {\bfseries dwd\+Counter\+Enable} (void)
+\item 
+void {\bfseries dwd\+Set\+Preload} (uint16 dwd\+Preload)
+\item 
+void {\bfseries dwd\+Reset} (void)
+\item 
+void {\bfseries dwd\+Generate\+Sys\+Reset} (void)
+\item 
+boolean {\bfseries Isdwd\+Key\+Sequence\+Correct} (void)
+\item 
+dwd\+Reset\+Status\+\_\+t {\bfseries dwd\+Get\+Status} (void)
+\item 
+dwd\+Violation\+\_\+t {\bfseries dwd\+Get\+Violation\+Status} (void)
+\item 
+void {\bfseries dwd\+Clear\+Flag} (void)
+\item 
+void {\bfseries rti\+Get\+Config\+Value} (\mbox{\hyperlink{structrti__config__reg}{rti\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group__RTI_gaff8f87a03bb4b08ef56c289d91ff610e}{rti\+Notification}} (uint32 notification)
+\begin{DoxyCompactList}\small\item\em Notification of R\+TI module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+TI Driver Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the R\+TI driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rti_8h_aaf619897db8e24afb49bf314c8dd61b3}\label{rti_8h_aaf619897db8e24afb49bf314c8dd61b3}} 
+\index{rti.\+h@{rti.\+h}!rti\+C\+O\+M\+P\+A\+R\+E0@{rti\+C\+O\+M\+P\+A\+R\+E0}}
+\index{rti\+C\+O\+M\+P\+A\+R\+E0@{rti\+C\+O\+M\+P\+A\+R\+E0}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+C\+O\+M\+P\+A\+R\+E0}{rtiCOMPARE0}}
+{\footnotesize\ttfamily \#define rti\+C\+O\+M\+P\+A\+R\+E0~0U}
+
+
+
+Alias name for R\+TI compare 0. 
+
+This is an alias name for the R\+TI compare 0.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape compare} 
+\end{DoxyNote}
+
+
+Definition at line 89 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_a7976393f55288dd04f8412461dc5cc05}\label{rti_8h_a7976393f55288dd04f8412461dc5cc05}} 
+\index{rti.\+h@{rti.\+h}!rti\+C\+O\+M\+P\+A\+R\+E1@{rti\+C\+O\+M\+P\+A\+R\+E1}}
+\index{rti\+C\+O\+M\+P\+A\+R\+E1@{rti\+C\+O\+M\+P\+A\+R\+E1}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+C\+O\+M\+P\+A\+R\+E1}{rtiCOMPARE1}}
+{\footnotesize\ttfamily \#define rti\+C\+O\+M\+P\+A\+R\+E1~1U}
+
+
+
+Alias name for R\+TI compare 1. 
+
+This is an alias name for the R\+TI compare 1.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape compare} 
+\end{DoxyNote}
+
+
+Definition at line 98 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_aea62d83a6c4882559889bd975593ff3f}\label{rti_8h_aea62d83a6c4882559889bd975593ff3f}} 
+\index{rti.\+h@{rti.\+h}!rti\+C\+O\+M\+P\+A\+R\+E2@{rti\+C\+O\+M\+P\+A\+R\+E2}}
+\index{rti\+C\+O\+M\+P\+A\+R\+E2@{rti\+C\+O\+M\+P\+A\+R\+E2}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+C\+O\+M\+P\+A\+R\+E2}{rtiCOMPARE2}}
+{\footnotesize\ttfamily \#define rti\+C\+O\+M\+P\+A\+R\+E2~2U}
+
+
+
+Alias name for R\+TI compare 2. 
+
+This is an alias name for the R\+TI compare 2.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape compare} 
+\end{DoxyNote}
+
+
+Definition at line 107 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_a3c8ee5402eeb519df883e23b0711c3c8}\label{rti_8h_a3c8ee5402eeb519df883e23b0711c3c8}} 
+\index{rti.\+h@{rti.\+h}!rti\+C\+O\+M\+P\+A\+R\+E3@{rti\+C\+O\+M\+P\+A\+R\+E3}}
+\index{rti\+C\+O\+M\+P\+A\+R\+E3@{rti\+C\+O\+M\+P\+A\+R\+E3}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+C\+O\+M\+P\+A\+R\+E3}{rtiCOMPARE3}}
+{\footnotesize\ttfamily \#define rti\+C\+O\+M\+P\+A\+R\+E3~3U}
+
+
+
+Alias name for R\+TI compare 3. 
+
+This is an alias name for the R\+TI compare 3.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape compare} 
+\end{DoxyNote}
+
+
+Definition at line 116 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_ad68588140c74345c4f8ce3d8042039cd}\label{rti_8h_ad68588140c74345c4f8ce3d8042039cd}} 
+\index{rti.\+h@{rti.\+h}!rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K0@{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K0}}
+\index{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K0@{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K0}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K0}{rtiCOUNTER\_BLOCK0}}
+{\footnotesize\ttfamily \#define rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K0~0U}
+
+
+
+Alias name for R\+TI counter block 0. 
+
+This is an alias name for the R\+TI counter block 0.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape counter} 
+\end{DoxyNote}
+
+
+Definition at line 71 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_a066c8d7b11e4029b294a4ee272006b03}\label{rti_8h_a066c8d7b11e4029b294a4ee272006b03}} 
+\index{rti.\+h@{rti.\+h}!rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K1@{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K1}}
+\index{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K1@{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K1}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K1}{rtiCOUNTER\_BLOCK1}}
+{\footnotesize\ttfamily \#define rti\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+L\+O\+C\+K1~1U}
+
+
+
+Alias name for R\+TI counter block 1. 
+
+This is an alias name for the R\+TI counter block 1.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape counter} 
+\end{DoxyNote}
+
+
+Definition at line 80 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_a3c241bcbc1d8869cf4d1ddba20657b51}\label{rti_8h_a3c241bcbc1d8869cf4d1ddba20657b51}} 
+\index{rti.\+h@{rti.\+h}!rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E0@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E0}}
+\index{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E0@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E0}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E0}{rtiNOTIFICATION\_COMPARE0}}
+{\footnotesize\ttfamily \#define rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E0~1U}
+
+
+
+Alias name for R\+TI compare 0 notification. 
+
+This is an alias name for the R\+TI compare 0 notification.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape notification} 
+\end{DoxyNote}
+
+
+Definition at line 125 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_a60490fb50308dc32f0174a7fde82886e}\label{rti_8h_a60490fb50308dc32f0174a7fde82886e}} 
+\index{rti.\+h@{rti.\+h}!rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E1@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E1}}
+\index{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E1@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E1}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E1}{rtiNOTIFICATION\_COMPARE1}}
+{\footnotesize\ttfamily \#define rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E1~2U}
+
+
+
+Alias name for R\+TI compare 1 notification. 
+
+This is an alias name for the R\+TI compare 1 notification.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape notification} 
+\end{DoxyNote}
+
+
+Definition at line 134 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_aa25b395f751e77c0a6d609ba189fc593}\label{rti_8h_aa25b395f751e77c0a6d609ba189fc593}} 
+\index{rti.\+h@{rti.\+h}!rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E2@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E2}}
+\index{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E2@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E2}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E2}{rtiNOTIFICATION\_COMPARE2}}
+{\footnotesize\ttfamily \#define rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E2~4U}
+
+
+
+Alias name for R\+TI compare 2 notification. 
+
+This is an alias name for the R\+TI compare 2 notification.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape notification} 
+\end{DoxyNote}
+
+
+Definition at line 143 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_a1690ed0d81eb55eaa2fb80cc6b5fe64d}\label{rti_8h_a1690ed0d81eb55eaa2fb80cc6b5fe64d}} 
+\index{rti.\+h@{rti.\+h}!rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E3@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E3}}
+\index{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E3@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E3}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E3}{rtiNOTIFICATION\_COMPARE3}}
+{\footnotesize\ttfamily \#define rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E3~8U}
+
+
+
+Alias name for R\+TI compare 3 notification. 
+
+This is an alias name for the R\+TI compare 3 notification.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape notification} 
+\end{DoxyNote}
+
+
+Definition at line 152 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_a0cc84220c7ab63c22c7d0514c5a06c94}\label{rti_8h_a0cc84220c7ab63c22c7d0514c5a06c94}} 
+\index{rti.\+h@{rti.\+h}!rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R0@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R0}}
+\index{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R0@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R0}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R0}{rtiNOTIFICATION\_COUNTER0}}
+{\footnotesize\ttfamily \#define rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R0~0x20000U}
+
+
+
+Alias name for R\+TI counter block 0 overflow notification. 
+
+This is an alias name for the R\+TI counter block 0 overflow notification.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape notification} 
+\end{DoxyNote}
+
+
+Definition at line 170 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_af3cf3526ba834e2949a1a1398e9a7412}\label{rti_8h_af3cf3526ba834e2949a1a1398e9a7412}} 
+\index{rti.\+h@{rti.\+h}!rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R1@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R1}}
+\index{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R1@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R1}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R1}{rtiNOTIFICATION\_COUNTER1}}
+{\footnotesize\ttfamily \#define rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+U\+N\+T\+E\+R1~0x40000U}
+
+
+
+Alias name for R\+TI counter block 1 overflow notification. 
+
+This is an alias name for the R\+TI counter block 1 overflow notification.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape notification} 
+\end{DoxyNote}
+
+
+Definition at line 179 of file rti.\+h.
+
+\mbox{\Hypertarget{rti_8h_ac935fdf509d05666ca96311b1217b4a7}\label{rti_8h_ac935fdf509d05666ca96311b1217b4a7}} 
+\index{rti.\+h@{rti.\+h}!rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+B\+A\+SE@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+B\+A\+SE}}
+\index{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+B\+A\+SE@{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+B\+A\+SE}!rti.\+h@{rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+B\+A\+SE}{rtiNOTIFICATION\_TIMEBASE}}
+{\footnotesize\ttfamily \#define rti\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+B\+A\+SE~0x10000U}
+
+
+
+Alias name for R\+TI timebase notification. 
+
+This is an alias name for the R\+TI timebase notification.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape notification} 
+\end{DoxyNote}
+
+
+Definition at line 161 of file rti.\+h.
+

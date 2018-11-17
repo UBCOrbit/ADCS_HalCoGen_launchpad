@@ -1,0 +1,70 @@
+\hypertarget{reg__rti_8h}{}\section{include/reg\+\_\+rti.h File Reference}
+\label{reg__rti_8h}\index{include/reg\+\_\+rti.\+h@{include/reg\+\_\+rti.\+h}}
+
+
+R\+TI Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrtiBase}{rti\+Base}}
+\begin{DoxyCompactList}\small\item\em R\+TI Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__rti_8h_a2c9d188af67e11a262a97da59eebb850}{rti\+R\+E\+G1}}~((\mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F\+C00\+U)
+\begin{DoxyCompactList}\small\item\em R\+T\+I1 Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structrtiBase}{rti\+Base}} \mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em R\+TI Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+TI Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the R\+TI driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__rti_8h_a2c9d188af67e11a262a97da59eebb850}\label{reg__rti_8h_a2c9d188af67e11a262a97da59eebb850}} 
+\index{reg\+\_\+rti.\+h@{reg\+\_\+rti.\+h}!rti\+R\+E\+G1@{rti\+R\+E\+G1}}
+\index{rti\+R\+E\+G1@{rti\+R\+E\+G1}!reg\+\_\+rti.\+h@{reg\+\_\+rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+R\+E\+G1}{rtiREG1}}
+{\footnotesize\ttfamily \#define rti\+R\+E\+G1~((\mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F\+C00\+U)}
+
+
+
+R\+T\+I1 Register Frame Pointer. 
+
+This pointer is used by the R\+TI driver to access the R\+T\+I1 registers. 
+
+Definition at line 123 of file reg\+\_\+rti.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}\label{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}} 
+\index{reg\+\_\+rti.\+h@{reg\+\_\+rti.\+h}!rti\+B\+A\+S\+E\+\_\+t@{rti\+B\+A\+S\+E\+\_\+t}}
+\index{rti\+B\+A\+S\+E\+\_\+t@{rti\+B\+A\+S\+E\+\_\+t}!reg\+\_\+rti.\+h@{reg\+\_\+rti.\+h}}
+\subsubsection{\texorpdfstring{rti\+B\+A\+S\+E\+\_\+t}{rtiBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__rti_8h_a63b48027f9b19b29cc7ef054693eecbd}{rti\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+R\+TI Register Frame Type Definition. 
+
+This type is used to access the R\+TI Registers. 

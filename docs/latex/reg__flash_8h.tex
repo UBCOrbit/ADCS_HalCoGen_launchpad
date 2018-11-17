@@ -1,0 +1,73 @@
+\hypertarget{reg__flash_8h}{}\section{include/reg\+\_\+flash.h File Reference}
+\label{reg__flash_8h}\index{include/reg\+\_\+flash.\+h@{include/reg\+\_\+flash.\+h}}
+
+
+Flash Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structflashWBase}{flash\+W\+Base}}
+\begin{DoxyCompactList}\small\item\em Flash Wrapper Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flash\+W\+R\+EG}}~((\mbox{\hyperlink{reg__flash_8h_ae9ae852deaa2f166d3cc16ce93fb8c00}{flash\+W\+B\+A\+S\+E\+\_\+t}} $\ast$)(0x\+F\+F\+F87000\+U))
+\begin{DoxyCompactList}\small\item\em Flash Wrapper Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structflashWBase}{flash\+W\+Base}} \mbox{\hyperlink{reg__flash_8h_ae9ae852deaa2f166d3cc16ce93fb8c00}{flash\+W\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Flash Wrapper Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Flash Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}\label{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}} 
+\index{reg\+\_\+flash.\+h@{reg\+\_\+flash.\+h}!flash\+W\+R\+EG@{flash\+W\+R\+EG}}
+\index{flash\+W\+R\+EG@{flash\+W\+R\+EG}!reg\+\_\+flash.\+h@{reg\+\_\+flash.\+h}}
+\subsubsection{\texorpdfstring{flash\+W\+R\+EG}{flashWREG}}
+{\footnotesize\ttfamily \#define flash\+W\+R\+EG~((\mbox{\hyperlink{reg__flash_8h_ae9ae852deaa2f166d3cc16ce93fb8c00}{flash\+W\+B\+A\+S\+E\+\_\+t}} $\ast$)(0x\+F\+F\+F87000\+U))}
+
+
+
+Flash Wrapper Register Frame Pointer. 
+
+This pointer is used by the system driver to access the flash wrapper registers. 
+
+Definition at line 129 of file reg\+\_\+flash.\+h.
+
+
+
+Referenced by check\+Flash\+E\+C\+C(), check\+Flash\+E\+E\+P\+R\+O\+M\+E\+C\+C(), fmc\+Bus2\+Check(), and setup\+Flash().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__flash_8h_ae9ae852deaa2f166d3cc16ce93fb8c00}\label{reg__flash_8h_ae9ae852deaa2f166d3cc16ce93fb8c00}} 
+\index{reg\+\_\+flash.\+h@{reg\+\_\+flash.\+h}!flash\+W\+B\+A\+S\+E\+\_\+t@{flash\+W\+B\+A\+S\+E\+\_\+t}}
+\index{flash\+W\+B\+A\+S\+E\+\_\+t@{flash\+W\+B\+A\+S\+E\+\_\+t}!reg\+\_\+flash.\+h@{reg\+\_\+flash.\+h}}
+\subsubsection{\texorpdfstring{flash\+W\+B\+A\+S\+E\+\_\+t}{flashWBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__flash_8h_ae9ae852deaa2f166d3cc16ce93fb8c00}{flash\+W\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+Flash Wrapper Register Frame Type Definition. 
+
+This type is used to access the Flash Wrapper Registers. 

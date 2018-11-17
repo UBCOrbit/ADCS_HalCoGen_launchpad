@@ -1,0 +1,1300 @@
+\hypertarget{group__ADC}{}\section{A\+DC}
+\label{group__ADC}\index{A\+DC@{A\+DC}}
+
+
+Analog To Digital Converter Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ADC_gafd645b17cf0581bcaa22c56011c775e4}{adc\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes A\+DC Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga92003078c6583152944796afdc7faf88}{adc\+Start\+Conversion}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Starts an A\+DC conversion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga33b0a3250de093a2227a3d2ca0c1998b}{adc\+Stop\+Conversion}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Stops an A\+DC conversion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga82f17f0f78bd4cfc96d00d520dcd0d58}{adc\+Reset\+Fi\+Fo}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Resets Fi\+Fo read and write pointer. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_gac756b9d0f3fc77b1ad5336442895d00f}{adc\+Get\+Data}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group, \mbox{\hyperlink{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}{adc\+Data\+\_\+t}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Gets converted a A\+DC values. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_gac6acf1ea1f92864df632f2aed46d7dd9}{adc\+Is\+Fifo\+Full}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Checks if Fi\+Fo buffer is full. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga8bad75e5bea34cb9eaec0ca8a3cb6dcb}{adc\+Is\+Conversion\+Complete}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Checks if Conversion is complete. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga986956885288c1d13a7e9917a900b7ec}{adc\+Enable\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Enable notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_gacbc69ac57562cbc2f607171801fb7138}{adc\+Disable\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Disable notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga6f24721d9ed4247b69f1f818585253f0}{adc\+Calibration}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Computes offset error using Calibration mode. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga6197438221bd189905b1a86a35272842}{adc\+Mid\+Point\+Calibration}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Computes offset error using Mid Point Calibration mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_gaa8ea6657a9cd07f73ec82876d014c203}{adc\+Set\+E\+V\+T\+Pin}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 value)
+\begin{DoxyCompactList}\small\item\em Set A\+D\+C\+E\+VT pin. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga0e44b7ecaee5bf23d1653da2ac80fe33}{adc\+Get\+E\+V\+T\+Pin}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Set A\+D\+C\+E\+VT pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga919d1c45d7b1bdab5eb226dddad5a428}{adc1\+Get\+Config\+Value}} (\mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__ADC_ga58461e613185bd4b68cd92e7e7d25ec1}\label{group__ADC_ga58461e613185bd4b68cd92e7e7d25ec1}} 
+void {\bfseries adc2\+Get\+Config\+Value} (\mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group__ADC_ga753cd0a8988b0b7b5044cfc3cfb3298d}{adc\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Group notification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Analog To Digital Converter Module. 
+
+The microcontroller includes two 12-\/bit A\+DC modules with selectable 10-\/bit or 12-\/bit resolution
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__adc_8h}{reg\+\_\+adc.\+h}}
+\item \mbox{\hyperlink{adc_8h}{adc.\+h}}
+\item \mbox{\hyperlink{adc_8c}{adc.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ADC_ga919d1c45d7b1bdab5eb226dddad5a428}\label{group__ADC_ga919d1c45d7b1bdab5eb226dddad5a428}} 
+\index{A\+DC@{A\+DC}!adc1\+Get\+Config\+Value@{adc1\+Get\+Config\+Value}}
+\index{adc1\+Get\+Config\+Value@{adc1\+Get\+Config\+Value}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc1\+Get\+Config\+Value()}{adc1GetConfigValue()}}
+{\footnotesize\ttfamily void adc1\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 937 of file adc.\+c.
+
+
+\begin{DoxyCode}
+938 \{
+939     \textcolor{keywordflow}{if} (type == InitialValue)
+940     \{
+941         config\_reg->CONFIG\_OPMODECR = ADC1\_OPMODECR\_CONFIGVALUE;
+942         config\_reg->CONFIG\_CLOCKCR = ADC1\_CLOCKCR\_CONFIGVALUE;
+943         config\_reg->CONFIG\_GxMODECR[0U] = ADC1\_G0MODECR\_CONFIGVALUE;
+944         config\_reg->CONFIG\_GxMODECR[1U] = ADC1\_G1MODECR\_CONFIGVALUE;
+945         config\_reg->CONFIG\_GxMODECR[2U] = ADC1\_G2MODECR\_CONFIGVALUE;
+946         config\_reg->CONFIG\_G0SRC = ADC1\_G0SRC\_CONFIGVALUE;
+947         config\_reg->CONFIG\_G1SRC = ADC1\_G1SRC\_CONFIGVALUE;
+948         config\_reg->CONFIG\_G2SRC = ADC1\_G2SRC\_CONFIGVALUE;
+949         config\_reg->CONFIG\_BNDCR = ADC1\_BNDCR\_CONFIGVALUE;
+950         config\_reg->CONFIG\_BNDEND = ADC1\_BNDEND\_CONFIGVALUE;
+951         config\_reg->CONFIG\_G0SAMP = ADC1\_G0SAMP\_CONFIGVALUE;
+952         config\_reg->CONFIG\_G1SAMP = ADC1\_G1SAMP\_CONFIGVALUE;
+953         config\_reg->CONFIG\_G2SAMP = ADC1\_G2SAMP\_CONFIGVALUE;
+954         config\_reg->CONFIG\_G0SAMPDISEN = ADC1\_G0SAMPDISEN\_CONFIGVALUE;
+955         config\_reg->CONFIG\_G1SAMPDISEN = ADC1\_G1SAMPDISEN\_CONFIGVALUE;
+956         config\_reg->CONFIG\_G2SAMPDISEN = ADC1\_G2SAMPDISEN\_CONFIGVALUE;
+957         config\_reg->CONFIG\_PARCR = ADC1\_PARCR\_CONFIGVALUE;
+958     \}
+959     \textcolor{keywordflow}{else}
+960     \{
+961         config\_reg->CONFIG\_OPMODECR = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->OPMODECR;
+962         config\_reg->CONFIG\_CLOCKCR = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->CLOCKCR;
+963         config\_reg->CONFIG\_GxMODECR[0U] = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->GxMODECR[0U];
+964         config\_reg->CONFIG\_GxMODECR[1U] = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->GxMODECR[1U];
+965         config\_reg->CONFIG\_GxMODECR[2U] = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->GxMODECR[2U];
+966         config\_reg->CONFIG\_G0SRC = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVSRC;
+967         config\_reg->CONFIG\_G1SRC = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G1SRC;
+968         config\_reg->CONFIG\_G2SRC = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G2SRC;
+969         config\_reg->CONFIG\_BNDCR = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->BNDCR;
+970         config\_reg->CONFIG\_BNDEND = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->BNDEND;
+971         config\_reg->CONFIG\_G0SAMP = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVSAMP;
+972         config\_reg->CONFIG\_G1SAMP = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G1SAMP;
+973         config\_reg->CONFIG\_G2SAMP = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G2SAMP;
+974         config\_reg->CONFIG\_G0SAMPDISEN = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVSAMPDISEN;
+975         config\_reg->CONFIG\_G1SAMPDISEN = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G1SAMPDISEN;
+976         config\_reg->CONFIG\_G2SAMPDISEN = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G2SAMPDISEN;
+977         config\_reg->CONFIG\_PARCR = \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->PARCR;
+978     \}
+979 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga6f24721d9ed4247b69f1f818585253f0}\label{group__ADC_ga6f24721d9ed4247b69f1f818585253f0}} 
+\index{A\+DC@{A\+DC}!adc\+Calibration@{adc\+Calibration}}
+\index{adc\+Calibration@{adc\+Calibration}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Calibration()}{adcCalibration()}}
+{\footnotesize\ttfamily void adc\+Calibration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc }\end{DoxyParamCaption})}
+
+
+
+Computes offset error using Calibration mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer This function computes offset error using Calibration mode 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Backup Mode before Calibration ~\newline
+~\newline
+~\newline
+
+\item Enable 12-\/\+B\+IT A\+DC ~\newline
+~\newline
+
+\item Restore Mode after Calibration ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before using this function. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 627 of file adc.\+c.
+
+
+\begin{DoxyCode}
+628 \{
+629 \textcolor{comment}{/* USER CODE BEGIN (25) */}
+630 \textcolor{comment}{/* USER CODE END */}
+631     
+632     uint32 conv\_val[5U]=\{0U,0U,0U,0U,0U\};
+633     uint32 loop\_index=0U;
+634     uint32 offset\_error=0U;
+635     uint32 backup\_mode;
+636     
+638     backup\_mode = adc->OPMODECR;
+639     
+641     adc->OPMODECR |= 0x80000000U;
+642 
+643     \textcolor{comment}{/* Disable all channels for conversion */}
+644     adc->GxSEL[0U]=0x00U;
+645     adc->GxSEL[1U]=0x00U;
+646     adc->GxSEL[2U]=0x00U;
+647 
+648     \textcolor{keywordflow}{for}(loop\_index=0U;loop\_index<4U;loop\_index++)
+649     \{
+650         \textcolor{comment}{/* Disable Self Test and Calibration mode */}
+651         adc->CALCR=0x0U;
+652     
+653         \textcolor{keywordflow}{switch}(loop\_index)
+654         \{
+655             \textcolor{keywordflow}{case} 0U :   \textcolor{comment}{/* Test 1 : Bride En = 0 , HiLo =0 */}
+656                         adc->CALCR=0x0U;
+657                         \textcolor{keywordflow}{break};
+658 
+659             \textcolor{keywordflow}{case} 1U :   \textcolor{comment}{/* Test 1 : Bride En = 0 , HiLo =1 */}
+660                         adc->CALCR=0x0100U;
+661                         \textcolor{keywordflow}{break};
+662 
+663             \textcolor{keywordflow}{case} 2U :   \textcolor{comment}{/* Test 1 : Bride En = 1 , HiLo =0 */}
+664                         adc->CALCR=0x0200U;
+665                         \textcolor{keywordflow}{break};
+666         
+667             \textcolor{keywordflow}{case} 3U :   \textcolor{comment}{/* Test 1 : Bride En = 1 , HiLo =1 */}
+668                         adc->CALCR=0x0300U;
+669                         \textcolor{keywordflow}{break};
+670             default :
+671                         \textcolor{keywordflow}{break};
+672         \}
+673     
+674         \textcolor{comment}{/* Enable Calibration mode */}
+675         adc->CALCR|=0x1U;
+676     
+677         \textcolor{comment}{/* Start calibration conversion */}
+678         adc->CALCR|=0x00010000U;
+679 
+680         \textcolor{comment}{/* Wait for calibration conversion to complete */}
+681         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Hardware status bit read check" */}
+682         \textcolor{keywordflow}{while}((adc->CALCR & 0x00010000U)==0x00010000U)
+683         \{ 
+684         \} \textcolor{comment}{/* Wait */}
+685 
+686         \textcolor{comment}{/* Read converted value */}
+687         conv\_val[loop\_index]= adc->CALR;
+688     \}
+689 
+690     \textcolor{comment}{/* Disable Self Test and Calibration mode */}
+691     adc->CALCR=0x0U;
+692 
+693     \textcolor{comment}{/* Compute the Offset error correction value */}
+694     conv\_val[4U]=conv\_val[0U]+ conv\_val[1U] + conv\_val[2U] + conv\_val[3U];
+695 
+696     conv\_val[4U]=(conv\_val[4U]/4U);
+697 
+698     offset\_error=conv\_val[4U]-0x7FFU;
+699 
+700     \textcolor{comment}{/*Write the offset error to the Calibration register */}
+701     \textcolor{comment}{/* Load 2;s complement of the computed value to ADCALR register */}
+702     offset\_error=~offset\_error;
+703     offset\_error=offset\_error & 0xFFFU;
+704     offset\_error=offset\_error+1U;
+705 
+706     adc->CALR = offset\_error;
+707 
+709     adc->OPMODECR = backup\_mode;
+710     
+712 
+713 \textcolor{comment}{/* USER CODE BEGIN (26) */}
+714 \textcolor{comment}{/* USER CODE END */}
+715 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_gacbc69ac57562cbc2f607171801fb7138}\label{group__ADC_gacbc69ac57562cbc2f607171801fb7138}} 
+\index{A\+DC@{A\+DC}!adc\+Disable\+Notification@{adc\+Disable\+Notification}}
+\index{adc\+Disable\+Notification@{adc\+Disable\+Notification}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Disable\+Notification()}{adcDisableNotification()}}
+{\footnotesize\ttfamily void adc\+Disable\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Disable notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will disable the notification of a conversion. \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+
+Definition at line 874 of file adc.\+c.
+
+
+\begin{DoxyCode}
+875 \{
+876 \textcolor{comment}{/* USER CODE BEGIN (33) */}
+877 \textcolor{comment}{/* USER CODE END */}
+878 
+879     adc->GxINTENA[group] = 0U;
+880 
+882 
+883 \textcolor{comment}{/* USER CODE BEGIN (34) */}
+884 \textcolor{comment}{/* USER CODE END */}
+885 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga986956885288c1d13a7e9917a900b7ec}\label{group__ADC_ga986956885288c1d13a7e9917a900b7ec}} 
+\index{A\+DC@{A\+DC}!adc\+Enable\+Notification@{adc\+Enable\+Notification}}
+\index{adc\+Enable\+Notification@{adc\+Enable\+Notification}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Enable\+Notification()}{adcEnableNotification()}}
+{\footnotesize\ttfamily void adc\+Enable\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Enable notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will enable the notification of a conversion. In single conversion mode for conversion complete and in continuous conversion mode when the Fi\+Fo buffer is full. \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used.~\newline
+ This function should be called before the conversion is started
+\end{DoxyNote}
+
+
+Definition at line 838 of file adc.\+c.
+
+
+\begin{DoxyCode}
+839 \{
+840     uint32 notif = (((uint32)(adc->GxMODECR[group]) & 2U) == 2U) ? 1U : 8U;
+841 
+842 \textcolor{comment}{/* USER CODE BEGIN (30) */}
+843 \textcolor{comment}{/* USER CODE END */}
+844 
+845     adc->GxINTENA[group] = notif;
+846 
+850 
+851 \textcolor{comment}{/* USER CODE BEGIN (31) */}
+852 \textcolor{comment}{/* USER CODE END */}
+853 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_gac756b9d0f3fc77b1ad5336442895d00f}\label{group__ADC_gac756b9d0f3fc77b1ad5336442895d00f}} 
+\index{A\+DC@{A\+DC}!adc\+Get\+Data@{adc\+Get\+Data}}
+\index{adc\+Get\+Data@{adc\+Get\+Data}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Get\+Data()}{adcGetData()}}
+{\footnotesize\ttfamily uint32 adc\+Get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group,  }\item[{\mbox{\hyperlink{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}{adc\+Data\+\_\+t}} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Gets converted a A\+DC values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt out}  & {\em data} & Pointer to store A\+DC converted data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return the number of converted values copied into data buffer\+:
+\end{DoxyReturn}
+This function writes a A\+DC message into a A\+DC message box. 
+\begin{DoxyItemize}
+\item Get conversion data and channel/pin id ~\newline
+~\newline
+
+\item Get conversion data and channel/pin id ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used.~\newline
+ The user is responsible to initialize the message box.
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 474 of file adc.\+c.
+
+
+
+References adc\+R\+E\+G1.
+
+
+\begin{DoxyCode}
+475 \{
+476     uint32  i;
+477     uint32  buf;
+478     uint32  mode;    
+479     uint32  index = (adc == \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}) ? 0U : 1U;
+480 
+481     uint32  intcr\_reg = adc->GxINTCR[group];
+482     uint32  count = (intcr\_reg >= 256U) ? s\_adcFiFoSize[index][group] : (s\_adcFiFoSize[index][group] - (
+      uint32)(intcr\_reg & 0xFFU));
+483     \mbox{\hyperlink{structadcData}{adcData\_t}} *ptr = data; 
+484 
+485 \textcolor{comment}{/* USER CODE BEGIN (16) */}
+486 \textcolor{comment}{/* USER CODE END */}
+487 
+488     mode = (adc->OPMODECR & \mbox{\hyperlink{adc_8h_a15a7481afa59efa27305c6da96ad09b1}{ADC\_12\_BIT\_MODE}});
+489 
+490     \textcolor{keywordflow}{if}(mode == \mbox{\hyperlink{adc_8h_a15a7481afa59efa27305c6da96ad09b1}{ADC\_12\_BIT\_MODE}})
+491       \{
+493         \textcolor{keywordflow}{for} (i = 0U; i < count; i++)
+494         \{
+495           buf        = adc->GxBUF[group].BUF0;
+496           \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+497           ptr->\mbox{\hyperlink{structadcData_a90ab6176c797b3294127cfc83d72b4db}{value}} = (uint16)(buf & 0xFFFU);
+498           ptr->\mbox{\hyperlink{structadcData_a17b43632d28d8a5d79a0837796d92790}{id}}    = (uint32)((buf >> 16U) & 0x1FU);
+499           \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+500           ptr++;
+501         \}
+502       \}
+503       \textcolor{keywordflow}{else}
+504       \{
+506         \textcolor{keywordflow}{for} (i = 0U; i < count; i++)
+507         \{
+508           buf        = adc->GxBUF[group].BUF0;
+509           \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+510           ptr->\mbox{\hyperlink{structadcData_a90ab6176c797b3294127cfc83d72b4db}{value}} = (uint16)(buf & 0x3FFU);
+511           ptr->\mbox{\hyperlink{structadcData_a17b43632d28d8a5d79a0837796d92790}{id}}    = (uint32)((buf >> 10U) & 0x1FU);
+512           \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+513           ptr++;
+514         \}
+515       \}
+516 
+517 
+518     adc->GxINTFLG[group] = 9U;
+519 
+523 
+524 \textcolor{comment}{/* USER CODE BEGIN (17) */}
+525 \textcolor{comment}{/* USER CODE END */}
+526 
+527     \textcolor{keywordflow}{return} count;
+528 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga0e44b7ecaee5bf23d1653da2ac80fe33}\label{group__ADC_ga0e44b7ecaee5bf23d1653da2ac80fe33}} 
+\index{A\+DC@{A\+DC}!adc\+Get\+E\+V\+T\+Pin@{adc\+Get\+E\+V\+T\+Pin}}
+\index{adc\+Get\+E\+V\+T\+Pin@{adc\+Get\+E\+V\+T\+Pin}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Get\+E\+V\+T\+Pin()}{adcGetEVTPin()}}
+{\footnotesize\ttfamily uint32 adc\+Get\+E\+V\+T\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc }\end{DoxyParamCaption})}
+
+
+
+Set A\+D\+C\+E\+VT pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the A\+DC E\+VT pin\+: 0 or 1
+\end{DoxyReturn}
+This function will return the value of A\+DC E\+VT pin. 
+
+Definition at line 914 of file adc.\+c.
+
+
+\begin{DoxyCode}
+915 \{
+916     \textcolor{keywordflow}{return} adc->EVTIN;
+917 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_gafd645b17cf0581bcaa22c56011c775e4}\label{group__ADC_gafd645b17cf0581bcaa22c56011c775e4}} 
+\index{A\+DC@{A\+DC}!adc\+Init@{adc\+Init}}
+\index{adc\+Init@{adc\+Init}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Init()}{adcInit()}}
+{\footnotesize\ttfamily void adc\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes A\+DC Driver. 
+
+This function initializes the A\+DC driver. {\bfseries Initialize} {\bfseries A\+D\+C1\+:} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item Reset A\+DC module ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Enable 12-\/\+B\+IT A\+DC ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup prescaler ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup memory boundaries ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup event group conversion mode
+\begin{DoxyItemize}
+\item Setup data format
+\item Enable/\+Disable channel id in conversion result
+\item Enable/\+Disable continuous conversion
+\end{DoxyItemize}
+\item Setup event group hardware trigger
+\begin{DoxyItemize}
+\item Setup hardware trigger edge
+\item Setup hardware trigger source
+\end{DoxyItemize}
+\item Setup event group sample window ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup event group sample discharge
+\begin{DoxyItemize}
+\item Setup discharge prescaler
+\item Enable/\+Disable discharge
+\end{DoxyItemize}
+\item Setup group 1 conversion mode
+\begin{DoxyItemize}
+\item Setup data format
+\item Enable/\+Disable channel id in conversion result
+\item Enable/\+Disable continuous conversion
+\end{DoxyItemize}
+\item Setup group 1 hardware trigger
+\begin{DoxyItemize}
+\item Setup hardware trigger edge
+\item Setup hardware trigger source
+\end{DoxyItemize}
+\item Setup group 1 sample window ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup group 1 sample discharge
+\begin{DoxyItemize}
+\item Setup discharge prescaler
+\item Enable/\+Disable discharge
+\end{DoxyItemize}
+\item Setup group 2 conversion mode
+\begin{DoxyItemize}
+\item Setup data format
+\item Enable/\+Disable channel id in conversion result
+\item Enable/\+Disable continuous conversion
+\end{DoxyItemize}
+\item Setup group 2 hardware trigger
+\begin{DoxyItemize}
+\item Setup hardware trigger edge
+\item Setup hardware trigger source
+\end{DoxyItemize}
+\item Setup group 2 sample window ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup group 2 sample discharge
+\begin{DoxyItemize}
+\item Setup discharge prescaler
+\item Enable/\+Disable discharge
+\end{DoxyItemize}
+\item A\+D\+C1 E\+VT pin output value ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item A\+D\+C1 E\+VT pin direction ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item A\+D\+C1 E\+VT pin open drain enable ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item A\+D\+C1 E\+VT pin pullup / pulldown selection ~\newline
+~\newline
+~\newline
+~\newline
+
+\item A\+D\+C1 E\+VT pin pullup / pulldown enable
+\item Enable A\+DC module ~\newline
+~\newline
+
+\item Wait for buffer initialization complete ~\newline
+
+\item Setup parity 
+\end{DoxyItemize}
+
+Definition at line 71 of file adc.\+c.
+
+
+
+References adc\+R\+E\+G1.
+
+
+\begin{DoxyCode}
+72 \{
+73 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+74 \textcolor{comment}{/* USER CODE END */}
+75 
+77 
+79     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->RSTCR = 1U;
+80     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->RSTCR = 0U;
+81 
+83     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->OPMODECR |= 0x80000000U;
+84     
+86     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->CLOCKCR = 7U;
+87  
+89     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->BNDCR  = (uint32)((uint32)8U << 16U) | (8U + 8U);
+90     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->BNDEND = (\mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->BNDEND & 0xFFFF0000U) | (2U);
+91  
+97     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->GxMODECR[0U] = (uint32)\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{ADC\_12\_BIT}}
+98                           | (uint32)0x00000000U
+99                           | (uint32)0x00000000U;
+100 
+105     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVSRC = (uint32)0x00000000U
+106                    | (uint32)\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}{ADC1\_EVENT}};
+107 
+109     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVSAMP = 1U;
+110 
+115     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVSAMPDISEN = (uint32)((uint32)0U << 8U)
+116                          | (uint32)0x00000000U;
+117 
+123     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->GxMODECR[1U] = (uint32)\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{ADC\_12\_BIT}}
+124                           | (uint32)0x00000000U
+125                           | (uint32)0x00000000U
+126                           | (uint32)0x00000000U;
+127 
+132     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G1SRC = (uint32)0x00000000U
+133                    | (uint32)\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}{ADC1\_EVENT}};
+134 
+136     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G1SAMP = 1U;
+137 
+142     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G1SAMPDISEN = (uint32)((uint32)0U << 8U)
+143                          | (uint32)0x00000000U;
+144 
+150     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->GxMODECR[2U] = (uint32)\mbox{\hyperlink{adc_8h_acb5182ec6ffe79ad3a12c33fe2a8c6bbad68550b9c51106cbc8310d2dbd9b7a72}{ADC\_12\_BIT}}
+151                           | (uint32)0x00000000U
+152                           | (uint32)0x00000000U
+153                           | (uint32)0x00000000U;
+154 
+159     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G2SRC = (uint32)0x00000000U
+160                    | (uint32)\mbox{\hyperlink{adc_8h_a13aceea9ced6ca89d6c6ab3fe2ab910caadc2f5ee45815b73e5e4b86b3d75ae56}{ADC1\_EVENT}};
+161 
+163     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G2SAMP = 1U;
+164 
+169     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->G2SAMPDISEN = (uint32)((uint32)0U << 8U)
+170                          | (uint32)0x00000000U;
+171 
+173     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVTOUT = 0U;
+174 
+176     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVTDIR = 0U;
+177     
+179     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVTPDR = 0U;
+180 
+182     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVTPSEL = 1U;
+183 
+185     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->EVTDIS = 0U;
+186     
+188     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->OPMODECR |= 0x80140001U;
+189     
+191     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Hardware status bit read check" */}
+192     \textcolor{keywordflow}{while} (((\mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->BNDEND & 0xFFFF0000U) >> 16U ) != 0U) 
+193     \{ 
+194     \} \textcolor{comment}{/* Wait */}
+195     
+197     \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}->PARCR = 0x00000005U;
+198 
+199 
+200 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+201 \textcolor{comment}{/* USER CODE END */}
+202 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga8bad75e5bea34cb9eaec0ca8a3cb6dcb}\label{group__ADC_ga8bad75e5bea34cb9eaec0ca8a3cb6dcb}} 
+\index{A\+DC@{A\+DC}!adc\+Is\+Conversion\+Complete@{adc\+Is\+Conversion\+Complete}}
+\index{adc\+Is\+Conversion\+Complete@{adc\+Is\+Conversion\+Complete}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Is\+Conversion\+Complete()}{adcIsConversionComplete()}}
+{\footnotesize\ttfamily uint32 adc\+Is\+Conversion\+Complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Checks if Conversion is complete. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item 0\+: When is not finished ~\newline
+ -\/ 8\+: When conversion is complete ~\newline
+ This function checks if conversion is complete. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Read conversion flags ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 595 of file adc.\+c.
+
+
+\begin{DoxyCode}
+596 \{
+597     uint32 flags;
+598 
+599 \textcolor{comment}{/* USER CODE BEGIN (22) */}
+600 \textcolor{comment}{/* USER CODE END */}
+601 
+603     flags = adc->GxINTFLG[group] & 8U;
+604 
+606 
+607 \textcolor{comment}{/* USER CODE BEGIN (23) */}
+608 \textcolor{comment}{/* USER CODE END */}
+609 
+610     \textcolor{keywordflow}{return} flags;
+611 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_gac6acf1ea1f92864df632f2aed46d7dd9}\label{group__ADC_gac6acf1ea1f92864df632f2aed46d7dd9}} 
+\index{A\+DC@{A\+DC}!adc\+Is\+Fifo\+Full@{adc\+Is\+Fifo\+Full}}
+\index{adc\+Is\+Fifo\+Full@{adc\+Is\+Fifo\+Full}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Is\+Fifo\+Full()}{adcIsFifoFull()}}
+{\footnotesize\ttfamily uint32 adc\+Is\+Fifo\+Full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Checks if Fi\+Fo buffer is full. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item 0\+: When Fi\+Fo buffer is not full ~\newline
+ -\/ 1\+: When Fi\+Fo buffer is full ~\newline
+ -\/ 3\+: When Fi\+Fo buffer overflow occurred ~\newline
+ This function checks Fi\+Fo buffer status. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Read Fi\+Fo flags ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 554 of file adc.\+c.
+
+
+\begin{DoxyCode}
+555 \{
+556     uint32 flags;
+557 
+558 \textcolor{comment}{/* USER CODE BEGIN (19) */}
+559 \textcolor{comment}{/* USER CODE END */}
+560 
+562     flags = adc->GxINTFLG[group] & 3U;
+563 
+565 
+566 \textcolor{comment}{/* USER CODE BEGIN (20) */}
+567 \textcolor{comment}{/* USER CODE END */}
+568 
+569     \textcolor{keywordflow}{return} flags;
+570 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga6197438221bd189905b1a86a35272842}\label{group__ADC_ga6197438221bd189905b1a86a35272842}} 
+\index{A\+DC@{A\+DC}!adc\+Mid\+Point\+Calibration@{adc\+Mid\+Point\+Calibration}}
+\index{adc\+Mid\+Point\+Calibration@{adc\+Mid\+Point\+Calibration}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Mid\+Point\+Calibration()}{adcMidPointCalibration()}}
+{\footnotesize\ttfamily void adc\+Mid\+Point\+Calibration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc }\end{DoxyParamCaption})}
+
+
+
+Computes offset error using Mid Point Calibration mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function will return offset error using Mid Point Calibration mode
+\end{DoxyReturn}
+This function computes offset error using Mid Point Calibration mode 
+\begin{DoxyItemize}
+\item Backup Mode before Calibration ~\newline
+~\newline
+~\newline
+
+\item Enable 12-\/\+B\+IT A\+DC ~\newline
+~\newline
+
+\item Restore Mode after Calibration ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 731 of file adc.\+c.
+
+
+\begin{DoxyCode}
+732 \{
+733 \textcolor{comment}{/* USER CODE BEGIN (27) */}
+734 \textcolor{comment}{/* USER CODE END */}
+735     
+736     uint32 conv\_val[3U]=\{0U,0U,0U\};
+737     uint32 loop\_index=0U;
+738     uint32 offset\_error=0U;
+739     uint32 backup\_mode;
+740     
+742     backup\_mode = adc->OPMODECR;
+743     
+745     adc->OPMODECR |= 0x80000000U;
+746 
+747     \textcolor{comment}{/* Disable all channels for conversion */}
+748     adc->GxSEL[0U]=0x00U;
+749     adc->GxSEL[1U]=0x00U;
+750     adc->GxSEL[2U]=0x00U;
+751 
+752     \textcolor{keywordflow}{for}(loop\_index=0U;loop\_index<2U;loop\_index++)
+753     \{
+754         \textcolor{comment}{/* Disable Self Test and Calibration mode */}
+755         adc->CALCR=0x0U;
+756     
+757         \textcolor{keywordflow}{switch}(loop\_index)
+758         \{
+759             \textcolor{keywordflow}{case} 0U :   \textcolor{comment}{/* Test 1 : Bride En = 0 , HiLo =0 */}
+760                         adc->CALCR=0x0U;
+761                         \textcolor{keywordflow}{break};
+762 
+763             \textcolor{keywordflow}{case} 1U :   \textcolor{comment}{/* Test 1 : Bride En = 0 , HiLo =1 */}
+764                         adc->CALCR=0x0100U;
+765                         \textcolor{keywordflow}{break};
+766 
+767             default :
+768                         \textcolor{keywordflow}{break};                      
+769 
+770         \}
+771     
+772         \textcolor{comment}{/* Enable Calibration mode */}
+773         adc->CALCR|=0x1U;
+774     
+775         \textcolor{comment}{/* Start calibration conversion */}
+776         adc->CALCR|=0x00010000U;
+777 
+778         \textcolor{comment}{/* Wait for calibration conversion to complete */}
+779         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Hardware status bit read check" */}
+780         \textcolor{keywordflow}{while}((adc->CALCR & 0x00010000U)==0x00010000U)
+781         \{ 
+782         \} \textcolor{comment}{/* Wait */}
+783 
+784         \textcolor{comment}{/* Read converted value */}
+785         conv\_val[loop\_index]= adc->CALR;
+786     \}
+787 
+788     \textcolor{comment}{/* Disable Self Test and Calibration mode */}
+789     adc->CALCR=0x0U;
+790 
+791     \textcolor{comment}{/* Compute the Offset error correction value */}
+792     conv\_val[2U]=(conv\_val[0U])+ (conv\_val[1U]);
+793 
+794     conv\_val[2U]=(conv\_val[2U]/2U);
+795 
+796     offset\_error=conv\_val[2U]-0x7FFU;
+797 
+798     \textcolor{comment}{/* Write the offset error to the Calibration register           */}
+799     \textcolor{comment}{/* Load 2's complement of the computed value to ADCALR register */}
+800     offset\_error=~offset\_error;
+801     offset\_error=offset\_error+1U;
+802     offset\_error=offset\_error & 0xFFFU;
+803 
+804     adc->CALR = offset\_error;
+805 
+807     adc->OPMODECR = backup\_mode;
+808     
+809     \textcolor{keywordflow}{return}(offset\_error);
+810 
+812 
+813 \textcolor{comment}{/* USER CODE BEGIN (28) */}
+814 \textcolor{comment}{/* USER CODE END */}
+815 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga753cd0a8988b0b7b5044cfc3cfb3298d}\label{group__ADC_ga753cd0a8988b0b7b5044cfc3cfb3298d}} 
+\index{A\+DC@{A\+DC}!adc\+Notification@{adc\+Notification}}
+\index{adc\+Notification@{adc\+Notification}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Notification()}{adcNotification()}}
+{\footnotesize\ttfamily void adc\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Group notification. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC node\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & number of A\+DC node\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function has to be provide by the user. 
+\end{DoxyNote}
+
+
+Definition at line 103 of file notification.\+c.
+
+
+\begin{DoxyCode}
+104 \{
+105 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+106 \textcolor{comment}{/* USER CODE BEGIN (11) */}
+107 \textcolor{comment}{/* USER CODE END */}
+108 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga82f17f0f78bd4cfc96d00d520dcd0d58}\label{group__ADC_ga82f17f0f78bd4cfc96d00d520dcd0d58}} 
+\index{A\+DC@{A\+DC}!adc\+Reset\+Fi\+Fo@{adc\+Reset\+Fi\+Fo}}
+\index{adc\+Reset\+Fi\+Fo@{adc\+Reset\+Fi\+Fo}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Reset\+Fi\+Fo()}{adcResetFiFo()}}
+{\footnotesize\ttfamily void adc\+Reset\+Fi\+Fo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Resets Fi\+Fo read and write pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function resets the Fi\+Fo read and write pointers. 
+\begin{DoxyItemize}
+\item Reset Fi\+Fo ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used.~\newline
+ the conversion should be stopped before calling this function.
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 436 of file adc.\+c.
+
+
+\begin{DoxyCode}
+437 \{
+438 \textcolor{comment}{/* USER CODE BEGIN (13) */}
+439 \textcolor{comment}{/* USER CODE END */}
+440 
+442     adc->GxFIFORESETCR[group] = 1U;
+443 
+447 
+448 \textcolor{comment}{/* USER CODE BEGIN (14) */}
+449 \textcolor{comment}{/* USER CODE END */}
+450 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_gaa8ea6657a9cd07f73ec82876d014c203}\label{group__ADC_gaa8ea6657a9cd07f73ec82876d014c203}} 
+\index{A\+DC@{A\+DC}!adc\+Set\+E\+V\+T\+Pin@{adc\+Set\+E\+V\+T\+Pin}}
+\index{adc\+Set\+E\+V\+T\+Pin@{adc\+Set\+E\+V\+T\+Pin}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Set\+E\+V\+T\+Pin()}{adcSetEVTPin()}}
+{\footnotesize\ttfamily void adc\+Set\+E\+V\+T\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{value }\end{DoxyParamCaption})}
+
+
+
+Set A\+D\+C\+E\+VT pin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em value} & Value to be set\+: 0 or 1\\
+\hline
+\end{DoxyParams}
+This function will set the A\+DC E\+VT pin if configured as an output pin. 
+
+Definition at line 898 of file adc.\+c.
+
+
+\begin{DoxyCode}
+899 \{
+900     adc->EVTOUT = value;
+901 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga92003078c6583152944796afdc7faf88}\label{group__ADC_ga92003078c6583152944796afdc7faf88}} 
+\index{A\+DC@{A\+DC}!adc\+Start\+Conversion@{adc\+Start\+Conversion}}
+\index{adc\+Start\+Conversion@{adc\+Start\+Conversion}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Start\+Conversion()}{adcStartConversion()}}
+{\footnotesize\ttfamily void adc\+Start\+Conversion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Starts an A\+DC conversion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function starts a conversion of the A\+DC hardware group. 
+\begin{DoxyItemize}
+\item Setup Fi\+Fo size ~\newline
+~\newline
+
+\item Start Conversion ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 363 of file adc.\+c.
+
+
+
+References adc\+R\+E\+G1.
+
+
+\begin{DoxyCode}
+364 \{
+365     uint32 index = (adc == \mbox{\hyperlink{reg__adc_8h_a3b9540af9f841ba3127f14b1c9208c57}{adcREG1}}) ? 0U : 1U;
+366 
+367 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+368 \textcolor{comment}{/* USER CODE END */}
+369 
+371     adc->GxINTCR[group] = s\_adcFiFoSize[index][group];
+372 
+374     adc->GxSEL[group] = s\_adcSelect[index][group];
+375 
+377 
+378 \textcolor{comment}{/* USER CODE BEGIN (8) */}
+379 \textcolor{comment}{/* USER CODE END */}
+380 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ADC_ga33b0a3250de093a2227a3d2ca0c1998b}\label{group__ADC_ga33b0a3250de093a2227a3d2ca0c1998b}} 
+\index{A\+DC@{A\+DC}!adc\+Stop\+Conversion@{adc\+Stop\+Conversion}}
+\index{adc\+Stop\+Conversion@{adc\+Stop\+Conversion}!A\+DC@{A\+DC}}
+\subsubsection{\texorpdfstring{adc\+Stop\+Conversion()}{adcStopConversion()}}
+{\footnotesize\ttfamily void adc\+Stop\+Conversion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$}]{adc,  }\item[{uint32}]{group }\end{DoxyParamCaption})}
+
+
+
+Stops an A\+DC conversion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em adc} & Pointer to A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+R\+E\+G1\+: A\+D\+C1 module pointer
+\item adc\+R\+E\+G2\+: A\+D\+C2 module pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em group} & Hardware group of A\+DC module\+:
+\begin{DoxyItemize}
+\item adc\+G\+R\+O\+U\+P0\+: A\+DC event group
+\item adc\+G\+R\+O\+U\+P1\+: A\+DC group 1
+\item adc\+G\+R\+O\+U\+P2\+: A\+DC group 2
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function stops a conversion of the A\+DC hardware group. 
+\begin{DoxyItemize}
+\item Stop Conversion ~\newline
+ \begin{DoxyNote}{Note}
+The function adc\+Init has to be called before this function can be used. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+Definition at line 402 of file adc.\+c.
+
+
+\begin{DoxyCode}
+403 \{
+404 \textcolor{comment}{/* USER CODE BEGIN (10) */}
+405 \textcolor{comment}{/* USER CODE END */}
+406 
+408     adc->GxSEL[group] = 0U;
+409 
+411 
+412 \textcolor{comment}{/* USER CODE BEGIN (11) */}
+413 \textcolor{comment}{/* USER CODE END */}
+414 \}
+\end{DoxyCode}

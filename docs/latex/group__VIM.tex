@@ -1,0 +1,555 @@
+\hypertarget{group__VIM}{}\section{V\+IM}
+\label{group__VIM}\index{V\+IM@{V\+IM}}
+
+
+Vectored Interrupt Manager.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__VIM_ga894b6f212b72787bfa97f1ac62877167}{vim\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes V\+IM module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__VIM_ga1a269c8383f7cbf75df048bb812307bb}{vim\+Channel\+Map}} (uint32 request, uint32 channel, \mbox{\hyperlink{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}{t\+\_\+isr\+Func\+P\+TR}} handler)
+\begin{DoxyCompactList}\small\item\em Map selected interrupt request to the selected channel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__VIM_gadcc56ba4e8e75c39f782b78f4022bf7a}\label{group__VIM_gadcc56ba4e8e75c39f782b78f4022bf7a}} 
+void {\bfseries vim\+Enable\+Interrupt} (uint32 channel, system\+Interrupt\+\_\+t inttype)
+\item 
+void \mbox{\hyperlink{group__VIM_gac4c74a2a1d17f9c7ec4cc3ba156a230e}{vim\+Disable\+Interrupt}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Disable interrupt for the the selected channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__VIM_gae8b4aff17dfb436d01775ae6fce955c1}{vim\+Get\+Config\+Value}} (\mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Vectored Interrupt Manager. 
+
+The vectored interrupt manager (V\+IM) provides hardware assistance for prioritizing and controlling the many interrupt sources present on a device. Interrupts are caused by events outside of the normal flow of program execution.
+
+Related files\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__vim_8h}{reg\+\_\+vim.\+h}}
+\item \mbox{\hyperlink{sys__vim_8h}{sys\+\_\+vim.\+h}}
+\item \mbox{\hyperlink{sys__vim_8c}{sys\+\_\+vim.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__VIM_ga1a269c8383f7cbf75df048bb812307bb}\label{group__VIM_ga1a269c8383f7cbf75df048bb812307bb}} 
+\index{V\+IM@{V\+IM}!vim\+Channel\+Map@{vim\+Channel\+Map}}
+\index{vim\+Channel\+Map@{vim\+Channel\+Map}!V\+IM@{V\+IM}}
+\subsubsection{\texorpdfstring{vim\+Channel\+Map()}{vimChannelMap()}}
+{\footnotesize\ttfamily void vim\+Channel\+Map (\begin{DoxyParamCaption}\item[{uint32}]{request,  }\item[{uint32}]{channel,  }\item[{\mbox{\hyperlink{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}{t\+\_\+isr\+Func\+P\+TR}}}]{handler }\end{DoxyParamCaption})}
+
+
+
+Map selected interrupt request to the selected channel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em request} & Interrupt request number 2..127 \\
+\hline
+\mbox{\tt in}  & {\em channel} & V\+IM Channel number 2..127 \\
+\hline
+\mbox{\tt in}  & {\em handler} & Address of the interrupt handler\\
+\hline
+\end{DoxyParams}
+This function will map selected interrupt request to the selected channel. 
+
+Definition at line 515 of file sys\+\_\+vim.\+c.
+
+
+\begin{DoxyCode}
+516 \{
+517     uint32 i,j;
+518     i = channel >> 2U;              \textcolor{comment}{/* Find the register to configure */}
+519     j = channel - (i << 2U);        \textcolor{comment}{/* Find the offset of the type    */}
+520     j = 3U - j;                     \textcolor{comment}{/* reverse the byte order         */}
+521     j = j << 3U;                    \textcolor{comment}{/* find the bit location          */}
+522 
+523     \textcolor{comment}{/*Mapping the required interrupt request to the required channel*/}
+524     vimREG->CHANCTRL[i] &= ~(uint32)((uint32)0xFFU << j);
+525     vimREG->CHANCTRL[i] |= (request << j);
+526 
+527     \textcolor{comment}{/*Updating VIMRAM*/}
+528     vimRAM->ISR[channel + 1U] = handler;
+529 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__VIM_gac4c74a2a1d17f9c7ec4cc3ba156a230e}\label{group__VIM_gac4c74a2a1d17f9c7ec4cc3ba156a230e}} 
+\index{V\+IM@{V\+IM}!vim\+Disable\+Interrupt@{vim\+Disable\+Interrupt}}
+\index{vim\+Disable\+Interrupt@{vim\+Disable\+Interrupt}!V\+IM@{V\+IM}}
+\subsubsection{\texorpdfstring{vim\+Disable\+Interrupt()}{vimDisableInterrupt()}}
+{\footnotesize\ttfamily void vim\+Disable\+Interrupt (\begin{DoxyParamCaption}\item[{uint32}]{channel }\end{DoxyParamCaption})}
+
+
+
+Disable interrupt for the the selected channel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & V\+IM Channel number 2..127\\
+\hline
+\end{DoxyParams}
+This function will disable interrupt for the selected channel. 
+
+Definition at line 612 of file sys\+\_\+vim.\+c.
+
+
+\begin{DoxyCode}
+613 \{
+614     \textcolor{keywordflow}{if} (channel >= 96U)
+615     \{
+616         vimREG->REQMASKCLR3 = (uint32)1U << (channel-96U);
+617     \}
+618     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (channel >= 64U)
+619     \{
+620         vimREG->REQMASKCLR2 = (uint32)1U << (channel-64U);
+621     \}
+622     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (channel >=32U)
+623     \{
+624         vimREG->REQMASKCLR1 = (uint32)1U << (channel-32U);
+625     \}
+626     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (channel >= 2U)
+627     \{
+628         vimREG->REQMASKCLR0 = (uint32)1U << channel;
+629     \}
+630     \textcolor{keywordflow}{else}
+631     \{
+632         \textcolor{comment}{/* Empty */}
+633     \}
+634 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__VIM_gae8b4aff17dfb436d01775ae6fce955c1}\label{group__VIM_gae8b4aff17dfb436d01775ae6fce955c1}} 
+\index{V\+IM@{V\+IM}!vim\+Get\+Config\+Value@{vim\+Get\+Config\+Value}}
+\index{vim\+Get\+Config\+Value@{vim\+Get\+Config\+Value}!V\+IM@{V\+IM}}
+\subsubsection{\texorpdfstring{vim\+Get\+Config\+Value()}{vimGetConfigValue()}}
+{\footnotesize\ttfamily void vim\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 654 of file sys\+\_\+vim.\+c.
+
+
+\begin{DoxyCode}
+655 \{  
+656     \textcolor{keywordflow}{if} (type == InitialValue)
+657     \{
+658         config\_reg->CONFIG\_FIRQPR0 = VIM\_FIRQPR0\_CONFIGVALUE;
+659         config\_reg->CONFIG\_FIRQPR1 = VIM\_FIRQPR1\_CONFIGVALUE;
+660         config\_reg->CONFIG\_FIRQPR2 = VIM\_FIRQPR2\_CONFIGVALUE;
+661         config\_reg->CONFIG\_FIRQPR3 = VIM\_FIRQPR3\_CONFIGVALUE;
+662         config\_reg->CONFIG\_REQMASKSET0 = VIM\_REQMASKSET0\_CONFIGVALUE;
+663         config\_reg->CONFIG\_REQMASKSET1 = VIM\_REQMASKSET1\_CONFIGVALUE;
+664         config\_reg->CONFIG\_REQMASKSET2 = VIM\_REQMASKSET2\_CONFIGVALUE;
+665         config\_reg->CONFIG\_REQMASKSET3 = VIM\_REQMASKSET3\_CONFIGVALUE;
+666         config\_reg->CONFIG\_WAKEMASKSET0 = VIM\_WAKEMASKSET0\_CONFIGVALUE;
+667         config\_reg->CONFIG\_WAKEMASKSET1 = VIM\_WAKEMASKSET1\_CONFIGVALUE;
+668         config\_reg->CONFIG\_WAKEMASKSET2 = VIM\_WAKEMASKSET2\_CONFIGVALUE;
+669         config\_reg->CONFIG\_WAKEMASKSET3 = VIM\_WAKEMASKSET3\_CONFIGVALUE;
+670         config\_reg->CONFIG\_CAPEVT = VIM\_CAPEVT\_CONFIGVALUE;
+671         config\_reg->CONFIG\_CHANCTRL[0U] = VIM\_CHANCTRL0\_CONFIGVALUE;
+672         config\_reg->CONFIG\_CHANCTRL[1U] = VIM\_CHANCTRL1\_CONFIGVALUE;
+673         config\_reg->CONFIG\_CHANCTRL[2U] = VIM\_CHANCTRL2\_CONFIGVALUE;
+674         config\_reg->CONFIG\_CHANCTRL[3U] = VIM\_CHANCTRL3\_CONFIGVALUE;
+675         config\_reg->CONFIG\_CHANCTRL[4U] = VIM\_CHANCTRL4\_CONFIGVALUE;
+676         config\_reg->CONFIG\_CHANCTRL[5U] = VIM\_CHANCTRL5\_CONFIGVALUE;
+677         config\_reg->CONFIG\_CHANCTRL[6U] = VIM\_CHANCTRL6\_CONFIGVALUE;
+678         config\_reg->CONFIG\_CHANCTRL[7U] = VIM\_CHANCTRL7\_CONFIGVALUE;
+679         config\_reg->CONFIG\_CHANCTRL[8U] = VIM\_CHANCTRL8\_CONFIGVALUE;
+680         config\_reg->CONFIG\_CHANCTRL[9U] = VIM\_CHANCTRL9\_CONFIGVALUE;
+681         config\_reg->CONFIG\_CHANCTRL[10U] = VIM\_CHANCTRL10\_CONFIGVALUE;
+682         config\_reg->CONFIG\_CHANCTRL[11U] = VIM\_CHANCTRL11\_CONFIGVALUE;
+683         config\_reg->CONFIG\_CHANCTRL[12U] = VIM\_CHANCTRL12\_CONFIGVALUE;
+684         config\_reg->CONFIG\_CHANCTRL[13U] = VIM\_CHANCTRL13\_CONFIGVALUE;
+685         config\_reg->CONFIG\_CHANCTRL[14U] = VIM\_CHANCTRL14\_CONFIGVALUE;
+686         config\_reg->CONFIG\_CHANCTRL[15U] = VIM\_CHANCTRL15\_CONFIGVALUE;
+687         config\_reg->CONFIG\_CHANCTRL[16U] = VIM\_CHANCTRL16\_CONFIGVALUE;
+688         config\_reg->CONFIG\_CHANCTRL[17U] = VIM\_CHANCTRL17\_CONFIGVALUE;
+689         config\_reg->CONFIG\_CHANCTRL[18U] = VIM\_CHANCTRL18\_CONFIGVALUE;
+690         config\_reg->CONFIG\_CHANCTRL[19U] = VIM\_CHANCTRL19\_CONFIGVALUE;
+691         config\_reg->CONFIG\_CHANCTRL[20U] = VIM\_CHANCTRL20\_CONFIGVALUE;
+692         config\_reg->CONFIG\_CHANCTRL[21U] = VIM\_CHANCTRL21\_CONFIGVALUE;
+693         config\_reg->CONFIG\_CHANCTRL[22U] = VIM\_CHANCTRL22\_CONFIGVALUE;
+694         config\_reg->CONFIG\_CHANCTRL[23U] = VIM\_CHANCTRL23\_CONFIGVALUE;
+695         config\_reg->CONFIG\_CHANCTRL[24U] = VIM\_CHANCTRL24\_CONFIGVALUE;
+696         config\_reg->CONFIG\_CHANCTRL[25U] = VIM\_CHANCTRL25\_CONFIGVALUE;
+697         config\_reg->CONFIG\_CHANCTRL[26U] = VIM\_CHANCTRL26\_CONFIGVALUE;
+698         config\_reg->CONFIG\_CHANCTRL[27U] = VIM\_CHANCTRL27\_CONFIGVALUE;
+699         config\_reg->CONFIG\_CHANCTRL[28U] = VIM\_CHANCTRL28\_CONFIGVALUE;
+700         config\_reg->CONFIG\_CHANCTRL[29U] = VIM\_CHANCTRL29\_CONFIGVALUE;
+701         config\_reg->CONFIG\_CHANCTRL[30U] = VIM\_CHANCTRL30\_CONFIGVALUE;
+702         config\_reg->CONFIG\_CHANCTRL[31U] = VIM\_CHANCTRL31\_CONFIGVALUE;
+703     \}
+704     \textcolor{keywordflow}{else}
+705     \{
+706     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+707         config\_reg->CONFIG\_FIRQPR0 = vimREG->FIRQPR0;
+708         config\_reg->CONFIG\_FIRQPR1 = vimREG->FIRQPR1;
+709         config\_reg->CONFIG\_FIRQPR2 = vimREG->FIRQPR2;
+710         config\_reg->CONFIG\_FIRQPR3 = vimREG->FIRQPR3;
+711         config\_reg->CONFIG\_REQMASKSET0 = vimREG->REQMASKSET0;
+712         config\_reg->CONFIG\_REQMASKSET1 = vimREG->REQMASKSET1;
+713         config\_reg->CONFIG\_REQMASKSET2 = vimREG->REQMASKSET2;
+714         config\_reg->CONFIG\_REQMASKSET3 = vimREG->REQMASKSET3;
+715         config\_reg->CONFIG\_WAKEMASKSET0 = vimREG->WAKEMASKSET0;
+716         config\_reg->CONFIG\_WAKEMASKSET1 = vimREG->WAKEMASKSET1;
+717         config\_reg->CONFIG\_WAKEMASKSET2 = vimREG->WAKEMASKSET2;
+718         config\_reg->CONFIG\_WAKEMASKSET3 = vimREG->WAKEMASKSET3;
+719         config\_reg->CONFIG\_CAPEVT = vimREG->CAPEVT;
+720         config\_reg->CONFIG\_CHANCTRL[0U] = vimREG->CHANCTRL[0U];
+721         config\_reg->CONFIG\_CHANCTRL[1U] = vimREG->CHANCTRL[1U];
+722         config\_reg->CONFIG\_CHANCTRL[2U] = vimREG->CHANCTRL[2U];
+723         config\_reg->CONFIG\_CHANCTRL[3U] = vimREG->CHANCTRL[3U];
+724         config\_reg->CONFIG\_CHANCTRL[4U] = vimREG->CHANCTRL[4U];
+725         config\_reg->CONFIG\_CHANCTRL[5U] = vimREG->CHANCTRL[5U];
+726         config\_reg->CONFIG\_CHANCTRL[6U] = vimREG->CHANCTRL[6U];
+727         config\_reg->CONFIG\_CHANCTRL[7U] = vimREG->CHANCTRL[7U];
+728         config\_reg->CONFIG\_CHANCTRL[8U] = vimREG->CHANCTRL[8U];
+729         config\_reg->CONFIG\_CHANCTRL[9U] = vimREG->CHANCTRL[9U];
+730         config\_reg->CONFIG\_CHANCTRL[10U] = vimREG->CHANCTRL[10U];
+731         config\_reg->CONFIG\_CHANCTRL[11U] = vimREG->CHANCTRL[11U];
+732         config\_reg->CONFIG\_CHANCTRL[12U] = vimREG->CHANCTRL[12U];
+733         config\_reg->CONFIG\_CHANCTRL[13U] = vimREG->CHANCTRL[13U];
+734         config\_reg->CONFIG\_CHANCTRL[14U] = vimREG->CHANCTRL[14U];
+735         config\_reg->CONFIG\_CHANCTRL[15U] = vimREG->CHANCTRL[15U];
+736         config\_reg->CONFIG\_CHANCTRL[16U] = vimREG->CHANCTRL[16U];
+737         config\_reg->CONFIG\_CHANCTRL[17U] = vimREG->CHANCTRL[17U];
+738         config\_reg->CONFIG\_CHANCTRL[18U] = vimREG->CHANCTRL[18U];
+739         config\_reg->CONFIG\_CHANCTRL[19U] = vimREG->CHANCTRL[19U];
+740         config\_reg->CONFIG\_CHANCTRL[20U] = vimREG->CHANCTRL[20U];
+741         config\_reg->CONFIG\_CHANCTRL[21U] = vimREG->CHANCTRL[21U];
+742         config\_reg->CONFIG\_CHANCTRL[22U] = vimREG->CHANCTRL[22U];
+743         config\_reg->CONFIG\_CHANCTRL[23U] = vimREG->CHANCTRL[23U];
+744         config\_reg->CONFIG\_CHANCTRL[24U] = vimREG->CHANCTRL[24U];
+745         config\_reg->CONFIG\_CHANCTRL[25U] = vimREG->CHANCTRL[25U];
+746         config\_reg->CONFIG\_CHANCTRL[26U] = vimREG->CHANCTRL[26U];
+747         config\_reg->CONFIG\_CHANCTRL[27U] = vimREG->CHANCTRL[27U];
+748         config\_reg->CONFIG\_CHANCTRL[28U] = vimREG->CHANCTRL[28U];
+749         config\_reg->CONFIG\_CHANCTRL[29U] = vimREG->CHANCTRL[29U];
+750         config\_reg->CONFIG\_CHANCTRL[30U] = vimREG->CHANCTRL[30U];
+751         config\_reg->CONFIG\_CHANCTRL[31U] = vimREG->CHANCTRL[31U];
+752     \}
+753 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__VIM_ga894b6f212b72787bfa97f1ac62877167}\label{group__VIM_ga894b6f212b72787bfa97f1ac62877167}} 
+\index{V\+IM@{V\+IM}!vim\+Init@{vim\+Init}}
+\index{vim\+Init@{vim\+Init}!V\+IM@{V\+IM}}
+\subsubsection{\texorpdfstring{vim\+Init()}{vimInit()}}
+{\footnotesize\ttfamily void vim\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes V\+IM module. 
+
+This function initializes V\+IM R\+AM and registers 
+
+Definition at line 210 of file sys\+\_\+vim.\+c.
+
+
+\begin{DoxyCode}
+211 \{
+212     \textcolor{comment}{/* VIM RAM Parity Enable */}
+213     VIM\_PARCTL = 0xAU;
+214     
+215     \textcolor{comment}{/* Initialize VIM table */}
+216     \{
+217         uint32 i;
+218 
+219         \textcolor{keywordflow}{for} (i = 0U; i < VIM\_CHANNELS; i++)
+220         \{
+221             vimRAM->ISR[i] = s\_vim\_init[i];
+222         \}
+223     \}
+224     
+225     \textcolor{comment}{/* Set Fall-Back Address Parity Error Register */}
+226     \textcolor{comment}{/*SAFETYMCUSW 439 S MR:11.3 <APPROVED> " Need to store the address of a function in a 32 bit register -
+       Advisory as per MISRA" */}
+227     VIM\_FBPARERR = (uint32)&vimParityErrorHandler;
+228 
+229     \textcolor{comment}{/* set IRQ/FIQ priorities */}
+230     vimREG->FIRQPR0 = (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}{SYS\_FIQ}} << 0U)
+231                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}{SYS\_FIQ}} << 1U)
+232                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 2U)
+233                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 3U)
+234                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 4U)
+235                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 5U)
+236                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 6U)
+237                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 7U)
+238                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 8U)
+239                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 9U)
+240                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 10U)
+241                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 11U)
+242                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 12U)
+243                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 13U)
+244                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 14U)
+245                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 15U)
+246                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 16U)
+247                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 17U)
+248                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 18U)
+249                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 19U)
+250                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 20U)
+251                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 21U)
+252                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 22U)
+253                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 23U)
+254                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 24U)
+255                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 25U)
+256                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 26U)
+257                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 27U)
+258                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 28U)
+259                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 29U)
+260                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 30U)
+261                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 31U);
+262 
+263     vimREG->FIRQPR1 = (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 0U)
+264                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 1U)
+265                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 2U)
+266                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 3U)
+267                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 4U)
+268                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 5U)
+269                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 6U)
+270                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 7U)
+271                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 8U)
+272                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 9U)
+273                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 10U)
+274                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 11U)
+275                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 12U)
+276                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 13U)
+277                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 14U)
+278                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 15U)
+279                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 16U)
+280                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 17U)
+281                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 18U)
+282                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 19U)
+283                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 20U)
+284                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 21U)
+285                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 22U)
+286                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 23U)
+287                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 24U)
+288                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 25U)
+289                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 26U)
+290                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 27U)
+291                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 28U)
+292                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 29U)
+293                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 30U)
+294                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 31U);
+295 
+296 
+297     vimREG->FIRQPR2 = (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 0U)
+298                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 1U)
+299                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 2U)
+300                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 3U)
+301                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 4U)
+302                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 5U)
+303                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 6U)
+304                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 7U)
+305                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 8U)
+306                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 9U)
+307                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 10U)
+308                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 11U)
+309                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 12U)
+310                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 13U)
+311                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 14U)
+312                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 15U)
+313                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 16U)
+314                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 17U)
+315                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 18U)
+316                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 19U)
+317                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 20U)
+318                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 21U)
+319                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 22U)
+320                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 23U)
+321                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 24U)
+322                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 25U)
+323                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 26U)
+324                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 27U)
+325                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 28U)
+326                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 29U)
+327                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 30U)
+328                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 31U);
+329 
+330     vimREG->FIRQPR3 = (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 0U)
+331                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 1U)
+332                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 2U)
+333                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 3U)
+334                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 4U)
+335                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 5U)
+336                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 6U)
+337                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 7U)
+338                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 8U)
+339                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 9U)
+340                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 10U)
+341                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 11U)
+342                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 12U)
+343                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 13U)
+344                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 14U)
+345                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 15U)
+346                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 16U)
+347                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 17U)
+348                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 18U)
+349                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 19U)
+350                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 20U)
+351                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 21U)
+352                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 22U)
+353                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 23U)
+354                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 24U)
+355                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 25U)
+356                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 26U)
+357                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 27U)
+358                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 28U)
+359                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 29U)
+360                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 30U)
+361                     | (uint32)((uint32)\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} << 31U);
+362 
+363                     
+364     \textcolor{comment}{/* enable interrupts */}
+365     vimREG->REQMASKSET0 = (uint32)((uint32)1U << 0U)
+366                         | (uint32)((uint32)1U << 1U)
+367                         | (uint32)((uint32)1U << 2U)
+368                         | (uint32)((uint32)0U << 3U)
+369                         | (uint32)((uint32)0U << 4U)
+370                         | (uint32)((uint32)0U << 5U)
+371                         | (uint32)((uint32)0U << 6U)
+372                         | (uint32)((uint32)0U << 7U)
+373                         | (uint32)((uint32)0U << 8U)
+374                         | (uint32)((uint32)0U << 9U)
+375                         | (uint32)((uint32)0U << 10U)
+376                         | (uint32)((uint32)0U << 11U)
+377                         | (uint32)((uint32)0U << 12U)
+378                         | (uint32)((uint32)0U << 13U)
+379                         | (uint32)((uint32)0U << 14U)
+380                         | (uint32)((uint32)0U << 15U)
+381                         | (uint32)((uint32)0U << 16U)
+382                         | (uint32)((uint32)0U << 17U)
+383                         | (uint32)((uint32)0U << 18U)
+384                         | (uint32)((uint32)0U << 19U)
+385                         | (uint32)((uint32)0U << 20U)
+386                         | (uint32)((uint32)1U << 21U)
+387                         | (uint32)((uint32)0U << 22U)
+388                         | (uint32)((uint32)0U << 23U)
+389                         | (uint32)((uint32)0U << 24U)
+390                         | (uint32)((uint32)0U << 25U)
+391                         | (uint32)((uint32)0U << 26U)
+392                         | (uint32)((uint32)0U << 27U)
+393                         | (uint32)((uint32)0U << 28U)
+394                         | (uint32)((uint32)0U << 29U)
+395                         | (uint32)((uint32)0U << 30U)
+396                         | (uint32)((uint32)0U << 31U);
+397 
+398     vimREG->REQMASKSET1 = (uint32)((uint32)0U << 0U)
+399                         | (uint32)((uint32)0U << 1U)
+400                         | (uint32)((uint32)0U << 2U)
+401                         | (uint32)((uint32)0U << 3U)
+402                         | (uint32)((uint32)0U << 4U)
+403                         | (uint32)((uint32)0U << 5U)
+404                         | (uint32)((uint32)0U << 6U)
+405                         | (uint32)((uint32)0U << 7U)
+406                         | (uint32)((uint32)0U << 8U)
+407                         | (uint32)((uint32)0U << 9U)
+408                         | (uint32)((uint32)0U << 10U)
+409                         | (uint32)((uint32)0U << 11U)
+410                         | (uint32)((uint32)0U << 12U)
+411                         | (uint32)((uint32)0U << 13U)
+412                         | (uint32)((uint32)0U << 14U)
+413                         | (uint32)((uint32)0U << 15U)
+414                         | (uint32)((uint32)0U << 16U)
+415                         | (uint32)((uint32)0U << 17U)
+416                         | (uint32)((uint32)0U << 18U)
+417                         | (uint32)((uint32)0U << 19U)
+418                         | (uint32)((uint32)0U << 20U)
+419                         | (uint32)((uint32)0U << 21U)
+420                         | (uint32)((uint32)0U << 22U)
+421                         | (uint32)((uint32)0U << 23U)
+422                         | (uint32)((uint32)0U << 24U)
+423                         | (uint32)((uint32)0U << 25U)
+424                         | (uint32)((uint32)0U << 26U)
+425                         | (uint32)((uint32)0U << 27U)
+426                         | (uint32)((uint32)0U << 28U)
+427                         | (uint32)((uint32)0U << 29U)
+428                         | (uint32)((uint32)0U << 30U)
+429                         | (uint32)((uint32)0U << 31U);
+430 
+431     vimREG->REQMASKSET2 = (uint32)((uint32)0U << 0U)
+432                         | (uint32)((uint32)0U << 1U)
+433                         | (uint32)((uint32)0U << 2U)
+434                         | (uint32)((uint32)0U << 3U)
+435                         | (uint32)((uint32)0U << 4U)
+436                         | (uint32)((uint32)0U << 5U)
+437                         | (uint32)((uint32)0U << 6U)
+438                         | (uint32)((uint32)0U << 7U)
+439                         | (uint32)((uint32)0U << 8U)
+440                         | (uint32)((uint32)0U << 9U)
+441                         | (uint32)((uint32)0U << 10U)
+442                         | (uint32)((uint32)0U << 11U)
+443                         | (uint32)((uint32)0U << 12U)
+444                         | (uint32)((uint32)0U << 13U)
+445                         | (uint32)((uint32)0U << 14U)
+446                         | (uint32)((uint32)0U << 15U)
+447                         | (uint32)((uint32)0U << 16U)
+448                         | (uint32)((uint32)0U << 17U)
+449                         | (uint32)((uint32)0U << 18U)
+450                         | (uint32)((uint32)0U << 19U)
+451                         | (uint32)((uint32)0U << 20U)
+452                         | (uint32)((uint32)0U << 21U)
+453                         | (uint32)((uint32)0U << 22U)
+454                         | (uint32)((uint32)0U << 23U)
+455                         | (uint32)((uint32)0U << 24U)
+456                         | (uint32)((uint32)0U << 25U)
+457                         | (uint32)((uint32)0U << 26U)
+458                         | (uint32)((uint32)0U << 27U)
+459                         | (uint32)((uint32)0U << 28U)
+460                         | (uint32)((uint32)0U << 29U)
+461                         | (uint32)((uint32)0U << 30U)
+462                         | (uint32)((uint32)0U << 31U);
+463                         
+464     vimREG->REQMASKSET3 = (uint32)((uint32)0U << 0U)
+465                         | (uint32)((uint32)0U << 1U)
+466                         | (uint32)((uint32)0U << 2U)
+467                         | (uint32)((uint32)0U << 3U)
+468                         | (uint32)((uint32)0U << 4U)
+469                         | (uint32)((uint32)0U << 5U)
+470                         | (uint32)((uint32)0U << 6U)
+471                         | (uint32)((uint32)0U << 7U)
+472                         | (uint32)((uint32)0U << 8U)
+473                         | (uint32)((uint32)0U << 9U)
+474                         | (uint32)((uint32)0U << 10U)
+475                         | (uint32)((uint32)0U << 11U)
+476                         | (uint32)((uint32)0U << 12U)
+477                         | (uint32)((uint32)0U << 13U)
+478                         | (uint32)((uint32)0U << 14U)
+479                         | (uint32)((uint32)0U << 15U)
+480                         | (uint32)((uint32)0U << 16U)
+481                         | (uint32)((uint32)0U << 17U)
+482                         | (uint32)((uint32)0U << 18U)
+483                         | (uint32)((uint32)0U << 19U)
+484                         | (uint32)((uint32)0U << 20U)
+485                         | (uint32)((uint32)0U << 21U)
+486                         | (uint32)((uint32)0U << 22U)
+487                         | (uint32)((uint32)0U << 23U)
+488                         | (uint32)((uint32)0U << 24U)
+489                         | (uint32)((uint32)0U << 25U)
+490                         | (uint32)((uint32)0U << 26U)
+491                         | (uint32)((uint32)0U << 27U)
+492                         | (uint32)((uint32)0U << 28U)
+493                         | (uint32)((uint32)0U << 29U)
+494                         | (uint32)((uint32)0U << 30U)
+495                         | (uint32)((uint32)0U << 31U);    
+496 
+497     \textcolor{comment}{/* Set Capture event sources */}
+498     vimREG->CAPEVT = ((uint32)((uint32)0U << 0U)
+499                      |(uint32)((uint32)0U << 16U));
+500 \}
+\end{DoxyCode}

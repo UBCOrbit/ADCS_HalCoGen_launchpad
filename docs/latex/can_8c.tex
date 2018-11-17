@@ -1,0 +1,74 @@
+\hypertarget{can_8c}{}\section{source/can.c File Reference}
+\label{can_8c}\index{source/can.\+c@{source/can.\+c}}
+
+
+C\+AN Driver Source File.  
+
+
+{\ttfamily \#include \char`\"{}can.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+vim.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__CAN_ga2d3efc34f7704ab23c293aac2be47764}{can\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes C\+AN Driver. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga25acaa78fa2c30c393816a3f3e4b5f7c}{can\+Transmit}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Transmits a C\+AN message. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga1d9e0b086772f54b215f65962c704b82}{can\+Get\+Data}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, uint8 $\ast$const data)
+\begin{DoxyCompactList}\small\item\em Gets received a C\+AN message. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga15061ba9ad17a032d93d482a63e5093a}{can\+Get\+ID}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Gets the Message Box\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga6a2ea37d107b5e26bb3f7628ef2c7ee7}{can\+Update\+ID}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, uint32 msg\+Box\+Arbit\+Val)
+\begin{DoxyCompactList}\small\item\em Change C\+AN Message Box ID. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga15999e728cf76894d085e91d9e741099}{can\+Send\+Remote\+Frame}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Transmits a C\+AN Remote Frame. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga3d43bba504e28804aa96e0e2e00d68fa}{can\+Fill\+Message\+Object\+Data}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box, const uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Fills the Message Object with the data but does not initiate transmission. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga90c2fd9d51bca56e652da71570099295}{can\+Is\+Tx\+Message\+Pending}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Gets Tx message box transmission status. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga5c0dda98d1341dbae341b4b6ea73a478}{can\+Is\+Rx\+Message\+Arrived}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Gets Rx message box reception status. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_gae353977bb29792a4297cb4ece4fd7e9c}{can\+Is\+Message\+Box\+Valid}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 message\+Box)
+\begin{DoxyCompactList}\small\item\em Checks if message box is valid. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga1c340f76d9eb647dbc6d01db099b0431}{can\+Get\+Last\+Error}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Gets last R\+X/\+T\+X-\/\+Error of C\+AN message traffic. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_gaf4802fe6abe62c1ca43e118438dd48c3}{can\+Get\+Error\+Level}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Gets error level of a C\+AN node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gac7704998743bb22648e947b29a544bae}{can\+Enable\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Enable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga0acd0f1c9a17f321a40754a93f2d8696}{can\+Enable\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Enable Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga7d16cc0c633d487a0c6ba6dd0d6aa15a}{can\+Disable\+Status\+Change\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Disable Status Change notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gaaf364da9e334318c980ff42a40b4b11d}{can\+Disable\+Error\+Notification}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Disable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_gae46d75070d42e6c074c7badf986fe98f}{can\+Enableloopback}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, \mbox{\hyperlink{can_8h_afe14b0f6de1003d9440f90e9df86918a}{canloop\+Back\+Type\+\_\+t}} Loopbacktype)
+\begin{DoxyCompactList}\small\item\em Disable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga965046b34f4e45c97de1d08c2ba73cb4}{can\+Disableloopback}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Disable error notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga2813ca316c5420f49c7045bac182fd01}{can\+Io\+Set\+Direction}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 Tx\+Dir, uint32 Rx\+Dir)
+\begin{DoxyCompactList}\small\item\em Set Port Direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga1f6f3bbe2bf26e51b6a3c01b7e5d6d4e}{can\+Io\+Set\+Port}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint32 Tx\+Value, uint32 Rx\+Value)
+\begin{DoxyCompactList}\small\item\em Write Port Value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_gabb2b7807d43b7208031e1a2f0974ee00}{can\+Io\+Tx\+Get\+Bit}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Read TX Bit. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__CAN_ga47e373a708ae421d26dc96f62d150492}{can\+Io\+Rx\+Get\+Bit}} (\mbox{\hyperlink{reg__can_8h_a54ace0879c28a425474845a63d662c05}{can\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Read RX Bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__CAN_ga7a14fa4c6067295ee692dbe3e5edff8d}{can1\+Get\+Config\+Value}} (\mbox{\hyperlink{structcan__config__reg}{can\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the C\+A\+N1 configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+AN Driver Source File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item A\+PI Functions
+\item Interrupt Handlers
+\end{DoxyItemize}which are relevant for the C\+AN driver. 

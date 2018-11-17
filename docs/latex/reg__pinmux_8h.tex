@@ -1,0 +1,126 @@
+\hypertarget{reg__pinmux_8h}{}\section{include/reg\+\_\+pinmux.h File Reference}
+\label{reg__pinmux_8h}\index{include/reg\+\_\+pinmux.\+h@{include/reg\+\_\+pinmux.\+h}}
+
+
+P\+I\+N\+M\+UX Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structiommErrFault}{iomm\+Err\+Fault}}
+\begin{DoxyCompactList}\small\item\em I\+O\+MM Error and Fault Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpinMuxKicker}{pin\+Mux\+Kicker}}
+\begin{DoxyCompactList}\small\item\em Pin Muxing Kicker Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpinMuxBase}{pin\+Mux\+Base}}
+\begin{DoxyCompactList}\small\item\em P\+I\+N\+M\+UX Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_ae338162fd39e7cf3b839025fbaeb75e8}\label{reg__pinmux_8h_ae338162fd39e7cf3b839025fbaeb75e8}} 
+\#define {\bfseries R\+E\+V\+I\+S\+I\+O\+N\+\_\+\+R\+EG}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+E\+A00\+U)
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_a7038a92621ad2962530a04b574533265}\label{reg__pinmux_8h_a7038a92621ad2962530a04b574533265}} 
+\#define {\bfseries E\+N\+D\+I\+A\+N\+\_\+\+R\+EG}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+E\+A20\+U)
+\item 
+\#define \mbox{\hyperlink{reg__pinmux_8h_a97bc1b11f0e7c915f7d5e472a6fbb815}{iomm\+Err\+Fault\+Reg}}~((iomm\+Err\+Fault\+\_\+t $\ast$) 0x\+F\+F\+F\+F\+E\+A\+E0\+U)
+\begin{DoxyCompactList}\small\item\em I\+O\+MM Error Fault Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}{kicker\+Reg}}~((pin\+Mux\+K\+I\+C\+K\+E\+R\+\_\+t $\ast$) 0x\+F\+F\+F\+F\+E\+A38\+U)
+\begin{DoxyCompactList}\small\item\em Pin Muxing Kicker Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}{pin\+Mux\+Reg}}~((\mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+B\+A\+S\+E\+\_\+t}} $\ast$) 0x\+F\+F\+F\+F\+E\+B10\+U)
+\begin{DoxyCompactList}\small\item\em Pin Muxing Control Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_a6697cf5c4d752ac14dd363ad6ead64a4}\label{reg__pinmux_8h_a6697cf5c4d752ac14dd363ad6ead64a4}} 
+typedef volatile struct \mbox{\hyperlink{structiommErrFault}{iomm\+Err\+Fault}} {\bfseries iomm\+Err\+Fault\+\_\+t}
+\item 
+\mbox{\Hypertarget{reg__pinmux_8h_a4ba4af17f8d218716eb8fdb8a22a3b3b}\label{reg__pinmux_8h_a4ba4af17f8d218716eb8fdb8a22a3b3b}} 
+typedef volatile struct \mbox{\hyperlink{structpinMuxKicker}{pin\+Mux\+Kicker}} {\bfseries pin\+Mux\+K\+I\+C\+K\+E\+R\+\_\+t}
+\item 
+typedef volatile struct \mbox{\hyperlink{structpinMuxBase}{pin\+Mux\+Base}} \mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em P\+I\+N\+M\+UX Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+I\+N\+M\+UX Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the P\+I\+N\+M\+UX driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__pinmux_8h_a97bc1b11f0e7c915f7d5e472a6fbb815}\label{reg__pinmux_8h_a97bc1b11f0e7c915f7d5e472a6fbb815}} 
+\index{reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}!iomm\+Err\+Fault\+Reg@{iomm\+Err\+Fault\+Reg}}
+\index{iomm\+Err\+Fault\+Reg@{iomm\+Err\+Fault\+Reg}!reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}}
+\subsubsection{\texorpdfstring{iomm\+Err\+Fault\+Reg}{iommErrFaultReg}}
+{\footnotesize\ttfamily \#define iomm\+Err\+Fault\+Reg~((iomm\+Err\+Fault\+\_\+t $\ast$) 0x\+F\+F\+F\+F\+E\+A\+E0\+U)}
+
+
+
+I\+O\+MM Error Fault Register Frame Pointer. 
+
+This pointer is used to control I\+O\+MM Error and Fault across the device. 
+
+Definition at line 159 of file reg\+\_\+pinmux.\+h.
+
+\mbox{\Hypertarget{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}\label{reg__pinmux_8h_a286f3b3064e923c24e41f9f680baf8ce}} 
+\index{reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}!kicker\+Reg@{kicker\+Reg}}
+\index{kicker\+Reg@{kicker\+Reg}!reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}}
+\subsubsection{\texorpdfstring{kicker\+Reg}{kickerReg}}
+{\footnotesize\ttfamily \#define kicker\+Reg~((pin\+Mux\+K\+I\+C\+K\+E\+R\+\_\+t $\ast$) 0x\+F\+F\+F\+F\+E\+A38\+U)}
+
+
+
+Pin Muxing Kicker Register Frame Pointer. 
+
+This pointer is used to enable and disable muxing accross the device. 
+
+Definition at line 166 of file reg\+\_\+pinmux.\+h.
+
+
+
+Referenced by mux\+Init().
+
+\mbox{\Hypertarget{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}\label{reg__pinmux_8h_a489be2306394971fc7586946f88d6380}} 
+\index{reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}!pin\+Mux\+Reg@{pin\+Mux\+Reg}}
+\index{pin\+Mux\+Reg@{pin\+Mux\+Reg}!reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}}
+\subsubsection{\texorpdfstring{pin\+Mux\+Reg}{pinMuxReg}}
+{\footnotesize\ttfamily \#define pin\+Mux\+Reg~((\mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+B\+A\+S\+E\+\_\+t}} $\ast$) 0x\+F\+F\+F\+F\+E\+B10\+U)}
+
+
+
+Pin Muxing Control Register Frame Pointer. 
+
+This pointer is used to set the muxing registers accross the device. 
+
+Definition at line 173 of file reg\+\_\+pinmux.\+h.
+
+
+
+Referenced by mux\+Init().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}\label{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}} 
+\index{reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}!pin\+Mux\+B\+A\+S\+E\+\_\+t@{pin\+Mux\+B\+A\+S\+E\+\_\+t}}
+\index{pin\+Mux\+B\+A\+S\+E\+\_\+t@{pin\+Mux\+B\+A\+S\+E\+\_\+t}!reg\+\_\+pinmux.\+h@{reg\+\_\+pinmux.\+h}}
+\subsubsection{\texorpdfstring{pin\+Mux\+B\+A\+S\+E\+\_\+t}{pinMuxBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__pinmux_8h_adaa7e213a4338d0d5d240f1a32c28ac9}{pin\+Mux\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+P\+I\+N\+M\+UX Register Frame Type Definition. 
+
+This type is used to access the P\+I\+N\+M\+UX Registers. 

@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['sci_5fidle',['SCI_IDLE',['../sci_8h.html#a5de218ffb0fa4e61fd665367767055bb',1,'sci.h']]],
+  ['scilinport',['scilinPORT',['../reg__sci_8h.html#a51bbf8e6fb276b45f9218beab9e38152',1,'reg_sci.h']]],
+  ['scilinreg',['scilinREG',['../reg__sci_8h.html#a389eea3394ad09b70e9d400b120186b4',1,'reg_sci.h']]],
+  ['sciport',['sciPORT',['../reg__sci_8h.html#ae2369bc560d565eda2c84b3c949607bf',1,'reg_sci.h']]],
+  ['scireg',['sciREG',['../reg__sci_8h.html#acdc43faa5b34a7b497da4941e225e3ad',1,'reg_sci.h']]],
+  ['spiport1',['spiPORT1',['../reg__spi_8h.html#acafb15225326da53aac43cf45c02deb1',1,'reg_spi.h']]],
+  ['spiport2',['spiPORT2',['../reg__spi_8h.html#a01190b47bea34b937e6379981271eca3',1,'reg_spi.h']]],
+  ['spiport3',['spiPORT3',['../reg__spi_8h.html#a0fd7f62639a8d9fb8990b43fc87e2759',1,'reg_spi.h']]],
+  ['spiport4',['spiPORT4',['../reg__spi_8h.html#a65e848baeca4c540f204ecb85e0e0d74',1,'reg_spi.h']]],
+  ['spiport5',['spiPORT5',['../reg__spi_8h.html#a57b6bb78eb30bd09532550a581601061',1,'reg_spi.h']]],
+  ['spireg1',['spiREG1',['../reg__spi_8h.html#af421c8e49d13442bb5ff89df0716fbe2',1,'reg_spi.h']]],
+  ['spireg2',['spiREG2',['../reg__spi_8h.html#a166a3afd289e969a2876111e63ec38a3',1,'reg_spi.h']]],
+  ['spireg3',['spiREG3',['../reg__spi_8h.html#ad5c848a9a09270e757e49e4889a5afbf',1,'reg_spi.h']]],
+  ['spireg4',['spiREG4',['../reg__spi_8h.html#a79c77b1f012ad80c1dc6cb37ddb3b209',1,'reg_spi.h']]],
+  ['spireg5',['spiREG5',['../reg__spi_8h.html#a0594bec058aea6410b10af0cd06040be',1,'reg_spi.h']]],
+  ['svc_5fstack_5flength',['SVC_STACK_LENGTH',['../sys__core_8h.html#af7f8b8522d66ed4c88bea8794b7c4722',1,'sys_core.h']]],
+  ['sys_5fpre1',['SYS_PRE1',['../system_8h.html#a72719681af72bed25f48fb95cce8b5c0',1,'system.h']]],
+  ['sys_5fpre2',['SYS_PRE2',['../system_8h.html#a4b6fb798365b7738c7d7b20c6f03e313',1,'system.h']]],
+  ['systemport',['systemPORT',['../reg__system_8h.html#a12b48f93d241c382e5a1b25855bc04db',1,'reg_system.h']]],
+  ['systemreg1',['systemREG1',['../reg__system_8h.html#a8c52b62df956810205e4da7a2fd74efa',1,'reg_system.h']]],
+  ['systemreg2',['systemREG2',['../reg__system_8h.html#aa7b03254a6e13afea4c05b2fe8b2186b',1,'reg_system.h']]]
+];

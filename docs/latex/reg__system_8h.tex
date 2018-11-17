@@ -1,0 +1,124 @@
+\hypertarget{reg__system_8h}{}\section{include/reg\+\_\+system.h File Reference}
+\label{reg__system_8h}\index{include/reg\+\_\+system.\+h@{include/reg\+\_\+system.\+h}}
+
+
+System Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsystemBase1}{system\+Base1}}
+\begin{DoxyCompactList}\small\item\em System Register Frame 1 Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsystemBase2}{system\+Base2}}
+\begin{DoxyCompactList}\small\item\em System Register Frame 2 Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{system\+R\+E\+G1}}~((\mbox{\hyperlink{reg__system_8h_aa64745b51530380d4729a449c9df1987}{system\+B\+A\+S\+E1\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F\+F00\+U)
+\begin{DoxyCompactList}\small\item\em System Register Frame 1 Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__system_8h_a12b48f93d241c382e5a1b25855bc04db}{system\+P\+O\+RT}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F\+F04\+U)
+\begin{DoxyCompactList}\small\item\em E\+C\+LK G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{system\+R\+E\+G2}}~((\mbox{\hyperlink{reg__system_8h_a7aed33a3ebd960f14d18dbc551c45073}{system\+B\+A\+S\+E2\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+E100\+U)
+\begin{DoxyCompactList}\small\item\em System Register Frame 2 Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structsystemBase1}{system\+Base1}} \mbox{\hyperlink{reg__system_8h_aa64745b51530380d4729a449c9df1987}{system\+B\+A\+S\+E1\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em System Register Frame 1 Type Definition. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structsystemBase2}{system\+Base2}} \mbox{\hyperlink{reg__system_8h_a7aed33a3ebd960f14d18dbc551c45073}{system\+B\+A\+S\+E2\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em System Register Frame 2 Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__system_8h_a12b48f93d241c382e5a1b25855bc04db}\label{reg__system_8h_a12b48f93d241c382e5a1b25855bc04db}} 
+\index{reg\+\_\+system.\+h@{reg\+\_\+system.\+h}!system\+P\+O\+RT@{system\+P\+O\+RT}}
+\index{system\+P\+O\+RT@{system\+P\+O\+RT}!reg\+\_\+system.\+h@{reg\+\_\+system.\+h}}
+\subsubsection{\texorpdfstring{system\+P\+O\+RT}{systemPORT}}
+{\footnotesize\ttfamily \#define system\+P\+O\+RT~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F\+F04\+U)}
+
+
+
+E\+C\+LK G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of System/\+Eclk (use the G\+IO drivers to access the port pins). 
+
+Definition at line 147 of file reg\+\_\+system.\+h.
+
+\mbox{\Hypertarget{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}\label{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}} 
+\index{reg\+\_\+system.\+h@{reg\+\_\+system.\+h}!system\+R\+E\+G1@{system\+R\+E\+G1}}
+\index{system\+R\+E\+G1@{system\+R\+E\+G1}!reg\+\_\+system.\+h@{reg\+\_\+system.\+h}}
+\subsubsection{\texorpdfstring{system\+R\+E\+G1}{systemREG1}}
+{\footnotesize\ttfamily \#define system\+R\+E\+G1~((\mbox{\hyperlink{reg__system_8h_aa64745b51530380d4729a449c9df1987}{system\+B\+A\+S\+E1\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F\+F00\+U)}
+
+
+
+System Register Frame 1 Pointer. 
+
+This pointer is used by the system driver to access the system frame 1 registers. 
+
+Definition at line 139 of file reg\+\_\+system.\+h.
+
+
+
+Referenced by check\+Clock\+Monitor(), check\+P\+L\+L1\+Slip(), check\+P\+L\+L2\+Slip(), map\+Clocks(), memory\+Init(), pbist\+Is\+Test\+Completed(), pbist\+Run(), periph\+Init(), and setup\+P\+L\+L().
+
+\mbox{\Hypertarget{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}\label{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}} 
+\index{reg\+\_\+system.\+h@{reg\+\_\+system.\+h}!system\+R\+E\+G2@{system\+R\+E\+G2}}
+\index{system\+R\+E\+G2@{system\+R\+E\+G2}!reg\+\_\+system.\+h@{reg\+\_\+system.\+h}}
+\subsubsection{\texorpdfstring{system\+R\+E\+G2}{systemREG2}}
+{\footnotesize\ttfamily \#define system\+R\+E\+G2~((\mbox{\hyperlink{reg__system_8h_a7aed33a3ebd960f14d18dbc551c45073}{system\+B\+A\+S\+E2\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+E100\+U)}
+
+
+
+System Register Frame 2 Pointer. 
+
+This pointer is used by the system driver to access the system frame 2 registers. 
+
+Definition at line 188 of file reg\+\_\+system.\+h.
+
+
+
+Referenced by check\+P\+L\+L2\+Slip(), and stc\+Self\+Check().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__system_8h_aa64745b51530380d4729a449c9df1987}\label{reg__system_8h_aa64745b51530380d4729a449c9df1987}} 
+\index{reg\+\_\+system.\+h@{reg\+\_\+system.\+h}!system\+B\+A\+S\+E1\+\_\+t@{system\+B\+A\+S\+E1\+\_\+t}}
+\index{system\+B\+A\+S\+E1\+\_\+t@{system\+B\+A\+S\+E1\+\_\+t}!reg\+\_\+system.\+h@{reg\+\_\+system.\+h}}
+\subsubsection{\texorpdfstring{system\+B\+A\+S\+E1\+\_\+t}{systemBASE1\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__system_8h_aa64745b51530380d4729a449c9df1987}{system\+B\+A\+S\+E1\+\_\+t}}}
+
+
+
+System Register Frame 1 Type Definition. 
+
+This type is used to access the System 1 Registers. \mbox{\Hypertarget{reg__system_8h_a7aed33a3ebd960f14d18dbc551c45073}\label{reg__system_8h_a7aed33a3ebd960f14d18dbc551c45073}} 
+\index{reg\+\_\+system.\+h@{reg\+\_\+system.\+h}!system\+B\+A\+S\+E2\+\_\+t@{system\+B\+A\+S\+E2\+\_\+t}}
+\index{system\+B\+A\+S\+E2\+\_\+t@{system\+B\+A\+S\+E2\+\_\+t}!reg\+\_\+system.\+h@{reg\+\_\+system.\+h}}
+\subsubsection{\texorpdfstring{system\+B\+A\+S\+E2\+\_\+t}{systemBASE2\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__system_8h_a7aed33a3ebd960f14d18dbc551c45073}{system\+B\+A\+S\+E2\+\_\+t}}}
+
+
+
+System Register Frame 2 Type Definition. 
+
+This type is used to access the System 2 Registers. 

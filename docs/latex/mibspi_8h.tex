@@ -1,0 +1,190 @@
+\hypertarget{mibspi_8h}{}\section{include/mibspi.h File Reference}
+\label{mibspi_8h}\index{include/mibspi.\+h@{include/mibspi.\+h}}
+
+
+M\+I\+B\+S\+PI Driver Definition File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+mibspi.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmibspi__config__reg}{mibspi\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum mibspi\+Pmode \mbox{\hyperlink{mibspi_8h_ab71b8fb84a67e7c5e3afc6da58df7055}{mibspi\+Pmode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Mibspi Parellel mode Type Definition. \end{DoxyCompactList}\item 
+typedef enum mibspi\+D\+F\+MT \mbox{\hyperlink{mibspi_8h_a0fc0143b953ed30b4601c7609f1ca4ef}{mibspi\+D\+F\+M\+T\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Mibspi Data format selection Type Definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mibspi_8h_aa149e49f1820182a471210dd6f66a2b0}\label{mibspi_8h_aa149e49f1820182a471210dd6f66a2b0}} 
+typedef struct \mbox{\hyperlink{structmibspi__config__reg}{mibspi\+\_\+config\+\_\+reg}} {\bfseries mibspi\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mibspi_8h_aff15b43fdd8927312903ace06b256cd8}\label{mibspi_8h_aff15b43fdd8927312903ace06b256cd8}} 
+enum \mbox{\hyperlink{mibspi_8h_aff15b43fdd8927312903ace06b256cd8}{trigger\+Event}} \{ \newline
+{\bfseries T\+R\+G\+\_\+\+N\+E\+V\+ER} = 0U, 
+{\bfseries T\+R\+G\+\_\+\+R\+I\+S\+I\+NG} = 1U, 
+{\bfseries T\+R\+G\+\_\+\+F\+A\+L\+L\+I\+NG} = 2U, 
+{\bfseries T\+R\+G\+\_\+\+B\+O\+TH} = 3U, 
+\newline
+{\bfseries T\+R\+G\+\_\+\+H\+I\+GH} = 5U, 
+{\bfseries T\+R\+G\+\_\+\+L\+OW} = 6U, 
+{\bfseries T\+R\+G\+\_\+\+A\+L\+W\+A\+YS} = 7U
+ \}
+\begin{DoxyCompactList}\small\item\em Transfer Group Trigger Event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mibspi_8h_ac3b1ab568af367d9384883879ceff528}\label{mibspi_8h_ac3b1ab568af367d9384883879ceff528}} 
+enum \mbox{\hyperlink{mibspi_8h_ac3b1ab568af367d9384883879ceff528}{trigger\+Source}} \{ \newline
+{\bfseries T\+R\+G\+\_\+\+D\+I\+S\+A\+B\+L\+ED}, 
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A0}, 
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A1}, 
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A2}, 
+\newline
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A3}, 
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A4}, 
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A5}, 
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A6}, 
+\newline
+{\bfseries T\+R\+G\+\_\+\+G\+I\+O\+A7}, 
+{\bfseries T\+R\+G\+\_\+\+H\+E\+T1\+\_\+8}, 
+{\bfseries T\+R\+G\+\_\+\+H\+E\+T1\+\_\+10}, 
+{\bfseries T\+R\+G\+\_\+\+H\+E\+T1\+\_\+12}, 
+\newline
+{\bfseries T\+R\+G\+\_\+\+H\+E\+T1\+\_\+14}, 
+{\bfseries T\+R\+G\+\_\+\+H\+E\+T1\+\_\+16}, 
+{\bfseries T\+R\+G\+\_\+\+H\+E\+T1\+\_\+18}, 
+{\bfseries T\+R\+G\+\_\+\+T\+I\+CK}
+ \}
+\begin{DoxyCompactList}\small\item\em Transfer Group Trigger Source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mibspi_8h_a71e2def22fed5c7b0d53d8c129edf546}\label{mibspi_8h_a71e2def22fed5c7b0d53d8c129edf546}} 
+enum \mbox{\hyperlink{mibspi_8h_a71e2def22fed5c7b0d53d8c129edf546}{mibspi\+Pin\+Select}} \{ \newline
+{\bfseries P\+I\+N\+\_\+\+C\+S0} = 0U, 
+{\bfseries P\+I\+N\+\_\+\+C\+S1} = 1U, 
+{\bfseries P\+I\+N\+\_\+\+C\+S2} = 2U, 
+{\bfseries P\+I\+N\+\_\+\+C\+S3} = 3U, 
+\newline
+{\bfseries P\+I\+N\+\_\+\+C\+S4} = 4U, 
+{\bfseries P\+I\+N\+\_\+\+C\+S5} = 5U, 
+{\bfseries P\+I\+N\+\_\+\+C\+S6} = 6U, 
+{\bfseries P\+I\+N\+\_\+\+C\+S7} = 7U, 
+\newline
+{\bfseries P\+I\+N\+\_\+\+E\+NA} = 8U, 
+{\bfseries P\+I\+N\+\_\+\+C\+LK} = 9U, 
+{\bfseries P\+I\+N\+\_\+\+S\+I\+MO} = 10U, 
+{\bfseries P\+I\+N\+\_\+\+S\+O\+MI} = 11U, 
+\newline
+{\bfseries P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+1} = 17U, 
+{\bfseries P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+2} = 18U, 
+{\bfseries P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+3} = 19U, 
+{\bfseries P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+4} = 20U, 
+\newline
+{\bfseries P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+5} = 21U, 
+{\bfseries P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+6} = 22U, 
+{\bfseries P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+7} = 23U, 
+{\bfseries P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+1} = 25U, 
+\newline
+{\bfseries P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+2} = 26U, 
+{\bfseries P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+3} = 27U, 
+{\bfseries P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+4} = 28U, 
+{\bfseries P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+5} = 29U, 
+\newline
+{\bfseries P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+6} = 30U, 
+{\bfseries P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+7} = 31U
+ \}
+\begin{DoxyCompactList}\small\item\em mibspi Pin Select \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mibspi_8h_ab4c22288c18b952f1fe155e5a4407540}\label{mibspi_8h_ab4c22288c18b952f1fe155e5a4407540}} 
+enum \mbox{\hyperlink{mibspi_8h_ab4c22288c18b952f1fe155e5a4407540}{chip\+Select}} \{ \newline
+{\bfseries C\+S\+\_\+\+N\+O\+NE} = 0x\+F\+FU, 
+{\bfseries C\+S\+\_\+0} = 0x\+F\+EU, 
+{\bfseries C\+S\+\_\+1} = 0x\+F\+DU, 
+{\bfseries C\+S\+\_\+2} = 0x\+F\+BU, 
+\newline
+{\bfseries C\+S\+\_\+3} = 0x\+F7U, 
+{\bfseries C\+S\+\_\+4} = 0x\+E\+FU, 
+{\bfseries C\+S\+\_\+5} = 0x\+D\+FU, 
+{\bfseries C\+S\+\_\+6} = 0x\+B\+FU, 
+\newline
+{\bfseries C\+S\+\_\+7} = 0x7\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Transfer Group Chip Select. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mibspi_8h_a23bc565913fcc6c61cc1e6c29061370b}\label{mibspi_8h_a23bc565913fcc6c61cc1e6c29061370b}} 
+enum {\bfseries mibspi\+Pmode} \{ {\bfseries P\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL} = 0x0U, 
+{\bfseries P\+M\+O\+D\+E\+\_\+2\+\_\+\+D\+A\+T\+A\+L\+I\+NE} = 0x1U, 
+{\bfseries P\+M\+O\+D\+E\+\_\+4\+\_\+\+D\+A\+T\+A\+L\+I\+NE} = 0x2U, 
+{\bfseries P\+M\+O\+D\+E\+\_\+8\+\_\+\+D\+A\+T\+A\+L\+I\+NE} = 0x3U
+ \}
+\item 
+\mbox{\Hypertarget{mibspi_8h_a8cddfabef785ec591e09ed2a8b547c39}\label{mibspi_8h_a8cddfabef785ec591e09ed2a8b547c39}} 
+enum {\bfseries mibspi\+D\+F\+MT} \{ {\bfseries D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T0} = 0x0U, 
+{\bfseries D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T1} = 0x1U, 
+{\bfseries D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T2} = 0x2U, 
+{\bfseries D\+A\+T\+A\+\_\+\+F\+O\+R\+M\+A\+T3} = 0x3U
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries mibspi\+Init} (void)
+\item 
+void {\bfseries mibspi\+Set\+Functional} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 port)
+\item 
+void {\bfseries mibspi\+Set\+Data} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 group, uint16 $\ast$data)
+\item 
+uint32 {\bfseries mibspi\+Get\+Data} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 group, uint16 $\ast$data)
+\item 
+void {\bfseries mibspi\+Transfer} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 group)
+\item 
+boolean {\bfseries mibspi\+Is\+Transfer\+Complete} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 group)
+\item 
+void {\bfseries mibspi\+Enable\+Group\+Notification} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 group, uint32 level)
+\item 
+void {\bfseries mibspi\+Disable\+Group\+Notification} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 group)
+\item 
+void {\bfseries mibspi\+Enable\+Loopback} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\item 
+void {\bfseries mibspi\+Disable\+Loopback} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi)
+\item 
+void {\bfseries mibspi\+Pmode\+Set} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, \mbox{\hyperlink{mibspi_8h_ab71b8fb84a67e7c5e3afc6da58df7055}{mibspi\+Pmode\+\_\+t}} Pmode, \mbox{\hyperlink{mibspi_8h_a0fc0143b953ed30b4601c7609f1ca4ef}{mibspi\+D\+F\+M\+T\+\_\+t}} D\+F\+MT)
+\item 
+void \mbox{\hyperlink{group__MIBSPI_ga003ad3b6efad9f83d79ce393f2c59798}{mibspi\+Notification}} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Error interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MIBSPI_ga56ca4c637b138b735ad4d3de542a84e0}{mibspi\+Group\+Notification}} (\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$mibspi, uint32 group)
+\begin{DoxyCompactList}\small\item\em Transfer complete notification callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+I\+B\+S\+PI Driver Definition File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{mibspi_8h_a0fc0143b953ed30b4601c7609f1ca4ef}\label{mibspi_8h_a0fc0143b953ed30b4601c7609f1ca4ef}} 
+\index{mibspi.\+h@{mibspi.\+h}!mibspi\+D\+F\+M\+T\+\_\+t@{mibspi\+D\+F\+M\+T\+\_\+t}}
+\index{mibspi\+D\+F\+M\+T\+\_\+t@{mibspi\+D\+F\+M\+T\+\_\+t}!mibspi.\+h@{mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+D\+F\+M\+T\+\_\+t}{mibspiDFMT\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mibspi_8h_a0fc0143b953ed30b4601c7609f1ca4ef}{mibspi\+D\+F\+M\+T\+\_\+t}}}
+
+
+
+Mibspi Data format selection Type Definition. 
+
+This type is used to represent Mibspi Data format selection. \mbox{\Hypertarget{mibspi_8h_ab71b8fb84a67e7c5e3afc6da58df7055}\label{mibspi_8h_ab71b8fb84a67e7c5e3afc6da58df7055}} 
+\index{mibspi.\+h@{mibspi.\+h}!mibspi\+Pmode\+\_\+t@{mibspi\+Pmode\+\_\+t}}
+\index{mibspi\+Pmode\+\_\+t@{mibspi\+Pmode\+\_\+t}!mibspi.\+h@{mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+Pmode\+\_\+t}{mibspiPmode\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mibspi_8h_ab71b8fb84a67e7c5e3afc6da58df7055}{mibspi\+Pmode\+\_\+t}}}
+
+
+
+Mibspi Parellel mode Type Definition. 
+
+This type is used to represent Mibspi Parellel mode. 

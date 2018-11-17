@@ -1,0 +1,86 @@
+\hypertarget{reg__eqep_8h}{}\section{include/reg\+\_\+eqep.h File Reference}
+\label{reg__eqep_8h}\index{include/reg\+\_\+eqep.\+h@{include/reg\+\_\+eqep.\+h}}
+
+
+E\+Q\+EP Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structeqepBASE}{eqep\+B\+A\+SE}}
+\begin{DoxyCompactList}\small\item\em E\+Q\+EP Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__eqep_8h_ac816e83f34050b272a9309fda78aa215}{eqep\+R\+E\+G1}}~((\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79900\+U)
+\begin{DoxyCompactList}\small\item\em e\+Q\+E\+P1 Register Frame Pointer \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__eqep_8h_a2f61686036ee87169f507ff78b07cc2c}{eqep\+R\+E\+G2}}~((\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79\+A00\+U)
+\begin{DoxyCompactList}\small\item\em e\+Q\+E\+P2 Register Frame Pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structeqepBASE}{eqep\+B\+A\+SE}} \mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+Q\+EP Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+Q\+EP Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the E\+Q\+EP driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__eqep_8h_ac816e83f34050b272a9309fda78aa215}\label{reg__eqep_8h_ac816e83f34050b272a9309fda78aa215}} 
+\index{reg\+\_\+eqep.\+h@{reg\+\_\+eqep.\+h}!eqep\+R\+E\+G1@{eqep\+R\+E\+G1}}
+\index{eqep\+R\+E\+G1@{eqep\+R\+E\+G1}!reg\+\_\+eqep.\+h@{reg\+\_\+eqep.\+h}}
+\subsubsection{\texorpdfstring{eqep\+R\+E\+G1}{eqepREG1}}
+{\footnotesize\ttfamily \#define eqep\+R\+E\+G1~((\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79900\+U)}
+
+
+
+e\+Q\+E\+P1 Register Frame Pointer 
+
+This pointer is used by the e\+Q\+EP driver to access the e\+Q\+E\+P1 registers. 
+
+Definition at line 138 of file reg\+\_\+eqep.\+h.
+
+\mbox{\Hypertarget{reg__eqep_8h_a2f61686036ee87169f507ff78b07cc2c}\label{reg__eqep_8h_a2f61686036ee87169f507ff78b07cc2c}} 
+\index{reg\+\_\+eqep.\+h@{reg\+\_\+eqep.\+h}!eqep\+R\+E\+G2@{eqep\+R\+E\+G2}}
+\index{eqep\+R\+E\+G2@{eqep\+R\+E\+G2}!reg\+\_\+eqep.\+h@{reg\+\_\+eqep.\+h}}
+\subsubsection{\texorpdfstring{eqep\+R\+E\+G2}{eqepREG2}}
+{\footnotesize\ttfamily \#define eqep\+R\+E\+G2~((\mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79\+A00\+U)}
+
+
+
+e\+Q\+E\+P2 Register Frame Pointer 
+
+This pointer is used by the e\+Q\+EP driver to access the e\+Q\+E\+P2 registers. 
+
+Definition at line 145 of file reg\+\_\+eqep.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}\label{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}} 
+\index{reg\+\_\+eqep.\+h@{reg\+\_\+eqep.\+h}!eqep\+B\+A\+S\+E\+\_\+t@{eqep\+B\+A\+S\+E\+\_\+t}}
+\index{eqep\+B\+A\+S\+E\+\_\+t@{eqep\+B\+A\+S\+E\+\_\+t}!reg\+\_\+eqep.\+h@{reg\+\_\+eqep.\+h}}
+\subsubsection{\texorpdfstring{eqep\+B\+A\+S\+E\+\_\+t}{eqepBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__eqep_8h_a794db63555812863c39c5d214fd4f215}{eqep\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+E\+Q\+EP Register Frame Type Definition. 
+
+This type is used to access the E\+Q\+EP Registers. 

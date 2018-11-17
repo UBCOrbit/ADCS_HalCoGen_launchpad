@@ -1,0 +1,27 @@
+var structscmp__format =
+[
+    [ "__pad0__", "structscmp__format.html#ae90290ced13da56992ef1415c148bb67", null ],
+    [ "__pad1__", "structscmp__format.html#a5ce4c1c412df125125675362413f70d7", null ],
+    [ "__pad2__", "structscmp__format.html#a9660ba01c6da39c00deb885af68b5c63", null ],
+    [ "__pad3__", "structscmp__format.html#a9b9972958c488b44138c778f3131f2bc", null ],
+    [ "__pad4__", "structscmp__format.html#a06c0cfb061fb5b78804ce8280666e5ef", null ],
+    [ "__pad5__", "structscmp__format.html#a2432f7fb42d345e38693d5d204379cfa", null ],
+    [ "__pad6__", "structscmp__format.html#aa58e4ec222283bc1bc16f5dcf1518550", null ],
+    [ "__pad7__", "structscmp__format.html#a5f7c563fee5297cadc70d2a9cac2dd7d", null ],
+    [ "__pad8__", "structscmp__format.html#aaca90903b938c22a03881d60971d24c4", null ],
+    [ "auto_read_clear", "structscmp__format.html#aa3db7b0bdff8459512b14bcc742651b3", null ],
+    [ "brk", "structscmp__format.html#a41122e746dc2793153a70fb1c3eceafd", null ],
+    [ "compare_mode", "structscmp__format.html#a51d8ca49a8f1625918f2ba19e7e52027", null ],
+    [ "cond_addr", "structscmp__format.html#ad448914caf79d1cefb6a2ab9f1a74ce0", null ],
+    [ "coutprv", "structscmp__format.html#a96e247162a618dda71300e6bb8c502a0", null ],
+    [ "data", "structscmp__format.html#a712f8a38c58b10ba6a655371b38dabf8", null ],
+    [ "en_pin_action", "structscmp__format.html#a504d02c3d88da0bf6710e94a6b55e48d", null ],
+    [ "interrupt_enable", "structscmp__format.html#ac42c8c25de75bd2900f2da0efeb2d210", null ],
+    [ "next_program_address", "structscmp__format.html#af5ccf25788fa0afa3493b9f17bc854e2", null ],
+    [ "op_code", "structscmp__format.html#a5096c049ef63ca0bac5006a5618c6136", null ],
+    [ "pin_action", "structscmp__format.html#aaea4faa01be54b4af7fca081900c3e83", null ],
+    [ "pin_select", "structscmp__format.html#a22b7cfd688165d4c18c7231b2417677a", null ],
+    [ "reqnum", "structscmp__format.html#a5c18d2d806e83be2ee8fac142c42dbdd", null ],
+    [ "request", "structscmp__format.html#a4cda3553fb02868ca55ff89fe2234910", null ],
+    [ "restart_en", "structscmp__format.html#a711a3400d597d4029d6dd2d3f6c23e10", null ]
+];

@@ -1,0 +1,150 @@
+\hypertarget{reg__ecap_8h}{}\section{include/reg\+\_\+ecap.h File Reference}
+\label{reg__ecap_8h}\index{include/reg\+\_\+ecap.\+h@{include/reg\+\_\+ecap.\+h}}
+
+
+E\+C\+AP Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structecapBASE}{ecap\+B\+A\+SE}}
+\begin{DoxyCompactList}\small\item\em E\+C\+AP Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__ecap_8h_aeab075c6406ddbd234dcfb8a8b40be6c}{ecap\+R\+E\+G1}}~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79300\+U)
+\begin{DoxyCompactList}\small\item\em E\+C\+A\+P1 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__ecap_8h_a8d473dc96dcbff23b8060f75bd40a2b5}{ecap\+R\+E\+G2}}~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79400\+U)
+\begin{DoxyCompactList}\small\item\em E\+C\+A\+P2 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__ecap_8h_a5f9d6bcbd23d221a319690a8dc104385}{ecap\+R\+E\+G3}}~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79500\+U)
+\begin{DoxyCompactList}\small\item\em E\+C\+A\+P3 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__ecap_8h_a4681bc51bca65ccaa10e1237101a48d6}{ecap\+R\+E\+G4}}~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79600\+U)
+\begin{DoxyCompactList}\small\item\em E\+C\+A\+P4 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__ecap_8h_adc4524ec72aad281b6da891a3be94349}{ecap\+R\+E\+G5}}~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79700\+U)
+\begin{DoxyCompactList}\small\item\em E\+C\+A\+P5 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__ecap_8h_abcb9882926469a89a45753cc601b3ac4}{ecap\+R\+E\+G6}}~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79800\+U)
+\begin{DoxyCompactList}\small\item\em E\+C\+A\+P6 Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structecapBASE}{ecap\+B\+A\+SE}} \mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+C\+AP Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+C\+AP Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the E\+C\+AP driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__ecap_8h_aeab075c6406ddbd234dcfb8a8b40be6c}\label{reg__ecap_8h_aeab075c6406ddbd234dcfb8a8b40be6c}} 
+\index{reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}!ecap\+R\+E\+G1@{ecap\+R\+E\+G1}}
+\index{ecap\+R\+E\+G1@{ecap\+R\+E\+G1}!reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}}
+\subsubsection{\texorpdfstring{ecap\+R\+E\+G1}{ecapREG1}}
+{\footnotesize\ttfamily \#define ecap\+R\+E\+G1~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79300\+U)}
+
+
+
+E\+C\+A\+P1 Register Frame Pointer. 
+
+This pointer is used by the E\+C\+AP driver to access the E\+C\+A\+P1 registers. 
+
+Definition at line 118 of file reg\+\_\+ecap.\+h.
+
+\mbox{\Hypertarget{reg__ecap_8h_a8d473dc96dcbff23b8060f75bd40a2b5}\label{reg__ecap_8h_a8d473dc96dcbff23b8060f75bd40a2b5}} 
+\index{reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}!ecap\+R\+E\+G2@{ecap\+R\+E\+G2}}
+\index{ecap\+R\+E\+G2@{ecap\+R\+E\+G2}!reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}}
+\subsubsection{\texorpdfstring{ecap\+R\+E\+G2}{ecapREG2}}
+{\footnotesize\ttfamily \#define ecap\+R\+E\+G2~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79400\+U)}
+
+
+
+E\+C\+A\+P2 Register Frame Pointer. 
+
+This pointer is used by the E\+C\+AP driver to access the E\+C\+A\+P2 registers. 
+
+Definition at line 125 of file reg\+\_\+ecap.\+h.
+
+\mbox{\Hypertarget{reg__ecap_8h_a5f9d6bcbd23d221a319690a8dc104385}\label{reg__ecap_8h_a5f9d6bcbd23d221a319690a8dc104385}} 
+\index{reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}!ecap\+R\+E\+G3@{ecap\+R\+E\+G3}}
+\index{ecap\+R\+E\+G3@{ecap\+R\+E\+G3}!reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}}
+\subsubsection{\texorpdfstring{ecap\+R\+E\+G3}{ecapREG3}}
+{\footnotesize\ttfamily \#define ecap\+R\+E\+G3~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79500\+U)}
+
+
+
+E\+C\+A\+P3 Register Frame Pointer. 
+
+This pointer is used by the E\+C\+AP driver to access the E\+C\+A\+P3 registers. 
+
+Definition at line 132 of file reg\+\_\+ecap.\+h.
+
+\mbox{\Hypertarget{reg__ecap_8h_a4681bc51bca65ccaa10e1237101a48d6}\label{reg__ecap_8h_a4681bc51bca65ccaa10e1237101a48d6}} 
+\index{reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}!ecap\+R\+E\+G4@{ecap\+R\+E\+G4}}
+\index{ecap\+R\+E\+G4@{ecap\+R\+E\+G4}!reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}}
+\subsubsection{\texorpdfstring{ecap\+R\+E\+G4}{ecapREG4}}
+{\footnotesize\ttfamily \#define ecap\+R\+E\+G4~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79600\+U)}
+
+
+
+E\+C\+A\+P4 Register Frame Pointer. 
+
+This pointer is used by the E\+C\+AP driver to access the E\+C\+A\+P4 registers. 
+
+Definition at line 139 of file reg\+\_\+ecap.\+h.
+
+\mbox{\Hypertarget{reg__ecap_8h_adc4524ec72aad281b6da891a3be94349}\label{reg__ecap_8h_adc4524ec72aad281b6da891a3be94349}} 
+\index{reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}!ecap\+R\+E\+G5@{ecap\+R\+E\+G5}}
+\index{ecap\+R\+E\+G5@{ecap\+R\+E\+G5}!reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}}
+\subsubsection{\texorpdfstring{ecap\+R\+E\+G5}{ecapREG5}}
+{\footnotesize\ttfamily \#define ecap\+R\+E\+G5~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79700\+U)}
+
+
+
+E\+C\+A\+P5 Register Frame Pointer. 
+
+This pointer is used by the E\+C\+AP driver to access the E\+C\+A\+P5 registers. 
+
+Definition at line 146 of file reg\+\_\+ecap.\+h.
+
+\mbox{\Hypertarget{reg__ecap_8h_abcb9882926469a89a45753cc601b3ac4}\label{reg__ecap_8h_abcb9882926469a89a45753cc601b3ac4}} 
+\index{reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}!ecap\+R\+E\+G6@{ecap\+R\+E\+G6}}
+\index{ecap\+R\+E\+G6@{ecap\+R\+E\+G6}!reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}}
+\subsubsection{\texorpdfstring{ecap\+R\+E\+G6}{ecapREG6}}
+{\footnotesize\ttfamily \#define ecap\+R\+E\+G6~((\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+C\+F79800\+U)}
+
+
+
+E\+C\+A\+P6 Register Frame Pointer. 
+
+This pointer is used by the E\+C\+AP driver to access the E\+C\+A\+P6 registers. 
+
+Definition at line 153 of file reg\+\_\+ecap.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}\label{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}} 
+\index{reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}!ecap\+B\+A\+S\+E\+\_\+t@{ecap\+B\+A\+S\+E\+\_\+t}}
+\index{ecap\+B\+A\+S\+E\+\_\+t@{ecap\+B\+A\+S\+E\+\_\+t}!reg\+\_\+ecap.\+h@{reg\+\_\+ecap.\+h}}
+\subsubsection{\texorpdfstring{ecap\+B\+A\+S\+E\+\_\+t}{ecapBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+E\+C\+AP Register Frame Type Definition. 
+
+This type is used to access the E\+C\+AP Registers. 

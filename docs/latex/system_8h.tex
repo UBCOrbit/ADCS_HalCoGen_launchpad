@@ -1,0 +1,1737 @@
+\hypertarget{system_8h}{}\section{include/system.h File Reference}
+\label{system_8h}\index{include/system.\+h@{include/system.\+h}}
+
+
+System Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+flash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+tcram.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsystem__config__reg}{system\+\_\+config\+\_\+reg}}
+\item 
+struct \mbox{\hyperlink{structtcmflash__config__reg}{tcmflash\+\_\+config\+\_\+reg}}
+\item 
+struct \mbox{\hyperlink{structsram__config__reg}{sram\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{system_8h_ae7a5692682e0f29ab595aaa04cdc1e87}\label{system_8h_ae7a5692682e0f29ab595aaa04cdc1e87}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+D\+O\+Z\+E\+\_\+\+M\+O\+DE}~0x000\+F3\+F02U
+\item 
+\mbox{\Hypertarget{system_8h_a6f8084f593d0f5527c63dd48dd5c8433}\label{system_8h_a6f8084f593d0f5527c63dd48dd5c8433}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+N\+O\+O\+Z\+E\+\_\+\+M\+O\+DE}~0x000\+F3\+F03U
+\item 
+\mbox{\Hypertarget{system_8h_af1e8ae4bf9aa0901f4fb82d50ce2e4e5}\label{system_8h_af1e8ae4bf9aa0901f4fb82d50ce2e4e5}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+L\+E\+E\+P\+\_\+\+M\+O\+DE}~0x000\+F\+F\+F\+F\+FU
+\item 
+\mbox{\Hypertarget{system_8h_aedd462bfccb806f9e85c8b718463ee7c}\label{system_8h_aedd462bfccb806f9e85c8b718463ee7c}} 
+\#define {\bfseries L\+P\+O\+\_\+\+T\+R\+I\+M\+\_\+\+V\+A\+L\+UE}~((($\ast$(volatile uint32 $\ast$)0x\+F00801\+B4\+U) \& 0x\+F\+F\+F\+F0000\+U)$>$$>$16\+U)
+\item 
+\mbox{\Hypertarget{system_8h_a9c91213f6c124bc8f24ccb1b344fbb0f}\label{system_8h_a9c91213f6c124bc8f24ccb1b344fbb0f}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+F\+F\+E4\+U)
+\item 
+\mbox{\Hypertarget{system_8h_a2389fc15d9496311fa8f6916dd8c2ae5}\label{system_8h_a2389fc15d9496311fa8f6916dd8c2ae5}} 
+\#define {\bfseries P\+O\+W\+E\+R\+O\+N\+\_\+\+R\+E\+S\+ET}~0x8000U
+\item 
+\mbox{\Hypertarget{system_8h_adcd6631a91324d1cfaa79a83350d9a7b}\label{system_8h_adcd6631a91324d1cfaa79a83350d9a7b}} 
+\#define {\bfseries O\+S\+C\+\_\+\+F\+A\+I\+L\+U\+R\+E\+\_\+\+R\+E\+S\+ET}~0x4000U
+\item 
+\mbox{\Hypertarget{system_8h_a16a650be85b42339db7fb0e583d51648}\label{system_8h_a16a650be85b42339db7fb0e583d51648}} 
+\#define {\bfseries W\+A\+T\+C\+H\+D\+O\+G\+\_\+\+R\+E\+S\+ET}~0x2000U
+\item 
+\mbox{\Hypertarget{system_8h_a3d36094ecec8048918b4751698d9dd57}\label{system_8h_a3d36094ecec8048918b4751698d9dd57}} 
+\#define {\bfseries I\+C\+E\+P\+I\+C\+K\+\_\+\+R\+E\+S\+ET}~0x2000U
+\item 
+\mbox{\Hypertarget{system_8h_ad61b24da340ce7b55ea98d804744c785}\label{system_8h_ad61b24da340ce7b55ea98d804744c785}} 
+\#define {\bfseries C\+P\+U\+\_\+\+R\+E\+S\+ET}~0x0020U
+\item 
+\mbox{\Hypertarget{system_8h_a7a76670ff212ef11fb7daf1c9fd5836a}\label{system_8h_a7a76670ff212ef11fb7daf1c9fd5836a}} 
+\#define {\bfseries S\+W\+\_\+\+R\+E\+S\+ET}~0x0010U
+\item 
+\mbox{\Hypertarget{system_8h_a470a2e4a1bdc840b241c4d0633252834}\label{system_8h_a470a2e4a1bdc840b241c4d0633252834}} 
+\#define {\bfseries W\+A\+T\+C\+H\+D\+O\+G\+\_\+\+S\+T\+A\+T\+US}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+F\+C98\+U)
+\item 
+\mbox{\Hypertarget{system_8h_addc3d8ea2d003ccc5ae90267b1734484}\label{system_8h_addc3d8ea2d003ccc5ae90267b1734484}} 
+\#define {\bfseries D\+E\+V\+I\+C\+E\+\_\+\+I\+D\+\_\+\+R\+EV}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+F\+F\+F0\+U)
+\item 
+\#define \mbox{\hyperlink{system_8h_a91ed25b07bdff25ce25e42c2fb36f655}{O\+S\+C\+\_\+\+F\+R\+EQ}}~16.\+0F
+\begin{DoxyCompactList}\small\item\em Oscillator clock source exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a8d29681199850bdf1c72c648f406d1df}{P\+L\+L1\+\_\+\+F\+R\+EQ}}~160.\+00F
+\begin{DoxyCompactList}\small\item\em P\+LL 1 clock source exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a82e6e8e3b0a586e1120592ceefb08f63}{L\+P\+O\+\_\+\+L\+F\+\_\+\+F\+R\+EQ}}~0.\+080F
+\begin{DoxyCompactList}\small\item\em L\+PO Low Freq Oscillator source exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_aa736916f5ab1fbd671f784e9a02ad023}{L\+P\+O\+\_\+\+H\+F\+\_\+\+F\+R\+EQ}}~10.\+000F
+\begin{DoxyCompactList}\small\item\em L\+PO High Freq Oscillator source exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{system_8h_a8d8427c4caed9c6e0d41bac93cd06229}\label{system_8h_a8d8427c4caed9c6e0d41bac93cd06229}} 
+\#define {\bfseries P\+L\+L2\+\_\+\+F\+R\+EQ}~160.\+00F
+\item 
+\#define \mbox{\hyperlink{system_8h_a3530701a5c6def8a2e5d43c9e0750b1a}{G\+C\+L\+K\+\_\+\+F\+R\+EQ}}~160.\+000F
+\begin{DoxyCompactList}\small\item\em G\+C\+LK domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a1029845057ffa1be09dc5681da9a3ff7}{H\+C\+L\+K\+\_\+\+F\+R\+EQ}}~160.\+000F
+\begin{DoxyCompactList}\small\item\em H\+C\+LK domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a8d2eb367049e436ab75ff30522dcc9bc}{R\+T\+I\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em R\+TI Clock frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a51cb6f17ba18463bfda04e072693c9f2}{A\+V\+C\+L\+K1\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em A\+V\+C\+L\+K1 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a6fadd474ee3ae4d3995450188ccd57a0}{A\+V\+C\+L\+K2\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em A\+V\+C\+L\+K2 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a2fac26754430422d3080df44d3300ced}{A\+V\+C\+L\+K3\+\_\+\+F\+R\+EQ}}~0.\+000F
+\begin{DoxyCompactList}\small\item\em A\+V\+C\+L\+K3 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a959cdc6f3174c0c21534f3bbe50f5e11}{A\+V\+C\+L\+K4\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em A\+V\+C\+L\+K4 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a92d1bf5047c4525efc4699e09db47aa9}{V\+C\+L\+K1\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em V\+C\+L\+K1 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_aad0c9c7796f8cc004ab3fc96b0bb3ab5}{V\+C\+L\+K2\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em V\+C\+L\+K2 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a38973c3e9cc044e6246e5b6b6ff4462c}{V\+C\+L\+K3\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em V\+C\+L\+K3 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a65a076021e41a87bb965b161203b6853}{V\+C\+L\+K4\+\_\+\+F\+R\+EQ}}~80.\+000F
+\begin{DoxyCompactList}\small\item\em V\+C\+L\+K4 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a72719681af72bed25f48fb95cce8b5c0}{S\+Y\+S\+\_\+\+P\+R\+E1}}~(\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{S\+Y\+S\+\_\+\+P\+L\+L1}})
+\begin{DoxyCompactList}\small\item\em Alias name for R\+T\+I1\+C\+LK P\+RE clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{system_8h_a4b6fb798365b7738c7d7b20c6f03e313}{S\+Y\+S\+\_\+\+P\+R\+E2}}~(\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{S\+Y\+S\+\_\+\+P\+L\+L1}})
+\begin{DoxyCompactList}\small\item\em Alias name for R\+T\+I2\+C\+LK pre clock source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{system_8h_a25329dea704d0931dc76c0dbe7cc56c5}\label{system_8h_a25329dea704d0931dc76c0dbe7cc56c5}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+Y\+S\+P\+C1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_a4449bd54220f21f9ba2b19b04c8256ad}\label{system_8h_a4449bd54220f21f9ba2b19b04c8256ad}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+Y\+S\+P\+C2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{system_8h_a9fb86dc660e2e946a2326ceb91c3196e}\label{system_8h_a9fb86dc660e2e946a2326ceb91c3196e}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+Y\+S\+P\+C7\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_ac4d5d2bad3f41e557ffbccab41ee36f3}\label{system_8h_ac4d5d2bad3f41e557ffbccab41ee36f3}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+Y\+S\+P\+C8\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_a63a5962a1b08030d714463ecd962dec6}\label{system_8h_a63a5962a1b08030d714463ecd962dec6}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+Y\+S\+P\+C9\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+C\+D\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+G\+H\+V\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+V\+C\+L\+K\+A\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+R\+C\+L\+K\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{system_8h_a7e0af5c54af9bddbe919ee2e979cdcd2}\label{system_8h_a7e0af5c54af9bddbe919ee2e979cdcd2}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+M\+S\+T\+G\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000105U
+\item 
+\mbox{\Hypertarget{system_8h_a1bbaade5c95ad8ff8f3dc22ed5c43c94}\label{system_8h_a1bbaade5c95ad8ff8f3dc22ed5c43c94}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+M\+I\+N\+I\+T\+G\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x5U
+\item 
+\mbox{\Hypertarget{system_8h_a7838860df188855f00b86d321b79cb53}\label{system_8h_a7838860df188855f00b86d321b79cb53}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+M\+S\+I\+N\+E\+N\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}
+\item 
+\mbox{\Hypertarget{system_8h_a0e1d478100319d2992ac3d26fd71c61c}\label{system_8h_a0e1d478100319d2992ac3d26fd71c61c}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+2}~(((S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1) \& 0x\+E0\+F\+F\+F\+F\+F\+F\+U) $\vert$ (uint32)((uint32)(1\+U -\/ 1\+U) $<$$<$ 24\+U))
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{system_8h_a89ba0421d6fab6e9b95c189b46a07b9e}\label{system_8h_a89ba0421d6fab6e9b95c189b46a07b9e}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+U\+E\+R\+F\+L\+A\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_ac33d1a2a4a01832753df1f92a2982e19}\label{system_8h_ac33d1a2a4a01832753df1f92a2982e19}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+L\+P\+O\+M\+O\+N\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}~((uint32)((uint32)1\+U $<$$<$ 24\+U) $\vert$ L\+P\+O\+\_\+\+T\+R\+I\+M\+\_\+\+V\+A\+L\+U\+E)
+\item 
+\mbox{\Hypertarget{system_8h_ae88fcbb47e8d7a7ffb7f9a2b0397c27f}\label{system_8h_ae88fcbb47e8d7a7ffb7f9a2b0397c27f}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+L\+P\+O\+M\+O\+N\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+2}~((uint32)((uint32)1\+U $<$$<$ 24\+U) $\vert$ (uint32)((uint32)16\+U $<$$<$ 8\+U) $\vert$ 16\+U)
+\item 
+\mbox{\Hypertarget{system_8h_ad0c97bcad327a7af30227c41563d88a9}\label{system_8h_ad0c97bcad327a7af30227c41563d88a9}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+C\+L\+K\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x000\+A0000U
+\item 
+\mbox{\Hypertarget{system_8h_a3f97285e71c3b68e7b93abb0727c78e3}\label{system_8h_a3f97285e71c3b68e7b93abb0727c78e3}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+D\+F\+T\+C\+T\+R\+L\+R\+E\+G1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00002205U
+\item 
+\mbox{\Hypertarget{system_8h_a036bac942d383002ce46ea96711b1d35}\label{system_8h_a036bac942d383002ce46ea96711b1d35}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+D\+F\+T\+C\+T\+R\+L\+R\+E\+G2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x5U
+\item 
+\mbox{\Hypertarget{system_8h_aed9790ce5c7d2a9595e5eee3d0e05a45}\label{system_8h_aed9790ce5c7d2a9595e5eee3d0e05a45}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+G\+P\+R\+E\+G1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x0005\+F\+F\+F\+FU
+\item 
+\mbox{\Hypertarget{system_8h_aafbf02d46c251149a567be8c2dbb1843}\label{system_8h_aafbf02d46c251149a567be8c2dbb1843}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+R\+A\+M\+G\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00050000U
+\item 
+\mbox{\Hypertarget{system_8h_a46f3eb6d97b5b5c1df67cb4a1dbb1ce5}\label{system_8h_a46f3eb6d97b5b5c1df67cb4a1dbb1ce5}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+B\+M\+M\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x\+AU
+\item 
+\mbox{\Hypertarget{system_8h_a3020d7f32f3e067d693858a37e370fe0}\label{system_8h_a3020d7f32f3e067d693858a37e370fe0}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+M\+M\+U\+G\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+C\+L\+K\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries S\+Y\+S\+\_\+\+E\+C\+P\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{system_8h_a82354b43c4bf0c2a506eee137b738f34}\label{system_8h_a82354b43c4bf0c2a506eee137b738f34}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+D\+E\+V\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x\+AU
+\item 
+\mbox{\Hypertarget{system_8h_a718657729c662a7ed6df52f66f02c9be}\label{system_8h_a718657729c662a7ed6df52f66f02c9be}} 
+\#define {\bfseries S\+Y\+S\+\_\+\+S\+Y\+S\+E\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00004000U
+\item 
+\#define {\bfseries S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}
+\item 
+\mbox{\Hypertarget{system_8h_a74df5cdfdb706f4ed5f2468d7650c71a}\label{system_8h_a74df5cdfdb706f4ed5f2468d7650c71a}} 
+\#define {\bfseries S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+2}~(((S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1) \& 0x\+E0\+F\+F\+F\+F\+F\+F\+U) $\vert$ (uint32)((uint32)(1\+U -\/ 1\+U) $<$$<$ 24\+U))
+\item 
+\mbox{\Hypertarget{system_8h_a56461cc1bcedc85f363336e796c7890d}\label{system_8h_a56461cc1bcedc85f363336e796c7890d}} 
+\#define {\bfseries S\+Y\+S2\+\_\+\+S\+T\+C\+C\+L\+K\+D\+I\+V\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_acfea4b3625291e8a00790278355077d3}\label{system_8h_acfea4b3625291e8a00790278355077d3}} 
+\#define {\bfseries S\+Y\+S2\+\_\+\+C\+L\+K2\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(1\+U $\vert$ 0x00000100\+U)
+\item 
+\#define {\bfseries S\+Y\+S2\+\_\+\+V\+C\+L\+K\+A\+C\+O\+N1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{system_8h_a3472211f36222c2b96255707b289789b}\label{system_8h_a3472211f36222c2b96255707b289789b}} 
+\#define {\bfseries S\+Y\+S2\+\_\+\+C\+L\+K\+S\+L\+I\+P\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x5U
+\item 
+\mbox{\Hypertarget{system_8h_ae7b86e4e363b31ef418e5af97b016c19}\label{system_8h_ae7b86e4e363b31ef418e5af97b016c19}} 
+\#define {\bfseries S\+Y\+S2\+\_\+\+E\+F\+C\+\_\+\+C\+T\+L\+E\+N\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x5U
+\item 
+\mbox{\Hypertarget{system_8h_a6d59e972e8ec761efc988c07683cfbeb}\label{system_8h_a6d59e972e8ec761efc988c07683cfbeb}} 
+\#define {\bfseries F\+S\+M\+\_\+\+W\+R\+\_\+\+E\+N\+A\+\_\+\+HL}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F87288\+U)
+\item 
+\mbox{\Hypertarget{system_8h_a097529dd63fd26eb69fb7487ed16da0f}\label{system_8h_a097529dd63fd26eb69fb7487ed16da0f}} 
+\#define {\bfseries E\+E\+P\+R\+O\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+HL}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F872\+B8\+U)
+\item 
+\mbox{\Hypertarget{system_8h_a41b4c1a53b3d7f0bdd6c71813e36f36c}\label{system_8h_a41b4c1a53b3d7f0bdd6c71813e36f36c}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+R\+D\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x00000000\+U $\vert$ (uint32)((uint32)3\+U $<$$<$ 8\+U) $\vert$ (uint32)((uint32)1\+U $<$$<$ 4\+U) $\vert$  1\+U)
+\item 
+\mbox{\Hypertarget{system_8h_a3aee8e09b2c6a554b6f99c5c30654761}\label{system_8h_a3aee8e09b2c6a554b6f99c5c30654761}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+E\+D\+A\+C\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x000\+A0005U
+\item 
+\mbox{\Hypertarget{system_8h_ab35a9b5daf501bae9bb559c9be6aca32}\label{system_8h_ab35a9b5daf501bae9bb559c9be6aca32}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+E\+D\+A\+C\+C\+T\+R\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_ab36fe94824e7997f9af00d41ee040617}\label{system_8h_ab36fe94824e7997f9af00d41ee040617}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+E\+D\+A\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_a9c7dbe32622acc7c281afbcda494aed3}\label{system_8h_a9c7dbe32622acc7c281afbcda494aed3}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+P\+R\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_ae05c50bdb3d7ded4a2817221e24b0d04}\label{system_8h_ae05c50bdb3d7ded4a2817221e24b0d04}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+S\+E\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_abca7aec156a4bd716baa8f465d790a60}\label{system_8h_abca7aec156a4bd716baa8f465d790a60}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+A\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x\+FU
+\item 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{system_8h_a7a52f95e8c76b46bb14f850972bdfd3c}\label{system_8h_a7a52f95e8c76b46bb14f850972bdfd3c}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+P\+A\+C1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00\+C80001U
+\item 
+\mbox{\Hypertarget{system_8h_a6579d30ad2f2dcb4adb7542c47473b55}\label{system_8h_a6579d30ad2f2dcb4adb7542c47473b55}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+P\+A\+C2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_a04b8fae9db2bff9ba0058a74857791fe}\label{system_8h_a04b8fae9db2bff9ba0058a74857791fe}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+M\+A\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_a00329d8240c447108afbaf27bf59dfa9}\label{system_8h_a00329d8240c447108afbaf27bf59dfa9}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x55\+A\+AU
+\item 
+\mbox{\Hypertarget{system_8h_a3f717a91c6df4a1766c1228ec89e3255}\label{system_8h_a3f717a91c6df4a1766c1228ec89e3255}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+D\+I\+A\+G\+C\+T\+R\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x000\+A0000U
+\item 
+\mbox{\Hypertarget{system_8h_a41a4ff1e170e14a2e1c44334eccf5c73}\label{system_8h_a41a4ff1e170e14a2e1c44334eccf5c73}} 
+\#define {\bfseries T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+E\+D\+A\+C\+S\+D\+I\+S2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{system_8h_aa8083615164922af7ea8ec6a87cc1ca2}\label{system_8h_aa8083615164922af7ea8ec6a87cc1ca2}} 
+\#define {\bfseries S\+R\+A\+M\+\_\+\+R\+A\+M\+C\+T\+R\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x0005000\+AU
+\item 
+\mbox{\Hypertarget{system_8h_ab4959bd734ca1f82cb661d4ab63d1069}\label{system_8h_ab4959bd734ca1f82cb661d4ab63d1069}} 
+\#define {\bfseries S\+R\+A\+M\+\_\+\+R\+A\+M\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{system_8h_a39902075974175602b7c2a9f18e62bfb}\label{system_8h_a39902075974175602b7c2a9f18e62bfb}} 
+\#define {\bfseries S\+R\+A\+M\+\_\+\+R\+A\+M\+I\+N\+T\+C\+T\+R\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{system_8h_ac3a6185dad27825abcebbbef9eea23ad}\label{system_8h_ac3a6185dad27825abcebbbef9eea23ad}} 
+\#define {\bfseries S\+R\+A\+M\+\_\+\+R\+A\+M\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x5U
+\item 
+\mbox{\Hypertarget{system_8h_a5c04333aa8a051c70e55bbf4691c939e}\label{system_8h_a5c04333aa8a051c70e55bbf4691c939e}} 
+\#define {\bfseries S\+R\+A\+M\+\_\+\+R\+A\+M\+A\+D\+D\+R\+D\+E\+C\+V\+E\+C\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{system_8h_ab7756b7ab1335f257c35db756123e912}\label{system_8h_ab7756b7ab1335f257c35db756123e912}} 
+typedef struct \mbox{\hyperlink{structsystem__config__reg}{system\+\_\+config\+\_\+reg}} {\bfseries system\+\_\+config\+\_\+reg\+\_\+t}
+\item 
+\mbox{\Hypertarget{system_8h_a1de01939a7062abec860cc510935a785}\label{system_8h_a1de01939a7062abec860cc510935a785}} 
+typedef struct \mbox{\hyperlink{structtcmflash__config__reg}{tcmflash\+\_\+config\+\_\+reg}} {\bfseries tcmflash\+\_\+config\+\_\+reg\+\_\+t}
+\item 
+\mbox{\Hypertarget{system_8h_a00a6a68b352f50db2efcba9fb51e02ea}\label{system_8h_a00a6a68b352f50db2efcba9fb51e02ea}} 
+typedef struct \mbox{\hyperlink{structsram__config__reg}{sram\+\_\+config\+\_\+reg}} {\bfseries sram\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166}{system\+Clock\+Source}} \{ \newline
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}{S\+Y\+S\+\_\+\+O\+SC}} = 0U, 
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{S\+Y\+S\+\_\+\+P\+L\+L1}} = 1U, 
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad42fcc1d275719112a852c11b3eede7a}{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L1}} = 3U, 
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a656058b3b4ba277c21d4d87a16ca413a}{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+L\+OW}} = 4U, 
+\newline
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a938db45d5c14c66808b8a6bd4dd02f03}{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+H\+I\+GH}} = 5U, 
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad93eb68c73c5e29c5b12b37589fe80f0}{S\+Y\+S\+\_\+\+P\+L\+L2}} = 6U, 
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a8c9b841abfc1e4233557848305d5e831}{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L2}} = 7U, 
+\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{S\+Y\+S\+\_\+\+V\+C\+LK}} = 9U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for clock sources. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332}{flash\+W\+Power\+Modes}} \{ \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a0aad210a70d765f145599be0d031305a}{S\+Y\+S\+\_\+\+S\+L\+E\+EP}} = 0U, 
+\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332aa2d92b531427b40c13049bd7e1976187}{S\+Y\+S\+\_\+\+S\+T\+A\+N\+D\+BY}} = 1U, 
+\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{S\+Y\+S\+\_\+\+A\+C\+T\+I\+VE}} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for flash bank power modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{system_8h_ab3c7742b0b313a8ac595a0ae677c3ccc}{system\+Get\+Config\+Value}} (\mbox{\hyperlink{structsystem__config__reg}{system\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8h_afa983f739f63d48487aec38706af5a6f}{tcmflash\+Get\+Config\+Value}} (\mbox{\hyperlink{structtcmflash__config__reg}{tcmflash\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system_8h_a45f46deb7644048176d5e9347afb939a}{setup\+P\+LL}} (void)
+\item 
+void \mbox{\hyperlink{system_8h_aaa231cc5e90591363431c63f15360567}{trim\+L\+PO}} (void)
+\item 
+void \mbox{\hyperlink{system_8h_a4490b16ad7d041537868dc9732b3dac2}{setup\+Flash}} (void)
+\item 
+void \mbox{\hyperlink{system_8h_a57d84f612fd0d9fec4cd8ac58b5d10c3}{periph\+Init}} (void)
+\item 
+void \mbox{\hyperlink{system_8h_aa26c333cac9e8481986232eb8f0d9244}{map\+Clocks}} (void)
+\item 
+void \mbox{\hyperlink{system_8h_ab11a117f1e08391f23d1da05930e7acf}{system\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes System Driver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{system_8h_af970bbab0b866f007e84e236cb1654e9}\label{system_8h_af970bbab0b866f007e84e236cb1654e9}} 
+void {\bfseries system\+Power\+Down} (uint32 mode)
+\item 
+void \mbox{\hyperlink{system_8h_ac61ec208839bdc4fec42ea50268b4db3}{sram\+Get\+Config\+Value}} (\mbox{\hyperlink{structsram__config__reg}{sram\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System Driver Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{system_8h_a51cb6f17ba18463bfda04e072693c9f2}\label{system_8h_a51cb6f17ba18463bfda04e072693c9f2}} 
+\index{system.\+h@{system.\+h}!A\+V\+C\+L\+K1\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K1\+\_\+\+F\+R\+EQ}}
+\index{A\+V\+C\+L\+K1\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K1\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{A\+V\+C\+L\+K1\+\_\+\+F\+R\+EQ}{AVCLK1\_FREQ}}
+{\footnotesize\ttfamily \#define A\+V\+C\+L\+K1\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+A\+V\+C\+L\+K1 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+A\+V\+C\+LK Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 167 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a6fadd474ee3ae4d3995450188ccd57a0}\label{system_8h_a6fadd474ee3ae4d3995450188ccd57a0}} 
+\index{system.\+h@{system.\+h}!A\+V\+C\+L\+K2\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K2\+\_\+\+F\+R\+EQ}}
+\index{A\+V\+C\+L\+K2\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K2\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{A\+V\+C\+L\+K2\+\_\+\+F\+R\+EQ}{AVCLK2\_FREQ}}
+{\footnotesize\ttfamily \#define A\+V\+C\+L\+K2\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+A\+V\+C\+L\+K2 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+A\+V\+C\+L\+K2 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 174 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a2fac26754430422d3080df44d3300ced}\label{system_8h_a2fac26754430422d3080df44d3300ced}} 
+\index{system.\+h@{system.\+h}!A\+V\+C\+L\+K3\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K3\+\_\+\+F\+R\+EQ}}
+\index{A\+V\+C\+L\+K3\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K3\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{A\+V\+C\+L\+K3\+\_\+\+F\+R\+EQ}{AVCLK3\_FREQ}}
+{\footnotesize\ttfamily \#define A\+V\+C\+L\+K3\+\_\+\+F\+R\+EQ~0.\+000F}
+
+
+
+A\+V\+C\+L\+K3 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+A\+V\+C\+L\+K3 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 181 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a959cdc6f3174c0c21534f3bbe50f5e11}\label{system_8h_a959cdc6f3174c0c21534f3bbe50f5e11}} 
+\index{system.\+h@{system.\+h}!A\+V\+C\+L\+K4\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K4\+\_\+\+F\+R\+EQ}}
+\index{A\+V\+C\+L\+K4\+\_\+\+F\+R\+EQ@{A\+V\+C\+L\+K4\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{A\+V\+C\+L\+K4\+\_\+\+F\+R\+EQ}{AVCLK4\_FREQ}}
+{\footnotesize\ttfamily \#define A\+V\+C\+L\+K4\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+A\+V\+C\+L\+K4 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+A\+V\+C\+L\+K4 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 188 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a3530701a5c6def8a2e5d43c9e0750b1a}\label{system_8h_a3530701a5c6def8a2e5d43c9e0750b1a}} 
+\index{system.\+h@{system.\+h}!G\+C\+L\+K\+\_\+\+F\+R\+EQ@{G\+C\+L\+K\+\_\+\+F\+R\+EQ}}
+\index{G\+C\+L\+K\+\_\+\+F\+R\+EQ@{G\+C\+L\+K\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{G\+C\+L\+K\+\_\+\+F\+R\+EQ}{GCLK\_FREQ}}
+{\footnotesize\ttfamily \#define G\+C\+L\+K\+\_\+\+F\+R\+EQ~160.\+000F}
+
+
+
+G\+C\+LK domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+G\+C\+LK domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 146 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a1029845057ffa1be09dc5681da9a3ff7}\label{system_8h_a1029845057ffa1be09dc5681da9a3ff7}} 
+\index{system.\+h@{system.\+h}!H\+C\+L\+K\+\_\+\+F\+R\+EQ@{H\+C\+L\+K\+\_\+\+F\+R\+EQ}}
+\index{H\+C\+L\+K\+\_\+\+F\+R\+EQ@{H\+C\+L\+K\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{H\+C\+L\+K\+\_\+\+F\+R\+EQ}{HCLK\_FREQ}}
+{\footnotesize\ttfamily \#define H\+C\+L\+K\+\_\+\+F\+R\+EQ~160.\+000F}
+
+
+
+H\+C\+LK domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+H\+C\+LK domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 153 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_aa736916f5ab1fbd671f784e9a02ad023}\label{system_8h_aa736916f5ab1fbd671f784e9a02ad023}} 
+\index{system.\+h@{system.\+h}!L\+P\+O\+\_\+\+H\+F\+\_\+\+F\+R\+EQ@{L\+P\+O\+\_\+\+H\+F\+\_\+\+F\+R\+EQ}}
+\index{L\+P\+O\+\_\+\+H\+F\+\_\+\+F\+R\+EQ@{L\+P\+O\+\_\+\+H\+F\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{L\+P\+O\+\_\+\+H\+F\+\_\+\+F\+R\+EQ}{LPO\_HF\_FREQ}}
+{\footnotesize\ttfamily \#define L\+P\+O\+\_\+\+H\+F\+\_\+\+F\+R\+EQ~10.\+000F}
+
+
+
+L\+PO High Freq Oscillator source exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+L\+PO High Freq Oscillator source exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 132 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a82e6e8e3b0a586e1120592ceefb08f63}\label{system_8h_a82e6e8e3b0a586e1120592ceefb08f63}} 
+\index{system.\+h@{system.\+h}!L\+P\+O\+\_\+\+L\+F\+\_\+\+F\+R\+EQ@{L\+P\+O\+\_\+\+L\+F\+\_\+\+F\+R\+EQ}}
+\index{L\+P\+O\+\_\+\+L\+F\+\_\+\+F\+R\+EQ@{L\+P\+O\+\_\+\+L\+F\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{L\+P\+O\+\_\+\+L\+F\+\_\+\+F\+R\+EQ}{LPO\_LF\_FREQ}}
+{\footnotesize\ttfamily \#define L\+P\+O\+\_\+\+L\+F\+\_\+\+F\+R\+EQ~0.\+080F}
+
+
+
+L\+PO Low Freq Oscillator source exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+L\+PO Low Freq Oscillator source exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 125 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a91ed25b07bdff25ce25e42c2fb36f655}\label{system_8h_a91ed25b07bdff25ce25e42c2fb36f655}} 
+\index{system.\+h@{system.\+h}!O\+S\+C\+\_\+\+F\+R\+EQ@{O\+S\+C\+\_\+\+F\+R\+EQ}}
+\index{O\+S\+C\+\_\+\+F\+R\+EQ@{O\+S\+C\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{O\+S\+C\+\_\+\+F\+R\+EQ}{OSC\_FREQ}}
+{\footnotesize\ttfamily \#define O\+S\+C\+\_\+\+F\+R\+EQ~16.\+0F}
+
+
+
+Oscillator clock source exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+Oscillator clock source exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 111 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a8d29681199850bdf1c72c648f406d1df}\label{system_8h_a8d29681199850bdf1c72c648f406d1df}} 
+\index{system.\+h@{system.\+h}!P\+L\+L1\+\_\+\+F\+R\+EQ@{P\+L\+L1\+\_\+\+F\+R\+EQ}}
+\index{P\+L\+L1\+\_\+\+F\+R\+EQ@{P\+L\+L1\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+L1\+\_\+\+F\+R\+EQ}{PLL1\_FREQ}}
+{\footnotesize\ttfamily \#define P\+L\+L1\+\_\+\+F\+R\+EQ~160.\+00F}
+
+
+
+P\+LL 1 clock source exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+P\+LL 2 clock source exported from H\+A\+L\+Co\+Gen G\+UI.
+
+P\+LL 1 clock source exported from H\+A\+L\+Co\+Gen G\+UI
+
+P\+LL 2 clock source exported from H\+A\+L\+Co\+Gen G\+UI \mbox{\Hypertarget{system_8h_a8d2eb367049e436ab75ff30522dcc9bc}\label{system_8h_a8d2eb367049e436ab75ff30522dcc9bc}} 
+\index{system.\+h@{system.\+h}!R\+T\+I\+\_\+\+F\+R\+EQ@{R\+T\+I\+\_\+\+F\+R\+EQ}}
+\index{R\+T\+I\+\_\+\+F\+R\+EQ@{R\+T\+I\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{R\+T\+I\+\_\+\+F\+R\+EQ}{RTI\_FREQ}}
+{\footnotesize\ttfamily \#define R\+T\+I\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+R\+TI Clock frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+R\+TI Clock frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 160 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a767223143a41bb684f6e610800ded2a5}\label{system_8h_a767223143a41bb684f6e610800ded2a5}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1@{S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}}
+\index{S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1@{S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}{SYS2\_PLLCTL3\_CONFIGVALUE\_1}}
+{\footnotesize\ttfamily \#define S\+Y\+S2\+\_\+\+P\+L\+L\+C\+T\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)(2U - 1U) << 29U)\(\backslash\)
+                                    | (uint32)((uint32)0x1FU << 24U) \(\backslash\)
+                                    | (uint32)((uint32)(6U - 1U)<< 16U) \(\backslash\)
+                                    | (uint32)(0x7700U))
+\end{DoxyCode}
+
+
+Definition at line 380 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_abfeac50cb97d0f637d5dc1cf4ba96e6a}\label{system_8h_abfeac50cb97d0f637d5dc1cf4ba96e6a}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S2\+\_\+\+V\+C\+L\+K\+A\+C\+O\+N1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S2\+\_\+\+V\+C\+L\+K\+A\+C\+O\+N1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S2\+\_\+\+V\+C\+L\+K\+A\+C\+O\+N1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S2\+\_\+\+V\+C\+L\+K\+A\+C\+O\+N1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S2\+\_\+\+V\+C\+L\+K\+A\+C\+O\+N1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS2\_VCLKACON1\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S2\+\_\+\+V\+C\+L\+K\+A\+C\+O\+N1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)1U << 24U) \(\backslash\)
+                                    | (uint32)((uint32)1U << 20U) \(\backslash\)
+                                    | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 16U)\(\backslash\)
+                                    | (uint32)((uint32)1U << 8U)\(\backslash\)
+                                    | (uint32)((uint32)1U << 4U) \(\backslash\)
+                                    | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 0U) )
+\end{DoxyCode}
+
+
+Definition at line 388 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a769edf4d86ddc968148b7a9c293f92e8}\label{system_8h_a769edf4d86ddc968148b7a9c293f92e8}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+C\+D\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+C\+D\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+C\+D\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+C\+D\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+C\+D\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_CDDIS\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+C\+D\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)0U << 4U )\(\backslash\)
+                                | (uint32)((uint32)0U << 5U )\(\backslash\)
+                                | (uint32)((uint32)0U << 8U )\(\backslash\)
+                                | (uint32)((uint32)0U << 9U )\(\backslash\)
+                                | (uint32)((uint32)1U << 10U)\(\backslash\)
+                                | (uint32)((uint32)0U << 11U) )
+\end{DoxyCode}
+
+
+Definition at line 310 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a1c4e4828df47d5812118ad642461afd4}\label{system_8h_a1c4e4828df47d5812118ad642461afd4}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+C\+L\+K\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+C\+L\+K\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+C\+L\+K\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+C\+L\+K\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+C\+L\+K\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_CLKCNTL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+C\+L\+K\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( 0x00000100U \(\backslash\)
+                                    | (uint32)((uint32)1U << 16U) \(\backslash\)
+                                    | (uint32)((uint32)1U << 24U) )
+\end{DoxyCode}
+
+
+Definition at line 369 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_ad942cd5adac14468b8c5dbbff8093bcf}\label{system_8h_ad942cd5adac14468b8c5dbbff8093bcf}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_CSDIS\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+C\+S\+D\+I\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( 0x00000000U\(\backslash\)
+                                | 0x00000000U \(\backslash\)
+                                | 0x00000008U \(\backslash\)
+                                | 0x00000080U \(\backslash\)
+                                | 0x00000000U \(\backslash\)
+                                | 0x00000000U \(\backslash\)
+                                | 0x00000000U\(\backslash\)
+                                | 0x4U )
+\end{DoxyCode}
+
+
+Definition at line 301 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a941136ba1cb28a814ac3a49dc45b4594}\label{system_8h_a941136ba1cb28a814ac3a49dc45b4594}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+E\+C\+P\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+E\+C\+P\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+E\+C\+P\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+E\+C\+P\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+E\+C\+P\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_ECPCNTL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+E\+C\+P\+C\+N\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)0U << 24U)\(\backslash\)
+                                    | (uint32)((uint32)0U << 23U)\(\backslash\)
+                                    | (uint32)((uint32)(8U - 1U) & 0xFFFFU) )
+\end{DoxyCode}
+
+
+Definition at line 373 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_ad3629c26121f88976e6fb4847431b01f}\label{system_8h_ad3629c26121f88976e6fb4847431b01f}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+G\+H\+V\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+G\+H\+V\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+G\+H\+V\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+G\+H\+V\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+G\+H\+V\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_GHVSRC\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+G\+H\+V\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}{SYS\_OSC}} << 24U) \(\backslash\)
+                                | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}{SYS\_OSC}} << 16U) \(\backslash\)
+                                | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{SYS\_PLL1}} << 0U) )
+\end{DoxyCode}
+
+
+Definition at line 317 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a8b83d58d78c30b2e92ea702321232e9d}\label{system_8h_a8b83d58d78c30b2e92ea702321232e9d}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1@{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}}
+\index{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1@{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}{SYS\_PLLCTL1\_CONFIGVALUE\_1}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+U\+E\+\_\+1}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)0x00000000U \(\backslash\)
+                                    | (uint32)0x20000000U \(\backslash\)
+                                    | (uint32)((uint32)0x1FU << 24U) \(\backslash\)
+                                    | (uint32)0x00000000U \(\backslash\)
+                                    | (uint32)((uint32)(6U - 1U)<< 16U)\(\backslash\)
+                                    | (uint32)(0x7700U))
+\end{DoxyCode}
+
+
+Definition at line 335 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_ae8db82ad3097cf3058997acb896724fe}\label{system_8h_ae8db82ad3097cf3058997acb896724fe}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_PLLCTL2\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+P\+L\+L\+C\+T\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)0x00000000U\(\backslash\)
+                                    | (uint32)((uint32)255U << 22U)\(\backslash\)
+                                    | (uint32)((uint32)7U << 12U)\(\backslash\)
+                                    | (uint32)((uint32)(2U - 1U)<< 9U)\(\backslash\)
+                                    | (uint32)61U)
+\end{DoxyCode}
+
+
+Definition at line 344 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a72719681af72bed25f48fb95cce8b5c0}\label{system_8h_a72719681af72bed25f48fb95cce8b5c0}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+P\+R\+E1@{S\+Y\+S\+\_\+\+P\+R\+E1}}
+\index{S\+Y\+S\+\_\+\+P\+R\+E1@{S\+Y\+S\+\_\+\+P\+R\+E1}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+P\+R\+E1}{SYS\_PRE1}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+P\+R\+E1~(\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{S\+Y\+S\+\_\+\+P\+L\+L1}})}
+
+
+
+Alias name for R\+T\+I1\+C\+LK P\+RE clock source. 
+
+This is an alias name for the R\+T\+I1\+C\+LK pre clock source. This can be either\+:
+\begin{DoxyItemize}
+\item Oscillator
+\item Pll
+\item 32 k\+Hz Oscillator
+\item External
+\item Low Power Oscillator Low
+\item Low Power Oscillator High
+\item Flexray Pll 
+\end{DoxyItemize}
+
+Definition at line 233 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a4b6fb798365b7738c7d7b20c6f03e313}\label{system_8h_a4b6fb798365b7738c7d7b20c6f03e313}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+P\+R\+E2@{S\+Y\+S\+\_\+\+P\+R\+E2}}
+\index{S\+Y\+S\+\_\+\+P\+R\+E2@{S\+Y\+S\+\_\+\+P\+R\+E2}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+P\+R\+E2}{SYS\_PRE2}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+P\+R\+E2~(\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{S\+Y\+S\+\_\+\+P\+L\+L1}})}
+
+
+
+Alias name for R\+T\+I2\+C\+LK pre clock source. 
+
+This is an alias name for the R\+T\+I2\+C\+LK pre clock source. This can be either\+:
+\begin{DoxyItemize}
+\item Oscillator
+\item Pll
+\item 32 k\+Hz Oscillator
+\item External
+\item Low Power Oscillator Low
+\item Low Power Oscillator High
+\item Flexray Pll 
+\end{DoxyItemize}
+
+Definition at line 249 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a51eb00b86a34b92b21d061c4ef6db02d}\label{system_8h_a51eb00b86a34b92b21d061c4ef6db02d}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+R\+C\+L\+K\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+R\+C\+L\+K\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+R\+C\+L\+K\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+R\+C\+L\+K\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+R\+C\+L\+K\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_RCLKSRC\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+R\+C\+L\+K\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)1U << 24U)\(\backslash\)
+                                    | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 16U)\(\backslash\)
+                                    | (uint32)((uint32)1U << 8U)\(\backslash\)
+                                    | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 0U) )
+\end{DoxyCode}
+
+
+Definition at line 324 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a760a9e030b37a78c1d89be5b70c7a9d0}\label{system_8h_a760a9e030b37a78c1d89be5b70c7a9d0}} 
+\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+V\+C\+L\+K\+A\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+V\+C\+L\+K\+A\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+Y\+S\+\_\+\+V\+C\+L\+K\+A\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+Y\+S\+\_\+\+V\+C\+L\+K\+A\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+V\+C\+L\+K\+A\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SYS\_VCLKASRC\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+V\+C\+L\+K\+A\+S\+R\+C\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 8U)\(\backslash\)
+                                    | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 0U) )
+\end{DoxyCode}
+
+
+Definition at line 321 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_afc5c1ce4f1f79b6e7fc0401c535b6184}\label{system_8h_afc5c1ce4f1f79b6e7fc0401c535b6184}} 
+\index{system.\+h@{system.\+h}!T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{TCMFLASH\_FBFALLBACK\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define T\+C\+M\+F\+L\+A\+S\+H\+\_\+\+F\+B\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}} << 14U) \(\backslash\)
+                                            | (uint32)((uint32)3U << 12U) \(\backslash\)
+                                            | (uint32)((uint32)3U << 10U) \(\backslash\)
+                                            | (uint32)((uint32)3U << 8U) \(\backslash\)
+                                            | (uint32)((uint32)3U << 6U) \(\backslash\)
+                                            | (uint32)((uint32)3U << 4U) \(\backslash\)
+                                            | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}} << 2U) \(\backslash\)
+                                            | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}} << 0U) )
+\end{DoxyCode}
+
+
+Definition at line 454 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a92d1bf5047c4525efc4699e09db47aa9}\label{system_8h_a92d1bf5047c4525efc4699e09db47aa9}} 
+\index{system.\+h@{system.\+h}!V\+C\+L\+K1\+\_\+\+F\+R\+EQ@{V\+C\+L\+K1\+\_\+\+F\+R\+EQ}}
+\index{V\+C\+L\+K1\+\_\+\+F\+R\+EQ@{V\+C\+L\+K1\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{V\+C\+L\+K1\+\_\+\+F\+R\+EQ}{VCLK1\_FREQ}}
+{\footnotesize\ttfamily \#define V\+C\+L\+K1\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+V\+C\+L\+K1 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+V\+C\+L\+K1 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 195 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_aad0c9c7796f8cc004ab3fc96b0bb3ab5}\label{system_8h_aad0c9c7796f8cc004ab3fc96b0bb3ab5}} 
+\index{system.\+h@{system.\+h}!V\+C\+L\+K2\+\_\+\+F\+R\+EQ@{V\+C\+L\+K2\+\_\+\+F\+R\+EQ}}
+\index{V\+C\+L\+K2\+\_\+\+F\+R\+EQ@{V\+C\+L\+K2\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{V\+C\+L\+K2\+\_\+\+F\+R\+EQ}{VCLK2\_FREQ}}
+{\footnotesize\ttfamily \#define V\+C\+L\+K2\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+V\+C\+L\+K2 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+V\+C\+L\+K2 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 202 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a38973c3e9cc044e6246e5b6b6ff4462c}\label{system_8h_a38973c3e9cc044e6246e5b6b6ff4462c}} 
+\index{system.\+h@{system.\+h}!V\+C\+L\+K3\+\_\+\+F\+R\+EQ@{V\+C\+L\+K3\+\_\+\+F\+R\+EQ}}
+\index{V\+C\+L\+K3\+\_\+\+F\+R\+EQ@{V\+C\+L\+K3\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{V\+C\+L\+K3\+\_\+\+F\+R\+EQ}{VCLK3\_FREQ}}
+{\footnotesize\ttfamily \#define V\+C\+L\+K3\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+V\+C\+L\+K3 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+V\+C\+L\+K3 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 209 of file system.\+h.
+
+\mbox{\Hypertarget{system_8h_a65a076021e41a87bb965b161203b6853}\label{system_8h_a65a076021e41a87bb965b161203b6853}} 
+\index{system.\+h@{system.\+h}!V\+C\+L\+K4\+\_\+\+F\+R\+EQ@{V\+C\+L\+K4\+\_\+\+F\+R\+EQ}}
+\index{V\+C\+L\+K4\+\_\+\+F\+R\+EQ@{V\+C\+L\+K4\+\_\+\+F\+R\+EQ}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{V\+C\+L\+K4\+\_\+\+F\+R\+EQ}{VCLK4\_FREQ}}
+{\footnotesize\ttfamily \#define V\+C\+L\+K4\+\_\+\+F\+R\+EQ~80.\+000F}
+
+
+
+V\+C\+L\+K4 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI. 
+
+V\+C\+L\+K4 Domain frequency exported from H\+A\+L\+Co\+Gen G\+UI 
+
+Definition at line 216 of file system.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{system_8h_a3b352eed98abd9349057ec14d23ad332}\label{system_8h_a3b352eed98abd9349057ec14d23ad332}} 
+\index{system.\+h@{system.\+h}!flash\+W\+Power\+Modes@{flash\+W\+Power\+Modes}}
+\index{flash\+W\+Power\+Modes@{flash\+W\+Power\+Modes}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{flash\+W\+Power\+Modes}{flashWPowerModes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332}{flash\+W\+Power\+Modes}}}
+
+
+
+Alias names for flash bank power modes. 
+
+This enumeration is used to provide alias names for the flash bank power modes\+:
+\begin{DoxyItemize}
+\item sleep
+\item standby
+\item active 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+S\+L\+E\+EP@{S\+Y\+S\+\_\+\+S\+L\+E\+EP}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+S\+L\+E\+EP@{S\+Y\+S\+\_\+\+S\+L\+E\+EP}}}\mbox{\Hypertarget{system_8h_a3b352eed98abd9349057ec14d23ad332a0aad210a70d765f145599be0d031305a}\label{system_8h_a3b352eed98abd9349057ec14d23ad332a0aad210a70d765f145599be0d031305a}} 
+S\+Y\+S\+\_\+\+S\+L\+E\+EP&Alias for flash bank power mode sleep \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+S\+T\+A\+N\+D\+BY@{S\+Y\+S\+\_\+\+S\+T\+A\+N\+D\+BY}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+S\+T\+A\+N\+D\+BY@{S\+Y\+S\+\_\+\+S\+T\+A\+N\+D\+BY}}}\mbox{\Hypertarget{system_8h_a3b352eed98abd9349057ec14d23ad332aa2d92b531427b40c13049bd7e1976187}\label{system_8h_a3b352eed98abd9349057ec14d23ad332aa2d92b531427b40c13049bd7e1976187}} 
+S\+Y\+S\+\_\+\+S\+T\+A\+N\+D\+BY&Alias for flash bank power mode standby \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+A\+C\+T\+I\+VE@{S\+Y\+S\+\_\+\+A\+C\+T\+I\+VE}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+A\+C\+T\+I\+VE@{S\+Y\+S\+\_\+\+A\+C\+T\+I\+VE}}}\mbox{\Hypertarget{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}\label{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}} 
+S\+Y\+S\+\_\+\+A\+C\+T\+I\+VE&Alias for flash bank power mode active \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 413 of file system.\+h.
+
+
+\begin{DoxyCode}
+414 \{
+415     \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a0aad210a70d765f145599be0d031305a}{SYS\_SLEEP}}   = 0U, 
+416     \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332aa2d92b531427b40c13049bd7e1976187}{SYS\_STANDBY}} = 1U, 
+417     \mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}}  = 3U  
+418 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166}} 
+\index{system.\+h@{system.\+h}!system\+Clock\+Source@{system\+Clock\+Source}}
+\index{system\+Clock\+Source@{system\+Clock\+Source}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{system\+Clock\+Source}{systemClockSource}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166}{system\+Clock\+Source}}}
+
+
+
+Alias names for clock sources. 
+
+This enumeration is used to provide alias names for the clock sources\+:
+\begin{DoxyItemize}
+\item Oscillator
+\item Pll1
+\item External1
+\item Low Power Oscillator Low
+\item Low Power Oscillator High
+\item P\+L\+L2
+\item External2
+\item Synchronous V\+C\+L\+K1 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+O\+SC@{S\+Y\+S\+\_\+\+O\+SC}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+O\+SC@{S\+Y\+S\+\_\+\+O\+SC}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}} 
+S\+Y\+S\+\_\+\+O\+SC&Alias for oscillator clock Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+P\+L\+L1@{S\+Y\+S\+\_\+\+P\+L\+L1}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+P\+L\+L1@{S\+Y\+S\+\_\+\+P\+L\+L1}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}} 
+S\+Y\+S\+\_\+\+P\+L\+L1&Alias for Pll1 clock Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L1@{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L1}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L1@{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L1}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad42fcc1d275719112a852c11b3eede7a}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad42fcc1d275719112a852c11b3eede7a}} 
+S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L1&Alias for external clock Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+L\+OW@{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+L\+OW}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+L\+OW@{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+L\+OW}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166a656058b3b4ba277c21d4d87a16ca413a}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166a656058b3b4ba277c21d4d87a16ca413a}} 
+S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+L\+OW&Alias for low power oscillator low clock Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+H\+I\+GH@{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+H\+I\+GH}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+H\+I\+GH@{S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+H\+I\+GH}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166a938db45d5c14c66808b8a6bd4dd02f03}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166a938db45d5c14c66808b8a6bd4dd02f03}} 
+S\+Y\+S\+\_\+\+L\+P\+O\+\_\+\+H\+I\+GH&Alias for low power oscillator high clock Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+P\+L\+L2@{S\+Y\+S\+\_\+\+P\+L\+L2}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+P\+L\+L2@{S\+Y\+S\+\_\+\+P\+L\+L2}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad93eb68c73c5e29c5b12b37589fe80f0}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad93eb68c73c5e29c5b12b37589fe80f0}} 
+S\+Y\+S\+\_\+\+P\+L\+L2&Alias for Pll2 clock Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L2@{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L2}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L2@{S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L2}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166a8c9b841abfc1e4233557848305d5e831}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166a8c9b841abfc1e4233557848305d5e831}} 
+S\+Y\+S\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L2&Alias for external 2 clock Source \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+V\+C\+LK@{S\+Y\+S\+\_\+\+V\+C\+LK}!system.\+h@{system.\+h}}\index{system.\+h@{system.\+h}!S\+Y\+S\+\_\+\+V\+C\+LK@{S\+Y\+S\+\_\+\+V\+C\+LK}}}\mbox{\Hypertarget{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}\label{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}} 
+S\+Y\+S\+\_\+\+V\+C\+LK&Alias for synchronous V\+C\+L\+K1 clock Source \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 78 of file system.\+h.
+
+
+\begin{DoxyCode}
+79 \{
+80     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}{SYS\_OSC}}             = 0U,  
+81     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{SYS\_PLL1}}            = 1U,  
+82     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad42fcc1d275719112a852c11b3eede7a}{SYS\_EXTERNAL1}}       = 3U,  
+83     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a656058b3b4ba277c21d4d87a16ca413a}{SYS\_LPO\_LOW}}         = 4U,  
+84     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a938db45d5c14c66808b8a6bd4dd02f03}{SYS\_LPO\_HIGH}}        = 5U,  
+85     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ad93eb68c73c5e29c5b12b37589fe80f0}{SYS\_PLL2}}            = 6U,  
+86     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a8c9b841abfc1e4233557848305d5e831}{SYS\_EXTERNAL2}}       = 7U,  
+87     \mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}}            = 9U   
+88 \};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{system_8h_aa26c333cac9e8481986232eb8f0d9244}\label{system_8h_aa26c333cac9e8481986232eb8f0d9244}} 
+\index{system.\+h@{system.\+h}!map\+Clocks@{map\+Clocks}}
+\index{map\+Clocks@{map\+Clocks}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{map\+Clocks()}{mapClocks()}}
+{\footnotesize\ttfamily void map\+Clocks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+{\bfseries Initialize} {\bfseries Clock} {\bfseries Tree\+:} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item Disable / Enable clock domain ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Wait for until clocks are locked ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Map device clock domains to desired sources and configure top-\/level dividers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item All clock domains are working off the default clock sources until now ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item The below assignments can be easily modified using the H\+A\+L\+Co\+Gen G\+UI ~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup G\+C\+LK, H\+C\+LK and V\+C\+LK clock source for normal operation, power down mode and after wakeup ~\newline
+~\newline
+~\newline
+
+\item Setup R\+T\+I\+C\+L\+K1 and R\+T\+I\+C\+L\+K2 clocks ~\newline
+~\newline
+
+\item Setup asynchronous peripheral clock sources for A\+V\+C\+L\+K1 and A\+V\+C\+L\+K2 ~\newline
+
+\item Setup synchronous peripheral clock dividers for V\+C\+L\+K1, V\+C\+L\+K2, V\+C\+L\+K3 
+\end{DoxyItemize}
+
+Definition at line 241 of file system.\+c.
+
+
+
+References system\+R\+E\+G1.
+
+
+\begin{DoxyCode}
+242 \{
+243     uint32 SYS\_CSVSTAT, SYS\_CSDIS;
+244 
+245 \textcolor{comment}{/* USER CODE BEGIN (11) */}
+246 \textcolor{comment}{/* USER CODE END */}
+247 
+250     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CDDIS = (uint32)((uint32)0U << 4U ) \textcolor{comment}{/* AVCLK1 , 1 - OFF, 0 - ON */}
+251                       | (uint32)((uint32)0U << 5U ) \textcolor{comment}{/* AVCLK2 , 1 - OFF, 0 - ON */}
+252                       | (uint32)((uint32)0U << 8U ) \textcolor{comment}{/* VCLK3 , 1 - OFF, 0 - ON */}
+253                       | (uint32)((uint32)0U << 9U ) \textcolor{comment}{/* VCLK4 , 1 - OFF, 0 - ON */}
+254                       | (uint32)((uint32)1U << 10U) \textcolor{comment}{/* AVCLK3 , 1 - OFF, 0 - ON */}
+255                       | (uint32)((uint32)0U << 11U); \textcolor{comment}{/* AVCLK4 , 1 - OFF, 0 - ON */}
+256 
+257 
+258     \textcolor{comment}{/* Work Around for Errata SYS#46:}
+259 \textcolor{comment}{     *}
+260 \textcolor{comment}{     * Errata Description:}
+261 \textcolor{comment}{     *            Clock Source Switching Not Qualified with Clock Source Enable And Clock Source Valid}
+262 \textcolor{comment}{     * Workaround:}
+263 \textcolor{comment}{     *            Always check the CSDIS register to make sure the clock source is turned on and check}
+264 \textcolor{comment}{     * the CSVSTAT register to make sure the clock source is valid. Then write to GHVSRC to switch the
+       clock.}
+265 \textcolor{comment}{     */}
+267     SYS\_CSVSTAT = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSVSTAT;
+268     SYS\_CSDIS = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSDIS;
+269     \textcolor{keywordflow}{while} ((SYS\_CSVSTAT & ((SYS\_CSDIS ^ 0xFFU) & 0xFFU)) != ((SYS\_CSDIS ^ 0xFFU) & 0xFFU))
+270     \{
+271         SYS\_CSVSTAT = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSVSTAT;
+272         SYS\_CSDIS = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSDIS;
+273     \} \textcolor{comment}{/* Wait */}
+274 
+275 \textcolor{comment}{/* USER CODE BEGIN (12) */}
+276 \textcolor{comment}{/* USER CODE END */}
+277 
+281 
+283     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->GHVSRC = (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}{SYS\_OSC}} << 24U)
+284                        | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166ada755f70c500bf43d169a22b4ecef801}{SYS\_OSC}} << 16U)
+285                        | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a0e28ad7e3d2b547ef5daeea864149430}{SYS\_PLL1}} << 0U);
+286 
+288     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->RCLKSRC = (uint32)((uint32)1U << 24U)
+289                         | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 16U)
+290                         | (uint32)((uint32)1U << 8U)
+291                         | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 0U);
+292 
+294     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->VCLKASRC = (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 8U)
+295                          | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 0U);
+296 
+298     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKCNTL  = (\mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKCNTL & 0xF0FFFFFFU)
+299                          | (uint32)((uint32)1U << 24U);
+300     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKCNTL  = (\mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKCNTL & 0xFFF0FFFFU)
+301                          | (uint32)((uint32)1U << 16U);
+302 
+303     \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->CLK2CNTL = (\mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->CLK2CNTL & 0xFFFFF0F0U)
+304                          | (uint32)((uint32)1U << 8U)
+305                          | (uint32)((uint32)1U << 0U);
+306 
+307     \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->VCLKACON1 =  (uint32)((uint32)(1U - 1U) << 24U)
+308                            | (uint32)((uint32)0U << 20U)
+309                            | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 16U)
+310                            | (uint32)((uint32)(1U - 1U) << 8U)
+311                            | (uint32)((uint32)0U << 4U)
+312                            | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3a0d64b1ad18cdebaada564d5e443166a37da1df194eef5a2287322e22eb37c27}{SYS\_VCLK}} << 0U);
+313 
+314 \textcolor{comment}{/* USER CODE BEGIN (13) */}
+315 \textcolor{comment}{/* USER CODE END */}
+316 
+317     \textcolor{comment}{/* Now the PLLs are locked and the PLL outputs can be sped up */}
+318     \textcolor{comment}{/* The R-divider was programmed to be 0xF. Now this divider is changed to programmed value */}
+319     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->PLLCTL1 = (\mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->PLLCTL1 & 0xE0FFFFFFU) | (uint32)((uint32)(1U - 
+      1U) << 24U);
+320     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+321     \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->PLLCTL3 = (\mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->PLLCTL3 & 0xE0FFFFFFU) | (uint32)((uint32)(1U - 
+      1U) << 24U);
+322 
+323     \textcolor{comment}{/* Enable/Disable Frequency modulation */}
+324     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->PLLCTL2 |= 0x00000000U;
+325 
+326 \textcolor{comment}{/* USER CODE BEGIN (14) */}
+327 \textcolor{comment}{/* USER CODE END */}
+328 
+329 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_a57d84f612fd0d9fec4cd8ac58b5d10c3}\label{system_8h_a57d84f612fd0d9fec4cd8ac58b5d10c3}} 
+\index{system.\+h@{system.\+h}!periph\+Init@{periph\+Init}}
+\index{periph\+Init@{periph\+Init}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{periph\+Init()}{periphInit()}}
+{\footnotesize\ttfamily void periph\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Disable Peripherals before peripheral powerup
+\item Release peripherals from reset and enable clocks to all peripherals ~\newline
+~\newline
+
+\item Power-\/up all peripherals ~\newline
+
+\item Enable Peripherals 
+\end{DoxyItemize}
+
+Definition at line 214 of file system.\+c.
+
+
+
+References pcr\+R\+EG, and system\+R\+E\+G1.
+
+
+
+Referenced by system\+Init().
+
+
+\begin{DoxyCode}
+215 \{
+216 
+217 \textcolor{comment}{/* USER CODE BEGIN (9) */}
+218 \textcolor{comment}{/* USER CODE END */}
+219 
+221     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKCNTL &= 0xFFFFFEFFU;
+222 
+225     \mbox{\hyperlink{reg__pcr_8h_a3b6e651755dc3ae113426bea72cdf332}{pcrREG}}->PSPWRDWNCLR0 = 0xFFFFFFFFU;
+226     \mbox{\hyperlink{reg__pcr_8h_a3b6e651755dc3ae113426bea72cdf332}{pcrREG}}->PSPWRDWNCLR1 = 0xFFFFFFFFU;
+227     \mbox{\hyperlink{reg__pcr_8h_a3b6e651755dc3ae113426bea72cdf332}{pcrREG}}->PSPWRDWNCLR2 = 0xFFFFFFFFU;
+228     \mbox{\hyperlink{reg__pcr_8h_a3b6e651755dc3ae113426bea72cdf332}{pcrREG}}->PSPWRDWNCLR3 = 0xFFFFFFFFU;
+229 
+231     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKCNTL |= 0x00000100U;
+232 
+233 \textcolor{comment}{/* USER CODE BEGIN (10) */}
+234 \textcolor{comment}{/* USER CODE END */}
+235 
+236 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_a4490b16ad7d041537868dc9732b3dac2}\label{system_8h_a4490b16ad7d041537868dc9732b3dac2}} 
+\index{system.\+h@{system.\+h}!setup\+Flash@{setup\+Flash}}
+\index{setup\+Flash@{setup\+Flash}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{setup\+Flash()}{setupFlash()}}
+{\footnotesize\ttfamily void setup\+Flash (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Setup flash read mode, address wait states and data wait states ~\newline
+~\newline
+~\newline
+
+\item Setup flash access wait states for bank 7 ~\newline
+~\newline
+
+\item Disable write access to flash state machine registers ~\newline
+
+\item Setup flash bank power modes 
+\end{DoxyItemize}
+
+Definition at line 177 of file system.\+c.
+
+
+
+References flash\+W\+R\+EG.
+
+
+\begin{DoxyCode}
+178 \{
+179 
+180 \textcolor{comment}{/* USER CODE BEGIN (6) */}
+181 \textcolor{comment}{/* USER CODE END */}
+182 
+184     \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FRDCNTL =  0x00000000U
+185                        | (uint32)((uint32)3U << 8U)
+186                        | (uint32)((uint32)1U << 4U)
+187                        |  1U;
+188 
+190     FSM\_WR\_ENA\_HL    = 0x5U;
+191     EEPROM\_CONFIG\_HL = 0x00000002U
+192                      | (uint32)((uint32)3U << 16U) ;
+193 
+194 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+195 \textcolor{comment}{/* USER CODE END */}
+196 
+198     FSM\_WR\_ENA\_HL    = 0xAU;
+199 
+201     \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FBFALLBACK = 0x00000000U
+202                           | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}} << 14U) \textcolor{comment}{/* BANK 7 */}
+203                           | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}} << 2U)  \textcolor{comment}{/* BANK 1 */}
+204                           | (uint32)((uint32)\mbox{\hyperlink{system_8h_a3b352eed98abd9349057ec14d23ad332a093a300506cc138fbc459a4e18976dc3}{SYS\_ACTIVE}} << 0U); \textcolor{comment}{/* BANK 0 */}
+205 
+206 \textcolor{comment}{/* USER CODE BEGIN (8) */}
+207 \textcolor{comment}{/* USER CODE END */}
+208 
+209 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_a45f46deb7644048176d5e9347afb939a}\label{system_8h_a45f46deb7644048176d5e9347afb939a}} 
+\index{system.\+h@{system.\+h}!setup\+P\+LL@{setup\+P\+LL}}
+\index{setup\+P\+LL@{setup\+P\+LL}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{setup\+P\+L\+L()}{setupPLL()}}
+{\footnotesize\ttfamily void setup\+P\+LL (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Configure P\+LL control registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ {\bfseries Initialize} {\bfseries Pll1\+:} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup pll control register 1\+:
+\item Setup reset on oscillator slip
+\item Setup bypass on pll slip
+\item setup Pll output clock divider to max before Lock
+\item Setup reset on oscillator fail
+\item Setup reference clock divider
+\item Setup Pll multiplier
+\item Setup pll control register 2
+\item Setup spreading rate
+\item Setup bandwidth adjustment
+\item Setup internal Pll output divider
+\item Setup spreading amount
+\end{DoxyItemize}
+
+{\bfseries Initialize} {\bfseries Pll2\+:} ~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item Setup pll2 control register \+:
+\item setup Pll output clock divider to max before Lock
+\item Setup reference clock divider
+\item Setup internal Pll output divider
+\item Setup Pll multiplier
+\item Enable P\+L\+L(s) to start up or Lock 
+\end{DoxyItemize}
+
+Definition at line 74 of file system.\+c.
+
+
+
+References system\+R\+E\+G1.
+
+
+
+Referenced by system\+Init().
+
+
+\begin{DoxyCode}
+75 \{
+76 
+77 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+78 \textcolor{comment}{/* USER CODE END */}
+79 
+80     \textcolor{comment}{/* Disable PLL1 and PLL2 */}
+81     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSDISSET = 0x00000002U | 0x00000040U;
+82     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Hardware status bit read check" */}
+83     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSDIS & 0x42U) != 0x42U)
+84     \{
+85     \textcolor{comment}{/* Wait */}
+86     \}
+87 
+88     \textcolor{comment}{/* Clear Global Status Register */}
+89     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->GBLSTAT = 0x301U;
+90 
+93 
+102     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->PLLCTL1 =  (uint32)0x00000000U
+103                         |  (uint32)0x20000000U
+104                         |  (uint32)((uint32)0x1FU << 24U)
+105                         |  (uint32)0x00000000U
+106                         |  (uint32)((uint32)(6U - 1U)<< 16U)
+107                         |  (uint32)(0x7700U);
+108 
+115     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->PLLCTL2 =  (uint32)((uint32)255U << 22U)
+116                         |  (uint32)((uint32)7U << 12U)
+117                         |  (uint32)((uint32)(2U - 1U) << 9U)
+118                         |  (uint32)61U;
+119 
+121 
+128     \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->PLLCTL3 = (uint32)((uint32)(2U - 1U) << 29U)
+129                         | (uint32)((uint32)0x1FU << 24U)
+130                         | (uint32)((uint32)(6U - 1U)<< 16U)
+131                         | (uint32)(0x7700U);
+132 
+134     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSDIS = 0x00000000U
+135                       | 0x00000000U
+136                       | 0x00000008U
+137                       | 0x00000080U
+138                       | 0x00000000U
+139                       | 0x00000000U
+140                       | 0x00000000U;
+141 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_ac61ec208839bdc4fec42ea50268b4db3}\label{system_8h_ac61ec208839bdc4fec42ea50268b4db3}} 
+\index{system.\+h@{system.\+h}!sram\+Get\+Config\+Value@{sram\+Get\+Config\+Value}}
+\index{sram\+Get\+Config\+Value@{sram\+Get\+Config\+Value}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{sram\+Get\+Config\+Value()}{sramGetConfigValue()}}
+{\footnotesize\ttfamily void sram\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsram__config__reg}{sram\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 647 of file system.\+c.
+
+
+\begin{DoxyCode}
+648 \{
+649     \textcolor{keywordflow}{if} (type == InitialValue)
+650     \{
+651         config\_reg->CONFIG\_RAMCTRL[0U] = SRAM\_RAMCTRL\_CONFIGVALUE;
+652         config\_reg->CONFIG\_RAMTHRESHOLD[0U] = SRAM\_RAMTHRESHOLD\_CONFIGVALUE;
+653         config\_reg->CONFIG\_RAMINTCTRL[0U] = SRAM\_RAMINTCTRL\_CONFIGVALUE;
+654         config\_reg->CONFIG\_RAMTEST[0U] = SRAM\_RAMTEST\_CONFIGVALUE;
+655         config\_reg->CONFIG\_RAMADDRDECVECT[0U] = SRAM\_RAMADDRDECVECT\_CONFIGVALUE;
+656 
+657         config\_reg->CONFIG\_RAMCTRL[1U] = SRAM\_RAMCTRL\_CONFIGVALUE;
+658         config\_reg->CONFIG\_RAMTHRESHOLD[1U] = SRAM\_RAMTHRESHOLD\_CONFIGVALUE;
+659         config\_reg->CONFIG\_RAMINTCTRL[1U] = SRAM\_RAMINTCTRL\_CONFIGVALUE;
+660         config\_reg->CONFIG\_RAMTEST[1U] = SRAM\_RAMTEST\_CONFIGVALUE;
+661         config\_reg->CONFIG\_RAMADDRDECVECT[1U] = SRAM\_RAMADDRDECVECT\_CONFIGVALUE;
+662     \}
+663     \textcolor{keywordflow}{else}
+664     \{
+665     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+666         config\_reg->CONFIG\_RAMCTRL[0U] = tcram1REG->RAMCTRL;
+667         config\_reg->CONFIG\_RAMTHRESHOLD[0U] = tcram1REG->RAMTHRESHOLD;
+668         config\_reg->CONFIG\_RAMINTCTRL[0U] = tcram1REG->RAMINTCTRL;
+669         config\_reg->CONFIG\_RAMTEST[0U] = tcram1REG->RAMTEST;
+670         config\_reg->CONFIG\_RAMADDRDECVECT[0U] = tcram1REG->RAMADDRDECVECT;
+671 
+672         \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+673         config\_reg->CONFIG\_RAMCTRL[1U] = tcram2REG->RAMCTRL;
+674         config\_reg->CONFIG\_RAMTHRESHOLD[1U] = tcram2REG->RAMTHRESHOLD;
+675         config\_reg->CONFIG\_RAMINTCTRL[1U] = tcram2REG->RAMINTCTRL;
+676         config\_reg->CONFIG\_RAMTEST[1U] = tcram2REG->RAMTEST;
+677         config\_reg->CONFIG\_RAMADDRDECVECT[1U] = tcram2REG->RAMADDRDECVECT;
+678     \}
+679 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_ab3c7742b0b313a8ac595a0ae677c3ccc}\label{system_8h_ab3c7742b0b313a8ac595a0ae677c3ccc}} 
+\index{system.\+h@{system.\+h}!system\+Get\+Config\+Value@{system\+Get\+Config\+Value}}
+\index{system\+Get\+Config\+Value@{system\+Get\+Config\+Value}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{system\+Get\+Config\+Value()}{systemGetConfigValue()}}
+{\footnotesize\ttfamily void system\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsystem__config__reg}{system\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 488 of file system.\+c.
+
+
+\begin{DoxyCode}
+489 \{
+490     \textcolor{keywordflow}{if} (type == InitialValue)
+491     \{
+492         config\_reg->CONFIG\_SYSPC1 = SYS\_SYSPC1\_CONFIGVALUE;
+493         config\_reg->CONFIG\_SYSPC2 = SYS\_SYSPC2\_CONFIGVALUE;
+494         config\_reg->CONFIG\_SYSPC7 = SYS\_SYSPC7\_CONFIGVALUE;
+495         config\_reg->CONFIG\_SYSPC8 = SYS\_SYSPC8\_CONFIGVALUE;
+496         config\_reg->CONFIG\_SYSPC9 = SYS\_SYSPC9\_CONFIGVALUE;
+497         config\_reg->CONFIG\_CSDIS = SYS\_CSDIS\_CONFIGVALUE;
+498         config\_reg->CONFIG\_CDDIS = SYS\_CDDIS\_CONFIGVALUE;
+499         config\_reg->CONFIG\_GHVSRC = SYS\_GHVSRC\_CONFIGVALUE;
+500         config\_reg->CONFIG\_VCLKASRC = SYS\_VCLKASRC\_CONFIGVALUE;
+501         config\_reg->CONFIG\_RCLKSRC = SYS\_RCLKSRC\_CONFIGVALUE;
+502         config\_reg->CONFIG\_MSTGCR = SYS\_MSTGCR\_CONFIGVALUE;
+503         config\_reg->CONFIG\_MINITGCR = SYS\_MINITGCR\_CONFIGVALUE;
+504         config\_reg->CONFIG\_MSINENA = SYS\_MSINENA\_CONFIGVALUE;
+505         config\_reg->CONFIG\_PLLCTL1 = SYS\_PLLCTL1\_CONFIGVALUE\_2;
+506         config\_reg->CONFIG\_PLLCTL2 = SYS\_PLLCTL2\_CONFIGVALUE;
+507         config\_reg->CONFIG\_UERFLAG = SYS\_UERFLAG\_CONFIGVALUE;
+508         \textcolor{comment}{/*SAFETYMCUSW 139 S MR:13.7 <APPROVED> "Hardware status bit read check" */}
+509         \textcolor{keywordflow}{if}(LPO\_TRIM\_VALUE != 0xFFFFU)
+510         \{
+511             config\_reg->CONFIG\_LPOMONCTL = SYS\_LPOMONCTL\_CONFIGVALUE\_1;
+512         \}
+513         \textcolor{keywordflow}{else}
+514         \{
+515             config\_reg->CONFIG\_LPOMONCTL = SYS\_LPOMONCTL\_CONFIGVALUE\_2;
+516         \}
+517         config\_reg->CONFIG\_CLKTEST = SYS\_CLKTEST\_CONFIGVALUE;
+518         config\_reg->CONFIG\_DFTCTRLREG1 = SYS\_DFTCTRLREG1\_CONFIGVALUE;
+519         config\_reg->CONFIG\_DFTCTRLREG2 = SYS\_DFTCTRLREG2\_CONFIGVALUE;
+520         config\_reg->CONFIG\_GPREG1 = SYS\_GPREG1\_CONFIGVALUE;
+521         config\_reg->CONFIG\_RAMGCR = SYS\_RAMGCR\_CONFIGVALUE;
+522         config\_reg->CONFIG\_BMMCR1 = SYS\_BMMCR1\_CONFIGVALUE;
+523         config\_reg->CONFIG\_MMUGCR = SYS\_MMUGCR\_CONFIGVALUE;
+524         config\_reg->CONFIG\_CLKCNTL = SYS\_CLKCNTL\_CONFIGVALUE;
+525         config\_reg->CONFIG\_ECPCNTL = SYS\_ECPCNTL\_CONFIGVALUE;
+526         config\_reg->CONFIG\_DEVCR1 = SYS\_DEVCR1\_CONFIGVALUE;
+527         config\_reg->CONFIG\_SYSECR = SYS\_SYSECR\_CONFIGVALUE;
+528 
+529         config\_reg->CONFIG\_PLLCTL3 = SYS2\_PLLCTL3\_CONFIGVALUE\_2;
+530         config\_reg->CONFIG\_STCCLKDIV = SYS2\_STCCLKDIV\_CONFIGVALUE;
+531         config\_reg->CONFIG\_CLK2CNTL = SYS2\_CLK2CNTL\_CONFIGVALUE;
+532         config\_reg->CONFIG\_VCLKACON1 = SYS2\_VCLKACON1\_CONFIGVALUE;
+533         config\_reg->CONFIG\_CLKSLIP = SYS2\_CLKSLIP\_CONFIGVALUE;
+534         config\_reg->CONFIG\_EFC\_CTLEN = SYS2\_EFC\_CTLEN\_CONFIGVALUE;
+535     \}
+536     \textcolor{keywordflow}{else}
+537     \{
+538     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+539         config\_reg->CONFIG\_SYSPC1 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC1;
+540         config\_reg->CONFIG\_SYSPC2 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC2;
+541         config\_reg->CONFIG\_SYSPC7 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC7;
+542         config\_reg->CONFIG\_SYSPC8 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC8;
+543         config\_reg->CONFIG\_SYSPC9 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC9;
+544         config\_reg->CONFIG\_CSDIS = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CSDIS;
+545         config\_reg->CONFIG\_CDDIS = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CDDIS;
+546         config\_reg->CONFIG\_GHVSRC = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->GHVSRC;
+547         config\_reg->CONFIG\_VCLKASRC = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->VCLKASRC;
+548         config\_reg->CONFIG\_RCLKSRC = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->RCLKSRC;
+549         config\_reg->CONFIG\_MSTGCR = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->MSTGCR;
+550         config\_reg->CONFIG\_MINITGCR = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->MINITGCR;
+551         config\_reg->CONFIG\_MSINENA = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->MSINENA;
+552         config\_reg->CONFIG\_PLLCTL1 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->PLLCTL1;
+553         config\_reg->CONFIG\_PLLCTL2 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->PLLCTL2;
+554         config\_reg->CONFIG\_UERFLAG = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC10;
+555         config\_reg->CONFIG\_LPOMONCTL = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->LPOMONCTL;
+556         config\_reg->CONFIG\_CLKTEST = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKTEST;
+557         config\_reg->CONFIG\_DFTCTRLREG1 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->DFTCTRLREG1;
+558         config\_reg->CONFIG\_DFTCTRLREG2 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->DFTCTRLREG2;
+559         config\_reg->CONFIG\_GPREG1 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->GPREG1;
+560         config\_reg->CONFIG\_RAMGCR = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->RAMGCR;
+561         config\_reg->CONFIG\_BMMCR1 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->BMMCR1;
+562         config\_reg->CONFIG\_MMUGCR = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CPURSTCR;
+563         config\_reg->CONFIG\_CLKCNTL = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->CLKCNTL;
+564         config\_reg->CONFIG\_ECPCNTL = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->ECPCNTL;
+565         config\_reg->CONFIG\_DEVCR1 = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->DEVCR1;
+566         config\_reg->CONFIG\_SYSECR = \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSECR;
+567 
+568         \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+569         config\_reg->CONFIG\_PLLCTL3 = \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->PLLCTL3;
+570         config\_reg->CONFIG\_STCCLKDIV = \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->STCCLKDIV;
+571         config\_reg->CONFIG\_CLK2CNTL = \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->CLK2CNTL;
+572         config\_reg->CONFIG\_VCLKACON1 = \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->VCLKACON1;
+573         config\_reg->CONFIG\_CLKSLIP = \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->CLKSLIP;
+574         config\_reg->CONFIG\_EFC\_CTLEN = \mbox{\hyperlink{reg__system_8h_aa7b03254a6e13afea4c05b2fe8b2186b}{systemREG2}}->EFC\_CTLEN;
+575     \}
+576 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_ab11a117f1e08391f23d1da05930e7acf}\label{system_8h_ab11a117f1e08391f23d1da05930e7acf}} 
+\index{system.\+h@{system.\+h}!system\+Init@{system\+Init}}
+\index{system\+Init@{system\+Init}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{system\+Init()}{systemInit()}}
+{\footnotesize\ttfamily void system\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes System Driver. 
+
+This function initializes the System driver. 
+\begin{DoxyItemize}
+\item Set up flash address and data wait states based on the target C\+PU clock frequency The number of address and data wait states for the target C\+PU clock frequency are specified in the specific part\textquotesingle{}s datasheet.
+\end{DoxyItemize}
+
+Configure the L\+PO such that HF L\+PO is as close to 10\+M\+Hz as possible ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item Wait for P\+L\+Ls to start up and map clock domains to desired clock sources ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set E\+C\+LK pins functional mode ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set E\+C\+LK pins default output value ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set E\+C\+LK pins output direction ~\newline
+~\newline
+~\newline
+~\newline
+
+\item set E\+C\+LK pins open drain enable ~\newline
+~\newline
+~\newline
+
+\item set E\+C\+LK pins pullup/pulldown enable ~\newline
+~\newline
+
+\item set E\+C\+LK pins pullup/pulldown select ~\newline
+
+\item Setup E\+C\+LK 
+\end{DoxyItemize}
+
+Definition at line 334 of file system.\+c.
+
+
+
+References checkefc\+Self\+Test(), efc\+Check(), F\+A\+L\+SE, mux\+Init(), periph\+Init(), selftest\+Fail\+Notification(), and setup\+P\+L\+L().
+
+
+\begin{DoxyCode}
+335 \{
+336     uint32 efcCheckStatus;
+337 
+338 \textcolor{comment}{/* USER CODE BEGIN (15) */}
+339 \textcolor{comment}{/* USER CODE END */}
+340 
+341     \textcolor{comment}{/* Configure PLL control registers and enable PLLs.}
+342 \textcolor{comment}{     * The PLL takes (127 + 1024 * NR) oscillator cycles to acquire lock.}
+343 \textcolor{comment}{     * This initialization sequence performs all the tasks that are not}
+344 \textcolor{comment}{     * required to be done at full application speed while the PLL locks.}
+345 \textcolor{comment}{     */}
+346     \mbox{\hyperlink{system_8c_a45f46deb7644048176d5e9347afb939a}{setupPLL}}();
+347 
+348 \textcolor{comment}{/* USER CODE BEGIN (16) */}
+349 \textcolor{comment}{/* USER CODE END */}
+350 
+351     \textcolor{comment}{/* Run eFuse controller start-up checks and start eFuse controller ECC self-test.}
+352 \textcolor{comment}{     * This includes a check for the eFuse controller error outputs to be stuck-at-zero.}
+353 \textcolor{comment}{     */}
+354     efcCheckStatus = \mbox{\hyperlink{sys__selftest_8h_a646eb27315f3ce47edde97c563389f76}{efcCheck}}();
+355 
+356 \textcolor{comment}{/* USER CODE BEGIN (17) */}
+357 \textcolor{comment}{/* USER CODE END */}
+358 
+359     \textcolor{comment}{/* Enable clocks to peripherals and release peripheral reset */}
+360     \mbox{\hyperlink{system_8c_a57d84f612fd0d9fec4cd8ac58b5d10c3}{periphInit}}();
+361 
+362 \textcolor{comment}{/* USER CODE BEGIN (18) */}
+363 \textcolor{comment}{/* USER CODE END */}
+364 
+365     \textcolor{comment}{/* Configure device-level multiplexing and I/O multiplexing */}
+366     \mbox{\hyperlink{group__IOMM_ga8fac89d371c9be80b507da3c31144423}{muxInit}}();
+367 
+368 \textcolor{comment}{/* USER CODE BEGIN (19) */}
+369 \textcolor{comment}{/* USER CODE END */}
+370 
+371     \textcolor{keywordflow}{if}(efcCheckStatus == 0U)
+372     \{
+373         \textcolor{comment}{/* Wait for eFuse controller self-test to complete and check results */}
+374         \textcolor{keywordflow}{if} (\mbox{\hyperlink{sys__selftest_8h_ad44409ae54516ba10303dd5c011f4fa6}{checkefcSelfTest}}() == \mbox{\hyperlink{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}})                            \textcolor{comment}{/* eFuse
+       controller ECC logic self-test failed */}
+375         \{
+376             \mbox{\hyperlink{sys__selftest_8h_ae96e990763ae7d45bd55ea5a27299a47}{selftestFailNotification}}(EFCCHECK\_FAIL1);           \textcolor{comment}{/* device operation
+       is not reliable */}
+377         \}
+378     \}
+379     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(efcCheckStatus == 2U)
+380     \{
+381         \textcolor{comment}{/* Wait for eFuse controller self-test to complete and check results */}
+382         \textcolor{keywordflow}{if} (\mbox{\hyperlink{sys__selftest_8h_ad44409ae54516ba10303dd5c011f4fa6}{checkefcSelfTest}}() == \mbox{\hyperlink{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}})                            \textcolor{comment}{/* eFuse
+       controller ECC logic self-test failed */}
+383         \{
+384             \mbox{\hyperlink{sys__selftest_8h_ae96e990763ae7d45bd55ea5a27299a47}{selftestFailNotification}}(EFCCHECK\_FAIL1);           \textcolor{comment}{/* device operation
+       is not reliable */}
+385         \}
+386         \textcolor{keywordflow}{else}
+387         \{
+388             \mbox{\hyperlink{sys__selftest_8h_ae96e990763ae7d45bd55ea5a27299a47}{selftestFailNotification}}(EFCCHECK\_FAIL2);
+389         \}
+390     \}
+391     \textcolor{keywordflow}{else}
+392     \{
+393     \textcolor{comment}{/* Empty */}
+394     \}
+395 \textcolor{comment}{/* USER CODE BEGIN (20) */}
+396 \textcolor{comment}{/* USER CODE END */}
+397 
+402     \mbox{\hyperlink{system_8c_a4490b16ad7d041537868dc9732b3dac2}{setupFlash}}();
+403 
+404 \textcolor{comment}{/* USER CODE BEGIN (21) */}
+405 \textcolor{comment}{/* USER CODE END */}
+406 
+408     \mbox{\hyperlink{system_8c_aaa231cc5e90591363431c63f15360567}{trimLPO}}();
+409 
+410 
+411 
+412 \textcolor{comment}{/* USER CODE BEGIN (23) */}
+413 \textcolor{comment}{/* USER CODE END */}
+414 
+416     \mbox{\hyperlink{system_8c_aa26c333cac9e8481986232eb8f0d9244}{mapClocks}}();
+417 
+418 \textcolor{comment}{/* USER CODE BEGIN (24) */}
+419 \textcolor{comment}{/* USER CODE END */}
+420 
+422     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC1 = 0U;
+423 
+425     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC4 = 0U;
+426 
+428     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC2 = 1U;
+429 
+431     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC7 = 0U;
+432 
+434     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC8 = 0U;
+435 
+437     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->SYSPC9 = 1U;
+438 
+440     \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->ECPCNTL = (uint32)((uint32)0U << 24U)
+441                         | (uint32)((uint32)0U << 23U)
+442                         | (uint32)((uint32)(8U - 1U) & 0xFFFFU);
+443 
+444 \textcolor{comment}{/* USER CODE BEGIN (25) */}
+445 \textcolor{comment}{/* USER CODE END */}
+446 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_afa983f739f63d48487aec38706af5a6f}\label{system_8h_afa983f739f63d48487aec38706af5a6f}} 
+\index{system.\+h@{system.\+h}!tcmflash\+Get\+Config\+Value@{tcmflash\+Get\+Config\+Value}}
+\index{tcmflash\+Get\+Config\+Value@{tcmflash\+Get\+Config\+Value}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{tcmflash\+Get\+Config\+Value()}{tcmflashGetConfigValue()}}
+{\footnotesize\ttfamily void tcmflash\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtcmflash__config__reg}{tcmflash\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 592 of file system.\+c.
+
+
+\begin{DoxyCode}
+593 \{
+594     \textcolor{keywordflow}{if} (type == InitialValue)
+595     \{
+596         config\_reg->CONFIG\_FRDCNTL = TCMFLASH\_FRDCNTL\_CONFIGVALUE;
+597         config\_reg->CONFIG\_FEDACCTRL1 = TCMFLASH\_FEDACCTRL1\_CONFIGVALUE;
+598         config\_reg->CONFIG\_FEDACCTRL2 = TCMFLASH\_FEDACCTRL2\_CONFIGVALUE;
+599         config\_reg->CONFIG\_FEDACSDIS = TCMFLASH\_FEDACSDIS\_CONFIGVALUE;
+600         config\_reg->CONFIG\_FBPROT = TCMFLASH\_FBPROT\_CONFIGVALUE;
+601         config\_reg->CONFIG\_FBSE = TCMFLASH\_FBSE\_CONFIGVALUE;
+602         config\_reg->CONFIG\_FBAC = TCMFLASH\_FBAC\_CONFIGVALUE;
+603         config\_reg->CONFIG\_FBFALLBACK = TCMFLASH\_FBFALLBACK\_CONFIGVALUE;
+604         config\_reg->CONFIG\_FPAC1 = TCMFLASH\_FPAC1\_CONFIGVALUE;
+605         config\_reg->CONFIG\_FPAC2 = TCMFLASH\_FPAC2\_CONFIGVALUE;
+606         config\_reg->CONFIG\_FMAC = TCMFLASH\_FMAC\_CONFIGVALUE;
+607         config\_reg->CONFIG\_FLOCK = TCMFLASH\_FLOCK\_CONFIGVALUE;
+608         config\_reg->CONFIG\_FDIAGCTRL = TCMFLASH\_FDIAGCTRL\_CONFIGVALUE;
+609         config\_reg->CONFIG\_FEDACSDIS2 = TCMFLASH\_FEDACSDIS2\_CONFIGVALUE;
+610     \}
+611     \textcolor{keywordflow}{else}
+612     \{
+613     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+614         config\_reg->CONFIG\_FRDCNTL = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FRDCNTL;
+615         config\_reg->CONFIG\_FEDACCTRL1 = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FEDACCTRL1;
+616         config\_reg->CONFIG\_FEDACCTRL2 = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FEDACCTRL2;
+617         config\_reg->CONFIG\_FEDACSDIS = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FEDACSDIS;
+618         config\_reg->CONFIG\_FBPROT = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FBPROT;
+619         config\_reg->CONFIG\_FBSE = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FBSE;
+620         config\_reg->CONFIG\_FBAC = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FBAC;
+621         config\_reg->CONFIG\_FBFALLBACK = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FBFALLBACK;
+622         config\_reg->CONFIG\_FPAC1 = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FPAC1;
+623         config\_reg->CONFIG\_FPAC2 = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FPAC2;
+624         config\_reg->CONFIG\_FMAC = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FMAC;
+625         config\_reg->CONFIG\_FLOCK = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FLOCK;
+626         config\_reg->CONFIG\_FDIAGCTRL = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FDIAGCTRL;
+627         config\_reg->CONFIG\_FEDACSDIS2 = \mbox{\hyperlink{reg__flash_8h_ab65d4f98d84397753c538ff9053582a8}{flashWREG}}->FEDACSDIS2;
+628     \}
+629 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8h_aaa231cc5e90591363431c63f15360567}\label{system_8h_aaa231cc5e90591363431c63f15360567}} 
+\index{system.\+h@{system.\+h}!trim\+L\+PO@{trim\+L\+PO}}
+\index{trim\+L\+PO@{trim\+L\+PO}!system.\+h@{system.\+h}}
+\subsubsection{\texorpdfstring{trim\+L\+P\+O()}{trimLPO()}}
+{\footnotesize\ttfamily void trim\+L\+PO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+{\bfseries Initialize} Lpo\+: ~\newline
+ Load T\+R\+IM values from O\+TP if present else load user defined values 
+
+Definition at line 146 of file system.\+c.
+
+
+\begin{DoxyCode}
+147 \{
+148 
+149 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+150 \textcolor{comment}{/* USER CODE END */}
+151 
+154     \textcolor{comment}{/*SAFETYMCUSW 139 S MR:13.7 <APPROVED> "Hardware status bit read check" */}
+155     \textcolor{keywordflow}{if}(LPO\_TRIM\_VALUE != 0xFFFFU)
+156     \{
+157 
+158         \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->LPOMONCTL  = (uint32)((uint32)1U << 24U)
+159                                 | LPO\_TRIM\_VALUE;
+160     \}
+161     \textcolor{keywordflow}{else}
+162     \{
+163 
+164         \mbox{\hyperlink{reg__system_8h_a8c52b62df956810205e4da7a2fd74efa}{systemREG1}}->LPOMONCTL   =  (uint32)((uint32)1U << 24U)
+165                                  | (uint32)((uint32)16U << 8U)
+166                                  | 16U;
+167     \}
+168 
+169 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+170 \textcolor{comment}{/* USER CODE END */}
+171 
+172 \}
+\end{DoxyCode}

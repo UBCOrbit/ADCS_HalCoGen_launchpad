@@ -1,0 +1,91 @@
+\hypertarget{reg__i2c_8h}{}\section{include/reg\+\_\+i2c.h File Reference}
+\label{reg__i2c_8h}\index{include/reg\+\_\+i2c.\+h@{include/reg\+\_\+i2c.\+h}}
+
+
+I2C Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structi2cBase}{i2c\+Base}}
+\begin{DoxyCompactList}\small\item\em I2C Base Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2c\+R\+E\+G1}}~((\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D400\+U)
+\begin{DoxyCompactList}\small\item\em I2C Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__i2c_8h_a677088ffd21c7bedd1c5d7c988388ae8}{i2c\+P\+O\+R\+T1}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D44\+C\+U)
+\begin{DoxyCompactList}\small\item\em I2C G\+IO Port Register Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structi2cBase}{i2c\+Base}} \mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I2C Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the I2C driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__i2c_8h_a677088ffd21c7bedd1c5d7c988388ae8}\label{reg__i2c_8h_a677088ffd21c7bedd1c5d7c988388ae8}} 
+\index{reg\+\_\+i2c.\+h@{reg\+\_\+i2c.\+h}!i2c\+P\+O\+R\+T1@{i2c\+P\+O\+R\+T1}}
+\index{i2c\+P\+O\+R\+T1@{i2c\+P\+O\+R\+T1}!reg\+\_\+i2c.\+h@{reg\+\_\+i2c.\+h}}
+\subsubsection{\texorpdfstring{i2c\+P\+O\+R\+T1}{i2cPORT1}}
+{\footnotesize\ttfamily \#define i2c\+P\+O\+R\+T1~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D44\+C\+U)}
+
+
+
+I2C G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of I2C (use the G\+IO drivers to access the port pins). 
+
+Definition at line 141 of file reg\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}\label{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}} 
+\index{reg\+\_\+i2c.\+h@{reg\+\_\+i2c.\+h}!i2c\+R\+E\+G1@{i2c\+R\+E\+G1}}
+\index{i2c\+R\+E\+G1@{i2c\+R\+E\+G1}!reg\+\_\+i2c.\+h@{reg\+\_\+i2c.\+h}}
+\subsubsection{\texorpdfstring{i2c\+R\+E\+G1}{i2cREG1}}
+{\footnotesize\ttfamily \#define i2c\+R\+E\+G1~((\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+D400\+U)}
+
+
+
+I2C Register Frame Pointer. 
+
+This pointer is used by the I2C driver to access the I2C module registers. 
+
+Definition at line 129 of file reg\+\_\+i2c.\+h.
+
+
+
+Referenced by i2c\+Init().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}\label{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}} 
+\index{reg\+\_\+i2c.\+h@{reg\+\_\+i2c.\+h}!i2c\+B\+A\+S\+E\+\_\+t@{i2c\+B\+A\+S\+E\+\_\+t}}
+\index{i2c\+B\+A\+S\+E\+\_\+t@{i2c\+B\+A\+S\+E\+\_\+t}!reg\+\_\+i2c.\+h@{reg\+\_\+i2c.\+h}}
+\subsubsection{\texorpdfstring{i2c\+B\+A\+S\+E\+\_\+t}{i2cBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+I2C Register Frame Type Definition. 
+
+This type is used to access the I2C Registers. 

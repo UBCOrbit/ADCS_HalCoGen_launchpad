@@ -1,0 +1,86 @@
+\hypertarget{reg__dcc_8h}{}\section{include/reg\+\_\+dcc.h File Reference}
+\label{reg__dcc_8h}\index{include/reg\+\_\+dcc.\+h@{include/reg\+\_\+dcc.\+h}}
+
+
+D\+CC Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdccBase}{dcc\+Base}}
+\begin{DoxyCompactList}\small\item\em D\+CC Base Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__dcc_8h_a282bf67b9f4229987fc21e047a6a1693}{dcc\+R\+E\+G1}}~((\mbox{\hyperlink{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}{dcc\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+E\+C00\+U)
+\begin{DoxyCompactList}\small\item\em D\+C\+C1 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__dcc_8h_a08ec32eb9d8823b4813a9a7ea35f2050}{dcc\+R\+E\+G2}}~((\mbox{\hyperlink{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}{dcc\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F400\+U)
+\begin{DoxyCompactList}\small\item\em D\+C\+C2 Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structdccBase}{dcc\+Base}} \mbox{\hyperlink{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}{dcc\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em D\+CC Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+CC Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the D\+CC driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__dcc_8h_a282bf67b9f4229987fc21e047a6a1693}\label{reg__dcc_8h_a282bf67b9f4229987fc21e047a6a1693}} 
+\index{reg\+\_\+dcc.\+h@{reg\+\_\+dcc.\+h}!dcc\+R\+E\+G1@{dcc\+R\+E\+G1}}
+\index{dcc\+R\+E\+G1@{dcc\+R\+E\+G1}!reg\+\_\+dcc.\+h@{reg\+\_\+dcc.\+h}}
+\subsubsection{\texorpdfstring{dcc\+R\+E\+G1}{dccREG1}}
+{\footnotesize\ttfamily \#define dcc\+R\+E\+G1~((\mbox{\hyperlink{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}{dcc\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+E\+C00\+U)}
+
+
+
+D\+C\+C1 Register Frame Pointer. 
+
+This pointer is used by the D\+CC driver to access the dcc2 module registers. 
+
+Definition at line 89 of file reg\+\_\+dcc.\+h.
+
+\mbox{\Hypertarget{reg__dcc_8h_a08ec32eb9d8823b4813a9a7ea35f2050}\label{reg__dcc_8h_a08ec32eb9d8823b4813a9a7ea35f2050}} 
+\index{reg\+\_\+dcc.\+h@{reg\+\_\+dcc.\+h}!dcc\+R\+E\+G2@{dcc\+R\+E\+G2}}
+\index{dcc\+R\+E\+G2@{dcc\+R\+E\+G2}!reg\+\_\+dcc.\+h@{reg\+\_\+dcc.\+h}}
+\subsubsection{\texorpdfstring{dcc\+R\+E\+G2}{dccREG2}}
+{\footnotesize\ttfamily \#define dcc\+R\+E\+G2~((\mbox{\hyperlink{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}{dcc\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F400\+U)}
+
+
+
+D\+C\+C2 Register Frame Pointer. 
+
+This pointer is used by the D\+CC driver to access the dcc2 module registers. 
+
+Definition at line 97 of file reg\+\_\+dcc.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}\label{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}} 
+\index{reg\+\_\+dcc.\+h@{reg\+\_\+dcc.\+h}!dcc\+B\+A\+S\+E\+\_\+t@{dcc\+B\+A\+S\+E\+\_\+t}}
+\index{dcc\+B\+A\+S\+E\+\_\+t@{dcc\+B\+A\+S\+E\+\_\+t}!reg\+\_\+dcc.\+h@{reg\+\_\+dcc.\+h}}
+\subsubsection{\texorpdfstring{dcc\+B\+A\+S\+E\+\_\+t}{dccBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__dcc_8h_a205f6a2ff77f73c35e0033f9d7a4567b}{dcc\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+D\+CC Register Frame Type Definition. 
+
+This type is used to access the D\+CC Registers. 

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['lastconv',['LASTCONV',['../structadcBase.html#a3aec3d5bb163ce998aee14b5fc8f2205',1,'adcBase']]],
+  ['lbpdir',['LBPDIR',['../structhetBase.html#a68ff7d6f751ece1165a9ba2a2f4b65d5',1,'hetBase']]],
+  ['lbpsel',['LBPSEL',['../structhetBase.html#a9f70379175b2e4af2465d3c1ea11334e',1,'hetBase']]],
+  ['lfsaoffset',['LFSAOFFSET',['../structdmaBase.html#ae880659547959979c0c0bff95b5e5ff3',1,'dmaBase']]],
+  ['lfsboffset',['LFSBOFFSET',['../structdmaBase.html#a5da5b208dfb4fb99314c22f6abfc85fa',1,'dmaBase']]],
+  ['lfsflag',['LFSFLAG',['../structdmaBase.html#a3d00d6bcccc3b7e7d96107d85892b18c',1,'dmaBase']]],
+  ['lfsintenar',['LFSINTENAR',['../structdmaBase.html#adee3b2a9653f23b78dc6f9788c410beb',1,'dmaBase']]],
+  ['lfsintenas',['LFSINTENAS',['../structdmaBase.html#ab28a7d5016deac837dba7554fd0df31a',1,'dmaBase']]],
+  ['lfsmap',['LFSMAP',['../structdmaBase.html#a55cfc088d6dcb609f000cd33097e7f5c',1,'dmaBase']]],
+  ['logicpdpwrctrl0',['LOGICPDPWRCTRL0',['../structpmmBase.html#a8010328934474fb622b3c0f12caf4f69',1,'pmmBase']]],
+  ['logicpdpwrstat',['LOGICPDPWRSTAT',['../structpmmBase.html#afebfb1038a676cca54d8545cd0b93041',1,'pmmBase']]],
+  ['lpddcstat1',['LPDDCSTAT1',['../structpmmBase.html#a4e5041e019a31b82ba4c61abbb6a166f',1,'pmmBase']]],
+  ['lpddcstat2',['LPDDCSTAT2',['../structpmmBase.html#afe50e574ee38ad8af75f140d32fb33b4',1,'pmmBase']]],
+  ['ltgpend',['LTGPEND',['../structmibspiBase.html#ae3903b6246922258a18e0415487a762e',1,'mibspiBase']]],
+  ['lvl',['LVL',['../structmibspiBase.html#a6aaec8fbcb76945dde833ca6482fadc2',1,'mibspiBase::LVL()'],['../structspiBase.html#a0ab9168975f9cdc29c5a2b9593f03c92',1,'spiBase::LVL()']]],
+  ['lvlclr',['LVLCLR',['../structgioBase.html#afe5f6f4391825df2c539c9acfe9bbfd8',1,'gioBase']]],
+  ['lvlset',['LVLSET',['../structgioBase.html#a2de2bac0e893f429a1759f353a94ea31',1,'gioBase']]]
+];

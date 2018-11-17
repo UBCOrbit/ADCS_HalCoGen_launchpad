@@ -1,0 +1,1937 @@
+\hypertarget{etpwm_8h}{}\section{include/etpwm.h File Reference}
+\label{etpwm_8h}\index{include/etpwm.\+h@{include/etpwm.\+h}}
+
+
+E\+T\+P\+WM Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+etpwm.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structetpwmActionQualConfig__t}{etpwm\+Action\+Qual\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+T\+P\+W\+Mx Action Qualifier configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structetpwmDeadBandConfig__t}{etpwm\+Dead\+Band\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+T\+P\+W\+Mx Deadband configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structetpwmChoppingConfig__t}{etpwm\+Chopping\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+T\+P\+W\+Mx Chopper configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structetpwmTripActionConfig__t}{etpwm\+Trip\+Action\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+T\+P\+W\+Mx Trip action configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structetpwmDigitalCompareConfig__t}{etpwm\+Digital\+Compare\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+T\+P\+W\+Mx Digital Compare configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab089cd243d79f0d300af9038674aece3}\label{etpwm_8h_ab089cd243d79f0d300af9038674aece3}} 
+\#define {\bfseries C\+O\+U\+N\+T\+\_\+\+UP}~(1\+U $<$$<$ 13\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a86c833c1f377d276a180ba8f43385b69}\label{etpwm_8h_a86c833c1f377d276a180ba8f43385b69}} 
+\#define {\bfseries C\+O\+U\+N\+T\+\_\+\+D\+O\+WN}~0U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a3ac49b47f2f03b550816dc7769825344}\label{etpwm_8h_a3ac49b47f2f03b550816dc7769825344}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 7\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 10\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_abfb1810a7b1993b5383578268efc694b}\label{etpwm_8h_abfb1810a7b1993b5383578268efc694b}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+T\+B\+P\+H\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a386d908acb24151b619e585d19d16ae6}\label{etpwm_8h_a386d908acb24151b619e585d19d16ae6}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+T\+B\+P\+R\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a212658431b725d9a25c8190558e1e3cb}\label{etpwm_8h_a212658431b725d9a25c8190558e1e3cb}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a90a72cfd46b0abffe91b04eb1bd7116f}\label{etpwm_8h_a90a72cfd46b0abffe91b04eb1bd7116f}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+C\+M\+P\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4c25dc2ce0b1b5f4f166da443eb6c119}\label{etpwm_8h_a4c25dc2ce0b1b5f4f166da443eb6c119}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+C\+M\+P\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_abd149b5840b1d43bcafb062a42429102}\label{etpwm_8h_abd149b5840b1d43bcafb062a42429102}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+A\+Q\+C\+T\+L\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 4\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a52e118124d4cfa08526cbecaa3336bb9}\label{etpwm_8h_a52e118124d4cfa08526cbecaa3336bb9}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+A\+Q\+C\+T\+L\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 8\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a3919d3cf35e7ee8ba6a29c83f6064f6c}\label{etpwm_8h_a3919d3cf35e7ee8ba6a29c83f6064f6c}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 5\+U) $\vert$ (uint16)((uint16)0u $<$$<$ 4\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 3\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 2\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 0\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ad8989e2c1de03647af1981b49cdb821d}\label{etpwm_8h_ad8989e2c1de03647af1981b49cdb821d}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+B\+R\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8a0dabeb0972e98e30ee0163e695dc1c}\label{etpwm_8h_a8a0dabeb0972e98e30ee0163e695dc1c}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+B\+F\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a872b311dcf21e1ea1d5d1d89d683f0a6}\label{etpwm_8h_a872b311dcf21e1ea1d5d1d89d683f0a6}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+T\+Z\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a21378db0f145cb78f0f68a382ec0fb50}\label{etpwm_8h_a21378db0f145cb78f0f68a382ec0fb50}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+T\+Z\+D\+C\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_acd27f86400be797795715e423ffc5ea5}\label{etpwm_8h_acd27f86400be797795715e423ffc5ea5}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+T\+Z\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a05aa63d6ab5dd97f252b762f4f849ee9}\label{etpwm_8h_a05aa63d6ab5dd97f252b762f4f849ee9}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+T\+Z\+E\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U  $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U$\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a5330679772c3ec031411b7426ed1e157}\label{etpwm_8h_a5330679772c3ec031411b7426ed1e157}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+E\+T\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)(((uint16)N\+O\+\_\+\+E\+V\+E\+NT == 0\+U)? 0x0000\+U \+: 0x0008\+U) $\vert$ (uint16)\+N\+O\+\_\+\+E\+V\+E\+N\+T $\vert$ (uint16)0x0000\+U $\vert$ (uint16)0x0000\+U $\vert$ (uint16)((uint16)\+D\+C\+A\+E\+V\+T1 $<$$<$ 8\+U) $\vert$ (uint16)((uint16)\+D\+C\+B\+E\+V\+T1 $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_aba38151e812e54d614ece996de0cf378}\label{etpwm_8h_aba38151e812e54d614ece996de0cf378}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+E\+T\+P\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)1\+U $\vert$ (uint16)((uint16)1\+U $<$$<$ 8\+U)  $\vert$ (uint16)((uint16)1\+U $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a0cc0c2b350d292478ace16aa753d95d4}\label{etpwm_8h_a0cc0c2b350d292478ace16aa753d95d4}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 0\+U) $\vert$ (uint16)((uint16)1\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)3\+U $<$$<$ 8\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 5\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac174e249dd94c46ef200249d60a4ea15}\label{etpwm_8h_ac174e249dd94c46ef200249d60a4ea15}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+C\+T\+R\+I\+P\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a1b5350d1df05afa12a056cd019364bf5}\label{etpwm_8h_a1b5350d1df05afa12a056cd019364bf5}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+C\+A\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab55dfdef39495a0aa088b95a2821c416}\label{etpwm_8h_ab55dfdef39495a0aa088b95a2821c416}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+C\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa568b245b892d64e4a1956a48dc4954e}\label{etpwm_8h_aa568b245b892d64e4a1956a48dc4954e}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+C\+F\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aefa901e83c9dcec78c094ca0060b78a3}\label{etpwm_8h_aefa901e83c9dcec78c094ca0060b78a3}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+C\+C\+A\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab1e8b49a73bcdc11ec2f0e786a9752de}\label{etpwm_8h_ab1e8b49a73bcdc11ec2f0e786a9752de}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac56ad2ac44a8952412e71bd5203ad426}\label{etpwm_8h_ac56ad2ac44a8952412e71bd5203ad426}} 
+\#define {\bfseries E\+T\+P\+W\+M1\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+C\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab7275f5897077af20d1716fb7c5797c4}\label{etpwm_8h_ab7275f5897077af20d1716fb7c5797c4}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 7\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 10\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_afaf645e43e0590cd623f112b66cff10a}\label{etpwm_8h_afaf645e43e0590cd623f112b66cff10a}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+T\+B\+P\+H\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aafa7b1539c0b84215fecf6d9aee0daf3}\label{etpwm_8h_aafa7b1539c0b84215fecf6d9aee0daf3}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+T\+B\+P\+R\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a5304769b36d92e32078d4f0ba358033d}\label{etpwm_8h_a5304769b36d92e32078d4f0ba358033d}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab2ecbf3a0c6567f7a658d3c60bb1d330}\label{etpwm_8h_ab2ecbf3a0c6567f7a658d3c60bb1d330}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+C\+M\+P\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a0f6cafb4144582e4d9717ef84c6e8fe8}\label{etpwm_8h_a0f6cafb4144582e4d9717ef84c6e8fe8}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+C\+M\+P\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a1864e8a45f295d6722f2caa978963f98}\label{etpwm_8h_a1864e8a45f295d6722f2caa978963f98}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+A\+Q\+C\+T\+L\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 4\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a1a87143f6335da829d9e322a2c8a1191}\label{etpwm_8h_a1a87143f6335da829d9e322a2c8a1191}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+A\+Q\+C\+T\+L\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 8\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_abdbe85343192e1b5704f77820168e025}\label{etpwm_8h_abdbe85343192e1b5704f77820168e025}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 5\+U) $\vert$ (uint16)((uint16)0u $<$$<$ 4\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 3\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 2\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 0\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a63faae58e38632dbfd6f3d1af18c1c61}\label{etpwm_8h_a63faae58e38632dbfd6f3d1af18c1c61}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+B\+R\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_af884fc13e4d4bdc9df3dc0fb1828cef2}\label{etpwm_8h_af884fc13e4d4bdc9df3dc0fb1828cef2}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+B\+F\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_afbfec4ac01a6af5630e407e4f9cf5629}\label{etpwm_8h_afbfec4ac01a6af5630e407e4f9cf5629}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+T\+Z\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8e0109aa1dbcf79fd89a87665fe50697}\label{etpwm_8h_a8e0109aa1dbcf79fd89a87665fe50697}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+T\+Z\+D\+C\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7573ffc839754fc99ae40480ffc9af1f}\label{etpwm_8h_a7573ffc839754fc99ae40480ffc9af1f}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+T\+Z\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a48f1d7827860503f9c0fc793683e01bb}\label{etpwm_8h_a48f1d7827860503f9c0fc793683e01bb}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+T\+Z\+E\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U  $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U$\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a2bb1a94af0d4f13efbad9cff80c77c29}\label{etpwm_8h_a2bb1a94af0d4f13efbad9cff80c77c29}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+E\+T\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)(((uint16)N\+O\+\_\+\+E\+V\+E\+NT == 0\+U)? 0x0000\+U \+: 0x0008\+U) $\vert$ (uint16)\+N\+O\+\_\+\+E\+V\+E\+N\+T $\vert$ (uint16)0x0000\+U $\vert$ (uint16)0x0000\+U $\vert$ (uint16)((uint16)\+D\+C\+A\+E\+V\+T1 $<$$<$ 8\+U) $\vert$ (uint16)((uint16)\+D\+C\+B\+E\+V\+T1 $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae8a6b658ed7491384c13c9255d19d6a5}\label{etpwm_8h_ae8a6b658ed7491384c13c9255d19d6a5}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+E\+T\+P\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)1\+U $\vert$ (uint16)((uint16)1\+U $<$$<$ 8\+U)  $\vert$ (uint16)((uint16)1\+U $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_afba943121a55a925b4ac529ade2de1c6}\label{etpwm_8h_afba943121a55a925b4ac529ade2de1c6}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 0\+U) $\vert$ (uint16)((uint16)1\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)3\+U $<$$<$ 8\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 5\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ad6eb11b440a353b458f0200cd7fb1c0d}\label{etpwm_8h_ad6eb11b440a353b458f0200cd7fb1c0d}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+C\+T\+R\+I\+P\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aad16eacb6384055fde0e21d24afc3d2f}\label{etpwm_8h_aad16eacb6384055fde0e21d24afc3d2f}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+C\+A\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_afbd91af79e8b3595f599b5c043e5679f}\label{etpwm_8h_afbd91af79e8b3595f599b5c043e5679f}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+C\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac1459bb41e23167be043509c7723d396}\label{etpwm_8h_ac1459bb41e23167be043509c7723d396}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+C\+F\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4c03309806659fc10336077845b5f7f1}\label{etpwm_8h_a4c03309806659fc10336077845b5f7f1}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+C\+C\+A\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a0a1cd61f1650b18749db61e4c1b38f2d}\label{etpwm_8h_a0a1cd61f1650b18749db61e4c1b38f2d}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab9e7cddf23573b1424f7d5d948754337}\label{etpwm_8h_ab9e7cddf23573b1424f7d5d948754337}} 
+\#define {\bfseries E\+T\+P\+W\+M2\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+C\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a659e3efd7161a7c9c0241ac2f69cbbff}\label{etpwm_8h_a659e3efd7161a7c9c0241ac2f69cbbff}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 7\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 10\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a42dd14521174a2c4ee6656795e61d871}\label{etpwm_8h_a42dd14521174a2c4ee6656795e61d871}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+T\+B\+P\+H\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a01b230b9e367f869802e788fae478f5b}\label{etpwm_8h_a01b230b9e367f869802e788fae478f5b}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+T\+B\+P\+R\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a3c031e65b2c1e4c9f944830999d73138}\label{etpwm_8h_a3c031e65b2c1e4c9f944830999d73138}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae302a5e37813e3dbcf718c5bb9d9626f}\label{etpwm_8h_ae302a5e37813e3dbcf718c5bb9d9626f}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+C\+M\+P\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a9e1fdf1ece9599ae67fe463531b87d7f}\label{etpwm_8h_a9e1fdf1ece9599ae67fe463531b87d7f}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+C\+M\+P\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a03a1630929854aaf8aca146958b3b55d}\label{etpwm_8h_a03a1630929854aaf8aca146958b3b55d}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+A\+Q\+C\+T\+L\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 4\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a559af4779e129728ed6271c0b0f566c8}\label{etpwm_8h_a559af4779e129728ed6271c0b0f566c8}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+A\+Q\+C\+T\+L\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 8\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7fe1709afbf7468107436307b5d98039}\label{etpwm_8h_a7fe1709afbf7468107436307b5d98039}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 5\+U) $\vert$ (uint16)((uint16)0u $<$$<$ 4\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 3\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 2\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 0\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a54ef3e3f4d437f6a2f472e114083f941}\label{etpwm_8h_a54ef3e3f4d437f6a2f472e114083f941}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+B\+R\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae39291a6fcc644c39040f53f05d2e323}\label{etpwm_8h_ae39291a6fcc644c39040f53f05d2e323}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+B\+F\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8e4a4ee40f47271cb30b8ff051032a7d}\label{etpwm_8h_a8e4a4ee40f47271cb30b8ff051032a7d}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+T\+Z\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae16de84707f32bc7e5d8030ffcd6a49f}\label{etpwm_8h_ae16de84707f32bc7e5d8030ffcd6a49f}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+T\+Z\+D\+C\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a019d8ccc208e0c05d4e3a5e713532917}\label{etpwm_8h_a019d8ccc208e0c05d4e3a5e713532917}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+T\+Z\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a9d7e9d0c22222e62a39f11ec0c471e3c}\label{etpwm_8h_a9d7e9d0c22222e62a39f11ec0c471e3c}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+T\+Z\+E\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U  $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U$\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4eaaf5c6f217b516e821dcf416082fef}\label{etpwm_8h_a4eaaf5c6f217b516e821dcf416082fef}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+E\+T\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)(((uint16)N\+O\+\_\+\+E\+V\+E\+NT == 0\+U)? 0x0000\+U \+: 0x0008\+U) $\vert$ (uint16)\+N\+O\+\_\+\+E\+V\+E\+N\+T $\vert$ (uint16)0x0000\+U $\vert$ (uint16)0x0000\+U $\vert$ (uint16)((uint16)\+D\+C\+A\+E\+V\+T1 $<$$<$ 8\+U) $\vert$ (uint16)((uint16)\+D\+C\+B\+E\+V\+T1 $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae1c2c423a5e625a300f6bdf3d081af84}\label{etpwm_8h_ae1c2c423a5e625a300f6bdf3d081af84}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+E\+T\+P\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)1\+U $\vert$ (uint16)((uint16)1\+U $<$$<$ 8\+U)  $\vert$ (uint16)((uint16)1\+U $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a882983ab92d2a88a3916cdb4da24c231}\label{etpwm_8h_a882983ab92d2a88a3916cdb4da24c231}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 0\+U) $\vert$ (uint16)((uint16)1\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)3\+U $<$$<$ 8\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 5\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a5a6fea7f157e1dafbef1c11f71819562}\label{etpwm_8h_a5a6fea7f157e1dafbef1c11f71819562}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+C\+T\+R\+I\+P\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a9597fe3c531fc0ba2cbb0707db091b65}\label{etpwm_8h_a9597fe3c531fc0ba2cbb0707db091b65}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+C\+A\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ad91d5b11459269b8ee9c3493d7d83487}\label{etpwm_8h_ad91d5b11459269b8ee9c3493d7d83487}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+C\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a0d13cd168335b15879bcdcaf4badbe3d}\label{etpwm_8h_a0d13cd168335b15879bcdcaf4badbe3d}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+C\+F\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac03ad49bf3582a20889aa2e5e78c5efc}\label{etpwm_8h_ac03ad49bf3582a20889aa2e5e78c5efc}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+C\+C\+A\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_acf50246b6a5ae16cccf191a61a320466}\label{etpwm_8h_acf50246b6a5ae16cccf191a61a320466}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a381a171eb2586565dcb8bca3197d594e}\label{etpwm_8h_a381a171eb2586565dcb8bca3197d594e}} 
+\#define {\bfseries E\+T\+P\+W\+M3\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+C\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_af17331cafd76ca2fc564da25a1c0851d}\label{etpwm_8h_af17331cafd76ca2fc564da25a1c0851d}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 7\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 10\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_aedce5d2c426b186f55c00ec1ca2fb257}\label{etpwm_8h_aedce5d2c426b186f55c00ec1ca2fb257}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+T\+B\+P\+H\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac8461e674fc3f9e233ee19667edadd31}\label{etpwm_8h_ac8461e674fc3f9e233ee19667edadd31}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+T\+B\+P\+R\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab7278d28ea7c2f0ddb2eb4f8deedcf38}\label{etpwm_8h_ab7278d28ea7c2f0ddb2eb4f8deedcf38}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ad25cb7cbe84f2b5d9d879138c2b8a7d7}\label{etpwm_8h_ad25cb7cbe84f2b5d9d879138c2b8a7d7}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+C\+M\+P\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a21b889992074ac9eef95145d9abf2f31}\label{etpwm_8h_a21b889992074ac9eef95145d9abf2f31}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+C\+M\+P\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa3ad754274addaadcd56abc5b3b20f3a}\label{etpwm_8h_aa3ad754274addaadcd56abc5b3b20f3a}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+A\+Q\+C\+T\+L\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 4\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ad66d6591ce5c786fad970c62cd40651a}\label{etpwm_8h_ad66d6591ce5c786fad970c62cd40651a}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+A\+Q\+C\+T\+L\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 8\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a3d6a2ed9230a46d95cd422a6766408da}\label{etpwm_8h_a3d6a2ed9230a46d95cd422a6766408da}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 5\+U) $\vert$ (uint16)((uint16)0u $<$$<$ 4\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 3\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 2\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 0\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a87d8b00a0e98b63f34238db0a7b02bf6}\label{etpwm_8h_a87d8b00a0e98b63f34238db0a7b02bf6}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+B\+R\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a764cd98f2159da12b1e541464756b061}\label{etpwm_8h_a764cd98f2159da12b1e541464756b061}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+B\+F\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a49d56184c509de21d2be3e7cfd06b8b1}\label{etpwm_8h_a49d56184c509de21d2be3e7cfd06b8b1}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+T\+Z\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a9887aaea7429c0077e6b2b597469d0f1}\label{etpwm_8h_a9887aaea7429c0077e6b2b597469d0f1}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+T\+Z\+D\+C\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_adb8c01da6ab6d26ffade68d9044bec68}\label{etpwm_8h_adb8c01da6ab6d26ffade68d9044bec68}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+T\+Z\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a945c9145965670609b7a618bcd8aeaea}\label{etpwm_8h_a945c9145965670609b7a618bcd8aeaea}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+T\+Z\+E\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U  $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U$\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae062ee737b34d6f8c2dd0a409bf93a6a}\label{etpwm_8h_ae062ee737b34d6f8c2dd0a409bf93a6a}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+E\+T\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)(((uint16)N\+O\+\_\+\+E\+V\+E\+NT == 0\+U)? 0x0000\+U \+: 0x0008\+U) $\vert$ (uint16)\+N\+O\+\_\+\+E\+V\+E\+N\+T $\vert$ (uint16)0x0000\+U $\vert$ (uint16)0x0000\+U $\vert$ (uint16)((uint16)\+D\+C\+A\+E\+V\+T1 $<$$<$ 8\+U) $\vert$ (uint16)((uint16)\+D\+C\+B\+E\+V\+T1 $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac745563861a5b2ae75a9b959cdf671c3}\label{etpwm_8h_ac745563861a5b2ae75a9b959cdf671c3}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+E\+T\+P\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)1\+U $\vert$ (uint16)((uint16)1\+U $<$$<$ 8\+U)  $\vert$ (uint16)((uint16)1\+U $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae115c634801eb1180dc21decc7a2a677}\label{etpwm_8h_ae115c634801eb1180dc21decc7a2a677}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 0\+U) $\vert$ (uint16)((uint16)1\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)3\+U $<$$<$ 8\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 5\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8c580a1f1ee6a97e37129251d23b494f}\label{etpwm_8h_a8c580a1f1ee6a97e37129251d23b494f}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+C\+T\+R\+I\+P\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae8974998087f87a600ce2923c98c16f9}\label{etpwm_8h_ae8974998087f87a600ce2923c98c16f9}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+C\+A\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8036ba915c24d5f84c7f31a740620b21}\label{etpwm_8h_a8036ba915c24d5f84c7f31a740620b21}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+C\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7c18d93e70f8faf7553d4c548f742ff6}\label{etpwm_8h_a7c18d93e70f8faf7553d4c548f742ff6}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+C\+F\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7ae2b88244bebea5e8087cffc0cbc864}\label{etpwm_8h_a7ae2b88244bebea5e8087cffc0cbc864}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+C\+C\+A\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a11319a000df0d47f5819f025a261e50d}\label{etpwm_8h_a11319a000df0d47f5819f025a261e50d}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_af1afc22d86fadfb888f7b32debf0a0f8}\label{etpwm_8h_af1afc22d86fadfb888f7b32debf0a0f8}} 
+\#define {\bfseries E\+T\+P\+W\+M4\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+C\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a93161bed064a64538537b5ec59aa4d32}\label{etpwm_8h_a93161bed064a64538537b5ec59aa4d32}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 7\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 10\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab36af8569a7c98800dfcd6aaf491bd74}\label{etpwm_8h_ab36af8569a7c98800dfcd6aaf491bd74}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+T\+B\+P\+H\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_abb42b766c6f4a9fbfbabeef3b8e5efea}\label{etpwm_8h_abb42b766c6f4a9fbfbabeef3b8e5efea}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+T\+B\+P\+R\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_adaa6b58e6f015ba39b94bc116bf77454}\label{etpwm_8h_adaa6b58e6f015ba39b94bc116bf77454}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4005b1500505e1e8668d1b9f6592c026}\label{etpwm_8h_a4005b1500505e1e8668d1b9f6592c026}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+C\+M\+P\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac42eda2654cecdfe39ce0c30cd211782}\label{etpwm_8h_ac42eda2654cecdfe39ce0c30cd211782}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+C\+M\+P\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7b8913086d29e0367730a32a1543ebd4}\label{etpwm_8h_a7b8913086d29e0367730a32a1543ebd4}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+A\+Q\+C\+T\+L\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 4\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_aacb1810bb7e24c218284e26f4aa17078}\label{etpwm_8h_aacb1810bb7e24c218284e26f4aa17078}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+A\+Q\+C\+T\+L\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 8\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7ebc90912c4844a8e9f658b40c87246d}\label{etpwm_8h_a7ebc90912c4844a8e9f658b40c87246d}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 5\+U) $\vert$ (uint16)((uint16)0u $<$$<$ 4\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 3\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 2\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 0\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa7681c216ed9bf4d8f88ea5d1a47103d}\label{etpwm_8h_aa7681c216ed9bf4d8f88ea5d1a47103d}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+B\+R\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a9c9e3543248bc99991e48d83ae90aeb2}\label{etpwm_8h_a9c9e3543248bc99991e48d83ae90aeb2}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+B\+F\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a5c5a517db9c6fe1d59a2314d5f448b07}\label{etpwm_8h_a5c5a517db9c6fe1d59a2314d5f448b07}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+T\+Z\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a6e8830302761b485a54fc9691cb440d3}\label{etpwm_8h_a6e8830302761b485a54fc9691cb440d3}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+T\+Z\+D\+C\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a41901ad75bb6e3fb4f56fdf745043802}\label{etpwm_8h_a41901ad75bb6e3fb4f56fdf745043802}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+T\+Z\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a17fad602f5a21045b6ec3e977dd54ad4}\label{etpwm_8h_a17fad602f5a21045b6ec3e977dd54ad4}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+T\+Z\+E\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U  $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U$\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_ad059ad3d7af810a92ad8daaedb07c33a}\label{etpwm_8h_ad059ad3d7af810a92ad8daaedb07c33a}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+E\+T\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)(((uint16)N\+O\+\_\+\+E\+V\+E\+NT == 0\+U)? 0x0000\+U \+: 0x0008\+U) $\vert$ (uint16)\+N\+O\+\_\+\+E\+V\+E\+N\+T $\vert$ (uint16)0x0000\+U $\vert$ (uint16)0x0000\+U $\vert$ (uint16)((uint16)\+D\+C\+A\+E\+V\+T1 $<$$<$ 8\+U) $\vert$ (uint16)((uint16)\+D\+C\+B\+E\+V\+T1 $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a19790902b62336ad85e24ac26e3a7634}\label{etpwm_8h_a19790902b62336ad85e24ac26e3a7634}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+E\+T\+P\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)1\+U $\vert$ (uint16)((uint16)1\+U $<$$<$ 8\+U)  $\vert$ (uint16)((uint16)1\+U $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a63447e82c2b6edbd0dcdcb93ec5a63c2}\label{etpwm_8h_a63447e82c2b6edbd0dcdcb93ec5a63c2}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 0\+U) $\vert$ (uint16)((uint16)1\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)3\+U $<$$<$ 8\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 5\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a68b97dbd0f7d1ccafd1f51d9f9e95248}\label{etpwm_8h_a68b97dbd0f7d1ccafd1f51d9f9e95248}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+C\+T\+R\+I\+P\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7af156155040fe79d8126bff5e16ef3f}\label{etpwm_8h_a7af156155040fe79d8126bff5e16ef3f}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+C\+A\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa341b5ca94217a3527817ef69a18889d}\label{etpwm_8h_aa341b5ca94217a3527817ef69a18889d}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+C\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4c5b986e30e2364f212d2108a41834c5}\label{etpwm_8h_a4c5b986e30e2364f212d2108a41834c5}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+C\+F\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae96dddbefbbfcadec02c7515b44c50f5}\label{etpwm_8h_ae96dddbefbbfcadec02c7515b44c50f5}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+C\+C\+A\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a343f001c41dd5b32690b754ada56ed9f}\label{etpwm_8h_a343f001c41dd5b32690b754ada56ed9f}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a1ff0d39087f2b968131d8d3f87cd0c82}\label{etpwm_8h_a1ff0d39087f2b968131d8d3f87cd0c82}} 
+\#define {\bfseries E\+T\+P\+W\+M5\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+C\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa3e79ba180c3290643b4064b61028dab}\label{etpwm_8h_aa3e79ba180c3290643b4064b61028dab}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 7\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 10\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a93c028d4c1b4efb7afcf459905a7742b}\label{etpwm_8h_a93c028d4c1b4efb7afcf459905a7742b}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+T\+B\+P\+H\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a56e6c10ac11196e6356c6d0c60f9b954}\label{etpwm_8h_a56e6c10ac11196e6356c6d0c60f9b954}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+T\+B\+P\+R\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4353f656390b2300afc6e85144356fe6}\label{etpwm_8h_a4353f656390b2300afc6e85144356fe6}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a790739988e5d6a44ad62c492646d988b}\label{etpwm_8h_a790739988e5d6a44ad62c492646d988b}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+C\+M\+P\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a996d664dc6b7b1d08f9ff552ec55283d}\label{etpwm_8h_a996d664dc6b7b1d08f9ff552ec55283d}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+C\+M\+P\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8a4eee927751c257bc8bf21aa067aa7c}\label{etpwm_8h_a8a4eee927751c257bc8bf21aa067aa7c}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+A\+Q\+C\+T\+L\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 4\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae28a803bb27445eaafec7bde87007a7b}\label{etpwm_8h_ae28a803bb27445eaafec7bde87007a7b}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+A\+Q\+C\+T\+L\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 8\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a92397ece91c7ba7f9db120b922171537}\label{etpwm_8h_a92397ece91c7ba7f9db120b922171537}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 5\+U) $\vert$ (uint16)((uint16)0u $<$$<$ 4\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 3\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 2\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 0\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4b877244e9722ebf0a7be868abf433f8}\label{etpwm_8h_a4b877244e9722ebf0a7be868abf433f8}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+B\+R\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a43a8dc1797737c39d79be438a9215efc}\label{etpwm_8h_a43a8dc1797737c39d79be438a9215efc}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+B\+F\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_add565ff1b341b0cd4accfa98496b8b9a}\label{etpwm_8h_add565ff1b341b0cd4accfa98496b8b9a}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+T\+Z\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a65d5009730974a2b1605d98c45f333ac}\label{etpwm_8h_a65d5009730974a2b1605d98c45f333ac}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+T\+Z\+D\+C\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa92e43c5ed6aa3cc18e5c2a0d303520b}\label{etpwm_8h_aa92e43c5ed6aa3cc18e5c2a0d303520b}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+T\+Z\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_abbb22090814994343ff40244166719d2}\label{etpwm_8h_abbb22090814994343ff40244166719d2}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+T\+Z\+E\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U  $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U$\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_aeaf385a46fc8f025c8bdafb36b2a4661}\label{etpwm_8h_aeaf385a46fc8f025c8bdafb36b2a4661}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+E\+T\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)(((uint16)N\+O\+\_\+\+E\+V\+E\+NT == 0\+U)? 0x0000\+U \+: 0x0008\+U) $\vert$ (uint16)\+N\+O\+\_\+\+E\+V\+E\+N\+T $\vert$ (uint16)0x0000\+U $\vert$ (uint16)0x0000\+U $\vert$ (uint16)((uint16)\+D\+C\+A\+E\+V\+T1 $<$$<$ 8\+U) $\vert$ (uint16)((uint16)\+D\+C\+B\+E\+V\+T1 $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab54fe68fff75c1134c34aa38f81b3277}\label{etpwm_8h_ab54fe68fff75c1134c34aa38f81b3277}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+E\+T\+P\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)1\+U $\vert$ (uint16)((uint16)1\+U $<$$<$ 8\+U)  $\vert$ (uint16)((uint16)1\+U $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a168c41d5ee48b6ff5959a798305cce80}\label{etpwm_8h_a168c41d5ee48b6ff5959a798305cce80}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 0\+U) $\vert$ (uint16)((uint16)1\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)3\+U $<$$<$ 8\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 5\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8a0482634c6a254edb028e030147ccdb}\label{etpwm_8h_a8a0482634c6a254edb028e030147ccdb}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+C\+T\+R\+I\+P\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7962b1f95afd890c6632a15887ccaec9}\label{etpwm_8h_a7962b1f95afd890c6632a15887ccaec9}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+C\+A\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab0ec13d33e8f3430594c6e14a5613313}\label{etpwm_8h_ab0ec13d33e8f3430594c6e14a5613313}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+C\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a4014b436a9fbe517607cb6e037f5cd21}\label{etpwm_8h_a4014b436a9fbe517607cb6e037f5cd21}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+C\+F\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a03540c1f21d03add2972e61cbf4fe62f}\label{etpwm_8h_a03540c1f21d03add2972e61cbf4fe62f}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+C\+C\+A\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a2fad6b82a2cdad853041bb15a2767c4d}\label{etpwm_8h_a2fad6b82a2cdad853041bb15a2767c4d}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ab76a92db85c1e19b75d5a9fa68c0dd19}\label{etpwm_8h_ab76a92db85c1e19b75d5a9fa68c0dd19}} 
+\#define {\bfseries E\+T\+P\+W\+M6\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+C\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a3bf85627eb222c242afdb6c059942bc3}\label{etpwm_8h_a3bf85627eb222c242afdb6c059942bc3}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+T\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 7\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 10\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a6f5e872a7c4a4c953de88b615ef9edd2}\label{etpwm_8h_a6f5e872a7c4a4c953de88b615ef9edd2}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+T\+B\+P\+H\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a77aab3f6773fb39545ecf97e0087c856}\label{etpwm_8h_a77aab3f6773fb39545ecf97e0087c856}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+T\+B\+P\+R\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a52eedfebd36e483fc9e4342930dd707f}\label{etpwm_8h_a52eedfebd36e483fc9e4342930dd707f}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+C\+M\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aab80c0f81b7eb498429d5378fc44cd1e}\label{etpwm_8h_aab80c0f81b7eb498429d5378fc44cd1e}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+C\+M\+P\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac5b6013cd567023c55c913f9a2f7b8e0}\label{etpwm_8h_ac5b6013cd567023c55c913f9a2f7b8e0}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+C\+M\+P\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~50U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac387f8ffed2940bb0da29047553ed32f}\label{etpwm_8h_ac387f8ffed2940bb0da29047553ed32f}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+A\+Q\+C\+T\+L\+A\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 4\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_af2848d3d3c71298d89d9f9623982c3f9}\label{etpwm_8h_af2848d3d3c71298d89d9f9623982c3f9}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+A\+Q\+C\+T\+L\+B\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} $<$$<$ 0\+U) $\vert$ (uint16)((uint16)\+Action\+Qual\+\_\+\+Clear $<$$<$ 8\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_a6d0b33dcc01976fcc0bc86077c367f68}\label{etpwm_8h_a6d0b33dcc01976fcc0bc86077c367f68}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 5\+U) $\vert$ (uint16)((uint16)0u $<$$<$ 4\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 3\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 2\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 0\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_aeb5c55042c665cb88518f1a82d1ec97a}\label{etpwm_8h_aeb5c55042c665cb88518f1a82d1ec97a}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+B\+R\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_add6e697ba9024059c849af69f64c59f2}\label{etpwm_8h_add6e697ba9024059c849af69f64c59f2}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+B\+F\+E\+D\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~1U
+\item 
+\mbox{\Hypertarget{etpwm_8h_acf88446883409384ece81d9d3dc045be}\label{etpwm_8h_acf88446883409384ece81d9d3dc045be}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+T\+Z\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a47585d661dd399cf3675f2599de7979f}\label{etpwm_8h_a47585d661dd399cf3675f2599de7979f}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+T\+Z\+D\+C\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a6ccbc9478a0c0242b8942ac6e261f1bc}\label{etpwm_8h_a6ccbc9478a0c0242b8942ac6e261f1bc}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+T\+Z\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a1036be65c0104d45cfb3292a74a627d1}\label{etpwm_8h_a1036be65c0104d45cfb3292a74a627d1}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+T\+Z\+E\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(0x0000\+U  $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U $\vert$ 0x0000\+U$\vert$ 0x0000\+U)
+\item 
+\mbox{\Hypertarget{etpwm_8h_a1278c7af3c93af9a5dbab55cbb296b5a}\label{etpwm_8h_a1278c7af3c93af9a5dbab55cbb296b5a}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+E\+T\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)(((uint16)N\+O\+\_\+\+E\+V\+E\+NT == 0\+U)? 0x0000\+U \+: 0x0008\+U) $\vert$ (uint16)\+N\+O\+\_\+\+E\+V\+E\+N\+T $\vert$ (uint16)0x0000\+U $\vert$ (uint16)0x0000\+U $\vert$ (uint16)((uint16)\+D\+C\+A\+E\+V\+T1 $<$$<$ 8\+U) $\vert$ (uint16)((uint16)\+D\+C\+B\+E\+V\+T1 $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa5748c84650490daf7512d9b448b26c2}\label{etpwm_8h_aa5748c84650490daf7512d9b448b26c2}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+E\+T\+P\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)1\+U $\vert$ (uint16)((uint16)1\+U $<$$<$ 8\+U)  $\vert$ (uint16)((uint16)1\+U $<$$<$ 12\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac0152ea4ddee2f1260a66cf4e6c56f44}\label{etpwm_8h_ac0152ea4ddee2f1260a66cf4e6c56f44}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+P\+C\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint16)((uint16)0\+U $<$$<$ 0\+U) $\vert$ (uint16)((uint16)1\+U $<$$<$ 1\+U) $\vert$ (uint16)((uint16)3\+U $<$$<$ 8\+U) $\vert$ (uint16)((uint16)0\+U $<$$<$ 5\+U))
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac89bab49061a23e89a5198eedcf01db4}\label{etpwm_8h_ac89bab49061a23e89a5198eedcf01db4}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+C\+T\+R\+I\+P\+S\+E\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ae6d326895423c8c566c5ed7f371464cf}\label{etpwm_8h_ae6d326895423c8c566c5ed7f371464cf}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+C\+A\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a00ebabbabf41968b9f1b4fce9095df5d}\label{etpwm_8h_a00ebabbabf41968b9f1b4fce9095df5d}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+C\+B\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a8ad684cbe2d8262f63325f3a2b22215f}\label{etpwm_8h_a8ad684cbe2d8262f63325f3a2b22215f}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+C\+F\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_ac6e8c7586ee0c42643877e747e90e356}\label{etpwm_8h_ac6e8c7586ee0c42643877e747e90e356}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+C\+C\+A\+P\+C\+T\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_a7843e6069a5062e89f1584a3d076d768}\label{etpwm_8h_a7843e6069a5062e89f1584a3d076d768}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\item 
+\mbox{\Hypertarget{etpwm_8h_aa2c38e00e89a73391b412e1b5cdab19a}\label{etpwm_8h_aa2c38e00e89a73391b412e1b5cdab19a}} 
+\#define {\bfseries E\+T\+P\+W\+M7\+\_\+\+D\+C\+F\+W\+I\+N\+D\+O\+W\+C\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000000U
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{etpwm_8h_aea75d7f2b8296f7455942513edf13e43}\label{etpwm_8h_aea75d7f2b8296f7455942513edf13e43}} 
+typedef struct \mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg}} {\bfseries etpwm\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8}{etpwm\+Clk\+Div\+\_\+t}} \{ \newline
+{\bfseries Clk\+Div\+\_\+by\+\_\+1} = ((uint16)0U $<$$<$ 10U), 
+\mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8acdc60a0cedcb87071dd8db7495f7304d}{Clk\+Div\+\_\+by\+\_\+2}} = ((uint16)1U $<$$<$ 10U), 
+\mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a1910eb4eaf2618ff5fc5e7d72ff6fbb0}{Clk\+Div\+\_\+by\+\_\+4}} = ((uint16)2U $<$$<$ 10U), 
+\mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a25addcea5768351756839ebca2b88bff}{Clk\+Div\+\_\+by\+\_\+8}} = ((uint16)3U $<$$<$ 10U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a959f732fe1cdac164bc52f96db88274c}{Clk\+Div\+\_\+by\+\_\+16}} = ((uint16)4U $<$$<$ 10U), 
+\mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8aed948155eef5bad5c0035d98687e1799}{Clk\+Div\+\_\+by\+\_\+32}} = ((uint16)5U $<$$<$ 10U), 
+\mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a9940e619da93d22b498ff9b1b179a5a1}{Clk\+Div\+\_\+by\+\_\+64}} = ((uint16)6U $<$$<$ 10U), 
+\mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a80a320cd4a8b51031f5feebcb3879b9e}{Clk\+Div\+\_\+by\+\_\+128}} = ((uint16)7U $<$$<$ 10U)
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the pulse width modulation (E\+T\+P\+WM) clock divider T\+B\+C\+LK = V\+C\+L\+K4 / (H\+S\+P\+C\+L\+K\+D\+IV × C\+L\+K\+D\+IV) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14}{etpwm\+Hsp\+Clk\+Div\+\_\+t}} \{ \newline
+{\bfseries Hsp\+Clk\+Div\+\_\+by\+\_\+1} = ((uint16)0U $<$$<$ 7U), 
+\mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a73e4efec150ed6aea2a7e0cffe415871}{Hsp\+Clk\+Div\+\_\+by\+\_\+2}} = ((uint16)1U $<$$<$ 7U), 
+\mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14affadc5130a999bc258b58066624e0ad5}{Hsp\+Clk\+Div\+\_\+by\+\_\+4}} = ((uint16)2U $<$$<$ 7U), 
+\mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a9067323ba5c61ef1d3aa9680f8269ef3}{Hsp\+Clk\+Div\+\_\+by\+\_\+6}} = ((uint16)3U $<$$<$ 7U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14af93d379fbb22512b95e64695f1b41ff8}{Hsp\+Clk\+Div\+\_\+by\+\_\+8}} = ((uint16)4U $<$$<$ 7U), 
+\mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a72c26678122cffe1c20f23a62e21930c}{Hsp\+Clk\+Div\+\_\+by\+\_\+10}} = ((uint16)5U $<$$<$ 7U), 
+\mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a64b37ed4d04bd6afa778f4297ef76b98}{Hsp\+Clk\+Div\+\_\+by\+\_\+12}} = ((uint16)6U $<$$<$ 7U), 
+\mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a49c2e320514b98f0787a5040e45aacb7}{Hsp\+Clk\+Div\+\_\+by\+\_\+14}} = ((uint16)7U $<$$<$ 7U)
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the pulse width modulation (E\+T\+P\+WM) high speed clock divider T\+B\+C\+LK = V\+C\+L\+K4 / (H\+S\+P\+C\+L\+K\+D\+IV × C\+L\+K\+D\+IV) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0b}{etpwm\+Sync\+Out\+\_\+t}} \{ {\bfseries Sync\+Out\+\_\+\+E\+P\+W\+Mx\+S\+Y\+N\+CI} = 0x00U, 
+\mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba0a8ac5730908d3f8d7998d30defc2e9f}{Sync\+Out\+\_\+\+Ctr\+Eq\+Zero}} = 0x10U, 
+\mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0bae4a5afb6aee1fa8d75913bb95706b54a}{Sync\+Out\+\_\+\+Ctr\+Eq\+CmpB}} = 0x20U, 
+\mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba4a75d001d37741373e32fbb6afe74118}{Sync\+Out\+\_\+\+Disable}} = 0x30U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to select the source of Synchronization Output signal (E\+P\+W\+Mx\+S\+Y\+N\+CO) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3}{etpwm\+Counter\+Mode\+\_\+t}} \{ {\bfseries Counter\+Mode\+\_\+\+Up} = 0U, 
+\mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a450937607f51d45ec51c2b82cf0ed2d9}{Countermode\+\_\+\+Down}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a75677485efa8b26bec122d0c37090fb4}{Counter\+Mode\+\_\+\+Up\+Down}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3aab267c46b17af4b1388d80ab3dce1829}{Counter\+Mode\+\_\+\+Stop}} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the pulse width modulation (E\+T\+P\+WM) counter modes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279ee}{etpwm\+Run\+Mode\+\_\+t}} \{ {\bfseries Run\+Mode\+\_\+\+Soft\+Stop\+After\+Incr} = ((uint16)0U $<$$<$ 14U), 
+\mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea9770666c91079e186ce34d0d10d13bd1}{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Decr}} = ((uint16)0U $<$$<$ 14U), 
+\mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eeae4640677efc5cb3d768bd61516a7727f}{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Cycle}} = ((uint16)1U $<$$<$ 14U), 
+\mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea124a8a1b6d18ee42e40467956b44b817}{Run\+Mode\+\_\+\+Free\+Run}} = ((uint16)2U $<$$<$ 14U)
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to the behavior of the e\+P\+WM time-\/base counter during emulation events. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}{etpwm\+Load\+Mode\+\_\+t}} \{ {\bfseries Load\+Mode\+\_\+\+Ctr\+Eq\+Zero} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1aa8567bb03845b409fab4e1f875049147}{Load\+Mode\+\_\+\+Ctr\+Eq\+Period}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1ade47eb4e4ce571b702f4cddf4b045b31}{Load\+Mode\+\_\+\+Ctr\+Eq\+Zero\+Period}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1a75e6a8dc720e1a8faa4cda1f77972416}{Load\+Mode\+\_\+\+Freeze}} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the pulse width modulation (E\+T\+P\+WM) load modes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{etpwm_8h_a61fc897f82f511a0da2493cd1629cc83}\label{etpwm_8h_a61fc897f82f511a0da2493cd1629cc83}} 
+enum \mbox{\hyperlink{etpwm_8h_a61fc897f82f511a0da2493cd1629cc83}{etpwm\+Trip\+Zone\+Src\+\_\+t}} \{ \newline
+{\bfseries Cycle\+By\+Cycle\+\_\+\+T\+Z1} = ((uint16)1U $<$$<$ 0U), 
+{\bfseries Cycle\+By\+Cycle\+\_\+\+T\+Z2} = ((uint16)1U $<$$<$ 1U), 
+{\bfseries Cycle\+By\+Cycle\+\_\+\+T\+Z3} = ((uint16)1U $<$$<$ 2U), 
+{\bfseries Cycle\+By\+Cycle\+\_\+\+T\+Z4} = ((uint16)1U $<$$<$ 3U), 
+\newline
+{\bfseries Cycle\+By\+Cycle\+\_\+\+T\+Z5} = ((uint16)1U $<$$<$ 4U), 
+{\bfseries Cycle\+By\+Cycle\+\_\+\+T\+Z6} = ((uint16)1U $<$$<$ 5U), 
+{\bfseries Cycle\+By\+Cycle\+\_\+\+D\+C\+A\+E\+V\+T2} = ((uint16)1U $<$$<$ 6U), 
+{\bfseries Cycle\+By\+Cycle\+\_\+\+D\+C\+B\+E\+V\+T2} = ((uint16)1U $<$$<$ 7U), 
+\newline
+{\bfseries One\+Shot\+\_\+\+T\+Z1} = ((uint16)1U $<$$<$ 8U), 
+{\bfseries One\+Shot\+\_\+\+T\+Z2} = ((uint16)1U $<$$<$ 9U), 
+{\bfseries One\+Shot\+\_\+\+T\+Z3} = ((uint16)1U $<$$<$ 10U), 
+{\bfseries One\+Shot\+\_\+\+T\+Z4} = ((uint16)1U $<$$<$ 11U), 
+\newline
+{\bfseries One\+Shot\+\_\+\+T\+Z5} = ((uint16)1U $<$$<$ 12U), 
+{\bfseries One\+Shot\+\_\+\+T\+Z6} = ((uint16)1U $<$$<$ 13U), 
+{\bfseries One\+Shot\+\_\+\+D\+C\+A\+E\+V\+T1} = ((uint16)1U $<$$<$ 14U), 
+{\bfseries One\+Shot\+\_\+\+D\+C\+B\+E\+V\+T1} = ((uint16)1U $<$$<$ 15U)
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the pulse width modulation (E\+T\+P\+WM) trip zone sources. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} \{ \newline
+{\bfseries Cycle\+By\+Cycle\+Trip} = ((uint16)1U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fdad6781e8cfb27a25479f59063dd7508fe}{One\+Shot\+Trip}} = ((uint16)1U $<$$<$ 2U), 
+\mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda12eef72d95f496764e9bd4240cdfb240}{D\+C\+A\+E\+V\+T1\+\_\+inter}} = ((uint16)1U $<$$<$ 3U), 
+\mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda31fdbf29a794b768fd639cd0f6a586cd}{D\+C\+A\+E\+V\+T2\+\_\+inter}} = ((uint16)1U $<$$<$ 4U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda50e107a3f8d8fdda3799df0fc0e4490a}{D\+C\+B\+E\+V\+T1\+\_\+inter}} = ((uint16)1U $<$$<$ 5U), 
+\mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda4aa458000eb1f7957343884941628d99}{D\+C\+B\+E\+V\+T2\+\_\+inter}} = ((uint16)1U $<$$<$ 6U)
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the pulse width modulation (E\+T\+P\+WM) trip events. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}} \{ \newline
+{\bfseries N\+O\+\_\+\+E\+V\+E\+NT} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a9d38b1c692061ec5287cd4686fc4c26c}{D\+C\+A\+E\+V\+T1}} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a841212dc9f769696457129106210098f}{D\+C\+B\+E\+V\+T1}} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae94d21be858552a7252b2e6e28fdf6c3}{C\+T\+R\+\_\+\+Z\+E\+RO}} = 1U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a3a853d8889bc7e332789083f6948b5a8}{C\+T\+R\+\_\+\+P\+RD}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aec423450fd22effe552120f675e03b90}{C\+T\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+P\+RD}} = 3U, 
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aa9432cf1db099cd6768d1f1102111727}{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PA}} = 4U, 
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a614f81e9a277abd22edae371152ca6fa}{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PA}} = 5U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a8862a44bff2ec9164baa302b87d66587}{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PB}} = 6U, 
+\mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae90a0ad699cca4381f087364f2402236}{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PB}} = 7U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the sources for E\+P\+W\+Mx\+\_\+\+I\+NT, S\+O\+CA or S\+O\+CB. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}} \{ {\bfseries Event\+Period\+\_\+\+Disable} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5af2cf315c846afc5d005a7a418ac52b12}{Event\+Period\+\_\+\+First\+Event}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5a2390893d6d965a2c19e609390999f381}{Event\+Period\+\_\+\+Second\+Event}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5abc71454ad581f33b191c194425aa5615}{Event\+Period\+\_\+\+Third\+Event}} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the period of E\+P\+W\+Mx\+\_\+\+I\+NT, S\+O\+CA or S\+O\+CB. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}{etpwm\+Event\+\_\+t}} \{ {\bfseries Event\+\_\+\+Interrupt} = 1U, 
+\mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aa5815e64a2fa9bdda904f9325eab2898b}{Event\+\_\+\+S\+O\+CA}} = 4U, 
+\mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aabd8579844bd8ce4b4e85871ef5e45f18}{Event\+\_\+\+S\+O\+CB}} = 8U
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the output events from E\+T\+P\+W\+Mx. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13}{etpwm\+Action\+Qual\+\_\+t}} \{ \newline
+{\bfseries Action\+Qual\+\_\+\+Disabled} = 0U, 
+\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a6d344b951ec7bec1fb3284f8daf4c268}{Action\+Qual\+\_\+\+Clear}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{Action\+Qual\+\_\+\+Set}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a7cb374b73141538b5582e5f76b3bd9e2}{Action\+Qual\+\_\+\+Toggle}} = 3U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a4dc856fb37be6eceb04d5755cc9e8896}{Force\+Size\+\_\+\+Action\+Qual}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the pulse width modulation (E\+T\+P\+WM) action qualifiers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4f}{etpwm\+Dead\+Band\+Input\+Mode\+\_\+t}} \{ \newline
+{\bfseries P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+F\+ED} = 0x00U, 
+\mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa332712b84f8a2ed8bc5a779a8cb8cab2}{P\+W\+M\+A\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+R\+ED}} = 0x10U, 
+\mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa79a9f91e62de38c11f58d4d589a72310}{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED}} = 0x20U, 
+\mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa9f25de260d929c2693be917b7b471e4f}{P\+W\+M\+B\+\_\+\+R\+E\+D\+\_\+\+F\+ED}} = 0x30U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa8ca18b786b4d26f4eca83a9d743c850a}{Force\+Size\+\_\+\+D\+B\+Input}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the Dead\+Band input mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04}{etpwm\+Dead\+Band\+Output\+Mode\+\_\+t}} \{ \newline
+{\bfseries P\+W\+M\+A\+\_\+\+P\+W\+M\+B\+\_\+\+N\+IL} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04aaf77a5ebc18f8806e1f995c79f71c08f}{P\+W\+M\+A\+\_\+\+N\+I\+L\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04ae1342f43d2908237be56cee3404e80e4}{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+N\+IL}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a45aa5bf681cfc42e70af78effb2b4298}{P\+W\+M\+B\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+A\+\_\+\+R\+ED}} = 3U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a28d16c98a534672ce943772de13b030a}{Force\+Size\+\_\+\+D\+B\+Output}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the Dead\+Band output mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5b}{etpwm\+Dead\+Band\+Polarity\+\_\+t}} \{ \newline
+{\bfseries Disable\+Invert} = ((uint16)0U $<$$<$ 2U), 
+\mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5baab2ebb618606108b1e65998cf1429afa}{Invert\+\_\+\+P\+W\+MA}} = ((uint16)1U $<$$<$ 2U), 
+\mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5ba88a38ea67bd4fedeebda960370577f54}{Invert\+\_\+\+P\+W\+MB}} = ((uint16)2U $<$$<$ 2U), 
+\mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab2a023e02e7ed573d2376f1441a9a6c3}{Invert\+\_\+\+P\+W\+M\+A\+\_\+\+P\+W\+MB}} = ((uint16)3U $<$$<$ 2U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab7bcfc354fec6bc46063f306413ef1f4}{Force\+Size\+\_\+\+D\+B\+Pol}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the Dead\+Band polarity. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803}{etpwm\+Trip\+Zone\+State\+\_\+t}} \{ \newline
+{\bfseries Trip\+Zone\+State\+\_\+\+High\+Imp} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a0c31043fdc922c0075f4e8f5780f7a60}{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+High}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a08f813d074872073f18fb45b79958f73}{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+Low}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a7b1342ba31a5980b30a0e9203ed3ca33}{Trip\+Zone\+State\+\_\+\+Do\+Nothing}} = 3U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a1253c2e8f0f378de0a20a4dce6455f62}{Force\+Size\+\_\+\+Trip\+Zone\+State}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define the action on E\+P\+W\+M\+A/\+E\+P\+W\+MB when a trip event happens. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614}{etpwm\+Chopping\+Pulse\+Width\+\_\+t}} \{ \newline
+{\bfseries Chopping\+Pulse\+Width\+\_\+8\+\_\+\+V\+C\+L\+K4} = ((uint16)0U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a0ebf92b82836440fde776e3409b2aeed}{Chopping\+Pulse\+Width\+\_\+16\+\_\+\+V\+C\+L\+K4}} = ((uint16)1U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ab4e4af3b047a6ecd850cd2396f1a4a05}{Chopping\+Pulse\+Width\+\_\+24\+\_\+\+V\+C\+L\+K4}} = ((uint16)2U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae1ede13e33c02bf52ee4e84fc3a4119f}{Chopping\+Pulse\+Width\+\_\+32\+\_\+\+V\+C\+L\+K4}} = ((uint16)3U $<$$<$ 1U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a56c633459d87d75b5893c23e70026732}{Chopping\+Pulse\+Width\+\_\+40\+\_\+\+V\+C\+L\+K4}} = ((uint16)4U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aeb064206d49ec128cf0c3fcc5f646ad3}{Chopping\+Pulse\+Width\+\_\+48\+\_\+\+V\+C\+L\+K4}} = ((uint16)5U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aff86398e6da7309f38d9dbc04fc354a7}{Chopping\+Pulse\+Width\+\_\+56\+\_\+\+V\+C\+L\+K4}} = ((uint16)6U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a6267851ef2360682bfa0d9d99ca81ffd}{Chopping\+Pulse\+Width\+\_\+64\+\_\+\+V\+C\+L\+K4}} = ((uint16)7U $<$$<$ 1U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a18c953a30f7df193f6f67fd69ab71b03}{Chopping\+Pulse\+Width\+\_\+72\+\_\+\+V\+C\+L\+K4}} = ((uint16)8U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aa233dfc83f14ac0088a3e6145b2ba92a}{Chopping\+Pulse\+Width\+\_\+80\+\_\+\+V\+C\+L\+K4}} = ((uint16)9U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a5576dfa87a5fa09fe71a8de64c181b4a}{Chopping\+Pulse\+Width\+\_\+88\+\_\+\+V\+C\+L\+K4}} = ((uint16)10U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a034fc67aabc3e6a666f068728bc2cff4}{Chopping\+Pulse\+Width\+\_\+96\+\_\+\+V\+C\+L\+K4}} = ((uint16)11U $<$$<$ 1U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae8747805a9bfe221dbbb203cac7ebb21}{Chopping\+Pulse\+Width\+\_\+104\+\_\+\+V\+C\+L\+K4}} = ((uint16)12U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a437f9042ef4e2706f9c2a78f2b9b0cc0}{Chopping\+Pulse\+Width\+\_\+112\+\_\+\+V\+C\+L\+K4}} = ((uint16)13U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a47d8ccb59e36767f8443d21a8757f658}{Chopping\+Pulse\+Width\+\_\+120\+\_\+\+V\+C\+L\+K4}} = ((uint16)14U $<$$<$ 1U), 
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a7020774764c59f2720cccba9c655ac5b}{Chopping\+Pulse\+Width\+\_\+128\+\_\+\+V\+C\+L\+K4}} = ((uint16)15U $<$$<$ 1U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614adfa3f7adea59e6be62785d76f73b4f2a}{Force\+Size\+\_\+\+Chop\+Pulse\+Width}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define One-\/\+Shot Pulse Width in chopper submodule. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6}{etpwm\+Chopping\+Clk\+Freq\+\_\+t}} \{ \newline
+{\bfseries Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+8} = ((uint16)0U $<$$<$ 5U), 
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a73830573c91bb02c3b6d251301d47ab0}{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+16}} = ((uint16)1U $<$$<$ 5U), 
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab99010fc7ea8d15aa2da35038dc14575}{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+24}} = ((uint16)2U $<$$<$ 5U), 
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a4b0e5a79c14b33d8bcaac4046bbbf40c}{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+32}} = ((uint16)3U $<$$<$ 5U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a34bb0e12cbc1d3faf555b311e08f7939}{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+40}} = ((uint16)4U $<$$<$ 5U), 
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a7ee02626c5c95296614dd54f2be27f83}{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+48}} = ((uint16)5U $<$$<$ 5U), 
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab7aaad99d7c06d816d7be16bd0852963}{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+56}} = ((uint16)6U $<$$<$ 5U), 
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ad6fcd4e6f810883fa3b7038378cd3ce5}{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+64}} = ((uint16)7U $<$$<$ 5U), 
+\newline
+\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a896cbafbecbb8aa27084d0733c528e02}{Force\+Size\+\_\+\+Chop\+Clk\+Freq}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define Chopping Clock Frequency. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210}{etpwm\+Chopping\+Duty\+Cycle\+\_\+t}} \{ \newline
+{\bfseries Chopping\+Duty\+Cycle\+\_\+\+One\+\_\+\+Eighth} = 0x0000U, 
+\mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a92490ca6f3ef94dc0c33106375f34618}{Chopping\+Duty\+Cycle\+\_\+\+Two\+\_\+\+Eighths}} = 0x0100U, 
+\mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a0ec07afa4006fb7d40f04e7cc4942c69}{Chopping\+Duty\+Cycle\+\_\+\+Three\+\_\+\+Eighths}} = 0x0200U, 
+\mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a9c095eb1416e4526e7276a18700af178}{Chopping\+Duty\+Cycle\+\_\+\+Four\+\_\+\+Eighths}} = 0x0300U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a98b9909b97701d8e6bdc1b88fca266dd}{Chopping\+Duty\+Cycle\+\_\+\+Five\+\_\+\+Eighths}} = 0x0400U, 
+\mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a1930c1e1d6218f7b0f924eaf6d2f3b24}{Chopping\+Duty\+Cycle\+\_\+\+Six\+\_\+\+Eighths}} = 0x0500U, 
+\mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210aa03e6b9c8d481073dc6b016070aa2ed2}{Chopping\+Duty\+Cycle\+\_\+\+Seven\+\_\+\+Eighths}} = 0x0600U, 
+\mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a8777d231721f18ca0bee7b8738efed34}{Force\+Size\+\_\+\+Chop\+Duty}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define Chopping Clock duty cycle. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a4a78ac05edac590250696055faca227f}{etpwm\+D\+C\+Input\+\_\+t}} \{ {\bfseries T\+Z1} = 0U, 
+{\bfseries T\+Z2} = 1U, 
+{\bfseries T\+Z3} = 2U, 
+{\bfseries Force\+Size\+\_\+\+D\+C\+Input} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define Digital Compare Input. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7f}{etpwm\+D\+C\+Output\+Select\+\_\+t}} \{ \newline
+{\bfseries Event\+\_\+\+Disabled} = 0U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabdd2653b767b7d0f46e20b2dc23957c2}{D\+C\+A\+H\+\_\+\+Low}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fab9efe3b57e82f9fa41c277372bd71df9}{D\+C\+A\+H\+\_\+\+High}} = 2U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fae9208cd416e6cc1e19579418db63204b}{D\+C\+A\+L\+\_\+\+Low}} = 3U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa962082e01810e28cc45731a77bf44282}{D\+C\+A\+L\+\_\+\+High}} = 4U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa952410d1688d2d91fc07df8082ad3868}{D\+C\+A\+L\+\_\+\+High\+\_\+\+D\+C\+A\+H\+\_\+\+Low}} = 5U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa5f6a120f2af990eaf9d51a2a48c0571f}{D\+C\+B\+H\+\_\+\+Low}} = 1U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabe532bae108e6c451cdd14d845a6e9d4}{D\+C\+B\+H\+\_\+\+High}} = 2U, 
+\newline
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa6086e6d81e277bcfdb50b7d24b4e80c4}{D\+C\+B\+L\+\_\+\+Low}} = 3U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa18453f8b062dd0a398361e499dde6ad9}{D\+C\+B\+L\+\_\+\+High}} = 4U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa0d015c4ead80929a256e63c3dfb16926}{D\+C\+B\+L\+\_\+\+High\+\_\+\+D\+C\+B\+H\+\_\+low}} = 5U, 
+\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa945b42b7b11d0bb05d883ab7d862287e}{Force\+Size\+\_\+\+D\+C\+Select}} = 0x\+F\+F\+F\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration to define Digital Compare Output selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries etpwm\+Init} (void)
+\item 
+void {\bfseries etpwm\+Start\+T\+B\+C\+LK} (void)
+\item 
+void {\bfseries etpwm\+Stop\+T\+B\+C\+LK} (void)
+\item 
+void {\bfseries etpwm\+Set\+Clk\+Div} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8}{etpwm\+Clk\+Div\+\_\+t}} clkdiv, \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14}{etpwm\+Hsp\+Clk\+Div\+\_\+t}} hspclkdiv)
+\item 
+void {\bfseries etpwm\+Set\+Timebase\+Period} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 period)
+\item 
+void {\bfseries etpwm\+Set\+Count} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 count)
+\item 
+void {\bfseries etpwm\+Disable\+Timebase\+Period\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Enable\+Timebase\+Period\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Enable\+Counter\+Load\+On\+Sync} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 phase, uint16 direction)
+\item 
+void {\bfseries etpwm\+Disable\+Counter\+Load\+On\+Sync} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Set\+Sync\+Out} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0b}{etpwm\+Sync\+Out\+\_\+t}} sync\+Out\+Src)
+\item 
+void {\bfseries etpwm\+Set\+Counter\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3}{etpwm\+Counter\+Mode\+\_\+t}} countermode)
+\item 
+void {\bfseries etpwm\+Trigger\+S\+W\+Sync} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Set\+Run\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279ee}{etpwm\+Run\+Mode\+\_\+t}} runmode)
+\item 
+void {\bfseries etpwm\+Set\+CmpA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 value)
+\item 
+void {\bfseries etpwm\+Set\+CmpB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 value)
+\item 
+void {\bfseries etpwm\+Enable\+Cmp\+A\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}{etpwm\+Load\+Mode\+\_\+t}} loadmode)
+\item 
+void {\bfseries etpwm\+Disable\+Cmp\+A\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Enable\+Cmp\+B\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}{etpwm\+Load\+Mode\+\_\+t}} loadmode)
+\item 
+void {\bfseries etpwm\+Disable\+Cmp\+B\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Set\+Action\+Qual\+PwmA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmActionQualConfig__t}{etpwm\+Action\+Qual\+Config\+\_\+t}} actionqualconfig)
+\item 
+void {\bfseries etpwm\+Set\+Action\+Qual\+PwmB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmActionQualConfig__t}{etpwm\+Action\+Qual\+Config\+\_\+t}} actionqualconfig)
+\item 
+void {\bfseries etpwm\+Enable\+Dead\+Band} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmDeadBandConfig__t}{etpwm\+Dead\+Band\+Config\+\_\+t}} deadbandconfig)
+\item 
+void {\bfseries etpwm\+Disable\+Deadband} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Set\+Dead\+Band\+Delay} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 Rdelay, uint16 Fdelay)
+\item 
+void {\bfseries etpwm\+Enable\+Chopping} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmChoppingConfig__t}{etpwm\+Chopping\+Config\+\_\+t}} choppingconfig)
+\item 
+void {\bfseries etpwm\+Disable\+Chopping} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Enable\+Trip\+Zone\+Sources} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a61fc897f82f511a0da2493cd1629cc83}{etpwm\+Trip\+Zone\+Src\+\_\+t}} sources)
+\item 
+void {\bfseries etpwm\+Disable\+Trip\+Zone\+Sources} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a61fc897f82f511a0da2493cd1629cc83}{etpwm\+Trip\+Zone\+Src\+\_\+t}} sources)
+\item 
+void {\bfseries etpwm\+Set\+Trip\+Action} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmTripActionConfig__t}{etpwm\+Trip\+Action\+Config\+\_\+t}} tripactionconfig)
+\item 
+void {\bfseries etpwm\+Enable\+Trip\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} interrupts)
+\item 
+void {\bfseries etpwm\+Disable\+Trip\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} interrupts)
+\item 
+void {\bfseries etpwm\+Clear\+Trip\+Condition} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} trips)
+\item 
+void {\bfseries etpwm\+Clear\+Trip\+Interrupt\+Flag} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Force\+Trip\+Event} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} trip)
+\item 
+void {\bfseries etpwm\+Enable\+S\+O\+CA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}} eventsource, \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}} eventperiod)
+\item 
+void {\bfseries etpwm\+Disable\+S\+O\+CA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Enable\+S\+O\+CB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}} eventsource, \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}} eventperiod)
+\item 
+void {\bfseries etpwm\+Disable\+S\+O\+CB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Enable\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}} eventsource, \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}} eventperiod)
+\item 
+void {\bfseries etpwm\+Disable\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+uint16 {\bfseries etpwm\+Get\+Event\+Status} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+void {\bfseries etpwm\+Clear\+Event\+Flag} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}{etpwm\+Event\+\_\+t}} events)
+\item 
+void {\bfseries etpwm\+Trigger\+Event} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}{etpwm\+Event\+\_\+t}} events)
+\item 
+void {\bfseries etpwm\+Enable\+Digital\+Compare\+Events} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmDigitalCompareConfig__t}{etpwm\+Digital\+Compare\+Config\+\_\+t}} digitalcompareconfig)
+\item 
+void {\bfseries etpwm1\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void {\bfseries etpwm2\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void {\bfseries etpwm3\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void {\bfseries etpwm4\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void {\bfseries etpwm5\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void {\bfseries etpwm6\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void {\bfseries etpwm7\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group__ePWM_gafaa5c117b76b6b08df02364245b78daf}{etpwm\+Notification}} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Notification for E\+T\+P\+W\+Mx Interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ePWM_ga9ef5c284f9f7b5d948f438a6a4288fc6}{etpwm\+Trip\+Notification}} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint16 flags)
+\begin{DoxyCompactList}\small\item\em Notification for E\+T\+P\+WM Trip zone Interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+T\+P\+WM Driver Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13}\label{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Action\+Qual\+\_\+t@{etpwm\+Action\+Qual\+\_\+t}}
+\index{etpwm\+Action\+Qual\+\_\+t@{etpwm\+Action\+Qual\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Action\+Qual\+\_\+t}{etpwmActionQual\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13}{etpwm\+Action\+Qual\+\_\+t}}}
+
+
+
+Enumeration to define the pulse width modulation (E\+T\+P\+WM) action qualifiers. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+P\+Is etpwm\+Set\+Action\+Qual\+PwmA and etpwm\+Set\+Action\+Qual\+PwmB 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Action\+Qual\+\_\+\+Clear@{Action\+Qual\+\_\+\+Clear}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Action\+Qual\+\_\+\+Clear@{Action\+Qual\+\_\+\+Clear}}}\mbox{\Hypertarget{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a6d344b951ec7bec1fb3284f8daf4c268}\label{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a6d344b951ec7bec1fb3284f8daf4c268}} 
+Action\+Qual\+\_\+\+Clear&Do nothing (action disabled) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Action\+Qual\+\_\+\+Set@{Action\+Qual\+\_\+\+Set}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Action\+Qual\+\_\+\+Set@{Action\+Qual\+\_\+\+Set}}}\mbox{\Hypertarget{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}\label{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}} 
+Action\+Qual\+\_\+\+Set&Clear\+: force E\+P\+T\+W\+Mx\+A/\+E\+T\+P\+W\+MB output low \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Action\+Qual\+\_\+\+Toggle@{Action\+Qual\+\_\+\+Toggle}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Action\+Qual\+\_\+\+Toggle@{Action\+Qual\+\_\+\+Toggle}}}\mbox{\Hypertarget{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a7cb374b73141538b5582e5f76b3bd9e2}\label{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a7cb374b73141538b5582e5f76b3bd9e2}} 
+Action\+Qual\+\_\+\+Toggle&Set\+: force E\+T\+P\+W\+Mx\+A/\+E\+T\+P\+W\+MxB output high \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+Action\+Qual@{Force\+Size\+\_\+\+Action\+Qual}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+Action\+Qual@{Force\+Size\+\_\+\+Action\+Qual}}}\mbox{\Hypertarget{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a4dc856fb37be6eceb04d5755cc9e8896}\label{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a4dc856fb37be6eceb04d5755cc9e8896}} 
+Force\+Size\+\_\+\+Action\+Qual&Toggle E\+P\+W\+Mx\+A/\+E\+T\+P\+W\+MxB output \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 202 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+203 \{
+204     ActionQual\_Disabled = 0U, 
+205     \mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a6d344b951ec7bec1fb3284f8daf4c268}{ActionQual\_Clear}}    = 1U, 
+206     \mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a0c482562c884b67c87771d1e581c4321}{ActionQual\_Set}}      = 2U, 
+207     \mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a7cb374b73141538b5582e5f76b3bd9e2}{ActionQual\_Toggle}}   = 3U, 
+208     
+209     \mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13a4dc856fb37be6eceb04d5755cc9e8896}{ForceSize\_ActionQual}} = 0xFFFFU  
+210 \} \mbox{\hyperlink{etpwm_8h_af381c9819d1969fe0a1b617ad2bf5a13}{etpwmActionQual\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Chopping\+Clk\+Freq\+\_\+t@{etpwm\+Chopping\+Clk\+Freq\+\_\+t}}
+\index{etpwm\+Chopping\+Clk\+Freq\+\_\+t@{etpwm\+Chopping\+Clk\+Freq\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Chopping\+Clk\+Freq\+\_\+t}{etpwmChoppingClkFreq\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6}{etpwm\+Chopping\+Clk\+Freq\+\_\+t}}}
+
+
+
+Enumeration to define Chopping Clock Frequency. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Chopping 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+16@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+16}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+16@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+16}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a73830573c91bb02c3b6d251301d47ab0}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a73830573c91bb02c3b6d251301d47ab0}} 
+Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+16&V\+C\+L\+K4/8 divided by 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+24@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+24}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+24@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+24}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab99010fc7ea8d15aa2da35038dc14575}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab99010fc7ea8d15aa2da35038dc14575}} 
+Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+24&V\+C\+L\+K4/8 divided by 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+32@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+32}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+32@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+32}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a4b0e5a79c14b33d8bcaac4046bbbf40c}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a4b0e5a79c14b33d8bcaac4046bbbf40c}} 
+Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+32&V\+C\+L\+K4/8 divided by 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+40@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+40}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+40@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+40}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a34bb0e12cbc1d3faf555b311e08f7939}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a34bb0e12cbc1d3faf555b311e08f7939}} 
+Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+40&V\+C\+L\+K4/8 divided by 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+48@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+48}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+48@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+48}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a7ee02626c5c95296614dd54f2be27f83}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a7ee02626c5c95296614dd54f2be27f83}} 
+Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+48&V\+C\+L\+K4/8 divided by 5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+56@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+56}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+56@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+56}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab7aaad99d7c06d816d7be16bd0852963}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab7aaad99d7c06d816d7be16bd0852963}} 
+Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+56&V\+C\+L\+K4/8 divided by 6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+64@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+64}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+64@{Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+64}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ad6fcd4e6f810883fa3b7038378cd3ce5}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ad6fcd4e6f810883fa3b7038378cd3ce5}} 
+Chopping\+Clk\+Freq\+\_\+\+V\+C\+L\+K4\+\_\+by\+\_\+64&V\+C\+L\+K4/8 divided by 7 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+Chop\+Clk\+Freq@{Force\+Size\+\_\+\+Chop\+Clk\+Freq}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+Chop\+Clk\+Freq@{Force\+Size\+\_\+\+Chop\+Clk\+Freq}}}\mbox{\Hypertarget{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a896cbafbecbb8aa27084d0733c528e02}\label{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a896cbafbecbb8aa27084d0733c528e02}} 
+Force\+Size\+\_\+\+Chop\+Clk\+Freq&V\+C\+L\+K4/8 divided by 8 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 308 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+309 \{
+310     ChoppingClkFreq\_VCLK4\_by\_8  = ((uint16)0U << 5U), 
+311     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a73830573c91bb02c3b6d251301d47ab0}{ChoppingClkFreq\_VCLK4\_by\_16}} = ((uint16)1U << 5U), 
+312     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab99010fc7ea8d15aa2da35038dc14575}{ChoppingClkFreq\_VCLK4\_by\_24}} = ((uint16)2U << 5U), 
+313     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a4b0e5a79c14b33d8bcaac4046bbbf40c}{ChoppingClkFreq\_VCLK4\_by\_32}} = ((uint16)3U << 5U), 
+314     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a34bb0e12cbc1d3faf555b311e08f7939}{ChoppingClkFreq\_VCLK4\_by\_40}} = ((uint16)4U << 5U), 
+315     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a7ee02626c5c95296614dd54f2be27f83}{ChoppingClkFreq\_VCLK4\_by\_48}} = ((uint16)5U << 5U), 
+316     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ab7aaad99d7c06d816d7be16bd0852963}{ChoppingClkFreq\_VCLK4\_by\_56}} = ((uint16)6U << 5U), 
+317     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6ad6fcd4e6f810883fa3b7038378cd3ce5}{ChoppingClkFreq\_VCLK4\_by\_64}} = ((uint16)7U << 5U), 
+318 
+319     \mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6a896cbafbecbb8aa27084d0733c528e02}{ForceSize\_ChopClkFreq}} = 0xFFFFU 
+320 \}\mbox{\hyperlink{etpwm_8h_ab2e66b21c70a9ca5db3d872017e113a6}{etpwmChoppingClkFreq\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Chopping\+Duty\+Cycle\+\_\+t@{etpwm\+Chopping\+Duty\+Cycle\+\_\+t}}
+\index{etpwm\+Chopping\+Duty\+Cycle\+\_\+t@{etpwm\+Chopping\+Duty\+Cycle\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Chopping\+Duty\+Cycle\+\_\+t}{etpwmChoppingDutyCycle\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210}{etpwm\+Chopping\+Duty\+Cycle\+\_\+t}}}
+
+
+
+Enumeration to define Chopping Clock duty cycle. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Chopping 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Duty\+Cycle\+\_\+\+Two\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Two\+\_\+\+Eighths}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Duty\+Cycle\+\_\+\+Two\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Two\+\_\+\+Eighths}}}\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a92490ca6f3ef94dc0c33106375f34618}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a92490ca6f3ef94dc0c33106375f34618}} 
+Chopping\+Duty\+Cycle\+\_\+\+Two\+\_\+\+Eighths&Duty = 1/8 (12.\+5\%) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Duty\+Cycle\+\_\+\+Three\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Three\+\_\+\+Eighths}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Duty\+Cycle\+\_\+\+Three\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Three\+\_\+\+Eighths}}}\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a0ec07afa4006fb7d40f04e7cc4942c69}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a0ec07afa4006fb7d40f04e7cc4942c69}} 
+Chopping\+Duty\+Cycle\+\_\+\+Three\+\_\+\+Eighths&Duty = 2/8 (25.\+0\%) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Duty\+Cycle\+\_\+\+Four\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Four\+\_\+\+Eighths}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Duty\+Cycle\+\_\+\+Four\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Four\+\_\+\+Eighths}}}\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a9c095eb1416e4526e7276a18700af178}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a9c095eb1416e4526e7276a18700af178}} 
+Chopping\+Duty\+Cycle\+\_\+\+Four\+\_\+\+Eighths&Duty = 3/8 (37.\+5\%) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Duty\+Cycle\+\_\+\+Five\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Five\+\_\+\+Eighths}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Duty\+Cycle\+\_\+\+Five\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Five\+\_\+\+Eighths}}}\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a98b9909b97701d8e6bdc1b88fca266dd}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a98b9909b97701d8e6bdc1b88fca266dd}} 
+Chopping\+Duty\+Cycle\+\_\+\+Five\+\_\+\+Eighths&Duty = 4/8 (50.\+0\%) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Duty\+Cycle\+\_\+\+Six\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Six\+\_\+\+Eighths}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Duty\+Cycle\+\_\+\+Six\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Six\+\_\+\+Eighths}}}\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a1930c1e1d6218f7b0f924eaf6d2f3b24}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a1930c1e1d6218f7b0f924eaf6d2f3b24}} 
+Chopping\+Duty\+Cycle\+\_\+\+Six\+\_\+\+Eighths&Duty = 5/8 (62.\+5\%) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Duty\+Cycle\+\_\+\+Seven\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Seven\+\_\+\+Eighths}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Duty\+Cycle\+\_\+\+Seven\+\_\+\+Eighths@{Chopping\+Duty\+Cycle\+\_\+\+Seven\+\_\+\+Eighths}}}\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210aa03e6b9c8d481073dc6b016070aa2ed2}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210aa03e6b9c8d481073dc6b016070aa2ed2}} 
+Chopping\+Duty\+Cycle\+\_\+\+Seven\+\_\+\+Eighths&Duty = 6/8 (75.\+0\%) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+Chop\+Duty@{Force\+Size\+\_\+\+Chop\+Duty}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+Chop\+Duty@{Force\+Size\+\_\+\+Chop\+Duty}}}\mbox{\Hypertarget{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a8777d231721f18ca0bee7b8738efed34}\label{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a8777d231721f18ca0bee7b8738efed34}} 
+Force\+Size\+\_\+\+Chop\+Duty&Duty = 7/8 (87.\+5\%) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 328 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+329 \{
+330     ChoppingDutyCycle\_One\_Eighth    = 0x0000U, 
+331     \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a92490ca6f3ef94dc0c33106375f34618}{ChoppingDutyCycle\_Two\_Eighths}}   = 0x0100U, 
+332     \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a0ec07afa4006fb7d40f04e7cc4942c69}{ChoppingDutyCycle\_Three\_Eighths}} = 0x0200U, 
+333     \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a9c095eb1416e4526e7276a18700af178}{ChoppingDutyCycle\_Four\_Eighths}}  = 0x0300U, 
+334     \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a98b9909b97701d8e6bdc1b88fca266dd}{ChoppingDutyCycle\_Five\_Eighths}}  = 0x0400U, 
+335     \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a1930c1e1d6218f7b0f924eaf6d2f3b24}{ChoppingDutyCycle\_Six\_Eighths}}   = 0x0500U, 
+336     \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210aa03e6b9c8d481073dc6b016070aa2ed2}{ChoppingDutyCycle\_Seven\_Eighths}} = 0x0600U, 
+337 
+338     \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210a8777d231721f18ca0bee7b8738efed34}{ForceSize\_ChopDuty}} = 0xFFFFU 
+339 \} \mbox{\hyperlink{etpwm_8h_aa7f9bda767c0fc115ebf5df8df14e210}{etpwmChoppingDutyCycle\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Chopping\+Pulse\+Width\+\_\+t@{etpwm\+Chopping\+Pulse\+Width\+\_\+t}}
+\index{etpwm\+Chopping\+Pulse\+Width\+\_\+t@{etpwm\+Chopping\+Pulse\+Width\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Chopping\+Pulse\+Width\+\_\+t}{etpwmChoppingPulseWidth\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614}{etpwm\+Chopping\+Pulse\+Width\+\_\+t}}}
+
+
+
+Enumeration to define One-\/\+Shot Pulse Width in chopper submodule. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Chopping 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+16\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+16\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+16\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+16\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a0ebf92b82836440fde776e3409b2aeed}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a0ebf92b82836440fde776e3409b2aeed}} 
+Chopping\+Pulse\+Width\+\_\+16\+\_\+\+V\+C\+L\+K4&1 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+24\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+24\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+24\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+24\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ab4e4af3b047a6ecd850cd2396f1a4a05}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ab4e4af3b047a6ecd850cd2396f1a4a05}} 
+Chopping\+Pulse\+Width\+\_\+24\+\_\+\+V\+C\+L\+K4&2 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+32\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+32\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+32\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+32\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae1ede13e33c02bf52ee4e84fc3a4119f}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae1ede13e33c02bf52ee4e84fc3a4119f}} 
+Chopping\+Pulse\+Width\+\_\+32\+\_\+\+V\+C\+L\+K4&3 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+40\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+40\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+40\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+40\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a56c633459d87d75b5893c23e70026732}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a56c633459d87d75b5893c23e70026732}} 
+Chopping\+Pulse\+Width\+\_\+40\+\_\+\+V\+C\+L\+K4&4 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+48\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+48\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+48\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+48\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aeb064206d49ec128cf0c3fcc5f646ad3}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aeb064206d49ec128cf0c3fcc5f646ad3}} 
+Chopping\+Pulse\+Width\+\_\+48\+\_\+\+V\+C\+L\+K4&5 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+56\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+56\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+56\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+56\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aff86398e6da7309f38d9dbc04fc354a7}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aff86398e6da7309f38d9dbc04fc354a7}} 
+Chopping\+Pulse\+Width\+\_\+56\+\_\+\+V\+C\+L\+K4&6 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+64\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+64\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+64\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+64\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a6267851ef2360682bfa0d9d99ca81ffd}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a6267851ef2360682bfa0d9d99ca81ffd}} 
+Chopping\+Pulse\+Width\+\_\+64\+\_\+\+V\+C\+L\+K4&7 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+72\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+72\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+72\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+72\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a18c953a30f7df193f6f67fd69ab71b03}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a18c953a30f7df193f6f67fd69ab71b03}} 
+Chopping\+Pulse\+Width\+\_\+72\+\_\+\+V\+C\+L\+K4&8 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+80\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+80\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+80\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+80\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aa233dfc83f14ac0088a3e6145b2ba92a}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aa233dfc83f14ac0088a3e6145b2ba92a}} 
+Chopping\+Pulse\+Width\+\_\+80\+\_\+\+V\+C\+L\+K4&9 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+88\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+88\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+88\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+88\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a5576dfa87a5fa09fe71a8de64c181b4a}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a5576dfa87a5fa09fe71a8de64c181b4a}} 
+Chopping\+Pulse\+Width\+\_\+88\+\_\+\+V\+C\+L\+K4&10 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+96\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+96\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+96\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+96\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a034fc67aabc3e6a666f068728bc2cff4}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a034fc67aabc3e6a666f068728bc2cff4}} 
+Chopping\+Pulse\+Width\+\_\+96\+\_\+\+V\+C\+L\+K4&11 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+104\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+104\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+104\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+104\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae8747805a9bfe221dbbb203cac7ebb21}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae8747805a9bfe221dbbb203cac7ebb21}} 
+Chopping\+Pulse\+Width\+\_\+104\+\_\+\+V\+C\+L\+K4&12 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+112\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+112\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+112\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+112\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a437f9042ef4e2706f9c2a78f2b9b0cc0}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a437f9042ef4e2706f9c2a78f2b9b0cc0}} 
+Chopping\+Pulse\+Width\+\_\+112\+\_\+\+V\+C\+L\+K4&13 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+120\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+120\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+120\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+120\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a47d8ccb59e36767f8443d21a8757f658}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a47d8ccb59e36767f8443d21a8757f658}} 
+Chopping\+Pulse\+Width\+\_\+120\+\_\+\+V\+C\+L\+K4&14 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Chopping\+Pulse\+Width\+\_\+128\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+128\+\_\+\+V\+C\+L\+K4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Chopping\+Pulse\+Width\+\_\+128\+\_\+\+V\+C\+L\+K4@{Chopping\+Pulse\+Width\+\_\+128\+\_\+\+V\+C\+L\+K4}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a7020774764c59f2720cccba9c655ac5b}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a7020774764c59f2720cccba9c655ac5b}} 
+Chopping\+Pulse\+Width\+\_\+128\+\_\+\+V\+C\+L\+K4&15 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+Chop\+Pulse\+Width@{Force\+Size\+\_\+\+Chop\+Pulse\+Width}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+Chop\+Pulse\+Width@{Force\+Size\+\_\+\+Chop\+Pulse\+Width}}}\mbox{\Hypertarget{etpwm_8h_a0438be91701ec609294a76b9d3c8d614adfa3f7adea59e6be62785d76f73b4f2a}\label{etpwm_8h_a0438be91701ec609294a76b9d3c8d614adfa3f7adea59e6be62785d76f73b4f2a}} 
+Force\+Size\+\_\+\+Chop\+Pulse\+Width&16 x V\+C\+L\+K4/8 wide \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 280 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+281 \{
+282     ChoppingPulseWidth\_8\_VCLK4   = ((uint16)0U << 1U),  
+283     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a0ebf92b82836440fde776e3409b2aeed}{ChoppingPulseWidth\_16\_VCLK4}}  = ((uint16)1U << 1U),  
+284     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ab4e4af3b047a6ecd850cd2396f1a4a05}{ChoppingPulseWidth\_24\_VCLK4}}  = ((uint16)2U << 1U),  
+285     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae1ede13e33c02bf52ee4e84fc3a4119f}{ChoppingPulseWidth\_32\_VCLK4}}  = ((uint16)3U << 1U),  
+286     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a56c633459d87d75b5893c23e70026732}{ChoppingPulseWidth\_40\_VCLK4}}  = ((uint16)4U << 1U),  
+287     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aeb064206d49ec128cf0c3fcc5f646ad3}{ChoppingPulseWidth\_48\_VCLK4}}  = ((uint16)5U << 1U),  
+288     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aff86398e6da7309f38d9dbc04fc354a7}{ChoppingPulseWidth\_56\_VCLK4}}  = ((uint16)6U << 1U),  
+289     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a6267851ef2360682bfa0d9d99ca81ffd}{ChoppingPulseWidth\_64\_VCLK4}}  = ((uint16)7U << 1U),  
+290     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a18c953a30f7df193f6f67fd69ab71b03}{ChoppingPulseWidth\_72\_VCLK4}}  = ((uint16)8U << 1U),  
+291     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614aa233dfc83f14ac0088a3e6145b2ba92a}{ChoppingPulseWidth\_80\_VCLK4}}  = ((uint16)9U << 1U),  
+292     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a5576dfa87a5fa09fe71a8de64c181b4a}{ChoppingPulseWidth\_88\_VCLK4}}  = ((uint16)10U << 1U), 
+293     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a034fc67aabc3e6a666f068728bc2cff4}{ChoppingPulseWidth\_96\_VCLK4}}  = ((uint16)11U << 1U), 
+294     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614ae8747805a9bfe221dbbb203cac7ebb21}{ChoppingPulseWidth\_104\_VCLK4}} = ((uint16)12U << 1U), 
+295     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a437f9042ef4e2706f9c2a78f2b9b0cc0}{ChoppingPulseWidth\_112\_VCLK4}} = ((uint16)13U << 1U), 
+296     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a47d8ccb59e36767f8443d21a8757f658}{ChoppingPulseWidth\_120\_VCLK4}} = ((uint16)14U << 1U), 
+297     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614a7020774764c59f2720cccba9c655ac5b}{ChoppingPulseWidth\_128\_VCLK4}} = ((uint16)15U << 1U), 
+298     
+299     \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614adfa3f7adea59e6be62785d76f73b4f2a}{ForceSize\_ChopPulseWidth}} = 0xFFFFU 
+300 \} \mbox{\hyperlink{etpwm_8h_a0438be91701ec609294a76b9d3c8d614}{etpwmChoppingPulseWidth\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Clk\+Div\+\_\+t@{etpwm\+Clk\+Div\+\_\+t}}
+\index{etpwm\+Clk\+Div\+\_\+t@{etpwm\+Clk\+Div\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Clk\+Div\+\_\+t}{etpwmClkDiv\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8}{etpwm\+Clk\+Div\+\_\+t}}}
+
+
+
+Enumeration to define the pulse width modulation (E\+T\+P\+WM) clock divider T\+B\+C\+LK = V\+C\+L\+K4 / (H\+S\+P\+C\+L\+K\+D\+IV × C\+L\+K\+D\+IV) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk\+Div\+\_\+by\+\_\+2@{Clk\+Div\+\_\+by\+\_\+2}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Clk\+Div\+\_\+by\+\_\+2@{Clk\+Div\+\_\+by\+\_\+2}}}\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8acdc60a0cedcb87071dd8db7495f7304d}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8acdc60a0cedcb87071dd8db7495f7304d}} 
+Clk\+Div\+\_\+by\+\_\+2&C\+L\+K\+D\+IV = 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk\+Div\+\_\+by\+\_\+4@{Clk\+Div\+\_\+by\+\_\+4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Clk\+Div\+\_\+by\+\_\+4@{Clk\+Div\+\_\+by\+\_\+4}}}\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a1910eb4eaf2618ff5fc5e7d72ff6fbb0}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a1910eb4eaf2618ff5fc5e7d72ff6fbb0}} 
+Clk\+Div\+\_\+by\+\_\+4&C\+L\+K\+D\+IV = 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk\+Div\+\_\+by\+\_\+8@{Clk\+Div\+\_\+by\+\_\+8}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Clk\+Div\+\_\+by\+\_\+8@{Clk\+Div\+\_\+by\+\_\+8}}}\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a25addcea5768351756839ebca2b88bff}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a25addcea5768351756839ebca2b88bff}} 
+Clk\+Div\+\_\+by\+\_\+8&C\+L\+K\+D\+IV = 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk\+Div\+\_\+by\+\_\+16@{Clk\+Div\+\_\+by\+\_\+16}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Clk\+Div\+\_\+by\+\_\+16@{Clk\+Div\+\_\+by\+\_\+16}}}\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a959f732fe1cdac164bc52f96db88274c}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a959f732fe1cdac164bc52f96db88274c}} 
+Clk\+Div\+\_\+by\+\_\+16&C\+L\+K\+D\+IV = 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk\+Div\+\_\+by\+\_\+32@{Clk\+Div\+\_\+by\+\_\+32}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Clk\+Div\+\_\+by\+\_\+32@{Clk\+Div\+\_\+by\+\_\+32}}}\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8aed948155eef5bad5c0035d98687e1799}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8aed948155eef5bad5c0035d98687e1799}} 
+Clk\+Div\+\_\+by\+\_\+32&C\+L\+K\+D\+IV = 16 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk\+Div\+\_\+by\+\_\+64@{Clk\+Div\+\_\+by\+\_\+64}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Clk\+Div\+\_\+by\+\_\+64@{Clk\+Div\+\_\+by\+\_\+64}}}\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a9940e619da93d22b498ff9b1b179a5a1}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a9940e619da93d22b498ff9b1b179a5a1}} 
+Clk\+Div\+\_\+by\+\_\+64&C\+L\+K\+D\+IV = 32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk\+Div\+\_\+by\+\_\+128@{Clk\+Div\+\_\+by\+\_\+128}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Clk\+Div\+\_\+by\+\_\+128@{Clk\+Div\+\_\+by\+\_\+128}}}\mbox{\Hypertarget{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a80a320cd4a8b51031f5feebcb3879b9e}\label{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a80a320cd4a8b51031f5feebcb3879b9e}} 
+Clk\+Div\+\_\+by\+\_\+128&C\+L\+K\+D\+IV = 64 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 61 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+62 \{
+63     ClkDiv\_by\_1   = ((uint16)0U << 10U), 
+64     \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8acdc60a0cedcb87071dd8db7495f7304d}{ClkDiv\_by\_2}}   = ((uint16)1U << 10U), 
+65     \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a1910eb4eaf2618ff5fc5e7d72ff6fbb0}{ClkDiv\_by\_4}}   = ((uint16)2U << 10U), 
+66     \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a25addcea5768351756839ebca2b88bff}{ClkDiv\_by\_8}}   = ((uint16)3U << 10U), 
+67     \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a959f732fe1cdac164bc52f96db88274c}{ClkDiv\_by\_16}}  = ((uint16)4U << 10U), 
+68     \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8aed948155eef5bad5c0035d98687e1799}{ClkDiv\_by\_32}}  = ((uint16)5U << 10U), 
+69     \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a9940e619da93d22b498ff9b1b179a5a1}{ClkDiv\_by\_64}}  = ((uint16)6U << 10U), 
+70     \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8a80a320cd4a8b51031f5feebcb3879b9e}{ClkDiv\_by\_128}} = ((uint16)7U << 10U)  
+71 \} \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8}{etpwmClkDiv\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3}\label{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Counter\+Mode\+\_\+t@{etpwm\+Counter\+Mode\+\_\+t}}
+\index{etpwm\+Counter\+Mode\+\_\+t@{etpwm\+Counter\+Mode\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Counter\+Mode\+\_\+t}{etpwmCounterMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3}{etpwm\+Counter\+Mode\+\_\+t}}}
+
+
+
+Enumeration to define the pulse width modulation (E\+T\+P\+WM) counter modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Countermode\+\_\+\+Down@{Countermode\+\_\+\+Down}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Countermode\+\_\+\+Down@{Countermode\+\_\+\+Down}}}\mbox{\Hypertarget{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a450937607f51d45ec51c2b82cf0ed2d9}\label{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a450937607f51d45ec51c2b82cf0ed2d9}} 
+Countermode\+\_\+\+Down&Up-\/count mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+Mode\+\_\+\+Up\+Down@{Counter\+Mode\+\_\+\+Up\+Down}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Counter\+Mode\+\_\+\+Up\+Down@{Counter\+Mode\+\_\+\+Up\+Down}}}\mbox{\Hypertarget{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a75677485efa8b26bec122d0c37090fb4}\label{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a75677485efa8b26bec122d0c37090fb4}} 
+Counter\+Mode\+\_\+\+Up\+Down&Down-\/count mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Counter\+Mode\+\_\+\+Stop@{Counter\+Mode\+\_\+\+Stop}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Counter\+Mode\+\_\+\+Stop@{Counter\+Mode\+\_\+\+Stop}}}\mbox{\Hypertarget{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3aab267c46b17af4b1388d80ab3dce1829}\label{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3aab267c46b17af4b1388d80ab3dce1829}} 
+Counter\+Mode\+\_\+\+Stop&Up-\/down-\/count mode \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 100 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+101 \{
+102     CounterMode\_Up     = 0U, 
+103     \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a450937607f51d45ec51c2b82cf0ed2d9}{Countermode\_Down}}   = 1U, 
+104     \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3a75677485efa8b26bec122d0c37090fb4}{CounterMode\_UpDown}} = 2U, 
+105     \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3aab267c46b17af4b1388d80ab3dce1829}{CounterMode\_Stop}}   = 3U  
+106 \} \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3}{etpwmCounterMode\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a4a78ac05edac590250696055faca227f}\label{etpwm_8h_a4a78ac05edac590250696055faca227f}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+D\+C\+Input\+\_\+t@{etpwm\+D\+C\+Input\+\_\+t}}
+\index{etpwm\+D\+C\+Input\+\_\+t@{etpwm\+D\+C\+Input\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+D\+C\+Input\+\_\+t}{etpwmDCInput\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a4a78ac05edac590250696055faca227f}{etpwm\+D\+C\+Input\+\_\+t}}}
+
+
+
+Enumeration to define Digital Compare Input. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Digital\+Compare\+Events 
+\end{DoxyNote}
+
+
+Definition at line 347 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+348 \{
+349     TZ1 = 0U,
+350     TZ2 = 1U,
+351     TZ3 = 2U,
+352 
+353     ForceSize\_DCInput = 0xFFFFU 
+354 \}\mbox{\hyperlink{etpwm_8h_a4a78ac05edac590250696055faca227f}{etpwmDCInput\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7f}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7f}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+D\+C\+Output\+Select\+\_\+t@{etpwm\+D\+C\+Output\+Select\+\_\+t}}
+\index{etpwm\+D\+C\+Output\+Select\+\_\+t@{etpwm\+D\+C\+Output\+Select\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+D\+C\+Output\+Select\+\_\+t}{etpwmDCOutputSelect\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7f}{etpwm\+D\+C\+Output\+Select\+\_\+t}}}
+
+
+
+Enumeration to define Digital Compare Output selection. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Digital\+Compare\+Events. 
+
+D\+C\+A\+H\+\_\+\+Low, D\+C\+A\+H\+\_\+\+High, D\+C\+A\+L\+\_\+\+Low, D\+C\+A\+L\+\_\+\+High, D\+C\+A\+L\+\_\+\+High\+\_\+\+D\+C\+A\+H\+\_\+\+Low should be used only for selecting D\+C\+A\+E\+V\+T1\+\_\+event and D\+C\+A\+E\+V\+T2\+\_\+event and D\+C\+B\+H\+\_\+\+Low, D\+C\+B\+H\+\_\+\+High, D\+C\+B\+L\+\_\+\+Low, D\+C\+B\+L\+\_\+\+High, D\+C\+B\+L\+\_\+\+High\+\_\+\+D\+C\+B\+H\+\_\+\+Low should be used only for selecting D\+C\+B\+E\+V\+T1\+\_\+event and D\+C\+B\+E\+V\+T2\+\_\+event 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+H\+\_\+\+Low@{D\+C\+A\+H\+\_\+\+Low}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+H\+\_\+\+Low@{D\+C\+A\+H\+\_\+\+Low}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabdd2653b767b7d0f46e20b2dc23957c2}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabdd2653b767b7d0f46e20b2dc23957c2}} 
+D\+C\+A\+H\+\_\+\+Low&Event Disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+H\+\_\+\+High@{D\+C\+A\+H\+\_\+\+High}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+H\+\_\+\+High@{D\+C\+A\+H\+\_\+\+High}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fab9efe3b57e82f9fa41c277372bd71df9}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fab9efe3b57e82f9fa41c277372bd71df9}} 
+D\+C\+A\+H\+\_\+\+High&D\+C\+A\+E\+V\+Tx selection \+: D\+C\+AH = low, D\+C\+AL = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+L\+\_\+\+Low@{D\+C\+A\+L\+\_\+\+Low}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+L\+\_\+\+Low@{D\+C\+A\+L\+\_\+\+Low}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fae9208cd416e6cc1e19579418db63204b}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fae9208cd416e6cc1e19579418db63204b}} 
+D\+C\+A\+L\+\_\+\+Low&D\+C\+A\+E\+V\+Tx selection \+: D\+C\+AH = high, D\+C\+AL = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+L\+\_\+\+High@{D\+C\+A\+L\+\_\+\+High}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+L\+\_\+\+High@{D\+C\+A\+L\+\_\+\+High}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa962082e01810e28cc45731a77bf44282}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa962082e01810e28cc45731a77bf44282}} 
+D\+C\+A\+L\+\_\+\+High&D\+C\+A\+E\+V\+Tx selection \+: D\+C\+AL = low, D\+C\+AH = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+L\+\_\+\+High\+\_\+\+D\+C\+A\+H\+\_\+\+Low@{D\+C\+A\+L\+\_\+\+High\+\_\+\+D\+C\+A\+H\+\_\+\+Low}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+L\+\_\+\+High\+\_\+\+D\+C\+A\+H\+\_\+\+Low@{D\+C\+A\+L\+\_\+\+High\+\_\+\+D\+C\+A\+H\+\_\+\+Low}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa952410d1688d2d91fc07df8082ad3868}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa952410d1688d2d91fc07df8082ad3868}} 
+D\+C\+A\+L\+\_\+\+High\+\_\+\+D\+C\+A\+H\+\_\+\+Low&D\+C\+A\+E\+V\+Tx selection \+: D\+C\+AL = high, D\+C\+AH = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+H\+\_\+\+Low@{D\+C\+B\+H\+\_\+\+Low}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+H\+\_\+\+Low@{D\+C\+B\+H\+\_\+\+Low}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa5f6a120f2af990eaf9d51a2a48c0571f}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa5f6a120f2af990eaf9d51a2a48c0571f}} 
+D\+C\+B\+H\+\_\+\+Low&D\+C\+A\+E\+V\+Tx selection \+: D\+C\+AL = high, D\+C\+AH = low \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+H\+\_\+\+High@{D\+C\+B\+H\+\_\+\+High}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+H\+\_\+\+High@{D\+C\+B\+H\+\_\+\+High}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabe532bae108e6c451cdd14d845a6e9d4}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabe532bae108e6c451cdd14d845a6e9d4}} 
+D\+C\+B\+H\+\_\+\+High&D\+C\+B\+E\+V\+Tx selection \+: D\+C\+BH = low, D\+C\+BL = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+L\+\_\+\+Low@{D\+C\+B\+L\+\_\+\+Low}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+L\+\_\+\+Low@{D\+C\+B\+L\+\_\+\+Low}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa6086e6d81e277bcfdb50b7d24b4e80c4}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa6086e6d81e277bcfdb50b7d24b4e80c4}} 
+D\+C\+B\+L\+\_\+\+Low&D\+C\+B\+E\+V\+Tx selection \+: D\+C\+BH = high, D\+C\+BL = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+L\+\_\+\+High@{D\+C\+B\+L\+\_\+\+High}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+L\+\_\+\+High@{D\+C\+B\+L\+\_\+\+High}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa18453f8b062dd0a398361e499dde6ad9}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa18453f8b062dd0a398361e499dde6ad9}} 
+D\+C\+B\+L\+\_\+\+High&D\+C\+B\+E\+V\+Tx selection \+: D\+C\+BL = low, D\+C\+BH = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+L\+\_\+\+High\+\_\+\+D\+C\+B\+H\+\_\+low@{D\+C\+B\+L\+\_\+\+High\+\_\+\+D\+C\+B\+H\+\_\+low}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+L\+\_\+\+High\+\_\+\+D\+C\+B\+H\+\_\+low@{D\+C\+B\+L\+\_\+\+High\+\_\+\+D\+C\+B\+H\+\_\+low}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa0d015c4ead80929a256e63c3dfb16926}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa0d015c4ead80929a256e63c3dfb16926}} 
+D\+C\+B\+L\+\_\+\+High\+\_\+\+D\+C\+B\+H\+\_\+low&D\+C\+B\+E\+V\+Tx selection \+: D\+C\+BL = high, D\+C\+BH = don\textquotesingle{}t care \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+D\+C\+Select@{Force\+Size\+\_\+\+D\+C\+Select}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+D\+C\+Select@{Force\+Size\+\_\+\+D\+C\+Select}}}\mbox{\Hypertarget{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa945b42b7b11d0bb05d883ab7d862287e}\label{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa945b42b7b11d0bb05d883ab7d862287e}} 
+Force\+Size\+\_\+\+D\+C\+Select&D\+C\+B\+E\+V\+Tx selection \+: D\+C\+BL = high, D\+C\+BH = low \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 364 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+365 \{
+366     Event\_Disabled     = 0U,  
+367 
+368     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabdd2653b767b7d0f46e20b2dc23957c2}{DCAH\_Low}}           = 1U,  
+369     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fab9efe3b57e82f9fa41c277372bd71df9}{DCAH\_High}}          = 2U,  
+370     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fae9208cd416e6cc1e19579418db63204b}{DCAL\_Low}}           = 3U,  
+371     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa962082e01810e28cc45731a77bf44282}{DCAL\_High}}          = 4U,  
+372     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa952410d1688d2d91fc07df8082ad3868}{DCAL\_High\_DCAH\_Low}} = 5U,  
+373 
+374     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa5f6a120f2af990eaf9d51a2a48c0571f}{DCBH\_Low}}           = 1U,  
+375     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fabe532bae108e6c451cdd14d845a6e9d4}{DCBH\_High}}          = 2U,  
+376     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa6086e6d81e277bcfdb50b7d24b4e80c4}{DCBL\_Low}}           = 3U,  
+377     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa18453f8b062dd0a398361e499dde6ad9}{DCBL\_High}}          = 4U,  
+378     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa0d015c4ead80929a256e63c3dfb16926}{DCBL\_High\_DCBH\_low}} = 5U,  
+379 
+380     \mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7fa945b42b7b11d0bb05d883ab7d862287e}{ForceSize\_DCSelect}} = 0xFFFFU 
+381 \}\mbox{\hyperlink{etpwm_8h_a320d139cfe64e8a4bd00653a21aa6a7f}{etpwmDCOutputSelect\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4f}\label{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4f}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Dead\+Band\+Input\+Mode\+\_\+t@{etpwm\+Dead\+Band\+Input\+Mode\+\_\+t}}
+\index{etpwm\+Dead\+Band\+Input\+Mode\+\_\+t@{etpwm\+Dead\+Band\+Input\+Mode\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Dead\+Band\+Input\+Mode\+\_\+t}{etpwmDeadBandInputMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4f}{etpwm\+Dead\+Band\+Input\+Mode\+\_\+t}}}
+
+
+
+Enumeration to define the Dead\+Band input mode. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Dead\+Band 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+W\+M\+A\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+R\+ED@{P\+W\+M\+A\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+R\+ED}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!P\+W\+M\+A\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+R\+ED@{P\+W\+M\+A\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+R\+ED}}}\mbox{\Hypertarget{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa332712b84f8a2ed8bc5a779a8cb8cab2}\label{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa332712b84f8a2ed8bc5a779a8cb8cab2}} 
+P\+W\+M\+A\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+R\+ED&Source of Rising edge delay\+: E\+T\+P\+W\+MxA, Source of Falling edge delay\+: E\+T\+P\+W\+MxA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED@{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED@{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED}}}\mbox{\Hypertarget{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa79a9f91e62de38c11f58d4d589a72310}\label{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa79a9f91e62de38c11f58d4d589a72310}} 
+P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED&Source of Rising edge delay\+: E\+T\+P\+W\+MxB, Source of Falling edge delay\+: E\+T\+P\+W\+MxA \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+W\+M\+B\+\_\+\+R\+E\+D\+\_\+\+F\+ED@{P\+W\+M\+B\+\_\+\+R\+E\+D\+\_\+\+F\+ED}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!P\+W\+M\+B\+\_\+\+R\+E\+D\+\_\+\+F\+ED@{P\+W\+M\+B\+\_\+\+R\+E\+D\+\_\+\+F\+ED}}}\mbox{\Hypertarget{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa9f25de260d929c2693be917b7b471e4f}\label{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa9f25de260d929c2693be917b7b471e4f}} 
+P\+W\+M\+B\+\_\+\+R\+E\+D\+\_\+\+F\+ED&Source of Rising edge delay\+: E\+T\+P\+W\+MxA, Source of Falling edge delay\+: E\+T\+P\+W\+MxB \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+D\+B\+Input@{Force\+Size\+\_\+\+D\+B\+Input}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+D\+B\+Input@{Force\+Size\+\_\+\+D\+B\+Input}}}\mbox{\Hypertarget{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa8ca18b786b4d26f4eca83a9d743c850a}\label{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa8ca18b786b4d26f4eca83a9d743c850a}} 
+Force\+Size\+\_\+\+D\+B\+Input&Source of Rising edge delay\+: E\+T\+P\+W\+MxB, Source of Falling edge delay\+: E\+T\+P\+W\+MxB \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 217 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+218 \{
+219     PWMA\_RED\_FED      = 0x00U,   
+220     \mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa332712b84f8a2ed8bc5a779a8cb8cab2}{PWMA\_FED\_PWMB\_RED}} = 0x10U,   
+221     \mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa79a9f91e62de38c11f58d4d589a72310}{PWMA\_RED\_PWMB\_FED}} = 0x20U,   
+222     \mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa9f25de260d929c2693be917b7b471e4f}{PWMB\_RED\_FED}}      = 0x30U,   
+223    
+224     \mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4fa8ca18b786b4d26f4eca83a9d743c850a}{ForceSize\_DBInput}} = 0xFFFFU  
+225 \} \mbox{\hyperlink{etpwm_8h_ac6e3d8beae74e80d85628511a3894b4f}{etpwmDeadBandInputMode\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04}\label{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Dead\+Band\+Output\+Mode\+\_\+t@{etpwm\+Dead\+Band\+Output\+Mode\+\_\+t}}
+\index{etpwm\+Dead\+Band\+Output\+Mode\+\_\+t@{etpwm\+Dead\+Band\+Output\+Mode\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Dead\+Band\+Output\+Mode\+\_\+t}{etpwmDeadBandOutputMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04}{etpwm\+Dead\+Band\+Output\+Mode\+\_\+t}}}
+
+
+
+Enumeration to define the Dead\+Band output mode. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Dead\+Band 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+W\+M\+A\+\_\+\+N\+I\+L\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED@{P\+W\+M\+A\+\_\+\+N\+I\+L\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!P\+W\+M\+A\+\_\+\+N\+I\+L\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED@{P\+W\+M\+A\+\_\+\+N\+I\+L\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED}}}\mbox{\Hypertarget{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04aaf77a5ebc18f8806e1f995c79f71c08f}\label{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04aaf77a5ebc18f8806e1f995c79f71c08f}} 
+P\+W\+M\+A\+\_\+\+N\+I\+L\+\_\+\+P\+W\+M\+B\+\_\+\+F\+ED&Deadband generation is bypassed for both output signals \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+N\+IL@{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+N\+IL}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+N\+IL@{P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+N\+IL}}}\mbox{\Hypertarget{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04ae1342f43d2908237be56cee3404e80e4}\label{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04ae1342f43d2908237be56cee3404e80e4}} 
+P\+W\+M\+A\+\_\+\+R\+E\+D\+\_\+\+P\+W\+M\+B\+\_\+\+N\+IL&Disable rising-\/edge delay. The falling-\/edge delayed signal is seen on output E\+P\+W\+MxB. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+W\+M\+B\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+A\+\_\+\+R\+ED@{P\+W\+M\+B\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+A\+\_\+\+R\+ED}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!P\+W\+M\+B\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+A\+\_\+\+R\+ED@{P\+W\+M\+B\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+A\+\_\+\+R\+ED}}}\mbox{\Hypertarget{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a45aa5bf681cfc42e70af78effb2b4298}\label{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a45aa5bf681cfc42e70af78effb2b4298}} 
+P\+W\+M\+B\+\_\+\+F\+E\+D\+\_\+\+P\+W\+M\+A\+\_\+\+R\+ED&Disable falling-\/edge delay. The rising-\/edge delayed signal is seen on output E\+P\+W\+MxA. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+D\+B\+Output@{Force\+Size\+\_\+\+D\+B\+Output}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+D\+B\+Output@{Force\+Size\+\_\+\+D\+B\+Output}}}\mbox{\Hypertarget{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a28d16c98a534672ce943772de13b030a}\label{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a28d16c98a534672ce943772de13b030a}} 
+Force\+Size\+\_\+\+D\+B\+Output&Rising-\/edge delayed signal on output E\+P\+W\+MxA and falling-\/edge delayed signal on output E\+P\+W\+MxB. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 232 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+233 \{                                                                                                          
+                                 
+234     PWMA\_PWMB\_NIL      = 0U,     
+235     \mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04aaf77a5ebc18f8806e1f995c79f71c08f}{PWMA\_NIL\_PWMB\_FED}}  = 1U,     
+236     \mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04ae1342f43d2908237be56cee3404e80e4}{PWMA\_RED\_PWMB\_NIL}}  = 2U,     
+237     \mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a45aa5bf681cfc42e70af78effb2b4298}{PWMB\_FED\_PWMA\_RED}}  = 3U,     
+238     
+239     \mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04a28d16c98a534672ce943772de13b030a}{ForceSize\_DBOutput}} = 0xFFFFU 
+240 \} \mbox{\hyperlink{etpwm_8h_a85fe8cd2cc22ef23154d204e896a2d04}{etpwmDeadBandOutputMode\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5b}\label{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5b}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Dead\+Band\+Polarity\+\_\+t@{etpwm\+Dead\+Band\+Polarity\+\_\+t}}
+\index{etpwm\+Dead\+Band\+Polarity\+\_\+t@{etpwm\+Dead\+Band\+Polarity\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Dead\+Band\+Polarity\+\_\+t}{etpwmDeadBandPolarity\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5b}{etpwm\+Dead\+Band\+Polarity\+\_\+t}}}
+
+
+
+Enumeration to define the Dead\+Band polarity. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Enable\+Dead\+Band 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invert\+\_\+\+P\+W\+MA@{Invert\+\_\+\+P\+W\+MA}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Invert\+\_\+\+P\+W\+MA@{Invert\+\_\+\+P\+W\+MA}}}\mbox{\Hypertarget{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5baab2ebb618606108b1e65998cf1429afa}\label{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5baab2ebb618606108b1e65998cf1429afa}} 
+Invert\+\_\+\+P\+W\+MA&Neither E\+P\+W\+MxA nor E\+P\+W\+MxB is inverted \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invert\+\_\+\+P\+W\+MB@{Invert\+\_\+\+P\+W\+MB}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Invert\+\_\+\+P\+W\+MB@{Invert\+\_\+\+P\+W\+MB}}}\mbox{\Hypertarget{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5ba88a38ea67bd4fedeebda960370577f54}\label{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5ba88a38ea67bd4fedeebda960370577f54}} 
+Invert\+\_\+\+P\+W\+MB&E\+P\+W\+MxA is inverted \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invert\+\_\+\+P\+W\+M\+A\+\_\+\+P\+W\+MB@{Invert\+\_\+\+P\+W\+M\+A\+\_\+\+P\+W\+MB}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Invert\+\_\+\+P\+W\+M\+A\+\_\+\+P\+W\+MB@{Invert\+\_\+\+P\+W\+M\+A\+\_\+\+P\+W\+MB}}}\mbox{\Hypertarget{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab2a023e02e7ed573d2376f1441a9a6c3}\label{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab2a023e02e7ed573d2376f1441a9a6c3}} 
+Invert\+\_\+\+P\+W\+M\+A\+\_\+\+P\+W\+MB&E\+P\+W\+MxB is inverted \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+D\+B\+Pol@{Force\+Size\+\_\+\+D\+B\+Pol}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+D\+B\+Pol@{Force\+Size\+\_\+\+D\+B\+Pol}}}\mbox{\Hypertarget{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab7bcfc354fec6bc46063f306413ef1f4}\label{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab7bcfc354fec6bc46063f306413ef1f4}} 
+Force\+Size\+\_\+\+D\+B\+Pol&Both E\+P\+W\+MxA and E\+P\+W\+MxB are inverted \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 248 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+249 \{
+250     DisableInvert    = ((uint16)0U << 2U), 
+251     \mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5baab2ebb618606108b1e65998cf1429afa}{Invert\_PWMA}}      = ((uint16)1U << 2U), 
+252     \mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5ba88a38ea67bd4fedeebda960370577f54}{Invert\_PWMB}}      = ((uint16)2U << 2U), 
+253     \mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab2a023e02e7ed573d2376f1441a9a6c3}{Invert\_PWMA\_PWMB}} = ((uint16)3U << 2U), 
+254     
+255     \mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5bab7bcfc354fec6bc46063f306413ef1f4}{ForceSize\_DBPol}} = 0xFFFFU 
+256 \} \mbox{\hyperlink{etpwm_8h_aa9a94c9cc21c399f40bd91ced0554b5b}{etpwmDeadBandPolarity\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}\label{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Event\+\_\+t@{etpwm\+Event\+\_\+t}}
+\index{etpwm\+Event\+\_\+t@{etpwm\+Event\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Event\+\_\+t}{etpwmEvent\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}{etpwm\+Event\+\_\+t}}}
+
+
+
+Enumeration to define the output events from E\+T\+P\+W\+Mx. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Event\+\_\+\+S\+O\+CA@{Event\+\_\+\+S\+O\+CA}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Event\+\_\+\+S\+O\+CA@{Event\+\_\+\+S\+O\+CA}}}\mbox{\Hypertarget{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aa5815e64a2fa9bdda904f9325eab2898b}\label{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aa5815e64a2fa9bdda904f9325eab2898b}} 
+Event\+\_\+\+S\+O\+CA&E\+P\+WM Interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Event\+\_\+\+S\+O\+CB@{Event\+\_\+\+S\+O\+CB}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Event\+\_\+\+S\+O\+CB@{Event\+\_\+\+S\+O\+CB}}}\mbox{\Hypertarget{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aabd8579844bd8ce4b4e85871ef5e45f18}\label{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aabd8579844bd8ce4b4e85871ef5e45f18}} 
+Event\+\_\+\+S\+O\+CB&Start Of Conversion A \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 190 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+191 \{
+192     Event\_Interrupt = 1U, 
+193     \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aa5815e64a2fa9bdda904f9325eab2898b}{Event\_SOCA}}      = 4U, 
+194     \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050aabd8579844bd8ce4b4e85871ef5e45f18}{Event\_SOCB}}      = 8U  
+195 \}\mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}{etpwmEvent\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}\label{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Event\+Period\+\_\+t@{etpwm\+Event\+Period\+\_\+t}}
+\index{etpwm\+Event\+Period\+\_\+t@{etpwm\+Event\+Period\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Event\+Period\+\_\+t}{etpwmEventPeriod\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}}}
+
+
+
+Enumeration to define the period of E\+P\+W\+Mx\+\_\+\+I\+NT, S\+O\+CA or S\+O\+CB. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Event\+Period\+\_\+\+First\+Event@{Event\+Period\+\_\+\+First\+Event}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Event\+Period\+\_\+\+First\+Event@{Event\+Period\+\_\+\+First\+Event}}}\mbox{\Hypertarget{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5af2cf315c846afc5d005a7a418ac52b12}\label{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5af2cf315c846afc5d005a7a418ac52b12}} 
+Event\+Period\+\_\+\+First\+Event&Disable E\+P\+W\+Mx\+\_\+\+I\+N\+T/\+S\+O\+C\+A/\+S\+O\+CB event counter \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Event\+Period\+\_\+\+Second\+Event@{Event\+Period\+\_\+\+Second\+Event}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Event\+Period\+\_\+\+Second\+Event@{Event\+Period\+\_\+\+Second\+Event}}}\mbox{\Hypertarget{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5a2390893d6d965a2c19e609390999f381}\label{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5a2390893d6d965a2c19e609390999f381}} 
+Event\+Period\+\_\+\+Second\+Event&Generate E\+P\+W\+Mx\+\_\+\+I\+N\+T/\+S\+O\+C\+A/\+S\+O\+CB pulse on the first event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Event\+Period\+\_\+\+Third\+Event@{Event\+Period\+\_\+\+Third\+Event}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Event\+Period\+\_\+\+Third\+Event@{Event\+Period\+\_\+\+Third\+Event}}}\mbox{\Hypertarget{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5abc71454ad581f33b191c194425aa5615}\label{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5abc71454ad581f33b191c194425aa5615}} 
+Event\+Period\+\_\+\+Third\+Event&Generate E\+P\+W\+Mx\+\_\+\+I\+N\+T/\+S\+O\+C\+A/\+S\+O\+CB pulse on the second event \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 180 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+181 \{
+182     EventPeriod\_Disable     = 0U, 
+183     \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5af2cf315c846afc5d005a7a418ac52b12}{EventPeriod\_FirstEvent}}  = 1U, 
+184     \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5a2390893d6d965a2c19e609390999f381}{EventPeriod\_SecondEvent}} = 2U, 
+185     \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5abc71454ad581f33b191c194425aa5615}{EventPeriod\_ThirdEvent}}  = 3U  
+186 \}\mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwmEventPeriod\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Event\+Src\+\_\+t@{etpwm\+Event\+Src\+\_\+t}}
+\index{etpwm\+Event\+Src\+\_\+t@{etpwm\+Event\+Src\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Event\+Src\+\_\+t}{etpwmEventSrc\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}}}
+
+
+
+Enumeration to define the sources for E\+P\+W\+Mx\+\_\+\+I\+NT, S\+O\+CA or S\+O\+CB. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+E\+V\+T1@{D\+C\+A\+E\+V\+T1}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+E\+V\+T1@{D\+C\+A\+E\+V\+T1}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a9d38b1c692061ec5287cd4686fc4c26c}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a9d38b1c692061ec5287cd4686fc4c26c}} 
+D\+C\+A\+E\+V\+T1&Reserved \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+E\+V\+T1@{D\+C\+B\+E\+V\+T1}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+E\+V\+T1@{D\+C\+B\+E\+V\+T1}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a841212dc9f769696457129106210098f}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a841212dc9f769696457129106210098f}} 
+D\+C\+B\+E\+V\+T1&D\+C\+A\+E\+V\+T1.\+soc event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+T\+R\+\_\+\+Z\+E\+RO@{C\+T\+R\+\_\+\+Z\+E\+RO}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!C\+T\+R\+\_\+\+Z\+E\+RO@{C\+T\+R\+\_\+\+Z\+E\+RO}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae94d21be858552a7252b2e6e28fdf6c3}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae94d21be858552a7252b2e6e28fdf6c3}} 
+C\+T\+R\+\_\+\+Z\+E\+RO&D\+C\+B\+E\+V\+T1.\+soc event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+T\+R\+\_\+\+P\+RD@{C\+T\+R\+\_\+\+P\+RD}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!C\+T\+R\+\_\+\+P\+RD@{C\+T\+R\+\_\+\+P\+RD}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a3a853d8889bc7e332789083f6948b5a8}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a3a853d8889bc7e332789083f6948b5a8}} 
+C\+T\+R\+\_\+\+P\+RD&Event C\+TR = Zero \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+T\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+P\+RD@{C\+T\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+P\+RD}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!C\+T\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+P\+RD@{C\+T\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+P\+RD}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aec423450fd22effe552120f675e03b90}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aec423450fd22effe552120f675e03b90}} 
+C\+T\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+P\+RD&Event C\+TR = P\+RD \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PA@{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PA}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PA@{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PA}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aa9432cf1db099cd6768d1f1102111727}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aa9432cf1db099cd6768d1f1102111727}} 
+C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PA&Event C\+TR = Zero or C\+TR = P\+RD \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PA@{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PA}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PA@{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PA}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a614f81e9a277abd22edae371152ca6fa}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a614f81e9a277abd22edae371152ca6fa}} 
+C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PA&Event C\+TR = C\+M\+PA when when the timer is incrementing \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PB@{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PB}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PB@{C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PB}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a8862a44bff2ec9164baa302b87d66587}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a8862a44bff2ec9164baa302b87d66587}} 
+C\+T\+R\+\_\+\+U\+P\+\_\+\+C\+M\+PB&Event C\+TR = C\+M\+PA when when the timer is decrementing \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PB@{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PB}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PB@{C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PB}}}\mbox{\Hypertarget{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae90a0ad699cca4381f087364f2402236}\label{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae90a0ad699cca4381f087364f2402236}} 
+C\+T\+R\+\_\+\+D0\+W\+M\+\_\+\+C\+M\+PB&Event C\+TR = C\+M\+PB when when the timer is incrementing \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 164 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+165 \{
+166     NO\_EVENT      = 0U, 
+167     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a9d38b1c692061ec5287cd4686fc4c26c}{DCAEVT1}}       = 0U, 
+168     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a841212dc9f769696457129106210098f}{DCBEVT1}}       = 0U, 
+169     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae94d21be858552a7252b2e6e28fdf6c3}{CTR\_ZERO}}      = 1U, 
+170     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a3a853d8889bc7e332789083f6948b5a8}{CTR\_PRD}}       = 2U, 
+171     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aec423450fd22effe552120f675e03b90}{CTR\_ZERO\_PRD}}  = 3U, 
+172     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226aa9432cf1db099cd6768d1f1102111727}{CTR\_UP\_CMPA}}   = 4U, 
+173     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a614f81e9a277abd22edae371152ca6fa}{CTR\_D0WM\_CMPA}} = 5U, 
+174     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226a8862a44bff2ec9164baa302b87d66587}{CTR\_UP\_CMPB}}   = 6U, 
+175     \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226ae90a0ad699cca4381f087364f2402236}{CTR\_D0WM\_CMPB}} = 7U  
+176 \} \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwmEventSrc\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Hsp\+Clk\+Div\+\_\+t@{etpwm\+Hsp\+Clk\+Div\+\_\+t}}
+\index{etpwm\+Hsp\+Clk\+Div\+\_\+t@{etpwm\+Hsp\+Clk\+Div\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Hsp\+Clk\+Div\+\_\+t}{etpwmHspClkDiv\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14}{etpwm\+Hsp\+Clk\+Div\+\_\+t}}}
+
+
+
+Enumeration to define the pulse width modulation (E\+T\+P\+WM) high speed clock divider T\+B\+C\+LK = V\+C\+L\+K4 / (H\+S\+P\+C\+L\+K\+D\+IV × C\+L\+K\+D\+IV) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hsp\+Clk\+Div\+\_\+by\+\_\+2@{Hsp\+Clk\+Div\+\_\+by\+\_\+2}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Hsp\+Clk\+Div\+\_\+by\+\_\+2@{Hsp\+Clk\+Div\+\_\+by\+\_\+2}}}\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14a73e4efec150ed6aea2a7e0cffe415871}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14a73e4efec150ed6aea2a7e0cffe415871}} 
+Hsp\+Clk\+Div\+\_\+by\+\_\+2&H\+S\+P\+C\+L\+K\+D\+IV = 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hsp\+Clk\+Div\+\_\+by\+\_\+4@{Hsp\+Clk\+Div\+\_\+by\+\_\+4}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Hsp\+Clk\+Div\+\_\+by\+\_\+4@{Hsp\+Clk\+Div\+\_\+by\+\_\+4}}}\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14affadc5130a999bc258b58066624e0ad5}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14affadc5130a999bc258b58066624e0ad5}} 
+Hsp\+Clk\+Div\+\_\+by\+\_\+4&H\+S\+P\+C\+L\+K\+D\+IV = 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hsp\+Clk\+Div\+\_\+by\+\_\+6@{Hsp\+Clk\+Div\+\_\+by\+\_\+6}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Hsp\+Clk\+Div\+\_\+by\+\_\+6@{Hsp\+Clk\+Div\+\_\+by\+\_\+6}}}\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14a9067323ba5c61ef1d3aa9680f8269ef3}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14a9067323ba5c61ef1d3aa9680f8269ef3}} 
+Hsp\+Clk\+Div\+\_\+by\+\_\+6&H\+S\+P\+C\+L\+K\+D\+IV = 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hsp\+Clk\+Div\+\_\+by\+\_\+8@{Hsp\+Clk\+Div\+\_\+by\+\_\+8}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Hsp\+Clk\+Div\+\_\+by\+\_\+8@{Hsp\+Clk\+Div\+\_\+by\+\_\+8}}}\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14af93d379fbb22512b95e64695f1b41ff8}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14af93d379fbb22512b95e64695f1b41ff8}} 
+Hsp\+Clk\+Div\+\_\+by\+\_\+8&H\+S\+P\+C\+L\+K\+D\+IV = 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hsp\+Clk\+Div\+\_\+by\+\_\+10@{Hsp\+Clk\+Div\+\_\+by\+\_\+10}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Hsp\+Clk\+Div\+\_\+by\+\_\+10@{Hsp\+Clk\+Div\+\_\+by\+\_\+10}}}\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14a72c26678122cffe1c20f23a62e21930c}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14a72c26678122cffe1c20f23a62e21930c}} 
+Hsp\+Clk\+Div\+\_\+by\+\_\+10&H\+S\+P\+C\+L\+K\+D\+IV = 16 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hsp\+Clk\+Div\+\_\+by\+\_\+12@{Hsp\+Clk\+Div\+\_\+by\+\_\+12}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Hsp\+Clk\+Div\+\_\+by\+\_\+12@{Hsp\+Clk\+Div\+\_\+by\+\_\+12}}}\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14a64b37ed4d04bd6afa778f4297ef76b98}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14a64b37ed4d04bd6afa778f4297ef76b98}} 
+Hsp\+Clk\+Div\+\_\+by\+\_\+12&H\+S\+P\+C\+L\+K\+D\+IV = 32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hsp\+Clk\+Div\+\_\+by\+\_\+14@{Hsp\+Clk\+Div\+\_\+by\+\_\+14}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Hsp\+Clk\+Div\+\_\+by\+\_\+14@{Hsp\+Clk\+Div\+\_\+by\+\_\+14}}}\mbox{\Hypertarget{etpwm_8h_a603247d44887d7615ab1fba25f777d14a49c2e320514b98f0787a5040e45aacb7}\label{etpwm_8h_a603247d44887d7615ab1fba25f777d14a49c2e320514b98f0787a5040e45aacb7}} 
+Hsp\+Clk\+Div\+\_\+by\+\_\+14&H\+S\+P\+C\+L\+K\+D\+IV = 64 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 76 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+77 \{
+78     HspClkDiv\_by\_1  = ((uint16)0U << 7U), 
+79     \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a73e4efec150ed6aea2a7e0cffe415871}{HspClkDiv\_by\_2}}  = ((uint16)1U << 7U), 
+80     \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14affadc5130a999bc258b58066624e0ad5}{HspClkDiv\_by\_4}}  = ((uint16)2U << 7U), 
+81     \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a9067323ba5c61ef1d3aa9680f8269ef3}{HspClkDiv\_by\_6}}  = ((uint16)3U << 7U), 
+82     \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14af93d379fbb22512b95e64695f1b41ff8}{HspClkDiv\_by\_8}}  = ((uint16)4U << 7U), 
+83     \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a72c26678122cffe1c20f23a62e21930c}{HspClkDiv\_by\_10}} = ((uint16)5U << 7U), 
+84     \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a64b37ed4d04bd6afa778f4297ef76b98}{HspClkDiv\_by\_12}} = ((uint16)6U << 7U), 
+85     \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14a49c2e320514b98f0787a5040e45aacb7}{HspClkDiv\_by\_14}} = ((uint16)7U << 7U)  
+86 \} \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14}{etpwmHspClkDiv\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}\label{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Load\+Mode\+\_\+t@{etpwm\+Load\+Mode\+\_\+t}}
+\index{etpwm\+Load\+Mode\+\_\+t@{etpwm\+Load\+Mode\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Load\+Mode\+\_\+t}{etpwmLoadMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}{etpwm\+Load\+Mode\+\_\+t}}}
+
+
+
+Enumeration to define the pulse width modulation (E\+T\+P\+WM) load modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Load\+Mode\+\_\+\+Ctr\+Eq\+Period@{Load\+Mode\+\_\+\+Ctr\+Eq\+Period}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Load\+Mode\+\_\+\+Ctr\+Eq\+Period@{Load\+Mode\+\_\+\+Ctr\+Eq\+Period}}}\mbox{\Hypertarget{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1aa8567bb03845b409fab4e1f875049147}\label{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1aa8567bb03845b409fab4e1f875049147}} 
+Load\+Mode\+\_\+\+Ctr\+Eq\+Period&Load on C\+TR = Zero \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Load\+Mode\+\_\+\+Ctr\+Eq\+Zero\+Period@{Load\+Mode\+\_\+\+Ctr\+Eq\+Zero\+Period}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Load\+Mode\+\_\+\+Ctr\+Eq\+Zero\+Period@{Load\+Mode\+\_\+\+Ctr\+Eq\+Zero\+Period}}}\mbox{\Hypertarget{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1ade47eb4e4ce571b702f4cddf4b045b31}\label{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1ade47eb4e4ce571b702f4cddf4b045b31}} 
+Load\+Mode\+\_\+\+Ctr\+Eq\+Zero\+Period&Load on C\+TR = P\+RD \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Load\+Mode\+\_\+\+Freeze@{Load\+Mode\+\_\+\+Freeze}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Load\+Mode\+\_\+\+Freeze@{Load\+Mode\+\_\+\+Freeze}}}\mbox{\Hypertarget{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1a75e6a8dc720e1a8faa4cda1f77972416}\label{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1a75e6a8dc720e1a8faa4cda1f77972416}} 
+Load\+Mode\+\_\+\+Freeze&Load on C\+TR = Zero or C\+TR = P\+RD \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 120 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+121 \{                                                                      
+122     LoadMode\_CtrEqZero       = 0U, 
+123     \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1aa8567bb03845b409fab4e1f875049147}{LoadMode\_CtrEqPeriod}}     = 1U, 
+124     \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1ade47eb4e4ce571b702f4cddf4b045b31}{LoadMode\_CtrEqZeroPeriod}} = 2U, 
+125     \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1a75e6a8dc720e1a8faa4cda1f77972416}{LoadMode\_Freeze}}          = 3U  
+126 \} \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}{etpwmLoadMode\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_aad909e1a09a8833e36cbbabebf5279ee}\label{etpwm_8h_aad909e1a09a8833e36cbbabebf5279ee}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Run\+Mode\+\_\+t@{etpwm\+Run\+Mode\+\_\+t}}
+\index{etpwm\+Run\+Mode\+\_\+t@{etpwm\+Run\+Mode\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Run\+Mode\+\_\+t}{etpwmRunMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279ee}{etpwm\+Run\+Mode\+\_\+t}}}
+
+
+
+Enumeration to the behavior of the e\+P\+WM time-\/base counter during emulation events. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Decr@{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Decr}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Run\+Mode\+\_\+\+Soft\+Stop\+After\+Decr@{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Decr}}}\mbox{\Hypertarget{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea9770666c91079e186ce34d0d10d13bd1}\label{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea9770666c91079e186ce34d0d10d13bd1}} 
+Run\+Mode\+\_\+\+Soft\+Stop\+After\+Decr&Stop after the next time-\/base counter increment \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Cycle@{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Cycle}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Run\+Mode\+\_\+\+Soft\+Stop\+After\+Cycle@{Run\+Mode\+\_\+\+Soft\+Stop\+After\+Cycle}}}\mbox{\Hypertarget{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eeae4640677efc5cb3d768bd61516a7727f}\label{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eeae4640677efc5cb3d768bd61516a7727f}} 
+Run\+Mode\+\_\+\+Soft\+Stop\+After\+Cycle&Stop after the next time-\/base counter decrement \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Run\+Mode\+\_\+\+Free\+Run@{Run\+Mode\+\_\+\+Free\+Run}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Run\+Mode\+\_\+\+Free\+Run@{Run\+Mode\+\_\+\+Free\+Run}}}\mbox{\Hypertarget{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea124a8a1b6d18ee42e40467956b44b817}\label{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea124a8a1b6d18ee42e40467956b44b817}} 
+Run\+Mode\+\_\+\+Free\+Run&Stop when counter completes a whole cycle \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 110 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+111 \{
+112     RunMode\_SoftStopAfterIncr  = ((uint16)0U << 14U), 
+113     \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea9770666c91079e186ce34d0d10d13bd1}{RunMode\_SoftStopAfterDecr}}  = ((uint16)0U << 14U), 
+114     \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eeae4640677efc5cb3d768bd61516a7727f}{RunMode\_SoftStopAfterCycle}} = ((uint16)1U << 14U), 
+115     \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279eea124a8a1b6d18ee42e40467956b44b817}{RunMode\_FreeRun}}            = ((uint16)2U << 14U)  
+116 \} \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279ee}{etpwmRunMode\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0b}\label{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0b}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Sync\+Out\+\_\+t@{etpwm\+Sync\+Out\+\_\+t}}
+\index{etpwm\+Sync\+Out\+\_\+t@{etpwm\+Sync\+Out\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Sync\+Out\+\_\+t}{etpwmSyncOut\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0b}{etpwm\+Sync\+Out\+\_\+t}}}
+
+
+
+Enumeration to select the source of Synchronization Output signal (E\+P\+W\+Mx\+S\+Y\+N\+CO) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sync\+Out\+\_\+\+Ctr\+Eq\+Zero@{Sync\+Out\+\_\+\+Ctr\+Eq\+Zero}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Sync\+Out\+\_\+\+Ctr\+Eq\+Zero@{Sync\+Out\+\_\+\+Ctr\+Eq\+Zero}}}\mbox{\Hypertarget{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba0a8ac5730908d3f8d7998d30defc2e9f}\label{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba0a8ac5730908d3f8d7998d30defc2e9f}} 
+Sync\+Out\+\_\+\+Ctr\+Eq\+Zero&E\+P\+W\+Mx\+S\+Y\+N\+CI \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sync\+Out\+\_\+\+Ctr\+Eq\+CmpB@{Sync\+Out\+\_\+\+Ctr\+Eq\+CmpB}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Sync\+Out\+\_\+\+Ctr\+Eq\+CmpB@{Sync\+Out\+\_\+\+Ctr\+Eq\+CmpB}}}\mbox{\Hypertarget{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0bae4a5afb6aee1fa8d75913bb95706b54a}\label{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0bae4a5afb6aee1fa8d75913bb95706b54a}} 
+Sync\+Out\+\_\+\+Ctr\+Eq\+CmpB&C\+TR = zero \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sync\+Out\+\_\+\+Disable@{Sync\+Out\+\_\+\+Disable}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Sync\+Out\+\_\+\+Disable@{Sync\+Out\+\_\+\+Disable}}}\mbox{\Hypertarget{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba4a75d001d37741373e32fbb6afe74118}\label{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba4a75d001d37741373e32fbb6afe74118}} 
+Sync\+Out\+\_\+\+Disable&C\+TR = C\+M\+PB \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 90 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+91 \{
+92     SyncOut\_EPWMxSYNCI = 0x00U, 
+93     \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba0a8ac5730908d3f8d7998d30defc2e9f}{SyncOut\_CtrEqZero}}  = 0x10U, 
+94     \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0bae4a5afb6aee1fa8d75913bb95706b54a}{SyncOut\_CtrEqCmpB}}  = 0x20U, 
+95     \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0ba4a75d001d37741373e32fbb6afe74118}{SyncOut\_Disable}}    = 0x30U  
+96 \} \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0b}{etpwmSyncOut\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}\label{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Trip\+\_\+t@{etpwm\+Trip\+\_\+t}}
+\index{etpwm\+Trip\+\_\+t@{etpwm\+Trip\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Trip\+\_\+t}{etpwmTrip\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}}}
+
+
+
+Enumeration to define the pulse width modulation (E\+T\+P\+WM) trip events. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{One\+Shot\+Trip@{One\+Shot\+Trip}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!One\+Shot\+Trip@{One\+Shot\+Trip}}}\mbox{\Hypertarget{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fdad6781e8cfb27a25479f59063dd7508fe}\label{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fdad6781e8cfb27a25479f59063dd7508fe}} 
+One\+Shot\+Trip&Trip Zone Cycle-\/\+By-\/\+Cycle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+E\+V\+T1\+\_\+inter@{D\+C\+A\+E\+V\+T1\+\_\+inter}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+E\+V\+T1\+\_\+inter@{D\+C\+A\+E\+V\+T1\+\_\+inter}}}\mbox{\Hypertarget{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda12eef72d95f496764e9bd4240cdfb240}\label{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda12eef72d95f496764e9bd4240cdfb240}} 
+D\+C\+A\+E\+V\+T1\+\_\+inter&Trip\+Zone One-\/shot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+A\+E\+V\+T2\+\_\+inter@{D\+C\+A\+E\+V\+T2\+\_\+inter}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+A\+E\+V\+T2\+\_\+inter@{D\+C\+A\+E\+V\+T2\+\_\+inter}}}\mbox{\Hypertarget{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda31fdbf29a794b768fd639cd0f6a586cd}\label{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda31fdbf29a794b768fd639cd0f6a586cd}} 
+D\+C\+A\+E\+V\+T2\+\_\+inter&Digital Comparator Output A Event 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+E\+V\+T1\+\_\+inter@{D\+C\+B\+E\+V\+T1\+\_\+inter}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+E\+V\+T1\+\_\+inter@{D\+C\+B\+E\+V\+T1\+\_\+inter}}}\mbox{\Hypertarget{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda50e107a3f8d8fdda3799df0fc0e4490a}\label{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda50e107a3f8d8fdda3799df0fc0e4490a}} 
+D\+C\+B\+E\+V\+T1\+\_\+inter&Digital Comparator Output A Event 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+C\+B\+E\+V\+T2\+\_\+inter@{D\+C\+B\+E\+V\+T2\+\_\+inter}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!D\+C\+B\+E\+V\+T2\+\_\+inter@{D\+C\+B\+E\+V\+T2\+\_\+inter}}}\mbox{\Hypertarget{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda4aa458000eb1f7957343884941628d99}\label{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda4aa458000eb1f7957343884941628d99}} 
+D\+C\+B\+E\+V\+T2\+\_\+inter&Digital Comparator Output B Event 1 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 152 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+153 \{
+154     CycleByCycleTrip = ((uint16)1U << 1U), 
+155     \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fdad6781e8cfb27a25479f59063dd7508fe}{OneShotTrip}}      = ((uint16)1U << 2U), 
+156     \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda12eef72d95f496764e9bd4240cdfb240}{DCAEVT1\_inter}}    = ((uint16)1U << 3U), 
+157     \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda31fdbf29a794b768fd639cd0f6a586cd}{DCAEVT2\_inter}}    = ((uint16)1U << 4U), 
+158     \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda50e107a3f8d8fdda3799df0fc0e4490a}{DCBEVT1\_inter}}    = ((uint16)1U << 5U), 
+159     \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fda4aa458000eb1f7957343884941628d99}{DCBEVT2\_inter}}    = ((uint16)1U << 6U)  
+160 \}\mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwmTrip\_t}};
+\end{DoxyCode}
+\mbox{\Hypertarget{etpwm_8h_a5b052cb448b92356db9af191121dd803}\label{etpwm_8h_a5b052cb448b92356db9af191121dd803}} 
+\index{etpwm.\+h@{etpwm.\+h}!etpwm\+Trip\+Zone\+State\+\_\+t@{etpwm\+Trip\+Zone\+State\+\_\+t}}
+\index{etpwm\+Trip\+Zone\+State\+\_\+t@{etpwm\+Trip\+Zone\+State\+\_\+t}!etpwm.\+h@{etpwm.\+h}}
+\subsubsection{\texorpdfstring{etpwm\+Trip\+Zone\+State\+\_\+t}{etpwmTripZoneState\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803}{etpwm\+Trip\+Zone\+State\+\_\+t}}}
+
+
+
+Enumeration to define the action on E\+P\+W\+M\+A/\+E\+P\+W\+MB when a trip event happens. 
+
+\begin{DoxyNote}{Note}
+This enum should be use to populate the struct passed as the parameter to the A\+PI etpwm\+Set\+Trip\+Action 
+\end{DoxyNote}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+High@{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+High}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+High@{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+High}}}\mbox{\Hypertarget{etpwm_8h_a5b052cb448b92356db9af191121dd803a0c31043fdc922c0075f4e8f5780f7a60}\label{etpwm_8h_a5b052cb448b92356db9af191121dd803a0c31043fdc922c0075f4e8f5780f7a60}} 
+Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+High&High-\/\+Impedance state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+Low@{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+Low}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+Low@{Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+Low}}}\mbox{\Hypertarget{etpwm_8h_a5b052cb448b92356db9af191121dd803a08f813d074872073f18fb45b79958f73}\label{etpwm_8h_a5b052cb448b92356db9af191121dd803a08f813d074872073f18fb45b79958f73}} 
+Trip\+Zone\+State\+\_\+\+E\+P\+W\+M\+\_\+\+Low&Force to High state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trip\+Zone\+State\+\_\+\+Do\+Nothing@{Trip\+Zone\+State\+\_\+\+Do\+Nothing}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Trip\+Zone\+State\+\_\+\+Do\+Nothing@{Trip\+Zone\+State\+\_\+\+Do\+Nothing}}}\mbox{\Hypertarget{etpwm_8h_a5b052cb448b92356db9af191121dd803a7b1342ba31a5980b30a0e9203ed3ca33}\label{etpwm_8h_a5b052cb448b92356db9af191121dd803a7b1342ba31a5980b30a0e9203ed3ca33}} 
+Trip\+Zone\+State\+\_\+\+Do\+Nothing&Force to Low state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Force\+Size\+\_\+\+Trip\+Zone\+State@{Force\+Size\+\_\+\+Trip\+Zone\+State}!etpwm.\+h@{etpwm.\+h}}\index{etpwm.\+h@{etpwm.\+h}!Force\+Size\+\_\+\+Trip\+Zone\+State@{Force\+Size\+\_\+\+Trip\+Zone\+State}}}\mbox{\Hypertarget{etpwm_8h_a5b052cb448b92356db9af191121dd803a1253c2e8f0f378de0a20a4dce6455f62}\label{etpwm_8h_a5b052cb448b92356db9af191121dd803a1253c2e8f0f378de0a20a4dce6455f62}} 
+Force\+Size\+\_\+\+Trip\+Zone\+State&Do nothing \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 264 of file etpwm.\+h.
+
+
+\begin{DoxyCode}
+265 \{
+266     TripZoneState\_HighImp   = 0U, 
+267     \mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a0c31043fdc922c0075f4e8f5780f7a60}{TripZoneState\_EPWM\_High}} = 1U, 
+268     \mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a08f813d074872073f18fb45b79958f73}{TripZoneState\_EPWM\_Low}}  = 2U, 
+269     \mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a7b1342ba31a5980b30a0e9203ed3ca33}{TripZoneState\_DoNothing}} = 3U, 
+270 
+271     \mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803a1253c2e8f0f378de0a20a4dce6455f62}{ForceSize\_TripZoneState}} = 0xFFFFU 
+272 \} \mbox{\hyperlink{etpwm_8h_a5b052cb448b92356db9af191121dd803}{etpwmTripZoneState\_t}};
+\end{DoxyCode}

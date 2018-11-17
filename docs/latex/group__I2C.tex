@@ -1,0 +1,1323 @@
+\hypertarget{group__I2C}{}\section{I2C}
+\label{group__I2C}\index{I2C@{I2C}}
+
+
+Inter-\/\+Integrated Circuit Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__I2C_ga1e0a81a1ad1fd7710ca189236e3e5476}{i2c\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the i2c Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_gac5e773936f2d649255caf6f27d67d131}{i2c\+Set\+Own\+Add}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 oadd)
+\begin{DoxyCompactList}\small\item\em Set I2C Own Address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_gadd3ce8bc3e8614df44cfef76f9ce3aba}{i2c\+Set\+Slave\+Add}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 sadd)
+\begin{DoxyCompactList}\small\item\em Set Port Direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_gac5f3d9215b5a06ba464a3f4de4085bb0}{i2c\+Set\+Baudrate}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 baud)
+\begin{DoxyCompactList}\small\item\em Change baudrate at runtime. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__I2C_ga8ae545c7c63f15274a92191efbd81ed4}{i2c\+Is\+Tx\+Ready}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Check if Tx buffer empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_gab75d636550cd8d371e1204ee5040824a}{i2c\+Send\+Byte}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint8 byte)
+\begin{DoxyCompactList}\small\item\em Send Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga9f446d13bbe8b76a03f1e6ddcb1da36a}{i2c\+Send}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Send Data. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__I2C_ga0ce73ebbc066986b3cbbd6c56fd14a9c}{i2c\+Is\+Rx\+Ready}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Check if Rx buffer full. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__I2C_ga529e9c7cd0d7d76c6604338a651f2d71}{i2c\+Is\+Stop\+Detected}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Check if Stop Condition Detected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_gaa381ceb41f9cae181b1e25f6094f5de0}{i2c\+Clear\+S\+CD}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Clears the Stop condition detect flags. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__I2C_ga2f5bd4c5af5a6ec9297c22d16f201630}{i2c\+Rx\+Error}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Return Rx Error flags. \end{DoxyCompactList}\item 
+uint8 \mbox{\hyperlink{group__I2C_gad48630f360b59984accf504f463e19ab}{i2c\+Receive\+Byte}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Receive Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga1df310e161fd03c20594f10437c3b66c}{i2c\+Receive}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Receive Data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga24862ff10cfc010821e2295fb9930136}{i2c\+Enable\+Notification}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Enable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga7be73e46b763d26e1de740449635006b}{i2c\+Disable\+Notification}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Disable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga98e7d9411ca40a855eb3206cf3d875a3}{i2c\+Set\+Start}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Set i2c start condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga65c7cf88cef1e3164da5fda0ecf77c78}{i2c\+Set\+Stop}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Set i2c stop condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga66620637f03669285b546eada30bd6c2}{i2c\+Set\+Count}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 cnt)
+\begin{DoxyCompactList}\small\item\em Set i2c data count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_gac844de7b323a732e81c2647231a35e6b}{i2c\+Enable\+Loopback}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga2c7b51e17f17e8cff5db50b18cf31bfa}{i2c\+Disable\+Loopback}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_gab52915ececd5be5a2956a2f93255981e}{i2c\+Set\+Mode}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 mode)
+\begin{DoxyCompactList}\small\item\em Sets Master or Slave mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga12181f4e0410fe3d21de4995eee72ec9}{i2c\+Get\+Config\+Value}} (\mbox{\hyperlink{structi2c__config__reg}{i2c\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the I2C configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga0c1c6c373aa51b8a93cb18f901f9e955}{i2c\+Set\+Direction}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 dir)
+\begin{DoxyCompactList}\small\item\em Sets I2C as transmitter or receiver. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__I2C_ga09ef340f59e7eb274327077b26d77572}{i2c\+Is\+Master\+Ready}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Indicates whether M\+ST bit is set or cleared to indicate that stop condition was generated. This A\+PI should be called after Master Tx or Rx to check if the transaction is complete. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__I2C_gad79e4ee925c6880eb644329b6701a292}{i2c\+Is\+Bus\+Busy}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c)
+\begin{DoxyCompactList}\small\item\em Returns the state of the bus busy flag. True if it is set and false otherwise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__I2C_ga5ecfeeec39ad8a6788eade4f0c89eb62}{i2c\+Notification}} (\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$i2c, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Inter-\/\+Integrated Circuit Module. 
+
+The I2C is a multi-\/master communication module providing an interface between the Texas Instruments (TI) microcontroller and devices compliant with Philips Semiconductor I2\+C-\/bus specification version 2.\+1 and connected by an I2\+Cbus. This module will support any slave or master I2C compatible device.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__i2c_8h}{reg\+\_\+i2c.\+h}}
+\item \mbox{\hyperlink{i2c_8h_source}{i2c.\+h}}
+\item \mbox{\hyperlink{i2c_8c}{i2c.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__I2C_gaa381ceb41f9cae181b1e25f6094f5de0}\label{group__I2C_gaa381ceb41f9cae181b1e25f6094f5de0}} 
+\index{I2C@{I2C}!i2c\+Clear\+S\+CD@{i2c\+Clear\+S\+CD}}
+\index{i2c\+Clear\+S\+CD@{i2c\+Clear\+S\+CD}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Clear\+S\+C\+D()}{i2cClearSCD()}}
+{\footnotesize\ttfamily void i2c\+Clear\+S\+CD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Clears the Stop condition detect flags. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+This function is called to clear the Stop condition detect(\+S\+C\+D) flag 
+
+Definition at line 491 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+492 \{
+493 \textcolor{comment}{/* USER CODE BEGIN (23) */}
+494 \textcolor{comment}{/* USER CODE END */}
+495 
+496     i2c->STR = (uint32)I2C\_SCD\_INT;
+497 
+498 \textcolor{comment}{/* USER CODE BEGIN (24) */}
+499 \textcolor{comment}{/* USER CODE END */}
+500 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga2c7b51e17f17e8cff5db50b18cf31bfa}\label{group__I2C_ga2c7b51e17f17e8cff5db50b18cf31bfa}} 
+\index{I2C@{I2C}!i2c\+Disable\+Loopback@{i2c\+Disable\+Loopback}}
+\index{i2c\+Disable\+Loopback@{i2c\+Disable\+Loopback}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Disable\+Loopback()}{i2cDisableLoopback()}}
+{\footnotesize\ttfamily void i2c\+Disable\+Loopback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Enable Loopback mode for self test. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+This function disable the Loopback mode. 
+
+Definition at line 612 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+613 \{
+614 \textcolor{comment}{/* USER CODE BEGIN (30) */}
+615 \textcolor{comment}{/* USER CODE END */}
+616 
+617     \textcolor{comment}{/* Disable Loopback Mode */}
+618     i2c->MDR &= 0xFFFFFFBFU;
+619 
+620 \textcolor{comment}{/* USER CODE BEGIN (31) */}
+621 \textcolor{comment}{/* USER CODE END */}
+622 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga7be73e46b763d26e1de740449635006b}\label{group__I2C_ga7be73e46b763d26e1de740449635006b}} 
+\index{I2C@{I2C}!i2c\+Disable\+Notification@{i2c\+Disable\+Notification}}
+\index{i2c\+Disable\+Notification@{i2c\+Disable\+Notification}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Disable\+Notification()}{i2cDisableNotification()}}
+{\footnotesize\ttfamily i2c\+Disable\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Disable interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Interrupts to be disabled, can be ored value of\+: i2c\+\_\+\+F\+E\+\_\+\+I\+NT -\/ framing error, i2c\+\_\+\+O\+E\+\_\+\+I\+NT -\/ overrun error, i2c\+\_\+\+P\+E\+\_\+\+I\+NT -\/ parity error, i2c\+\_\+\+R\+X\+\_\+\+I\+NT -\/ receive buffer ready, i2c\+\_\+\+T\+X\+\_\+\+I\+NT -\/ transmit buffer ready, i2c\+\_\+\+W\+A\+K\+E\+\_\+\+I\+NT -\/ wakeup, i2c\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT -\/ break detect \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 664 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+665 \{
+666     uint32 int\_mask;
+667 
+668 \textcolor{comment}{/* USER CODE BEGIN (33) */}
+669 \textcolor{comment}{/* USER CODE END */}
+670 
+671     g\_i2cTransfer\_t.mode &= (uint32)(~(flags & (uint32)I2C\_TX\_INT));
+672     int\_mask              = i2c->IMR &(uint32)(~(uint32)(flags | (uint32)I2C\_TX\_INT));
+673     i2c->IMR              = int\_mask;
+674 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gac844de7b323a732e81c2647231a35e6b}\label{group__I2C_gac844de7b323a732e81c2647231a35e6b}} 
+\index{I2C@{I2C}!i2c\+Enable\+Loopback@{i2c\+Enable\+Loopback}}
+\index{i2c\+Enable\+Loopback@{i2c\+Enable\+Loopback}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Enable\+Loopback()}{i2cEnableLoopback()}}
+{\footnotesize\ttfamily void i2c\+Enable\+Loopback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Enable Loopback mode for self test. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+This function enables the Loopback mode for self test. 
+
+Definition at line 591 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+592 \{
+593 \textcolor{comment}{/* USER CODE BEGIN (28) */}
+594 \textcolor{comment}{/* USER CODE END */}
+595 
+596     \textcolor{comment}{/* enable digital loopback    */}
+597     i2c->MDR |= ((uint32)1U << 6U);
+598 
+599 \textcolor{comment}{/* USER CODE BEGIN (29) */}
+600 \textcolor{comment}{/* USER CODE END */}
+601 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga24862ff10cfc010821e2295fb9930136}\label{group__I2C_ga24862ff10cfc010821e2295fb9930136}} 
+\index{I2C@{I2C}!i2c\+Enable\+Notification@{i2c\+Enable\+Notification}}
+\index{i2c\+Enable\+Notification@{i2c\+Enable\+Notification}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Enable\+Notification()}{i2cEnableNotification()}}
+{\footnotesize\ttfamily i2c\+Enable\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Enable interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Interrupts to be enabled, can be ored value of\+: i2c\+\_\+\+F\+E\+\_\+\+I\+NT -\/ framing error, i2c\+\_\+\+O\+E\+\_\+\+I\+NT -\/ overrun error, i2c\+\_\+\+P\+E\+\_\+\+I\+NT -\/ parity error, i2c\+\_\+\+R\+X\+\_\+\+I\+NT -\/ receive buffer ready, i2c\+\_\+\+T\+X\+\_\+\+I\+NT -\/ transmit buffer ready, i2c\+\_\+\+W\+A\+K\+E\+\_\+\+I\+NT -\/ wakeup, i2c\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT -\/ break detect \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 639 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+640 \{
+641 
+642 \textcolor{comment}{/* USER CODE BEGIN (32) */}
+643 \textcolor{comment}{/* USER CODE END */}
+644 
+645     g\_i2cTransfer\_t.mode |= (flags & (uint32)I2C\_TX\_INT);
+646     i2c->IMR              = (flags & (uint32)(~(uint32)I2C\_TX\_INT));
+647 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga12181f4e0410fe3d21de4995eee72ec9}\label{group__I2C_ga12181f4e0410fe3d21de4995eee72ec9}} 
+\index{I2C@{I2C}!i2c\+Get\+Config\+Value@{i2c\+Get\+Config\+Value}}
+\index{i2c\+Get\+Config\+Value@{i2c\+Get\+Config\+Value}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Get\+Config\+Value()}{i2cGetConfigValue()}}
+{\footnotesize\ttfamily void i2c\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structi2c__config__reg}{i2c\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the I2C configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 720 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+721 \{
+722     \textcolor{keywordflow}{if} (type == InitialValue)
+723     \{
+724         config\_reg->CONFIG\_OAR  = I2C\_OAR\_CONFIGVALUE;
+725         config\_reg->CONFIG\_IMR  = I2C\_IMR\_CONFIGVALUE;
+726         config\_reg->CONFIG\_CLKL = I2C\_CLKL\_CONFIGVALUE;
+727         config\_reg->CONFIG\_CLKH = I2C\_CLKH\_CONFIGVALUE;
+728         config\_reg->CONFIG\_CNT  = I2C\_CNT\_CONFIGVALUE;
+729         config\_reg->CONFIG\_SAR  = I2C\_SAR\_CONFIGVALUE;
+730         config\_reg->CONFIG\_MDR  = I2C\_MDR\_CONFIGVALUE;
+731         config\_reg->CONFIG\_EMDR = I2C\_EMDR\_CONFIGVALUE;
+732         config\_reg->CONFIG\_PSC  = I2C\_PSC\_CONFIGVALUE;
+733         config\_reg->CONFIG\_DMAC = I2C\_DMAC\_CONFIGVALUE;
+734         config\_reg->CONFIG\_FUN  = I2C\_FUN\_CONFIGVALUE;
+735         config\_reg->CONFIG\_DIR  = I2C\_DIR\_CONFIGVALUE;
+736         config\_reg->CONFIG\_ODR  = I2C\_ODR\_CONFIGVALUE;
+737         config\_reg->CONFIG\_PD   = I2C\_PD\_CONFIGVALUE;
+738         config\_reg->CONFIG\_PSL  = I2C\_PSL\_CONFIGVALUE;
+739     \}
+740     \textcolor{keywordflow}{else}
+741     \{
+742     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+743         config\_reg->CONFIG\_OAR  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->OAR;
+744         config\_reg->CONFIG\_IMR  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->IMR;
+745         config\_reg->CONFIG\_CLKL = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->CKL;
+746         config\_reg->CONFIG\_CLKH = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->CKH;
+747         config\_reg->CONFIG\_CNT  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->CNT;
+748         config\_reg->CONFIG\_SAR  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->SAR;
+749         config\_reg->CONFIG\_MDR  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->MDR;
+750         config\_reg->CONFIG\_EMDR = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->EMDR;
+751         config\_reg->CONFIG\_PSC  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PSC;
+752         config\_reg->CONFIG\_DMAC = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->DMACR;
+753         config\_reg->CONFIG\_FUN  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PFNC;
+754         config\_reg->CONFIG\_DIR  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->DIR;
+755         config\_reg->CONFIG\_ODR  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PDR;
+756         config\_reg->CONFIG\_PD   = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PDIS;
+757         config\_reg->CONFIG\_PSL  = \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PSEL;
+758     \}
+759 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga1e0a81a1ad1fd7710ca189236e3e5476}\label{group__I2C_ga1e0a81a1ad1fd7710ca189236e3e5476}} 
+\index{I2C@{I2C}!i2c\+Init@{i2c\+Init}}
+\index{i2c\+Init@{i2c\+Init}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Init()}{i2cInit()}}
+{\footnotesize\ttfamily void i2c\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the i2c Driver. 
+
+This function initializes the i2c module. {\bfseries initialize} {\bfseries I2C} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item i2c Enter reset ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c mode ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c Backward Compatibility mode ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Disable D\+MA ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c data count ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item disable all interrupts ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set prescale ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set clock rate ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c pins functional mode ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c pins default output value ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c pins output direction ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c pins open drain enable ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c pins pullup/pulldown enable ~\newline
+~\newline
+~\newline
+~\newline
+
+\item set i2c pins pullup/pulldown select ~\newline
+~\newline
+~\newline
+
+\item set interrupt enable ~\newline
+~\newline
+
+\item i2c Out of reset ~\newline
+
+\item initialize global transfer variables 
+\end{DoxyItemize}
+
+Definition at line 74 of file i2c.\+c.
+
+
+
+References i2c\+R\+E\+G1.
+
+
+\begin{DoxyCode}
+75 \{
+76 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+77 \textcolor{comment}{/* USER CODE END */}
+78 
+80 
+82     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->MDR = (uint32)((uint32)0U << 5U);
+83 
+85     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->MDR =   (uint32)((uint32)0U << 15U)     \textcolor{comment}{/* nack mode                         */}
+86                    | (uint32)((uint32)0U << 14U)     \textcolor{comment}{/* free running                      */}
+87                    | (uint32)(0U)              \textcolor{comment}{/* start condition - master only     */}
+88                    | (uint32)((uint32)1U <<11U)      \textcolor{comment}{/* stop condition                    */}
+89                    | (uint32)((uint32)1U <<10U)      \textcolor{comment}{/* Master/Slave mode                 */}
+90                    | (uint32)((uint32)I2C\_TRANSMITTER)     \textcolor{comment}{/* Transmitter/receiver              */}
+91                    | (uint32)((uint32)I2C\_7BIT\_AMODE)      \textcolor{comment}{/* xpanded address                   */}
+92                    | (uint32)((uint32)0U << 7U)      \textcolor{comment}{/* repeat mode                       */}
+93                    | (uint32)((uint32)0U << 6U)     \textcolor{comment}{/* digital loop back                  */}
+94                    | (uint32)((uint32)0U << 4U)     \textcolor{comment}{/* start byte - master only          */}
+95                    | (uint32)((uint32)0U << 3U)           \textcolor{comment}{/* free data format                  */}
+96                    | (uint32)(I2C\_8\_BIT);   \textcolor{comment}{/* bit count                         */}
+97 
+98 
+100     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->EMDR = 0U;
+101 
+103     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->DMACR = 0x00U;
+104 
+106     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->CNT = 8U;
+107 
+109     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->IMR = 0x00U;
+110 
+112     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PSC = 9U;
+113 
+115     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->CKH = 35U;
+116     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->CKL = 35U;
+117 
+119     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PFNC = (0U);
+120 
+122     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->DOUT = (uint32)((uint32)0U << 1U)     \textcolor{comment}{/* sda pin */}
+123                   | (uint32)(0U);     \textcolor{comment}{/* scl pin */}
+124 
+126     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->DIR  = (uint32)((uint32)0U << 1U)     \textcolor{comment}{/* sda pin */}
+127                   | (uint32)(0U);     \textcolor{comment}{/* scl pin */}
+128 
+130     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PDR  = (uint32)((uint32)0U << 1U)     \textcolor{comment}{/* sda pin */}
+131                   | (uint32)(0U);     \textcolor{comment}{/* scl pin */}
+132 
+134     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PDIS = (uint32)((uint32)0U << 1U)     \textcolor{comment}{/* sda pin */}
+135                   | (uint32)(0U);     \textcolor{comment}{/* scl pin */}
+136 
+138     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->PSEL = (uint32)((uint32)1U << 1U)     \textcolor{comment}{/* sda pin */}
+139                   | (uint32)(1U);     \textcolor{comment}{/* scl pin */}
+140 
+142     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->IMR  = (uint32)((uint32)0U << 6U)     \textcolor{comment}{/* Address as slave interrupt      */}
+143                   | (uint32)((uint32)0U << 5U)     \textcolor{comment}{/* Stop Condition detect interrupt */}
+144                   | (uint32)((uint32)0U << 4U)     \textcolor{comment}{/* Transmit data ready interrupt   */}
+145                   | (uint32)((uint32)0U << 3U)     \textcolor{comment}{/* Receive data ready interrupt    */}
+146                   | (uint32)((uint32)0U << 2U)     \textcolor{comment}{/* Register Access ready interrupt */}
+147                   | (uint32)((uint32)0U << 1U)     \textcolor{comment}{/* No Acknowledgement interrupt    */}
+148                   | (uint32)((uint32)0U);     \textcolor{comment}{/* Arbitration Lost interrupt      */}
+149 
+151     \mbox{\hyperlink{reg__i2c_8h_a54937525fe89322407ede2bc3a5d0e4c}{i2cREG1}}->MDR |= (uint32)I2C\_RESET\_OUT;
+152 
+154     g\_i2cTransfer\_t.mode   = (uint32)0U << 4U;
+155     g\_i2cTransfer\_t.length = 0U;
+156 
+157 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+158 \textcolor{comment}{/* USER CODE END */}
+159 
+160 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gad79e4ee925c6880eb644329b6701a292}\label{group__I2C_gad79e4ee925c6880eb644329b6701a292}} 
+\index{I2C@{I2C}!i2c\+Is\+Bus\+Busy@{i2c\+Is\+Bus\+Busy}}
+\index{i2c\+Is\+Bus\+Busy@{i2c\+Is\+Bus\+Busy}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Is\+Bus\+Busy()}{i2cIsBusBusy()}}
+{\footnotesize\ttfamily i2c\+Is\+Bus\+Busy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Returns the state of the bus busy flag. True if it is set and false otherwise. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value to indicate whether BB bit is set in the status register.
+\begin{DoxyItemize}
+\item T\+R\+UE, if BB bit is set.
+\item F\+A\+L\+SE, if BB bit is cleared. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line 829 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+830 \{
+831     \textcolor{keywordtype}{bool} retVal = 0U;
+832 \textcolor{comment}{/* USER CODE BEGIN (51) */}
+833 \textcolor{comment}{/* USER CODE END */}
+834 
+835     \textcolor{comment}{/* check if BB bit is set. */}
+836     \textcolor{keywordflow}{if}((i2c->STR & I2C\_BUSBUSY) == I2C\_BUSBUSY)
+837     \{
+838         retVal = \textcolor{keyword}{true};
+839     \}
+840     \textcolor{keywordflow}{else}
+841     \{
+842         retVal = \textcolor{keyword}{false};
+843     \}
+844     \textcolor{keywordflow}{return} retVal;
+845 
+846 \textcolor{comment}{/* USER CODE BEGIN (52) */}
+847 \textcolor{comment}{/* USER CODE END */}
+848 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga09ef340f59e7eb274327077b26d77572}\label{group__I2C_ga09ef340f59e7eb274327077b26d77572}} 
+\index{I2C@{I2C}!i2c\+Is\+Master\+Ready@{i2c\+Is\+Master\+Ready}}
+\index{i2c\+Is\+Master\+Ready@{i2c\+Is\+Master\+Ready}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Is\+Master\+Ready()}{i2cIsMasterReady()}}
+{\footnotesize\ttfamily i2c\+Is\+Master\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Indicates whether M\+ST bit is set or cleared to indicate that stop condition was generated. This A\+PI should be called after Master Tx or Rx to check if the transaction is complete. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value to indicate whether M\+ST bit is cleared after S\+T\+OP bit is generated.
+\begin{DoxyItemize}
+\item T\+R\+UE, if M\+ST bit is cleared.
+\item F\+A\+L\+SE, if M\+ST bit is set. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line 798 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+799 \{
+800     \textcolor{keywordtype}{bool} retVal = 0U;
+801 \textcolor{comment}{/* USER CODE BEGIN (49) */}
+802 \textcolor{comment}{/* USER CODE END */}
+803 
+804     \textcolor{comment}{/* check if MST bit is cleared. */}
+805     \textcolor{keywordflow}{if}((i2c->MDR & I2C\_MASTER) == 0)
+806     \{
+807         retVal = \textcolor{keyword}{true};
+808     \}
+809     \textcolor{keywordflow}{else}
+810     \{
+811         retVal = \textcolor{keyword}{false};
+812     \}
+813     \textcolor{keywordflow}{return} retVal;
+814 
+815 \textcolor{comment}{/* USER CODE BEGIN (50) */}
+816 \textcolor{comment}{/* USER CODE END */}
+817 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga0ce73ebbc066986b3cbbd6c56fd14a9c}\label{group__I2C_ga0ce73ebbc066986b3cbbd6c56fd14a9c}} 
+\index{I2C@{I2C}!i2c\+Is\+Rx\+Ready@{i2c\+Is\+Rx\+Ready}}
+\index{i2c\+Is\+Rx\+Ready@{i2c\+Is\+Rx\+Ready}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Is\+Rx\+Ready()}{i2cIsRxReady()}}
+{\footnotesize\ttfamily uint32 i2c\+Is\+Rx\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Check if Rx buffer full. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Rx ready flag
+\end{DoxyReturn}
+Checks to see if the Rx buffer full flag is set, returns 0 is flags not set otherwise will return the Rx flag itself. 
+
+Definition at line 425 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+426 \{
+427 \textcolor{comment}{/* USER CODE BEGIN (19) */}
+428 \textcolor{comment}{/* USER CODE END */}
+429 
+430     \textcolor{keywordflow}{return} i2c->STR & (uint32)I2C\_RX\_INT;
+431 
+432 \textcolor{comment}{/* USER CODE BEGIN (20) */}
+433 \textcolor{comment}{/* USER CODE END */}
+434 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga529e9c7cd0d7d76c6604338a651f2d71}\label{group__I2C_ga529e9c7cd0d7d76c6604338a651f2d71}} 
+\index{I2C@{I2C}!i2c\+Is\+Stop\+Detected@{i2c\+Is\+Stop\+Detected}}
+\index{i2c\+Is\+Stop\+Detected@{i2c\+Is\+Stop\+Detected}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Is\+Stop\+Detected()}{i2cIsStopDetected()}}
+{\footnotesize\ttfamily uint32 i2c\+Is\+Stop\+Detected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Check if Stop Condition Detected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Stop Condition Detected flag
+\end{DoxyReturn}
+Checks to see if the Stop Condition Detected flag is set, returns 0 if flags not set otherwise will return the Stop Condition Detected flag itself. 
+
+Definition at line 449 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+450 \{
+451     \textcolor{keywordflow}{return} i2c->STR & (uint32)I2C\_SCD\_INT;
+452 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga8ae545c7c63f15274a92191efbd81ed4}\label{group__I2C_ga8ae545c7c63f15274a92191efbd81ed4}} 
+\index{I2C@{I2C}!i2c\+Is\+Tx\+Ready@{i2c\+Is\+Tx\+Ready}}
+\index{i2c\+Is\+Tx\+Ready@{i2c\+Is\+Tx\+Ready}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Is\+Tx\+Ready()}{i2cIsTxReady()}}
+{\footnotesize\ttfamily uint32 i2c\+Is\+Tx\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Check if Tx buffer empty. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The TX ready flag
+\end{DoxyReturn}
+Checks to see if the Tx buffer ready flag is set, returns 0 is flags not set otherwise will return the Tx flag itself. 
+
+Definition at line 308 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+309 \{
+310 \textcolor{comment}{/* USER CODE BEGIN (13) */}
+311 \textcolor{comment}{/* USER CODE END */}
+312 
+313     \textcolor{keywordflow}{return} i2c->STR & (uint32)I2C\_TX\_INT;
+314 
+315 \textcolor{comment}{/* USER CODE BEGIN (14) */}
+316 \textcolor{comment}{/* USER CODE END */}
+317 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga5ecfeeec39ad8a6788eade4f0c89eb62}\label{group__I2C_ga5ecfeeec39ad8a6788eade4f0c89eb62}} 
+\index{I2C@{I2C}!i2c\+Notification@{i2c\+Notification}}
+\index{i2c\+Notification@{i2c\+Notification}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Notification()}{i2cNotification()}}
+{\footnotesize\ttfamily void i2c\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ I2C module base address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ copy of error interrupt flags\\
+\hline
+\end{DoxyParams}
+This is a callback that is provided by the application and is called apon an interrupt. The parameter passed to the callback is a copy of the interrupt flag register. 
+
+Definition at line 149 of file notification.\+c.
+
+
+\begin{DoxyCode}
+150 \{
+151 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+152 \textcolor{comment}{/* USER CODE BEGIN (21) */}
+153 \textcolor{comment}{/* USER CODE END */}
+154 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga1df310e161fd03c20594f10437c3b66c}\label{group__I2C_ga1df310e161fd03c20594f10437c3b66c}} 
+\index{I2C@{I2C}!i2c\+Receive@{i2c\+Receive}}
+\index{i2c\+Receive@{i2c\+Receive}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Receive()}{i2cReceive()}}
+{\footnotesize\ttfamily void i2c\+Receive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{length,  }\item[{uint8 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Receive Data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em length} & -\/ number of data words to transfer \\
+\hline
+\mbox{\tt in}  & {\em data} & -\/ pointer to data buffer\\
+\hline
+\end{DoxyParams}
+Receive a block of \textquotesingle{}length\textquotesingle{} bytes long and place it into the data buffer pointed to by \textquotesingle{}data\textquotesingle{}. If interrupts have been enabled the data is received using interrupt mode, otherwise polling mode is used. In interrupt mode receive is setup and the routine returns immediately, i2c\+Receive must not be called again until the transfer is complete, when the i2c\+Notification callback will be called. In polling mode, i2c\+Receive will not return until the transfer is complete. 
+
+Definition at line 546 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+547 \{
+548 
+549 \textcolor{comment}{/* USER CODE BEGIN (26) */}
+550 \textcolor{comment}{/* USER CODE END */}
+551     \textcolor{keywordflow}{if} ((i2c->IMR & (uint32)I2C\_RX\_INT) != 0U)
+552     \{
+553         \textcolor{comment}{/* we are in interrupt mode */}
+554         \textcolor{comment}{/* clear error flags */}
+555         i2c->STR = (uint32)I2C\_AL\_INT | (uint32)I2C\_NACK\_INT;
+556 
+557         g\_i2cTransfer\_t.length = length;
+558         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+559         g\_i2cTransfer\_t.data   = data;
+560     \}
+561     \textcolor{keywordflow}{else}
+562     \{
+563         \textcolor{keywordflow}{while} (length > 0U)
+564         \{
+565             \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check
+       for execution sequence" */}
+566             \textcolor{keywordflow}{while} ((i2c->STR & (uint32)I2C\_RX\_INT) == 0U)
+567             \{
+568             \} \textcolor{comment}{/* Wait */}
+569             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+570             *data = ((uint8)i2c->DRR);
+571             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+572             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+573             data++;
+574             length--;
+575         \}
+576     \}
+577 
+578 \textcolor{comment}{/* USER CODE BEGIN (27) */}
+579 \textcolor{comment}{/* USER CODE END */}
+580 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gad48630f360b59984accf504f463e19ab}\label{group__I2C_gad48630f360b59984accf504f463e19ab}} 
+\index{I2C@{I2C}!i2c\+Receive\+Byte@{i2c\+Receive\+Byte}}
+\index{i2c\+Receive\+Byte@{i2c\+Receive\+Byte}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Receive\+Byte()}{i2cReceiveByte()}}
+{\footnotesize\ttfamily uint8 i2c\+Receive\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Receive Byte. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Received byte
+\end{DoxyReturn}
+Receives a single byte in polling mode. If there is not a byte in the receive buffer the routine will wait until one is received. Use i2c\+Is\+Rx\+Ready to check to see if the buffer is full to avoid waiting. 
+
+Definition at line 516 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+517 \{
+518     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+519     \textcolor{keywordflow}{while} ((i2c->STR & (uint32)I2C\_RX\_INT) == 0U)
+520     \{
+521     \} \textcolor{comment}{/* Wait */}
+522 \textcolor{comment}{/* USER CODE BEGIN (25) */}
+523 \textcolor{comment}{/* USER CODE END */}
+524 
+525     \textcolor{keywordflow}{return} ((uint8)i2c->DRR);
+526 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga2f5bd4c5af5a6ec9297c22d16f201630}\label{group__I2C_ga2f5bd4c5af5a6ec9297c22d16f201630}} 
+\index{I2C@{I2C}!i2c\+Rx\+Error@{i2c\+Rx\+Error}}
+\index{i2c\+Rx\+Error@{i2c\+Rx\+Error}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Rx\+Error()}{i2cRxError()}}
+{\footnotesize\ttfamily uint32 i2c\+Rx\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Return Rx Error flags. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Rx error flags
+\end{DoxyReturn}
+Returns the Rx framing, overrun and parity errors flags, also clears the error flags before returning. 
+
+Definition at line 466 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+467 \{
+468     uint32 status = i2c->STR & ((uint32)I2C\_AL\_INT | (uint32)I2C\_NACK\_INT);
+469 
+470 \textcolor{comment}{/* USER CODE BEGIN (21) */}
+471 \textcolor{comment}{/* USER CODE END */}
+472 
+473     i2c->STR = (uint32)((uint32)I2C\_AL\_INT | (uint32)I2C\_NACK\_INT);
+474 
+475 \textcolor{comment}{/* USER CODE BEGIN (22) */}
+476 \textcolor{comment}{/* USER CODE END */}
+477 
+478     \textcolor{keywordflow}{return} status;
+479 
+480 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga9f446d13bbe8b76a03f1e6ddcb1da36a}\label{group__I2C_ga9f446d13bbe8b76a03f1e6ddcb1da36a}} 
+\index{I2C@{I2C}!i2c\+Send@{i2c\+Send}}
+\index{i2c\+Send@{i2c\+Send}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Send()}{i2cSend()}}
+{\footnotesize\ttfamily void i2c\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{length,  }\item[{uint8 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Send Data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em length} & -\/ number of data words to transfer \\
+\hline
+\mbox{\tt in}  & {\em data} & -\/ pointer to data to send\\
+\hline
+\end{DoxyParams}
+Send a block of data pointed to by \textquotesingle{}data\textquotesingle{} and \textquotesingle{}length\textquotesingle{} bytes long. If interrupts have been enabled the data is sent using interrupt mode, otherwise polling mode is used. In interrupt mode transmission of the first byte is started and the routine returns immediately, i2c\+Send must not be called again until the transfer is complete, when the i2c\+Notification callback will be called. In polling mode, i2c\+Send will not return until the transfer is complete.
+
+\begin{DoxyNote}{Note}
+if data word is less than 8 bits, then the data must be left aligned in the data byte. 
+\end{DoxyNote}
+
+
+Definition at line 368 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+369 \{
+370 
+371 \textcolor{comment}{/* USER CODE BEGIN (17) */}
+372 \textcolor{comment}{/* USER CODE END */}
+373 
+374     \textcolor{keywordflow}{if} ((g\_i2cTransfer\_t.mode & (uint32)I2C\_TX\_INT) != 0U)
+375     \{
+376         \textcolor{comment}{/* Interrupt mode */}
+377         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+378         g\_i2cTransfer\_t.data   = data;
+379         \textcolor{comment}{/* start transmit by sending first byte */}
+380         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+381         i2c->DXR = (uint32)(*g\_i2cTransfer\_t.data);
+382         \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+383         \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+384         g\_i2cTransfer\_t.data++;
+385 
+386         \textcolor{comment}{/* Length -1 since one data is written already */}
+387         g\_i2cTransfer\_t.length = (length - 1U);
+388 
+389         \textcolor{comment}{/* Enable Transmit Interrupt */}
+390         i2c->IMR |= (uint32)I2C\_TX\_INT;
+391     \}
+392     \textcolor{keywordflow}{else}
+393     \{
+394         \textcolor{comment}{/* send the data */}
+395         \textcolor{keywordflow}{while} (length > 0U)
+396         \{
+397             \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check
+       for execution sequence" */}
+398             \textcolor{keywordflow}{while} ((i2c->STR & (uint32)I2C\_TX\_INT) == 0U)
+399             \{
+400             \} \textcolor{comment}{/* Wait */}
+401             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+402             i2c->DXR = (uint32)(*data);
+403             \textcolor{comment}{/*SAFETYMCUSW 45 D MR:21.1 <APPROVED> "Valid non NULL input parameters are only allowed in this
+       driver" */}
+404             \textcolor{comment}{/*SAFETYMCUSW 567 S MR:17.1,17.4 <APPROVED> "Pointer increment needed" */}
+405             data++;
+406             length--;
+407         \}
+408     \}
+409 \textcolor{comment}{/* USER CODE BEGIN (18) */}
+410 \textcolor{comment}{/* USER CODE END */}
+411 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gab75d636550cd8d371e1204ee5040824a}\label{group__I2C_gab75d636550cd8d371e1204ee5040824a}} 
+\index{I2C@{I2C}!i2c\+Send\+Byte@{i2c\+Send\+Byte}}
+\index{i2c\+Send\+Byte@{i2c\+Send\+Byte}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Send\+Byte()}{i2cSendByte()}}
+{\footnotesize\ttfamily void i2c\+Send\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint8}]{byte }\end{DoxyParamCaption})}
+
+
+
+Send Byte. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em byte} & -\/ byte to transfer\\
+\hline
+\end{DoxyParams}
+Sends a single byte in polling mode, will wait in the routine until the transmit buffer is empty before sending the byte. Use i2c\+Is\+Tx\+Ready to check for Tx buffer empty before calling i2c\+Send\+Byte to avoid waiting. 
+
+Definition at line 332 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+333 \{
+334 \textcolor{comment}{/* USER CODE BEGIN (15) */}
+335 \textcolor{comment}{/* USER CODE END */}
+336 
+337     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Potentially infinite loop found - Hardware Status check for
+       execution sequence" */}
+338     \textcolor{keywordflow}{while} ((i2c->STR & (uint32)I2C\_TX\_INT) == 0U)
+339     \{
+340     \} \textcolor{comment}{/* Wait */}
+341     i2c->DXR = (uint32)byte;
+342 
+343 \textcolor{comment}{/* USER CODE BEGIN (16) */}
+344 \textcolor{comment}{/* USER CODE END */}
+345 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gac5f3d9215b5a06ba464a3f4de4085bb0}\label{group__I2C_gac5f3d9215b5a06ba464a3f4de4085bb0}} 
+\index{I2C@{I2C}!i2c\+Set\+Baudrate@{i2c\+Set\+Baudrate}}
+\index{i2c\+Set\+Baudrate@{i2c\+Set\+Baudrate}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Baudrate()}{i2cSetBaudrate()}}
+{\footnotesize\ttfamily void i2c\+Set\+Baudrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{baud }\end{DoxyParamCaption})}
+
+
+
+Change baudrate at runtime. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em baud} & -\/ baudrate in K\+Hz\\
+\hline
+\end{DoxyParams}
+Change the i2c baudrate at runtime. The I2C module needs to be taken to reset( n\+I\+RS=0 in I2\+C\+M\+DR) in order to change baud rate. 
+
+Definition at line 200 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+201 \{
+202     uint32 prescale;
+203     uint32 d;
+204     uint32 ck;
+205     float64 vclk = 80.000F * 1000000.0F;
+206     float64 divider= 0.0F;
+207     uint32 temp = 0U;
+208 
+209 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+210 \textcolor{comment}{/* USER CODE END */}
+211 
+212     divider = vclk / 8000000.0F;
+213     prescale = (uint32)divider - 1U;
+214 
+215     \textcolor{keywordflow}{if}(prescale>=2U)
+216     \{
+217         d = 5U;
+218     \}
+219     \textcolor{keywordflow}{else}
+220     \{
+221         d = (prescale != 0U) ? 6U : 7U;
+222     \}
+223 
+224     temp = 2U * baud * 1000U * (prescale + 1U);
+225     divider = vclk / ((float64)temp);
+226     ck = (uint32)divider - d;
+227 
+228     i2c->PSC = prescale;
+229     i2c->CKH = ck;
+230     i2c->CKL = ck;
+231 
+232 \textcolor{comment}{/* USER CODE BEGIN (6) */}
+233 \textcolor{comment}{/* USER CODE END */}
+234 
+235 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga66620637f03669285b546eada30bd6c2}\label{group__I2C_ga66620637f03669285b546eada30bd6c2}} 
+\index{I2C@{I2C}!i2c\+Set\+Count@{i2c\+Set\+Count}}
+\index{i2c\+Set\+Count@{i2c\+Set\+Count}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Count()}{i2cSetCount()}}
+{\footnotesize\ttfamily void i2c\+Set\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{cnt }\end{DoxyParamCaption})}
+
+
+
+Set i2c data count. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em cnt} & -\/ data count Set i2c count to a transfer value after which the stop condition needs to be generated. (Only in Master Mode) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 285 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+286 \{
+287 \textcolor{comment}{/* USER CODE BEGIN (11) */}
+288 \textcolor{comment}{/* USER CODE END */}
+289 
+290     i2c->CNT = cnt;  \textcolor{comment}{/* set i2c count  */}
+291 
+292 \textcolor{comment}{/* USER CODE BEGIN (12) */}
+293 \textcolor{comment}{/* USER CODE END */}
+294 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga0c1c6c373aa51b8a93cb18f901f9e955}\label{group__I2C_ga0c1c6c373aa51b8a93cb18f901f9e955}} 
+\index{I2C@{I2C}!i2c\+Set\+Direction@{i2c\+Set\+Direction}}
+\index{i2c\+Set\+Direction@{i2c\+Set\+Direction}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Direction()}{i2cSetDirection()}}
+{\footnotesize\ttfamily i2c\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{dir }\end{DoxyParamCaption})}
+
+
+
+Sets I2C as transmitter or receiver. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em dir} & -\/ This can be one of the following\+: I2\+C\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+T\+ER -\/ Transmit Mode, I2\+C\+\_\+\+R\+E\+C\+E\+I\+V\+ER -\/ Receive Mode \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 773 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+774 \{
+775 \textcolor{comment}{/* USER CODE BEGIN (47) */}
+776 \textcolor{comment}{/* USER CODE END */}
+777 
+778     \textcolor{comment}{/* set Transmit/Receive mode */}
+779     i2c->MDR  &= ~I2C\_TRANSMITTER;
+780     i2c->MDR  |= dir;
+781 
+782 \textcolor{comment}{/* USER CODE BEGIN (48) */}
+783 \textcolor{comment}{/* USER CODE END */}
+784 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gab52915ececd5be5a2956a2f93255981e}\label{group__I2C_gab52915ececd5be5a2956a2f93255981e}} 
+\index{I2C@{I2C}!i2c\+Set\+Mode@{i2c\+Set\+Mode}}
+\index{i2c\+Set\+Mode@{i2c\+Set\+Mode}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Mode()}{i2cSetMode()}}
+{\footnotesize\ttfamily i2c\+Set\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets Master or Slave mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address \\
+\hline
+\mbox{\tt in}  & {\em mode} & -\/ Mode can be either\+: I2\+C\+\_\+\+M\+A\+S\+T\+ER -\/ Master Mode, I2\+C\+\_\+\+S\+L\+A\+VE -\/ Slave Mode \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 687 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+688 \{
+689     uint32  temp\_mdr;
+690 \textcolor{comment}{/* USER CODE BEGIN (34) */}
+691 \textcolor{comment}{/* USER CODE END */}
+692     
+693     \textcolor{comment}{/* set Master or Slave Mode */}
+694     temp\_mdr  = (i2c->MDR & (~I2C\_MASTER));
+695     i2c->MDR  = (temp\_mdr | mode);
+696 
+697 \textcolor{comment}{/* USER CODE BEGIN (35) */}
+698 \textcolor{comment}{/* USER CODE END */}
+699 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gac5e773936f2d649255caf6f27d67d131}\label{group__I2C_gac5e773936f2d649255caf6f27d67d131}} 
+\index{I2C@{I2C}!i2c\+Set\+Own\+Add@{i2c\+Set\+Own\+Add}}
+\index{i2c\+Set\+Own\+Add@{i2c\+Set\+Own\+Add}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Own\+Add()}{i2cSetOwnAdd()}}
+{\footnotesize\ttfamily void i2c\+Set\+Own\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{oadd }\end{DoxyParamCaption})}
+
+
+
+Set I2C Own Address. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em oadd} & -\/ I2C Own address (7-\/bit or 10 -\/bit address) \\
+\hline
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address Set the Own address of the I2C module. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 171 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+172 \{
+173     i2c->OAR = oadd;  \textcolor{comment}{/* set own address */}
+174 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_gadd3ce8bc3e8614df44cfef76f9ce3aba}\label{group__I2C_gadd3ce8bc3e8614df44cfef76f9ce3aba}} 
+\index{I2C@{I2C}!i2c\+Set\+Slave\+Add@{i2c\+Set\+Slave\+Add}}
+\index{i2c\+Set\+Slave\+Add@{i2c\+Set\+Slave\+Add}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Slave\+Add()}{i2cSetSlaveAdd()}}
+{\footnotesize\ttfamily void i2c\+Set\+Slave\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c,  }\item[{uint32}]{sadd }\end{DoxyParamCaption})}
+
+
+
+Set Port Direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sadd} & -\/ I2C Slave address \\
+\hline
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address Set the Slave address to communicate which is must in Master mode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 185 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+186 \{
+187     i2c->SAR = sadd;  \textcolor{comment}{/* set slave address */}
+188 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga98e7d9411ca40a855eb3206cf3d875a3}\label{group__I2C_ga98e7d9411ca40a855eb3206cf3d875a3}} 
+\index{I2C@{I2C}!i2c\+Set\+Start@{i2c\+Set\+Start}}
+\index{i2c\+Set\+Start@{i2c\+Set\+Start}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Start()}{i2cSetStart()}}
+{\footnotesize\ttfamily void i2c\+Set\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Set i2c start condition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address Set i2c to generate a start bit (Only in Master mode) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 245 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+246 \{
+247 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+248 \textcolor{comment}{/* USER CODE END */}
+249 
+250     i2c->MDR |= (uint32)I2C\_START\_COND;  \textcolor{comment}{/* set start condition */}
+251 
+252 \textcolor{comment}{/* USER CODE BEGIN (8) */}
+253 \textcolor{comment}{/* USER CODE END */}
+254 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__I2C_ga65c7cf88cef1e3164da5fda0ecf77c78}\label{group__I2C_ga65c7cf88cef1e3164da5fda0ecf77c78}} 
+\index{I2C@{I2C}!i2c\+Set\+Stop@{i2c\+Set\+Stop}}
+\index{i2c\+Set\+Stop@{i2c\+Set\+Stop}!I2C@{I2C}}
+\subsubsection{\texorpdfstring{i2c\+Set\+Stop()}{i2cSetStop()}}
+{\footnotesize\ttfamily void i2c\+Set\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__i2c_8h_a5d6c119fb20e803a530d0d4df544daf7}{i2c\+B\+A\+S\+E\+\_\+t}} $\ast$}]{i2c }\end{DoxyParamCaption})}
+
+
+
+Set i2c stop condition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i2c} & -\/ i2c module base address Set i2c to generate a stop bit (Only in Master mode) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 264 of file i2c.\+c.
+
+
+\begin{DoxyCode}
+265 \{
+266 \textcolor{comment}{/* USER CODE BEGIN (9) */}
+267 \textcolor{comment}{/* USER CODE END */}
+268 
+269     i2c->MDR |= (uint32)I2C\_STOP\_COND;  \textcolor{comment}{/* generate stop condition */}
+270 
+271 \textcolor{comment}{/* USER CODE BEGIN (10) */}
+272 \textcolor{comment}{/* USER CODE END */}
+273 \}
+\end{DoxyCode}

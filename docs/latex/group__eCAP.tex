@@ -1,0 +1,137 @@
+\hypertarget{group__eCAP}{}\section{e\+C\+AP}
+\label{group__eCAP}\index{e\+C\+AP@{e\+C\+AP}}
+
+
+Enhanced Capture Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__eCAP_ga516005c5605f393277666c3b9ba0c166}\label{group__eCAP_ga516005c5605f393277666c3b9ba0c166}} 
+void {\bfseries ecap\+Init} (void)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga364a27d4fcd363aa41d9c01cfa600138}\label{group__eCAP_ga364a27d4fcd363aa41d9c01cfa600138}} 
+void {\bfseries ecap\+Set\+Counter} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, uint32 value)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga7f98ac834b9764febaf55917242a9b90}\label{group__eCAP_ga7f98ac834b9764febaf55917242a9b90}} 
+void {\bfseries ecap\+Enable\+Counter\+Load\+On\+Sync} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, uint32 phase)
+\item 
+\mbox{\Hypertarget{group__eCAP_gafd9700631fd5cb7c77abfd52f3f855d3}\label{group__eCAP_gafd9700631fd5cb7c77abfd52f3f855d3}} 
+void {\bfseries ecap\+Disable\+Counter\+Load\+On\+Sync} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga04216d448e7d7346cdc3f15778432683}\label{group__eCAP_ga04216d448e7d7346cdc3f15778432683}} 
+void {\bfseries ecap\+Set\+Event\+Prescaler} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a3d46c644d8a5a5996eda0247543f7d31}{ecap\+Prescale\+\_\+t}} prescale)
+\item 
+\mbox{\Hypertarget{group__eCAP_gae2aaf7294e811a4037a2afb336beff3f}\label{group__eCAP_gae2aaf7294e811a4037a2afb336beff3f}} 
+void {\bfseries ecap\+Set\+Capture\+Event1} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a9f14adf05b628329f7acc029eef7d151}{ecap\+Edge\+Polarity\+\_\+t}} edge\+Polarity, ecap\+Reset\+\_\+t resetenable)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga865bdd5cf4cc6a4dc6ff97f7a1d6316a}\label{group__eCAP_ga865bdd5cf4cc6a4dc6ff97f7a1d6316a}} 
+void {\bfseries ecap\+Set\+Capture\+Event2} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a9f14adf05b628329f7acc029eef7d151}{ecap\+Edge\+Polarity\+\_\+t}} edge\+Polarity, ecap\+Reset\+\_\+t resetenable)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga4d2d1e92ea5c46696144feaae27620b7}\label{group__eCAP_ga4d2d1e92ea5c46696144feaae27620b7}} 
+void {\bfseries ecap\+Set\+Capture\+Event3} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a9f14adf05b628329f7acc029eef7d151}{ecap\+Edge\+Polarity\+\_\+t}} edge\+Polarity, ecap\+Reset\+\_\+t resetenable)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga83b5c8a14c27814f2fc642d84f0f0539}\label{group__eCAP_ga83b5c8a14c27814f2fc642d84f0f0539}} 
+void {\bfseries ecap\+Set\+Capture\+Event4} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a9f14adf05b628329f7acc029eef7d151}{ecap\+Edge\+Polarity\+\_\+t}} edge\+Polarity, ecap\+Reset\+\_\+t resetenable)
+\item 
+\mbox{\Hypertarget{group__eCAP_gaa778204610087d5deec470344482e88d}\label{group__eCAP_gaa778204610087d5deec470344482e88d}} 
+void {\bfseries ecap\+Set\+Capture\+Mode} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_ae12ad948e43f257694d02e2872b2b27b}{ecap\+Mode\+\_\+t}} cap\+Mode, \mbox{\hyperlink{ecap_8h_a7c2a55e9667d02c465325f1b4e05b604}{ecap\+Event\+\_\+t}} event)
+\item 
+\mbox{\Hypertarget{group__eCAP_gae6f82e5c201091d635eb4b95a1883e8c}\label{group__eCAP_gae6f82e5c201091d635eb4b95a1883e8c}} 
+void {\bfseries ecap\+Enable\+Capture} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga24454f89735edb8cf4b970f4f9d5447f}\label{group__eCAP_ga24454f89735edb8cf4b970f4f9d5447f}} 
+void {\bfseries ecap\+Disable\+Capture} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga48f20fedb8c4985bd364dd996045a966}\label{group__eCAP_ga48f20fedb8c4985bd364dd996045a966}} 
+void {\bfseries ecap\+Start\+Counter} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga77b9ddc1101443e46831a5d5d05d5d02}\label{group__eCAP_ga77b9ddc1101443e46831a5d5d05d5d02}} 
+void {\bfseries ecap\+Stop\+Counter} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_gab47aae10ce2a2805095ed790e81c61dc}\label{group__eCAP_gab47aae10ce2a2805095ed790e81c61dc}} 
+void {\bfseries ecap\+Set\+Sync\+Out} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_af80b1d32ef37bc1abed84b2c856a9fdf}{ecap\+Sync\+Out\+\_\+t}} sync\+Out\+Src)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga448861a269b3ef7fb1c052aff9166de9}\label{group__eCAP_ga448861a269b3ef7fb1c052aff9166de9}} 
+void {\bfseries ecap\+Enable\+A\+P\+W\+Mmode} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, ecap\+A\+P\+W\+M\+Polarity\+\_\+t pwm\+Polarity, uint32 period, uint32 duty)
+\item 
+\mbox{\Hypertarget{group__eCAP_gaee1bcff06c263f80087bbfb4022fcde6}\label{group__eCAP_gaee1bcff06c263f80087bbfb4022fcde6}} 
+void {\bfseries ecap\+Disable\+A\+P\+W\+M\+Mode} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga7ee1f84b1f75088368e708c213f1e6b2}\label{group__eCAP_ga7ee1f84b1f75088368e708c213f1e6b2}} 
+void {\bfseries ecap\+Enable\+Interrupt} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a5432cd14eb279967751b607c755e8329}{ecap\+Interrupt\+\_\+t}} interrupts)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga9e03fd7b9b62467e3fe00168050a2e34}\label{group__eCAP_ga9e03fd7b9b62467e3fe00168050a2e34}} 
+void {\bfseries ecap\+Disable\+Interrupt} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a5432cd14eb279967751b607c755e8329}{ecap\+Interrupt\+\_\+t}} interrupts)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga7f727619488b4dbfdf4530b668d015ac}\label{group__eCAP_ga7f727619488b4dbfdf4530b668d015ac}} 
+uint16 {\bfseries ecap\+Get\+Event\+Status} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a5432cd14eb279967751b607c755e8329}{ecap\+Interrupt\+\_\+t}} events)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga08b5c26770fe83ef44979850002e7f5b}\label{group__eCAP_ga08b5c26770fe83ef44979850002e7f5b}} 
+void {\bfseries ecap\+Clear\+Flag} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, \mbox{\hyperlink{ecap_8h_a5432cd14eb279967751b607c755e8329}{ecap\+Interrupt\+\_\+t}} events)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga7461a0d3eaff2dbe071c34aa1f9395bf}\label{group__eCAP_ga7461a0d3eaff2dbe071c34aa1f9395bf}} 
+uint32 {\bfseries ecap\+Get\+C\+A\+P1} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga15c8135d2951709db6916b824959d310}\label{group__eCAP_ga15c8135d2951709db6916b824959d310}} 
+uint32 {\bfseries ecap\+Get\+C\+A\+P2} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga20c1a2c5f1884a32a3705efd85380b6a}\label{group__eCAP_ga20c1a2c5f1884a32a3705efd85380b6a}} 
+uint32 {\bfseries ecap\+Get\+C\+A\+P3} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_gae482bc62942714d6a034456d94e49b54}\label{group__eCAP_gae482bc62942714d6a034456d94e49b54}} 
+uint32 {\bfseries ecap\+Get\+C\+A\+P4} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga6a2ddfd5bb3e220330ba4f7abdcec88f}\label{group__eCAP_ga6a2ddfd5bb3e220330ba4f7abdcec88f}} 
+void {\bfseries ecap1\+Get\+Config\+Value} (\mbox{\hyperlink{structecap__config__reg}{ecap\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga641254f9bc5ac9ccb786d50b5da9f84b}\label{group__eCAP_ga641254f9bc5ac9ccb786d50b5da9f84b}} 
+void {\bfseries ecap2\+Get\+Config\+Value} (\mbox{\hyperlink{structecap__config__reg}{ecap\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga24637a991e299aa737bd5d6e269585f6}\label{group__eCAP_ga24637a991e299aa737bd5d6e269585f6}} 
+void {\bfseries ecap3\+Get\+Config\+Value} (\mbox{\hyperlink{structecap__config__reg}{ecap\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga01ba51b76ea5adfa5f1287e7c514e464}\label{group__eCAP_ga01ba51b76ea5adfa5f1287e7c514e464}} 
+void {\bfseries ecap4\+Get\+Config\+Value} (\mbox{\hyperlink{structecap__config__reg}{ecap\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__eCAP_ga7cd9c6ad19113e6e0cfbbe1fae72474b}\label{group__eCAP_ga7cd9c6ad19113e6e0cfbbe1fae72474b}} 
+void {\bfseries ecap5\+Get\+Config\+Value} (\mbox{\hyperlink{structecap__config__reg}{ecap\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__eCAP_gab3cc58b1f07d3a1b4a67976734f4e49a}\label{group__eCAP_gab3cc58b1f07d3a1b4a67976734f4e49a}} 
+void {\bfseries ecap6\+Get\+Config\+Value} (\mbox{\hyperlink{structecap__config__reg}{ecap\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group__eCAP_ga9afc72752bc733e801d52ca015d38974}{ecap\+Notification}} (\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$ecap, uint16 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enhanced Capture Module. 
+
+The enhanced Capture (e\+C\+AP) module is essential in systems where accurate timing of external events is important. This microcontroller implements 6 instances of the e\+C\+AP module.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__ecap_8h}{reg\+\_\+ecap.\+h}}
+\item \mbox{\hyperlink{ecap_8h}{ecap.\+h}}
+\item ecap.\+c 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__eCAP_ga9afc72752bc733e801d52ca015d38974}\label{group__eCAP_ga9afc72752bc733e801d52ca015d38974}} 
+\index{e\+C\+AP@{e\+C\+AP}!ecap\+Notification@{ecap\+Notification}}
+\index{ecap\+Notification@{ecap\+Notification}!e\+C\+AP@{e\+C\+AP}}
+\subsubsection{\texorpdfstring{ecap\+Notification()}{ecapNotification()}}
+{\footnotesize\ttfamily void ecap\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__ecap_8h_a8ca3ed15315b354b71b837ed4b6685a9}{ecap\+B\+A\+S\+E\+\_\+t}} $\ast$}]{ecap,  }\item[{uint16}]{flags }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ecap} & Handle to C\+AP object \\
+\hline
+\mbox{\tt in}  & {\em flags} & Copy of interrupt flags \\
+\hline
+\end{DoxyParams}

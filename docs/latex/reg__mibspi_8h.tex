@@ -1,0 +1,285 @@
+\hypertarget{reg__mibspi_8h}{}\section{include/reg\+\_\+mibspi.h File Reference}
+\label{reg__mibspi_8h}\index{include/reg\+\_\+mibspi.\+h@{include/reg\+\_\+mibspi.\+h}}
+
+
+M\+I\+B\+S\+PI Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmibspiBase}{mibspi\+Base}}
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+PI Register Definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmibspiRamBase}{mibspi\+Ram\+Base}}
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+PI Buffer R\+AM Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_a59785fe30b9ecba3095b820f844910df}{mibspi\+R\+E\+G1}}~((\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F400\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I1 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_ae18cdbc0d4220427231be3fae80d7f91}{mibspi\+P\+O\+R\+T1}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F418\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I1 G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_ac68545bfe7877266ef53a0dd49fd8322}{mibspi\+R\+E\+G3}}~((\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F800\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I3 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_a7965bcb584bb124f56c595bde8b6debe}{mibspi\+P\+O\+R\+T3}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F818\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I3 G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_af010584e2232f2dfbf59da41599d0e41}{mibspi\+R\+E\+G5}}~((\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C00\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I5 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_ab08acc28d629e584faa94cf8189f61e6}{mibspi\+P\+O\+R\+T5}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C18\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I5 G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_acfdb98891cb8f8a774443092a2c5a3b6}{mibspi\+R\+A\+M1}}~((\mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}} $\ast$)0x\+F\+F0\+E0000\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I1 Buffer R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_a9eee38fba3e2a26bcfdf5551043332dd}{mibspi\+R\+A\+M3}}~((\mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}} $\ast$)0x\+F\+F0\+C0000\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I3 Buffer R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_a84328345bb9e66cd65ba71710e3a3d4c}{mibspi\+R\+A\+M5}}~((\mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}} $\ast$)0x\+F\+F0\+A0000\+U)
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I5 Buffer R\+AM Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_a3e70cf83cef67d59bf3c7236dd1e0a19}{mibspi\+P\+A\+R\+R\+A\+M1}}~($\ast$(volatile uint32 $\ast$)(0x\+F\+F0\+E0000\+U + 0x00000400\+U))
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I1 Buffer R\+AM P\+A\+R\+I\+TY Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_af440f4d730ee907f7998683662d38a99}{mibspi\+P\+A\+R\+R\+A\+M3}}~($\ast$(volatile uint32 $\ast$)(0x\+F\+F0\+C0000\+U + 0x00000400\+U))
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I3 Buffer R\+AM P\+A\+R\+I\+TY Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__mibspi_8h_a1443f050f83a68a49c7eed4c0084a511}{mibspi\+P\+A\+R\+R\+A\+M5}}~($\ast$(volatile uint32 $\ast$)(0x\+F\+F0\+A0000\+U + 0x00000400\+U))
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+P\+I5 Buffer R\+AM P\+A\+R\+I\+TY Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structmibspiBase}{mibspi\+Base}} \mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+PI Register Frame Type Definition. \end{DoxyCompactList}\item 
+typedef volatile struct \mbox{\hyperlink{structmibspiRamBase}{mibspi\+Ram\+Base}} \mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em M\+I\+B\+S\+PI R\+AM Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+I\+B\+S\+PI Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the M\+I\+B\+S\+PI driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__mibspi_8h_a3e70cf83cef67d59bf3c7236dd1e0a19}\label{reg__mibspi_8h_a3e70cf83cef67d59bf3c7236dd1e0a19}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+P\+A\+R\+R\+A\+M1@{mibspi\+P\+A\+R\+R\+A\+M1}}
+\index{mibspi\+P\+A\+R\+R\+A\+M1@{mibspi\+P\+A\+R\+R\+A\+M1}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+P\+A\+R\+R\+A\+M1}{mibspiPARRAM1}}
+{\footnotesize\ttfamily \#define mibspi\+P\+A\+R\+R\+A\+M1~($\ast$(volatile uint32 $\ast$)(0x\+F\+F0\+E0000\+U + 0x00000400\+U))}
+
+
+
+M\+I\+B\+S\+P\+I1 Buffer R\+AM P\+A\+R\+I\+TY Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi buffer memory. 
+
+Definition at line 236 of file reg\+\_\+mibspi.\+h.
+
+
+
+Referenced by mibspi1\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__mibspi_8h_af440f4d730ee907f7998683662d38a99}\label{reg__mibspi_8h_af440f4d730ee907f7998683662d38a99}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+P\+A\+R\+R\+A\+M3@{mibspi\+P\+A\+R\+R\+A\+M3}}
+\index{mibspi\+P\+A\+R\+R\+A\+M3@{mibspi\+P\+A\+R\+R\+A\+M3}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+P\+A\+R\+R\+A\+M3}{mibspiPARRAM3}}
+{\footnotesize\ttfamily \#define mibspi\+P\+A\+R\+R\+A\+M3~($\ast$(volatile uint32 $\ast$)(0x\+F\+F0\+C0000\+U + 0x00000400\+U))}
+
+
+
+M\+I\+B\+S\+P\+I3 Buffer R\+AM P\+A\+R\+I\+TY Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi buffer memory. 
+
+Definition at line 243 of file reg\+\_\+mibspi.\+h.
+
+
+
+Referenced by mibspi3\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__mibspi_8h_a1443f050f83a68a49c7eed4c0084a511}\label{reg__mibspi_8h_a1443f050f83a68a49c7eed4c0084a511}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+P\+A\+R\+R\+A\+M5@{mibspi\+P\+A\+R\+R\+A\+M5}}
+\index{mibspi\+P\+A\+R\+R\+A\+M5@{mibspi\+P\+A\+R\+R\+A\+M5}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+P\+A\+R\+R\+A\+M5}{mibspiPARRAM5}}
+{\footnotesize\ttfamily \#define mibspi\+P\+A\+R\+R\+A\+M5~($\ast$(volatile uint32 $\ast$)(0x\+F\+F0\+A0000\+U + 0x00000400\+U))}
+
+
+
+M\+I\+B\+S\+P\+I5 Buffer R\+AM P\+A\+R\+I\+TY Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi buffer memory. 
+
+Definition at line 251 of file reg\+\_\+mibspi.\+h.
+
+
+
+Referenced by mibspi5\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__mibspi_8h_ae18cdbc0d4220427231be3fae80d7f91}\label{reg__mibspi_8h_ae18cdbc0d4220427231be3fae80d7f91}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+P\+O\+R\+T1@{mibspi\+P\+O\+R\+T1}}
+\index{mibspi\+P\+O\+R\+T1@{mibspi\+P\+O\+R\+T1}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+P\+O\+R\+T1}{mibspiPORT1}}
+{\footnotesize\ttfamily \#define mibspi\+P\+O\+R\+T1~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F418\+U)}
+
+
+
+M\+I\+B\+S\+P\+I1 G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of M\+I\+B\+S\+P\+I1 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 140 of file reg\+\_\+mibspi.\+h.
+
+\mbox{\Hypertarget{reg__mibspi_8h_a7965bcb584bb124f56c595bde8b6debe}\label{reg__mibspi_8h_a7965bcb584bb124f56c595bde8b6debe}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+P\+O\+R\+T3@{mibspi\+P\+O\+R\+T3}}
+\index{mibspi\+P\+O\+R\+T3@{mibspi\+P\+O\+R\+T3}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+P\+O\+R\+T3}{mibspiPORT3}}
+{\footnotesize\ttfamily \#define mibspi\+P\+O\+R\+T3~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F818\+U)}
+
+
+
+M\+I\+B\+S\+P\+I3 G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of M\+I\+B\+S\+P\+I3 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 156 of file reg\+\_\+mibspi.\+h.
+
+\mbox{\Hypertarget{reg__mibspi_8h_ab08acc28d629e584faa94cf8189f61e6}\label{reg__mibspi_8h_ab08acc28d629e584faa94cf8189f61e6}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+P\+O\+R\+T5@{mibspi\+P\+O\+R\+T5}}
+\index{mibspi\+P\+O\+R\+T5@{mibspi\+P\+O\+R\+T5}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+P\+O\+R\+T5}{mibspiPORT5}}
+{\footnotesize\ttfamily \#define mibspi\+P\+O\+R\+T5~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C18\+U)}
+
+
+
+M\+I\+B\+S\+P\+I5 G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of M\+I\+B\+S\+P\+I5 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 172 of file reg\+\_\+mibspi.\+h.
+
+\mbox{\Hypertarget{reg__mibspi_8h_acfdb98891cb8f8a774443092a2c5a3b6}\label{reg__mibspi_8h_acfdb98891cb8f8a774443092a2c5a3b6}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+R\+A\+M1@{mibspi\+R\+A\+M1}}
+\index{mibspi\+R\+A\+M1@{mibspi\+R\+A\+M1}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+R\+A\+M1}{mibspiRAM1}}
+{\footnotesize\ttfamily \#define mibspi\+R\+A\+M1~((\mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}} $\ast$)0x\+F\+F0\+E0000\+U)}
+
+
+
+M\+I\+B\+S\+P\+I1 Buffer R\+AM Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi buffer memory. 
+
+Definition at line 215 of file reg\+\_\+mibspi.\+h.
+
+\mbox{\Hypertarget{reg__mibspi_8h_a9eee38fba3e2a26bcfdf5551043332dd}\label{reg__mibspi_8h_a9eee38fba3e2a26bcfdf5551043332dd}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+R\+A\+M3@{mibspi\+R\+A\+M3}}
+\index{mibspi\+R\+A\+M3@{mibspi\+R\+A\+M3}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+R\+A\+M3}{mibspiRAM3}}
+{\footnotesize\ttfamily \#define mibspi\+R\+A\+M3~((\mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}} $\ast$)0x\+F\+F0\+C0000\+U)}
+
+
+
+M\+I\+B\+S\+P\+I3 Buffer R\+AM Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi buffer memory. 
+
+Definition at line 222 of file reg\+\_\+mibspi.\+h.
+
+\mbox{\Hypertarget{reg__mibspi_8h_a84328345bb9e66cd65ba71710e3a3d4c}\label{reg__mibspi_8h_a84328345bb9e66cd65ba71710e3a3d4c}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+R\+A\+M5@{mibspi\+R\+A\+M5}}
+\index{mibspi\+R\+A\+M5@{mibspi\+R\+A\+M5}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+R\+A\+M5}{mibspiRAM5}}
+{\footnotesize\ttfamily \#define mibspi\+R\+A\+M5~((\mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}} $\ast$)0x\+F\+F0\+A0000\+U)}
+
+
+
+M\+I\+B\+S\+P\+I5 Buffer R\+AM Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi buffer memory. 
+
+Definition at line 229 of file reg\+\_\+mibspi.\+h.
+
+\mbox{\Hypertarget{reg__mibspi_8h_a59785fe30b9ecba3095b820f844910df}\label{reg__mibspi_8h_a59785fe30b9ecba3095b820f844910df}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+R\+E\+G1@{mibspi\+R\+E\+G1}}
+\index{mibspi\+R\+E\+G1@{mibspi\+R\+E\+G1}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+R\+E\+G1}{mibspiREG1}}
+{\footnotesize\ttfamily \#define mibspi\+R\+E\+G1~((\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F400\+U)}
+
+
+
+M\+I\+B\+S\+P\+I1 Register Frame Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi module registers. 
+
+Definition at line 131 of file reg\+\_\+mibspi.\+h.
+
+
+
+Referenced by mibspi1\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__mibspi_8h_ac68545bfe7877266ef53a0dd49fd8322}\label{reg__mibspi_8h_ac68545bfe7877266ef53a0dd49fd8322}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+R\+E\+G3@{mibspi\+R\+E\+G3}}
+\index{mibspi\+R\+E\+G3@{mibspi\+R\+E\+G3}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+R\+E\+G3}{mibspiREG3}}
+{\footnotesize\ttfamily \#define mibspi\+R\+E\+G3~((\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F800\+U)}
+
+
+
+M\+I\+B\+S\+P\+I3 Register Frame Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi module registers. 
+
+Definition at line 147 of file reg\+\_\+mibspi.\+h.
+
+
+
+Referenced by mibspi3\+Parity\+Check().
+
+\mbox{\Hypertarget{reg__mibspi_8h_af010584e2232f2dfbf59da41599d0e41}\label{reg__mibspi_8h_af010584e2232f2dfbf59da41599d0e41}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+R\+E\+G5@{mibspi\+R\+E\+G5}}
+\index{mibspi\+R\+E\+G5@{mibspi\+R\+E\+G5}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+R\+E\+G5}{mibspiREG5}}
+{\footnotesize\ttfamily \#define mibspi\+R\+E\+G5~((\mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C00\+U)}
+
+
+
+M\+I\+B\+S\+P\+I5 Register Frame Pointer. 
+
+This pointer is used by the M\+I\+B\+S\+PI driver to access the mibspi module registers. 
+
+Definition at line 163 of file reg\+\_\+mibspi.\+h.
+
+
+
+Referenced by mibspi5\+Parity\+Check().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}\label{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+B\+A\+S\+E\+\_\+t@{mibspi\+B\+A\+S\+E\+\_\+t}}
+\index{mibspi\+B\+A\+S\+E\+\_\+t@{mibspi\+B\+A\+S\+E\+\_\+t}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+B\+A\+S\+E\+\_\+t}{mibspiBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__mibspi_8h_a76bb471ca1dd17f94e340cca80dab5e6}{mibspi\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+M\+I\+B\+S\+PI Register Frame Type Definition. 
+
+This type is used to access the M\+I\+B\+S\+PI Registers. \mbox{\Hypertarget{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}\label{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}} 
+\index{reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}!mibspi\+R\+A\+M\+\_\+t@{mibspi\+R\+A\+M\+\_\+t}}
+\index{mibspi\+R\+A\+M\+\_\+t@{mibspi\+R\+A\+M\+\_\+t}!reg\+\_\+mibspi.\+h@{reg\+\_\+mibspi.\+h}}
+\subsubsection{\texorpdfstring{mibspi\+R\+A\+M\+\_\+t}{mibspiRAM\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__mibspi_8h_afaf9972da727d0c2448b2364315f0315}{mibspi\+R\+A\+M\+\_\+t}}}
+
+
+
+M\+I\+B\+S\+PI R\+AM Type Definition. 
+
+This type is used to access the M\+I\+B\+S\+PI R\+AM. 

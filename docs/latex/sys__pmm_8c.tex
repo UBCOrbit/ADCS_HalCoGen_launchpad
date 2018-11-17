@@ -1,0 +1,42 @@
+\hypertarget{sys__pmm_8c}{}\section{source/sys\+\_\+pmm.c File Reference}
+\label{sys__pmm_8c}\index{source/sys\+\_\+pmm.\+c@{source/sys\+\_\+pmm.\+c}}
+
+
+P\+CR Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+pmm.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__PMM_ga677f111b8d9604b6ab733f58105a36d8}{pmm\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the P\+MM Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga4caba5b694f4399bd0dc05030895d421}{pmm\+Turn\+O\+N\+Logic\+Power\+Domain}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Turns on Logic Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga3395d248f6418becca238c5db150fc73}{pmm\+Turn\+O\+N\+Mem\+Power\+Domain}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Turns on Memory Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga567bb1ec4293b6160bd70fa919c37a54}{pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Turns off Logic Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga962af2aa251e590f1adb4dd29019a508}{pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Turns off Memory Power Domain. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_ga9a7b3cc1f08a5e0a0e1c39f53f8ea709}{pmm\+Is\+Logic\+Power\+Domain\+Active}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Check if the power domain is active or not. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_gad92e152a45b5bfa862b930273264f9be}{pmm\+Is\+Mem\+Power\+Domain\+Active}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Check if the power domain is active or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_gaa2d72c03373521038be734834fb230bb}{pmm\+Get\+Config\+Value}} (\mbox{\hyperlink{structpmm__config__reg}{pmm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_gafd3767acd1dd35ef877091fe303b08b6}{pmm\+Set\+Mode}} (pmm\+\_\+\+Mode\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set P\+S\+C\+ON Compare Block Mode. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_ga0a27f5db51b603a069b61e2fa149d81b}{pmm\+Perform\+Self\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Perform self test and return the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+CR Driver Implementation File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}

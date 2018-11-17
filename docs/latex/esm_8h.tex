@@ -1,0 +1,1538 @@
+\hypertarget{esm_8h}{}\section{include/esm.h File Reference}
+\label{esm_8h}\index{include/esm.\+h@{include/esm.\+h}}
+
+
+Error Signaling Module Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+esm.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structesm__config__reg}{esm\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{esm_8h_af15e4f01f008097c933cf056860152e4}{esm\+G\+R\+O\+U\+P1}}~0U
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a70fead2f9431da2c27652df07b6022bd}{esm\+G\+R\+O\+U\+P2}}~1U
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aad47f755cd10caefa44a8da5423bda4e}{esm\+G\+R\+O\+U\+P3}}~2U
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aef991631f17ac73b27a424b48cec2c43}{esm\+C\+H\+A\+N\+N\+E\+L0}}~0x0000000000000001\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a2e8e38a877317c4a009f192d1fc0d82d}{esm\+C\+H\+A\+N\+N\+E\+L1}}~0x0000000000000002\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a39934b6179af7d8be333d2e70e4fe88a}{esm\+C\+H\+A\+N\+N\+E\+L2}}~0x0000000000000004\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 2. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a56ac3d3ee322b40533b5b22693805792}{esm\+C\+H\+A\+N\+N\+E\+L3}}~0x0000000000000008\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 3. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a6cc1b040839ad2dc6cac9871e7a8e3ef}{esm\+C\+H\+A\+N\+N\+E\+L4}}~0x0000000000000010\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 4. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_af4b1e50816ee315b5342cd551695f497}{esm\+C\+H\+A\+N\+N\+E\+L5}}~0x0000000000000020\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 5. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a9e172c8485d0dba1a5f39621ffc85927}{esm\+C\+H\+A\+N\+N\+E\+L6}}~0x0000000000000040\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 6. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_ad7022424bfbb154747aa43b5ed5bfb4b}{esm\+C\+H\+A\+N\+N\+E\+L7}}~0x0000000000000080\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 7. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a4da1ff2e0bb130e0bb6c5e268c61f585}{esm\+C\+H\+A\+N\+N\+E\+L8}}~0x0000000000000100\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 8. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_af26b22edebce45fb1767d16e57692866}{esm\+C\+H\+A\+N\+N\+E\+L9}}~0x0000000000000200\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 9. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_ad47dfaf12d44c7d28783d791a2e504c7}{esm\+C\+H\+A\+N\+N\+E\+L10}}~0x0000000000000400\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 10. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a7368398acc1de6fcd799c55b2f9cb11d}{esm\+C\+H\+A\+N\+N\+E\+L11}}~0x0000000000000800\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 11. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a8d827062a610808fb418035a383b8a60}{esm\+C\+H\+A\+N\+N\+E\+L12}}~0x0000000000001000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 12. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a3b24e7ef04beaee2a51103c04867356a}{esm\+C\+H\+A\+N\+N\+E\+L13}}~0x0000000000002000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 13. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a0b72bc5d902adb23e01b03e6041ba34b}{esm\+C\+H\+A\+N\+N\+E\+L14}}~0x0000000000004000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 14. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a77866ef0c758b1de8748940e4682be55}{esm\+C\+H\+A\+N\+N\+E\+L15}}~0x0000000000008000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 15. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a55f2ada34f332926e70b4a9c86d09037}{esm\+C\+H\+A\+N\+N\+E\+L16}}~0x0000000000010000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 16. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a4fc40b119ccb4d4244799f5da7511235}{esm\+C\+H\+A\+N\+N\+E\+L17}}~0x0000000000020000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 17. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a5e4aa0798413874d4c8412dbe0fa3028}{esm\+C\+H\+A\+N\+N\+E\+L18}}~0x0000000000040000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 18. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a02122dc1970655b1ff88133e54ed03ed}{esm\+C\+H\+A\+N\+N\+E\+L19}}~0x0000000000080000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 19. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a202e455270b0ad99d6cfe455589e49fe}{esm\+C\+H\+A\+N\+N\+E\+L20}}~0x0000000000100000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 20. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a3989fa8dcb4cfe56e4c30f63437a3968}{esm\+C\+H\+A\+N\+N\+E\+L21}}~0x0000000000200000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 21. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a5e6a09e16c9e8c2a7a28e9fb422af786}{esm\+C\+H\+A\+N\+N\+E\+L22}}~0x0000000000400000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 22. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a2aea0e7d6ce87a93740646ef16d12516}{esm\+C\+H\+A\+N\+N\+E\+L23}}~0x0000000000800000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 23. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aba33c928266b38b42ba1f68d210b237e}{esm\+C\+H\+A\+N\+N\+E\+L24}}~0x0000000001000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 24. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aed07ffdae69dd87041cf7a29a4806634}{esm\+C\+H\+A\+N\+N\+E\+L25}}~0x0000000002000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 25. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a430441c1dbe8fa83d89c4fe9b62ffb5c}{esm\+C\+H\+A\+N\+N\+E\+L26}}~0x0000000004000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 26. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a7b29fd22c5d0ff44a0081751a5510f19}{esm\+C\+H\+A\+N\+N\+E\+L27}}~0x0000000008000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 27. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aa9b1507630d17e6f35604158fbf9a064}{esm\+C\+H\+A\+N\+N\+E\+L28}}~0x0000000010000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 28. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a88ed379f08f87fa634a37ba388fdd4b6}{esm\+C\+H\+A\+N\+N\+E\+L29}}~0x0000000020000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 29. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a68db53efdba7db4cc0299b494cec1be3}{esm\+C\+H\+A\+N\+N\+E\+L30}}~0x0000000040000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 30. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a57c5b970fb70fa92a442ae40c6d3ca48}{esm\+C\+H\+A\+N\+N\+E\+L31}}~0x0000000080000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 31. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_afced4442d488e3aec5c605cde0b2b753}{esm\+C\+H\+A\+N\+N\+E\+L32}}~0x0000000100000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 32. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a8f68e625c3d2e8ad5f8ccf92b6635843}{esm\+C\+H\+A\+N\+N\+E\+L33}}~0x0000000200000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 33. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a13f9406a7db0bab49a5ac260f88d514b}{esm\+C\+H\+A\+N\+N\+E\+L34}}~0x0000000400000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 34. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a0813e55aca6ccc17a8fdbe5d93e598c6}{esm\+C\+H\+A\+N\+N\+E\+L35}}~0x0000000800000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 35. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_afa40185f9aa2857d2e4276ee1b165622}{esm\+C\+H\+A\+N\+N\+E\+L36}}~0x0000001000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 36. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a69c7fde3b40b6136abb7d74add67df13}{esm\+C\+H\+A\+N\+N\+E\+L37}}~0x0000002000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 37. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aaee93fee349a555d4e1d7012cfaab7e5}{esm\+C\+H\+A\+N\+N\+E\+L38}}~0x0000004000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 38. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a7dc6f6b1ef23c78827afd2e5b5e5c378}{esm\+C\+H\+A\+N\+N\+E\+L39}}~0x0000008000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 39. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a133ccbad9ba93fbef5dd4e2cd565b995}{esm\+C\+H\+A\+N\+N\+E\+L40}}~0x0000010000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 40. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_ad706c67320bd5e9734219834447bcf9a}{esm\+C\+H\+A\+N\+N\+E\+L41}}~0x0000020000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 41. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a99d309c454c17fd8e72162275c1e1064}{esm\+C\+H\+A\+N\+N\+E\+L42}}~0x0000040000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 42. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a928adbb3a55f884c37c576dcd78662a5}{esm\+C\+H\+A\+N\+N\+E\+L43}}~0x0000080000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 43. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aafc446d4d3a82e8493335c44c422e368}{esm\+C\+H\+A\+N\+N\+E\+L44}}~0x0000100000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 44. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aebda282fd0b1c4f0f9da0de702ea25a9}{esm\+C\+H\+A\+N\+N\+E\+L45}}~0x0000200000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 45. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a415a5bb3a6c11697c1046a513895e8b9}{esm\+C\+H\+A\+N\+N\+E\+L46}}~0x0000400000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 46. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a979951f868f9ec24dfea5d89926aa6df}{esm\+C\+H\+A\+N\+N\+E\+L47}}~0x0000800000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 47. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a930edc2ccbebebb668ae82426323476b}{esm\+C\+H\+A\+N\+N\+E\+L48}}~0x0001000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 48. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a4c4a4e1767276a09fc315586ebad1030}{esm\+C\+H\+A\+N\+N\+E\+L49}}~0x0002000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 49. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a9937500d3a918446fc6e34090e62ef96}{esm\+C\+H\+A\+N\+N\+E\+L50}}~0x0004000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 50. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_ab97e5fe753872858711a1ad9c0aa151c}{esm\+C\+H\+A\+N\+N\+E\+L51}}~0x0008000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 51. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a0cd55dd28a5d5ed142d36e4c2c6ab409}{esm\+C\+H\+A\+N\+N\+E\+L52}}~0x0010000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 52. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a95c8cbd27ae93c2755018458483b9b0c}{esm\+C\+H\+A\+N\+N\+E\+L53}}~0x0020000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 53. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a3efcea0769e2e28b186bc2864a76ccee}{esm\+C\+H\+A\+N\+N\+E\+L54}}~0x0040000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 54. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_aa155c00284001cd4a882029292dfe416}{esm\+C\+H\+A\+N\+N\+E\+L55}}~0x0080000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 55. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a620ac2219085948f4fd118c7eb26a819}{esm\+C\+H\+A\+N\+N\+E\+L56}}~0x0100000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 56. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a3c61e39904b7d373fe5fed26c5d4063c}{esm\+C\+H\+A\+N\+N\+E\+L57}}~0x0200000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 57. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_ae8a6a830aba5b9027197de65f8f456c2}{esm\+C\+H\+A\+N\+N\+E\+L58}}~0x0400000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 58. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_ad92b50ac2b1021ef45f116532b2491d6}{esm\+C\+H\+A\+N\+N\+E\+L59}}~0x0800000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 59. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a868730ddfcf69a0096a5531f69ef5e67}{esm\+C\+H\+A\+N\+N\+E\+L60}}~0x1000000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 60. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a17e83743b12837f86cb253b4f32684d6}{esm\+C\+H\+A\+N\+N\+E\+L61}}~0x2000000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 61. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a880da86f0e41085e40cbe09ef0904cd8}{esm\+C\+H\+A\+N\+N\+E\+L62}}~0x4000000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 62. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{esm_8h_a85a7411f59d57ec65722ecb912ed3ed5}{esm\+C\+H\+A\+N\+N\+E\+L63}}~0x8000000000000000\+U\+LL
+\begin{DoxyCompactList}\small\item\em Alias name for E\+SM group x channel 63. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{esm_8h_a497ea6ff25044fdcc374299720836527}\label{esm_8h_a497ea6ff25044fdcc374299720836527}} 
+\#define {\bfseries E\+S\+M\+\_\+\+E\+E\+P\+A\+P\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{esm_8h_a9291a9f479ac87d768918a84ba787c60}\label{esm_8h_a9291a9f479ac87d768918a84ba787c60}} 
+\#define {\bfseries E\+S\+M\+\_\+\+I\+E\+S\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{esm_8h_a4e841bfe26f8912526a58bc50b7def0b}\label{esm_8h_a4e841bfe26f8912526a58bc50b7def0b}} 
+\#define {\bfseries E\+S\+M\+\_\+\+I\+L\+S\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{esm_8h_a7087cc9fe15b4beda71a42b9c53386bf}\label{esm_8h_a7087cc9fe15b4beda71a42b9c53386bf}} 
+\#define {\bfseries E\+S\+M\+\_\+\+L\+T\+C\+P\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(16384\+U -\/ 1\+U)
+\item 
+\mbox{\Hypertarget{esm_8h_a86f5d519c9bb0883fd93dfe11da6ece8}\label{esm_8h_a86f5d519c9bb0883fd93dfe11da6ece8}} 
+\#define {\bfseries E\+S\+M\+\_\+\+E\+K\+R\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0U
+\item 
+\mbox{\Hypertarget{esm_8h_aa59087b95108b9650a3f83d896c92f4a}\label{esm_8h_aa59087b95108b9650a3f83d896c92f4a}} 
+\#define {\bfseries E\+S\+M\+\_\+\+I\+E\+P\+S\+R4\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{esm_8h_a381a22357e904018eb336af3ff8a4594}\label{esm_8h_a381a22357e904018eb336af3ff8a4594}} 
+\#define {\bfseries E\+S\+M\+\_\+\+I\+E\+S\+R4\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{esm_8h_a07fca475e554b9e7b017fca13c82e3b2}\label{esm_8h_a07fca475e554b9e7b017fca13c82e3b2}} 
+\#define {\bfseries E\+S\+M\+\_\+\+I\+L\+S\+R4\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum esm\+Self\+Test\+Flag \mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em E\+SM Self-\/\+Test Status Type Definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{esm_8h_a1a03432e904b8a70c6fca6c61b9d2426}\label{esm_8h_a1a03432e904b8a70c6fca6c61b9d2426}} 
+typedef struct \mbox{\hyperlink{structesm__config__reg}{esm\+\_\+config\+\_\+reg}} {\bfseries esm\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{esm_8h_a396d93a0b8fde7f8b2d78e81d47d0518}\label{esm_8h_a396d93a0b8fde7f8b2d78e81d47d0518}} 
+enum {\bfseries esm\+Self\+Test\+Flag} \{ {\bfseries esm\+Self\+Test\+\_\+\+Passed} = 0U, 
+{\bfseries esm\+Self\+Test\+\_\+\+Active} = 1U, 
+{\bfseries esm\+Self\+Test\+\_\+\+Not\+Started} = 2U, 
+{\bfseries esm\+Self\+Test\+\_\+\+Failed} = 3U
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ESM_ga3ebbcbb33cba761eba56edcf1aeb9961}{esm\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes Esm Driver. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ESM_gaf9c1cb3cf58b215f603e7ada115deffb}{esm\+Error}} (void)
+\begin{DoxyCompactList}\small\item\em Return Error status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga918dbc559401efc341d6b1cc1fa5a5c2}{esm\+Enable\+Error}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Enable Group 1 Channels Error Signals propagation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga2b2070b83e6693afda68fdb49ebccc02}{esm\+Disable\+Error}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Disable Group 1 Channels Error Signals propagation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gaa830bed2b9fc364b96269ff0baa8c395}{esm\+Trigger\+Error\+Pin\+Reset}} (void)
+\begin{DoxyCompactList}\small\item\em Trigger error pin reset and switch back to normal operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga9c80550059c5da2e680f73c5c06603b5}{esm\+Activate\+Normal\+Operation}} (void)
+\begin{DoxyCompactList}\small\item\em Activate normal operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gabac2a3061d7f581a62ed9f9ecde03108}{esm\+Enable\+Interrupt}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Enable Group 1 Channels Interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gae92827d82951a348b9faead01d1901d6}{esm\+Disable\+Interrupt}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Disable Group 1 Channels Interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga5c933318570a1b946185cd09af973184}{esm\+Set\+Interrupt\+Level}} (uint64 channels, uint64 flags)
+\begin{DoxyCompactList}\small\item\em Set Group 1 Channels Interrupt Levels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga437032c8dd6a0855da7e8102d4143a0a}{esm\+Clear\+Status}} (uint32 group, uint64 channels)
+\begin{DoxyCompactList}\small\item\em Clear Group error status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga53317b0e54932b896152a14a365a6e35}{esm\+Clear\+Status\+Buffer}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Clear Group 2 error status buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gac0c9d63eb56fc294c3845f53685ecf36}{esm\+Set\+Counter\+Preload\+Value}} (uint32 value)
+\begin{DoxyCompactList}\small\item\em Set counter preload value. \end{DoxyCompactList}\item 
+uint64 \mbox{\hyperlink{group__ESM_gaf37af0850a7b771316d79027a2f45390}{esm\+Get\+Status}} (uint32 group, uint64 channels)
+\begin{DoxyCompactList}\small\item\em Return Error status. \end{DoxyCompactList}\item 
+uint64 \mbox{\hyperlink{group__ESM_gace436f235f62ed75dd3c1b1374072b40}{esm\+Get\+Status\+Buffer}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Return Group 2 channel x Error status buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}} \mbox{\hyperlink{group__ESM_ga8dbfefa59cdb688306a7c4b93b7c435e}{esm\+Enter\+Self\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Return E\+SM Self test status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}} \mbox{\hyperlink{group__ESM_ga6e558e0c5761321c3419e77642795d63}{esm\+Self\+Test\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Return E\+SM Self test status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga0b2e9a4b3b1e4dd57f496bda7bbb854c}{esm\+Get\+Config\+Value}} (\mbox{\hyperlink{structesm__config__reg}{esm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga47f1650e27c094120e414ad3332ea311}{esm\+Group1\+Notification}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga7d5d25716f0d945f9d5ae0e6ae387d67}{esm\+Group2\+Notification}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Error Signaling Module Driver Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the Esm driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{esm_8h_aef991631f17ac73b27a424b48cec2c43}\label{esm_8h_aef991631f17ac73b27a424b48cec2c43}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L0@{esm\+C\+H\+A\+N\+N\+E\+L0}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L0@{esm\+C\+H\+A\+N\+N\+E\+L0}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L0}{esmCHANNEL0}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L0~0x0000000000000001\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 0. 
+
+This is an alias name for the E\+SM group x channel 0.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 96 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a2e8e38a877317c4a009f192d1fc0d82d}\label{esm_8h_a2e8e38a877317c4a009f192d1fc0d82d}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L1@{esm\+C\+H\+A\+N\+N\+E\+L1}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L1@{esm\+C\+H\+A\+N\+N\+E\+L1}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L1}{esmCHANNEL1}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L1~0x0000000000000002\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 1. 
+
+This is an alias name for the E\+SM group x channel 1.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 105 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_ad47dfaf12d44c7d28783d791a2e504c7}\label{esm_8h_ad47dfaf12d44c7d28783d791a2e504c7}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L10@{esm\+C\+H\+A\+N\+N\+E\+L10}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L10@{esm\+C\+H\+A\+N\+N\+E\+L10}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L10}{esmCHANNEL10}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L10~0x0000000000000400\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 10. 
+
+This is an alias name for the E\+SM group x channel 10.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 186 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a7368398acc1de6fcd799c55b2f9cb11d}\label{esm_8h_a7368398acc1de6fcd799c55b2f9cb11d}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L11@{esm\+C\+H\+A\+N\+N\+E\+L11}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L11@{esm\+C\+H\+A\+N\+N\+E\+L11}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L11}{esmCHANNEL11}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L11~0x0000000000000800\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 11. 
+
+This is an alias name for the E\+SM group x channel 11.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 195 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a8d827062a610808fb418035a383b8a60}\label{esm_8h_a8d827062a610808fb418035a383b8a60}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L12@{esm\+C\+H\+A\+N\+N\+E\+L12}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L12@{esm\+C\+H\+A\+N\+N\+E\+L12}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L12}{esmCHANNEL12}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L12~0x0000000000001000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 12. 
+
+This is an alias name for the E\+SM group x channel 12.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 204 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a3b24e7ef04beaee2a51103c04867356a}\label{esm_8h_a3b24e7ef04beaee2a51103c04867356a}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L13@{esm\+C\+H\+A\+N\+N\+E\+L13}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L13@{esm\+C\+H\+A\+N\+N\+E\+L13}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L13}{esmCHANNEL13}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L13~0x0000000000002000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 13. 
+
+This is an alias name for the E\+SM group x channel 13.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 213 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a0b72bc5d902adb23e01b03e6041ba34b}\label{esm_8h_a0b72bc5d902adb23e01b03e6041ba34b}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L14@{esm\+C\+H\+A\+N\+N\+E\+L14}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L14@{esm\+C\+H\+A\+N\+N\+E\+L14}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L14}{esmCHANNEL14}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L14~0x0000000000004000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 14. 
+
+This is an alias name for the E\+SM group x channel 14.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 222 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a77866ef0c758b1de8748940e4682be55}\label{esm_8h_a77866ef0c758b1de8748940e4682be55}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L15@{esm\+C\+H\+A\+N\+N\+E\+L15}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L15@{esm\+C\+H\+A\+N\+N\+E\+L15}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L15}{esmCHANNEL15}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L15~0x0000000000008000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 15. 
+
+This is an alias name for the E\+SM group x channel 15.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 231 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a55f2ada34f332926e70b4a9c86d09037}\label{esm_8h_a55f2ada34f332926e70b4a9c86d09037}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L16@{esm\+C\+H\+A\+N\+N\+E\+L16}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L16@{esm\+C\+H\+A\+N\+N\+E\+L16}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L16}{esmCHANNEL16}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L16~0x0000000000010000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 16. 
+
+This is an alias name for the E\+SM group x channel 16.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 240 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a4fc40b119ccb4d4244799f5da7511235}\label{esm_8h_a4fc40b119ccb4d4244799f5da7511235}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L17@{esm\+C\+H\+A\+N\+N\+E\+L17}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L17@{esm\+C\+H\+A\+N\+N\+E\+L17}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L17}{esmCHANNEL17}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L17~0x0000000000020000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 17. 
+
+This is an alias name for the E\+SM group x channel 17.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 249 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a5e4aa0798413874d4c8412dbe0fa3028}\label{esm_8h_a5e4aa0798413874d4c8412dbe0fa3028}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L18@{esm\+C\+H\+A\+N\+N\+E\+L18}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L18@{esm\+C\+H\+A\+N\+N\+E\+L18}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L18}{esmCHANNEL18}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L18~0x0000000000040000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 18. 
+
+This is an alias name for the E\+SM group x channel 18.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 258 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a02122dc1970655b1ff88133e54ed03ed}\label{esm_8h_a02122dc1970655b1ff88133e54ed03ed}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L19@{esm\+C\+H\+A\+N\+N\+E\+L19}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L19@{esm\+C\+H\+A\+N\+N\+E\+L19}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L19}{esmCHANNEL19}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L19~0x0000000000080000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 19. 
+
+This is an alias name for the E\+SM group x channel 19.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 267 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a39934b6179af7d8be333d2e70e4fe88a}\label{esm_8h_a39934b6179af7d8be333d2e70e4fe88a}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L2@{esm\+C\+H\+A\+N\+N\+E\+L2}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L2@{esm\+C\+H\+A\+N\+N\+E\+L2}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L2}{esmCHANNEL2}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L2~0x0000000000000004\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 2. 
+
+This is an alias name for the E\+SM group x channel 2.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 114 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a202e455270b0ad99d6cfe455589e49fe}\label{esm_8h_a202e455270b0ad99d6cfe455589e49fe}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L20@{esm\+C\+H\+A\+N\+N\+E\+L20}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L20@{esm\+C\+H\+A\+N\+N\+E\+L20}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L20}{esmCHANNEL20}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L20~0x0000000000100000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 20. 
+
+This is an alias name for the E\+SM group x channel 20.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 276 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a3989fa8dcb4cfe56e4c30f63437a3968}\label{esm_8h_a3989fa8dcb4cfe56e4c30f63437a3968}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L21@{esm\+C\+H\+A\+N\+N\+E\+L21}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L21@{esm\+C\+H\+A\+N\+N\+E\+L21}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L21}{esmCHANNEL21}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L21~0x0000000000200000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 21. 
+
+This is an alias name for the E\+SM group x channel 21.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 285 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a5e6a09e16c9e8c2a7a28e9fb422af786}\label{esm_8h_a5e6a09e16c9e8c2a7a28e9fb422af786}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L22@{esm\+C\+H\+A\+N\+N\+E\+L22}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L22@{esm\+C\+H\+A\+N\+N\+E\+L22}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L22}{esmCHANNEL22}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L22~0x0000000000400000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 22. 
+
+This is an alias name for the E\+SM group x channel 22.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 294 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a2aea0e7d6ce87a93740646ef16d12516}\label{esm_8h_a2aea0e7d6ce87a93740646ef16d12516}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L23@{esm\+C\+H\+A\+N\+N\+E\+L23}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L23@{esm\+C\+H\+A\+N\+N\+E\+L23}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L23}{esmCHANNEL23}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L23~0x0000000000800000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 23. 
+
+This is an alias name for the E\+SM group x channel 23.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 303 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aba33c928266b38b42ba1f68d210b237e}\label{esm_8h_aba33c928266b38b42ba1f68d210b237e}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L24@{esm\+C\+H\+A\+N\+N\+E\+L24}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L24@{esm\+C\+H\+A\+N\+N\+E\+L24}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L24}{esmCHANNEL24}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L24~0x0000000001000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 24. 
+
+This is an alias name for the E\+SM group x channel 24.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 312 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aed07ffdae69dd87041cf7a29a4806634}\label{esm_8h_aed07ffdae69dd87041cf7a29a4806634}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L25@{esm\+C\+H\+A\+N\+N\+E\+L25}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L25@{esm\+C\+H\+A\+N\+N\+E\+L25}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L25}{esmCHANNEL25}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L25~0x0000000002000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 25. 
+
+This is an alias name for the E\+SM group x channel 25.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 321 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a430441c1dbe8fa83d89c4fe9b62ffb5c}\label{esm_8h_a430441c1dbe8fa83d89c4fe9b62ffb5c}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L26@{esm\+C\+H\+A\+N\+N\+E\+L26}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L26@{esm\+C\+H\+A\+N\+N\+E\+L26}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L26}{esmCHANNEL26}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L26~0x0000000004000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 26. 
+
+This is an alias name for the E\+SM group x channel 26.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 330 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a7b29fd22c5d0ff44a0081751a5510f19}\label{esm_8h_a7b29fd22c5d0ff44a0081751a5510f19}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L27@{esm\+C\+H\+A\+N\+N\+E\+L27}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L27@{esm\+C\+H\+A\+N\+N\+E\+L27}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L27}{esmCHANNEL27}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L27~0x0000000008000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 27. 
+
+This is an alias name for the E\+SM group x channel 27.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 339 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aa9b1507630d17e6f35604158fbf9a064}\label{esm_8h_aa9b1507630d17e6f35604158fbf9a064}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L28@{esm\+C\+H\+A\+N\+N\+E\+L28}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L28@{esm\+C\+H\+A\+N\+N\+E\+L28}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L28}{esmCHANNEL28}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L28~0x0000000010000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 28. 
+
+This is an alias name for the E\+SM group x channel 28.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 348 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a88ed379f08f87fa634a37ba388fdd4b6}\label{esm_8h_a88ed379f08f87fa634a37ba388fdd4b6}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L29@{esm\+C\+H\+A\+N\+N\+E\+L29}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L29@{esm\+C\+H\+A\+N\+N\+E\+L29}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L29}{esmCHANNEL29}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L29~0x0000000020000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 29. 
+
+This is an alias name for the E\+SM group x channel 29.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 357 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a56ac3d3ee322b40533b5b22693805792}\label{esm_8h_a56ac3d3ee322b40533b5b22693805792}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L3@{esm\+C\+H\+A\+N\+N\+E\+L3}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L3@{esm\+C\+H\+A\+N\+N\+E\+L3}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L3}{esmCHANNEL3}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L3~0x0000000000000008\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 3. 
+
+This is an alias name for the E\+SM group x channel 3.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 123 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a68db53efdba7db4cc0299b494cec1be3}\label{esm_8h_a68db53efdba7db4cc0299b494cec1be3}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L30@{esm\+C\+H\+A\+N\+N\+E\+L30}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L30@{esm\+C\+H\+A\+N\+N\+E\+L30}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L30}{esmCHANNEL30}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L30~0x0000000040000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 30. 
+
+This is an alias name for the E\+SM group x channel 30.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 366 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a57c5b970fb70fa92a442ae40c6d3ca48}\label{esm_8h_a57c5b970fb70fa92a442ae40c6d3ca48}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L31@{esm\+C\+H\+A\+N\+N\+E\+L31}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L31@{esm\+C\+H\+A\+N\+N\+E\+L31}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L31}{esmCHANNEL31}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L31~0x0000000080000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 31. 
+
+This is an alias name for the E\+SM group x channel 31.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 375 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_afced4442d488e3aec5c605cde0b2b753}\label{esm_8h_afced4442d488e3aec5c605cde0b2b753}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L32@{esm\+C\+H\+A\+N\+N\+E\+L32}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L32@{esm\+C\+H\+A\+N\+N\+E\+L32}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L32}{esmCHANNEL32}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L32~0x0000000100000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 32. 
+
+This is an alias name for the E\+SM group x channel 32.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 384 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a8f68e625c3d2e8ad5f8ccf92b6635843}\label{esm_8h_a8f68e625c3d2e8ad5f8ccf92b6635843}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L33@{esm\+C\+H\+A\+N\+N\+E\+L33}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L33@{esm\+C\+H\+A\+N\+N\+E\+L33}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L33}{esmCHANNEL33}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L33~0x0000000200000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 33. 
+
+This is an alias name for the E\+SM group x channel 33.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 393 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a13f9406a7db0bab49a5ac260f88d514b}\label{esm_8h_a13f9406a7db0bab49a5ac260f88d514b}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L34@{esm\+C\+H\+A\+N\+N\+E\+L34}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L34@{esm\+C\+H\+A\+N\+N\+E\+L34}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L34}{esmCHANNEL34}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L34~0x0000000400000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 34. 
+
+This is an alias name for the E\+SM group x channel 34.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 402 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a0813e55aca6ccc17a8fdbe5d93e598c6}\label{esm_8h_a0813e55aca6ccc17a8fdbe5d93e598c6}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L35@{esm\+C\+H\+A\+N\+N\+E\+L35}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L35@{esm\+C\+H\+A\+N\+N\+E\+L35}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L35}{esmCHANNEL35}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L35~0x0000000800000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 35. 
+
+This is an alias name for the E\+SM group x channel 35.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 411 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_afa40185f9aa2857d2e4276ee1b165622}\label{esm_8h_afa40185f9aa2857d2e4276ee1b165622}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L36@{esm\+C\+H\+A\+N\+N\+E\+L36}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L36@{esm\+C\+H\+A\+N\+N\+E\+L36}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L36}{esmCHANNEL36}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L36~0x0000001000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 36. 
+
+This is an alias name for the E\+SM group x channel 36.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 420 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a69c7fde3b40b6136abb7d74add67df13}\label{esm_8h_a69c7fde3b40b6136abb7d74add67df13}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L37@{esm\+C\+H\+A\+N\+N\+E\+L37}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L37@{esm\+C\+H\+A\+N\+N\+E\+L37}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L37}{esmCHANNEL37}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L37~0x0000002000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 37. 
+
+This is an alias name for the E\+SM group x channel 37.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 429 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aaee93fee349a555d4e1d7012cfaab7e5}\label{esm_8h_aaee93fee349a555d4e1d7012cfaab7e5}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L38@{esm\+C\+H\+A\+N\+N\+E\+L38}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L38@{esm\+C\+H\+A\+N\+N\+E\+L38}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L38}{esmCHANNEL38}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L38~0x0000004000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 38. 
+
+This is an alias name for the E\+SM group x channel 38.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 438 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a7dc6f6b1ef23c78827afd2e5b5e5c378}\label{esm_8h_a7dc6f6b1ef23c78827afd2e5b5e5c378}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L39@{esm\+C\+H\+A\+N\+N\+E\+L39}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L39@{esm\+C\+H\+A\+N\+N\+E\+L39}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L39}{esmCHANNEL39}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L39~0x0000008000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 39. 
+
+This is an alias name for the E\+SM group x channel 39.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 447 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a6cc1b040839ad2dc6cac9871e7a8e3ef}\label{esm_8h_a6cc1b040839ad2dc6cac9871e7a8e3ef}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L4@{esm\+C\+H\+A\+N\+N\+E\+L4}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L4@{esm\+C\+H\+A\+N\+N\+E\+L4}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L4}{esmCHANNEL4}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L4~0x0000000000000010\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 4. 
+
+This is an alias name for the E\+SM group x channel 4.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 132 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a133ccbad9ba93fbef5dd4e2cd565b995}\label{esm_8h_a133ccbad9ba93fbef5dd4e2cd565b995}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L40@{esm\+C\+H\+A\+N\+N\+E\+L40}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L40@{esm\+C\+H\+A\+N\+N\+E\+L40}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L40}{esmCHANNEL40}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L40~0x0000010000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 40. 
+
+This is an alias name for the E\+SM group x channel 40.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 456 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_ad706c67320bd5e9734219834447bcf9a}\label{esm_8h_ad706c67320bd5e9734219834447bcf9a}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L41@{esm\+C\+H\+A\+N\+N\+E\+L41}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L41@{esm\+C\+H\+A\+N\+N\+E\+L41}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L41}{esmCHANNEL41}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L41~0x0000020000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 41. 
+
+This is an alias name for the E\+SM group x channel 41.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 465 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a99d309c454c17fd8e72162275c1e1064}\label{esm_8h_a99d309c454c17fd8e72162275c1e1064}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L42@{esm\+C\+H\+A\+N\+N\+E\+L42}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L42@{esm\+C\+H\+A\+N\+N\+E\+L42}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L42}{esmCHANNEL42}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L42~0x0000040000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 42. 
+
+This is an alias name for the E\+SM group x channel 42.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 474 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a928adbb3a55f884c37c576dcd78662a5}\label{esm_8h_a928adbb3a55f884c37c576dcd78662a5}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L43@{esm\+C\+H\+A\+N\+N\+E\+L43}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L43@{esm\+C\+H\+A\+N\+N\+E\+L43}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L43}{esmCHANNEL43}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L43~0x0000080000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 43. 
+
+This is an alias name for the E\+SM group x channel 43.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 483 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aafc446d4d3a82e8493335c44c422e368}\label{esm_8h_aafc446d4d3a82e8493335c44c422e368}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L44@{esm\+C\+H\+A\+N\+N\+E\+L44}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L44@{esm\+C\+H\+A\+N\+N\+E\+L44}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L44}{esmCHANNEL44}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L44~0x0000100000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 44. 
+
+This is an alias name for the E\+SM group x channel 44.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 492 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aebda282fd0b1c4f0f9da0de702ea25a9}\label{esm_8h_aebda282fd0b1c4f0f9da0de702ea25a9}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L45@{esm\+C\+H\+A\+N\+N\+E\+L45}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L45@{esm\+C\+H\+A\+N\+N\+E\+L45}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L45}{esmCHANNEL45}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L45~0x0000200000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 45. 
+
+This is an alias name for the E\+SM group x channel 45.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 501 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a415a5bb3a6c11697c1046a513895e8b9}\label{esm_8h_a415a5bb3a6c11697c1046a513895e8b9}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L46@{esm\+C\+H\+A\+N\+N\+E\+L46}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L46@{esm\+C\+H\+A\+N\+N\+E\+L46}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L46}{esmCHANNEL46}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L46~0x0000400000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 46. 
+
+This is an alias name for the E\+SM group x channel 46.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 510 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a979951f868f9ec24dfea5d89926aa6df}\label{esm_8h_a979951f868f9ec24dfea5d89926aa6df}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L47@{esm\+C\+H\+A\+N\+N\+E\+L47}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L47@{esm\+C\+H\+A\+N\+N\+E\+L47}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L47}{esmCHANNEL47}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L47~0x0000800000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 47. 
+
+This is an alias name for the E\+SM group x channel 47.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 519 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a930edc2ccbebebb668ae82426323476b}\label{esm_8h_a930edc2ccbebebb668ae82426323476b}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L48@{esm\+C\+H\+A\+N\+N\+E\+L48}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L48@{esm\+C\+H\+A\+N\+N\+E\+L48}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L48}{esmCHANNEL48}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L48~0x0001000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 48. 
+
+This is an alias name for the E\+SM group x channel 48.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 528 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a4c4a4e1767276a09fc315586ebad1030}\label{esm_8h_a4c4a4e1767276a09fc315586ebad1030}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L49@{esm\+C\+H\+A\+N\+N\+E\+L49}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L49@{esm\+C\+H\+A\+N\+N\+E\+L49}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L49}{esmCHANNEL49}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L49~0x0002000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 49. 
+
+This is an alias name for the E\+SM group x channel 49.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 537 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_af4b1e50816ee315b5342cd551695f497}\label{esm_8h_af4b1e50816ee315b5342cd551695f497}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L5@{esm\+C\+H\+A\+N\+N\+E\+L5}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L5@{esm\+C\+H\+A\+N\+N\+E\+L5}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L5}{esmCHANNEL5}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L5~0x0000000000000020\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 5. 
+
+This is an alias name for the E\+SM group x channel 5.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 141 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a9937500d3a918446fc6e34090e62ef96}\label{esm_8h_a9937500d3a918446fc6e34090e62ef96}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L50@{esm\+C\+H\+A\+N\+N\+E\+L50}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L50@{esm\+C\+H\+A\+N\+N\+E\+L50}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L50}{esmCHANNEL50}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L50~0x0004000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 50. 
+
+This is an alias name for the E\+SM group x channel 50.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 546 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_ab97e5fe753872858711a1ad9c0aa151c}\label{esm_8h_ab97e5fe753872858711a1ad9c0aa151c}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L51@{esm\+C\+H\+A\+N\+N\+E\+L51}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L51@{esm\+C\+H\+A\+N\+N\+E\+L51}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L51}{esmCHANNEL51}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L51~0x0008000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 51. 
+
+This is an alias name for the E\+SM group x channel 51.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 555 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a0cd55dd28a5d5ed142d36e4c2c6ab409}\label{esm_8h_a0cd55dd28a5d5ed142d36e4c2c6ab409}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L52@{esm\+C\+H\+A\+N\+N\+E\+L52}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L52@{esm\+C\+H\+A\+N\+N\+E\+L52}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L52}{esmCHANNEL52}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L52~0x0010000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 52. 
+
+This is an alias name for the E\+SM group x channel 52.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 564 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a95c8cbd27ae93c2755018458483b9b0c}\label{esm_8h_a95c8cbd27ae93c2755018458483b9b0c}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L53@{esm\+C\+H\+A\+N\+N\+E\+L53}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L53@{esm\+C\+H\+A\+N\+N\+E\+L53}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L53}{esmCHANNEL53}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L53~0x0020000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 53. 
+
+This is an alias name for the E\+SM group x channel 53.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 573 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a3efcea0769e2e28b186bc2864a76ccee}\label{esm_8h_a3efcea0769e2e28b186bc2864a76ccee}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L54@{esm\+C\+H\+A\+N\+N\+E\+L54}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L54@{esm\+C\+H\+A\+N\+N\+E\+L54}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L54}{esmCHANNEL54}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L54~0x0040000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 54. 
+
+This is an alias name for the E\+SM group x channel 54.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 582 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aa155c00284001cd4a882029292dfe416}\label{esm_8h_aa155c00284001cd4a882029292dfe416}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L55@{esm\+C\+H\+A\+N\+N\+E\+L55}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L55@{esm\+C\+H\+A\+N\+N\+E\+L55}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L55}{esmCHANNEL55}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L55~0x0080000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 55. 
+
+This is an alias name for the E\+SM group x channel 55.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 591 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a620ac2219085948f4fd118c7eb26a819}\label{esm_8h_a620ac2219085948f4fd118c7eb26a819}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L56@{esm\+C\+H\+A\+N\+N\+E\+L56}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L56@{esm\+C\+H\+A\+N\+N\+E\+L56}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L56}{esmCHANNEL56}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L56~0x0100000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 56. 
+
+This is an alias name for the E\+SM group x channel 56.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 600 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a3c61e39904b7d373fe5fed26c5d4063c}\label{esm_8h_a3c61e39904b7d373fe5fed26c5d4063c}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L57@{esm\+C\+H\+A\+N\+N\+E\+L57}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L57@{esm\+C\+H\+A\+N\+N\+E\+L57}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L57}{esmCHANNEL57}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L57~0x0200000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 57. 
+
+This is an alias name for the E\+SM group x channel 57.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 609 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_ae8a6a830aba5b9027197de65f8f456c2}\label{esm_8h_ae8a6a830aba5b9027197de65f8f456c2}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L58@{esm\+C\+H\+A\+N\+N\+E\+L58}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L58@{esm\+C\+H\+A\+N\+N\+E\+L58}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L58}{esmCHANNEL58}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L58~0x0400000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 58. 
+
+This is an alias name for the E\+SM group x channel 58.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 618 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_ad92b50ac2b1021ef45f116532b2491d6}\label{esm_8h_ad92b50ac2b1021ef45f116532b2491d6}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L59@{esm\+C\+H\+A\+N\+N\+E\+L59}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L59@{esm\+C\+H\+A\+N\+N\+E\+L59}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L59}{esmCHANNEL59}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L59~0x0800000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 59. 
+
+This is an alias name for the E\+SM group x channel 59.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 627 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a9e172c8485d0dba1a5f39621ffc85927}\label{esm_8h_a9e172c8485d0dba1a5f39621ffc85927}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L6@{esm\+C\+H\+A\+N\+N\+E\+L6}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L6@{esm\+C\+H\+A\+N\+N\+E\+L6}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L6}{esmCHANNEL6}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L6~0x0000000000000040\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 6. 
+
+This is an alias name for the E\+SM group x channel 6.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 150 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a868730ddfcf69a0096a5531f69ef5e67}\label{esm_8h_a868730ddfcf69a0096a5531f69ef5e67}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L60@{esm\+C\+H\+A\+N\+N\+E\+L60}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L60@{esm\+C\+H\+A\+N\+N\+E\+L60}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L60}{esmCHANNEL60}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L60~0x1000000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 60. 
+
+This is an alias name for the E\+SM group x channel 60.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 636 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a17e83743b12837f86cb253b4f32684d6}\label{esm_8h_a17e83743b12837f86cb253b4f32684d6}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L61@{esm\+C\+H\+A\+N\+N\+E\+L61}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L61@{esm\+C\+H\+A\+N\+N\+E\+L61}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L61}{esmCHANNEL61}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L61~0x2000000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 61. 
+
+This is an alias name for the E\+SM group x channel 61.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 645 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a880da86f0e41085e40cbe09ef0904cd8}\label{esm_8h_a880da86f0e41085e40cbe09ef0904cd8}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L62@{esm\+C\+H\+A\+N\+N\+E\+L62}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L62@{esm\+C\+H\+A\+N\+N\+E\+L62}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L62}{esmCHANNEL62}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L62~0x4000000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 62. 
+
+This is an alias name for the E\+SM group x channel 62.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 654 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a85a7411f59d57ec65722ecb912ed3ed5}\label{esm_8h_a85a7411f59d57ec65722ecb912ed3ed5}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L63@{esm\+C\+H\+A\+N\+N\+E\+L63}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L63@{esm\+C\+H\+A\+N\+N\+E\+L63}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L63}{esmCHANNEL63}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L63~0x8000000000000000\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 63. 
+
+This is an alias name for the E\+SM group x channel 63.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 663 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_ad7022424bfbb154747aa43b5ed5bfb4b}\label{esm_8h_ad7022424bfbb154747aa43b5ed5bfb4b}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L7@{esm\+C\+H\+A\+N\+N\+E\+L7}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L7@{esm\+C\+H\+A\+N\+N\+E\+L7}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L7}{esmCHANNEL7}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L7~0x0000000000000080\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 7. 
+
+This is an alias name for the E\+SM group x channel 7.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 159 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a4da1ff2e0bb130e0bb6c5e268c61f585}\label{esm_8h_a4da1ff2e0bb130e0bb6c5e268c61f585}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L8@{esm\+C\+H\+A\+N\+N\+E\+L8}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L8@{esm\+C\+H\+A\+N\+N\+E\+L8}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L8}{esmCHANNEL8}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L8~0x0000000000000100\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 8. 
+
+This is an alias name for the E\+SM group x channel 8.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 168 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_af26b22edebce45fb1767d16e57692866}\label{esm_8h_af26b22edebce45fb1767d16e57692866}} 
+\index{esm.\+h@{esm.\+h}!esm\+C\+H\+A\+N\+N\+E\+L9@{esm\+C\+H\+A\+N\+N\+E\+L9}}
+\index{esm\+C\+H\+A\+N\+N\+E\+L9@{esm\+C\+H\+A\+N\+N\+E\+L9}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+C\+H\+A\+N\+N\+E\+L9}{esmCHANNEL9}}
+{\footnotesize\ttfamily \#define esm\+C\+H\+A\+N\+N\+E\+L9~0x0000000000000200\+U\+LL}
+
+
+
+Alias name for E\+SM group x channel 9. 
+
+This is an alias name for the E\+SM group x channel 9.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape channel} 
+\end{DoxyNote}
+
+
+Definition at line 177 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_af15e4f01f008097c933cf056860152e4}\label{esm_8h_af15e4f01f008097c933cf056860152e4}} 
+\index{esm.\+h@{esm.\+h}!esm\+G\+R\+O\+U\+P1@{esm\+G\+R\+O\+U\+P1}}
+\index{esm\+G\+R\+O\+U\+P1@{esm\+G\+R\+O\+U\+P1}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+G\+R\+O\+U\+P1}{esmGROUP1}}
+{\footnotesize\ttfamily \#define esm\+G\+R\+O\+U\+P1~0U}
+
+
+
+Alias name for E\+SM group 1. 
+
+This is an alias name for the E\+SM group 1.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape group} 
+\end{DoxyNote}
+
+
+Definition at line 69 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_a70fead2f9431da2c27652df07b6022bd}\label{esm_8h_a70fead2f9431da2c27652df07b6022bd}} 
+\index{esm.\+h@{esm.\+h}!esm\+G\+R\+O\+U\+P2@{esm\+G\+R\+O\+U\+P2}}
+\index{esm\+G\+R\+O\+U\+P2@{esm\+G\+R\+O\+U\+P2}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+G\+R\+O\+U\+P2}{esmGROUP2}}
+{\footnotesize\ttfamily \#define esm\+G\+R\+O\+U\+P2~1U}
+
+
+
+Alias name for E\+SM group 2. 
+
+This is an alias name for the E\+SM group 2.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape group} 
+\end{DoxyNote}
+
+
+Definition at line 78 of file esm.\+h.
+
+\mbox{\Hypertarget{esm_8h_aad47f755cd10caefa44a8da5423bda4e}\label{esm_8h_aad47f755cd10caefa44a8da5423bda4e}} 
+\index{esm.\+h@{esm.\+h}!esm\+G\+R\+O\+U\+P3@{esm\+G\+R\+O\+U\+P3}}
+\index{esm\+G\+R\+O\+U\+P3@{esm\+G\+R\+O\+U\+P3}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+G\+R\+O\+U\+P3}{esmGROUP3}}
+{\footnotesize\ttfamily \#define esm\+G\+R\+O\+U\+P3~2U}
+
+
+
+Alias name for E\+SM group 3. 
+
+This is an alias name for the E\+SM group 3.
+
+\begin{DoxyNote}{Note}
+This value should be used for A\+PI argument {\itshape group} 
+\end{DoxyNote}
+
+
+Definition at line 87 of file esm.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}\label{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}} 
+\index{esm.\+h@{esm.\+h}!esm\+Self\+Test\+Flag\+\_\+t@{esm\+Self\+Test\+Flag\+\_\+t}}
+\index{esm\+Self\+Test\+Flag\+\_\+t@{esm\+Self\+Test\+Flag\+\_\+t}!esm.\+h@{esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+Self\+Test\+Flag\+\_\+t}{esmSelfTestFlag\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}}}
+
+
+
+E\+SM Self-\/\+Test Status Type Definition. 
+
+This type is used to represent E\+SM Self-\/\+Test Status. 

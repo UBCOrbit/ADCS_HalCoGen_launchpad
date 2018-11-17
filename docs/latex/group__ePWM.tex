@@ -1,0 +1,217 @@
+\hypertarget{group__ePWM}{}\section{e\+P\+WM}
+\label{group__ePWM}\index{e\+P\+WM@{e\+P\+WM}}
+
+
+Enhanced Pulse Width Modulator.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__ePWM_gaa36a31d75f1bd6bbc7a6b9a700906f25}\label{group__ePWM_gaa36a31d75f1bd6bbc7a6b9a700906f25}} 
+void {\bfseries etpwm\+Init} (void)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga6401697f1ffe902d11834670988086eb}\label{group__ePWM_ga6401697f1ffe902d11834670988086eb}} 
+void {\bfseries etpwm\+Start\+T\+B\+C\+LK} (void)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaffb59f57ade98277fcc05b5b54c0e565}\label{group__ePWM_gaffb59f57ade98277fcc05b5b54c0e565}} 
+void {\bfseries etpwm\+Stop\+T\+B\+C\+LK} (void)
+\item 
+\mbox{\Hypertarget{group__ePWM_gac53c75846a194b544739c4ceedce78f7}\label{group__ePWM_gac53c75846a194b544739c4ceedce78f7}} 
+void {\bfseries etpwm\+Set\+Clk\+Div} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a40fbcc6a1155b920da544379bbc92fa8}{etpwm\+Clk\+Div\+\_\+t}} clkdiv, \mbox{\hyperlink{etpwm_8h_a603247d44887d7615ab1fba25f777d14}{etpwm\+Hsp\+Clk\+Div\+\_\+t}} hspclkdiv)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga6b87a58164fd77f15f0a4d82c8a9a39a}\label{group__ePWM_ga6b87a58164fd77f15f0a4d82c8a9a39a}} 
+void {\bfseries etpwm\+Set\+Timebase\+Period} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 period)
+\item 
+\mbox{\Hypertarget{group__ePWM_gafb224271e9a5f14c1547228817192cba}\label{group__ePWM_gafb224271e9a5f14c1547228817192cba}} 
+void {\bfseries etpwm\+Set\+Count} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 count)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga4a7338a71bf7cd0740caf5187c80b5c8}\label{group__ePWM_ga4a7338a71bf7cd0740caf5187c80b5c8}} 
+void {\bfseries etpwm\+Disable\+Timebase\+Period\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_gafa94567563d5f4053edc62d886b5ca93}\label{group__ePWM_gafa94567563d5f4053edc62d886b5ca93}} 
+void {\bfseries etpwm\+Enable\+Timebase\+Period\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga734bed75bba8aadf24e371d0d57bb076}\label{group__ePWM_ga734bed75bba8aadf24e371d0d57bb076}} 
+void {\bfseries etpwm\+Enable\+Counter\+Load\+On\+Sync} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 phase, uint16 direction)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga9e5acec5f4ea5d73d1c9c0e56158eda8}\label{group__ePWM_ga9e5acec5f4ea5d73d1c9c0e56158eda8}} 
+void {\bfseries etpwm\+Disable\+Counter\+Load\+On\+Sync} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_gab6089b6dac639f4b5eed1a27ae608b54}\label{group__ePWM_gab6089b6dac639f4b5eed1a27ae608b54}} 
+void {\bfseries etpwm\+Set\+Sync\+Out} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a7cb693b301ed14705eb6cef878f6ae0b}{etpwm\+Sync\+Out\+\_\+t}} sync\+Out\+Src)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga5263272f0411ddd5512a6dfb3b0ce350}\label{group__ePWM_ga5263272f0411ddd5512a6dfb3b0ce350}} 
+void {\bfseries etpwm\+Set\+Counter\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_adf8a327bcf89160f954d51f051ef64b3}{etpwm\+Counter\+Mode\+\_\+t}} countermode)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga533493dea3ca9a1e2d3160adb2c7fbfe}\label{group__ePWM_ga533493dea3ca9a1e2d3160adb2c7fbfe}} 
+void {\bfseries etpwm\+Trigger\+S\+W\+Sync} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga6e9e11a1053bbe3778e317d2cf1099de}\label{group__ePWM_ga6e9e11a1053bbe3778e317d2cf1099de}} 
+void {\bfseries etpwm\+Set\+Run\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_aad909e1a09a8833e36cbbabebf5279ee}{etpwm\+Run\+Mode\+\_\+t}} runmode)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga0d35a3efab7768166d02a0ffbe854855}\label{group__ePWM_ga0d35a3efab7768166d02a0ffbe854855}} 
+void {\bfseries etpwm\+Set\+CmpA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 value)
+\item 
+\mbox{\Hypertarget{group__ePWM_gac6f958daf11a993c82401452c76fca38}\label{group__ePWM_gac6f958daf11a993c82401452c76fca38}} 
+void {\bfseries etpwm\+Set\+CmpB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 value)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga8ab67bdbbb5eff712728422c3ce5ce3b}\label{group__ePWM_ga8ab67bdbbb5eff712728422c3ce5ce3b}} 
+void {\bfseries etpwm\+Enable\+Cmp\+A\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}{etpwm\+Load\+Mode\+\_\+t}} loadmode)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga2a0dc8bb0819f3e4396b32ccaa2cd82f}\label{group__ePWM_ga2a0dc8bb0819f3e4396b32ccaa2cd82f}} 
+void {\bfseries etpwm\+Disable\+Cmp\+A\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga124ce5d53918b6dc10ab30f25a7730c6}\label{group__ePWM_ga124ce5d53918b6dc10ab30f25a7730c6}} 
+void {\bfseries etpwm\+Enable\+Cmp\+B\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a3904bcb1c3351b1335302578d951c9b1}{etpwm\+Load\+Mode\+\_\+t}} loadmode)
+\item 
+\mbox{\Hypertarget{group__ePWM_gab61f430601d30c74da44d7bd8e60a789}\label{group__ePWM_gab61f430601d30c74da44d7bd8e60a789}} 
+void {\bfseries etpwm\+Disable\+Cmp\+B\+Shadow\+Mode} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga72804f7e95c13557c88b4969202375d3}\label{group__ePWM_ga72804f7e95c13557c88b4969202375d3}} 
+void {\bfseries etpwm\+Set\+Action\+Qual\+PwmA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmActionQualConfig__t}{etpwm\+Action\+Qual\+Config\+\_\+t}} actionqualconfig)
+\item 
+\mbox{\Hypertarget{group__ePWM_gae253bd555aec84fb5d4fd69524fcd3a2}\label{group__ePWM_gae253bd555aec84fb5d4fd69524fcd3a2}} 
+void {\bfseries etpwm\+Set\+Action\+Qual\+PwmB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmActionQualConfig__t}{etpwm\+Action\+Qual\+Config\+\_\+t}} actionqualconfig)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga109b5d949cccd650645369311b71bc3f}\label{group__ePWM_ga109b5d949cccd650645369311b71bc3f}} 
+void {\bfseries etpwm\+Enable\+Dead\+Band} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmDeadBandConfig__t}{etpwm\+Dead\+Band\+Config\+\_\+t}} deadbandconfig)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga012b9be3d64af1eea91ec720bd74d450}\label{group__ePWM_ga012b9be3d64af1eea91ec720bd74d450}} 
+void {\bfseries etpwm\+Disable\+Deadband} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga9b1b466b161f61dd97755536388a8de1}\label{group__ePWM_ga9b1b466b161f61dd97755536388a8de1}} 
+void {\bfseries etpwm\+Set\+Dead\+Band\+Delay} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, uint16 Rdelay, uint16 Fdelay)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaa93d45f2d2d85b940737a8d0688463d1}\label{group__ePWM_gaa93d45f2d2d85b940737a8d0688463d1}} 
+void {\bfseries etpwm\+Enable\+Chopping} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmChoppingConfig__t}{etpwm\+Chopping\+Config\+\_\+t}} choppingconfig)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaae886fc963534569426429deee67a28e}\label{group__ePWM_gaae886fc963534569426429deee67a28e}} 
+void {\bfseries etpwm\+Disable\+Chopping} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaa8e5fda67f044423912ead101387d0f4}\label{group__ePWM_gaa8e5fda67f044423912ead101387d0f4}} 
+void {\bfseries etpwm\+Enable\+Trip\+Zone\+Sources} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a61fc897f82f511a0da2493cd1629cc83}{etpwm\+Trip\+Zone\+Src\+\_\+t}} sources)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga0597a018010e26b0d97b4567022dce8c}\label{group__ePWM_ga0597a018010e26b0d97b4567022dce8c}} 
+void {\bfseries etpwm\+Disable\+Trip\+Zone\+Sources} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a61fc897f82f511a0da2493cd1629cc83}{etpwm\+Trip\+Zone\+Src\+\_\+t}} sources)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaac0e113d3ca65c4ca89571eeb03d7e45}\label{group__ePWM_gaac0e113d3ca65c4ca89571eeb03d7e45}} 
+void {\bfseries etpwm\+Set\+Trip\+Action} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmTripActionConfig__t}{etpwm\+Trip\+Action\+Config\+\_\+t}} tripactionconfig)
+\item 
+\mbox{\Hypertarget{group__ePWM_gad7dc33abc7f2ec6a36418934ec40b663}\label{group__ePWM_gad7dc33abc7f2ec6a36418934ec40b663}} 
+void {\bfseries etpwm\+Enable\+Trip\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} interrupts)
+\item 
+\mbox{\Hypertarget{group__ePWM_gabee3e7c9d1e1b4096eb7ceb392684027}\label{group__ePWM_gabee3e7c9d1e1b4096eb7ceb392684027}} 
+void {\bfseries etpwm\+Disable\+Trip\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} interrupts)
+\item 
+\mbox{\Hypertarget{group__ePWM_gabfc809561801a2def8255c50157d687f}\label{group__ePWM_gabfc809561801a2def8255c50157d687f}} 
+void {\bfseries etpwm\+Clear\+Trip\+Condition} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} trips)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga5fe6ddb6cb8ab2df23a6a70f18e41daa}\label{group__ePWM_ga5fe6ddb6cb8ab2df23a6a70f18e41daa}} 
+void {\bfseries etpwm\+Clear\+Trip\+Interrupt\+Flag} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_gade14d3b50bbeaf0bec5ccf12056b8ef5}\label{group__ePWM_gade14d3b50bbeaf0bec5ccf12056b8ef5}} 
+void {\bfseries etpwm\+Force\+Trip\+Event} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a1d25b4cd16ce2c7ee79696b690abb2fd}{etpwm\+Trip\+\_\+t}} trip)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga97c75e033f952492ec86ebfc8e0f6a96}\label{group__ePWM_ga97c75e033f952492ec86ebfc8e0f6a96}} 
+void {\bfseries etpwm\+Enable\+S\+O\+CA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}} eventsource, \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}} eventperiod)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga56dd00efc9beb1d674ef6ebe0e732cf4}\label{group__ePWM_ga56dd00efc9beb1d674ef6ebe0e732cf4}} 
+void {\bfseries etpwm\+Disable\+S\+O\+CA} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_gad9b5d9807c1dda60c9708ec5064c1b4a}\label{group__ePWM_gad9b5d9807c1dda60c9708ec5064c1b4a}} 
+void {\bfseries etpwm\+Enable\+S\+O\+CB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}} eventsource, \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}} eventperiod)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga74788aa06e235ff75c0169368a5ee256}\label{group__ePWM_ga74788aa06e235ff75c0169368a5ee256}} 
+void {\bfseries etpwm\+Disable\+S\+O\+CB} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga23b9209cd3f9f086335ad7b422963c07}\label{group__ePWM_ga23b9209cd3f9f086335ad7b422963c07}} 
+void {\bfseries etpwm\+Enable\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_a8d2b2b041536cea8436f44321e60b226}{etpwm\+Event\+Src\+\_\+t}} eventsource, \mbox{\hyperlink{etpwm_8h_a4d74cb9cd3a3e07b2fa0d26745ba15d5}{etpwm\+Event\+Period\+\_\+t}} eventperiod)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaa4a74e6f0094fbaac3f07641ffd8bb81}\label{group__ePWM_gaa4a74e6f0094fbaac3f07641ffd8bb81}} 
+void {\bfseries etpwm\+Disable\+Interrupt} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaaa1e46318eca04bdee08edc3e8b4f255}\label{group__ePWM_gaaa1e46318eca04bdee08edc3e8b4f255}} 
+uint16 {\bfseries etpwm\+Get\+Event\+Status} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga7d3982e45aa1b2532c126e24b8457402}\label{group__ePWM_ga7d3982e45aa1b2532c126e24b8457402}} 
+void {\bfseries etpwm\+Clear\+Event\+Flag} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}{etpwm\+Event\+\_\+t}} events)
+\item 
+\mbox{\Hypertarget{group__ePWM_gac40c5718cbfec4e4374091980e91fc76}\label{group__ePWM_gac40c5718cbfec4e4374091980e91fc76}} 
+void {\bfseries etpwm\+Trigger\+Event} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{etpwm_8h_abd6fb2a9c5d4ba6336431292ba59050a}{etpwm\+Event\+\_\+t}} events)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga0b5a755547dac3076fe6ce48b8adc18a}\label{group__ePWM_ga0b5a755547dac3076fe6ce48b8adc18a}} 
+void {\bfseries etpwm\+Enable\+Digital\+Compare\+Events} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$etpwm, \mbox{\hyperlink{structetpwmDigitalCompareConfig__t}{etpwm\+Digital\+Compare\+Config\+\_\+t}} digitalcompareconfig)
+\item 
+\mbox{\Hypertarget{group__ePWM_gab902bd9bc2c6bb0c571bada7f353e80b}\label{group__ePWM_gab902bd9bc2c6bb0c571bada7f353e80b}} 
+void {\bfseries etpwm1\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__ePWM_gad4cebff50483ed7a3cf04e1afad5dea5}\label{group__ePWM_gad4cebff50483ed7a3cf04e1afad5dea5}} 
+void {\bfseries etpwm2\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga6b165c0595fcfab78231f740be53bc5b}\label{group__ePWM_ga6b165c0595fcfab78231f740be53bc5b}} 
+void {\bfseries etpwm3\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga57065ed5781393165dda23ef870e8ae5}\label{group__ePWM_ga57065ed5781393165dda23ef870e8ae5}} 
+void {\bfseries etpwm4\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga9a1ee59df37d70734bb887b99d7da9a0}\label{group__ePWM_ga9a1ee59df37d70734bb887b99d7da9a0}} 
+void {\bfseries etpwm5\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__ePWM_gaf3aefe0dc4eab9cee926c476b1bd78a2}\label{group__ePWM_gaf3aefe0dc4eab9cee926c476b1bd78a2}} 
+void {\bfseries etpwm6\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+\mbox{\Hypertarget{group__ePWM_ga64bc55b7f27c79d52de907646a1c8cf8}\label{group__ePWM_ga64bc55b7f27c79d52de907646a1c8cf8}} 
+void {\bfseries etpwm7\+Get\+Config\+Value} (\mbox{\hyperlink{structetpwm__config__reg}{etpwm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\item 
+void \mbox{\hyperlink{group__ePWM_gafaa5c117b76b6b08df02364245b78daf}{etpwm\+Notification}} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Notification for E\+T\+P\+W\+Mx Interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ePWM_ga9ef5c284f9f7b5d948f438a6a4288fc6}{etpwm\+Trip\+Notification}} (\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$node, uint16 flags)
+\begin{DoxyCompactList}\small\item\em Notification for E\+T\+P\+WM Trip zone Interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enhanced Pulse Width Modulator. 
+
+The enhanced pulse width modulator (e\+P\+WM) peripheral is a key element in controlling many of the power electronic systems found in both commercial and industrial equipments. The features supported by the e\+P\+WM make it especially suitable for digital motor control.
+
+Related Files
+\begin{DoxyItemize}
+\item H\+L\+\_\+reg\+\_\+etpwm.\+h
+\item H\+L\+\_\+etpwm.\+h
+\item H\+L\+\_\+etpwm.\+c 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ePWM_gafaa5c117b76b6b08df02364245b78daf}\label{group__ePWM_gafaa5c117b76b6b08df02364245b78daf}} 
+\index{e\+P\+WM@{e\+P\+WM}!etpwm\+Notification@{etpwm\+Notification}}
+\index{etpwm\+Notification@{etpwm\+Notification}!e\+P\+WM@{e\+P\+WM}}
+\subsubsection{\texorpdfstring{etpwm\+Notification()}{etpwmNotification()}}
+{\footnotesize\ttfamily void etpwm\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Notification for E\+T\+P\+W\+Mx Interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The pulse width modulation (E\+T\+P\+WM) object handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ePWM_ga9ef5c284f9f7b5d948f438a6a4288fc6}\label{group__ePWM_ga9ef5c284f9f7b5d948f438a6a4288fc6}} 
+\index{e\+P\+WM@{e\+P\+WM}!etpwm\+Trip\+Notification@{etpwm\+Trip\+Notification}}
+\index{etpwm\+Trip\+Notification@{etpwm\+Trip\+Notification}!e\+P\+WM@{e\+P\+WM}}
+\subsubsection{\texorpdfstring{etpwm\+Trip\+Notification()}{etpwmTripNotification()}}
+{\footnotesize\ttfamily void etpwm\+Trip\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__etpwm_8h_a3030c3a8f18ffd60ee3de5bbd7632891}{etpwm\+B\+A\+S\+E\+\_\+t}} $\ast$}]{node,  }\item[{uint16}]{flags }\end{DoxyParamCaption})}
+
+
+
+Notification for E\+T\+P\+WM Trip zone Interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The pulse width modulation (E\+T\+P\+WM) object handle \\
+\hline
+\mbox{\tt in}  & {\em flags} & Event and Interrupt flag. \\
+\hline
+\end{DoxyParams}

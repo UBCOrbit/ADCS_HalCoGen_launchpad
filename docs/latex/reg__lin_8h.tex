@@ -1,0 +1,87 @@
+\hypertarget{reg__lin_8h}{}\section{include/reg\+\_\+lin.h File Reference}
+\label{reg__lin_8h}\index{include/reg\+\_\+lin.\+h@{include/reg\+\_\+lin.\+h}}
+
+
+L\+IN Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlinBase}{lin\+Base}}
+\begin{DoxyCompactList}\small\item\em L\+IN Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__lin_8h_a7707a7b7fc25532d105f3de20c2e8eca}{lin\+R\+EG}}~((\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E400\+U)
+\begin{DoxyCompactList}\small\item\em L\+IN Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__lin_8h_a115886da2f96aa29fd3b52961c78ba1f}{lin\+P\+O\+RT}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E440\+U)
+\begin{DoxyCompactList}\small\item\em L\+IN G\+IO Port Register Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structlinBase}{lin\+Base}} \mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em L\+IN Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+L\+IN Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the L\+IN driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__lin_8h_a115886da2f96aa29fd3b52961c78ba1f}\label{reg__lin_8h_a115886da2f96aa29fd3b52961c78ba1f}} 
+\index{reg\+\_\+lin.\+h@{reg\+\_\+lin.\+h}!lin\+P\+O\+RT@{lin\+P\+O\+RT}}
+\index{lin\+P\+O\+RT@{lin\+P\+O\+RT}!reg\+\_\+lin.\+h@{reg\+\_\+lin.\+h}}
+\subsubsection{\texorpdfstring{lin\+P\+O\+RT}{linPORT}}
+{\footnotesize\ttfamily \#define lin\+P\+O\+RT~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E440\+U)}
+
+
+
+L\+IN G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of L\+IN (use the G\+IO drivers to access the port pins). 
+
+Definition at line 123 of file reg\+\_\+lin.\+h.
+
+\mbox{\Hypertarget{reg__lin_8h_a7707a7b7fc25532d105f3de20c2e8eca}\label{reg__lin_8h_a7707a7b7fc25532d105f3de20c2e8eca}} 
+\index{reg\+\_\+lin.\+h@{reg\+\_\+lin.\+h}!lin\+R\+EG@{lin\+R\+EG}}
+\index{lin\+R\+EG@{lin\+R\+EG}!reg\+\_\+lin.\+h@{reg\+\_\+lin.\+h}}
+\subsubsection{\texorpdfstring{lin\+R\+EG}{linREG}}
+{\footnotesize\ttfamily \#define lin\+R\+EG~((\mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+E400\+U)}
+
+
+
+L\+IN Register Frame Pointer. 
+
+This pointer is used by the L\+IN driver to access the lin module registers. 
+
+Definition at line 114 of file reg\+\_\+lin.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}\label{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}} 
+\index{reg\+\_\+lin.\+h@{reg\+\_\+lin.\+h}!lin\+B\+A\+S\+E\+\_\+t@{lin\+B\+A\+S\+E\+\_\+t}}
+\index{lin\+B\+A\+S\+E\+\_\+t@{lin\+B\+A\+S\+E\+\_\+t}!reg\+\_\+lin.\+h@{reg\+\_\+lin.\+h}}
+\subsubsection{\texorpdfstring{lin\+B\+A\+S\+E\+\_\+t}{linBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__lin_8h_aaabd72fa55ff1fcbcc2882d92c5ff17e}{lin\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+L\+IN Register Frame Type Definition. 
+
+This type is used to access the L\+IN Registers. 

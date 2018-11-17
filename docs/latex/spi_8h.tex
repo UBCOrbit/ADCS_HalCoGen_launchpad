@@ -1,0 +1,143 @@
+\hypertarget{spi_8h}{}\section{include/spi.h File Reference}
+\label{spi_8h}\index{include/spi.\+h@{include/spi.\+h}}
+
+
+S\+PI Driver Definition File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+spi.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+Reg\+Config}}
+\begin{DoxyCompactList}\small\item\em S\+PI data register configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structspi__config__reg}{spi\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{spi_8h_aac9a33ab7553f3afb3c6f4da36178385}\label{spi_8h_aac9a33ab7553f3afb3c6f4da36178385}} 
+typedef enum \mbox{\hyperlink{spi_8h_a14ca374b0171c2d86a0025a00a5bd8be}{dataformat}} {\bfseries S\+P\+I\+D\+A\+T\+A\+F\+M\+T\+\_\+t}
+\item 
+\mbox{\Hypertarget{spi_8h_afb7f296ca7ae04c65ffff64e64c363b6}\label{spi_8h_afb7f296ca7ae04c65ffff64e64c363b6}} 
+typedef struct \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+Reg\+Config}} {\bfseries spi\+D\+A\+T1\+\_\+t}
+\item 
+\mbox{\Hypertarget{spi_8h_a9677e4f0175fe5893a11c15391aba00a}\label{spi_8h_a9677e4f0175fe5893a11c15391aba00a}} 
+typedef enum \mbox{\hyperlink{spi_8h_aa1121ce00f33b78eb4e3bb2c736a2056}{Spi\+Tx\+Rx\+Data\+Status}} {\bfseries Spi\+Data\+Status\+\_\+t}
+\item 
+\mbox{\Hypertarget{spi_8h_ace72271ad7cf8a90ff58dde138c93007}\label{spi_8h_ace72271ad7cf8a90ff58dde138c93007}} 
+typedef struct \mbox{\hyperlink{structspi__config__reg}{spi\+\_\+config\+\_\+reg}} {\bfseries spi\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{spi_8h_a4e0c288969f07edbc7b77fd78511c776}\label{spi_8h_a4e0c288969f07edbc7b77fd78511c776}} 
+enum {\bfseries spi\+Chip\+Select} \{ \newline
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+\+N\+O\+NE} = 0x\+F\+FU, 
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+0} = 0x\+F\+EU, 
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+1} = 0x\+F\+DU, 
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+2} = 0x\+F\+BU, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+3} = 0x\+F7U, 
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+4} = 0x\+E\+FU, 
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+5} = 0x\+D\+FU, 
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+6} = 0x\+B\+FU, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+C\+S\+\_\+7} = 0x7\+FU
+ \}
+\item 
+\mbox{\Hypertarget{spi_8h_ab7da9a33df212da48e764c0e0f73f7fe}\label{spi_8h_ab7da9a33df212da48e764c0e0f73f7fe}} 
+enum \mbox{\hyperlink{spi_8h_ab7da9a33df212da48e764c0e0f73f7fe}{spi\+Pin\+Select}} \{ \newline
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S0} = 0U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S1} = 1U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S2} = 2U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S3} = 3U, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S4} = 4U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S5} = 5U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S6} = 6U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+S7} = 7U, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+E\+NA} = 8U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+C\+LK} = 9U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+MO} = 10U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+MI} = 11U, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+1} = 17U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+2} = 18U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+3} = 19U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+4} = 20U, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+5} = 21U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+6} = 22U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+I\+M\+O\+\_\+7} = 23U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+1} = 25U, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+2} = 26U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+3} = 27U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+4} = 28U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+5} = 29U, 
+\newline
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+6} = 30U, 
+{\bfseries S\+P\+I\+\_\+\+P\+I\+N\+\_\+\+S\+O\+M\+I\+\_\+7} = 31U
+ \}
+\begin{DoxyCompactList}\small\item\em spi Pin Select \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{spi_8h_a14ca374b0171c2d86a0025a00a5bd8be}\label{spi_8h_a14ca374b0171c2d86a0025a00a5bd8be}} 
+enum \mbox{\hyperlink{spi_8h_a14ca374b0171c2d86a0025a00a5bd8be}{dataformat}} \{ {\bfseries S\+P\+I\+\_\+\+F\+M\+T\+\_\+0} = 0U, 
+{\bfseries S\+P\+I\+\_\+\+F\+M\+T\+\_\+1} = 1U, 
+{\bfseries S\+P\+I\+\_\+\+F\+M\+T\+\_\+2} = 2U, 
+{\bfseries S\+P\+I\+\_\+\+F\+M\+T\+\_\+3} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI dataformat register select. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{spi_8h_aa1121ce00f33b78eb4e3bb2c736a2056}\label{spi_8h_aa1121ce00f33b78eb4e3bb2c736a2056}} 
+enum \mbox{\hyperlink{spi_8h_aa1121ce00f33b78eb4e3bb2c736a2056}{Spi\+Tx\+Rx\+Data\+Status}} \{ {\bfseries S\+P\+I\+\_\+\+R\+E\+A\+DY} = 0U, 
+{\bfseries S\+P\+I\+\_\+\+P\+E\+N\+D\+I\+NG} = 1U, 
+{\bfseries S\+P\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED} = 2U
+ \}
+\begin{DoxyCompactList}\small\item\em S\+PI Data Status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries spi\+Init} (void)
+\item 
+void {\bfseries spi\+Set\+Functional} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 port)
+\item 
+void {\bfseries spi\+Enable\+Notification} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 flags)
+\item 
+void {\bfseries spi\+Disable\+Notification} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 flags)
+\item 
+uint32 {\bfseries spi\+Transmit\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff)
+\item 
+void {\bfseries spi\+Send\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff)
+\item 
+uint32 {\bfseries spi\+Receive\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$destbuff)
+\item 
+void {\bfseries spi\+Get\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$destbuff)
+\item 
+uint32 {\bfseries spi\+Transmit\+And\+Receive\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff, uint16 $\ast$destbuff)
+\item 
+void {\bfseries spi\+Send\+And\+Get\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff, uint16 $\ast$destbuff)
+\item 
+void {\bfseries spi\+Enable\+Loopback} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\item 
+void {\bfseries spi\+Disable\+Loopback} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\item 
+Spi\+Data\+Status\+\_\+t {\bfseries Spi\+Tx\+Status} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\item 
+Spi\+Data\+Status\+\_\+t {\bfseries Spi\+Rx\+Status} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\item 
+void \mbox{\hyperlink{group__SPI_ga18e042a1628b90799aebaaf3876db589}{spi\+Notification}} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SPI_ga139a2bd5549f796f0e41bc9b334bab2c}{spi\+End\+Notification}} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\begin{DoxyCompactList}\small\item\em Interrupt callback for End of TX or RX data length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI Driver Definition File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}

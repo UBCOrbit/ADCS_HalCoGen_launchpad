@@ -1,0 +1,28 @@
+var structetpwm__config__reg =
+[
+    [ "CONFIG_AQCTLA", "structetpwm__config__reg.html#a00872db4a1eec4de489ea3b49213f309", null ],
+    [ "CONFIG_AQCTLB", "structetpwm__config__reg.html#af1afd2ce82b3f6f6f6dc6a008a34dbcb", null ],
+    [ "CONFIG_CMPA", "structetpwm__config__reg.html#a6340e956aae63146d469be5f8f17040d", null ],
+    [ "CONFIG_CMPB", "structetpwm__config__reg.html#a7851cdbcaf152c2b18a0cadda0894707", null ],
+    [ "CONFIG_CMPCTL", "structetpwm__config__reg.html#add993af9b611f45b9ef499d505dff114", null ],
+    [ "CONFIG_DBCTL", "structetpwm__config__reg.html#a6dd0db776069e1e7a11a1a734bf480ca", null ],
+    [ "CONFIG_DBFED", "structetpwm__config__reg.html#a374a9c55c2225e62ae450580a96758ca", null ],
+    [ "CONFIG_DBRED", "structetpwm__config__reg.html#ae45c39c21ee58b97a6c9d91859bcffda", null ],
+    [ "CONFIG_DCACTL", "structetpwm__config__reg.html#a8a4aabce4ca6c9010c49d2d9cd5ab83b", null ],
+    [ "CONFIG_DCBCTL", "structetpwm__config__reg.html#aa784811520ce79214bd9291431d03c01", null ],
+    [ "CONFIG_DCCAPCTL", "structetpwm__config__reg.html#a45b6b20a7e02985374390d8db5292211", null ],
+    [ "CONFIG_DCFCTL", "structetpwm__config__reg.html#a9d66ec0760a2ce90f3849d95a7547bff", null ],
+    [ "CONFIG_DCFWINDOW", "structetpwm__config__reg.html#aad5125106b2d34f16cafe775956a7ef1", null ],
+    [ "CONFIG_DCFWINDOWCNT", "structetpwm__config__reg.html#a39b3a7121887ed9ba0b539ef5f62fa53", null ],
+    [ "CONFIG_DCTRIPSEL", "structetpwm__config__reg.html#a971f5cc5c719bd06a0daaa97b791f670", null ],
+    [ "CONFIG_ETPS", "structetpwm__config__reg.html#a5df5df0ac2f6df6ee53cf0e7cc33b662", null ],
+    [ "CONFIG_ETSEL", "structetpwm__config__reg.html#ae302f44d515459427c7c8ba5b4339ab3", null ],
+    [ "CONFIG_PCCTL", "structetpwm__config__reg.html#aadb2c3c748ca72eb27d5aa1206489833", null ],
+    [ "CONFIG_TBCTL", "structetpwm__config__reg.html#ae9f8daef6d431d29dd32c5242774cc8a", null ],
+    [ "CONFIG_TBPHS", "structetpwm__config__reg.html#a87a09fb6dad19414013358ddd203b0ff", null ],
+    [ "CONFIG_TBPRD", "structetpwm__config__reg.html#ab7efdcec2b1d84fce6e5d7c8980f7a12", null ],
+    [ "CONFIG_TZCTL", "structetpwm__config__reg.html#a01f7411ceee87b2afb7331efee036ba5", null ],
+    [ "CONFIG_TZDCSEL", "structetpwm__config__reg.html#acdae30bcf03f19c7c4022298d4588f47", null ],
+    [ "CONFIG_TZEINT", "structetpwm__config__reg.html#a6f26952bbc2ab688b991fffe64cdb776", null ],
+    [ "CONFIG_TZSEL", "structetpwm__config__reg.html#a75c49d3a27c4f975c52f7a3303f515c8", null ]
+];

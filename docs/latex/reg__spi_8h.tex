@@ -1,0 +1,215 @@
+\hypertarget{reg__spi_8h}{}\section{include/reg\+\_\+spi.h File Reference}
+\label{reg__spi_8h}\index{include/reg\+\_\+spi.\+h@{include/reg\+\_\+spi.\+h}}
+
+
+S\+PI Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reg\+\_\+gio.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structspiBase}{spi\+Base}}
+\begin{DoxyCompactList}\small\item\em S\+PI Register Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__spi_8h_af421c8e49d13442bb5ff89df0716fbe2}{spi\+R\+E\+G1}}~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F400\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I1 (M\+I\+B\+S\+PI -\/ Compatibility Mode) Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_acafb15225326da53aac43cf45c02deb1}{spi\+P\+O\+R\+T1}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F418\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I1 (M\+I\+B\+S\+PI -\/ Compatibility Mode) G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_a166a3afd289e969a2876111e63ec38a3}{spi\+R\+E\+G2}}~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F600\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_a01190b47bea34b937e6379981271eca3}{spi\+P\+O\+R\+T2}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F618\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I2 G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_ad5c848a9a09270e757e49e4889a5afbf}{spi\+R\+E\+G3}}~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F800\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I3 (M\+I\+B\+S\+PI -\/ Compatibility Mode) Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_a0fd7f62639a8d9fb8990b43fc87e2759}{spi\+P\+O\+R\+T3}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F818\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I3 (M\+I\+B\+S\+PI -\/ Compatibility Mode) G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_a79c77b1f012ad80c1dc6cb37ddb3b209}{spi\+R\+E\+G4}}~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+A00\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I4 Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_a65e848baeca4c540f204ecb85e0e0d74}{spi\+P\+O\+R\+T4}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+A18\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I4 G\+IO Port Register Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_a0594bec058aea6410b10af0cd06040be}{spi\+R\+E\+G5}}~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C00\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I5 (M\+I\+B\+S\+PI -\/ Compatibility Mode) Register Frame Pointer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{reg__spi_8h_a57b6bb78eb30bd09532550a581601061}{spi\+P\+O\+R\+T5}}~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C18\+U)
+\begin{DoxyCompactList}\small\item\em S\+P\+I5 (M\+I\+B\+S\+PI -\/ Compatibility Mode) G\+IO Port Register Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structspiBase}{spi\+Base}} \mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em S\+PI Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+PI Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the S\+PI driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__spi_8h_acafb15225326da53aac43cf45c02deb1}\label{reg__spi_8h_acafb15225326da53aac43cf45c02deb1}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+P\+O\+R\+T1@{spi\+P\+O\+R\+T1}}
+\index{spi\+P\+O\+R\+T1@{spi\+P\+O\+R\+T1}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+P\+O\+R\+T1}{spiPORT1}}
+{\footnotesize\ttfamily \#define spi\+P\+O\+R\+T1~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F418\+U)}
+
+
+
+S\+P\+I1 (M\+I\+B\+S\+PI -\/ Compatibility Mode) G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of S\+P\+I1 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 117 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_a01190b47bea34b937e6379981271eca3}\label{reg__spi_8h_a01190b47bea34b937e6379981271eca3}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+P\+O\+R\+T2@{spi\+P\+O\+R\+T2}}
+\index{spi\+P\+O\+R\+T2@{spi\+P\+O\+R\+T2}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+P\+O\+R\+T2}{spiPORT2}}
+{\footnotesize\ttfamily \#define spi\+P\+O\+R\+T2~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F618\+U)}
+
+
+
+S\+P\+I2 G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of S\+P\+I2 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 133 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_a0fd7f62639a8d9fb8990b43fc87e2759}\label{reg__spi_8h_a0fd7f62639a8d9fb8990b43fc87e2759}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+P\+O\+R\+T3@{spi\+P\+O\+R\+T3}}
+\index{spi\+P\+O\+R\+T3@{spi\+P\+O\+R\+T3}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+P\+O\+R\+T3}{spiPORT3}}
+{\footnotesize\ttfamily \#define spi\+P\+O\+R\+T3~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F818\+U)}
+
+
+
+S\+P\+I3 (M\+I\+B\+S\+PI -\/ Compatibility Mode) G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of S\+P\+I3 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 149 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_a65e848baeca4c540f204ecb85e0e0d74}\label{reg__spi_8h_a65e848baeca4c540f204ecb85e0e0d74}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+P\+O\+R\+T4@{spi\+P\+O\+R\+T4}}
+\index{spi\+P\+O\+R\+T4@{spi\+P\+O\+R\+T4}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+P\+O\+R\+T4}{spiPORT4}}
+{\footnotesize\ttfamily \#define spi\+P\+O\+R\+T4~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+A18\+U)}
+
+
+
+S\+P\+I4 G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of S\+P\+I4 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 165 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_a57b6bb78eb30bd09532550a581601061}\label{reg__spi_8h_a57b6bb78eb30bd09532550a581601061}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+P\+O\+R\+T5@{spi\+P\+O\+R\+T5}}
+\index{spi\+P\+O\+R\+T5@{spi\+P\+O\+R\+T5}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+P\+O\+R\+T5}{spiPORT5}}
+{\footnotesize\ttfamily \#define spi\+P\+O\+R\+T5~((\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C18\+U)}
+
+
+
+S\+P\+I5 (M\+I\+B\+S\+PI -\/ Compatibility Mode) G\+IO Port Register Pointer. 
+
+Pointer used by the G\+IO driver to access I/O P\+O\+RT of S\+P\+I5 (use the G\+IO drivers to access the port pins). 
+
+Definition at line 181 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_af421c8e49d13442bb5ff89df0716fbe2}\label{reg__spi_8h_af421c8e49d13442bb5ff89df0716fbe2}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+R\+E\+G1@{spi\+R\+E\+G1}}
+\index{spi\+R\+E\+G1@{spi\+R\+E\+G1}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+R\+E\+G1}{spiREG1}}
+{\footnotesize\ttfamily \#define spi\+R\+E\+G1~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F400\+U)}
+
+
+
+S\+P\+I1 (M\+I\+B\+S\+PI -\/ Compatibility Mode) Register Frame Pointer. 
+
+This pointer is used by the S\+PI driver to access the spi module registers. 
+
+Definition at line 108 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_a166a3afd289e969a2876111e63ec38a3}\label{reg__spi_8h_a166a3afd289e969a2876111e63ec38a3}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+R\+E\+G2@{spi\+R\+E\+G2}}
+\index{spi\+R\+E\+G2@{spi\+R\+E\+G2}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+R\+E\+G2}{spiREG2}}
+{\footnotesize\ttfamily \#define spi\+R\+E\+G2~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F600\+U)}
+
+
+
+S\+P\+I2 Register Frame Pointer. 
+
+This pointer is used by the S\+PI driver to access the spi module registers. 
+
+Definition at line 124 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_ad5c848a9a09270e757e49e4889a5afbf}\label{reg__spi_8h_ad5c848a9a09270e757e49e4889a5afbf}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+R\+E\+G3@{spi\+R\+E\+G3}}
+\index{spi\+R\+E\+G3@{spi\+R\+E\+G3}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+R\+E\+G3}{spiREG3}}
+{\footnotesize\ttfamily \#define spi\+R\+E\+G3~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F800\+U)}
+
+
+
+S\+P\+I3 (M\+I\+B\+S\+PI -\/ Compatibility Mode) Register Frame Pointer. 
+
+This pointer is used by the S\+PI driver to access the spi module registers. 
+
+Definition at line 140 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_a79c77b1f012ad80c1dc6cb37ddb3b209}\label{reg__spi_8h_a79c77b1f012ad80c1dc6cb37ddb3b209}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+R\+E\+G4@{spi\+R\+E\+G4}}
+\index{spi\+R\+E\+G4@{spi\+R\+E\+G4}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+R\+E\+G4}{spiREG4}}
+{\footnotesize\ttfamily \#define spi\+R\+E\+G4~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+A00\+U)}
+
+
+
+S\+P\+I4 Register Frame Pointer. 
+
+This pointer is used by the S\+PI driver to access the spi module registers. 
+
+Definition at line 156 of file reg\+\_\+spi.\+h.
+
+\mbox{\Hypertarget{reg__spi_8h_a0594bec058aea6410b10af0cd06040be}\label{reg__spi_8h_a0594bec058aea6410b10af0cd06040be}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+R\+E\+G5@{spi\+R\+E\+G5}}
+\index{spi\+R\+E\+G5@{spi\+R\+E\+G5}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+R\+E\+G5}{spiREG5}}
+{\footnotesize\ttfamily \#define spi\+R\+E\+G5~((\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F7\+F\+C00\+U)}
+
+
+
+S\+P\+I5 (M\+I\+B\+S\+PI -\/ Compatibility Mode) Register Frame Pointer. 
+
+This pointer is used by the S\+PI driver to access the spi module registers. 
+
+Definition at line 172 of file reg\+\_\+spi.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}\label{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}} 
+\index{reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}!spi\+B\+A\+S\+E\+\_\+t@{spi\+B\+A\+S\+E\+\_\+t}}
+\index{spi\+B\+A\+S\+E\+\_\+t@{spi\+B\+A\+S\+E\+\_\+t}!reg\+\_\+spi.\+h@{reg\+\_\+spi.\+h}}
+\subsubsection{\texorpdfstring{spi\+B\+A\+S\+E\+\_\+t}{spiBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+S\+PI Register Frame Type Definition. 
+
+This type is used to access the S\+PI Registers. 

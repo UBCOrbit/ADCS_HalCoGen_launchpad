@@ -1,0 +1,26 @@
+var structpwcnt__format =
+[
+    [ "__pad0__", "structpwcnt__format.html#afefdd005b6104f52ff69c949fd5280b3", null ],
+    [ "__pad1__", "structpwcnt__format.html#ab9c905b9340a58d687fba4517bbb9531", null ],
+    [ "__pad2__", "structpwcnt__format.html#a065bf52d2365d4913f8ca96bfac88072", null ],
+    [ "__pad3__", "structpwcnt__format.html#a5b201a7f67b1b036047f90d438772eca", null ],
+    [ "__pad4__", "structpwcnt__format.html#ac8cec0ad61adf0933a902415c2dc64f9", null ],
+    [ "ab_register_select", "structpwcnt__format.html#a01fd90e8c2533b7745af763ec46a68cb", null ],
+    [ "auto_read_clear", "structpwcnt__format.html#a5c2a15d4c12dd943a7b53369e6cc9c5d", null ],
+    [ "brk", "structpwcnt__format.html#a4c2e1976ad06074cad2c5ec95a314f7c", null ],
+    [ "cond_addr", "structpwcnt__format.html#a7a7886317fa64bb00b23feae08d3f0c3", null ],
+    [ "count_mode", "structpwcnt__format.html#a3a2ac10e8ba82311bac889204f2b202d", null ],
+    [ "data", "structpwcnt__format.html#ad0b8747f0b2e3074c52239f89b972e10", null ],
+    [ "en_pin_action", "structpwcnt__format.html#a641b661838a72518862e9db08be5b05f", null ],
+    [ "hr_data", "structpwcnt__format.html#ac1e5690394b6cdaaf2806517d375bfb5", null ],
+    [ "hr_lr", "structpwcnt__format.html#a849fe5625181d0a952bb0361a190d2e1", null ],
+    [ "interrupt_enable", "structpwcnt__format.html#a2b565b635faafe5b966936f5a5c005a2", null ],
+    [ "next_program_address", "structpwcnt__format.html#aebd8d2f623fd4dff3211a0452a45a013", null ],
+    [ "op_code", "structpwcnt__format.html#af8c86f977cad88aa345401fe0073a47b", null ],
+    [ "opposite_action", "structpwcnt__format.html#afc73776b51e80f8d49f9821579e9123b", null ],
+    [ "pin_action", "structpwcnt__format.html#a6e03ddd36e48df33f7201c7a1bbcff33", null ],
+    [ "pin_select", "structpwcnt__format.html#aa19522ef6b6646d389141fab3c91b3d4", null ],
+    [ "reqnum", "structpwcnt__format.html#a3f984d4ad1daade7e5431af8ce52386c", null ],
+    [ "request", "structpwcnt__format.html#a0d01883a360df59df72ad1a4e5d3ae6c", null ],
+    [ "t_register_select", "structpwcnt__format.html#a070371309af96712f4944d1f8ca287c0", null ]
+];

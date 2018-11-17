@@ -1,0 +1,256 @@
+\hypertarget{std__nhet_8h}{}\section{include/std\+\_\+nhet.h File Reference}
+\label{std__nhet_8h}\index{include/std\+\_\+nhet.\+h@{include/std\+\_\+nhet.\+h}}
+
+
+N\+H\+ET Instruction Definition File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmemory__format}{memory\+\_\+format}}
+\item 
+struct \mbox{\hyperlink{structacmp__format}{acmp\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionACMP__INSTRUCTION}{A\+C\+M\+P\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structecmp__format}{ecmp\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionECMP__INSTRUCTION}{E\+C\+M\+P\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structscmp__format}{scmp\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionSCMP__INSTRUCTION}{S\+C\+M\+P\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structmcmp__format}{mcmp\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionMCMP__INSTRUCTION}{M\+C\+M\+P\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structmov64__format}{mov64\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionMOV64__INSTRUCTION}{M\+O\+V64\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structdadm64__format}{dadm64\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionDADM64__INSTRUCTION}{D\+A\+D\+M64\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structRADM64__format}{R\+A\+D\+M64\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionRADM64__INSTRUCTION}{R\+A\+D\+M64\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structMOV32__format}{M\+O\+V32\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionMOV32__INSTRUCTION}{M\+O\+V32\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structADM32__format}{A\+D\+M32\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionADM32__INSTRUCTION}{A\+D\+M32\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structADCNST__format}{A\+D\+C\+N\+S\+T\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionADCNST__INSTRUCTION}{A\+D\+C\+N\+S\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structADD__format}{A\+D\+D\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionADD__INSTRUCTION}{A\+D\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structADC__format}{A\+D\+C\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionADC__INSTRUCTION}{A\+D\+C\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structSUB__format}{S\+U\+B\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionSUB__INSTRUCTION}{S\+U\+B\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structSBB__format}{S\+B\+B\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionSBB__INSTRUCTION}{S\+B\+B\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structAND__format}{A\+N\+D\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionAND__INSTRUCTION}{A\+N\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structOR__format}{O\+R\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionOR__INSTRUCTION}{O\+R\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structXOR__format}{X\+O\+R\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionXOR__INSTRUCTION}{X\+O\+R\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structCNT__format}{C\+N\+T\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionCNT__INSTRUCTION}{C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structapcnt__format}{apcnt\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionAPCNT__INSTRUCTION}{A\+P\+C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structpcnt__format}{pcnt\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionPCNT__INSTRUCTION}{P\+C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structscnt__format}{scnt\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionSCNT__INSTRUCTION}{S\+C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structacnt__format}{acnt\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionACNT__INSTRUCTION}{A\+C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structecnt__format}{ecnt\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionECNT__INSTRUCTION}{E\+C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structrcnt__format}{rcnt\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionRCNT__INSTRUCTION}{R\+C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structdjnz__format}{djnz\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionDJNZ__INSTRUCTION}{D\+J\+N\+Z\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structdjz__format}{djz\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionDJZ__INSTRUCTION}{D\+J\+Z\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structpwcnt__format}{pwcnt\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionPWCNT__INSTRUCTION}{P\+W\+C\+N\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structwcap__format}{wcap\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionWCAP__INSTRUCTION}{W\+C\+A\+P\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structwcape__format}{wcape\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionWCAPE__INSTRUCTION}{W\+C\+A\+P\+E\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structbr__format}{br\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionBR__INSTRUCTION}{B\+R\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structshft__format}{shft\+\_\+format}}
+\item 
+union \mbox{\hyperlink{unionSHFT__INSTRUCTION}{S\+H\+F\+T\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a00aec156f0533381db8948a13b9c1a0c}\label{std__nhet_8h_a00aec156f0533381db8948a13b9c1a0c}} 
+\#define {\bfseries H\+E\+T\+\_\+v2}~0
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a23676cace7ff30e7b4c7e361fa594a38}\label{std__nhet_8h_a23676cace7ff30e7b4c7e361fa594a38}} 
+\#define {\bfseries H\+E\+T\+B\+Y\+TE}~uint8
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a22eafab8d3b77e4bcc846ace6d9e7103}\label{std__nhet_8h_a22eafab8d3b77e4bcc846ace6d9e7103}} 
+typedef struct \mbox{\hyperlink{structmemory__format}{memory\+\_\+format}} {\bfseries H\+E\+T\+\_\+\+M\+E\+M\+O\+RY}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a61a1b5975e0e10e14ea2d8f60e4b1872}\label{std__nhet_8h_a61a1b5975e0e10e14ea2d8f60e4b1872}} 
+typedef struct \mbox{\hyperlink{structacmp__format}{acmp\+\_\+format}} {\bfseries A\+C\+M\+P\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a04a8b1d03e1ec3bec7811cd46bdb6651}\label{std__nhet_8h_a04a8b1d03e1ec3bec7811cd46bdb6651}} 
+typedef struct \mbox{\hyperlink{structecmp__format}{ecmp\+\_\+format}} {\bfseries E\+C\+M\+P\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_ac63d8c76b421e076ae1cf04377dd15d5}\label{std__nhet_8h_ac63d8c76b421e076ae1cf04377dd15d5}} 
+typedef struct \mbox{\hyperlink{structscmp__format}{scmp\+\_\+format}} {\bfseries S\+C\+M\+P\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_ab3a7d6690a8b8f9efe74b1e40538f1b3}\label{std__nhet_8h_ab3a7d6690a8b8f9efe74b1e40538f1b3}} 
+typedef struct \mbox{\hyperlink{structmcmp__format}{mcmp\+\_\+format}} {\bfseries M\+C\+M\+P\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a62594889834cfe2e27ed3a8385165209}\label{std__nhet_8h_a62594889834cfe2e27ed3a8385165209}} 
+typedef struct \mbox{\hyperlink{structmov64__format}{mov64\+\_\+format}} {\bfseries M\+O\+V64\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a740189e682b032f7e127f774b29e80d0}\label{std__nhet_8h_a740189e682b032f7e127f774b29e80d0}} 
+typedef struct \mbox{\hyperlink{structdadm64__format}{dadm64\+\_\+format}} {\bfseries D\+A\+D\+M64\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_ad11e9f896503b7a42e45af7e3cc286ea}\label{std__nhet_8h_ad11e9f896503b7a42e45af7e3cc286ea}} 
+typedef struct \mbox{\hyperlink{structRADM64__format}{R\+A\+D\+M64\+\_\+format}} {\bfseries R\+A\+D\+M64\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_ac0e4ea1564007323a1858422dd382d70}\label{std__nhet_8h_ac0e4ea1564007323a1858422dd382d70}} 
+typedef struct \mbox{\hyperlink{structMOV32__format}{M\+O\+V32\+\_\+format}} {\bfseries M\+O\+V32\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a83fad55112c0e049753bd39fff882cfb}\label{std__nhet_8h_a83fad55112c0e049753bd39fff882cfb}} 
+typedef struct \mbox{\hyperlink{structADM32__format}{A\+D\+M32\+\_\+format}} {\bfseries A\+D\+M32\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a4236e3293a8ce35b62c47bc8c5289ffc}\label{std__nhet_8h_a4236e3293a8ce35b62c47bc8c5289ffc}} 
+typedef struct \mbox{\hyperlink{structADCNST__format}{A\+D\+C\+N\+S\+T\+\_\+format}} {\bfseries A\+D\+C\+N\+S\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a04f537d6c46f52536665f33f9f7fd964}\label{std__nhet_8h_a04f537d6c46f52536665f33f9f7fd964}} 
+typedef struct \mbox{\hyperlink{structADD__format}{A\+D\+D\+\_\+format}} {\bfseries A\+D\+D\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a90b3d3a67d59ee9fc37644ff8ddf83d3}\label{std__nhet_8h_a90b3d3a67d59ee9fc37644ff8ddf83d3}} 
+typedef struct \mbox{\hyperlink{structADC__format}{A\+D\+C\+\_\+format}} {\bfseries A\+D\+C\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a62b0a7b6d37ece7a14f917cc3ba323bf}\label{std__nhet_8h_a62b0a7b6d37ece7a14f917cc3ba323bf}} 
+typedef struct \mbox{\hyperlink{structSUB__format}{S\+U\+B\+\_\+format}} {\bfseries S\+U\+B\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a8e14ae2e0adaf51e3fe3a5b54d3281bc}\label{std__nhet_8h_a8e14ae2e0adaf51e3fe3a5b54d3281bc}} 
+typedef struct \mbox{\hyperlink{structSBB__format}{S\+B\+B\+\_\+format}} {\bfseries S\+B\+B\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a08cd70b2793b74203e5d44161e716994}\label{std__nhet_8h_a08cd70b2793b74203e5d44161e716994}} 
+typedef struct \mbox{\hyperlink{structAND__format}{A\+N\+D\+\_\+format}} {\bfseries A\+N\+D\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a25f2e5061efb7e7c9f69a936df22e9d5}\label{std__nhet_8h_a25f2e5061efb7e7c9f69a936df22e9d5}} 
+typedef struct \mbox{\hyperlink{structOR__format}{O\+R\+\_\+format}} {\bfseries O\+R\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a2f529dbd4ddb8c7e3572cc73632551a8}\label{std__nhet_8h_a2f529dbd4ddb8c7e3572cc73632551a8}} 
+typedef struct \mbox{\hyperlink{structXOR__format}{X\+O\+R\+\_\+format}} {\bfseries X\+O\+R\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a458e368b2f8ef141852cd9a8e178c56e}\label{std__nhet_8h_a458e368b2f8ef141852cd9a8e178c56e}} 
+typedef struct \mbox{\hyperlink{structCNT__format}{C\+N\+T\+\_\+format}} {\bfseries C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a386977098cb220ebc33fc39d77fb69e3}\label{std__nhet_8h_a386977098cb220ebc33fc39d77fb69e3}} 
+typedef struct \mbox{\hyperlink{structapcnt__format}{apcnt\+\_\+format}} {\bfseries A\+P\+C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_ae692b73426eee5da490cb4cde776016b}\label{std__nhet_8h_ae692b73426eee5da490cb4cde776016b}} 
+typedef struct \mbox{\hyperlink{structpcnt__format}{pcnt\+\_\+format}} {\bfseries P\+C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a054fdf113654b8657300309842795c05}\label{std__nhet_8h_a054fdf113654b8657300309842795c05}} 
+typedef struct \mbox{\hyperlink{structscnt__format}{scnt\+\_\+format}} {\bfseries S\+C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a569675a54315faa179ba0d3809a5ed30}\label{std__nhet_8h_a569675a54315faa179ba0d3809a5ed30}} 
+typedef struct \mbox{\hyperlink{structacnt__format}{acnt\+\_\+format}} {\bfseries A\+C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_ac3cf069cc28b66595dc37457654b53d8}\label{std__nhet_8h_ac3cf069cc28b66595dc37457654b53d8}} 
+typedef struct \mbox{\hyperlink{structecnt__format}{ecnt\+\_\+format}} {\bfseries E\+C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a3aa289504c4a4dc9a09649a99c4acf4a}\label{std__nhet_8h_a3aa289504c4a4dc9a09649a99c4acf4a}} 
+typedef struct \mbox{\hyperlink{structrcnt__format}{rcnt\+\_\+format}} {\bfseries R\+C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_aeea4f7b0b1ea4a9a9739cf55137baad5}\label{std__nhet_8h_aeea4f7b0b1ea4a9a9739cf55137baad5}} 
+typedef struct \mbox{\hyperlink{structdjnz__format}{djnz\+\_\+format}} {\bfseries D\+J\+N\+Z\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_ac967d0b049e6378e8d445c05339fd430}\label{std__nhet_8h_ac967d0b049e6378e8d445c05339fd430}} 
+typedef struct \mbox{\hyperlink{structdjz__format}{djz\+\_\+format}} {\bfseries D\+J\+Z\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a48caeaac1f6ebb70c5140c96fd9f2294}\label{std__nhet_8h_a48caeaac1f6ebb70c5140c96fd9f2294}} 
+typedef struct \mbox{\hyperlink{structpwcnt__format}{pwcnt\+\_\+format}} {\bfseries P\+W\+C\+N\+T\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a5acd5623f429c15b4f47d82b02c69d84}\label{std__nhet_8h_a5acd5623f429c15b4f47d82b02c69d84}} 
+typedef struct \mbox{\hyperlink{structwcap__format}{wcap\+\_\+format}} {\bfseries W\+C\+A\+P\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a619419f0af7ac9e5c23cd65a37b4b564}\label{std__nhet_8h_a619419f0af7ac9e5c23cd65a37b4b564}} 
+typedef struct \mbox{\hyperlink{structwcape__format}{wcape\+\_\+format}} {\bfseries W\+C\+A\+P\+E\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a616d3fe9406221130958ba85c860fa78}\label{std__nhet_8h_a616d3fe9406221130958ba85c860fa78}} 
+typedef struct \mbox{\hyperlink{structbr__format}{br\+\_\+format}} {\bfseries B\+R\+\_\+\+F\+I\+E\+L\+DS}
+\item 
+\mbox{\Hypertarget{std__nhet_8h_a65af4b26f0cb60106c8718f9b27221b6}\label{std__nhet_8h_a65af4b26f0cb60106c8718f9b27221b6}} 
+typedef struct \mbox{\hyperlink{structshft__format}{shft\+\_\+format}} {\bfseries S\+H\+F\+T\+\_\+\+F\+I\+E\+L\+DS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+H\+ET Instruction Definition File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}

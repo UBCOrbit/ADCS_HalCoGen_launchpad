@@ -1,0 +1,56 @@
+\hypertarget{adc_8c}{}\section{source/adc.c File Reference}
+\label{adc_8c}\index{source/adc.\+c@{source/adc.\+c}}
+
+
+A\+DC Driver Source File.  
+
+
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sys\+\_\+vim.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ADC_gafd645b17cf0581bcaa22c56011c775e4}{adc\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes A\+DC Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga92003078c6583152944796afdc7faf88}{adc\+Start\+Conversion}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Starts an A\+DC conversion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga33b0a3250de093a2227a3d2ca0c1998b}{adc\+Stop\+Conversion}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Stops an A\+DC conversion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga82f17f0f78bd4cfc96d00d520dcd0d58}{adc\+Reset\+Fi\+Fo}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Resets Fi\+Fo read and write pointer. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_gac756b9d0f3fc77b1ad5336442895d00f}{adc\+Get\+Data}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group, \mbox{\hyperlink{adc_8h_afee29ee48ab2e8c8be88a9955d37d6b9}{adc\+Data\+\_\+t}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Gets converted a A\+DC values. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_gac6acf1ea1f92864df632f2aed46d7dd9}{adc\+Is\+Fifo\+Full}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Checks if Fi\+Fo buffer is full. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga8bad75e5bea34cb9eaec0ca8a3cb6dcb}{adc\+Is\+Conversion\+Complete}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Checks if Conversion is complete. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga6f24721d9ed4247b69f1f818585253f0}{adc\+Calibration}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Computes offset error using Calibration mode. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga6197438221bd189905b1a86a35272842}{adc\+Mid\+Point\+Calibration}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Computes offset error using Mid Point Calibration mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga986956885288c1d13a7e9917a900b7ec}{adc\+Enable\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Enable notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_gacbc69ac57562cbc2f607171801fb7138}{adc\+Disable\+Notification}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 group)
+\begin{DoxyCompactList}\small\item\em Disable notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_gaa8ea6657a9cd07f73ec82876d014c203}{adc\+Set\+E\+V\+T\+Pin}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc, uint32 value)
+\begin{DoxyCompactList}\small\item\em Set A\+D\+C\+E\+VT pin. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ADC_ga0e44b7ecaee5bf23d1653da2ac80fe33}{adc\+Get\+E\+V\+T\+Pin}} (\mbox{\hyperlink{reg__adc_8h_ab98b3b090eb1fd96596cd337a5fc0a4e}{adc\+B\+A\+S\+E\+\_\+t}} $\ast$adc)
+\begin{DoxyCompactList}\small\item\em Set A\+D\+C\+E\+VT pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ADC_ga919d1c45d7b1bdab5eb226dddad5a428}{adc1\+Get\+Config\+Value}} (\mbox{\hyperlink{structadc__config__reg}{adc\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+DC Driver Source File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item A\+PI Functions
+\item Interrupt Handlers
+\end{DoxyItemize}which are relevant for the A\+DC driver. 

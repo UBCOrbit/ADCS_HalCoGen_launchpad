@@ -1,0 +1,573 @@
+\hypertarget{group__PMM}{}\section{P\+MM}
+\label{group__PMM}\index{P\+MM@{P\+MM}}
+
+
+Power Management Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__PMM_ga677f111b8d9604b6ab733f58105a36d8}{pmm\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the P\+MM Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga4caba5b694f4399bd0dc05030895d421}{pmm\+Turn\+O\+N\+Logic\+Power\+Domain}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Turns on Logic Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga3395d248f6418becca238c5db150fc73}{pmm\+Turn\+O\+N\+Mem\+Power\+Domain}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Turns on Memory Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga567bb1ec4293b6160bd70fa919c37a54}{pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Turns off Logic Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga962af2aa251e590f1adb4dd29019a508}{pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Turns off Memory Power Domain. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_ga9a7b3cc1f08a5e0a0e1c39f53f8ea709}{pmm\+Is\+Logic\+Power\+Domain\+Active}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Check if the power domain is active or not. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_gad92e152a45b5bfa862b930273264f9be}{pmm\+Is\+Mem\+Power\+Domain\+Active}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Check if the power domain is active or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_gaa2d72c03373521038be734834fb230bb}{pmm\+Get\+Config\+Value}} (\mbox{\hyperlink{structpmm__config__reg}{pmm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_gafd3767acd1dd35ef877091fe303b08b6}{pmm\+Set\+Mode}} (pmm\+\_\+\+Mode\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set P\+S\+C\+ON Compare Block Mode. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_ga0a27f5db51b603a069b61e2fa149d81b}{pmm\+Perform\+Self\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Perform self test and return the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Power Management Module. 
+
+The P\+MM provides memory-\/mapped registers that control the states of the supported power domains. The P\+MM includes interfaces to the Power Mode Controller (P\+MC) and the Power State Controller (P\+S\+C\+ON). The P\+MC and P\+S\+C\+ON control the power up/down sequence of each power domain.
+
+Related files\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__pmm_8h}{reg\+\_\+pmm.\+h}}
+\item \mbox{\hyperlink{sys__pmm_8h}{sys\+\_\+pmm.\+h}}
+\item \mbox{\hyperlink{sys__pmm_8c}{sys\+\_\+pmm.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__PMM_gaa2d72c03373521038be734834fb230bb}\label{group__PMM_gaa2d72c03373521038be734834fb230bb}} 
+\index{P\+MM@{P\+MM}!pmm\+Get\+Config\+Value@{pmm\+Get\+Config\+Value}}
+\index{pmm\+Get\+Config\+Value@{pmm\+Get\+Config\+Value}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Get\+Config\+Value()}{pmmGetConfigValue()}}
+{\footnotesize\ttfamily void pmm\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpmm__config__reg}{pmm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & -\/ pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & -\/ whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 350 of file sys\+\_\+pmm.\+c.
+
+
+\begin{DoxyCode}
+351 \{
+352     \textcolor{keywordflow}{if} (type == InitialValue)
+353     \{
+354         config\_reg->CONFIG\_LOGICPDPWRCTRL0 = PMM\_LOGICPDPWRCTRL0\_CONFIGVALUE;
+355         config\_reg->CONFIG\_MEMPDPWRCTRL0 = PMM\_MEMPDPWRCTRL0\_CONFIGVALUE;
+356         config\_reg->CONFIG\_PDCLKDISREG = PMM\_PDCLKDISREG\_CONFIGVALUE;
+357         config\_reg->CONFIG\_GLOBALCTRL1 = PMM\_GLOBALCTRL1\_CONFIGVALUE;
+358     \}
+359     \textcolor{keywordflow}{else}
+360     \{
+361     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+362         config\_reg->CONFIG\_LOGICPDPWRCTRL0 = \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0;
+363         config\_reg->CONFIG\_MEMPDPWRCTRL0 = \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0;
+364         config\_reg->CONFIG\_PDCLKDISREG = \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PDCLKDISREG;
+365         config\_reg->CONFIG\_GLOBALCTRL1 = \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->GLOBALCTRL1;
+366     \}
+367 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_ga677f111b8d9604b6ab733f58105a36d8}\label{group__PMM_ga677f111b8d9604b6ab733f58105a36d8}} 
+\index{P\+MM@{P\+MM}!pmm\+Init@{pmm\+Init}}
+\index{pmm\+Init@{pmm\+Init}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Init()}{pmmInit()}}
+{\footnotesize\ttfamily void pmm\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the P\+MM Driver. 
+
+This function initializes the P\+MM module. 
+
+Definition at line 55 of file sys\+\_\+pmm.\+c.
+
+
+
+References pmm\+R\+EG.
+
+
+\begin{DoxyCode}
+56 \{
+57     \textcolor{comment}{/*Disable clocks to all logic domains*/}
+58     \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PDCLKDISREG = 0xFU;
+59     \textcolor{comment}{/*Enable or disable clock to pmctrl\_wakeup block and automatic clock wake up*/}
+60     \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->GLOBALCTRL1 = (uint32)((uint32)0U << 8U) | (uint32)0U; \textcolor{comment}{/*from GUI*/}
+61     \textcolor{comment}{/*Power on the logic power domains*/}
+62     \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = PMM\_LOGICPDPWRCTRL0\_CONFIGVALUE;
+63     \textcolor{comment}{/*Power on the memory-only power domains*/}
+64     \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 = PMM\_MEMPDPWRCTRL0\_CONFIGVALUE;
+65 
+66     \textcolor{comment}{/*wait till Logic Power Domain PD2 turns ON*/}
+67     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+68     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRSTAT[PMM\_LOGICPD2] & PMM\_LOGICPDPWRSTAT\_DOMAINON) == 0U)
+69     \{ 
+70     \}\textcolor{comment}{/* Wait */}  
+71     \textcolor{comment}{/*wait till Logic Power Domain PD3 turns ON*/}
+72     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+73     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRSTAT[PMM\_LOGICPD3] & PMM\_LOGICPDPWRSTAT\_DOMAINON) == 0U)
+74     \{ 
+75     \}\textcolor{comment}{/* Wait */}  
+76     \textcolor{comment}{/*wait till Logic Power Domain PD3 turns ON*/}
+77     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+78     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRSTAT[PMM\_LOGICPD4] & PMM\_LOGICPDPWRSTAT\_DOMAINON) == 0U)
+79     \{ 
+80     \}\textcolor{comment}{/* Wait */}  
+81     \textcolor{comment}{/*wait till Logic Power Domain PD5 turns ON*/}
+82     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+83     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRSTAT[PMM\_LOGICPD5] & PMM\_LOGICPDPWRSTAT\_DOMAINON) == 0U)
+84     \{ 
+85     \}\textcolor{comment}{/* Wait */}  
+86 
+87     \textcolor{comment}{/*wait till Memory Only Power Domain RAM\_PD1 turns ON*/}
+88     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+89     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRSTAT[PMM\_MEMPD1] & PMM\_MEMPDPWRSTAT\_DOMAINON) == 0U)
+90     \{ 
+91     \}\textcolor{comment}{/* Wait */}  
+92     \textcolor{comment}{/*wait till Memory Only Power Domain RAM\_PD2 turns ON*/}
+93     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+94     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRSTAT[PMM\_MEMPD2] & PMM\_MEMPDPWRSTAT\_DOMAINON) == 0U)
+95     \{ 
+96     \}\textcolor{comment}{/* Wait */}  
+97     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->GLOBALCTRL1 & PMM\_GLOBALCTRL1\_AUTOCLKWAKEENA) == 0U)
+98     \{
+99         \textcolor{comment}{/* Enable clocks for the selected logic domain */}
+100         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PDCLKDISREG = PMM\_PDCLKDISREG\_CONFIGVALUE;
+101     \}
+102 
+103 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_ga9a7b3cc1f08a5e0a0e1c39f53f8ea709}\label{group__PMM_ga9a7b3cc1f08a5e0a0e1c39f53f8ea709}} 
+\index{P\+MM@{P\+MM}!pmm\+Is\+Logic\+Power\+Domain\+Active@{pmm\+Is\+Logic\+Power\+Domain\+Active}}
+\index{pmm\+Is\+Logic\+Power\+Domain\+Active@{pmm\+Is\+Logic\+Power\+Domain\+Active}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Is\+Logic\+Power\+Domain\+Active()}{pmmIsLogicPowerDomainActive()}}
+{\footnotesize\ttfamily boolean pmm\+Is\+Logic\+Power\+Domain\+Active (\begin{DoxyParamCaption}\item[{pmm\+\_\+\+Logic\+P\+D\+\_\+t}]{logic\+PD }\end{DoxyParamCaption})}
+
+
+
+Check if the power domain is active or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em logic\+PD} & -\/ Power Domain to be be checked
+\begin{DoxyItemize}
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D2\+: Checks whether Power domain P\+D2 is active or not
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D3\+: Checks whether Power domain P\+D3 is active or not
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D4\+: Checks whether Power domain P\+D4 is active or not
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D5\+: Checks whether Power domain P\+D5 is active or not 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item T\+R\+UE \+: When the selected power domain is in Active state.
+\item F\+A\+L\+SE\+: When the selected power domain is in O\+FF state.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function checks whether the selected power domain is active or not. 
+
+Definition at line 295 of file sys\+\_\+pmm.\+c.
+
+
+
+References pmm\+R\+EG.
+
+
+\begin{DoxyCode}
+296 \{
+297     \textcolor{keywordtype}{boolean} status;
+298     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRSTAT[logicPD] & PMM\_LOGICPDPWRSTAT\_DOMAINON) == 0U)
+299     \{
+300         status = \mbox{\hyperlink{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}};
+301     \}
+302     \textcolor{keywordflow}{else}
+303     \{
+304         status = \mbox{\hyperlink{hal__stdtypes_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}};
+305     \}
+306     \textcolor{keywordflow}{return} status;
+307 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_gad92e152a45b5bfa862b930273264f9be}\label{group__PMM_gad92e152a45b5bfa862b930273264f9be}} 
+\index{P\+MM@{P\+MM}!pmm\+Is\+Mem\+Power\+Domain\+Active@{pmm\+Is\+Mem\+Power\+Domain\+Active}}
+\index{pmm\+Is\+Mem\+Power\+Domain\+Active@{pmm\+Is\+Mem\+Power\+Domain\+Active}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Is\+Mem\+Power\+Domain\+Active()}{pmmIsMemPowerDomainActive()}}
+{\footnotesize\ttfamily boolean pmm\+Is\+Mem\+Power\+Domain\+Active (\begin{DoxyParamCaption}\item[{pmm\+\_\+\+Mem\+P\+D\+\_\+t}]{mem\+PD }\end{DoxyParamCaption})}
+
+
+
+Check if the power domain is active or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem\+PD} & -\/ Power Domain to be tured off
+\begin{DoxyItemize}
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D1\+: Checks whether Power domain R\+A\+M\+\_\+\+P\+D1 is active or not
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D2\+: Checks whether Power domain R\+A\+M\+\_\+\+P\+D2 is active or not
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D3\+: Checks whether Power domain R\+A\+M\+\_\+\+P\+D3 is active or not 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function will return\+:
+\begin{DoxyItemize}
+\item T\+R\+UE \+: When the selected power domain is in Active state.
+\item F\+A\+L\+SE\+: When the selected power domain is in O\+FF state.
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function checks whether the selected power domain is active or not. 
+
+Definition at line 325 of file sys\+\_\+pmm.\+c.
+
+
+
+References pmm\+R\+EG.
+
+
+\begin{DoxyCode}
+326 \{
+327     \textcolor{keywordtype}{boolean} status;
+328     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRSTAT[memPD] & PMM\_MEMPDPWRSTAT\_DOMAINON) == 0U)
+329     \{
+330         status = \mbox{\hyperlink{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}};
+331     \}
+332     \textcolor{keywordflow}{else}
+333     \{
+334         status = \mbox{\hyperlink{hal__stdtypes_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}};
+335     \}
+336     \textcolor{keywordflow}{return} status;
+337 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_ga0a27f5db51b603a069b61e2fa149d81b}\label{group__PMM_ga0a27f5db51b603a069b61e2fa149d81b}} 
+\index{P\+MM@{P\+MM}!pmm\+Perform\+Self\+Test@{pmm\+Perform\+Self\+Test}}
+\index{pmm\+Perform\+Self\+Test@{pmm\+Perform\+Self\+Test}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Perform\+Self\+Test()}{pmmPerformSelfTest()}}
+{\footnotesize\ttfamily boolean pmm\+Perform\+Self\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Perform self test and return the result. 
+
+\begin{DoxyReturn}{Returns}
+The function will return
+\begin{DoxyItemize}
+\item T\+R\+UE if P\+S\+C\+ON compare block passed self-\/test
+\item F\+A\+L\+SE if P\+S\+C\+ON compare block failed in self-\/test
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function checks whether P\+S\+C\+ON compare block passed the self-\/test or not. 
+
+Definition at line 402 of file sys\+\_\+pmm.\+c.
+
+
+
+References pmm\+R\+EG, and T\+R\+UE.
+
+
+\begin{DoxyCode}
+403 \{
+404     \textcolor{keywordtype}{boolean} status = \mbox{\hyperlink{hal__stdtypes_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}};
+405     \textcolor{comment}{/*Enter self-test mode*/}
+406     \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PRCKEYREG = (uint32)SelfTest;
+407     \textcolor{comment}{/*Wait till self test is completed*/}
+408     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Hardware status bit read check" */}
+409     \textcolor{keywordflow}{while} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LPDDCSTAT1 & 0xFU) != 0xFU)
+410     \{ 
+411     \}\textcolor{comment}{/* Wait */}                 
+412     
+413     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Hardware status bit read check" */}
+414     \textcolor{keywordflow}{while} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MPDDCSTAT1 & 0x3U) != 0x3U)
+415     \{ 
+416     \}\textcolor{comment}{/* Wait */}   
+417 
+418     \textcolor{comment}{/*Check whether self-test passed or not*/}
+419     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LPDDCSTAT2 & 0xFU) != 0U)
+420     \{
+421         status = \mbox{\hyperlink{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}};
+422     \}
+423     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MPDDCSTAT2 & 0x7U) != 0U)
+424     \{
+425         status = \mbox{\hyperlink{hal__stdtypes_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}};
+426     \}
+427     \textcolor{comment}{/*Enter lock-step mode*/}
+428     \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PRCKEYREG = (uint32)LockStep;
+429 
+430     \textcolor{keywordflow}{return} status;
+431 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_gafd3767acd1dd35ef877091fe303b08b6}\label{group__PMM_gafd3767acd1dd35ef877091fe303b08b6}} 
+\index{P\+MM@{P\+MM}!pmm\+Set\+Mode@{pmm\+Set\+Mode}}
+\index{pmm\+Set\+Mode@{pmm\+Set\+Mode}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Set\+Mode()}{pmmSetMode()}}
+{\footnotesize\ttfamily void pmm\+Set\+Mode (\begin{DoxyParamCaption}\item[{pmm\+\_\+\+Mode\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set P\+S\+C\+ON Compare Block Mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & -\/ P\+S\+C\+ON Compare Block mode
+\begin{DoxyItemize}
+\item Lock\+Step \+: P\+S\+C\+ON compare block is set to Lock-\/\+Step mode
+\item Self\+Test \+: P\+S\+C\+ON compare block is set to Self-\/\+Test mode
+\item Error\+Forcing \+: P\+S\+C\+ON compare block is set to Error-\/\+Forcing mode
+\item Self\+Test\+Error\+Forcing \+: P\+S\+C\+ON compare block is set to Self-\/\+Test-\/\+Error-\/\+Forcing mode
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function sets the P\+S\+C\+ON Compare block to the selected mode 
+
+Definition at line 383 of file sys\+\_\+pmm.\+c.
+
+
+
+References pmm\+R\+EG.
+
+
+\begin{DoxyCode}
+384 \{
+385     \textcolor{comment}{/* Set PSCON Compare Block Mode */}
+386     \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PRCKEYREG = mode;
+387 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_ga567bb1ec4293b6160bd70fa919c37a54}\label{group__PMM_ga567bb1ec4293b6160bd70fa919c37a54}} 
+\index{P\+MM@{P\+MM}!pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain@{pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain}}
+\index{pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain@{pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain()}{pmmTurnOFFLogicPowerDomain()}}
+{\footnotesize\ttfamily void pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain (\begin{DoxyParamCaption}\item[{pmm\+\_\+\+Logic\+P\+D\+\_\+t}]{logic\+PD }\end{DoxyParamCaption})}
+
+
+
+Turns off Logic Power Domain. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em logic\+PD} & -\/ Power Domain to be tured off
+\begin{DoxyItemize}
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D2\+: Power domain P\+D2 will be turned off
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D3\+: Power domain P\+D3 will be turned off
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D4\+: Power domain P\+D4 will be turned off
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D5\+: Power doamin P\+D5 will be turned off
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function turns off the selected Logic Power Domain 
+
+Definition at line 207 of file sys\+\_\+pmm.\+c.
+
+
+\begin{DoxyCode}
+208 \{
+209     \textcolor{keywordflow}{if} (logicPD != PMM\_LOGICPD1)
+210     \{
+211         \textcolor{comment}{/* Disable all clocks to the power domain */}
+212         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PDCLKDISSETREG = (uint32)1U << (uint32)logicPD;
+213         
+214         \textcolor{comment}{/* Power down the domain */}
+215         \textcolor{keywordflow}{if} (logicPD == PMM\_LOGICPD2)
+216         \{
+217             \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue*/}
+218             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xF0FFFFFFU) | 0x0A000000U;
+219         \}
+220         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (logicPD == PMM\_LOGICPD3)
+221         \{
+222             \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+223             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xFFF0FFFFU) | 0x000A0000U;
+224         \}
+225         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (logicPD == PMM\_LOGICPD4)
+226         \{
+227             \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+228             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xFFFFF0FFU) | 0x00000A00U;
+229         \}
+230         \textcolor{keywordflow}{else}
+231         \{
+232             \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+233             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xFFFFFFF0U) | 0x0000000AU;
+234         \}
+235         \textcolor{comment}{/* Wait until the power domain turns off */}
+236         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+237         \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRSTAT[logicPD] & PMM\_LOGICPDPWRSTAT\_LOGICPDPWRSTAT) != 0U)
+238         \{ 
+239         \}\textcolor{comment}{/* Wait */}  
+240     \}
+241 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_ga962af2aa251e590f1adb4dd29019a508}\label{group__PMM_ga962af2aa251e590f1adb4dd29019a508}} 
+\index{P\+MM@{P\+MM}!pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain@{pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain}}
+\index{pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain@{pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain()}{pmmTurnOFFMemPowerDomain()}}
+{\footnotesize\ttfamily void pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain (\begin{DoxyParamCaption}\item[{pmm\+\_\+\+Mem\+P\+D\+\_\+t}]{mem\+PD }\end{DoxyParamCaption})}
+
+
+
+Turns off Memory Power Domain. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem\+PD} & -\/ Power Domain to be tured off
+\begin{DoxyItemize}
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D1\+: Power domain R\+A\+M\+\_\+\+P\+D1 will be turned off
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D2\+: Power domain R\+A\+M\+\_\+\+P\+D2 will be turned off
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D3\+: Power domain R\+A\+M\+\_\+\+P\+D3 will be turned off
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function turns off the selected Memory Power Domain 
+
+Definition at line 256 of file sys\+\_\+pmm.\+c.
+
+
+\begin{DoxyCode}
+257 \{
+258     \textcolor{comment}{/* Power down the domain */}
+259     \textcolor{keywordflow}{if} (memPD == PMM\_MEMPD1)
+260     \{
+261         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 & 0xF0FFFFFFU) | 0x0A000000U;
+262     \}
+263     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (memPD == PMM\_MEMPD2)
+264     \{
+265         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 & 0xFFF0FFFFU) | 0x000A0000U;
+266     \}
+267     \textcolor{keywordflow}{else}
+268     \{
+269         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 & 0xFFFFF0FFU) | 0x00000A00U;
+270     \}
+271     \textcolor{comment}{/*Wait until the power domain turns off*/}
+272     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+273     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRSTAT[memPD] & PMM\_MEMPDPWRSTAT\_MEMPDPWRSTAT) != 0U)
+274     \{ 
+275     \}\textcolor{comment}{/* Wait */}  
+276 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_ga4caba5b694f4399bd0dc05030895d421}\label{group__PMM_ga4caba5b694f4399bd0dc05030895d421}} 
+\index{P\+MM@{P\+MM}!pmm\+Turn\+O\+N\+Logic\+Power\+Domain@{pmm\+Turn\+O\+N\+Logic\+Power\+Domain}}
+\index{pmm\+Turn\+O\+N\+Logic\+Power\+Domain@{pmm\+Turn\+O\+N\+Logic\+Power\+Domain}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Turn\+O\+N\+Logic\+Power\+Domain()}{pmmTurnONLogicPowerDomain()}}
+{\footnotesize\ttfamily void pmm\+Turn\+O\+N\+Logic\+Power\+Domain (\begin{DoxyParamCaption}\item[{pmm\+\_\+\+Logic\+P\+D\+\_\+t}]{logic\+PD }\end{DoxyParamCaption})}
+
+
+
+Turns on Logic Power Domain. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em logic\+PD} & -\/ Power Domain to be turned on
+\begin{DoxyItemize}
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D2\+: Power domain P\+D2 will be turned on
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D3\+: Power domain P\+D3 will be turned on
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D4\+: Power domain P\+D4 will be turned on
+\item P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D5\+: Power domain P\+D5 will be turned on
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function turns on the selected Logic Power Domain 
+
+Definition at line 120 of file sys\+\_\+pmm.\+c.
+
+
+\begin{DoxyCode}
+121 \{
+122     \textcolor{keywordflow}{if} (logicPD != PMM\_LOGICPD1)
+123     \{
+124         \textcolor{comment}{/* Power on the domain */}
+125         \textcolor{keywordflow}{if} (logicPD == PMM\_LOGICPD2)
+126         \{
+127             \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+128             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xF0FFFFFFU) | 0x05000000U;
+129         \}
+130         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (logicPD == PMM\_LOGICPD3)
+131         \{
+132            \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+133             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xFFF0FFFFU) | 0x00050000U;
+134         \}
+135         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (logicPD == PMM\_LOGICPD4)
+136         \{
+137            \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+138             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xFFFFF0FFU) | 0x00000500U;
+139         \}
+140         \textcolor{keywordflow}{else}
+141         \{
+142            \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+143             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRCTRL0 & 0xFFFFFFF0U) | 0x00000005U;
+144         \}
+145         \textcolor{comment}{/* Wait until the power domain turns on */}
+146         \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+147         \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->LOGICPDPWRSTAT[logicPD] & PMM\_LOGICPDPWRSTAT\_DOMAINON) == 0U)
+148         \{ 
+149         \}\textcolor{comment}{/* Wait */}  
+150         \textcolor{keywordflow}{if} ((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->GLOBALCTRL1 & PMM\_GLOBALCTRL1\_AUTOCLKWAKEENA) == 0U)
+151         \{
+152             \textcolor{comment}{/* Enable clocks to the power domain */}
+153             \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->PDCLKDISCLRREG = (uint32)1U << (uint32)logicPD;
+154         \}
+155     \}
+156 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__PMM_ga3395d248f6418becca238c5db150fc73}\label{group__PMM_ga3395d248f6418becca238c5db150fc73}} 
+\index{P\+MM@{P\+MM}!pmm\+Turn\+O\+N\+Mem\+Power\+Domain@{pmm\+Turn\+O\+N\+Mem\+Power\+Domain}}
+\index{pmm\+Turn\+O\+N\+Mem\+Power\+Domain@{pmm\+Turn\+O\+N\+Mem\+Power\+Domain}!P\+MM@{P\+MM}}
+\subsubsection{\texorpdfstring{pmm\+Turn\+O\+N\+Mem\+Power\+Domain()}{pmmTurnONMemPowerDomain()}}
+{\footnotesize\ttfamily void pmm\+Turn\+O\+N\+Mem\+Power\+Domain (\begin{DoxyParamCaption}\item[{pmm\+\_\+\+Mem\+P\+D\+\_\+t}]{mem\+PD }\end{DoxyParamCaption})}
+
+
+
+Turns on Memory Power Domain. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mem\+PD} & -\/ Power Domain to be tured on
+\begin{DoxyItemize}
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D1\+: Power domain R\+A\+M\+\_\+\+P\+D1 will be turned on
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D2\+: Power domain R\+A\+M\+\_\+\+P\+D2 will be turned on
+\item P\+M\+M\+\_\+\+M\+E\+M\+P\+D3\+: Power domain R\+A\+M\+\_\+\+P\+D3 will be turned on
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function turns on the selected Memory Power Domain 
+
+Definition at line 171 of file sys\+\_\+pmm.\+c.
+
+
+\begin{DoxyCode}
+172 \{
+173     \textcolor{comment}{/* Power on the domain */}
+174     \textcolor{keywordflow}{if} (memPD == PMM\_MEMPD1)
+175     \{
+176         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 & 0xF0FFFFFFU) | 0x05000000U;
+177     \}
+178     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (memPD == PMM\_MEMPD2)
+179     \{
+180         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 & 0xFFF0FFFFU) | 0x00050000U;
+181     \}
+182     \textcolor{keywordflow}{else}
+183     \{
+184         \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 = (\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRCTRL0 & 0xFFFFF0FFU) | 0x00000500U;
+185     \}
+186     \textcolor{comment}{/*Wait until the power domain turns on*/}
+187     \textcolor{comment}{/*SAFETYMCUSW 28 D MR:NA <APPROVED> "Wait for hardware status bit" */}
+188     \textcolor{keywordflow}{while}((\mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmmREG}}->MEMPDPWRSTAT[memPD] & PMM\_MEMPDPWRSTAT\_DOMAINON) == 0U)
+189     \{ 
+190     \}\textcolor{comment}{/* Wait */}  
+191 \}
+\end{DoxyCode}

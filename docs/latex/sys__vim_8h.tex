@@ -1,0 +1,285 @@
+\hypertarget{sys__vim_8h}{}\section{include/sys\+\_\+vim.h File Reference}
+\label{sys__vim_8h}\index{include/sys\+\_\+vim.\+h@{include/sys\+\_\+vim.\+h}}
+
+
+Vectored Interrupt Module Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+vim.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a6152f175f61064ebaf812bffd1955bb1}\label{sys__vim_8h_a6152f175f61064ebaf812bffd1955bb1}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+LS}~128U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a675f9bf6e7ce634c000ec412f5447570}\label{sys__vim_8h_a675f9bf6e7ce634c000ec412f5447570}} 
+\#define {\bfseries V\+I\+M\+\_\+\+P\+A\+R\+F\+LG}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+F\+D\+E\+C\+U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a783fa8b79470fa81c0f04c2d02f5185a}\label{sys__vim_8h_a783fa8b79470fa81c0f04c2d02f5185a}} 
+\#define {\bfseries V\+I\+M\+\_\+\+P\+A\+R\+C\+TL}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+F\+D\+F0\+U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aada34a500d5d61108eb0b6ef8b928d60}\label{sys__vim_8h_aada34a500d5d61108eb0b6ef8b928d60}} 
+\#define {\bfseries V\+I\+M\+\_\+\+A\+D\+D\+E\+RR}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+F\+D\+F4\+U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a87417df0a0f398188a4a53c55b31945a}\label{sys__vim_8h_a87417df0a0f398188a4a53c55b31945a}} 
+\#define {\bfseries V\+I\+M\+\_\+\+F\+B\+P\+A\+R\+E\+RR}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F\+F\+F\+D\+F8\+U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a94f1ce694ebfc5e99e0ed07976eec024}\label{sys__vim_8h_a94f1ce694ebfc5e99e0ed07976eec024}} 
+\#define {\bfseries V\+I\+M\+R\+A\+M\+P\+A\+R\+L\+OC}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F82400\+U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a35fcc9b5130da89f08b8969a599f40a4}\label{sys__vim_8h_a35fcc9b5130da89f08b8969a599f40a4}} 
+\#define {\bfseries V\+I\+M\+R\+A\+M\+L\+OC}~($\ast$(volatile uint32 $\ast$)0x\+F\+F\+F82000\+U)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a8352458fa5952eb60afc4ab10d55aa8f}\label{sys__vim_8h_a8352458fa5952eb60afc4ab10d55aa8f}} 
+\#define {\bfseries V\+I\+M\+\_\+\+F\+I\+R\+Q\+P\+R0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a55dc19320e6537b90e6381acd2cfb577}\label{sys__vim_8h_a55dc19320e6537b90e6381acd2cfb577}} 
+\#define {\bfseries V\+I\+M\+\_\+\+F\+I\+R\+Q\+P\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a08055ed41ba8c549d977a3d2719e7f4d}\label{sys__vim_8h_a08055ed41ba8c549d977a3d2719e7f4d}} 
+\#define {\bfseries V\+I\+M\+\_\+\+F\+I\+R\+Q\+P\+R2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a6669d7c4a3e82c66a434107c00296da8}\label{sys__vim_8h_a6669d7c4a3e82c66a434107c00296da8}} 
+\#define {\bfseries V\+I\+M\+\_\+\+F\+I\+R\+Q\+P\+R3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a9217ef0a07f9442625b134fc4a8121d3}\label{sys__vim_8h_a9217ef0a07f9442625b134fc4a8121d3}} 
+\#define {\bfseries V\+I\+M\+\_\+\+R\+E\+Q\+M\+A\+S\+K\+S\+E\+T0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ae6d9a435907e691878defdc8460c7f3a}\label{sys__vim_8h_ae6d9a435907e691878defdc8460c7f3a}} 
+\#define {\bfseries V\+I\+M\+\_\+\+R\+E\+Q\+M\+A\+S\+K\+S\+E\+T1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a5849a36ba48dc56eaac56efaadae51eb}\label{sys__vim_8h_a5849a36ba48dc56eaac56efaadae51eb}} 
+\#define {\bfseries V\+I\+M\+\_\+\+R\+E\+Q\+M\+A\+S\+K\+S\+E\+T2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a6c9d3c904e22638fad34daabad3665f7}\label{sys__vim_8h_a6c9d3c904e22638fad34daabad3665f7}} 
+\#define {\bfseries V\+I\+M\+\_\+\+R\+E\+Q\+M\+A\+S\+K\+S\+E\+T3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aee144679162d8f4676ccc3709883d537}\label{sys__vim_8h_aee144679162d8f4676ccc3709883d537}} 
+\#define {\bfseries V\+I\+M\+\_\+\+W\+A\+K\+E\+M\+A\+S\+K\+S\+E\+T0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x\+F\+F\+F\+F\+F\+F\+F\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa52528d6a6c16c1bccbdba1899bbfe1d}\label{sys__vim_8h_aa52528d6a6c16c1bccbdba1899bbfe1d}} 
+\#define {\bfseries V\+I\+M\+\_\+\+W\+A\+K\+E\+M\+A\+S\+K\+S\+E\+T1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x\+F\+F\+F\+F\+F\+F\+F\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a0318b9761e05f1ac0651563b276e2849}\label{sys__vim_8h_a0318b9761e05f1ac0651563b276e2849}} 
+\#define {\bfseries V\+I\+M\+\_\+\+W\+A\+K\+E\+M\+A\+S\+K\+S\+E\+T2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x\+F\+F\+F\+F\+F\+F\+F\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa284ca6325f06e73a7492a27c9c45f35}\label{sys__vim_8h_aa284ca6325f06e73a7492a27c9c45f35}} 
+\#define {\bfseries V\+I\+M\+\_\+\+W\+A\+K\+E\+M\+A\+S\+K\+S\+E\+T3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x\+F\+F\+F\+F\+F\+F\+F\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ab0124400be632f488892a08a83b42baa}\label{sys__vim_8h_ab0124400be632f488892a08a83b42baa}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+A\+P\+E\+V\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0\+U $<$$<$ 0\+U)$\vert$(uint32)((uint32)0\+U $<$$<$ 16\+U))
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a9db1f4c38c04e7f86d9888948d43cef5}\label{sys__vim_8h_a9db1f4c38c04e7f86d9888948d43cef5}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00010203U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a1819ef469802c27ac4917cc4c3810820}\label{sys__vim_8h_a1819ef469802c27ac4917cc4c3810820}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x04050607U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa837344d8dd51487a2835e13a59c5623}\label{sys__vim_8h_aa837344d8dd51487a2835e13a59c5623}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L2\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x08090\+A0\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a86798cafd8b23ceb5b1373fe5ba3d9e0}\label{sys__vim_8h_a86798cafd8b23ceb5b1373fe5ba3d9e0}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L3\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x0\+C0\+D0\+E0\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ae71310c4283251913bae87dd614115e2}\label{sys__vim_8h_ae71310c4283251913bae87dd614115e2}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L4\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x10111213U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af6f6fefa6dca75eae5ebdc67f7dcd296}\label{sys__vim_8h_af6f6fefa6dca75eae5ebdc67f7dcd296}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L5\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x14151617U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_accbfe55fb0f88ebcb209120857a53c24}\label{sys__vim_8h_accbfe55fb0f88ebcb209120857a53c24}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L6\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x18191\+A1\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ad5584960f0f2c0cdfcb4abcaae58bd96}\label{sys__vim_8h_ad5584960f0f2c0cdfcb4abcaae58bd96}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L7\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x1\+C1\+D1\+E1\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a3d96b1587dac5858174e5b10f314179c}\label{sys__vim_8h_a3d96b1587dac5858174e5b10f314179c}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L8\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x20212223U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a15a816e2b9ca9b389d9c5977d7473ad5}\label{sys__vim_8h_a15a816e2b9ca9b389d9c5977d7473ad5}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L9\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x24252627U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aee0c7ef4f60792fca1e0963ed5ee8c8a}\label{sys__vim_8h_aee0c7ef4f60792fca1e0963ed5ee8c8a}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L10\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x28292\+A2\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ae613211716c014f194f401ea4bfda584}\label{sys__vim_8h_ae613211716c014f194f401ea4bfda584}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L11\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x2\+C2\+D2\+E2\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a5bd6bfc230fec24898a9969115bcc13b}\label{sys__vim_8h_a5bd6bfc230fec24898a9969115bcc13b}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L12\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x30313233U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ac399ae97583f1f23f28e06f9d7066b5f}\label{sys__vim_8h_ac399ae97583f1f23f28e06f9d7066b5f}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L13\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x34353637U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a7a2579fcdbba9b20ebc4dc49cbce01b6}\label{sys__vim_8h_a7a2579fcdbba9b20ebc4dc49cbce01b6}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L14\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x38393\+A3\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af27c7a8e2deba0ac437d3b70258e147c}\label{sys__vim_8h_af27c7a8e2deba0ac437d3b70258e147c}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L15\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x3\+C3\+D3\+E3\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa5e212a4b991a320d4a97b51ce536b3c}\label{sys__vim_8h_aa5e212a4b991a320d4a97b51ce536b3c}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L16\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x40414243U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a4e26f4a22b5e5b3f2a8b5b2e074536e0}\label{sys__vim_8h_a4e26f4a22b5e5b3f2a8b5b2e074536e0}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L17\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x44454647U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af004b2f95fbe4b044b5aa0a2521cd308}\label{sys__vim_8h_af004b2f95fbe4b044b5aa0a2521cd308}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L18\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x48494\+A4\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa0d01d143b1b065e826ad7c3a30b2958}\label{sys__vim_8h_aa0d01d143b1b065e826ad7c3a30b2958}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L19\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x4\+C4\+D4\+E4\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ac267dd5053c42cd48657f795da2236f0}\label{sys__vim_8h_ac267dd5053c42cd48657f795da2236f0}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L20\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x50515253U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a04b437fa94dbc6c42419a0eb9672e591}\label{sys__vim_8h_a04b437fa94dbc6c42419a0eb9672e591}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L21\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x54555657U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a017dcb7a08bb6115d5b9af65309b5d77}\label{sys__vim_8h_a017dcb7a08bb6115d5b9af65309b5d77}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L22\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x58595\+A5\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a7a54a83c183bf817db40ef6f8bfa9218}\label{sys__vim_8h_a7a54a83c183bf817db40ef6f8bfa9218}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L23\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x5\+C5\+D5\+E5\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ae94b444c0eac3487accc425744a67835}\label{sys__vim_8h_ae94b444c0eac3487accc425744a67835}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L24\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x60616263U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_ad3c81b42f24260d8c8cc6cb40a22acf2}\label{sys__vim_8h_ad3c81b42f24260d8c8cc6cb40a22acf2}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L25\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x64656667U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_aa681528226789a5f2b8e6f62b152ebb4}\label{sys__vim_8h_aa681528226789a5f2b8e6f62b152ebb4}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L26\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x68696\+A6\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_addf4028e9b7658e57f55ee799e457c1d}\label{sys__vim_8h_addf4028e9b7658e57f55ee799e457c1d}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L27\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x6\+C6\+D6\+E6\+FU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a7ef8ee08b26c66d0f4a9066256aed636}\label{sys__vim_8h_a7ef8ee08b26c66d0f4a9066256aed636}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L28\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x70717273U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a2d3e81b8d0de4da782b25c9058d4f5f7}\label{sys__vim_8h_a2d3e81b8d0de4da782b25c9058d4f5f7}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L29\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x74757677U
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af99329a6038818751af4a58fe7287180}\label{sys__vim_8h_af99329a6038818751af4a58fe7287180}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L30\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x78797\+A7\+BU
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a06f67b276f8ed12b8aabf2548564b3f5}\label{sys__vim_8h_a06f67b276f8ed12b8aabf2548564b3f5}} 
+\#define {\bfseries V\+I\+M\+\_\+\+C\+H\+A\+N\+C\+T\+R\+L31\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x7\+C7\+D7\+E7\+FU
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}{t\+\_\+isr\+Func\+P\+TR}}) (void)
+\begin{DoxyCompactList}\small\item\em I\+SR Function Pointer Type Definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__vim_8h_ac7f976b365355fd874c50c3f3d15b4d6}\label{sys__vim_8h_ac7f976b365355fd874c50c3f3d15b4d6}} 
+typedef enum \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}{system\+Interrupt}} {\bfseries system\+Interrupt\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a0dfd67a1fecdf8fc05bf75130c1cf689}\label{sys__vim_8h_a0dfd67a1fecdf8fc05bf75130c1cf689}} 
+typedef struct \mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg}} {\bfseries vim\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}{system\+Interrupt}} \{ \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{S\+Y\+S\+\_\+\+I\+RQ}} = 0U, 
+\mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}{S\+Y\+S\+\_\+\+F\+IQ}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em Alias names for clock sources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a623ee80dfdeb0dabf202441d071b2ae4}\label{sys__vim_8h_a623ee80dfdeb0dabf202441d071b2ae4}} 
+void \mbox{\hyperlink{sys__vim_8h_a623ee80dfdeb0dabf202441d071b2ae4}{esm\+High\+Interrupt}} (void)
+\begin{DoxyCompactList}\small\item\em High Level Interrupt for E\+SM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__vim_8h_a1f9f763a00757966f0aa9acfffc715c4}\label{sys__vim_8h_a1f9f763a00757966f0aa9acfffc715c4}} 
+void {\bfseries phantom\+Interrupt} (void)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_af6bac6806467f241ccd27e1ad2f25712}\label{sys__vim_8h_af6bac6806467f241ccd27e1ad2f25712}} 
+void {\bfseries v\+Port\+Preemptive\+Tick} (void)
+\item 
+\mbox{\Hypertarget{sys__vim_8h_a8dc5b63454e76f53e5446d39ad177635}\label{sys__vim_8h_a8dc5b63454e76f53e5446d39ad177635}} 
+void {\bfseries v\+Port\+Yeild\+Within\+A\+PI} (void)
+\item 
+void \mbox{\hyperlink{group__VIM_ga894b6f212b72787bfa97f1ac62877167}{vim\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes V\+IM module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__VIM_ga1a269c8383f7cbf75df048bb812307bb}{vim\+Channel\+Map}} (uint32 request, uint32 channel, \mbox{\hyperlink{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}{t\+\_\+isr\+Func\+P\+TR}} handler)
+\begin{DoxyCompactList}\small\item\em Map selected interrupt request to the selected channel. \end{DoxyCompactList}\item 
+void {\bfseries vim\+Enable\+Interrupt} (uint32 channel, system\+Interrupt\+\_\+t inttype)
+\item 
+void \mbox{\hyperlink{group__VIM_gac4c74a2a1d17f9c7ec4cc3ba156a230e}{vim\+Disable\+Interrupt}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Disable interrupt for the the selected channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__VIM_gae8b4aff17dfb436d01775ae6fce955c1}{vim\+Get\+Config\+Value}} (\mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Vectored Interrupt Module Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item V\+IM Type Definitions
+\item V\+IM General Definitions
+\end{DoxyItemize}which are relevant for Vectored Interrupt Controller. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}\label{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}} 
+\index{sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}!t\+\_\+isr\+Func\+P\+TR@{t\+\_\+isr\+Func\+P\+TR}}
+\index{t\+\_\+isr\+Func\+P\+TR@{t\+\_\+isr\+Func\+P\+TR}!sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}}
+\subsubsection{\texorpdfstring{t\+\_\+isr\+Func\+P\+TR}{t\_isrFuncPTR}}
+{\footnotesize\ttfamily t\+\_\+isr\+Func\+P\+TR}
+
+
+
+I\+SR Function Pointer Type Definition. 
+
+This type is used to access the I\+SR handler. 
+
+Definition at line 64 of file sys\+\_\+vim.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}\label{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}} 
+\index{sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}!system\+Interrupt@{system\+Interrupt}}
+\index{system\+Interrupt@{system\+Interrupt}!sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}}
+\subsubsection{\texorpdfstring{system\+Interrupt}{systemInterrupt}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0}{system\+Interrupt}}}
+
+
+
+Alias names for clock sources. 
+
+This enumeration is used to provide alias names for the clock sources\+:
+\begin{DoxyItemize}
+\item I\+RQ
+\item F\+IQ 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+I\+RQ@{S\+Y\+S\+\_\+\+I\+RQ}!sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}}\index{sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}!S\+Y\+S\+\_\+\+I\+RQ@{S\+Y\+S\+\_\+\+I\+RQ}}}\mbox{\Hypertarget{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}\label{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}} 
+S\+Y\+S\+\_\+\+I\+RQ&Alias for I\+RQ interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+\_\+\+F\+IQ@{S\+Y\+S\+\_\+\+F\+IQ}!sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}}\index{sys\+\_\+vim.\+h@{sys\+\_\+vim.\+h}!S\+Y\+S\+\_\+\+F\+IQ@{S\+Y\+S\+\_\+\+F\+IQ}}}\mbox{\Hypertarget{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}\label{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}} 
+S\+Y\+S\+\_\+\+F\+IQ&Alias for F\+IQ interrupt \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 73 of file sys\+\_\+vim.\+h.
+
+
+\begin{DoxyCode}
+74 \{
+75     \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0a1c17474356eed74bfb34dc7abadf70a8}{SYS\_IRQ}} = 0U, 
+76     \mbox{\hyperlink{sys__vim_8h_a068bb33b993ffc9103931234af5aeff0ac624afef01cb666ec35237ccb410b614}{SYS\_FIQ}} = 1U  
+77 \}systemInterrupt\_t;
+\end{DoxyCode}

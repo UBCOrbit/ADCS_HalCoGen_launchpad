@@ -1,0 +1,276 @@
+\hypertarget{sys__pmm_8h}{}\section{include/sys\+\_\+pmm.h File Reference}
+\label{sys__pmm_8h}\index{include/sys\+\_\+pmm.\+h@{include/sys\+\_\+pmm.\+h}}
+
+
+P\+MM Driver Header File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+pmm.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpmm__config__reg}{pmm\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a9a213cb3ab83575e3ffbe7e9f9b14627}\label{sys__pmm_8h_a9a213cb3ab83575e3ffbe7e9f9b14627}} 
+\#define {\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+L\+O\+G\+I\+C\+P\+D\+O\+N0}~0x0\+F000000\+U     /$\ast$\+P\+D2$\ast$/
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a65a60ff44a335444fb1fab8a35c85016}\label{sys__pmm_8h_a65a60ff44a335444fb1fab8a35c85016}} 
+\#define {\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+L\+O\+G\+I\+C\+P\+D\+O\+N1}~0x000\+F0000\+U     /$\ast$\+P\+D3$\ast$/
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a324a7c023c8b76fd12a25c0ffa527411}\label{sys__pmm_8h_a324a7c023c8b76fd12a25c0ffa527411}} 
+\#define {\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+L\+O\+G\+I\+C\+P\+D\+O\+N2}~0x00000\+F00\+U     /$\ast$\+P\+D4$\ast$/
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a93981436ae6983bf48a18b11e94824db}\label{sys__pmm_8h_a93981436ae6983bf48a18b11e94824db}} 
+\#define {\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+L\+O\+G\+I\+C\+P\+D\+O\+N3}~0x0000000\+F\+U     /$\ast$\+P\+D5$\ast$/
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a5faa0024b8dcf7d414d0b6a8b8b4967e}\label{sys__pmm_8h_a5faa0024b8dcf7d414d0b6a8b8b4967e}} 
+\#define {\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+M\+E\+M\+P\+D\+O\+N0}~0x0\+F000000\+U     /$\ast$\+R\+A\+M\+\_\+\+P\+D1$\ast$/
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a8b576f2f8e49f8d726f5f511e8ee53af}\label{sys__pmm_8h_a8b576f2f8e49f8d726f5f511e8ee53af}} 
+\#define {\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+M\+E\+M\+P\+D\+O\+N1}~0x000\+F0000\+U     /$\ast$\+R\+A\+M\+\_\+\+P\+D2$\ast$/
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a9486bd56080bb50160311aa07d90443a}\label{sys__pmm_8h_a9486bd56080bb50160311aa07d90443a}} 
+\#define {\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+M\+E\+M\+P\+D\+O\+N2}~0x00000\+F00\+U     /$\ast$\+R\+A\+M\+\_\+\+P\+D3$\ast$/
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a67732623ee49b25350f594e60f046b99}\label{sys__pmm_8h_a67732623ee49b25350f594e60f046b99}} 
+\#define {\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+S\+T\+A\+T\+\_\+\+D\+O\+M\+A\+I\+N\+ON}~0x00000100U
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a18ef55e90d18e76be66e1bfd2371fec0}\label{sys__pmm_8h_a18ef55e90d18e76be66e1bfd2371fec0}} 
+\#define {\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+S\+T\+A\+T\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+S\+T\+AT}~0x00000003U
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a9fa00d559a3febf9e48103a451ba1688}\label{sys__pmm_8h_a9fa00d559a3febf9e48103a451ba1688}} 
+\#define {\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+S\+T\+A\+T\+\_\+\+D\+O\+M\+A\+I\+N\+ON}~0x00000100U
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a310638d1e73146f2a099117d3de06119}\label{sys__pmm_8h_a310638d1e73146f2a099117d3de06119}} 
+\#define {\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+S\+T\+A\+T\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+S\+T\+AT}~0x00000003U
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a1ce5d58bbcece1ce3b2be3682709102c}\label{sys__pmm_8h_a1ce5d58bbcece1ce3b2be3682709102c}} 
+\#define {\bfseries P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+A\+U\+T\+O\+C\+L\+K\+W\+A\+K\+E\+E\+NA}~0x00000001U
+\item 
+\#define {\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries P\+M\+M\+\_\+\+P\+D\+C\+L\+K\+D\+I\+S\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a798c5811e03eeef4fc3cb7e31f38b813}\label{sys__pmm_8h_a798c5811e03eeef4fc3cb7e31f38b813}} 
+typedef enum \mbox{\hyperlink{sys__pmm_8h_a275c430abe6322a81503a2ddec2e7c03}{pmm\+Logic\+P\+D\+Tag}} {\bfseries pmm\+\_\+\+Logic\+P\+D\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a35c6e4a2121220ca53c917439c868e86}\label{sys__pmm_8h_a35c6e4a2121220ca53c917439c868e86}} 
+typedef enum \mbox{\hyperlink{sys__pmm_8h_a812cc6747e99a5bb81919e2050e942de}{pmm\+Mem\+P\+D\+Tag}} {\bfseries pmm\+\_\+\+Mem\+P\+D\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a382b90991890f80b7046386e01314be6}\label{sys__pmm_8h_a382b90991890f80b7046386e01314be6}} 
+typedef enum \mbox{\hyperlink{sys__pmm_8h_a57522a3a84075b4df3405105ecb2c026}{pmm\+Mode\+Tag}} {\bfseries pmm\+\_\+\+Mode\+\_\+t}
+\item 
+\mbox{\Hypertarget{sys__pmm_8h_a52f8fd0e68faf30845046f6d02d03f41}\label{sys__pmm_8h_a52f8fd0e68faf30845046f6d02d03f41}} 
+typedef struct \mbox{\hyperlink{structpmm__config__reg}{pmm\+\_\+config\+\_\+reg}} {\bfseries pmm\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sys__pmm_8h_a275c430abe6322a81503a2ddec2e7c03}{pmm\+Logic\+P\+D\+Tag}} \{ \newline
+{\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D1} = 4U, 
+{\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D2} = 0U, 
+{\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D3} = 1U, 
+{\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D4} = 2U, 
+\newline
+{\bfseries P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D5} = 3U
+ \}
+\begin{DoxyCompactList}\small\item\em P\+MM Logic Power Domain. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{sys__pmm_8h_a812cc6747e99a5bb81919e2050e942de}{pmm\+Mem\+P\+D\+Tag}} \{ {\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D1} = 0U, 
+{\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D2} = 1U, 
+{\bfseries P\+M\+M\+\_\+\+M\+E\+M\+P\+D3} = 2U
+ \}
+\begin{DoxyCompactList}\small\item\em P\+MM Memory-\/\+Only Power Domain. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{sys__pmm_8h_a57522a3a84075b4df3405105ecb2c026}{pmm\+Mode\+Tag}} \{ {\bfseries Lock\+Step} = 0x0U, 
+{\bfseries Self\+Test} = 0x6U, 
+{\bfseries Error\+Forcing} = 0x9U, 
+{\bfseries Self\+Test\+Error\+Forcing} = 0x\+FU
+ \}
+\begin{DoxyCompactList}\small\item\em P\+S\+C\+ON operating mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__PMM_ga677f111b8d9604b6ab733f58105a36d8}{pmm\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the P\+MM Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga4caba5b694f4399bd0dc05030895d421}{pmm\+Turn\+O\+N\+Logic\+Power\+Domain}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Turns on Logic Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga3395d248f6418becca238c5db150fc73}{pmm\+Turn\+O\+N\+Mem\+Power\+Domain}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Turns on Memory Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga567bb1ec4293b6160bd70fa919c37a54}{pmm\+Turn\+O\+F\+F\+Logic\+Power\+Domain}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Turns off Logic Power Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_ga962af2aa251e590f1adb4dd29019a508}{pmm\+Turn\+O\+F\+F\+Mem\+Power\+Domain}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Turns off Memory Power Domain. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_ga9a7b3cc1f08a5e0a0e1c39f53f8ea709}{pmm\+Is\+Logic\+Power\+Domain\+Active}} (pmm\+\_\+\+Logic\+P\+D\+\_\+t logic\+PD)
+\begin{DoxyCompactList}\small\item\em Check if the power domain is active or not. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_gad92e152a45b5bfa862b930273264f9be}{pmm\+Is\+Mem\+Power\+Domain\+Active}} (pmm\+\_\+\+Mem\+P\+D\+\_\+t mem\+PD)
+\begin{DoxyCompactList}\small\item\em Check if the power domain is active or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_gaa2d72c03373521038be734834fb230bb}{pmm\+Get\+Config\+Value}} (\mbox{\hyperlink{structpmm__config__reg}{pmm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__PMM_gafd3767acd1dd35ef877091fe303b08b6}{pmm\+Set\+Mode}} (pmm\+\_\+\+Mode\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set P\+S\+C\+ON Compare Block Mode. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{group__PMM_ga0a27f5db51b603a069b61e2fa149d81b}{pmm\+Perform\+Self\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Perform self test and return the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+MM Driver Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the System driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sys__pmm_8h_a9c6459b9bd303bfc0f66ae518ea89bc8}\label{sys__pmm_8h_a9c6459b9bd303bfc0f66ae518ea89bc8}} 
+\index{sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}!P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{PMM\_GLOBALCTRL1\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define P\+M\+M\+\_\+\+G\+L\+O\+B\+A\+L\+C\+T\+R\+L1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)0U << 8U) \(\backslash\)
+                                        | (uint32)((uint32)0U << 0U))
+\end{DoxyCode}
+
+
+Definition at line 90 of file sys\+\_\+pmm.\+h.
+
+\mbox{\Hypertarget{sys__pmm_8h_aa5992a1b8507af0762085a8ec85162e2}\label{sys__pmm_8h_aa5992a1b8507af0762085a8ec85162e2}} 
+\index{sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}!P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{PMM\_LOGICPDPWRCTRL0\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define P\+M\+M\+\_\+\+L\+O\+G\+I\+C\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)0x5U << 24U) \(\backslash\)
+                                        | (uint32)((uint32)0x5U << 16U) \(\backslash\)
+                                        | (uint32)((uint32)0x5U << 8U)  \(\backslash\)
+                                        | (uint32)((uint32)0x5U << 0U)  )
+\end{DoxyCode}
+
+
+Definition at line 77 of file sys\+\_\+pmm.\+h.
+
+\mbox{\Hypertarget{sys__pmm_8h_a5fe9d7d84283b1580413bb9a828b7684}\label{sys__pmm_8h_a5fe9d7d84283b1580413bb9a828b7684}} 
+\index{sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}!P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{PMM\_MEMPDPWRCTRL0\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define P\+M\+M\+\_\+\+M\+E\+M\+P\+D\+P\+W\+R\+C\+T\+R\+L0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)0x5U << 24U) \(\backslash\)
+                                        | (uint32)((uint32)0x5U << 16U) \(\backslash\)
+                                        )
+\end{DoxyCode}
+
+
+Definition at line 81 of file sys\+\_\+pmm.\+h.
+
+\mbox{\Hypertarget{sys__pmm_8h_a1f4e1b388ac576e293fb469a17df1f92}\label{sys__pmm_8h_a1f4e1b388ac576e293fb469a17df1f92}} 
+\index{sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}!P\+M\+M\+\_\+\+P\+D\+C\+L\+K\+D\+I\+S\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+P\+D\+C\+L\+K\+D\+I\+S\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{P\+M\+M\+\_\+\+P\+D\+C\+L\+K\+D\+I\+S\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{P\+M\+M\+\_\+\+P\+D\+C\+L\+K\+D\+I\+S\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{P\+M\+M\+\_\+\+P\+D\+C\+L\+K\+D\+I\+S\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{PMM\_PDCLKDISREG\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define P\+M\+M\+\_\+\+P\+D\+C\+L\+K\+D\+I\+S\+R\+E\+G\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( (uint32)((uint32)(1U-1U) << 0U) \(\backslash\)
+                                        | (uint32)((uint32)(1U-1U) << 1U) \(\backslash\)
+                                        | (uint32)((uint32)(1U-1U) << 2U) \(\backslash\)
+                                        | (uint32)((uint32)(1U-1U) << 3U) )
+\end{DoxyCode}
+
+
+Definition at line 85 of file sys\+\_\+pmm.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sys__pmm_8h_a275c430abe6322a81503a2ddec2e7c03}\label{sys__pmm_8h_a275c430abe6322a81503a2ddec2e7c03}} 
+\index{sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}!pmm\+Logic\+P\+D\+Tag@{pmm\+Logic\+P\+D\+Tag}}
+\index{pmm\+Logic\+P\+D\+Tag@{pmm\+Logic\+P\+D\+Tag}!sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{pmm\+Logic\+P\+D\+Tag}{pmmLogicPDTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__pmm_8h_a275c430abe6322a81503a2ddec2e7c03}{pmm\+Logic\+P\+D\+Tag}}}
+
+
+
+P\+MM Logic Power Domain. 
+
+Used to define P\+MM Logic Power Domain 
+
+Definition at line 99 of file sys\+\_\+pmm.\+h.
+
+
+\begin{DoxyCode}
+100 \{
+101     PMM\_LOGICPD1    = 4U,   \textcolor{comment}{/*-- NOT USED*/}
+102     PMM\_LOGICPD2    = 0U,
+103     PMM\_LOGICPD3    = 1U,
+104     PMM\_LOGICPD4    = 2U,
+105     PMM\_LOGICPD5    = 3U
+106 \}pmm\_LogicPD\_t;
+\end{DoxyCode}
+\mbox{\Hypertarget{sys__pmm_8h_a812cc6747e99a5bb81919e2050e942de}\label{sys__pmm_8h_a812cc6747e99a5bb81919e2050e942de}} 
+\index{sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}!pmm\+Mem\+P\+D\+Tag@{pmm\+Mem\+P\+D\+Tag}}
+\index{pmm\+Mem\+P\+D\+Tag@{pmm\+Mem\+P\+D\+Tag}!sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{pmm\+Mem\+P\+D\+Tag}{pmmMemPDTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__pmm_8h_a812cc6747e99a5bb81919e2050e942de}{pmm\+Mem\+P\+D\+Tag}}}
+
+
+
+P\+MM Memory-\/\+Only Power Domain. 
+
+Used to define P\+MM Memory-\/\+Only Power Domain 
+
+Definition at line 114 of file sys\+\_\+pmm.\+h.
+
+
+\begin{DoxyCode}
+115 \{
+116     PMM\_MEMPD1 = 0U,
+117     PMM\_MEMPD2 = 1U,
+118     PMM\_MEMPD3 = 2U
+119 \}pmm\_MemPD\_t;
+\end{DoxyCode}
+\mbox{\Hypertarget{sys__pmm_8h_a57522a3a84075b4df3405105ecb2c026}\label{sys__pmm_8h_a57522a3a84075b4df3405105ecb2c026}} 
+\index{sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}!pmm\+Mode\+Tag@{pmm\+Mode\+Tag}}
+\index{pmm\+Mode\+Tag@{pmm\+Mode\+Tag}!sys\+\_\+pmm.\+h@{sys\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{pmm\+Mode\+Tag}{pmmModeTag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__pmm_8h_a57522a3a84075b4df3405105ecb2c026}{pmm\+Mode\+Tag}}}
+
+
+
+P\+S\+C\+ON operating mode. 
+
+Used to define the operating mode of P\+S\+C\+ON Compare Block 
+
+Definition at line 127 of file sys\+\_\+pmm.\+h.
+
+
+\begin{DoxyCode}
+128 \{
+129     LockStep                = 0x0U,
+130     SelfTest                = 0x6U,
+131     ErrorForcing            = 0x9U,
+132     SelfTestErrorForcing    = 0xFU
+133 \}pmm\_Mode\_t;
+\end{DoxyCode}

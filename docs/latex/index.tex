@@ -1,0 +1,17 @@
+Please run {\ttfamily setup\+\_\+clean.\+sh} in bash before working with this repository, this only needs to be run once after you clone the repo.
+
+If you are not using a U\+N\+IX based shell (i.\+e. Windows) please run {\ttfamily git config -\/-\/local include.\+path ../.gitconfig} in the root directory of the repo.
+
+\section*{Releases}
+
+Only tagged releases of this repository will contain generated code.
+
+Run {\ttfamily git tag} to check for the latest tag, and {\ttfamily git checkout $<$tag$>$} to check it out.
+
+\subsection*{Note}
+
+This project is configured to use mutexes/ semaphores. Your version of H\+A\+L\+Co\+Gen might have a bug with generating Free\+R\+T\+OS code that enables mutexes.
+
+This bug is documented \href{http://e2e.ti.com/support/microcontrollers/hercules/f/312/p/626490/2320355}{\tt here}.
+
+The workaround is to copy the {\ttfamily mpu\+\_\+wrappers.\+c} file in {\ttfamily H\+A\+L\+Co\+Gen\+\_\+fix} to {\ttfamily $<$Your H\+A\+L\+Co\+Gen Install$>$/drivers/\+Free\+R\+T\+O\+S/portable/\+C\+C\+S/\+Coretex-\/\+R4/}. You may want to rename the original file to something like {\ttfamily mpu\+\_\+wrappers.\+c.\+old} just in case you want to restore it. 

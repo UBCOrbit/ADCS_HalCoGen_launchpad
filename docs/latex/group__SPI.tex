@@ -1,0 +1,104 @@
+\hypertarget{group__SPI}{}\section{S\+PI}
+\label{group__SPI}\index{S\+PI@{S\+PI}}
+
+
+Serial Peripheral Interface Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__SPI_ga3c484a97cdec02c5dbf46a11245e3395}\label{group__SPI_ga3c484a97cdec02c5dbf46a11245e3395}} 
+void {\bfseries spi\+Init} (void)
+\item 
+\mbox{\Hypertarget{group__SPI_gaa5f0ffbb6cac3aa4ef1c5922d5be2a9e}\label{group__SPI_gaa5f0ffbb6cac3aa4ef1c5922d5be2a9e}} 
+void {\bfseries spi\+Set\+Functional} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 port)
+\item 
+\mbox{\Hypertarget{group__SPI_ga16b621b57dceb7630144fd336e226687}\label{group__SPI_ga16b621b57dceb7630144fd336e226687}} 
+void {\bfseries spi\+Enable\+Notification} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 flags)
+\item 
+\mbox{\Hypertarget{group__SPI_gaa6ba09e2c9f89ff0e7ddeca878907c7b}\label{group__SPI_gaa6ba09e2c9f89ff0e7ddeca878907c7b}} 
+void {\bfseries spi\+Disable\+Notification} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 flags)
+\item 
+\mbox{\Hypertarget{group__SPI_ga0ab8e0e4a0d6e246935f6e52f052291f}\label{group__SPI_ga0ab8e0e4a0d6e246935f6e52f052291f}} 
+uint32 {\bfseries spi\+Transmit\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff)
+\item 
+\mbox{\Hypertarget{group__SPI_gac11e231fad39e20ceaa8ca1a45817fc9}\label{group__SPI_gac11e231fad39e20ceaa8ca1a45817fc9}} 
+void {\bfseries spi\+Send\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff)
+\item 
+\mbox{\Hypertarget{group__SPI_gad3d2d61cfbb2bd1369742b6487964f28}\label{group__SPI_gad3d2d61cfbb2bd1369742b6487964f28}} 
+uint32 {\bfseries spi\+Receive\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$destbuff)
+\item 
+\mbox{\Hypertarget{group__SPI_ga5e86c1106f09ed0de05bd9e4b1fbf8a7}\label{group__SPI_ga5e86c1106f09ed0de05bd9e4b1fbf8a7}} 
+void {\bfseries spi\+Get\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$destbuff)
+\item 
+\mbox{\Hypertarget{group__SPI_ga62c1d6f29a139e14df3ed5eae76b5960}\label{group__SPI_ga62c1d6f29a139e14df3ed5eae76b5960}} 
+uint32 {\bfseries spi\+Transmit\+And\+Receive\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff, uint16 $\ast$destbuff)
+\item 
+\mbox{\Hypertarget{group__SPI_gab366c629d21d1e7fd3640a39cbfe268e}\label{group__SPI_gab366c629d21d1e7fd3640a39cbfe268e}} 
+void {\bfseries spi\+Send\+And\+Get\+Data} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{structspiDAT1RegConfig}{spi\+D\+A\+T1\+\_\+t}} $\ast$dataconfig\+\_\+t, uint32 blocksize, uint16 $\ast$srcbuff, uint16 $\ast$destbuff)
+\item 
+\mbox{\Hypertarget{group__SPI_ga5eb26dc370f8056e60c0c7d370712326}\label{group__SPI_ga5eb26dc370f8056e60c0c7d370712326}} 
+void {\bfseries spi\+Enable\+Loopback} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\item 
+\mbox{\Hypertarget{group__SPI_gae97220ee410fa63c32879eb8c1bad043}\label{group__SPI_gae97220ee410fa63c32879eb8c1bad043}} 
+void {\bfseries spi\+Disable\+Loopback} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\item 
+\mbox{\Hypertarget{group__SPI_gab51d614db9846078f904d769bb813cc8}\label{group__SPI_gab51d614db9846078f904d769bb813cc8}} 
+Spi\+Data\+Status\+\_\+t {\bfseries Spi\+Tx\+Status} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\item 
+\mbox{\Hypertarget{group__SPI_ga58c934e364bdc3c7c91728da28372a7a}\label{group__SPI_ga58c934e364bdc3c7c91728da28372a7a}} 
+Spi\+Data\+Status\+\_\+t {\bfseries Spi\+Rx\+Status} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\item 
+void \mbox{\hyperlink{group__SPI_ga18e042a1628b90799aebaaf3876db589}{spi\+Notification}} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SPI_ga139a2bd5549f796f0e41bc9b334bab2c}{spi\+End\+Notification}} (\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$spi)
+\begin{DoxyCompactList}\small\item\em Interrupt callback for End of TX or RX data length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Serial Peripheral Interface Module. 
+
+S\+PI is a high-\/speed synchronous serial input/output port that allows a serial bit stream of programmed length (2 to 16 bits) to be shifted in and out of the device at a programmed bit-\/transfer rate.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__spi_8h}{reg\+\_\+spi.\+h}}
+\item \mbox{\hyperlink{spi_8h}{spi.\+h}}
+\item spi.\+c 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__SPI_ga139a2bd5549f796f0e41bc9b334bab2c}\label{group__SPI_ga139a2bd5549f796f0e41bc9b334bab2c}} 
+\index{S\+PI@{S\+PI}!spi\+End\+Notification@{spi\+End\+Notification}}
+\index{spi\+End\+Notification@{spi\+End\+Notification}!S\+PI@{S\+PI}}
+\subsubsection{\texorpdfstring{spi\+End\+Notification()}{spiEndNotification()}}
+{\footnotesize\ttfamily void spi\+End\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$}]{spi }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback for End of TX or RX data length. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em spi} & -\/ Spi module base address\\
+\hline
+\end{DoxyParams}
+This is a callback that is provided by the application and is called upon an interrupt at the End of TX or RX data length. \mbox{\Hypertarget{group__SPI_ga18e042a1628b90799aebaaf3876db589}\label{group__SPI_ga18e042a1628b90799aebaaf3876db589}} 
+\index{S\+PI@{S\+PI}!spi\+Notification@{spi\+Notification}}
+\index{spi\+Notification@{spi\+Notification}!S\+PI@{S\+PI}}
+\subsubsection{\texorpdfstring{spi\+Notification()}{spiNotification()}}
+{\footnotesize\ttfamily void spi\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__spi_8h_af46e8a85339f9acf2cc93f22b3a0d1d7}{spi\+B\+A\+S\+E\+\_\+t}} $\ast$}]{spi,  }\item[{uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em spi} & -\/ Spi module base address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Copy of error interrupt flags\\
+\hline
+\end{DoxyParams}
+This is a callback that is provided by the application and is called upon an interrupt. The parameter passed to the callback is a copy of the interrupt flag register. 

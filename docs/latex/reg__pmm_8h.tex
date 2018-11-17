@@ -1,0 +1,73 @@
+\hypertarget{reg__pmm_8h}{}\section{include/reg\+\_\+pmm.h File Reference}
+\label{reg__pmm_8h}\index{include/reg\+\_\+pmm.\+h@{include/reg\+\_\+pmm.\+h}}
+
+
+P\+MM Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpmmBase}{pmm\+Base}}
+\begin{DoxyCompactList}\small\item\em Pmm Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}{pmm\+R\+EG}}~((\mbox{\hyperlink{reg__pmm_8h_aceeb80e23f10274b88b6eccfeb684932}{pmm\+Base\+\_\+t}} $\ast$)0x\+F\+F\+F\+F0000\+U)
+\begin{DoxyCompactList}\small\item\em Pmm Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structpmmBase}{pmm\+Base}} \mbox{\hyperlink{reg__pmm_8h_aceeb80e23f10274b88b6eccfeb684932}{pmm\+Base\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Pmm Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\+MM Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\end{DoxyItemize}which are relevant for the P\+MM driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}\label{reg__pmm_8h_a57b193bea1bf1951b97bdfee07f48598}} 
+\index{reg\+\_\+pmm.\+h@{reg\+\_\+pmm.\+h}!pmm\+R\+EG@{pmm\+R\+EG}}
+\index{pmm\+R\+EG@{pmm\+R\+EG}!reg\+\_\+pmm.\+h@{reg\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{pmm\+R\+EG}{pmmREG}}
+{\footnotesize\ttfamily \#define pmm\+R\+EG~((\mbox{\hyperlink{reg__pmm_8h_aceeb80e23f10274b88b6eccfeb684932}{pmm\+Base\+\_\+t}} $\ast$)0x\+F\+F\+F\+F0000\+U)}
+
+
+
+Pmm Register Frame Pointer. 
+
+This pointer is used by the Pmm driver to access the Pmm registers. 
+
+Definition at line 105 of file reg\+\_\+pmm.\+h.
+
+
+
+Referenced by pmm\+Init(), pmm\+Is\+Logic\+Power\+Domain\+Active(), pmm\+Is\+Mem\+Power\+Domain\+Active(), pmm\+Perform\+Self\+Test(), and pmm\+Set\+Mode().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__pmm_8h_aceeb80e23f10274b88b6eccfeb684932}\label{reg__pmm_8h_aceeb80e23f10274b88b6eccfeb684932}} 
+\index{reg\+\_\+pmm.\+h@{reg\+\_\+pmm.\+h}!pmm\+Base\+\_\+t@{pmm\+Base\+\_\+t}}
+\index{pmm\+Base\+\_\+t@{pmm\+Base\+\_\+t}!reg\+\_\+pmm.\+h@{reg\+\_\+pmm.\+h}}
+\subsubsection{\texorpdfstring{pmm\+Base\+\_\+t}{pmmBase\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__pmm_8h_aceeb80e23f10274b88b6eccfeb684932}{pmm\+Base\+\_\+t}}}
+
+
+
+Pmm Register Frame Type Definition. 
+
+This type is used to access the Pmm Registers. 

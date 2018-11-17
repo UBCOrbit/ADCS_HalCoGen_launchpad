@@ -1,0 +1,1060 @@
+\hypertarget{group__ESM}{}\section{E\+SM}
+\label{group__ESM}\index{E\+SM@{E\+SM}}
+
+
+Error Signaling Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ESM_ga3ebbcbb33cba761eba56edcf1aeb9961}{esm\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes Esm Driver. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__ESM_gaf9c1cb3cf58b215f603e7ada115deffb}{esm\+Error}} (void)
+\begin{DoxyCompactList}\small\item\em Return Error status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga918dbc559401efc341d6b1cc1fa5a5c2}{esm\+Enable\+Error}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Enable Group 1 Channels Error Signals propagation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga2b2070b83e6693afda68fdb49ebccc02}{esm\+Disable\+Error}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Disable Group 1 Channels Error Signals propagation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gaa830bed2b9fc364b96269ff0baa8c395}{esm\+Trigger\+Error\+Pin\+Reset}} (void)
+\begin{DoxyCompactList}\small\item\em Trigger error pin reset and switch back to normal operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga9c80550059c5da2e680f73c5c06603b5}{esm\+Activate\+Normal\+Operation}} (void)
+\begin{DoxyCompactList}\small\item\em Activate normal operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gabac2a3061d7f581a62ed9f9ecde03108}{esm\+Enable\+Interrupt}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Enable Group 1 Channels Interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gae92827d82951a348b9faead01d1901d6}{esm\+Disable\+Interrupt}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Disable Group 1 Channels Interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga5c933318570a1b946185cd09af973184}{esm\+Set\+Interrupt\+Level}} (uint64 channels, uint64 flags)
+\begin{DoxyCompactList}\small\item\em Set Group 1 Channels Interrupt Levels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga437032c8dd6a0855da7e8102d4143a0a}{esm\+Clear\+Status}} (uint32 group, uint64 channels)
+\begin{DoxyCompactList}\small\item\em Clear Group error status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga53317b0e54932b896152a14a365a6e35}{esm\+Clear\+Status\+Buffer}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Clear Group 2 error status buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_gac0c9d63eb56fc294c3845f53685ecf36}{esm\+Set\+Counter\+Preload\+Value}} (uint32 value)
+\begin{DoxyCompactList}\small\item\em Set counter preload value. \end{DoxyCompactList}\item 
+uint64 \mbox{\hyperlink{group__ESM_gaf37af0850a7b771316d79027a2f45390}{esm\+Get\+Status}} (uint32 group, uint64 channels)
+\begin{DoxyCompactList}\small\item\em Return Error status. \end{DoxyCompactList}\item 
+uint64 \mbox{\hyperlink{group__ESM_gace436f235f62ed75dd3c1b1374072b40}{esm\+Get\+Status\+Buffer}} (uint64 channels)
+\begin{DoxyCompactList}\small\item\em Return Group 2 channel x Error status buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}} \mbox{\hyperlink{group__ESM_ga8dbfefa59cdb688306a7c4b93b7c435e}{esm\+Enter\+Self\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Return E\+SM Self test status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}} \mbox{\hyperlink{group__ESM_ga6e558e0c5761321c3419e77642795d63}{esm\+Self\+Test\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Return E\+SM Self test status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga0b2e9a4b3b1e4dd57f496bda7bbb854c}{esm\+Get\+Config\+Value}} (\mbox{\hyperlink{structesm__config__reg}{esm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga47f1650e27c094120e414ad3332ea311}{esm\+Group1\+Notification}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__ESM_ga7d5d25716f0d945f9d5ae0e6ae387d67}{esm\+Group2\+Notification}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Error Signaling Module. 
+
+The E\+SM module aggregates device errors and provides internal and external error response based on error severity.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__esm_8h}{reg\+\_\+esm.\+h}}
+\item \mbox{\hyperlink{esm_8h}{esm.\+h}}
+\item \mbox{\hyperlink{esm_8c}{esm.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__ESM_ga9c80550059c5da2e680f73c5c06603b5}\label{group__ESM_ga9c80550059c5da2e680f73c5c06603b5}} 
+\index{E\+SM@{E\+SM}!esm\+Activate\+Normal\+Operation@{esm\+Activate\+Normal\+Operation}}
+\index{esm\+Activate\+Normal\+Operation@{esm\+Activate\+Normal\+Operation}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Activate\+Normal\+Operation()}{esmActivateNormalOperation()}}
+{\footnotesize\ttfamily void esm\+Activate\+Normal\+Operation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Activate normal operation. 
+
+Activates normal operation mode. 
+
+Definition at line 414 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+415 \{
+416 \textcolor{comment}{/* USER CODE BEGIN (13) */}
+417 \textcolor{comment}{/* USER CODE END */}
+418 
+419     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR = 0U;
+420 
+421 \textcolor{comment}{/* USER CODE BEGIN (14) */}
+422 \textcolor{comment}{/* USER CODE END */}
+423 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga437032c8dd6a0855da7e8102d4143a0a}\label{group__ESM_ga437032c8dd6a0855da7e8102d4143a0a}} 
+\index{E\+SM@{E\+SM}!esm\+Clear\+Status@{esm\+Clear\+Status}}
+\index{esm\+Clear\+Status@{esm\+Clear\+Status}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Clear\+Status()}{esmClearStatus()}}
+{\footnotesize\ttfamily void esm\+Clear\+Status (\begin{DoxyParamCaption}\item[{uint32}]{group,  }\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Clear Group error status. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em group} & -\/ Error group \\
+\hline
+\mbox{\tt in}  & {\em channels} & -\/ Channel mask\\
+\hline
+\end{DoxyParams}
+Clear Group error status. 
+
+Definition at line 510 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+511 \{
+512 \textcolor{comment}{/* USER CODE BEGIN (21) */}
+513 \textcolor{comment}{/* USER CODE END */}
+514 
+515     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR1[group] = (uint32)(channels & 0xFFFFFFFFU);
+516     \textcolor{keywordflow}{if}(group == 0U)
+517     \{
+518         \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR4[group] = (uint32)((channels >> 32U) & 0xFFFFFFFFU);
+519     \}
+520 
+521 \textcolor{comment}{/* USER CODE BEGIN (22) */}
+522 \textcolor{comment}{/* USER CODE END */}
+523 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga53317b0e54932b896152a14a365a6e35}\label{group__ESM_ga53317b0e54932b896152a14a365a6e35}} 
+\index{E\+SM@{E\+SM}!esm\+Clear\+Status\+Buffer@{esm\+Clear\+Status\+Buffer}}
+\index{esm\+Clear\+Status\+Buffer@{esm\+Clear\+Status\+Buffer}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Clear\+Status\+Buffer()}{esmClearStatusBuffer()}}
+{\footnotesize\ttfamily void esm\+Clear\+Status\+Buffer (\begin{DoxyParamCaption}\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Clear Group 2 error status buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & -\/ Channel mask\\
+\hline
+\end{DoxyParams}
+Clear Group 2 error status buffer. 
+
+Definition at line 536 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+537 \{
+538 \textcolor{comment}{/* USER CODE BEGIN (23) */}
+539 \textcolor{comment}{/* USER CODE END */}
+540 
+541     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SSR2 = (uint32)(channels & 0xFFFFFFFFU);
+542 
+543 \textcolor{comment}{/* USER CODE BEGIN (24) */}
+544 \textcolor{comment}{/* USER CODE END */}
+545 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga2b2070b83e6693afda68fdb49ebccc02}\label{group__ESM_ga2b2070b83e6693afda68fdb49ebccc02}} 
+\index{E\+SM@{E\+SM}!esm\+Disable\+Error@{esm\+Disable\+Error}}
+\index{esm\+Disable\+Error@{esm\+Disable\+Error}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Disable\+Error()}{esmDisableError()}}
+{\footnotesize\ttfamily void esm\+Disable\+Error (\begin{DoxyParamCaption}\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Disable Group 1 Channels Error Signals propagation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & -\/ Channel mask\\
+\hline
+\end{DoxyParams}
+Disable Group 1 Channels Error Signals propagation to the error pin. 
+
+Definition at line 373 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+374 \{
+375 \textcolor{comment}{/* USER CODE BEGIN (9) */}
+376 \textcolor{comment}{/* USER CODE END */}
+377 
+378     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IEPCR4 = (uint32)((channels >> 32U) & 0xFFFFFFFFU);
+379     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->DEPAPR1 = (uint32)(channels & 0xFFFFFFFFU);
+380 
+381 \textcolor{comment}{/* USER CODE BEGIN (10) */}
+382 \textcolor{comment}{/* USER CODE END */}
+383 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_gae92827d82951a348b9faead01d1901d6}\label{group__ESM_gae92827d82951a348b9faead01d1901d6}} 
+\index{E\+SM@{E\+SM}!esm\+Disable\+Interrupt@{esm\+Disable\+Interrupt}}
+\index{esm\+Disable\+Interrupt@{esm\+Disable\+Interrupt}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Disable\+Interrupt()}{esmDisableInterrupt()}}
+{\footnotesize\ttfamily void esm\+Disable\+Interrupt (\begin{DoxyParamCaption}\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Disable Group 1 Channels Interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & -\/ Channel mask\\
+\hline
+\end{DoxyParams}
+Disable Group 1 Channels Interrupts. 
+
+Definition at line 459 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+460 \{
+461 \textcolor{comment}{/* USER CODE BEGIN (17) */}
+462 \textcolor{comment}{/* USER CODE END */}
+463 
+464     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IECR4 = (uint32)((channels >> 32U) & 0xFFFFFFFFU);
+465     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IECR1 = (uint32)(channels & 0xFFFFFFFFU);
+466 
+467 \textcolor{comment}{/* USER CODE BEGIN (18) */}
+468 \textcolor{comment}{/* USER CODE END */}
+469 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga918dbc559401efc341d6b1cc1fa5a5c2}\label{group__ESM_ga918dbc559401efc341d6b1cc1fa5a5c2}} 
+\index{E\+SM@{E\+SM}!esm\+Enable\+Error@{esm\+Enable\+Error}}
+\index{esm\+Enable\+Error@{esm\+Enable\+Error}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Enable\+Error()}{esmEnableError()}}
+{\footnotesize\ttfamily void esm\+Enable\+Error (\begin{DoxyParamCaption}\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Enable Group 1 Channels Error Signals propagation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & -\/ Channel mask\\
+\hline
+\end{DoxyParams}
+Enable Group 1 Channels Error Signals propagation to the error pin. 
+
+Definition at line 350 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+351 \{
+352 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+353 \textcolor{comment}{/* USER CODE END */}
+354 
+355     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IEPSR4 = (uint32)((channels >> 32U) & 0xFFFFFFFFU);
+356     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EEPAPR1 = (uint32)(channels & 0xFFFFFFFFU);
+357 
+358 \textcolor{comment}{/* USER CODE BEGIN (8) */}
+359 \textcolor{comment}{/* USER CODE END */}
+360 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_gabac2a3061d7f581a62ed9f9ecde03108}\label{group__ESM_gabac2a3061d7f581a62ed9f9ecde03108}} 
+\index{E\+SM@{E\+SM}!esm\+Enable\+Interrupt@{esm\+Enable\+Interrupt}}
+\index{esm\+Enable\+Interrupt@{esm\+Enable\+Interrupt}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Enable\+Interrupt()}{esmEnableInterrupt()}}
+{\footnotesize\ttfamily void esm\+Enable\+Interrupt (\begin{DoxyParamCaption}\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Enable Group 1 Channels Interrupts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & -\/ Channel mask\\
+\hline
+\end{DoxyParams}
+Enable Group 1 Channels Interrupts. 
+
+Definition at line 436 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+437 \{
+438 \textcolor{comment}{/* USER CODE BEGIN (15) */}
+439 \textcolor{comment}{/* USER CODE END */}
+440 
+441     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IESR4 = (uint32)((channels >> 32U) & 0xFFFFFFFFU);
+442     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IESR1 = (uint32)(channels & 0xFFFFFFFFU);
+443 
+444 \textcolor{comment}{/* USER CODE BEGIN (16) */}
+445 \textcolor{comment}{/* USER CODE END */}
+446 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga8dbfefa59cdb688306a7c4b93b7c435e}\label{group__ESM_ga8dbfefa59cdb688306a7c4b93b7c435e}} 
+\index{E\+SM@{E\+SM}!esm\+Enter\+Self\+Test@{esm\+Enter\+Self\+Test}}
+\index{esm\+Enter\+Self\+Test@{esm\+Enter\+Self\+Test}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Enter\+Self\+Test()}{esmEnterSelfTest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}} esm\+Enter\+Self\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return E\+SM Self test status. 
+
+\begin{DoxyReturn}{Returns}
+E\+SM Self test status
+\end{DoxyReturn}
+Returns the E\+SM Self test status. 
+
+Definition at line 644 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+645 \{
+646     \mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esmSelfTestFlag\_t}} status;
+647 
+648 \textcolor{comment}{/* USER CODE BEGIN (31) */}
+649 \textcolor{comment}{/* USER CODE END */}
+650 
+651     uint32 errPinStat = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EPSR & 0x1U;
+652     uint32 esmKeyReg  = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR;
+653     \textcolor{keywordflow}{if}((errPinStat == 0x0U) && (esmKeyReg == 0x0U))
+654     \{
+655       status = esmSelfTest\_NotStarted;
+656     \}
+657     \textcolor{keywordflow}{else}
+658     \{
+659       \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR = 0xAU;
+660       status = esmSelfTest\_Active;
+661       \textcolor{keywordflow}{if}((\mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EPSR & 0x1U) != 0x0U)
+662       \{
+663         status = esmSelfTest\_Failed;
+664       \}
+665       \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR = 0x5U;
+666     \}
+667 
+668 \textcolor{comment}{/* USER CODE BEGIN (32) */}
+669 \textcolor{comment}{/* USER CODE END */}
+670 
+671     \textcolor{keywordflow}{return} status;
+672 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_gaf9c1cb3cf58b215f603e7ada115deffb}\label{group__ESM_gaf9c1cb3cf58b215f603e7ada115deffb}} 
+\index{E\+SM@{E\+SM}!esm\+Error@{esm\+Error}}
+\index{esm\+Error@{esm\+Error}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Error()}{esmError()}}
+{\footnotesize\ttfamily uint32 esm\+Error (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return Error status. 
+
+\begin{DoxyReturn}{Returns}
+The error status
+\end{DoxyReturn}
+Returns the error status. 
+
+Definition at line 324 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+325 \{
+326     uint32 status;
+327 
+328 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+329 \textcolor{comment}{/* USER CODE END */}
+330 
+331     status = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EPSR;
+332 
+333 \textcolor{comment}{/* USER CODE BEGIN (6) */}
+334 \textcolor{comment}{/* USER CODE END */}
+335 
+336     \textcolor{keywordflow}{return} status;
+337 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga0b2e9a4b3b1e4dd57f496bda7bbb854c}\label{group__ESM_ga0b2e9a4b3b1e4dd57f496bda7bbb854c}} 
+\index{E\+SM@{E\+SM}!esm\+Get\+Config\+Value@{esm\+Get\+Config\+Value}}
+\index{esm\+Get\+Config\+Value@{esm\+Get\+Config\+Value}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Get\+Config\+Value()}{esmGetConfigValue()}}
+{\footnotesize\ttfamily void esm\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structesm__config__reg}{esm\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 729 of file esm.\+c.
+
+
+\begin{DoxyCode}
+730 \{
+731     \textcolor{keywordflow}{if} (type == InitialValue)
+732     \{
+733         config\_reg->CONFIG\_EEPAPR1 = ESM\_EEPAPR1\_CONFIGVALUE;
+734         config\_reg->CONFIG\_IESR1 = ESM\_IESR1\_CONFIGVALUE;
+735         config\_reg->CONFIG\_ILSR1 = ESM\_ILSR1\_CONFIGVALUE;
+736         config\_reg->CONFIG\_LTCPR = ESM\_LTCPR\_CONFIGVALUE;
+737         config\_reg->CONFIG\_EKR = ESM\_EKR\_CONFIGVALUE;  
+738         config\_reg->CONFIG\_IEPSR4 = ESM\_IEPSR4\_CONFIGVALUE;
+739         config\_reg->CONFIG\_IESR4 = ESM\_IESR4\_CONFIGVALUE;
+740         config\_reg->CONFIG\_ILSR4 = ESM\_ILSR4\_CONFIGVALUE;
+741     \}
+742     \textcolor{keywordflow}{else}
+743     \{
+744     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+745         config\_reg->CONFIG\_EEPAPR1 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EEPAPR1;
+746         config\_reg->CONFIG\_IESR1 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IESR1;
+747         config\_reg->CONFIG\_ILSR1 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILSR1;
+748         config\_reg->CONFIG\_LTCPR = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->LTCPR;
+749         config\_reg->CONFIG\_EKR = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR;  
+750         config\_reg->CONFIG\_IEPSR4 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IEPSR4;
+751         config\_reg->CONFIG\_IESR4 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IESR4;
+752         config\_reg->CONFIG\_ILSR4 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILSR4;
+753     \}
+754 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_gaf37af0850a7b771316d79027a2f45390}\label{group__ESM_gaf37af0850a7b771316d79027a2f45390}} 
+\index{E\+SM@{E\+SM}!esm\+Get\+Status@{esm\+Get\+Status}}
+\index{esm\+Get\+Status@{esm\+Get\+Status}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Get\+Status()}{esmGetStatus()}}
+{\footnotesize\ttfamily uint64 esm\+Get\+Status (\begin{DoxyParamCaption}\item[{uint32}]{group,  }\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Return Error status. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em group} & -\/ Error group \\
+\hline
+\mbox{\tt in}  & {\em channels} & -\/ Error Channels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The channels status of selected group
+\end{DoxyReturn}
+Returns the channels status of selected group. 
+
+Definition at line 583 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+584 \{
+585     uint64 status;
+586     uint32 ESM\_ESTATUS4, ESM\_ESTATUS1;
+587     \textcolor{keywordflow}{if}(group == 0U)
+588     \{
+589         ESM\_ESTATUS4 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR4[group];
+590     \}
+591     \textcolor{keywordflow}{else}
+592     \{
+593         ESM\_ESTATUS4 = 0U;
+594     \}
+595     ESM\_ESTATUS1 = \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR1[group];
+596 
+597 \textcolor{comment}{/* USER CODE BEGIN (27) */}
+598 \textcolor{comment}{/* USER CODE END */}
+599     status = (((uint64)(ESM\_ESTATUS4) << 32U) | (uint64)ESM\_ESTATUS1) & channels;
+600 
+601 \textcolor{comment}{/* USER CODE BEGIN (28) */}
+602 \textcolor{comment}{/* USER CODE END */}
+603 
+604     \textcolor{keywordflow}{return} status;
+605 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_gace436f235f62ed75dd3c1b1374072b40}\label{group__ESM_gace436f235f62ed75dd3c1b1374072b40}} 
+\index{E\+SM@{E\+SM}!esm\+Get\+Status\+Buffer@{esm\+Get\+Status\+Buffer}}
+\index{esm\+Get\+Status\+Buffer@{esm\+Get\+Status\+Buffer}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Get\+Status\+Buffer()}{esmGetStatusBuffer()}}
+{\footnotesize\ttfamily uint64 esm\+Get\+Status\+Buffer (\begin{DoxyParamCaption}\item[{uint64}]{channels }\end{DoxyParamCaption})}
+
+
+
+Return Group 2 channel x Error status buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & -\/ Error Channels\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The channels status
+\end{DoxyReturn}
+Returns the group 2 buffered status of selected channels. 
+
+Definition at line 620 of file esm.\+c.
+
+
+\begin{DoxyCode}
+621 \{
+622     uint64 status;
+623 
+624 \textcolor{comment}{/* USER CODE BEGIN (29) */}
+625 \textcolor{comment}{/* USER CODE END */}
+626     status = ((uint64)\mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SSR2) & channels;
+627 
+628 \textcolor{comment}{/* USER CODE BEGIN (30) */}
+629 \textcolor{comment}{/* USER CODE END */}
+630 
+631     \textcolor{keywordflow}{return} status;
+632 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga47f1650e27c094120e414ad3332ea311}\label{group__ESM_ga47f1650e27c094120e414ad3332ea311}} 
+\index{E\+SM@{E\+SM}!esm\+Group1\+Notification@{esm\+Group1\+Notification}}
+\index{esm\+Group1\+Notification@{esm\+Group1\+Notification}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Group1\+Notification()}{esmGroup1Notification()}}
+{\footnotesize\ttfamily void esm\+Group1\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{channel }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & -\/ Group 1 channel\\
+\hline
+\end{DoxyParams}
+This is a callback that is provided by the application and is called upon an interrupt. The parameter passed to the callback is group 1 channel caused the interrupt. \begin{DoxyNote}{Note}
+Callback parameter channel is not a masked value. Do not use the macros esm\+C\+H\+A\+N\+N\+E\+Lx for comparison. 
+\end{DoxyNote}
+
+
+Definition at line 63 of file notification.\+c.
+
+
+\begin{DoxyCode}
+64 \{
+65 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+66 \textcolor{comment}{/* USER CODE BEGIN (1) */}
+67 \textcolor{comment}{/* USER CODE END */}
+68 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga7d5d25716f0d945f9d5ae0e6ae387d67}\label{group__ESM_ga7d5d25716f0d945f9d5ae0e6ae387d67}} 
+\index{E\+SM@{E\+SM}!esm\+Group2\+Notification@{esm\+Group2\+Notification}}
+\index{esm\+Group2\+Notification@{esm\+Group2\+Notification}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Group2\+Notification()}{esmGroup2Notification()}}
+{\footnotesize\ttfamily void esm\+Group2\+Notification (\begin{DoxyParamCaption}\item[{uint32}]{channel }\end{DoxyParamCaption})}
+
+
+
+Interrupt callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channel} & -\/ Group 2 channel\\
+\hline
+\end{DoxyParams}
+This is a callback that is provided by the application and is called upon an interrupt. The parameter passed to the callback is group 2 channel caused the interrupt. \begin{DoxyNote}{Note}
+Callback parameter channel is not a masked value. Do not use the macros esm\+C\+H\+A\+N\+N\+E\+Lx for comparison. 
+\end{DoxyNote}
+
+
+Definition at line 73 of file notification.\+c.
+
+
+\begin{DoxyCode}
+74 \{
+75 \textcolor{comment}{/*  enter user code between the USER CODE BEGIN and USER CODE END. */}
+76 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+77 \textcolor{comment}{/* USER CODE END */}
+78 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga3ebbcbb33cba761eba56edcf1aeb9961}\label{group__ESM_ga3ebbcbb33cba761eba56edcf1aeb9961}} 
+\index{E\+SM@{E\+SM}!esm\+Init@{esm\+Init}}
+\index{esm\+Init@{esm\+Init}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Init()}{esmInit()}}
+{\footnotesize\ttfamily void esm\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes Esm Driver. 
+
+This function initializes the Esm driver. 
+\begin{DoxyItemize}
+\item Disable error pin channels ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Disable interrupts ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Clear error status flags ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Setup L\+PC preload ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Reset error pin ~\newline
+~\newline
+~\newline
+~\newline
+
+\item Clear interrupt level ~\newline
+~\newline
+~\newline
+
+\item Set interrupt level ~\newline
+~\newline
+
+\item Enable error pin channels ~\newline
+
+\item Enable interrupts 
+\end{DoxyItemize}
+
+Definition at line 71 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+72 \{
+73 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+74 \textcolor{comment}{/* USER CODE END */}
+75 
+77     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->DEPAPR1 = 0xFFFFFFFFU;
+78     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IEPCR4 = 0xFFFFFFFFU;
+79 
+81     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IECR1 = 0xFFFFFFFFU;
+82     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IECR4 = 0xFFFFFFFFU;
+83 
+85     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR1[0U] = 0xFFFFFFFFU;
+86     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR1[1U] = 0xFFFFFFFFU;
+87     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SSR2  = 0xFFFFFFFFU;
+88     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR1[2U] = 0xFFFFFFFFU;
+89     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->SR4[0U] = 0xFFFFFFFFU;
+90 
+92     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->LTCPR = 16384U - 1U;
+93 
+95     \textcolor{keywordflow}{if} (\mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EPSR == 0U)
+96     \{
+97         \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR = 0x00000005U;
+98     \}
+99     \textcolor{keywordflow}{else}
+100     \{
+101         \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR = 0x00000000U;
+102     \}
+103 
+105     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILCR1 = 0xFFFFFFFFU;
+106     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILCR4 = 0xFFFFFFFFU;
+107 
+109     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILSR1 = (uint32)((uint32)0U << 31U)
+110                   | (uint32)((uint32)0U << 30U)
+111                   | (uint32)((uint32)0U << 29U)
+112                   | (uint32)((uint32)0U << 28U)
+113                   | (uint32)((uint32)0U << 27U)
+114                   | (uint32)((uint32)0U << 26U)
+115                   | (uint32)((uint32)0U << 25U)
+116                   | (uint32)((uint32)0U << 24U)
+117                   | (uint32)((uint32)0U << 23U)
+118                   | (uint32)((uint32)0U << 22U)
+119                   | (uint32)((uint32)0U << 21U)
+120                   | (uint32)((uint32)0U << 20U)
+121                   | (uint32)((uint32)0U << 19U)
+122                   | (uint32)((uint32)0U << 18U)
+123                   | (uint32)((uint32)0U << 17U)
+124                   | (uint32)((uint32)0U << 16U)
+125                   | (uint32)((uint32)0U << 15U)
+126                   | (uint32)((uint32)0U << 14U)
+127                   | (uint32)((uint32)0U << 13U)
+128                   | (uint32)((uint32)0U << 12U)
+129                   | (uint32)((uint32)0U << 11U)
+130                   | (uint32)((uint32)0U << 10U)
+131                   | (uint32)((uint32)0U <<  9U)
+132                   | (uint32)((uint32)0U <<  8U)
+133                   | (uint32)((uint32)0U <<  7U)
+134                   | (uint32)((uint32)0U <<  6U)
+135                   | (uint32)((uint32)0U <<  5U)
+136                   | (uint32)((uint32)0U <<  4U)
+137                   | (uint32)((uint32)0U <<  3U)
+138                   | (uint32)((uint32)0U <<  2U)
+139                   | (uint32)((uint32)0U <<  1U)
+140                   | (uint32)((uint32)0U <<  0U);
+141 
+142     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILSR4 = (uint32)((uint32)0U << 31U)
+143                   | (uint32)((uint32)0U << 30U)
+144                   | (uint32)((uint32)0U << 29U)
+145                   | (uint32)((uint32)0U << 28U)
+146                   | (uint32)((uint32)0U << 27U)
+147                   | (uint32)((uint32)0U << 26U)
+148                   | (uint32)((uint32)0U << 25U)
+149                   | (uint32)((uint32)0U << 24U)
+150                   | (uint32)((uint32)0U << 23U)
+151                   | (uint32)((uint32)0U << 22U)
+152                   | (uint32)((uint32)0U << 21U)
+153                   | (uint32)((uint32)0U << 20U)
+154                   | (uint32)((uint32)0U << 19U)
+155                   | (uint32)((uint32)0U << 18U)
+156                   | (uint32)((uint32)0U << 17U)
+157                   | (uint32)((uint32)0U << 16U)
+158                   | (uint32)((uint32)0U << 15U)
+159                   | (uint32)((uint32)0U << 14U)
+160                   | (uint32)((uint32)0U << 13U)
+161                   | (uint32)((uint32)0U << 12U)
+162                   | (uint32)((uint32)0U << 11U)
+163                   | (uint32)((uint32)0U << 10U)
+164                   | (uint32)((uint32)0U <<  9U)
+165                   | (uint32)((uint32)0U <<  8U)
+166                   | (uint32)((uint32)0U <<  7U)
+167                   | (uint32)((uint32)0U <<  6U)
+168                   | (uint32)((uint32)0U <<  5U)
+169                   | (uint32)((uint32)0U <<  4U)
+170                   | (uint32)((uint32)0U <<  3U)
+171                   | (uint32)((uint32)0U <<  2U)
+172                   | (uint32)((uint32)0U <<  1U)
+173                   | (uint32)((uint32)0U <<  0U);
+174 
+176     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EEPAPR1 = (uint32)((uint32)0U << 31U)
+177                     | (uint32)((uint32)0U << 30U)
+178                     | (uint32)((uint32)0U << 29U)
+179                     | (uint32)((uint32)0U << 28U)
+180                     | (uint32)((uint32)0U << 27U)
+181                     | (uint32)((uint32)0U << 26U)
+182                     | (uint32)((uint32)0U << 25U)
+183                     | (uint32)((uint32)0U << 24U)
+184                     | (uint32)((uint32)0U << 23U)
+185                     | (uint32)((uint32)0U << 22U)
+186                     | (uint32)((uint32)0U << 21U)
+187                     | (uint32)((uint32)0U << 20U)
+188                     | (uint32)((uint32)0U << 19U)
+189                     | (uint32)((uint32)0U << 18U)
+190                     | (uint32)((uint32)0U << 17U)
+191                     | (uint32)((uint32)0U << 16U)
+192                     | (uint32)((uint32)0U << 15U)
+193                     | (uint32)((uint32)0U << 14U)
+194                     | (uint32)((uint32)0U << 13U)
+195                     | (uint32)((uint32)0U << 12U)
+196                     | (uint32)((uint32)0U << 11U)
+197                     | (uint32)((uint32)0U << 10U)
+198                     | (uint32)((uint32)0U <<  9U)
+199                     | (uint32)((uint32)0U <<  8U)
+200                     | (uint32)((uint32)0U <<  7U)
+201                     | (uint32)((uint32)0U <<  6U)
+202                     | (uint32)((uint32)0U <<  5U)
+203                     | (uint32)((uint32)0U <<  4U)
+204                     | (uint32)((uint32)0U <<  3U)
+205                     | (uint32)((uint32)0U <<  2U)
+206                     | (uint32)((uint32)0U <<  1U)
+207                     | (uint32)((uint32)0U <<  0U);
+208 
+209     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IEPSR4 = (uint32)((uint32)0U << 31U)
+210                    | (uint32)((uint32)0U << 30U)
+211                    | (uint32)((uint32)0U << 29U)
+212                    | (uint32)((uint32)0U << 28U)
+213                    | (uint32)((uint32)0U << 27U)
+214                    | (uint32)((uint32)0U << 26U)
+215                    | (uint32)((uint32)0U << 25U)
+216                    | (uint32)((uint32)0U << 24U)
+217                    | (uint32)((uint32)0U << 23U)
+218                    | (uint32)((uint32)0U << 22U)
+219                    | (uint32)((uint32)0U << 21U)
+220                    | (uint32)((uint32)0U << 20U)
+221                    | (uint32)((uint32)0U << 19U)
+222                    | (uint32)((uint32)0U << 18U)
+223                    | (uint32)((uint32)0U << 17U)
+224                    | (uint32)((uint32)0U << 16U)
+225                    | (uint32)((uint32)0U << 15U)
+226                    | (uint32)((uint32)0U << 14U)
+227                    | (uint32)((uint32)0U << 13U)
+228                    | (uint32)((uint32)0U << 12U)
+229                    | (uint32)((uint32)0U << 11U)
+230                    | (uint32)((uint32)0U << 10U)
+231                    | (uint32)((uint32)0U <<  9U)
+232                    | (uint32)((uint32)0U <<  8U)
+233                    | (uint32)((uint32)0U <<  7U)
+234                    | (uint32)((uint32)0U <<  6U)
+235                    | (uint32)((uint32)0U <<  5U)
+236                    | (uint32)((uint32)0U <<  4U)
+237                    | (uint32)((uint32)0U <<  3U)
+238                    | (uint32)((uint32)0U <<  2U)
+239                    | (uint32)((uint32)0U <<  1U)
+240                    | (uint32)((uint32)0U <<  0U);
+241 
+243     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IESR1 = (uint32)((uint32)0U << 31U)
+244                   | (uint32)((uint32)0U << 30U)
+245                   | (uint32)((uint32)0U << 29U)
+246                   | (uint32)((uint32)0U << 28U)
+247                   | (uint32)((uint32)0U << 27U)
+248                   | (uint32)((uint32)0U << 26U)
+249                   | (uint32)((uint32)0U << 25U)
+250                   | (uint32)((uint32)0U << 24U)
+251                   | (uint32)((uint32)0U << 23U)
+252                   | (uint32)((uint32)0U << 22U)
+253                   | (uint32)((uint32)0U << 21U)
+254                   | (uint32)((uint32)0U << 20U)
+255                   | (uint32)((uint32)0U << 19U)
+256                   | (uint32)((uint32)0U << 18U)
+257                   | (uint32)((uint32)0U << 17U)
+258                   | (uint32)((uint32)0U << 16U)
+259                   | (uint32)((uint32)0U << 15U)
+260                   | (uint32)((uint32)0U << 14U)
+261                   | (uint32)((uint32)0U << 13U)
+262                   | (uint32)((uint32)0U << 12U)
+263                   | (uint32)((uint32)0U << 11U)
+264                   | (uint32)((uint32)0U << 10U)
+265                   | (uint32)((uint32)0U <<  9U)
+266                   | (uint32)((uint32)0U <<  8U)
+267                   | (uint32)((uint32)0U <<  7U)
+268                   | (uint32)((uint32)0U <<  6U)
+269                   | (uint32)((uint32)0U <<  5U)
+270                   | (uint32)((uint32)0U <<  4U)
+271                   | (uint32)((uint32)0U <<  3U)
+272                   | (uint32)((uint32)0U <<  2U)
+273                   | (uint32)((uint32)0U <<  1U)
+274                   | (uint32)((uint32)0U <<  0U);
+275 
+276     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->IESR4 = (uint32)((uint32)0U << 31U)
+277                   | (uint32)((uint32)0U << 30U)
+278                   | (uint32)((uint32)0U << 29U)
+279                   | (uint32)((uint32)0U << 28U)
+280                   | (uint32)((uint32)0U << 27U)
+281                   | (uint32)((uint32)0U << 26U)
+282                   | (uint32)((uint32)0U << 25U)
+283                   | (uint32)((uint32)0U << 24U)
+284                   | (uint32)((uint32)0U << 23U)
+285                   | (uint32)((uint32)0U << 22U)
+286                   | (uint32)((uint32)0U << 21U)
+287                   | (uint32)((uint32)0U << 20U)
+288                   | (uint32)((uint32)0U << 19U)
+289                   | (uint32)((uint32)0U << 18U)
+290                   | (uint32)((uint32)0U << 17U)
+291                   | (uint32)((uint32)0U << 16U)
+292                   | (uint32)((uint32)0U << 15U)
+293                   | (uint32)((uint32)0U << 14U)
+294                   | (uint32)((uint32)0U << 13U)
+295                   | (uint32)((uint32)0U << 12U)
+296                   | (uint32)((uint32)0U << 11U)
+297                   | (uint32)((uint32)0U << 10U)
+298                   | (uint32)((uint32)0U <<  9U)
+299                   | (uint32)((uint32)0U <<  8U)
+300                   | (uint32)((uint32)0U <<  7U)
+301                   | (uint32)((uint32)0U <<  6U)
+302                   | (uint32)((uint32)0U <<  5U)
+303                   | (uint32)((uint32)0U <<  4U)
+304                   | (uint32)((uint32)0U <<  3U)
+305                   | (uint32)((uint32)0U <<  2U)
+306                   | (uint32)((uint32)0U <<  1U)
+307                   | (uint32)((uint32)0U <<  0U);
+308 
+309 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+310 \textcolor{comment}{/* USER CODE END */}
+311 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga6e558e0c5761321c3419e77642795d63}\label{group__ESM_ga6e558e0c5761321c3419e77642795d63}} 
+\index{E\+SM@{E\+SM}!esm\+Self\+Test\+Status@{esm\+Self\+Test\+Status}}
+\index{esm\+Self\+Test\+Status@{esm\+Self\+Test\+Status}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Self\+Test\+Status()}{esmSelfTestStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esm\+Self\+Test\+Flag\+\_\+t}} esm\+Self\+Test\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return E\+SM Self test status. 
+
+Returns the E\+SM Self test status. 
+
+Definition at line 682 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+683 \{
+684     \mbox{\hyperlink{esm_8h_a622c861bffa9a22dacbc62fe8a2ff11f}{esmSelfTestFlag\_t}} status;
+685 
+686 \textcolor{comment}{/* USER CODE BEGIN (33) */}
+687 \textcolor{comment}{/* USER CODE END */}
+688 
+689     \textcolor{keywordflow}{if}((\mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EPSR & 0x1U) == 0x0U) 
+690     \{
+691       \textcolor{keywordflow}{if}(\mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR == 0x5U)
+692       \{ 
+693         status = esmSelfTest\_Active;
+694       \}
+695       \textcolor{keywordflow}{else}
+696       \{
+697         status = esmSelfTest\_Failed;
+698       \}
+699     \}
+700     \textcolor{keywordflow}{else}
+701     \{
+702         status = esmSelfTest\_Passed;
+703     \}
+704 
+705 \textcolor{comment}{/* USER CODE BEGIN (34) */}
+706 \textcolor{comment}{/* USER CODE END */}
+707 
+708     \textcolor{keywordflow}{return} status;
+709 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_gac0c9d63eb56fc294c3845f53685ecf36}\label{group__ESM_gac0c9d63eb56fc294c3845f53685ecf36}} 
+\index{E\+SM@{E\+SM}!esm\+Set\+Counter\+Preload\+Value@{esm\+Set\+Counter\+Preload\+Value}}
+\index{esm\+Set\+Counter\+Preload\+Value@{esm\+Set\+Counter\+Preload\+Value}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Set\+Counter\+Preload\+Value()}{esmSetCounterPreloadValue()}}
+{\footnotesize\ttfamily void esm\+Set\+Counter\+Preload\+Value (\begin{DoxyParamCaption}\item[{uint32}]{value }\end{DoxyParamCaption})}
+
+
+
+Set counter preload value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & -\/ Counter preload value\\
+\hline
+\end{DoxyParams}
+Set counter preload value. 
+
+Definition at line 558 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+559 \{
+560 \textcolor{comment}{/* USER CODE BEGIN (25) */}
+561 \textcolor{comment}{/* USER CODE END */}
+562 
+563     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->LTCPR = value & 0xC000U;
+564 
+565 \textcolor{comment}{/* USER CODE BEGIN (26) */}
+566 \textcolor{comment}{/* USER CODE END */}
+567 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_ga5c933318570a1b946185cd09af973184}\label{group__ESM_ga5c933318570a1b946185cd09af973184}} 
+\index{E\+SM@{E\+SM}!esm\+Set\+Interrupt\+Level@{esm\+Set\+Interrupt\+Level}}
+\index{esm\+Set\+Interrupt\+Level@{esm\+Set\+Interrupt\+Level}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Set\+Interrupt\+Level()}{esmSetInterruptLevel()}}
+{\footnotesize\ttfamily void esm\+Set\+Interrupt\+Level (\begin{DoxyParamCaption}\item[{uint64}]{channels,  }\item[{uint64}]{flags }\end{DoxyParamCaption})}
+
+
+
+Set Group 1 Channels Interrupt Levels. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & -\/ Channel mask \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Level mask\+: -\/ 0\+: Low priority interrupt
+\begin{DoxyItemize}
+\item 1\+: High priority interrupt
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Set Group 1 Channels Interrupts levels. 
+
+Definition at line 484 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+485 \{
+486 \textcolor{comment}{/* USER CODE BEGIN (19) */}
+487 \textcolor{comment}{/* USER CODE END */}
+488 
+489     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILCR4 = (uint32)(((channels & (~flags)) >> 32U) & 0xFFFFFFFFU);
+490     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILSR4 = (uint32)(((channels & flags) >> 32U) & 0xFFFFFFFFU);
+491     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILCR1 = (uint32)((channels & (~flags)) & 0xFFFFFFFFU);
+492     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->ILSR1 = (uint32)((channels & flags) & 0xFFFFFFFFU);
+493 
+494 \textcolor{comment}{/* USER CODE BEGIN (20) */}
+495 \textcolor{comment}{/* USER CODE END */}
+496 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__ESM_gaa830bed2b9fc364b96269ff0baa8c395}\label{group__ESM_gaa830bed2b9fc364b96269ff0baa8c395}} 
+\index{E\+SM@{E\+SM}!esm\+Trigger\+Error\+Pin\+Reset@{esm\+Trigger\+Error\+Pin\+Reset}}
+\index{esm\+Trigger\+Error\+Pin\+Reset@{esm\+Trigger\+Error\+Pin\+Reset}!E\+SM@{E\+SM}}
+\subsubsection{\texorpdfstring{esm\+Trigger\+Error\+Pin\+Reset()}{esmTriggerErrorPinReset()}}
+{\footnotesize\ttfamily void esm\+Trigger\+Error\+Pin\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Trigger error pin reset and switch back to normal operation. 
+
+Trigger error pin reset and switch back to normal operation. 
+
+Definition at line 394 of file esm.\+c.
+
+
+
+References esm\+R\+EG.
+
+
+\begin{DoxyCode}
+395 \{
+396 \textcolor{comment}{/* USER CODE BEGIN (11) */}
+397 \textcolor{comment}{/* USER CODE END */}
+398 
+399     \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esmREG}}->EKR = 5U;
+400 
+401 \textcolor{comment}{/* USER CODE BEGIN (12) */}
+402 \textcolor{comment}{/* USER CODE END */}
+403 \}
+\end{DoxyCode}

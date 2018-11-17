@@ -1,0 +1,417 @@
+\hypertarget{sys__pmu_8h}{}\section{include/sys\+\_\+pmu.h File Reference}
+\label{sys__pmu_8h}\index{include/sys\+\_\+pmu.\+h@{include/sys\+\_\+pmu.\+h}}
+
+
+System Pmu Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a3b312c6bf558a4205710c5e44c3cc0b4}{pmu\+C\+O\+U\+N\+T\+E\+R0}}~0x00000001U
+\begin{DoxyCompactList}\small\item\em pmu event counter 0 mask \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a88033e0068fb11f854560d06d6c51714}{pmu\+C\+O\+U\+N\+T\+E\+R1}}~0x00000002U
+\begin{DoxyCompactList}\small\item\em pmu event counter 1 mask \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a6004659aa96b626f1126404017564abe}{pmu\+C\+O\+U\+N\+T\+E\+R2}}~0x00000004U
+\begin{DoxyCompactList}\small\item\em pmu event counter 2 mask \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{sys__pmu_8h_a6ee477e201310d4686e202a584c00f9e}{pmu\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+N\+T\+ER}}~0x80000000U
+\begin{DoxyCompactList}\small\item\em pmu cycle counter mask \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sys__pmu_8h_a03b6725533687e62c10550dea45089be}{pmu\+Event}} \{ \newline
+{\bfseries P\+M\+U\+\_\+\+I\+N\+S\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+I\+SS} = 0x01U, 
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+M\+I\+SS} = 0x03U, 
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+A\+C\+C\+E\+SS} = 0x04U, 
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+R\+E\+A\+D\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x06U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x07U, 
+{\bfseries P\+M\+U\+\_\+\+I\+N\+S\+T\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x08U, 
+{\bfseries P\+M\+U\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+T\+A\+K\+EN} = 0x09U, 
+{\bfseries P\+M\+U\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x0\+AU, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+I\+D\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x0\+BU, 
+{\bfseries P\+M\+U\+\_\+\+S\+W\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+O\+F\+\_\+\+P\+C\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x0\+CU, 
+{\bfseries P\+M\+U\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+I\+M\+M\+\_\+\+I\+N\+S\+T\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x0\+DU, 
+{\bfseries P\+M\+U\+\_\+\+P\+R\+O\+C\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x0\+EU, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+U\+N\+A\+L\+I\+G\+N\+E\+D\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x0\+FU, 
+{\bfseries P\+M\+U\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+M\+I\+S\+S\+P\+R\+E\+D\+I\+C\+T\+ED} = 0x10U, 
+{\bfseries P\+M\+U\+\_\+\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT} = 0x11U, 
+{\bfseries P\+M\+U\+\_\+\+P\+R\+E\+D\+I\+C\+T\+A\+B\+L\+E\+\_\+\+B\+R\+A\+N\+C\+H\+ES} = 0x12U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+I\+N\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+LL} = 0x40U, 
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+C\+Y\+\_\+\+I\+N\+S\+T\+\_\+\+S\+T\+A\+LL} = 0x41U, 
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+A\+CK} = 0x42U, 
+{\bfseries P\+M\+U\+\_\+\+E\+X\+T\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+R\+E\+Q\+U\+E\+ST} = 0x43U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+L\+S\+U\+\_\+\+B\+U\+S\+Y\+\_\+\+S\+T\+A\+LL} = 0x44U, 
+{\bfseries P\+M\+U\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+D\+R\+A\+I\+N\+\_\+\+O\+F\+S\+T\+O\+R\+E\+\_\+\+B\+U\+F\+F\+ER} = 0x45U, 
+{\bfseries P\+M\+U\+\_\+\+F\+I\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT} = 0x46U, 
+{\bfseries P\+M\+U\+\_\+\+I\+R\+Q\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+NT} = 0x47U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+E\+T\+M\+E\+X\+T\+O\+U\+T\+\_\+0} = 0x48U, 
+{\bfseries P\+M\+U\+\_\+\+E\+T\+M\+E\+X\+T\+O\+U\+T\+\_\+1} = 0x49U, 
+{\bfseries P\+M\+U\+\_\+\+I\+N\+S\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+T\+A\+G\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x4\+AU, 
+{\bfseries P\+M\+U\+\_\+\+I\+N\+S\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+A\+T\+A\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x4\+BU, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+T\+A\+G\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x4\+CU, 
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+A\+T\+A\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x4\+DU, 
+{\bfseries P\+M\+U\+\_\+\+T\+C\+M\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+R\+E\+F\+E\+T\+CH} = 0x4\+EU, 
+{\bfseries P\+M\+U\+\_\+\+T\+C\+M\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+S\+T\+O\+RE} = 0x4\+FU, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+S\+T\+O\+R\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+M\+E\+R\+GE} = 0x50U, 
+{\bfseries P\+M\+U\+\_\+\+L\+S\+U\+\_\+\+S\+T\+A\+L\+L\+\_\+\+S\+T\+O\+R\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+F\+U\+LL} = 0x51U, 
+{\bfseries P\+M\+U\+\_\+\+L\+S\+U\+\_\+\+S\+T\+A\+L\+L\+\_\+\+S\+T\+O\+R\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+F\+U\+LL} = 0x52U, 
+{\bfseries P\+M\+U\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+D\+I\+V\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x53U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+S\+T\+A\+L\+L\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+D\+IV} = 0x54U, 
+{\bfseries P\+M\+U\+\_\+\+P\+L\+D\+\_\+\+I\+N\+S\+T\+\_\+\+L\+I\+N\+E\+\_\+\+F\+I\+LL} = 0x55U, 
+{\bfseries P\+M\+U\+\_\+\+P\+L\+D\+\_\+\+I\+N\+S\+T\+\_\+\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+F\+I\+LL} = 0x56U, 
+{\bfseries P\+M\+U\+\_\+\+N\+O\+N\+\_\+\+C\+A\+C\+H\+E\+A\+B\+L\+E\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+A\+X\+I\+\_\+\+M\+A\+S\+T\+ER} = 0x57U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+I\+N\+S\+T\+\_\+\+C\+A\+C\+H\+E\+\_\+\+A\+C\+C\+E\+SS} = 0x58U, 
+{\bfseries P\+M\+U\+\_\+\+D\+O\+U\+B\+L\+E\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+I\+S\+S\+UE} = 0x59U, 
+{\bfseries P\+M\+U\+\_\+\+D\+U\+A\+L\+\_\+\+I\+S\+S\+U\+E\+\_\+\+C\+A\+S\+E\+\_\+A} = 0x5\+AU, 
+{\bfseries P\+M\+U\+\_\+\+D\+U\+A\+L\+\_\+\+I\+S\+S\+U\+E\+\_\+\+C\+A\+S\+E\+\_\+\+B1\+\_\+\+B2\+\_\+\+F2\+\_\+\+F2D} = 0x5\+BU, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+D\+U\+A\+L\+\_\+\+I\+S\+S\+U\+E\+\_\+\+O\+T\+H\+ER} = 0x5\+CU, 
+{\bfseries P\+M\+U\+\_\+\+D\+P\+\_\+\+F\+L\+O\+A\+T\+\_\+\+I\+N\+S\+T\+\_\+\+E\+X\+C\+E\+C\+U\+T\+ED} = 0x5\+DU, 
+{\bfseries P\+M\+U\+\_\+\+D\+U\+A\+L\+\_\+\+I\+S\+S\+U\+E\+D\+\_\+\+P\+A\+I\+R\+\_\+\+I\+N\+S\+T\+\_\+\+A\+R\+C\+H\+\_\+\+E\+X\+E\+C\+U\+T\+ED} = 0x5\+EU, 
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+A\+T\+A\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x60U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+C\+H\+E\+\_\+\+T\+A\+G\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x61U, 
+{\bfseries P\+M\+U\+\_\+\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+L\+I\+V\+E\+\_\+\+L\+O\+CK} = 0x62U, 
+{\bfseries P\+M\+U\+\_\+\+A\+T\+C\+M\+\_\+\+M\+U\+L\+T\+I\+\_\+\+B\+I\+T\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x64U, 
+{\bfseries P\+M\+U\+\_\+\+B0\+T\+C\+M\+\_\+\+M\+U\+L\+T\+I\+\_\+\+B\+I\+T\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x65U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+B1\+T\+C\+M\+\_\+\+M\+U\+L\+T\+I\+\_\+\+B\+I\+T\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x66U, 
+{\bfseries P\+M\+U\+\_\+\+A\+T\+C\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+I\+T\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x67U, 
+{\bfseries P\+M\+U\+\_\+\+B0\+T\+C\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+I\+T\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x68U, 
+{\bfseries P\+M\+U\+\_\+\+B1\+T\+C\+M\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+B\+I\+T\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+OR} = 0x69U, 
+\newline
+{\bfseries P\+M\+U\+\_\+\+T\+C\+M\+\_\+\+C\+O\+R\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+O\+A\+D\+\_\+\+S\+T\+O\+RE} = 0x6\+AU, 
+{\bfseries P\+M\+U\+\_\+\+T\+C\+M\+\_\+\+C\+O\+R\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+R\+E\+F\+E\+T\+CH} = 0x6\+BU, 
+{\bfseries P\+M\+U\+\_\+\+T\+C\+M\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+X\+I\+\_\+\+S\+L\+A\+VE} = 0x6\+CU, 
+{\bfseries P\+M\+U\+\_\+\+T\+C\+M\+\_\+\+C\+O\+R\+\_\+\+E\+C\+C\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+X\+I\+\_\+\+S\+L\+A\+VE} = 0x6\+DU
+ \}
+\begin{DoxyCompactList}\small\item\em pmu event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__pmu_8h_a90fc368eb9dc59ce3950e63908177e05}\label{sys__pmu_8h_a90fc368eb9dc59ce3950e63908177e05}} 
+void \mbox{\hyperlink{sys__pmu_8h_a90fc368eb9dc59ce3950e63908177e05}{\+\_\+pmu\+Init\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Performance Monitor Unit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a6bcb569866117b8d50c05b8d992cb3e0}\label{sys__pmu_8h_a6bcb569866117b8d50c05b8d992cb3e0}} 
+void \mbox{\hyperlink{sys__pmu_8h_a6bcb569866117b8d50c05b8d992cb3e0}{\+\_\+pmu\+Enable\+Counters\+Global\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Enable and reset cycle counter and all 3 event counters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a1bdff81dac3f3361f65b97a4197793a2}\label{sys__pmu_8h_a1bdff81dac3f3361f65b97a4197793a2}} 
+void \mbox{\hyperlink{sys__pmu_8h_a1bdff81dac3f3361f65b97a4197793a2}{\+\_\+pmu\+Disable\+Counters\+Global\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Disable cycle counter and all 3 event counters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a868e2a6eb16abc1de2c39e8ccb8e9a04}\label{sys__pmu_8h_a868e2a6eb16abc1de2c39e8ccb8e9a04}} 
+void \mbox{\hyperlink{sys__pmu_8h_a868e2a6eb16abc1de2c39e8ccb8e9a04}{\+\_\+pmu\+Reset\+Cycle\+Counter\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Reset cycle counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_abcd7f459dc3ba0d4747df97b76084bb7}\label{sys__pmu_8h_abcd7f459dc3ba0d4747df97b76084bb7}} 
+void \mbox{\hyperlink{sys__pmu_8h_abcd7f459dc3ba0d4747df97b76084bb7}{\+\_\+pmu\+Reset\+Event\+Counters\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Reset event counters 0-\/2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sys__pmu_8h_a21f3fc4ef80d58b22d0545a5c08f230e}\label{sys__pmu_8h_a21f3fc4ef80d58b22d0545a5c08f230e}} 
+void \mbox{\hyperlink{sys__pmu_8h_a21f3fc4ef80d58b22d0545a5c08f230e}{\+\_\+pmu\+Reset\+Counters\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Reset cycle counter and event counters 0-\/2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__pmu_8h_a05119721bf5533e9271717127c18c22c}{\+\_\+pmu\+Start\+Counters\+\_\+}} (uint32 counters)
+\begin{DoxyCompactList}\small\item\em Starts selected counters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__pmu_8h_abab4f00952caa5d6596db0e6de0f445c}{\+\_\+pmu\+Stop\+Counters\+\_\+}} (uint32 counters)
+\begin{DoxyCompactList}\small\item\em Stops selected counters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sys__pmu_8h_a4937c9f733852b81cddafbb29e679cff}{\+\_\+pmu\+Set\+Count\+Event\+\_\+}} (uint32 counter, uint32 event)
+\begin{DoxyCompactList}\small\item\em Set event counter count event. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__pmu_8h_afd1c5a6e4a8806b15d4e8f72bd33fa16}{\+\_\+pmu\+Get\+Cycle\+Count\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns current cycle counter value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__pmu_8h_a201e93f10a431344ef380507d3106cd1}{\+\_\+pmu\+Get\+Event\+Count\+\_\+}} (uint32 counter)
+\begin{DoxyCompactList}\small\item\em Returns current event counter value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{sys__pmu_8h_a1141fd5ac2cd84e241cfc28e8068928f}{\+\_\+pmu\+Get\+Overflow\+\_\+}} (void)
+\begin{DoxyCompactList}\small\item\em Returns current overflow register and clear flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System Pmu Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Pmu Interface Functions
+\end{DoxyItemize}which are relevant for the performance monitor unit driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sys__pmu_8h_a3b312c6bf558a4205710c5e44c3cc0b4}\label{sys__pmu_8h_a3b312c6bf558a4205710c5e44c3cc0b4}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!pmu\+C\+O\+U\+N\+T\+E\+R0@{pmu\+C\+O\+U\+N\+T\+E\+R0}}
+\index{pmu\+C\+O\+U\+N\+T\+E\+R0@{pmu\+C\+O\+U\+N\+T\+E\+R0}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{pmu\+C\+O\+U\+N\+T\+E\+R0}{pmuCOUNTER0}}
+{\footnotesize\ttfamily \#define pmu\+C\+O\+U\+N\+T\+E\+R0~0x00000001U}
+
+
+
+pmu event counter 0 mask 
+
+Alias for pmu event counter 0 mask
+
+\begin{DoxyNote}{Note}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in A\+P\+Is {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+
+
+Definition at line 66 of file sys\+\_\+pmu.\+h.
+
+\mbox{\Hypertarget{sys__pmu_8h_a88033e0068fb11f854560d06d6c51714}\label{sys__pmu_8h_a88033e0068fb11f854560d06d6c51714}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!pmu\+C\+O\+U\+N\+T\+E\+R1@{pmu\+C\+O\+U\+N\+T\+E\+R1}}
+\index{pmu\+C\+O\+U\+N\+T\+E\+R1@{pmu\+C\+O\+U\+N\+T\+E\+R1}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{pmu\+C\+O\+U\+N\+T\+E\+R1}{pmuCOUNTER1}}
+{\footnotesize\ttfamily \#define pmu\+C\+O\+U\+N\+T\+E\+R1~0x00000002U}
+
+
+
+pmu event counter 1 mask 
+
+Alias for pmu event counter 1 mask
+
+\begin{DoxyNote}{Note}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in A\+P\+Is {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+
+
+Definition at line 75 of file sys\+\_\+pmu.\+h.
+
+\mbox{\Hypertarget{sys__pmu_8h_a6004659aa96b626f1126404017564abe}\label{sys__pmu_8h_a6004659aa96b626f1126404017564abe}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!pmu\+C\+O\+U\+N\+T\+E\+R2@{pmu\+C\+O\+U\+N\+T\+E\+R2}}
+\index{pmu\+C\+O\+U\+N\+T\+E\+R2@{pmu\+C\+O\+U\+N\+T\+E\+R2}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{pmu\+C\+O\+U\+N\+T\+E\+R2}{pmuCOUNTER2}}
+{\footnotesize\ttfamily \#define pmu\+C\+O\+U\+N\+T\+E\+R2~0x00000004U}
+
+
+
+pmu event counter 2 mask 
+
+Alias for pmu event counter 2 mask
+
+\begin{DoxyNote}{Note}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in A\+P\+Is {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+
+
+Definition at line 84 of file sys\+\_\+pmu.\+h.
+
+\mbox{\Hypertarget{sys__pmu_8h_a6ee477e201310d4686e202a584c00f9e}\label{sys__pmu_8h_a6ee477e201310d4686e202a584c00f9e}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!pmu\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+N\+T\+ER@{pmu\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+N\+T\+ER}}
+\index{pmu\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+N\+T\+ER@{pmu\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+N\+T\+ER}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{pmu\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+N\+T\+ER}{pmuCYCLE\_COUNTER}}
+{\footnotesize\ttfamily \#define pmu\+C\+Y\+C\+L\+E\+\_\+\+C\+O\+U\+N\+T\+ER~0x80000000U}
+
+
+
+pmu cycle counter mask 
+
+Alias for pmu event counter mask
+
+\begin{DoxyNote}{Note}
+\+: Use this macro as a parameter \textquotesingle{}counters\textquotesingle{} in A\+P\+Is {\itshape pmu\+Start\+Counters} and {\itshape pmu\+Stop\+Counters} 
+\end{DoxyNote}
+
+
+Definition at line 93 of file sys\+\_\+pmu.\+h.
+
+
+
+Referenced by errata\+\_\+\+P\+B\+I\+S\+T\+\_\+4().
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sys__pmu_8h_a03b6725533687e62c10550dea45089be}\label{sys__pmu_8h_a03b6725533687e62c10550dea45089be}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!pmu\+Event@{pmu\+Event}}
+\index{pmu\+Event@{pmu\+Event}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{pmu\+Event}{pmuEvent}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sys__pmu_8h_a03b6725533687e62c10550dea45089be}{pmu\+Event}}}
+
+
+
+pmu event 
+
+Alias for pmu event counter increment source 
+
+Definition at line 100 of file sys\+\_\+pmu.\+h.
+
+
+\begin{DoxyCode}
+101 \{
+102     PMU\_INST\_CACHE\_MISS                     = 0x01U,
+103     PMU\_DATA\_CACHE\_MISS                     = 0x03U,
+104     PMU\_DATA\_CACHE\_ACCESS                   = 0x04U,
+105     PMU\_DATA\_READ\_ARCH\_EXECUTED             = 0x06U,
+106     PMU\_DATA\_WRITE\_ARCH\_EXECUTED            = 0x07U,
+107     PMU\_INST\_ARCH\_EXECUTED                  = 0x08U,
+108     PMU\_EXCEPTION\_TAKEN                     = 0x09U,
+109     PMU\_EXCEPTION\_RETURN\_ARCH\_EXECUTED      = 0x0AU,
+110     PMU\_CHANGE\_TO\_CONTEXT\_ID\_EXECUTED       = 0x0BU,
+111     PMU\_SW\_CHANGE\_OF\_PC\_ARCH\_EXECUTED       = 0x0CU,
+112     PMU\_BRANCH\_IMM\_INST\_ARCH\_EXECUTED       = 0x0DU,
+113     PMU\_PROC\_RETURN\_ARCH\_EXECUTED           = 0x0EU,
+114     PMU\_UNALIGNED\_ACCESS\_ARCH\_EXECUTED      = 0x0FU,
+115     PMU\_BRANCH\_MISSPREDICTED                = 0x10U,
+116     PMU\_CYCLE\_COUNT                         = 0x11U,
+117     PMU\_PREDICTABLE\_BRANCHES                = 0x12U,
+118     PMU\_INST\_BUFFER\_STALL                   = 0x40U,
+119     PMU\_DATA\_DEPENDENCY\_INST\_STALL          = 0x41U,
+120     PMU\_DATA\_CACHE\_WRITE\_BACK               = 0x42U,
+121     PMU\_EXT\_MEMORY\_REQUEST                  = 0x43U,
+122     PMU\_LSU\_BUSY\_STALL                      = 0x44U,
+123     PMU\_FORCED\_DRAIN\_OFSTORE\_BUFFER         = 0x45U,
+124     PMU\_FIQ\_DISABLED\_CYCLE\_COUNT            = 0x46U,
+125     PMU\_IRQ\_DISABLED\_CYCLE\_COUNT            = 0x47U,
+126     PMU\_ETMEXTOUT\_0                         = 0x48U,
+127     PMU\_ETMEXTOUT\_1                         = 0x49U,
+128     PMU\_INST\_CACHE\_TAG\_ECC\_ERROR            = 0x4AU,
+129     PMU\_INST\_CACHE\_DATA\_ECC\_ERROR           = 0x4BU,
+130     PMU\_DATA\_CACHE\_TAG\_ECC\_ERROR            = 0x4CU,
+131     PMU\_DATA\_CACHE\_DATA\_ECC\_ERROR           = 0x4DU,
+132     PMU\_TCM\_FATAL\_ECC\_ERROR\_PREFETCH        = 0x4EU,
+133     PMU\_TCM\_FATAL\_ECC\_ERROR\_LOAD\_STORE      = 0x4FU,
+134     PMU\_STORE\_BUFFER\_MERGE                  = 0x50U,
+135     PMU\_LSU\_STALL\_STORE\_BUFFER\_FULL         = 0x51U,
+136     PMU\_LSU\_STALL\_STORE\_QUEUE\_FULL          = 0x52U,
+137     PMU\_INTEGER\_DIV\_EXECUTED                = 0x53U,
+138     PMU\_STALL\_INTEGER\_DIV                   = 0x54U,
+139     PMU\_PLD\_INST\_LINE\_FILL                  = 0x55U,
+140     PMU\_PLD\_INST\_NO\_LINE\_FILL               = 0x56U,
+141     PMU\_NON\_CACHEABLE\_ACCESS\_AXI\_MASTER     = 0x57U,
+142     PMU\_INST\_CACHE\_ACCESS                   = 0x58U,
+143     PMU\_DOUBLE\_DATA\_CACHE\_ISSUE             = 0x59U,
+144     PMU\_DUAL\_ISSUE\_CASE\_A                   = 0x5AU,
+145     PMU\_DUAL\_ISSUE\_CASE\_B1\_B2\_F2\_F2D        = 0x5BU,
+146     PMU\_DUAL\_ISSUE\_OTHER                    = 0x5CU,
+147     PMU\_DP\_FLOAT\_INST\_EXCECUTED             = 0x5DU,
+148     PMU\_DUAL\_ISSUED\_PAIR\_INST\_ARCH\_EXECUTED = 0x5EU,
+149     PMU\_DATA\_CACHE\_DATA\_FATAL\_ECC\_ERROR     = 0x60U,
+150     PMU\_DATA\_CACHE\_TAG\_FATAL\_ECC\_ERROR      = 0x61U,
+151     PMU\_PROCESSOR\_LIVE\_LOCK                 = 0x62U,
+152     PMU\_ATCM\_MULTI\_BIT\_ECC\_ERROR            = 0x64U,
+153     PMU\_B0TCM\_MULTI\_BIT\_ECC\_ERROR           = 0x65U,
+154     PMU\_B1TCM\_MULTI\_BIT\_ECC\_ERROR           = 0x66U,
+155     PMU\_ATCM\_SINGLE\_BIT\_ECC\_ERROR           = 0x67U,
+156     PMU\_B0TCM\_SINGLE\_BIT\_ECC\_ERROR          = 0x68U,
+157     PMU\_B1TCM\_SINGLE\_BIT\_ECC\_ERROR          = 0x69U,
+158     PMU\_TCM\_COR\_ECC\_ERROR\_LOAD\_STORE        = 0x6AU,
+159     PMU\_TCM\_COR\_ECC\_ERROR\_PREFETCH          = 0x6BU,
+160     PMU\_TCM\_FATAL\_ECC\_ERROR\_AXI\_SLAVE       = 0x6CU,
+161     PMU\_TCM\_COR\_ECC\_ERROR\_AXI\_SLAVE         = 0x6DU
+162 \};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sys__pmu_8h_afd1c5a6e4a8806b15d4e8f72bd33fa16}\label{sys__pmu_8h_afd1c5a6e4a8806b15d4e8f72bd33fa16}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!\+\_\+pmu\+Get\+Cycle\+Count\+\_\+@{\+\_\+pmu\+Get\+Cycle\+Count\+\_\+}}
+\index{\+\_\+pmu\+Get\+Cycle\+Count\+\_\+@{\+\_\+pmu\+Get\+Cycle\+Count\+\_\+}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+pmu\+Get\+Cycle\+Count\+\_\+()}{\_pmuGetCycleCount\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+pmu\+Get\+Cycle\+Count\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns current cycle counter value. 
+
+\begin{DoxyReturn}{Returns}
+cycle count. 
+\end{DoxyReturn}
+
+
+Referenced by errata\+\_\+\+P\+B\+I\+S\+T\+\_\+4().
+
+\mbox{\Hypertarget{sys__pmu_8h_a201e93f10a431344ef380507d3106cd1}\label{sys__pmu_8h_a201e93f10a431344ef380507d3106cd1}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!\+\_\+pmu\+Get\+Event\+Count\+\_\+@{\+\_\+pmu\+Get\+Event\+Count\+\_\+}}
+\index{\+\_\+pmu\+Get\+Event\+Count\+\_\+@{\+\_\+pmu\+Get\+Event\+Count\+\_\+}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+pmu\+Get\+Event\+Count\+\_\+()}{\_pmuGetEventCount\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+pmu\+Get\+Event\+Count\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counter }\end{DoxyParamCaption})}
+
+
+
+Returns current event counter value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em counter} & -\/ Counter select 0..2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+event counter count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__pmu_8h_a1141fd5ac2cd84e241cfc28e8068928f}\label{sys__pmu_8h_a1141fd5ac2cd84e241cfc28e8068928f}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!\+\_\+pmu\+Get\+Overflow\+\_\+@{\+\_\+pmu\+Get\+Overflow\+\_\+}}
+\index{\+\_\+pmu\+Get\+Overflow\+\_\+@{\+\_\+pmu\+Get\+Overflow\+\_\+}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+pmu\+Get\+Overflow\+\_\+()}{\_pmuGetOverflow\_()}}
+{\footnotesize\ttfamily uint32 \+\_\+pmu\+Get\+Overflow\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns current overflow register and clear flags. 
+
+\begin{DoxyReturn}{Returns}
+overflow flags. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sys__pmu_8h_a4937c9f733852b81cddafbb29e679cff}\label{sys__pmu_8h_a4937c9f733852b81cddafbb29e679cff}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!\+\_\+pmu\+Set\+Count\+Event\+\_\+@{\+\_\+pmu\+Set\+Count\+Event\+\_\+}}
+\index{\+\_\+pmu\+Set\+Count\+Event\+\_\+@{\+\_\+pmu\+Set\+Count\+Event\+\_\+}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+pmu\+Set\+Count\+Event\+\_\+()}{\_pmuSetCountEvent\_()}}
+{\footnotesize\ttfamily void \+\_\+pmu\+Set\+Count\+Event\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counter,  }\item[{uint32}]{event }\end{DoxyParamCaption})}
+
+
+
+Set event counter count event. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em counter} & -\/ Counter select 0..2 \\
+\hline
+\mbox{\tt in}  & {\em event} & -\/ Count event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sys__pmu_8h_a05119721bf5533e9271717127c18c22c}\label{sys__pmu_8h_a05119721bf5533e9271717127c18c22c}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!\+\_\+pmu\+Start\+Counters\+\_\+@{\+\_\+pmu\+Start\+Counters\+\_\+}}
+\index{\+\_\+pmu\+Start\+Counters\+\_\+@{\+\_\+pmu\+Start\+Counters\+\_\+}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+pmu\+Start\+Counters\+\_\+()}{\_pmuStartCounters\_()}}
+{\footnotesize\ttfamily void \+\_\+pmu\+Start\+Counters\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counters }\end{DoxyParamCaption})}
+
+
+
+Starts selected counters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em counters} & -\/ Counter mask \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by errata\+\_\+\+P\+B\+I\+S\+T\+\_\+4().
+
+\mbox{\Hypertarget{sys__pmu_8h_abab4f00952caa5d6596db0e6de0f445c}\label{sys__pmu_8h_abab4f00952caa5d6596db0e6de0f445c}} 
+\index{sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}!\+\_\+pmu\+Stop\+Counters\+\_\+@{\+\_\+pmu\+Stop\+Counters\+\_\+}}
+\index{\+\_\+pmu\+Stop\+Counters\+\_\+@{\+\_\+pmu\+Stop\+Counters\+\_\+}!sys\+\_\+pmu.\+h@{sys\+\_\+pmu.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+pmu\+Stop\+Counters\+\_\+()}{\_pmuStopCounters\_()}}
+{\footnotesize\ttfamily void \+\_\+pmu\+Stop\+Counters\+\_\+ (\begin{DoxyParamCaption}\item[{uint32}]{counters }\end{DoxyParamCaption})}
+
+
+
+Stops selected counters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em counters} & -\/ Counter mask \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by errata\+\_\+\+P\+B\+I\+S\+T\+\_\+4().
+

@@ -1,0 +1,67 @@
+\hypertarget{sys__vim_8c}{}\section{source/sys\+\_\+vim.c File Reference}
+\label{sys__vim_8c}\index{source/sys\+\_\+vim.\+c@{source/sys\+\_\+vim.\+c}}
+
+
+V\+IM Driver Implementation File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+vim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esm.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvimRam}{vim\+Ram}}
+\begin{DoxyCompactList}\small\item\em Vim Ram Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vim_8c_ac108e3dc05b50d92e7d6247e572273ce}\label{sys__vim_8c_ac108e3dc05b50d92e7d6247e572273ce}} 
+\#define {\bfseries vim\+R\+AM}~((\mbox{\hyperlink{sys__vim_8c_a12def721b2d5d6a14e3a868aa8b9ae98}{vim\+R\+A\+M\+\_\+t}} $\ast$)0x\+F\+F\+F82000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structvimRam}{vim\+Ram}} \mbox{\hyperlink{sys__vim_8c_a12def721b2d5d6a14e3a868aa8b9ae98}{vim\+R\+A\+M\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Vim Ram Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sys__vim_8c_a0d4a6e31bdf5afa6235140739421d5cf}\label{sys__vim_8c_a0d4a6e31bdf5afa6235140739421d5cf}} 
+void {\bfseries vim\+Parity\+Error\+Handler} (void)
+\item 
+void \mbox{\hyperlink{group__VIM_ga894b6f212b72787bfa97f1ac62877167}{vim\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes V\+IM module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__VIM_ga1a269c8383f7cbf75df048bb812307bb}{vim\+Channel\+Map}} (uint32 request, uint32 channel, \mbox{\hyperlink{sys__vim_8h_a081e608fbf0927e18d08a4d8a96bf06a}{t\+\_\+isr\+Func\+P\+TR}} handler)
+\begin{DoxyCompactList}\small\item\em Map selected interrupt request to the selected channel. \end{DoxyCompactList}\item 
+void {\bfseries vim\+Enable\+Interrupt} (uint32 channel, system\+Interrupt\+\_\+t inttype)
+\item 
+void \mbox{\hyperlink{group__VIM_gac4c74a2a1d17f9c7ec4cc3ba156a230e}{vim\+Disable\+Interrupt}} (uint32 channel)
+\begin{DoxyCompactList}\small\item\em Disable interrupt for the the selected channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__VIM_gae8b4aff17dfb436d01775ae6fce955c1}{vim\+Get\+Config\+Value}} (\mbox{\hyperlink{structvim__config__reg}{vim\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+V\+IM Driver Implementation File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{sys__vim_8c_a12def721b2d5d6a14e3a868aa8b9ae98}\label{sys__vim_8c_a12def721b2d5d6a14e3a868aa8b9ae98}} 
+\index{sys\+\_\+vim.\+c@{sys\+\_\+vim.\+c}!vim\+R\+A\+M\+\_\+t@{vim\+R\+A\+M\+\_\+t}}
+\index{vim\+R\+A\+M\+\_\+t@{vim\+R\+A\+M\+\_\+t}!sys\+\_\+vim.\+c@{sys\+\_\+vim.\+c}}
+\subsubsection{\texorpdfstring{vim\+R\+A\+M\+\_\+t}{vimRAM\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sys__vim_8c_a12def721b2d5d6a14e3a868aa8b9ae98}{vim\+R\+A\+M\+\_\+t}}}
+
+
+
+Vim Ram Type Definition. 
+
+This type is used to access the Vim Ram. 

@@ -1,0 +1,74 @@
+\hypertarget{reg__esm_8h}{}\section{include/reg\+\_\+esm.h File Reference}
+\label{reg__esm_8h}\index{include/reg\+\_\+esm.\+h@{include/reg\+\_\+esm.\+h}}
+
+
+E\+SM Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structesmBase}{esm\+Base}}
+\begin{DoxyCompactList}\small\item\em Esm Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}{esm\+R\+EG}}~((\mbox{\hyperlink{reg__esm_8h_a9826454f215b62b6f1d2372aeb419f7c}{esm\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F500\+U)
+\begin{DoxyCompactList}\small\item\em Esm Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structesmBase}{esm\+Base}} \mbox{\hyperlink{reg__esm_8h_a9826454f215b62b6f1d2372aeb419f7c}{esm\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Esm Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\+SM Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the E\+SM driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}\label{reg__esm_8h_a7c2e779f2973e0c2c9496a4796df10f1}} 
+\index{reg\+\_\+esm.\+h@{reg\+\_\+esm.\+h}!esm\+R\+EG@{esm\+R\+EG}}
+\index{esm\+R\+EG@{esm\+R\+EG}!reg\+\_\+esm.\+h@{reg\+\_\+esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+R\+EG}{esmREG}}
+{\footnotesize\ttfamily \#define esm\+R\+EG~((\mbox{\hyperlink{reg__esm_8h_a9826454f215b62b6f1d2372aeb419f7c}{esm\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+F\+F\+F\+F500\+U)}
+
+
+
+Esm Register Frame Pointer. 
+
+This pointer is used by the Esm driver to access the Esm registers. 
+
+Definition at line 100 of file reg\+\_\+esm.\+h.
+
+
+
+Referenced by adc1\+Parity\+Check(), adc2\+Parity\+Check(), can1\+Parity\+Check(), can2\+Parity\+Check(), can3\+Parity\+Check(), check\+Clock\+Monitor(), check\+P\+L\+L1\+Slip(), check\+P\+L\+L2\+Slip(), esm\+Activate\+Normal\+Operation(), esm\+Clear\+Status(), esm\+Clear\+Status\+Buffer(), esm\+Disable\+Error(), esm\+Disable\+Interrupt(), esm\+Enable\+Error(), esm\+Enable\+Interrupt(), esm\+Enter\+Self\+Test(), esm\+Error(), esm\+Get\+Status(), esm\+High\+Interrupt(), esm\+Init(), esm\+Self\+Test\+Status(), esm\+Set\+Counter\+Preload\+Value(), esm\+Set\+Interrupt\+Level(), esm\+Trigger\+Error\+Pin\+Reset(), and fmc\+Bus2\+Check().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__esm_8h_a9826454f215b62b6f1d2372aeb419f7c}\label{reg__esm_8h_a9826454f215b62b6f1d2372aeb419f7c}} 
+\index{reg\+\_\+esm.\+h@{reg\+\_\+esm.\+h}!esm\+B\+A\+S\+E\+\_\+t@{esm\+B\+A\+S\+E\+\_\+t}}
+\index{esm\+B\+A\+S\+E\+\_\+t@{esm\+B\+A\+S\+E\+\_\+t}!reg\+\_\+esm.\+h@{reg\+\_\+esm.\+h}}
+\subsubsection{\texorpdfstring{esm\+B\+A\+S\+E\+\_\+t}{esmBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__esm_8h_a9826454f215b62b6f1d2372aeb419f7c}{esm\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+Esm Register Frame Type Definition. 
+
+This type is used to access the Esm Registers. 

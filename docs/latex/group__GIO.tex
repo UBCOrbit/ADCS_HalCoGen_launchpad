@@ -1,0 +1,692 @@
+\hypertarget{group__GIO}{}\section{G\+IO}
+\label{group__GIO}\index{G\+IO@{G\+IO}}
+
+
+General-\/\+Purpose Input/\+Output Module.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__GIO_ga3a5c5cc04b0105eb43cf8f5556e8207e}{gio\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the G\+IO Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__GIO_ga0eb9c6b99f383108e0e9ae15e5fd1450}{gio\+Set\+Direction}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 dir)
+\begin{DoxyCompactList}\small\item\em Set Port Direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__GIO_ga976443b96aca877a030f1e38865f6e44}{gio\+Set\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 bit, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__GIO_gacc590bf80401dda7f74995de1fc14bf2}{gio\+Set\+Port}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 value)
+\begin{DoxyCompactList}\small\item\em Write Port Value. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__GIO_gaa8da3702193326982ea93af3f1e505fd}{gio\+Get\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Read Bit. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__GIO_ga84c1081ad04ee2a9ce8f4cc3a446cfaf}{gio\+Get\+Port}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port)
+\begin{DoxyCompactList}\small\item\em Read Port Value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__GIO_ga33d415247aa6af62c6ce4258da5a5f82}{gio\+Toggle\+Bit}} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 bit)
+\begin{DoxyCompactList}\small\item\em Write Bit. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__GIO_ga917b6cc78732c67a98fc611cb1742353}\label{group__GIO_ga917b6cc78732c67a98fc611cb1742353}} 
+void {\bfseries gio\+Enable\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+\mbox{\Hypertarget{group__GIO_gaf8c9046075b0a6f84fc2732bf5ede5ad}\label{group__GIO_gaf8c9046075b0a6f84fc2732bf5ede5ad}} 
+void {\bfseries gio\+Disable\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+\mbox{\Hypertarget{group__GIO_gac6e6c2a77baee906a3c25164067bd4f6}\label{group__GIO_gac6e6c2a77baee906a3c25164067bd4f6}} 
+void {\bfseries gio\+Notification} (\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$port, uint32 bit)
+\item 
+void \mbox{\hyperlink{group__GIO_gadf4ea1311a3d6b62f91e76ef2c6edd50}{gio\+Get\+Config\+Value}} (\mbox{\hyperlink{structgio__config__reg}{gio\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the configuration registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General-\/\+Purpose Input/\+Output Module. 
+
+The G\+IO module provides the family of devices with input/output (I/O) capability. The I/O pins are bidirectional and bit-\/programmable. The G\+IO module also supports external interrupt capability.
+
+Related Files
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{reg__gio_8h}{reg\+\_\+gio.\+h}}
+\item \mbox{\hyperlink{gio_8h}{gio.\+h}}
+\item \mbox{\hyperlink{gio_8c}{gio.\+c}} 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__GIO_gaa8da3702193326982ea93af3f1e505fd}\label{group__GIO_gaa8da3702193326982ea93af3f1e505fd}} 
+\index{G\+IO@{G\+IO}!gio\+Get\+Bit@{gio\+Get\+Bit}}
+\index{gio\+Get\+Bit@{gio\+Get\+Bit}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Get\+Bit()}{gioGetBit()}}
+{\footnotesize\ttfamily uint32 gio\+Get\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$}]{port,  }\item[{uint32}]{bit }\end{DoxyParamCaption})}
+
+
+
+Read Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & pointer to G\+IO port\+:
+\begin{DoxyItemize}
+\item gio\+P\+O\+R\+TA\+: PortA pointer
+\item gio\+P\+O\+R\+TB\+: PortB pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em bit} & number 0-\/7 that specifies the bit to be written to.
+\begin{DoxyItemize}
+\item 0\+: L\+SB
+\item 7\+: M\+SB
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Reads a the current value from the specified pin of the given G\+IO port 
+
+Definition at line 334 of file gio.\+c.
+
+
+\begin{DoxyCode}
+335 \{
+336 \textcolor{comment}{/* USER CODE BEGIN (8) */}
+337 \textcolor{comment}{/* USER CODE END */}
+338 
+339     \textcolor{keywordflow}{return} (port->DIN >> bit) & 1U;
+340 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__GIO_gadf4ea1311a3d6b62f91e76ef2c6edd50}\label{group__GIO_gadf4ea1311a3d6b62f91e76ef2c6edd50}} 
+\index{G\+IO@{G\+IO}!gio\+Get\+Config\+Value@{gio\+Get\+Config\+Value}}
+\index{gio\+Get\+Config\+Value@{gio\+Get\+Config\+Value}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Get\+Config\+Value()}{gioGetConfigValue()}}
+{\footnotesize\ttfamily void gio\+Get\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgio__config__reg}{gio\+\_\+config\+\_\+reg\+\_\+t}} $\ast$}]{config\+\_\+reg,  }\item[{\mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Get the initial or current values of the configuration registers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em $\ast$config\+\_\+reg} & pointer to the struct to which the initial or current value of the configuration registers need to be stored \\
+\hline
+\mbox{\tt in}  & {\em type} & whether initial or current value of the configuration registers need to be stored
+\begin{DoxyItemize}
+\item Initial\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\item Current\+Value\+: initial value of the configuration registers will be stored in the struct pointed by config\+\_\+reg
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+This function will copy the initial or current value (depending on the parameter \textquotesingle{}type\textquotesingle{}) of the configuration registers to the struct pointed by config\+\_\+reg 
+
+Definition at line 476 of file gio.\+c.
+
+
+\begin{DoxyCode}
+477 \{
+478     \textcolor{keywordflow}{if} (type == InitialValue)
+479     \{
+480         config\_reg->CONFIG\_INTDET    = GIO\_INTDET\_CONFIGVALUE;
+481         config\_reg->CONFIG\_POL       = GIO\_POL\_CONFIGVALUE;
+482         config\_reg->CONFIG\_INTENASET = GIO\_INTENASET\_CONFIGVALUE;
+483         config\_reg->CONFIG\_LVLSET    = GIO\_LVLSET\_CONFIGVALUE;
+484 
+485         config\_reg->CONFIG\_PORTADIR    = GIO\_PORTADIR\_CONFIGVALUE;
+486         config\_reg->CONFIG\_PORTAPDR    = GIO\_PORTAPDR\_CONFIGVALUE;
+487         config\_reg->CONFIG\_PORTAPSL    = GIO\_PORTAPSL\_CONFIGVALUE;
+488         config\_reg->CONFIG\_PORTAPULDIS = GIO\_PORTAPULDIS\_CONFIGVALUE;
+489 
+490         config\_reg->CONFIG\_PORTBDIR    = GIO\_PORTBDIR\_CONFIGVALUE;
+491         config\_reg->CONFIG\_PORTBPDR    = GIO\_PORTBPDR\_CONFIGVALUE;
+492         config\_reg->CONFIG\_PORTBPSL    = GIO\_PORTBPSL\_CONFIGVALUE;
+493         config\_reg->CONFIG\_PORTBPULDIS = GIO\_PORTBPULDIS\_CONFIGVALUE;
+494     \}
+495     \textcolor{keywordflow}{else}
+496     \{
+497     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+498         config\_reg->CONFIG\_INTDET    = \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->INTDET;
+499         config\_reg->CONFIG\_POL       = \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->POL;
+500         config\_reg->CONFIG\_INTENASET = \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->ENASET;
+501         config\_reg->CONFIG\_LVLSET    = \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->LVLSET;
+502 
+503         config\_reg->CONFIG\_PORTADIR    = \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->DIR;
+504         config\_reg->CONFIG\_PORTAPDR    = \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->PDR;
+505         config\_reg->CONFIG\_PORTAPSL    = \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->PSL;
+506         config\_reg->CONFIG\_PORTAPULDIS = \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->PULDIS;
+507     \textcolor{comment}{/*SAFETYMCUSW 134 S MR:12.2 <APPROVED> "LDRA Tool issue" */}
+508         config\_reg->CONFIG\_PORTBDIR    = \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->DIR;
+509         config\_reg->CONFIG\_PORTBPDR    = \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->PDR;
+510         config\_reg->CONFIG\_PORTBPSL    = \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->PULDIS;
+511         config\_reg->CONFIG\_PORTBPULDIS = \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->PSL;
+512     \}
+513 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__GIO_ga84c1081ad04ee2a9ce8f4cc3a446cfaf}\label{group__GIO_ga84c1081ad04ee2a9ce8f4cc3a446cfaf}} 
+\index{G\+IO@{G\+IO}!gio\+Get\+Port@{gio\+Get\+Port}}
+\index{gio\+Get\+Port@{gio\+Get\+Port}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Get\+Port()}{gioGetPort()}}
+{\footnotesize\ttfamily uint32 gio\+Get\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$}]{port }\end{DoxyParamCaption})}
+
+
+
+Read Port Value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & pointer to G\+IO port\+:
+\begin{DoxyItemize}
+\item gio\+P\+O\+R\+TA\+: PortA pointer
+\item gio\+P\+O\+R\+TB\+: PortB pointer
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Reads a the current value of a given G\+IO port 
+
+Definition at line 354 of file gio.\+c.
+
+
+\begin{DoxyCode}
+355 \{
+356 \textcolor{comment}{/* USER CODE BEGIN (9) */}
+357 \textcolor{comment}{/* USER CODE END */}
+358 
+359     \textcolor{keywordflow}{return} port->DIN;
+360 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__GIO_ga3a5c5cc04b0105eb43cf8f5556e8207e}\label{group__GIO_ga3a5c5cc04b0105eb43cf8f5556e8207e}} 
+\index{G\+IO@{G\+IO}!gio\+Init@{gio\+Init}}
+\index{gio\+Init@{gio\+Init}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Init()}{gioInit()}}
+{\footnotesize\ttfamily void gio\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the G\+IO Driver. 
+
+This function initializes the G\+IO module and set the G\+IO ports to the initial values. bring G\+IO module out of reset ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ {\bfseries initialize} {\bfseries Port} {\bfseries A} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item Port A output values ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port A direction ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port A open drain enable ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port A pullup / pulldown selection ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port A pullup / pulldown enable
+\end{DoxyItemize}
+
+{\bfseries initialize} {\bfseries Port} {\bfseries B} ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item Port B output values ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port B direction ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port B open drain enable ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port B pullup / pulldown selection ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+
+\item Port B pullup / pulldown enable
+\end{DoxyItemize}
+
+{\bfseries initialize} {\bfseries interrupts} ~\newline
+~\newline
+~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item interrupt polarity ~\newline
+~\newline
+~\newline
+
+\item interrupt level ~\newline
+~\newline
+
+\item clear all pending interrupts ~\newline
+
+\item enable interrupts 
+\end{DoxyItemize}
+
+Definition at line 61 of file gio.\+c.
+
+
+
+References gio\+P\+O\+R\+TA, and gio\+R\+EG.
+
+
+\begin{DoxyCode}
+62 \{
+63 \textcolor{comment}{/* USER CODE BEGIN (2) */}
+64 \textcolor{comment}{/* USER CODE END */}
+65 
+67     \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->GCR0   = 1U;
+68     \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->ENACLR = 0xFFU;
+69     \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->LVLCLR = 0xFFU;
+70 
+72 
+74     \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->DOUT = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+75                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+76                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+77                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+78                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+79                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+80                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+81                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+82 
+84     \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->DIR  = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+85                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+86                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+87                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+88                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+89                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+90                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+91                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+92 
+94     \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->PDR  = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+95                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+96                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+97                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+98                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+99                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+100                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+101                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+102 
+104     \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->PSL  = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+105                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+106                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+107                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+108                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+109                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+110                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+111                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+112 
+114     \mbox{\hyperlink{reg__gio_8h_ae20775a37d510c0bd217a9f75c90a574}{gioPORTA}}->PULDIS  = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+115                       | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+116                       | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+117                       | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+118                       | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+119                       | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+120                       | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+121                       | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+122 
+124 
+126     \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->DOUT = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+127                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+128                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+129                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+130                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+131                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+132                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+133                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+134 
+136     \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->DIR  = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+137                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+138                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+139                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+140                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+141                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+142                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+143                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+144 
+146     \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->PDR  = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+147                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+148                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+149                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+150                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+151                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+152                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+153                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+154 
+156     \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->PSL  = (uint32)((uint32)0U << 0U)  \textcolor{comment}{/* Bit 0 */}
+157                    | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+158                    | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+159                    | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+160                    | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+161                    | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+162                    | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+163                    | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+164 
+166     \mbox{\hyperlink{reg__gio_8h_af0da6a4cad272dcfc7922ff5a5fc30cb}{gioPORTB}}->PULDIS  = (uint32)((uint32)0U << 0U) \textcolor{comment}{/* Bit 0 */}
+167                       | (uint32)((uint32)0U << 1U)  \textcolor{comment}{/* Bit 1 */}
+168                       | (uint32)((uint32)0U << 2U)  \textcolor{comment}{/* Bit 2 */}
+169                       | (uint32)((uint32)0U << 3U)  \textcolor{comment}{/* Bit 3 */}
+170                       | (uint32)((uint32)0U << 4U)  \textcolor{comment}{/* Bit 4 */}
+171                       | (uint32)((uint32)0U << 5U)  \textcolor{comment}{/* Bit 5 */}
+172                       | (uint32)((uint32)0U << 6U)  \textcolor{comment}{/* Bit 6 */}
+173                       | (uint32)((uint32)0U << 7U); \textcolor{comment}{/* Bit 7 */}
+174 
+175 \textcolor{comment}{/* USER CODE BEGIN (3) */}
+176 \textcolor{comment}{/* USER CODE END */}
+177 
+179 
+181     \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->POL = (uint32)((uint32)0U << 0U)   \textcolor{comment}{/* Bit 0 */}
+182                 | (uint32)((uint32)0U << 1U)   \textcolor{comment}{/* Bit 1 */}
+183                 | (uint32)((uint32)0U << 2U)   \textcolor{comment}{/* Bit 2 */}
+184                 | (uint32)((uint32)0U << 3U)   \textcolor{comment}{/* Bit 3 */}
+185                 | (uint32)((uint32)0U << 4U)   \textcolor{comment}{/* Bit 4 */}
+186                 | (uint32)((uint32)0U << 5U)   \textcolor{comment}{/* Bit 5 */}
+187                 | (uint32)((uint32)0U << 6U)   \textcolor{comment}{/* Bit 6 */}
+188                 | (uint32)((uint32)0U << 7U)   \textcolor{comment}{/* Bit 7 */}
+189                 | (uint32)((uint32)0U << 8U)   \textcolor{comment}{/* Bit 8  */}
+190                 | (uint32)((uint32)0U << 9U)   \textcolor{comment}{/* Bit 9  */}
+191                 | (uint32)((uint32)0U << 10U)  \textcolor{comment}{/* Bit 10 */}
+192                 | (uint32)((uint32)0U << 11U)  \textcolor{comment}{/* Bit 11 */}
+193                 | (uint32)((uint32)0U << 12U)  \textcolor{comment}{/* Bit 12 */}
+194                 | (uint32)((uint32)0U << 13U)  \textcolor{comment}{/* Bit 13 */}
+195                 | (uint32)((uint32)0U << 14U)  \textcolor{comment}{/* Bit 14 */}
+196                 | (uint32)((uint32)0U << 15U); \textcolor{comment}{/* Bit 15 */}
+197 
+198 
+200     \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->LVLSET = (uint32)((uint32)0U << 0U)   \textcolor{comment}{/* Bit 0 */}
+201                    | (uint32)((uint32)0U << 1U)   \textcolor{comment}{/* Bit 1 */}
+202                    | (uint32)((uint32)0U << 2U)   \textcolor{comment}{/* Bit 2 */}
+203                    | (uint32)((uint32)0U << 3U)   \textcolor{comment}{/* Bit 3 */}
+204                    | (uint32)((uint32)0U << 4U)   \textcolor{comment}{/* Bit 4 */}
+205                    | (uint32)((uint32)0U << 5U)   \textcolor{comment}{/* Bit 5 */}
+206                    | (uint32)((uint32)0U << 6U)   \textcolor{comment}{/* Bit 6 */}
+207                    | (uint32)((uint32)0U << 7U)   \textcolor{comment}{/* Bit 7 */}
+208                    | (uint32)((uint32)0U << 8U)   \textcolor{comment}{/* Bit 8  */}
+209                    | (uint32)((uint32)0U << 9U)   \textcolor{comment}{/* Bit 9  */}
+210                    | (uint32)((uint32)0U << 10U)  \textcolor{comment}{/* Bit 10 */}
+211                    | (uint32)((uint32)0U << 11U)  \textcolor{comment}{/* Bit 11 */}
+212                    | (uint32)((uint32)0U << 12U)  \textcolor{comment}{/* Bit 12 */}
+213                    | (uint32)((uint32)0U << 13U)  \textcolor{comment}{/* Bit 13 */}
+214                    | (uint32)((uint32)0U << 14U)  \textcolor{comment}{/* Bit 14 */}
+215                    | (uint32)((uint32)0U << 15U); \textcolor{comment}{/* Bit 15 */}
+216 
+217 
+218 
+219 
+221     \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->FLG = 0xFFU;
+222 
+224     \mbox{\hyperlink{reg__gio_8h_acf3fc7487b247fa20e47f99b3551b8dd}{gioREG}}->ENASET = (uint32)((uint32)0U << 0U)   \textcolor{comment}{/* Bit 0 */}
+225                    | (uint32)((uint32)0U << 1U)   \textcolor{comment}{/* Bit 1 */}
+226                    | (uint32)((uint32)0U << 2U)   \textcolor{comment}{/* Bit 2 */}
+227                    | (uint32)((uint32)0U << 3U)   \textcolor{comment}{/* Bit 3 */}
+228                    | (uint32)((uint32)0U << 4U)   \textcolor{comment}{/* Bit 4 */}
+229                    | (uint32)((uint32)0U << 5U)   \textcolor{comment}{/* Bit 5 */}
+230                    | (uint32)((uint32)0U << 6U)   \textcolor{comment}{/* Bit 6 */}
+231                    | (uint32)((uint32)0U << 7U)   \textcolor{comment}{/* Bit 7 */}
+232                    | (uint32)((uint32)0U << 8U)   \textcolor{comment}{/* Bit 8  */}
+233                    | (uint32)((uint32)0U << 9U)   \textcolor{comment}{/* Bit 9  */}
+234                    | (uint32)((uint32)0U << 10U)  \textcolor{comment}{/* Bit 10 */}
+235                    | (uint32)((uint32)0U << 11U)  \textcolor{comment}{/* Bit 11 */}
+236                    | (uint32)((uint32)0U << 12U)  \textcolor{comment}{/* Bit 12 */}
+237                    | (uint32)((uint32)0U << 13U)  \textcolor{comment}{/* Bit 13 */}
+238                    | (uint32)((uint32)0U << 14U)  \textcolor{comment}{/* Bit 14 */}
+239                    | (uint32)((uint32)0U << 15U); \textcolor{comment}{/* Bit 15 */}
+240 
+241 \textcolor{comment}{/* USER CODE BEGIN (4) */}
+242 \textcolor{comment}{/* USER CODE END */}
+243 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__GIO_ga976443b96aca877a030f1e38865f6e44}\label{group__GIO_ga976443b96aca877a030f1e38865f6e44}} 
+\index{G\+IO@{G\+IO}!gio\+Set\+Bit@{gio\+Set\+Bit}}
+\index{gio\+Set\+Bit@{gio\+Set\+Bit}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Set\+Bit()}{gioSetBit()}}
+{\footnotesize\ttfamily void gio\+Set\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$}]{port,  }\item[{uint32}]{bit,  }\item[{uint32}]{value }\end{DoxyParamCaption})}
+
+
+
+Write Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & pointer to G\+IO port\+:
+\begin{DoxyItemize}
+\item gio\+P\+O\+R\+TA\+: PortA pointer
+\item gio\+P\+O\+R\+TB\+: PortB pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em bit} & number 0-\/7 that specifies the bit to be written to.
+\begin{DoxyItemize}
+\item 0\+: L\+SB
+\item 7\+: M\+SB 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em value} & binary value to write to bit\\
+\hline
+\end{DoxyParams}
+Writes a value to the specified pin of the given G\+IO port 
+
+Definition at line 279 of file gio.\+c.
+
+
+\begin{DoxyCode}
+280 \{
+281 \textcolor{comment}{/* USER CODE BEGIN (5) */}
+282 \textcolor{comment}{/* USER CODE END */}
+283 
+284     \textcolor{keywordflow}{if} (value != 0U)
+285     \{
+286         port->DSET = (uint32)1U << bit;
+287     \}
+288     \textcolor{keywordflow}{else}
+289     \{
+290         port->DCLR = (uint32)1U << bit;
+291     \}
+292 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__GIO_ga0eb9c6b99f383108e0e9ae15e5fd1450}\label{group__GIO_ga0eb9c6b99f383108e0e9ae15e5fd1450}} 
+\index{G\+IO@{G\+IO}!gio\+Set\+Direction@{gio\+Set\+Direction}}
+\index{gio\+Set\+Direction@{gio\+Set\+Direction}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Set\+Direction()}{gioSetDirection()}}
+{\footnotesize\ttfamily void gio\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$}]{port,  }\item[{uint32}]{dir }\end{DoxyParamCaption})}
+
+
+
+Set Port Direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & pointer to G\+IO port\+:
+\begin{DoxyItemize}
+\item gio\+P\+O\+R\+TA\+: PortA pointer
+\item gio\+P\+O\+R\+TB\+: PortB pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em dir} & value to write to D\+IR register\\
+\hline
+\end{DoxyParams}
+Set the direction of G\+IO pins at runtime. 
+
+Definition at line 258 of file gio.\+c.
+
+
+\begin{DoxyCode}
+259 \{
+260     port->DIR = dir;
+261 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__GIO_gacc590bf80401dda7f74995de1fc14bf2}\label{group__GIO_gacc590bf80401dda7f74995de1fc14bf2}} 
+\index{G\+IO@{G\+IO}!gio\+Set\+Port@{gio\+Set\+Port}}
+\index{gio\+Set\+Port@{gio\+Set\+Port}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Set\+Port()}{gioSetPort()}}
+{\footnotesize\ttfamily void gio\+Set\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$}]{port,  }\item[{uint32}]{value }\end{DoxyParamCaption})}
+
+
+
+Write Port Value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & pointer to G\+IO port\+:
+\begin{DoxyItemize}
+\item gio\+P\+O\+R\+TA\+: PortA pointer
+\item gio\+P\+O\+R\+TB\+: PortB pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em value} & value to write to port\\
+\hline
+\end{DoxyParams}
+Writes a value to all pin of a given G\+IO port 
+
+Definition at line 307 of file gio.\+c.
+
+
+\begin{DoxyCode}
+308 \{
+309 \textcolor{comment}{/* USER CODE BEGIN (6) */}
+310 \textcolor{comment}{/* USER CODE END */}
+311 
+312     port->DOUT = value;
+313 
+314 \textcolor{comment}{/* USER CODE BEGIN (7) */}
+315 \textcolor{comment}{/* USER CODE END */}
+316 
+317 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__GIO_ga33d415247aa6af62c6ce4258da5a5f82}\label{group__GIO_ga33d415247aa6af62c6ce4258da5a5f82}} 
+\index{G\+IO@{G\+IO}!gio\+Toggle\+Bit@{gio\+Toggle\+Bit}}
+\index{gio\+Toggle\+Bit@{gio\+Toggle\+Bit}!G\+IO@{G\+IO}}
+\subsubsection{\texorpdfstring{gio\+Toggle\+Bit()}{gioToggleBit()}}
+{\footnotesize\ttfamily void gio\+Toggle\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reg__gio_8h_ad276ab0b3bc4719e20bc91adf2bfcfe7}{gio\+P\+O\+R\+T\+\_\+t}} $\ast$}]{port,  }\item[{uint32}]{bit }\end{DoxyParamCaption})}
+
+
+
+Write Bit. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & pointer to G\+IO port\+:
+\begin{DoxyItemize}
+\item gio\+P\+O\+R\+TA\+: PortA pointer
+\item gio\+P\+O\+R\+TB\+: PortB pointer 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em bit} & number 0-\/7 that specifies the bit to be written to.
+\begin{DoxyItemize}
+\item 0\+: L\+SB
+\item 7\+: M\+SB
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+Toggle a value to the specified pin of the given G\+IO port 
+
+Definition at line 376 of file gio.\+c.
+
+
+\begin{DoxyCode}
+377 \{
+378 \textcolor{comment}{/* USER CODE BEGIN (10) */}
+379 \textcolor{comment}{/* USER CODE END */}
+380 
+381     \textcolor{keywordflow}{if} ((port->DIN & (uint32)((uint32)1U << bit)) != 0U)
+382     \{
+383         port->DCLR = (uint32)1U << bit;
+384     \}
+385     \textcolor{keywordflow}{else}
+386     \{
+387         port->DSET = (uint32)1U << bit;
+388     \}
+389 \}
+\end{DoxyCode}

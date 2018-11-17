@@ -1,0 +1,70 @@
+\hypertarget{reg__crc_8h}{}\section{include/reg\+\_\+crc.h File Reference}
+\label{reg__crc_8h}\index{include/reg\+\_\+crc.\+h@{include/reg\+\_\+crc.\+h}}
+
+
+C\+RC Register Layer Header File.  
+
+
+{\ttfamily \#include \char`\"{}sys\+\_\+common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcrcBase}{crc\+Base}}
+\begin{DoxyCompactList}\small\item\em C\+RC Register Frame Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reg__crc_8h_a3215e789b9783c5e83e0c388e281088a}{crc\+R\+EG}}~((\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+E000000\+U)
+\begin{DoxyCompactList}\small\item\em C\+RC Register Frame Pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile struct \mbox{\hyperlink{structcrcBase}{crc\+Base}} \mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+B\+A\+S\+E\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em C\+RC Register Frame Type Definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+RC Register Layer Header File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Definitions
+\item Types
+\item Interface Prototypes
+\end{DoxyItemize}which are relevant for the C\+RC driver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{reg__crc_8h_a3215e789b9783c5e83e0c388e281088a}\label{reg__crc_8h_a3215e789b9783c5e83e0c388e281088a}} 
+\index{reg\+\_\+crc.\+h@{reg\+\_\+crc.\+h}!crc\+R\+EG@{crc\+R\+EG}}
+\index{crc\+R\+EG@{crc\+R\+EG}!reg\+\_\+crc.\+h@{reg\+\_\+crc.\+h}}
+\subsubsection{\texorpdfstring{crc\+R\+EG}{crcREG}}
+{\footnotesize\ttfamily \#define crc\+R\+EG~((\mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+B\+A\+S\+E\+\_\+t}} $\ast$)0x\+F\+E000000\+U)}
+
+
+
+C\+RC Register Frame Pointer. 
+
+This pointer is used by the C\+RC driver to access the C\+RC registers. 
+
+Definition at line 121 of file reg\+\_\+crc.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}\label{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}} 
+\index{reg\+\_\+crc.\+h@{reg\+\_\+crc.\+h}!crc\+B\+A\+S\+E\+\_\+t@{crc\+B\+A\+S\+E\+\_\+t}}
+\index{crc\+B\+A\+S\+E\+\_\+t@{crc\+B\+A\+S\+E\+\_\+t}!reg\+\_\+crc.\+h@{reg\+\_\+crc.\+h}}
+\subsubsection{\texorpdfstring{crc\+B\+A\+S\+E\+\_\+t}{crcBASE\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reg__crc_8h_a5d27a33c6347de7aac595ad4daefb611}{crc\+B\+A\+S\+E\+\_\+t}}}
+
+
+
+C\+RC Register Frame Type Definition. 
+
+This type is used to access the C\+RC Registers. 

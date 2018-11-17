@@ -1,0 +1,230 @@
+\hypertarget{sci_8h}{}\section{include/sci.h File Reference}
+\label{sci_8h}\index{include/sci.\+h@{include/sci.\+h}}
+
+
+S\+CI Driver Definition File.  
+
+
+{\ttfamily \#include \char`\"{}reg\+\_\+sci.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsci__config__reg}{sci\+\_\+config\+\_\+reg}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sci_8h_a5de218ffb0fa4e61fd665367767055bb}{S\+C\+I\+\_\+\+I\+D\+LE}}~0x00000004U
+\begin{DoxyCompactList}\small\item\em Alias name for the S\+CI I\+D\+LE Flag. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sci_8h_a845ec664e22bb4799d5ac62b4085a144}\label{sci_8h_a845ec664e22bb4799d5ac62b4085a144}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~0x00000001U
+\item 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+\item 
+\mbox{\Hypertarget{sci_8h_a4f2f0584e3dd9c76c94ab3b5e3b213ff}\label{sci_8h_a4f2f0584e3dd9c76c94ab3b5e3b213ff}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(8\+U -\/ 1\+U)
+\item 
+\mbox{\Hypertarget{sci_8h_aebc1b454929a20e86fd9bf3537879e99}\label{sci_8h_aebc1b454929a20e86fd9bf3537879e99}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+B\+R\+S\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~(520\+U)
+\item 
+\mbox{\Hypertarget{sci_8h_af678dc9006e4f4b1937fa8e4efc8f12b}\label{sci_8h_af678dc9006e4f4b1937fa8e4efc8f12b}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+P\+I\+O0\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)1\+U $<$$<$ 2\+U) $\vert$ (uint32)((uint32)1\+U $<$$<$ 1\+U))
+\item 
+\mbox{\Hypertarget{sci_8h_adbee91969b73bf10de9aa6544aeec7c8}\label{sci_8h_adbee91969b73bf10de9aa6544aeec7c8}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+P\+I\+O1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0\+U $<$$<$ 2\+U) $\vert$ (uint32)((uint32)0\+U $<$$<$ 1\+U))
+\item 
+\mbox{\Hypertarget{sci_8h_a8fcd1d9065c490a5f1b88b2009986905}\label{sci_8h_a8fcd1d9065c490a5f1b88b2009986905}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+P\+I\+O6\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0\+U $<$$<$ 2\+U) $\vert$ (uint32)((uint32)0\+U $<$$<$ 1\+U))
+\item 
+\mbox{\Hypertarget{sci_8h_ae051c9bbb35b69cb06c16fe2d5153a70}\label{sci_8h_ae051c9bbb35b69cb06c16fe2d5153a70}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+P\+I\+O7\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)0\+U $<$$<$ 2\+U) $\vert$ (uint32)((uint32)0\+U $<$$<$ 1\+U))
+\item 
+\mbox{\Hypertarget{sci_8h_a5fb68ed8559f82a53e237206f2557430}\label{sci_8h_a5fb68ed8559f82a53e237206f2557430}} 
+\#define {\bfseries S\+C\+I\+L\+I\+N\+\_\+\+P\+I\+O8\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}~((uint32)((uint32)1\+U $<$$<$ 2\+U) $\vert$ (uint32)((uint32)1\+U $<$$<$ 1\+U))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sci_8h_a11a3cafb6d4bb091d338dc4c8244c379}\label{sci_8h_a11a3cafb6d4bb091d338dc4c8244c379}} 
+typedef struct \mbox{\hyperlink{structsci__config__reg}{sci\+\_\+config\+\_\+reg}} {\bfseries sci\+\_\+config\+\_\+reg\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sci_8h_a676c03c4e590acc7d9286cfc44867d8b}{sci\+Int\+Flags}} \{ \newline
+{\bfseries S\+C\+I\+\_\+\+F\+E\+\_\+\+I\+NT} = 0x04000000U, 
+{\bfseries S\+C\+I\+\_\+\+O\+E\+\_\+\+I\+NT} = 0x02000000U, 
+{\bfseries S\+C\+I\+\_\+\+P\+E\+\_\+\+I\+NT} = 0x01000000U, 
+{\bfseries S\+C\+I\+\_\+\+R\+X\+\_\+\+I\+NT} = 0x00000200U, 
+\newline
+{\bfseries S\+C\+I\+\_\+\+T\+X\+\_\+\+I\+NT} = 0x00000100U, 
+{\bfseries S\+C\+I\+\_\+\+W\+A\+K\+E\+\_\+\+I\+NT} = 0x00000002U, 
+{\bfseries S\+C\+I\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+NT} = 0x00000001U
+ \}
+\begin{DoxyCompactList}\small\item\em Interrupt Flag Definitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sci_8h_a67563f05a0ddd7a1762177f5ebcac8c8}\label{sci_8h_a67563f05a0ddd7a1762177f5ebcac8c8}} 
+enum {\bfseries sci\+Pin\+Select} \{ {\bfseries P\+I\+N\+\_\+\+S\+C\+I\+\_\+\+TX} = 4U, 
+{\bfseries P\+I\+N\+\_\+\+S\+C\+I\+\_\+\+RX} = 2U
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__SCI_gae8a1d6b7274ed1af263d57fab032096a}{sci\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the S\+CI Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga2bf2ae4e9ca71949190dd967b406b931}{sci\+Set\+Functional}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 port)
+\begin{DoxyCompactList}\small\item\em Change functional behavior of pins at runtime. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga35d4f604e2151ca596b1e0fcca6f5606}{sci\+Set\+Baudrate}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 baud)
+\begin{DoxyCompactList}\small\item\em Change baudrate at runtime. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gaafd91cc5c28a92fa211e96e06b3fc34c}{sci\+Is\+Tx\+Ready}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Tx buffer empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga8803e9ddc05ea93c80a768d0fc0eab16}{sci\+Send\+Byte}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint8 byte)
+\begin{DoxyCompactList}\small\item\em Send Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga0a24e75961adf4102892d78e9620c042}{sci\+Send}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Send Data. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_ga030ca3a9ad5bf48a7215be9d4078ad49}{sci\+Is\+Rx\+Ready}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Rx buffer full. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gabb100a9163984ca6c9a69133b8eba657}{sci\+Is\+Idle\+Detected}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Check if Idle Period is Detected. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_ga36cb42a55bca0fe4e76f3b994fb6dfc4}{sci\+Rx\+Error}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Return Rx Error flags. \end{DoxyCompactList}\item 
+uint32 \mbox{\hyperlink{group__SCI_gaec2932431dfdcdef7c3aba3da9cf4fe7}{sci\+Receive\+Byte}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Receive Byte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga2452fb07e6ad52632e100fed774f9087}{sci\+Receive}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 length, uint8 $\ast$data)
+\begin{DoxyCompactList}\small\item\em Receive Data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gad14ca1b90c313254407d318eceaa1f46}{sci\+Enable\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Enable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga9f1a39a5272682dbd101ddcbbbdc8193}{sci\+Disable\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Disable interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga36302e2a67c26b3557c66ccb267c1760}{sci\+Enable\+Loopback}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, \mbox{\hyperlink{sys__common_8h_aa61c8f392939c8448c7e3f17a3ecb51c}{loop\+Back\+Type\+\_\+t}} Loopbacktype)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gae6568eda24f29b1b31bd09a5f665b5f8}{sci\+Disable\+Loopback}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Enable Loopback mode for self test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_ga695b0bd0cb87fd2a0542f784fc94aa06}{sci\+Enter\+Reset\+State}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\begin{DoxyCompactList}\small\item\em Enter reset state. \end{DoxyCompactList}\item 
+void {\bfseries sci\+Exit\+Reset\+State} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci)
+\item 
+void \mbox{\hyperlink{group__SCI_ga2418574fe9c3d642db1f134926ac6934}{scilin\+Get\+Config\+Value}} (\mbox{\hyperlink{structsci__config__reg}{sci\+\_\+config\+\_\+reg\+\_\+t}} $\ast$config\+\_\+reg, \mbox{\hyperlink{sys__common_8h_a9daf9a5992391b058477d28d107ee5e2}{config\+\_\+value\+\_\+type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Get the initial or current values of the S\+C\+I\+L\+IN ( S\+C\+I2) configuration registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__SCI_gac25800424a38ab1b3b0960f6b7cc4bc8}{sci\+Notification}} (\mbox{\hyperlink{reg__sci_8h_ad5e2af74efb062728408d4ac1b7735db}{sci\+B\+A\+S\+E\+\_\+t}} $\ast$sci, uint32 flags)
+\begin{DoxyCompactList}\small\item\em Interrupt callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+CI Driver Definition File. 
+
+\begin{DoxyDate}{Date}
+07-\/\+July-\/2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+04.\+07.\+00 
+\end{DoxyVersion}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sci_8h_a5de218ffb0fa4e61fd665367767055bb}\label{sci_8h_a5de218ffb0fa4e61fd665367767055bb}} 
+\index{sci.\+h@{sci.\+h}!S\+C\+I\+\_\+\+I\+D\+LE@{S\+C\+I\+\_\+\+I\+D\+LE}}
+\index{S\+C\+I\+\_\+\+I\+D\+LE@{S\+C\+I\+\_\+\+I\+D\+LE}!sci.\+h@{sci.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+I\+\_\+\+I\+D\+LE}{SCI\_IDLE}}
+{\footnotesize\ttfamily \#define S\+C\+I\+\_\+\+I\+D\+LE~0x00000004U}
+
+
+
+Alias name for the S\+CI I\+D\+LE Flag. 
+
+This is an alias name for the S\+CI I\+D\+LE Flag. 
+
+Definition at line 78 of file sci.\+h.
+
+\mbox{\Hypertarget{sci_8h_a7ff3f83a7fb77f5526e36e9f03f7a772}\label{sci_8h_a7ff3f83a7fb77f5526e36e9f03f7a772}} 
+\index{sci.\+h@{sci.\+h}!S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!sci.\+h@{sci.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SCILIN\_GCR1\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+C\+I\+L\+I\+N\+\_\+\+G\+C\+R1\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((uint32)((uint32)1U << 5U) \(\backslash\)
+                                      |(uint32)((uint32)(2U-1U) << 4U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 3U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 2U) \(\backslash\)
+                                      |(uint32)((uint32)1U << 1U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 2U) \(\backslash\)
+                                      |(uint32)(0x03000080U))
+\end{DoxyCode}
+
+
+Definition at line 118 of file sci.\+h.
+
+\mbox{\Hypertarget{sci_8h_a9b98964c8779ea328735db498bae7594}\label{sci_8h_a9b98964c8779ea328735db498bae7594}} 
+\index{sci.\+h@{sci.\+h}!S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!sci.\+h@{sci.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SCILIN\_SETINT\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((uint32)((uint32)0U << 26U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 25U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 24U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 9U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 1U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 0U))
+\end{DoxyCode}
+
+
+Definition at line 134 of file sci.\+h.
+
+\mbox{\Hypertarget{sci_8h_af70c4d71038ffef97d6e2de420bb7189}\label{sci_8h_af70c4d71038ffef97d6e2de420bb7189}} 
+\index{sci.\+h@{sci.\+h}!S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}}
+\index{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE@{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}!sci.\+h@{sci.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}{SCILIN\_SETINTLVL\_CONFIGVALUE}}
+{\footnotesize\ttfamily \#define S\+C\+I\+L\+I\+N\+\_\+\+S\+E\+T\+I\+N\+T\+L\+V\+L\+\_\+\+C\+O\+N\+F\+I\+G\+V\+A\+L\+UE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((uint32)((uint32)0U << 26U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 25U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 24U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 9U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 8U) \(\backslash\)
+                                      |(uint32)((uint32)0U << 1U) \(\backslash\)
+                                      |(uint32)((uint32)0U))
+\end{DoxyCode}
+
+
+Definition at line 126 of file sci.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sci_8h_a676c03c4e590acc7d9286cfc44867d8b}\label{sci_8h_a676c03c4e590acc7d9286cfc44867d8b}} 
+\index{sci.\+h@{sci.\+h}!sci\+Int\+Flags@{sci\+Int\+Flags}}
+\index{sci\+Int\+Flags@{sci\+Int\+Flags}!sci.\+h@{sci.\+h}}
+\subsubsection{\texorpdfstring{sci\+Int\+Flags}{sciIntFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sci_8h_a676c03c4e590acc7d9286cfc44867d8b}{sci\+Int\+Flags}}}
+
+
+
+Interrupt Flag Definitions. 
+
+Used with sci\+Enable\+Notification, sci\+Disable\+Notification 
+
+Definition at line 61 of file sci.\+h.
+
+
+\begin{DoxyCode}
+62 \{
+63     SCI\_FE\_INT    = 0x04000000U,  \textcolor{comment}{/* framing error */}
+64     SCI\_OE\_INT    = 0x02000000U,  \textcolor{comment}{/* overrun error */}
+65     SCI\_PE\_INT    = 0x01000000U,  \textcolor{comment}{/* parity error */}
+66     SCI\_RX\_INT    = 0x00000200U,  \textcolor{comment}{/* receive buffer ready */}
+67     SCI\_TX\_INT    = 0x00000100U,  \textcolor{comment}{/* transmit buffer ready */}
+68     SCI\_WAKE\_INT  = 0x00000002U,  \textcolor{comment}{/* wakeup */}
+69     SCI\_BREAK\_INT = 0x00000001U   \textcolor{comment}{/* break detect */}
+70 \};
+\end{DoxyCode}
